@@ -33701,7 +33701,7 @@ goto 43.40,72.51
 talk Norianwe |q The Gates of Adamant/Talk to Norianwe
 step
 goto 43.52,72.84
-click Cell Door |q The Gates of Adamant/Exit Cell
+'Open Cell Door |q The Gates of Adamant/Exit Cell |future
 step
 goto 45.70,62.13
 'Follow Norianwe |q The Gates of Adamant/Follow Norianwe
@@ -33716,7 +33716,7 @@ goto 50.82,58.86
 'Equip a Weapon |q The Gates of Adamant/Equip a Weapon
 step
 goto 50.40,49.72
-click Balfiera Ruins |q The Gates of Adamant/Follow Norianwe
+'Open Balfiera Ruins |q The Gates of Adamant/Follow Norianwe
 |tip Manually skip to the next step.
 step
 goto u30_balfiera_int2_base 51.29,34.79
@@ -33729,21 +33729,20 @@ goto 52.36,32.29
 talk Norianwe |q The Gates of Adamant/Talk to Norianwe
 step
 goto 50.75,27.47
-click Balfiera Ruins |q The Gates of Adamant/Lead Norianwe Outside
+'Open Balfiera Ruins |q The Gates of Adamant/Lead Norianwe Outside
 |tip Manually skip to the next step.
 step
 goto u30_balfiera_int3_base 35.07,41.44 |q The Gates of Adamant/Lead Norianwe Outside
 step
 goto u30_balfiera_int3_base 49.81,45.45
-click Balfiera Ruins |q The Gates of Adamant/Lead Norianwe Outside
+'Open Balfiera Ruins |q The Gates of Adamant/Lead Norianwe Outside
 |tip Go upstairs
 |tip Manually skip to the next step.
 step
 goto u30_balfiera_int5_base 75.95,45.42
-click Balfiera Island |q The Gates of Adamant/Lead Norianwe Outside
+'Open Balfiera Island |q The Gates of Adamant/Lead Norianwe Outside
 step
-goto u30_balfiera_ext 70.51,51.10
-click Gallery Foyer |q The Gates of Adamant/Find the Keywright's Gallery
+goto u30_balfiera_ext 70.51,51.10 |q The Gates of Adamant/Find the Keywright's Gallery
 step
 goto u30_balfiera_int7_base 49.57,54.09
 talk Norianwe |q The Gates of Adamant/Talk to Norianwe

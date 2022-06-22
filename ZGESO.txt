@@ -5,7 +5,7 @@
 ## AddOnVersion: 1000
 ## APIVersion: 101033 101034
 ; ## DependsOn: LibGPS AceTimer-3.0>=146
-## DependsOn: LibGPS>=66
+## DependsOn: LibGPS>=68
 ## SavedVariables: ZGESOSettings
 ## Disclaimer: This Add-on is not created by, affiliated with or sponsored by ZeniMax Media Inc. or its affiliates. The Elder Scrolls and related logos are registered trademarks or trademarks of ZeniMax Media Inc. in the United States and/or other countries. All rights reserved. This Add-on is not sponsored by Zygor Guides.
 
