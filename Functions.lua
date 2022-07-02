@@ -3,7 +3,7 @@
 -----------------------------------------
 
 local ZGV = _G.ZGV
-local GPS = LibGPS2
+local GPS = LibGPS3
 
 local GetAbilityProgressionXPInfoFromAbilityId = _G.GetAbilityProgressionXPInfoFromAbilityId
 local GetAddOnManager = _G.GetAddOnManager
@@ -163,7 +163,7 @@ function Utils.FormatLevel(l,...)
 end
 
 function Utils.MapIndex()
-	local gps = GPS:GetCurrentMapMeasurements()
+	local gps = GPS:GetCurrentMapMeasurement()
 	if gps ~= nil then
 		return gps.mapIndex
 	else
@@ -670,16 +670,12 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 			    GetCurrentMapIndex() == Enums.BetnikhMap or
 				GetCurrentMapIndex() == Enums.Blackwood or
 			    GetCurrentMapIndex() == Enums.BleakrockIsleMap or
-			    GetCurrentMapIndex() == Enums.CyrodiilMap or
-				GetCurrentMapIndex() == Enums.GlenumbraMap or
 				GetCurrentMapIndex() == Enums.GreymoorCaverns or
 			    GetCurrentMapIndex() == Enums.HighIsleMap or
 				GetCurrentMapIndex() == Enums.ImperialCityMap or
 			    GetCurrentMapIndex() == Enums.KhenarthisRoostMap or
 				GetCurrentMapIndex() == Enums.NorthernElsweyrMap or
-				GetCurrentMapIndex() == Enums.RivenspireMap or
 				GetCurrentMapIndex() == Enums.ShadowfenMap or
-				GetCurrentMapIndex() == Enums.StormhaveMap or
 				GetCurrentMapIndex() == Enums.TheRiftMap or
 				GetCurrentMapIndex() == Enums.VvardenfellMap then return 2
 			
@@ -687,12 +683,14 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 			    GetCurrentMapIndex() == Enums.BangkoraiMap or
 				GetCurrentMapIndex() == Enums.ColdharbourMap or
 				GetCurrentMapIndex() == Enums.CraglornMap or
+			    GetCurrentMapIndex() == Enums.CyrodiilMap or
 				GetCurrentMapIndex() == Enums.DeshaanMap or
 				GetCurrentMapIndex() == Enums.EastmarchMap or
 				GetCurrentMapIndex() == Enums.GoldCoastMap or
 				GetCurrentMapIndex() == Enums.HewsBaneMap or
 				GetCurrentMapIndex() == Enums.MurkmireMap or
 				GetCurrentMapIndex() == Enums.NorgTzelMap or
+				GetCurrentMapIndex() == Enums.RivenspireMap or
 				GetCurrentMapIndex() == Enums.SouthernElsweyrMap or
 				GetCurrentMapIndex() == Enums.StonefallsMap or
 				GetCurrentMapIndex() == Enums.StrosMKaiMap or
@@ -702,10 +700,12 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 		elseif  GetCurrentMapIndex() == Enums.AuridonMap or
 			    GetCurrentMapIndex() == Enums.AlikrMap or
 		        GetCurrentMapIndex() == Enums.ClockworkCityMap or
+				GetCurrentMapIndex() == Enums.GlenumbraMap or
 				GetCurrentMapIndex() == Enums.FargraveMap or
 			    GetCurrentMapIndex() == Enums.GrahtwoodMap or
 			    GetCurrentMapIndex() == Enums.GreenshadeMap or
 			    GetCurrentMapIndex() == Enums.ReapersMarchMap or
+				GetCurrentMapIndex() == Enums.StormhaveMap or
 				GetCurrentMapIndex() == Enums.SummersetMap or
 				GetCurrentMapIndex() == Enums.TheDeadlandsMap then return 5
 				
@@ -731,15 +731,12 @@ function Utils.DistanceOffsetForIsComplete()
 				GetCurrentMapIndex() == Enums.Blackwood or
 			    GetCurrentMapIndex() == Enums.BleakrockIsleMap or
 			    GetCurrentMapIndex() == Enums.CyrodiilMap or
-				GetCurrentMapIndex() == Enums.GlenumbraMap or
 				GetCurrentMapIndex() == Enums.GreymoorCaverns or
 			    GetCurrentMapIndex() == Enums.HighIsleMap or
 				GetCurrentMapIndex() == Enums.ImperialCityMap or
 			    GetCurrentMapIndex() == Enums.KhenarthisRoostMap or
 				GetCurrentMapIndex() == Enums.NorthernElsweyrMap or
-				GetCurrentMapIndex() == Enums.RivenspireMap or
 				GetCurrentMapIndex() == Enums.ShadowfenMap or
-				GetCurrentMapIndex() == Enums.StormhaveMap or
 				GetCurrentMapIndex() == Enums.TheRiftMap or
 				GetCurrentMapIndex() == Enums.VvardenfellMap then return 2
 			
@@ -754,6 +751,7 @@ function Utils.DistanceOffsetForIsComplete()
 				GetCurrentMapIndex() == Enums.HewsBaneMap or
 				GetCurrentMapIndex() == Enums.MurkmireMap or
 				GetCurrentMapIndex() == Enums.NorgTzelMap or
+				GetCurrentMapIndex() == Enums.RivenspireMap or
 				GetCurrentMapIndex() == Enums.SouthernElsweyrMap or
 				GetCurrentMapIndex() == Enums.StonefallsMap or
 				GetCurrentMapIndex() == Enums.StrosMKaiMap or
@@ -764,9 +762,11 @@ function Utils.DistanceOffsetForIsComplete()
 		elseif  GetCurrentMapIndex() == Enums.AlikrMap or
 				GetCurrentMapIndex() == Enums.ClockworkCityMap or
 				GetCurrentMapIndex() == Enums.FargraveMap or
+				GetCurrentMapIndex() == Enums.GlenumbraMap or
 			    GetCurrentMapIndex() == Enums.GrahtwoodMap or
 			    GetCurrentMapIndex() == Enums.GreenshadeMap or
 			    GetCurrentMapIndex() == Enums.ReapersMarchMap or
+				GetCurrentMapIndex() == Enums.StormhaveMap or
 				GetCurrentMapIndex() == Enums.SummersetMap or
 				GetCurrentMapIndex() == Enums.TheDeadlandsMap then return 5
 
