@@ -282,6 +282,15 @@ Data.MapIdsByName = {
 	["Onsi's Breath Mine"]                  = 227,
 	["Hall of Heroes"]                      = 228,
 	["The Far Shores"]                      = 229,
+	
+	-- Ebonheart Pact
+	-- Bleakrock Isle
+	["Bleakrock Village"]                   = 230,
+	["Bleakrock Isle"]                      = 231,
+	["Skyshroud Barrow"]                    = 232,
+	["Hozzin's Folly"]                      = 233,
+	["Orkey's Hollow"]                      = 234,
+	["Last Rest"]                           = 235,
 }
 
 -----------------------------------------

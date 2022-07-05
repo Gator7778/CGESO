@@ -310,6 +310,15 @@ ZGV.MapData = {
 	["Hall of Heroes"]                      = [[hallofheroes_base]],
 	["The Far Shores"]                      = [[thefarshores_base]],
 	
+	-- Ebonheart Pact
+	-- Bleakrock Isle
+	["Bleakrock Village"]                   = [[bleakrockvillage_base]],
+	["Bleakrock Isle"]                      = [[bleakrock_base]],
+	["Skyshroud Barrow"]                    = [[skyshroudbarrow_base]],
+	["Hozzin's Folly"]                      = [[hozzinsfolley_base]],
+	["Orkey's Hollow"]                      = [[orkeyshollow_base]],
+	["Last Rest"]                           = [[lastresortbarrow_base]],
+	
 	-- Five Companisons
 	["The Wailing Prison"]                  = [[wailingprison1_base]],
 	["The Wailing Prison"]                  = [[wailingprison2_base]],
@@ -671,6 +680,19 @@ ZGV.MapData = {
 		["hallofheroes_base"] =                 { name = "Hall of Heroes",                          id = 228, xoffset = 0.291091, yoffset = 0.388915, scale = 0.007136, },
 		["thefarshores_base"] =                 { name = "The Far Shores",                          id = 229, xoffset = 0.295019, yoffset = 0.387003, scale = 0.003750, },
 		
+		-- Ebonheart Pact
+        -- Bleakrock Isle
+		["bleakrockvillage_base"] =             { name = "Bleakrock Village",                       id = 230, xoffset = 0.678215, yoffset = 0.263458, scale = 0.005732, },
+		["bleakrock_base"] =                    { name = "Bleakrock Isle",                          id = 231, xoffset = 0.672618, yoffset = 0.255014, scale = 0.018936, },
+		["skyshroudbarrow_base"] =              { name = "Skyshroud Barrow",                        id = 224, xoffset = 0.686266, yoffset = 0.261040, scale = 0.002553, },
+		["hozzinsfolley_base"] =                { name = "Hozzin's Folly",                          id = 225, xoffset = 0.674860, yoffset = 0.260080, scale = 0.003394, },
+		["orkeyshollow_base"] =                 { name = "Orkey's Hollow",                          id = 226, xoffset = 0.680000, yoffset = 0.253480, scale = 0.005200, },
+		["lastresortbarrow_base"] =             { name = "Last Rest",                               id = 227, xoffset = 0.678400, yoffset = 0.266700, scale = 0.005360, },
+		
+		-- Stonefalls
+		["balfoyen_base"] =                     { name = "Bal Foyen",                               id = 228, xoffset = 0.790240, yoffset = 0.425152, scale = 0.037500, },
+		["dhalmora_base"] =                     { name = "Dhalmora",                                id = 229, xoffset = 0.807935, yoffset = 0.442144, scale = 0.008906, },
+		
 		-- Five Companions
 		["wailingprison1_base"] =               { name = "The Wailing Prison",                      id = 500, xoffset = -0.437840, yoffset = 0.114960, scale = 0.008878, },
 		["wailingprison2_base"] =               { name = "The Wailing Prison",                      id = 500, xoffset = -0.431030, yoffset = 0.117300, scale = 0.004160, },
@@ -724,6 +746,8 @@ ZGV.MapData = {
 		["ava_whole"] =                         { name = "Cyrodiil",                                id = 802, xoffset = 0.460000, yoffset = 0.399999, scale = 0.180000, },
 		["northhighrockgate_base"] =            { name = "Northern High Rock Gate",                 id = 821, xoffset = 0.483484, yoffset = 0.412129, scale = 0.009703, },
 		["southhighrockgate_base"] =            { name = "Southern High Rock Gate",                 id = 822, xoffset = 0.466539, yoffset = 0.446898, scale = 0.008965, },
+		["northmorrowgate_base"] =              { name = "Northern Morrowind Gate",                 id = 823, xoffset = 0.604633, yoffset = 0.413781, scale = 0.012692, },
+		["southmorrowgate_base"] =              { name = "Southern Morrowind Gate",                 id = 824, xoffset = 0.620277, yoffset = 0.449113, scale = 0.012692, },
 		
 		--High Isle and Amenos
 		["u33_Prologue1aINT_base"] =            { name = "Ascendant Order Hideout",                 id = 846, xoffset = -0.128792, yoffset = 0.308362, scale = 0.014643, },
@@ -999,4 +1023,10 @@ ZGV.MapData.LocalizedMapNames['en']={
 	[227] = "Onsi's Breath Mine",
 	[228] = "Hall of Heroes",
 	[229] = "The Far Shores",
+	[230] = "Bleakrock Village",
+	[231] = "Bleakrock Isle",
+	[232] = "Skyshroud Barrow",
+	[233] = "Hozzin's Folly",
+	[234] = "Orkey's Hollow",
+	[235] = "Last Rest",
 }

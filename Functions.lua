@@ -666,8 +666,7 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 		-- Created Utils.DistanceOffset in functions
 		-- sorting based on preceived popularity
 			
-			if  GetCurrentMapIndex() == Enums.BalFoyenMap or
-			    GetCurrentMapIndex() == Enums.BetnikhMap or
+			if  GetCurrentMapIndex() == Enums.BetnikhMap or
 				GetCurrentMapIndex() == Enums.Blackwood or
 			    GetCurrentMapIndex() == Enums.BleakrockIsleMap or
 				GetCurrentMapIndex() == Enums.GreymoorCaverns or
@@ -680,6 +679,7 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 				GetCurrentMapIndex() == Enums.VvardenfellMap then return 2
 			
 		elseif 	GetCurrentMapIndex() == Enums.AzkthzandCavernMap or
+				GetCurrentMapIndex() == Enums.BalFoyenMap or
 			    GetCurrentMapIndex() == Enums.BangkoraiMap or
 				GetCurrentMapIndex() == Enums.ColdharbourMap or
 				GetCurrentMapIndex() == Enums.CraglornMap or
@@ -725,8 +725,7 @@ function Utils.DistanceOffsetForIsComplete()
 		-- Create a Utils function in function at the bottom of the file
 		-- sorting based on preceived popularity
 		
-		    if  GetCurrentMapIndex() == Enums.BalFoyenMap or
-			    GetCurrentMapIndex() == Enums.BalfieraMap or
+		    if  GetCurrentMapIndex() == Enums.BalfieraMap or
 			    GetCurrentMapIndex() == Enums.BetnikhMap or
 				GetCurrentMapIndex() == Enums.Blackwood or
 			    GetCurrentMapIndex() == Enums.BleakrockIsleMap or
@@ -741,7 +740,7 @@ function Utils.DistanceOffsetForIsComplete()
 				GetCurrentMapIndex() == Enums.VvardenfellMap then return 2
 			
 		elseif 	GetCurrentMapIndex() == Enums.AzkthzandCavernMap or
-			    GetCurrentMapIndex() == Enums.AuridonMap or
+				GetCurrentMapIndex() == Enums.BalFoyenMap or			    
 				GetCurrentMapIndex() == Enums.BangkoraiMap or
 				GetCurrentMapIndex() == Enums.ColdharbourMap or
 				GetCurrentMapIndex() == Enums.CraglornMap or
@@ -760,6 +759,7 @@ function Utils.DistanceOffsetForIsComplete()
 				GetCurrentMapIndex() == Enums.WrothgarMap then return 4
 				
 		elseif  GetCurrentMapIndex() == Enums.AlikrMap or
+			    GetCurrentMapIndex() == Enums.AuridonMap or
 				GetCurrentMapIndex() == Enums.ClockworkCityMap or
 				GetCurrentMapIndex() == Enums.FargraveMap or
 				GetCurrentMapIndex() == Enums.GlenumbraMap or

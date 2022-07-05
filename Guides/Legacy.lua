@@ -819,7 +819,7 @@ goto vulkhelguard_base 60.21,66.53
 talk The Prophet |q The Harborage/Talk to the Prophet
 step
 goto vulkhelguard_base 60.21,66.53
-|tip If your are level 10 or higher switch to the Cyrodiil Introduction guide and complete it to gain a healing spell and 30% gallop mount speed through the Assault War/Alliance Skill Line.
+'If your are level 10 or higher use Cyrodiil Introduction guide and and complete it to gain a healing spell and 30% gallop mount speed through the Assault War/Alliance Skill Line. |q Welcome to Cyrodiil |future 
 |tip If your not Level 10 once your are level it is recommended.
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -14227,7 +14227,7 @@ talk Kala
 'Tell her _Your brother was taken by a dark spirit. I was forced to kill him._
 turnin Test of Faith
 step
-goto 56.02,47.11
+goto 56.02,47.11 |q How Few Remain |future
 step
 goto 54.17,30.06
 'Open _Kuna's Delve_ |q How Few Remain |future
@@ -15678,7 +15678,9 @@ step
 'Travel to _Stonetooth_ |q The Bloodthorn Plot/Talk to Lambur
 |tip Manually skip to the next step.
 step
-goto stonetoothfortress_base 31.75,58.46 |q The Bloodthorn Plot/Talk to Lambur
+goto stonetoothfortress_base 23.61,62.62
+talk Magula
+turnin Farsight
 step
 goto 39.38,38.82
 talk Lambur
@@ -16109,7 +16111,7 @@ goto 54.24,76.50
 'Examine _Red Rook Note_
 accept Red Rook Resources
 step
-goto 69.48,79.95
+goto 69.48,79.95 |q Turning of the Trees/Talk to Wyress Helene |future
 step
 goto 84.12,31.21
 'Use _Skyshard_ |q Turning of the Trees/Talk to Wyress Helene |future
@@ -16475,7 +16477,7 @@ goto glenumbra_base 33.54,54.36
 'Open _South Hut Portal Cave_ |q Reclaiming the Elements/.*Open Portals.* |count 2
 |tip Manually skip to the next step.
 step
-goto south_hut_portal_cave_base 73.75,68.26
+goto south_hut_portal_cave_base 73.75,68.26 |q Reclaiming the Elements/.*Open Portals.* |count 2
 step
 goto 68.26,27.85
 'Use _South Portal Stone_ |q Reclaiming the Elements/.*Open Portals.* |count 2
@@ -18500,7 +18502,7 @@ step
 goto stormhaven_base 14.70,33.43
 'Examine _The House of Troubles_ |lorebook The House of Troubles/1/8/4
 step
-goto 14.62,33.74
+goto 14.62,33.74 |q A Dangerous Dream/Talk to Captain Jerick in Koeglin Village
 step
 goto stormhaven_base 14.96,34.79
 'Use _Skyshard_ |q A Dangerous Dream/Talk to Captain Jerick in Koeglin Village
@@ -18879,7 +18881,7 @@ step
 goto stormhaven_base 24.34,24.02
 wayshrine Alcaire Castle
 step
-goto 21.98,21.05
+goto 21.98,21.05 |q Legacy of the Three |future
 step
 goto 22.01,20.19
 'Use _Skyshard_ |q Legacy of the Three |future
@@ -19549,7 +19551,7 @@ goto 75.22,31.66
 'Use _Skyshard_ |q A Means to an End/Return the Stonechewer Totem
 |tip Manually skip to the next step.
 step
-goto 52.36,19.52scale = 0.001617
+goto 52.36,19.52 |achieve 223
 step
 goto 31.49,22.51
 kill Uncle Bones |achieve 223
@@ -20484,7 +20486,7 @@ goto 32.77,48.61
 accept Next of Kin
 step
 goto 28.61,62.91
-kill Octavia
+kill Octavia |achieve 225
 step
 goto 43.15,57.99
 'Open _Bearclaw Mine_ |q Ogre Teeth/.*Collect Ogre Teeth.*
@@ -21675,7 +21677,7 @@ goto 53.25,71.15
 talk Louise Pendlesmith |q Children of Yokuda/Ask About Kaleen in Shornhelm
 |tip Manually skip to the next step.
 step
-goto 54.46,76.74
+goto 54.46,76.74 |q Children of Yokuda/Ask About Kaleen in Shornhelm
 step
 goto 61.42,80.44
 'Use _Skyshard_ |q Children of Yokuda/Ask About Kaleen in Shornhelm
@@ -23232,7 +23234,7 @@ step
 goto 33.83,48.32
 'Search _Sack of Looted Jewelry_ |q The Lady's Keepsake/Find Marien's Necklace
 step
-goto 29.50,38.77
+goto 29.50,38.77 |q Shedding the Past |future
 step
 goto 18.33,34.93
 'Use _Skyshard_ |q Shedding the Past |future
@@ -24736,9 +24738,9 @@ goto 39.59,64.02
 talk Hayazzin
 turnin Satak was the First Serpent
 step
-goto 38.89,61.99
+goto 38.89,61.99 |q The Search is Over |future
 step
-goto 40.46,58.83
+goto 40.46,58.83 |q The Search is Over |future
 step
 goto 40.02,58.35
 'Open _Divad's Chagrin Mine_ |q The Search is Over |future
@@ -25052,7 +25054,7 @@ step
 goto 60.79,57.97
 'Use _Poison Antidote on Kouros_ |q Snakes in the Sands/.*Apply Antidote to Poison Victims.* |count 5
 step
-goto 64.13,60.73
+goto 64.13,60.73 |q Trapped in the Bluffs/Find Taren
 step
 goto 64.05,64.23
 'Open _Aldunz_ |q Trapped in the Bluffs/Find Taren
@@ -25360,9 +25362,9 @@ step
 goto 59.11,50.86
 'Take _Nabeenam's Hammer_ |q Master of Leki's Blade/Collect Nabeenam's Hammer
 step
-goto 59.59,50.33
+goto 59.59,50.33 |q Master of Leki's Blade/Collect Raifa's Sword
 step
-goto 58.32,48.70
+goto 58.32,48.70 |q Master of Leki's Blade/Collect Raifa's Sword
 step
 goto 58.54,50.02
 'Use _Skyshard_ |q Master of Leki's Blade/Collect Raifa's Sword
@@ -26405,9 +26407,9 @@ talk Ramza
 turnin Kingdom in Mourning
 step
 goto 35.41,55.34
-'Examine _The Legend of Fallen Grotto |lorebook The Legend of Fallen Grotto/1/4/1
+'Examine _The Legend of Fallen Grotto_ |lorebook The Legend of Fallen Grotto/1/4/1
 step
-goto 36.22,66.43
+goto 36.22,66.43 |q Conflicted Emotions |future
 step
 goto 35.48,67.99
 'Use _Skyshard_ |q Conflicted Emotions |future
@@ -27944,7 +27946,7 @@ step
 '_Next to you:_
 talk Wyress Rashan |q Heart of Evil/Talk to Wyress Rashan
 step
-goto 60.65,10.00
+goto 60.65,10.00 |q Heart of Evil/.*Burn the Totems.* |count 1
 step
 goto 60.18,9.59
 'Use _Skyshard_ |q Heart of Evil/.*Burn the Totems.* |count 1
@@ -28754,9 +28756,9 @@ step
 goto 33.26,54.92
 wayshrine Sunken Road
 step
-goto 33.41,56.04
+goto 33.41,56.04 |q Present in Memory/Find Azei at-Owynok |future
 step
-goto 35.92,58.97
+goto 35.92,58.97 |q Present in Memory/Find Azei at-Owynok |future
 step
 goto 35.77,59.97
 'Use _Skyshard_ |q Present in Memory/Find Azei at-Owynok |future
@@ -29118,7 +29120,7 @@ goto 65.53,85.92
 'Use _Skyshard_ |q Back in Time/Find Lady Edwyge
 |tip Manually skip to the next step.
 step
-goto 64.28,77.47
+goto 64.28,77.47 |q Back in Time/Find Lady Edwyge
 step
 goto 62.41,45.42
 'Find Lady Edwyge |q Back in Time/Find Lady Edwyge
@@ -29999,14 +30001,12 @@ talk Captain Rana
 accept A Beginning at Bleakrock
 step
 goto 78.93,44.07
-talk Captain Rana
-'Talk to Rana |q A Beginning at Bleakrock/Talk to Rana
+talk Captain Rana |q A Beginning at Bleakrock/Talk to Rana
 step
 goto 78.79,47.18
-talk Captain Rana
+talk Captain Rana |q A Beginning at Bleakrock/Find Darj |future
 'Tell her _What is Skyshroud Barrow?_
 'Tell her _I'll start at Skyshroud Barrow._
-'Help Captain Rana |q A Beginning at Bleakrock/Find Darj |future
 |tip Manually skip to the next step.
 step
 goto 69.40,35.61 |q A Beginning at Bleakrock/Find Darj
@@ -30018,12 +30018,13 @@ talk Hoknir
 accept Tracking the Game
 step
 goto 67.60,66.93
-click Deer |q Tracking the Game/Collect Deathclaw Talon
+'Examine _Deer_ |q Tracking the Game/Collect Deathclaw Talon
 |tip Manually skip to the next step.
 step
 goto 68.24,67.39
-click Bone Pile
-kill Deathclaw |q Tracking the Game/Collect Deathclaw Talon
+'Use _Bone Pile_
+kill Deathclaw
+'Collect _Deathclaw Talon_ |q Tracking the Game/Collect Deathclaw Talon
 step
 goto 62.42,60.06
 talk Hoknir
@@ -30036,23 +30037,23 @@ turnin A Beginning at Bleakrock
 accept What Waits Beneath
 step
 goto 66.77,39.03
-'Use Brazier |q What Waits Beneath/Summon the Dragon Priest
+'Use _Brazier_ |q What Waits Beneath/Summon the Dragon Priest
 step
 goto 66.77,39.03
 talk Haldriin |q What Waits Beneath/Talk to Dragon Priest Haldriin
 step
 goto 78.48,32.81
-'Take Eagle Runestone |q What Waits Beneath/Collect the Eagle Runestone
+'Take _Eagle Runestone_ |q What Waits Beneath/Collect the Eagle Runestone
 step
 goto 75.36,39.23 |q What Waits Beneath/Collect the Snake Runestone
 step
 goto 69.49,40.31
-'Take Snake Runestone |q What Waits Beneath/Collect the Snake Runestone
+'Take _Snake Runestone_ |q What Waits Beneath/Collect the Snake Runestone
 step
 goto 73.48,42.50 |q What Waits Beneath/Collect the Whale Runestone
 step
 goto 69.65,51.63
-'Take Whale Runestone |q What Waits Beneath/Collect the Whale Runestone
+'Take _Whale Runestone_ |q What Waits Beneath/Collect the Whale Runestone
 step
 goto 73.80,42.92 |q What Waits Beneath/Place the Eagle Runestone
 step
@@ -30061,23 +30062,23 @@ goto 77.45,43.87
 |tip Manually skip to the next step.
 step
 goto 78.56,45.12
-'Place Eagle Runestone Column |q What Waits Beneath/Place the Eagle Runestone
+'Place _Eagle Runestone Column_ |q What Waits Beneath/Place the Eagle Runestone
 step
 goto 78.65,44.69
-'Place Whale Runestone Column |q What Waits Beneath/Place the Whale Runestone
+'Place _Whale Runestone Column_ |q What Waits Beneath/Place the Whale Runestone
 step
 goto 78.93,44.22
-'Place Snake Runestone Column |q What Waits Beneath/Place the Snake Runestone
+'Place _Snake Runestone Column_ |q What Waits Beneath/Place the Snake Runestone
 step
 goto 79.19,44.81
-'Open Skyshroud Barrow |q What Waits Beneath/Enter Skyshroud Barrow |future
+'Open _Skyshroud Barrow_ |q What Waits Beneath/Enter Skyshroud Barrow |future
 step
 goto skyshroudbarrow_base 49.39,43.03
 talk Haldriin
-'Sanctify the Priest's Body |q What Waits Beneath/Sanctify the Priest's Body
+'Sanctify _Priest's Body_ |q What Waits Beneath/Sanctify the Priest's Body
 step
 goto 62.84,60.93
-'Examine Scroll of Banishment |q What Waits Beneath/Search for Evidence
+'Examine _Scroll of Banishment_ |q What Waits Beneath/Search for Evidence
 step
 goto bleakrock_base 78.58,44.74
 talk Darj the Hunter
@@ -30091,7 +30092,7 @@ talk Halmaera
 accept Lost on Bleakrock
 step
 goto 12.62,27.62
-'Press E to use your Dog Whistle |q Lost on Bleakrock/Use Dog Whistle
+'Use _Dog Whistle_ |q Lost on Bleakrock/Use Dog Whistle
 step
 goto 13.09,27.90
 |tip He runs up to you.
@@ -30108,35 +30109,31 @@ talk Sergeant Seyne
 accept Hozzin's Folly
 step
 goto 26.81,52.18
-'Get a Disguise from a Corpse |q Hozzin's Folly/Get a Disguise from a Corpse
+'Get _Disguise_ from a Corpse |q Hozzin's Folly/Get a Disguise from a Corpse
 step
 goto 27.57,47.77
-collect Bandit Note
-|tip Kill enemies around this area to get it.
-|tip It is in your bags.
+'Collect _Bandit Note_ from Frostedge Mobs.
 accept At Frost's Edge
 step
 goto 26.26,45.73
-|tip Inside the building.
-'Examine Contract Scroll |q Hozzin's Folly/.*Investigate Hozzin's Folly.* |count 1
+'Examine _Contract Scroll_ |q Hozzin's Folly/.*Investigate Hozzin's Folly.* |count 1
 step
 goto 30.49,42.53
-|tip Inside the building.
-'Examine Cracked Rune Ward |q Hozzin's Folly/.*Investigate Hozzin's Folly.* |count 2
+'Examine _Cracked Rune Ward_ |q Hozzin's Folly/.*Investigate Hozzin's Folly.* |count 2
 step
 goto 33.93,44.78
-|tip Inside the building.
-'Examine Dark Ministrations |q Hozzin's Folly/.*Investigate Hozzin's Folly.* |count 3
+'Examine _Dark Ministrations_ |q Hozzin's Folly/.*Investigate Hozzin's Folly.* |count 3
+step
+goto 27.81,40.15
+'Use _Skyshard_ |q Hozzin's Folly/Get Inside the Mine
+|tip Manually skip to the next step.
 step
 goto 25.46,39.66
-'Equip the _Frostedge Bandit Disguise_ in your inventory
+'Equip the _Frostedge Bandit Disguise_
 talk Mine Door |q Hozzin's Folly/Get Inside the Mine
 'Tell him _[Lie] The boss wants me to check on the relics we already found._
 step
 goto hozzinsfolley_base 32.92,80.98
-|tip Follow the main cave path.
-'Use _Skyshard_ |q Hozzin's Folly/Find a Way into the Tomb
-|tip Manually skip to the next step.
 step
 goto 32.92,80.98 |q Hozzin's Folly/Find a Way into the Tomb
 step
@@ -30147,14 +30144,13 @@ step
 goto 59.75,39.68 |q Hozzin's Folly/Bypass the Fire Traps |tip Bypass the Fire Traps.
 step
 goto 59.99,47.04
-'Use Portal to Oblivion |q Hozzin's Folly/Use the Portal to Enter Oblivion |future
+'Use _Portal to Oblivion_ |q Hozzin's Folly/Use the Portal to Enter Oblivion |future
 step
 '_In the cave:_
-|tip Follow the path into the open room and go downstairs.
-'Destroy Unspeakable Sigil |q Hozzin's Folly/Destroy the Unspeakable Sigil
+'Destroy _Unspeakable Sigil_ |q Hozzin's Folly/Destroy the Unspeakable Sigil
 step
 goto 73.37,71.77
-'Open Bleakrock Isle |q Hozzin's Folly/Leave the Mine |future
+'Open _Bleakrock Isle_ |q Hozzin's Folly/Leave the Mine |future
 step
 goto bleakrock_base 25.99,39.69
 talk Sergeant Seyne
@@ -30169,17 +30165,17 @@ step
 goto 26.42,24.80 |q Dangerous Webs/Save Tethis
 step
 goto 25.42,22.16
-click Cocoon |q Dangerous Webs/Save Tethis
+'Destroy _Cocoon_ |q Dangerous Webs/Save Tethis
 step
 goto 25.87,28.32 |q Dangerous Webs/Save Naer
 step
 goto 22.67,29.32
-click Cocoon |q Dangerous Webs/Save Naer
+'Destroy _Cocoon_ |q Dangerous Webs/Save Naer
 step
 goto 29.39,30.78 |q Dangerous Webs/Save Hunts-in-Shadow
 step
 goto 28.90,33.22
-click Cocoon |q Dangerous Webs/Save Hunts-in-Shadow
+'Destroy _Cocoon_ |q Dangerous Webs/Save Hunts-in-Shadow
 step
 goto 30.68,24.91
 talk Bura-Natoo
@@ -30187,25 +30183,24 @@ turnin Dangerous Webs
 step
 goto 41.31,39.65
 talk Molla
-|tip She will appear here.
 accept Underfoot
 step
 goto 45.80,42.78
-'Follow Molla |q Underfoot/Follow Molla
+'Follow _Molla_ |q Underfoot/Follow Molla
 step
 goto 45.80,42.78
-click Gnarled Wand |q Underfoot/Pick Up the Wand
+'Take _Gnarled Wand_ |q Underfoot/Pick Up the Wand
 step
 goto 45.75,42.75
 talk Molla |q Underfoot/Talk to Molla
 step
 goto 25.27,62.06
-click Skeever |q Underfoot/Save Brend
+'Use _Gnarled Wand_ on Skeever |q Underfoot/Save Brend
 step
 goto 38.83,38.81 |q Underfoot/Save Faltha
 step
 goto 36.03,23.34
-click Skeever |q Underfoot/Save Faltha
+'Use _Gnarled Wand_ on Skeever |q Underfoot/Save Faltha
 step
 goto 49.08,22.77
 talk Rolunda
@@ -30216,24 +30211,23 @@ goto 49.84,22.50
 |tip Manually skip to the next step.
 step
 goto 51.01,18.45
-'Open Orkey's Hollow |q The Frozen Man/Enter Orkey's Hollow |future
+'Open _Orkey's Hollow_ |q The Frozen Man/Enter Orkey's Hollow |future
 step
 goto orkeyshollow_base 36.25,82.06
-'Find Eiman |q The Frozen Man/Find Eiman
+'Find _Eiman_ |q The Frozen Man/Find Eiman
 step
 goto 83.10,69.93
-|tip Use the platforms to reach the Battered Chest.
-'Open Battered Chest |q The Frozen Man/.*Find Clues to the Frozen Man's Identity.* |count 1
+'Open _Battered Chest_ |q The Frozen Man/.*Find Clues to the Frozen Man's Identity.* |count 1
 step
 goto 62.15,41.40
-'Examine My Journal |q The Frozen Man/.*Find Clues to the Frozen Man's Identity.* |count 2
+'Examine _My Journal_ |q The Frozen Man/.*Find Clues to the Frozen Man's Identity.* |count 2
 step
 goto 35.37,43.18 |q The Frozen Man/.*Find Clues to the Frozen Man's Identity.* |count 3
 step
 goto 30.74,30.98 |q The Frozen Man/.*Find Clues to the Frozen Man's Identity.* |count 3
 step
 goto 16.78,56.91
-'Examine Weathered Pack |q The Frozen Man/.*Find Clues to the Frozen Man's Identity.* |count 3
+'Examine _Weathered Pack_ |q The Frozen Man/.*Find Clues to the Frozen Man's Identity.* |count 3
 step
 goto 24.97,32.55 |q The Frozen Man/Talk to the Frozen Man
 step
@@ -30241,7 +30235,7 @@ goto 45.53,46.96
 talk The Frozen Man |q The Frozen Man/Talk to the Frozen Man
 step
 goto 45.23,47.49
-'Open Frozen Man's Lair |q The Frozen Man/Enter the Frozen Man's Lair
+'Open _Frozen Man's Lair_ |q The Frozen Man/Enter the Frozen Man's Lair
 step
 goto 48.59,58.49
 talk The Frozen Man |q The Frozen Man/Find the Real Frozen Man
@@ -30252,12 +30246,11 @@ step
 goto 44.24,69.05
 talk The Frozen Man |q The Frozen Man/Convince the Frozen Man to Free Eiman
 step
-goto 36.45,81.16
-|tip It is safe to drop down to the ledge here.
+goto 36.45,81.164
 talk Eiman |q The Frozen Man/Free Eiman
 step
 goto 45.49,94.17
-'Open Bleakrock Isle |q The Frozen Man/Talk to Rolunda
+'Open _Bleakrock Isle_ |q The Frozen Man/Talk to Rolunda
 |tip Manually skip to the next step.
 step
 goto bleakrock_base 49.87,20.80
@@ -30265,7 +30258,7 @@ talk Rolunda
 turnin The Frozen Man
 step
 goto 57.10,23.83
-click Skeever |q Underfoot/Save Runs-in-Wild
+'Use _Gnarled Wand_ on Skeever |q Underfoot/Save Runs-in-Wild
 step
 goto 58.93,26.93 |q At Frost's Edge/Burn the Supplies
 step
@@ -30274,8 +30267,7 @@ step
 goto 66.34,31.91 |q At Frost's Edge/Burn the Supplies
 step
 goto 64.50,29.08
-|tip If you don't have this quest, use the Bandit's Note in your inventory.
-click Supplies |q At Frost's Edge/Burn the Supplies
+'Burn _Supplies_ |q At Frost's Edge/Burn the Supplies
 step
 goto 69.51,25.62
 talk Bjorynolf |q At Frost's Edge/Free the Captive
@@ -30284,8 +30276,8 @@ goto 69.51,25.62
 talk Bjorynolf
 turnin At Frost's Edge
 step
-'Open Bleakrock Isle Map
-'Travel to _Bleakrock_ in Bleakrock |q Underfoot/Talk to Molla
+'Open _Bleakrock Isle_ Map
+'Travel to _Bleakrock_ |q Underfoot/Talk to Molla
 |tip Manually skip to the next step.
 step
 goto bleakrockvillage_base 59.79,57.16
@@ -30295,7 +30287,6 @@ step
 goto 78.61,47.55
 |tip Inside the building.
 talk Captain Rana
-'Tell her _Lets get going._
 turnin The Missing of Bleakrock
 accept Sparking the Flame
 step
@@ -30303,30 +30294,27 @@ goto 81.98,70.25 |q Sparking the Flame/Light the Signal Fire
 step
 goto bleakrock_base 45.72,71.96
 |tip It is at the top of the tower.
-'Burn Signal Fire |q Sparking the Flame/Light the Signal Fire
+'Burn _Signal Fire_ |q Sparking the Flame/Light the Signal Fire
 step
 goto bleakrockvillage_base 74.86,64.94
-|tip Leave the tower.
 talk Tillrani Snow-Bourne |q Sparking the Flame/Talk to Tillrani Snow-Bourne
 step
 goto 68.66,39.29
-'Take Bucket of Water |q Sparking the Flame/Collect Bucket of Water
+'Take _Bucket of Water_ |q Sparking the Flame/Collect Bucket of Water
 step
 goto 57.03,28.18
-'Extinguish Fire |q Sparking the Flame/Extinguish the House Fire
+'Extinguish _Fire_ |q Sparking the Flame/Extinguish the House Fire
 step
 goto 54.69,27.98
 talk Denskar Earth-Turner |q Sparking the Flame/Save Denskar
 step
 goto 70.16,26.64
-'Extinguish Fire |q Sparking the Flame/Extinguish the House Fire
+'Extinguish _Fire_ |q Sparking the Flame/Extinguish the House Fire
 step
 goto 70.76,24.31
-|tip She's inside the house.
 talk Aera Earth-Turner |q Sparking the Flame/Save Aera
 step
 goto 53.48,17.84
-|tip He is inside the building.
 talk Littrek Earth-Turner |q Sparking the Flame/Save Littrek
 step
 goto 37.11,51.78
@@ -30338,17 +30326,16 @@ turnin Sparking the Flame
 accept Escape from Bleakrock
 step
 goto 62.50,68.65
-'Open Last Rest |q Escape from Bleakrock/Enter Last Rest |future
+'Open _Last Rest_ |q Escape from Bleakrock/Enter Last Rest |future
 step
 goto lastresortbarrow_base 59.75,12.08
 talk Captain Rana |q Escape from Bleakrock/Talk to Captain Rana
 step
 goto 46.78,10.85
-'Use Switch |q Escape from Bleakrock/Use the Switch
+'Use _Switch_ |q Escape from Bleakrock/Use the Switch
 step
 goto 46.78,11.18
 'Wait for the Refugees |q Escape from Bleakrock/Wait for Refugees
-|tip It takes a little while until they show up.
 step
 goto 47.56,11.99
 talk Captain Rana |q Escape from Bleakrock/Talk to Captain Rana
@@ -30356,29 +30343,28 @@ step
 goto 47.75,40.14 |q Escape from Bleakrock/Unlock the Door for Captain Rana
 step
 goto 37.34,59.73
-'Unlock Door |q Escape from Bleakrock/Unlock the Door for Captain Rana
+'Unlock _Door_ |q Escape from Bleakrock/Unlock the Door for Captain Rana
 step
 goto 51.23,62.84
 talk Captain Rana |q Escape from Bleakrock/Talk to Captain Rana
 step
 goto 50.77,66.78
-'Open Lower Halls |q Escape from Bleakrock/Open the Door
+'Open _Lower Halls_ |q Escape from Bleakrock/Open the Door
 step
 goto 60.40,71.51
-'Use Switch |q Escape from Bleakrock/Use the Switch
+'Use _Switch_ |q Escape from Bleakrock/Use the Switch
 step
 goto 50.83,75.85
-'Open Last Rest |q Escape from Bleakrock/Open the Door
+'Open _Last Rest_ |q Escape from Bleakrock/Open the Door
 step
 goto 50.99,80.18
 talk Captain Rana |q Escape from Bleakrock/Talk to Captain Rana
 step
 goto 51.13,88.54
 'Wait for the Refugees |q Escape from Bleakrock/Wait for Refugees
-|tip It takes a little while until they show up.
 step
 goto 50.33,93.69
-'Open Bleakrock Isle |q Escape from Bleakrock/Talk to Captain Rana
+'Open _Bleakrock Isle_ |q Escape from Bleakrock/Talk to Captain Rana
 |tip Manually skip to the next step.
 step
 goto bleakrock_base 46.85,88.75
@@ -30400,25 +30386,24 @@ talk Esqoo
 accept Finding the Family
 step
 goto 33.12,45.41
-|tip It is behind the large building.
 'Use _Skyshard_ |q If By Sea/Get to the Dhalmora Watchtower
 |tip Manually skip to the next step.
 step
 goto balfoyen_base 50.33,51.52 |q If By Sea/Get to the Dhalmora Watchtower
 step
-goto 53.55,45.39
-'Get to the Dhalmora Watchtower |q If By Sea/Get to the Dhalmora Watchtower
+goto 53.55,45.39 |q If By Sea/Get to the Dhalmora Watchtower
 step
 goto 52.42,47.47
-|tip It is on the floor inside the tower.
-'Examine Watchtower Ledger |q If By Sea/Search the Watchtower
+'Examine _Watchtower Ledger_ |q If By Sea/Search the Watchtower
+step
+goto 53.75,45.95 |q Finding the Family/Send Rollie Home
 step
 goto 45.27,49.76
 talk Wenaxi
 accept Salt of the Earth
 step
 goto 42.75,49.38
-click Rollie |q Finding the Family/Send Rollie Home
+'Use _Stinkweed_ Rollie |q Finding the Family/Send Rollie Home
 step
 goto 38.84,49.06
 talk Vudeelal |q Salt of the Earth/Find Vudeelal
@@ -30434,34 +30419,30 @@ talk Iron-Claws
 accept Unorthodox Tactics
 step
 goto 47.58,63.20
-click Corkie |q Finding the Family/Send Corkie Home
+'Use _Stinkweed_ Corkie |q Finding the Family/Send Corkie Home
 step
 goto 44.82,57.59
-|tip You can do this from a distance and they are all around this area.
-'Throw 5 Treated Netch Eggs at the Covenant |q Unorthodox Tactics/.*Throw Treated Netch Eggs at the Covenant.*
+'Throw _Treated Netch Eggs_ at the Covenant |q Unorthodox Tactics/.*Throw Treated Netch Eggs at the Covenant.*
 step
 goto 47.56,65.53 |q Finding the Family/Send Pale-Hide Home
 step
 goto 45.24,67.48 |q Finding the Family/Send Pale-Hide Home
 step
 goto 39.96,73.32
-|tip He's inside Fort Zeren.
-click Pale-Hide |q Finding the Family/Send Pale-Hide Home
+'Use _Stinkweed_ Pale-Hide |q Finding the Family/Send Pale-Hide Home
 step
 goto balfoyen_base 32.24,76.15
-talk Quartermaster Urona
-'Get Kindlepitch Powder at Fort Zeren |q If By Sea/Get Kindlepitch Powder at Fort Zeren
+talk Quartermaster Urona |q If By Sea/Get Kindlepitch Powder at Fort Zeren
 step
 goto 26.87,72.71
 wayshrine Fort Zeren
 step
 goto 24.61,74.41
-|tip It is on the ground behind Fort Zerem.
 'Use _Skyshard_ |q If By Sea/Get Kindlepitch Powder at the Foyen Dockyards
 |tip Manually skip to the next step.
 step
 goto 29.98,67.91
-click Bal Foyen
+'Open _Bal Foyen_
 |tip Manually skip to the next step.
 step
 goto 31.15,47.77 |q If By Sea/Get Kindlepitch Powder at the Foyen Dockyards
@@ -30473,8 +30454,7 @@ goto 37.74,31.60
 |tip Manually skip to the next step.
 step
 goto 33.97,32.78
-talk Quartermaster Lineem
-'Get Kindlepitch Powder at the Foyen Dockyards |q If By Sea/Get Kindlepitch Powder at the Foyen Dockyards
+talk Quartermaster Lineem |q If By Sea/Get Kindlepitch Powder at the Foyen Dockyards
 step
 goto 37.74,31.60
 'Use _Skyshard_ |q If By Sea/Head to the Signal Fires
@@ -30483,26 +30463,26 @@ step
 goto 43.79,28.82 |q If By Sea/Head to the Signal Fires
 step
 goto 44.39,29.26
-'Open Supply Tunnel |q If By Sea/Head to the Signal Fires
+'Open _Supply Tunnel_ |q If By Sea/Head to the Signal Fires
 |tip Manually skip to the next step.
 step
 goto smugglertunnel_base 92.30,49.83
-'Climb Bal Foyen Watchfires |q If By Sea/Head to the Signal Fires
+'Climb _Bal Foyen Watchfires_ |q If By Sea/Head to the Signal Fires
 step
 goto balfoyen_base 64.08,33.98
-'Burn East Signal Fire |q If By Sea/Light the East Fire
+'Burn _East Signal Fire_ |q If By Sea/Light the East Fire
 step
 goto 64.86,36.73 |q If By Sea/Light the West Fire
 step
 goto 66.35,38.72
-'Burn West Signal Fire |q If By Sea/Light the West Fire
+'Burn _West Signal Fire_ |q If By Sea/Light the West Fire
 step
 goto 60.28,36.78
-'Open Supply Tunnel |q If By Sea/Return to Dhalmora
+'Open _Supply Tunnel_ |q If By Sea/Return to Dhalmora
 |tip Manually skip to the next step.
 step
 goto smugglertunnel_base 14.17,50.21
-'Climb Foyen Dockyard |q If By Sea/Return to Dhalmora
+'Climb _Foyen Dockyard_ |q If By Sea/Return to Dhalmora
 |tip Manually skip to the next step.
 step
 goto 43.79,31.00
@@ -30523,8 +30503,8 @@ goto 28.44,25.05
 wayshrine Foyen Docks
 step
 goto 28.44,25.05
-click Foyen Docks Wayshrine
-'Travel to _Dhalmora_ in Bal Foyen |q Unorthodox Tactics/Talk to Iron-Claws
+'Use _Foyen Docks_ Wayshrine
+'Travel to _Dhalmora_ |q Unorthodox Tactics/Talk to Iron-Claws
 |tip Manually skip to the next step.
 step
 goto dhalmora_base 59.59,55.21
@@ -30540,25 +30520,23 @@ turnin If By Sea
 accept Crossroads
 step
 goto balfoyen_base 26.32,75.95
-|tip He's inside Fort Zeren Keep.
 talk Darj the Hunter
 turnin Crossroads
 accept Zeren in Peril
 step
 goto 28.75,76.21
-'Open Fort Zeren |q Zeren in Peril/Defend Fort Zeren
+'Open _Fort Zeren_ |q Zeren in Peril/Defend Fort Zeren
 step
 goto 39.24,79.79
 kill enemies near Reinforcement Portals
-|tip They appear randomly all around town. Kill the enemies next to the portals to close them.
-'Close 5 Portals |q Zeren in Peril/.*Close Portals.*
+'Close _Portal_ |q Zeren in Peril/.*Close Portals.*
 step
 goto 38.88,74.93
-'Find Denskar and Littrek |q Zeren in Peril/Find Denskar and Littrek
+'Find _Denskar and Littrek_ |q Zeren in Peril/Find Denskar and Littrek
 step
 goto 38.88,74.93
 talk Denskar Earth-Turner
-'Defend Denskar and Littrek |q Zeren in Peril/Defend Denskar and Littrek
+'Defend _Denskar and Littrek_ |q Zeren in Peril/Defend Denskar and Littrek
 step
 goto 35.21,74.21
 talk Aera Earth-Turner |q Zeren in Peril/Talk to Aera Earth-Turner
@@ -30576,11 +30554,11 @@ turnin Zeren in Peril
 accept Warning Davon's Watch 
 step
 goto balfoyen_base 29.99,67.91
-'Open Bal Foyen |q Warning Davon's Watch/Talk to Holgunn
+'Open _Bal Foyen_ |q Warning Davon's Watch/Talk to Holgunn
 |tip Manually skip to the next step.
 step
 goto 18.49,56.21
-'Open Stonefalls |q Warning Davon's Watch/Talk to Holgunn
+'Open _Stonefalls_ |q Warning Davon's Watch/Talk to Holgunn
 |tip Manually skip to the next step.
 step
 goto stonefalls_base 94.57,47.18
@@ -30588,11 +30566,9 @@ goto stonefalls_base 94.57,47.18
 |tip Manually skip to the next step.
 step
 goto 93.23,41.03
-click Jorunn the Skald-King 
 'Examine _Jorunn the Skald-King_ |lorebook Jorunn the Skald-King/1/9/4
 step
 'If your are level 10 or higher use Cyrodiil Introduction guide and and complete it to gain a healing spell and 30% gallop mount speed through the Assault War/Alliance Skill Line. |q Welcome to Cyrodiil |future 
-|tip Located in Extra's Main Quest Only Folders.
 |tip If your not Level 10 once your are level it is recommended.
 |tip Manually skip to the next step.
 |only Ebonheart Pact
@@ -30603,9 +30579,8 @@ turnin Warning Davon's Watch
 accept Legacy of the Ancestors
 step
 goto 65.76,65.70
-talk Holgunn
-'Tell him _I have some things to do. I'll meet you there._
 talk Holgunn |q Legacy of the Ancestors/Talk to Holgunn
+'Tell him _I have some things to do. I'll meet you there._
 step
 goto 70.27,52.23
 talk Hilan
@@ -30614,7 +30589,7 @@ turnin Hilan's Invitation
 |only Ebonheart Pact
 step
 'Use one of the skill points you saved
-'Learn the Intimidating Presence Skill |q Legacy of the Ancestors/Meet Holgunn
+'Learn _Intimidating Presence Skill_ |q Legacy of the Ancestors/Meet Holgunn
 |tip This skill can be found in the Fighters Guild section of your skill page.
 |tip Manually skip to the next step.
 |only Ebonheart Pact
@@ -30628,7 +30603,7 @@ goto 56.00,55.93 |q Rudrasa's Invitation |future
 |only Ebonheart Pact
 step
 goto 48.94,49.61
-'Open Mages Guild |q Rudrasa's Invitation |future
+'Open _Mages Guild_ |q Rudrasa's Invitation |future
 |tip Manually skip to the next step.
 step
 goto 48.56,45.03
@@ -30638,7 +30613,7 @@ turnin Rudrasa's Invitation
 |only Ebonheart Pact
 step
 'Use one of the skill points you saved
-'Learn the Persuasive Will skill |q Long Lost Lore |future
+'Learn _Persuasive Will_ skill |q Long Lost Lore |future
 |tip This skill can be found in the Mages Guild section of your skill page.
 |tip Manually skip to the next step.
 |only Ebonheart Pact
@@ -30658,8 +30633,7 @@ talk Valdam Andoren
 accept The Wizard's Tome
 step
 goto 54.00,45.00
-|tip It is laying on the ground outside the Mages Guild.
-'Find the Spellbook |q The Wizard's Tome/Find the Spellbook
+'Find _Spellbook_ |q The Wizard's Tome/Find the Spellbook
 step
 goto 53.89,44.96
 click Valdam's Spellbook
@@ -48196,3 +48170,309 @@ goto 87.70,39.05
 'Use Light of Meridia |q Cadwell's Silver/Use the Light of Meridia |future  |next Daggerfall Covenant Leveling Guides\\Stros M'Kai
 |only Ebonheart Pact
 ]])
+
+ZGV:RegisterGuide("Legacy Leveling Guides\\Cyrodiil Tutorial",[[\
+loadingimage loadscreen_cyrodiil_01.dds
+description Tutorial into the Cyrodil Zone to unlock a healing spell or 30% Gallop for your character at level 10.
+step
+'Press _L_ to open Alliance War Campaigns
+'Choose a Home Campaign if you don't already have one
+'Right-click and hit Enter Campaign |q Welcome to Cyrodiil |future
+|tip Manually skip to the next step.
+step
+goto westelsweyrgate_base 58.20,57.69
+|tip If in Eastern Elsweyr Gate travel to Western Elsweyr Gate for the guide to flow smooth.
+talk Fangil
+accept Welcome to Cyrodiil
+|only Aldmeri Dominion
+step
+goto 46.20,54.35
+'Activate _Transitus Shrine_
+'Travel to _Eastern Elsweyr Gate_ |q Welcome to Cyrodiil/Travel to Eastern Elsweyr Gate
+|only Aldmeri Dominion
+step
+goto eastelsweyrgate_base 21.08,41.73 |q Welcome to Cyrodiil/Go to the Siege Range
+|only Aldmeri Dominion
+step
+goto ava_whole 57.90,87.70 |q Welcome to Cyrodiil/Go to the Siege Range
+|only Aldmeri Dominion
+step
+goto 56.56,87.94
+talk Zan
+turnin Welcome to Cyrodiil
+accept Siege Warfare
+|only Aldmeri Dominion
+step
+goto 56.39,87.90
+'Use _Dominion Oil Catapult_ |q Siege Warfare/Hit Target Dummy with Catapult
+|only Aldmeri Dominion
+step
+goto 56.16,87.89
+'Use _Dominion Lightning Ballista_ |q Siege Warfare/Hit Target Dummy with Ballista
+|only Aldmeri Dominion
+step
+goto 55.93,87.91
+'Use _Dominion Stone Trebuchet_ |q Siege Warfare/Hit Target Dummy with Trebuchet
+|only Aldmeri Dominion
+step
+goto 56.56,87.94
+talk Zan |q Siege Warfare/Talk to Zan
+|only Aldmeri Dominion
+step
+goto 56.39,87.90
+|tip Add Practice Repair Kit to quickslot.
+'Use _Practice Repair Kit_ on Dominion Oil Catapult |q Siege Warfare/Use Practice Repair Kit on Siege Weapon
+|only Aldmeri Dominion
+step
+goto 55.62,87.97
+talk Taralin
+turnin Siege Warfare
+accept Reporting for Duty
+|only Aldmeri Dominion
+step
+goto 57.90,87.70 |q Reporting for Duty/Talk to Protector Arfire
+|only Aldmeri Dominion
+step
+goto 56.26,85.49 |q Reporting for Duty/Talk to Protector Arfire
+|only Aldmeri Dominion
+step
+goto 56.89,83.83
+|tip Back where you came from then Cross Bridge and in  the center of the Dome. 
+talk Protector Arfire |q Reporting for Duty/Talk to Protector Arfire
+|only Aldmeri Dominion
+step
+goto 56.26,85.49 |q Reporting for Duty/Talk to Grand Warlord Sorcalin
+|only Aldmeri Dominion
+step
+goto eastelsweyrgate_base 18.53,45.23
+'Open _Eastern Elsweyr Gate_ |q Reporting for Duty/Talk to Grand Warlord Sorcalin
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 50.24,39.75
+talk Grand Warlord Sorcalin |q Reporting for Duty/Talk to Grand Warlord Sorcalin
+|only Aldmeri Dominion
+step
+goto 51.19,42.914
+talk General Thoron |q Reporting for Duty/Talk to General Thoron
+|only Aldmeri Dominion
+step
+goto 46.24,47.57
+talk General Atahba
+turnin Reporting for Duty
+|only Aldmeri Dominion
+step
+goto 47.06,55.73
+'Use _Eastern Elsweyr_ Wayshrine
+'Travel to _Vulkhel Guard_ in Auridon |q Ensuring Security |future
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto southhighrockgate_base 44.58,54.43
+talk Veronard Liancourt
+accept Welcome to Cyrodiil
+|only Daggerfall Covenant
+step
+goto 65.18,49.44
+'Activate _Transitus Shrine_
+'Travel to _Northern High Rock Gate_ |q Welcome to Cyrodiil/Travel to Northern High Rock Gate
+|tip It is to the immediate north east of your current location.
+|only Daggerfall Covenant
+step
+goto northhighrockgate_base 42.88,68.93
+talk Zahreh |q Welcome to Cyrodiil/Talk to Zahreh
+|only Daggerfall Covenant
+step
+goto 53.78,65.01
+'Activate _Transitus Shrine_
+'Travel to _Southern High Rock Gate_ |q Welcome to Cyrodiil/Travel to Southern High Rock Gate
+|tip It is to the immediate south west of your current location.
+|only Daggerfall Covenant
+step
+goto southhighrockgate_base 76.53,25.25 |q Welcome to Cyrodiil/Talk to Bugbesh
+|only Daggerfall Covenant
+step
+goto ava_whole 08.02,26.51 |q Welcome to Cyrodiil/Talk to Bugbesh
+|only Daggerfall Covenant
+step
+goto 08.51,24.80
+talk Bugbesh
+turnin Welcome to Cyrodiil
+accept Siege Warfare
+|only Daggerfall Covenant
+step
+goto 07.95,24.90
+'Use _Covenant Oil Catapult_ |q Siege Warfare/Hit Target Dummy with Catapult
+|only Daggerfall Covenant
+step
+goto 08.07,24.87
+'Use _Covenant Lightning Ballista_ |q Siege Warfare/Hit Target Dummy with Ballista
+|only Daggerfall Covenant
+step
+goto 08.25,24.82
+'Use _Covenant Firepot Trebuchet_ |q Siege Warfare/Hit Target Dummy with Trebuchet
+|only Daggerfall Covenant
+step
+goto 08.51,24.80
+talk Bugbesh |q Siege Warfare/Talk to Bugbesh
+|only Daggerfall Covenant
+step
+goto 08.41,24.73
+|tip Add Practice Repair Kit to quickslot.
+'Use _Practice Repair Kit_ on Covenant Iceball Trebuchet |q Siege Warfare/Use Practice Repair Kit on Siege Weapon
+|only Daggerfall Covenant
+step
+goto 08.60,24.98
+talk Aurorelle Varin
+turnin Siege Warfare
+accept Reporting for Duty
+|only Daggerfall Covenant
+step
+goto 08.07,26.49 |q Reporting for Duty/Talk to Protector Yseline
+|only Daggerfall Covenant
+step
+goto 10.21,26.23 |q Reporting for Duty/Talk to Protector Yseline
+|only Daggerfall Covenant
+step
+goto 11.94,27.18
+talk Protector Yseline |q Reporting for Duty/Talk to Protector Yseline
+|only Daggerfall Covenant
+step
+goto 10.21,26.23 |q Reporting for Duty/Talk to Grand Warlord Dortene
+|only Daggerfall Covenant
+step
+goto southhighrockgate_base 75.30,20.84
+'Open _South High Rock Gate_ |q Reporting for Duty/Talk to Grand Warlord Dortene
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto southhighrockgate_base 61.37,56.75
+talk Grand Warlord Dortene |q Reporting for Duty/Talk to Grand Warlord Dortene
+|only Daggerfall Covenant
+step
+goto 56.30,54.20
+talk General Khamagash |q Reporting for Duty/Talk to General Khamagash
+|only Daggerfall Covenant
+step
+goto 54.99,49.88
+talk General Am-Shadal
+turnin Reporting for Duty
+|only Daggerfall Covenant
+step
+goto 65.18,49.43
+'Activate _Transitus Shrine_
+'Travel to _Northern High Rock Gate_ |q The Harborage |future
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto northhighrockgate_base 62.70,47.55
+'Use _Northern High Rock Gate_ Wayshrine
+'Travel to _Daggerfall_ in Glenumbra |q Blood and the Crescent Moon |future
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto northmorrowgate_base 47.80,47.71
+talk Olvyia Indaram
+accept Welcome to Cyrodiil
+|only Ebonheart Pact
+step
+goto 48.38,54.98
+'Activate _Transitus Shrine_
+'Travel to _Southern Morrowind Gate_ |q Welcome to Cyrodiil/Travel to Southern Morrowind Gate
+|only Ebonheart Pact
+step
+goto southmorrowgate_base 48.01,50.50
+talk Mirrored-Skin |q Welcome to Cyrodiil/Talk to Mirrored-Skin
+|only Ebonheart Pact
+step
+goto 52.72,47.57
+'Activate _Transitus Shrine_
+'Travel to _Northern Morrowind Gate_ |q Welcome to Cyrodiil/Travel to Northern Morrowind Gate
+|only Ebonheart Pact
+step
+goto northmorrowgate_base 58.93,72.91 |q Welcome to Cyrodiil/Talk to Adalmor
+|only Ebonheart Pact
+step
+goto 71.38,74.16 |q Welcome to Cyrodiil/Talk to Adalmor
+|only Ebonheart Pact
+step
+goto ava_whole 85.98,14.12 |q Welcome to Cyrodiil/Talk to Adalmor
+step
+goto 86.20,14.09
+talk Adalmor
+turnin Welcome to Cyrodiil
+accept Siege Warfare
+|only Ebonheart Pact
+step
+goto 86.40,14.14
+'Use _Pact Stone Trebuchet_ |q Siege Warfare/Hit Target Dummy with Trebuchet
+|only Ebonheart Pact
+step
+goto 86.55,14.28
+'Use _Ebonheart Ballista_ |q Siege Warfare/Hit Target Dummy with Ballista
+|only Ebonheart Pact
+step
+goto 86.69,14.39
+'Use _Pact Scattershot Catapult_ |q Siege Warfare/Hit Target Dummy with Catapult
+|only Ebonheart Pact
+step
+goto 86.20,14.09
+talk Adalmor |q Siege Warfare/Talk to Adalmor
+|only Ebonheart Pact
+step
+goto 86.32,14.05
+|tip Add Practice Repair Kit to quickslot.
+'Use _Practice Repair Kit_ on Pact Firepot Trebuchet |q Siege Warfare/Use Practice Repair Kit on Siege Weapon
+|only Ebonheart Pact
+step
+goto 86.27,14.39
+talk Galsi Mavani
+turnin Siege Warfare
+accept Reporting for Duty
+|only Ebonheart Pact
+step
+goto 86.57,15.14 |q Reporting for Duty/Talk to Protector Galiel
+step
+goto 85.02,17.47 |q Reporting for Duty/Talk to Protector Galiel
+step
+goto 82.84,18.64 |q Reporting for Duty/Talk to Protector Galiel
+step
+goto 81.26,17.99
+talk Protector Galiel |q Reporting for Duty/Talk to Protector Galiel
+|only Ebonheart Pact
+step
+goto 82.84,18.64 |q Reporting for Duty/Talk to Grand Warlord Zimmeron
+step
+goto 85.02,17.47 |q Reporting for Duty/Talk to Grand Warlord Zimmeron
+step
+goto 86.57,15.14 |q Reporting for Duty/Talk to Grand Warlord Zimmeron
+step
+goto 85.98,14.12 |q Reporting for Duty/Talk to Grand Warlord Zimmeron
+step
+goto northmorrowgate_base 73.78,72.90
+'Open _Northern Morrowind Gate_ |q Reporting for Duty/Talk to Grand Warlord Zimmeron
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 40.53,49.88
+talk Grand Warlord Zimmeron |q Reporting for Duty/Talk to Grand Warlord Zimmeron
+|only Ebonheart Pact
+step
+goto northmorrowgate_base 51.34,47.74
+talk General Dar-Liurz |q Reporting for Duty/Talk to General Dar-Liurz
+|only Ebonheart Pact
+step
+goto northmorrowgate_base 52.64,49.91
+talk General Jeggord
+turnin Reporting for Duty
+|only Ebonheart Pact
+step
+goto northmorrowgate_base 56.88,45.03
+'Use _North Morrowind_ Wayshrine
+'Travel to _Davon's Watch_ in Stonefalls |q Warning Davon's Watch |future
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+|tip Return to your Previous Guide.
+]])
+
