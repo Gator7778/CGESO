@@ -666,7 +666,8 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 		-- Created Utils.DistanceOffset in functions
 		-- sorting based on preceived popularity
 			
-			if  GetCurrentMapIndex() == Enums.BetnikhMap or
+			if  GetCurrentMapIndex() == Enums.BalfieraMap or
+			    GetCurrentMapIndex() == Enums.BetnikhMap or
 				GetCurrentMapIndex() == Enums.Blackwood or
 			    GetCurrentMapIndex() == Enums.BleakrockIsleMap or
 				GetCurrentMapIndex() == Enums.GreymoorCaverns or
@@ -697,11 +698,9 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 				GetCurrentMapIndex() == Enums.TheReachMap or
 				GetCurrentMapIndex() == Enums.WrothgarMap then return 4
 				
-		elseif  GetCurrentMapIndex() == Enums.AuridonMap or
-			    GetCurrentMapIndex() == Enums.AlikrMap or
-		        GetCurrentMapIndex() == Enums.ClockworkCityMap or
-				GetCurrentMapIndex() == Enums.GlenumbraMap or
+		elseif  GetCurrentMapIndex() == Enums.ClockworkCityMap or
 				GetCurrentMapIndex() == Enums.FargraveMap or
+				GetCurrentMapIndex() == Enums.GlenumbraMap or
 			    GetCurrentMapIndex() == Enums.GrahtwoodMap or
 			    GetCurrentMapIndex() == Enums.GreenshadeMap or
 			    GetCurrentMapIndex() == Enums.ReapersMarchMap or
@@ -709,8 +708,10 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 				GetCurrentMapIndex() == Enums.SummersetMap or
 				GetCurrentMapIndex() == Enums.TheDeadlandsMap then return 5
 				
-		elseif 	GetCurrentMapIndex() == Enums.ArtaeumMap or
-			    GetCurrentMapIndex() == Enums.MalabalTorMap or
+		elseif 	GetCurrentMapIndex() == Enums.AlikrMap or
+				GetCurrentMapIndex() == Enums.ArtaeumMap or
+		        GetCurrentMapIndex() == Enums.AuridonMap or
+				GetCurrentMapIndex() == Enums.MalabalTorMap or
 				GetCurrentMapIndex() == Enums.WesternSkyrimMap then return 7
 		
 		else return dist or selfdist or 1 -- default value
@@ -729,7 +730,6 @@ function Utils.DistanceOffsetForIsComplete()
 			    GetCurrentMapIndex() == Enums.BetnikhMap or
 				GetCurrentMapIndex() == Enums.Blackwood or
 			    GetCurrentMapIndex() == Enums.BleakrockIsleMap or
-			    GetCurrentMapIndex() == Enums.CyrodiilMap or
 				GetCurrentMapIndex() == Enums.GreymoorCaverns or
 			    GetCurrentMapIndex() == Enums.HighIsleMap or
 				GetCurrentMapIndex() == Enums.ImperialCityMap or
@@ -744,6 +744,7 @@ function Utils.DistanceOffsetForIsComplete()
 				GetCurrentMapIndex() == Enums.BangkoraiMap or
 				GetCurrentMapIndex() == Enums.ColdharbourMap or
 				GetCurrentMapIndex() == Enums.CraglornMap or
+			    GetCurrentMapIndex() == Enums.CyrodiilMap or
 				GetCurrentMapIndex() == Enums.DeshaanMap or
 				GetCurrentMapIndex() == Enums.EastmarchMap or
 				GetCurrentMapIndex() == Enums.GoldCoastMap or
@@ -758,9 +759,7 @@ function Utils.DistanceOffsetForIsComplete()
 				GetCurrentMapIndex() == Enums.WesternSkyrimMap or
 				GetCurrentMapIndex() == Enums.WrothgarMap then return 4
 				
-		elseif  GetCurrentMapIndex() == Enums.AlikrMap or
-			    GetCurrentMapIndex() == Enums.AuridonMap or
-				GetCurrentMapIndex() == Enums.ClockworkCityMap or
+		elseif  GetCurrentMapIndex() == Enums.ClockworkCityMap or
 				GetCurrentMapIndex() == Enums.FargraveMap or
 				GetCurrentMapIndex() == Enums.GlenumbraMap or
 			    GetCurrentMapIndex() == Enums.GrahtwoodMap or
@@ -770,7 +769,9 @@ function Utils.DistanceOffsetForIsComplete()
 				GetCurrentMapIndex() == Enums.SummersetMap or
 				GetCurrentMapIndex() == Enums.TheDeadlandsMap then return 5
 
-		elseif 	GetCurrentMapIndex() == Enums.ArtaeumMap or
+		elseif 	GetCurrentMapIndex() == Enums.AlikrMap or
+				GetCurrentMapIndex() == Enums.ArtaeumMap or
+		        GetCurrentMapIndex() == Enums.AuridonMap or
 			    GetCurrentMapIndex() == Enums.MalabalTorMap or
 				GetCurrentMapIndex() == Enums.WesternSkyrimMap then return 7
 			

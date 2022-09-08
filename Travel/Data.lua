@@ -291,6 +291,31 @@ Data.MapIdsByName = {
 	["Hozzin's Folly"]                      = 233,
 	["Orkey's Hollow"]                      = 234,
 	["Last Rest"]                           = 235,
+	
+	-- Stonefalls
+	["Bal Foyen"]                           = 236,
+	["Dhalmora"]                            = 237,
+	["Smuggler's Tunnel"]                   = 238,
+	["Stonefalls"]                          = 239,
+	["Davon's Watch"]                       = 240,
+	["House Indoril Crypt"]                 = 241,
+	["Charred Ridge"]                       = 242,
+	["Ash Mountain"]                        = 243,
+	["Inner Sea Armature"]                  = 244,
+	["Emberflint Mine"]                     = 245,
+	["Mephala's Nest"]                      = 246,
+	["Fort Arand Dungeons"]                 = 247,
+	["Ebonheart"]                           = 248,
+	["Coral Heart Chamber"]                 = 249,
+	["Hightide Hollow"]                     = 250,
+	["Heimlyn Keep Reliquary"]              = 251,
+	["Fort Virak Ruins"]                    = 252,
+	["Iliath Temple Mines"]                 = 253,
+	["Sheogorath's Tongue"]                 = 254,
+	["Kragenmoor"]                          = 255,
+	["House Dres Crypts"]                   = 256,
+	["Softloam Cavern"]                     = 257,
+	["Tormented Spire"]                     = 258,
 }
 
 -----------------------------------------
