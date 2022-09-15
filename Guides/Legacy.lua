@@ -1155,10 +1155,9 @@ goto 64.23,78.84
 talk Captain Tendil
 turnin Real Marines
 step
-goto 63.60,82.25 |q Silsailen Rescue/Talk to Elenwen
+goto 63.60,82.25 |q Silsailen Rescue/Talk to Elenwen |tip Leave the cellar.
 step
 goto 62.70,82.89
-|tip Leave the Cellar.
 talk Elenwen |tip She is inside the large storehouse.
 turnin Silsailen Rescue
 accept Teldur's End
@@ -1380,7 +1379,7 @@ goto 58.55,69.16
 |tip Manually skip to the next step.
 step
 goto phaercatacombs_base 68.25,28.39
-'Follow Hendil |q The First Patient/Follow Hendil
+'Follow Hendil |q The First Patient/Follow Hendil |future
 step
 goto 63.77,25.78
 talk Nelulin |q The First Patient/Talk to Nelulin
@@ -1587,7 +1586,7 @@ goto blisslower_base 52.43,47.87 |tip Be careful to jump down onto the huge mush
 step
 goto 49.35,57.32 |q Depths of Madness/Collect Lavendercap Mushrooms
 step
-goto 74.42,72.72
+goto blisstop_base 72.06,72.43
 |tip Follow the path up.
 'Use Spore Potion Recipe |q Depths of Madness/Collect Lavendercap Mushrooms
 step
@@ -2162,7 +2161,7 @@ step
 goto 17.10,47.23 |q To Dawnbreak/Talk to Canonreeve Sinyon in Dawnbreak
 step
 goto auridon_base 60.88,53.73
-'Help Aelif Defeat Daedra |q Anchors from the Harbour/Help Aelif Defeat Daedra
+'Help Aelif Defeat Daedra |q Anchors from the Harbour/Help Aelif Defeat Daedra |future
 |only Aldmeri Dominion
 step
 goto 62.46,55.69
@@ -2223,11 +2222,6 @@ talk The Prophet |q Daughter of Giants/Talk to the Prophet
 |only Aldmeri Dominion
 step
 goto 60.27,30.68
-'Use Portal to Coldharbour |q Daughter of Giants/Enter Coldharbour |future
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 69.74,61.27
 'Use Portal to Coldharbour |q Daughter of Giants/Enter Coldharbour |future
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -3244,7 +3238,7 @@ step
 goto 39.16,16.12
 'Open North Beacon Barracks |q The Wayward Dagger/Find the North Beacon Barracks
 step
-goto 39.97,16.25
+goto 38.92,16.26
 |tip Upstairs in the building.
 kill Captain Bernardine |q The Wayward Dagger/Kill Captain Bernardine
 step
@@ -3342,7 +3336,7 @@ goto 31.24,08.61
 talk Sorondil |q Rightful Inheritance/Return to Vault Entrance
 step
 goto 30.45,07.86
-'Open Vault of Exiles |q Rightful Inheritance/Follow Sorondil |future
+'Open The Vault of Exiles |q Rightful Inheritance/Follow Sorondil |future
 |tip Manually skip to the next step.
 step
 goto thevaultofexile_base 77.35,50.77
@@ -4485,7 +4479,7 @@ goto 29.44,35.35
 'Witness the Gathering of Old Bones |q Keeper of Bones/Witness the Gathering of Old Bones
 step
 goto 31.61,37.89
-'Talk to Olphras|q Keeper of Bones/Talk to Olphras
+talk Olphras|q Keeper of Bones/Talk to Olphras
 'Tell her _[Persuade] Dringoth wants to stop the Worm Cult. Why not let him help?_
 step
 goto 42.89,42.67
@@ -4877,7 +4871,7 @@ goto 72.19,36.19
 'Open Vinedeath Cave |q Storgh's Bow |future
 |tip Manually skip to the next step.
 step
-goto vindeathcave_base 73.72,74.56 |q Storgh's Bow |future
+goto vindeathcave_base 73.72,74.56
 'Use Skyshard |q Storgh's Bow |future
 |tip Manually skip to the next step.
 step
@@ -5757,7 +5751,7 @@ talk Nellor
 accept The Innkeeper's Daughter
 step
 goto 31.76,42.57
-'Talk to Tulira |q Flipping the Coin/Talk to Tulira
+talk Tulira |q Flipping the Coin/Talk to Tulira
 'Tell her _I was just covering for him._
 step
 goto 30.73,41.94
@@ -10579,7 +10573,7 @@ goto 81.16,44.53
 'Use Western Altar |q Back to Rest/Cleanse the Western Altar
 step
 goto 79.02,44.00
-'Talk to the Moranda Gem Array |q Back to Rest/Talk to the Moranda Gem Array
+talk the Moranda Gem Array |q Back to Rest/Talk to the Moranda Gem Array
 step
 goto 79.02,44.00
 talk The Voice of Ouze
@@ -10594,7 +10588,7 @@ talk Guardian Celonron |q Fulfilling One's Fate/Talk to Guardian Celonron
 step
 goto 81.84,45.34
 |tip Follow the road.
-'Talk to Spinner Indinael |q Fulfilling One's Fate/Talk to Spinner Indinael
+talk Spinner Indinael |q Fulfilling One's Fate/Talk to Spinner Indinael
 step
 goto 81.84,45.34
 'Examine Stone Altar |q Fulfilling One's Fate/Examine the Stone Altar
@@ -15690,7 +15684,7 @@ goto 66.71,27.63
 |tip Manually skip to the next step.
 step
 goto carzogsdemise_base 62.27,56.40
-'Talk to Lerisa |q Carzog's Demise/Reach the Inner Sanctuary |future
+talk Lerisa |q Carzog's Demise/Reach the Inner Sanctuary |future
 |tip Manually skip to the next step.
 step
 goto 88.58,56.56 |q Carzog's Demise/Reach the Inner Sanctuary
@@ -24601,7 +24595,7 @@ goto 40.20,68.66
 step
 goto 37.50,68.19
 |tip Watch the dialogue.
-'Talk to the King |q The Initiation/Talk to the King
+talk the King |q The Initiation/Talk to the King
 step
 goto 36.88,69.13
 'Use Haqmir's Tent |q The Initiation/Collect Your Brother From His Tent
@@ -30158,6 +30152,7 @@ goto orkeyshollow_base 36.25,82.06
 'Find Eiman |q The Frozen Man/Find Eiman
 step
 goto 83.10,69.93
+|tip On top of the platform.
 'Open Battered Chest |q The Frozen Man/.*Find Clues to the Frozen Man's Identity.* |count 1
 step
 goto 62.15,41.40
@@ -30166,6 +30161,8 @@ step
 goto 35.37,43.18 |q The Frozen Man/.*Find Clues to the Frozen Man's Identity.* |count 3
 step
 goto 30.74,30.98 |q The Frozen Man/.*Find Clues to the Frozen Man's Identity.* |count 3
+step
+goto 24.03,31.33 |q The Frozen Man/.*Find Clues to the Frozen Man's Identity.* |count 3
 step
 goto 16.78,56.91
 'Examine Weathered Pack |q The Frozen Man/.*Find Clues to the Frozen Man's Identity.* |count 3
@@ -30389,14 +30386,10 @@ goto 29.98,67.91
 step
 goto 31.15,47.77 |q If By Sea/Get Kindlepitch Powder at the Foyen Dockyards
 step
-goto 35.32,29.32 |q If By Sea/Get Kindlepitch Powder at the Foyen Dockyards
-step
-goto 37.74,31.60
-'Use Skyshard |q If By Sea/Get Kindlepitch Powder at the Foyen Dockyards
-|tip Manually skip to the next step.
-step
 goto 33.97,32.78
 talk Quartermaster Lineem |q If By Sea/Get Kindlepitch Powder at the Foyen Dockyards
+step
+goto 35.32,29.32 |q If By Sea/Head to the Signal Fires
 step
 goto 37.74,31.60
 'Use Skyshard |q If By Sea/Head to the Signal Fires
@@ -44875,7 +44868,7 @@ goto 80.60,68.36
 |tip Valdam Andoren is a healer.
 |tip Holgunn is a warrior.
 |tip Walks-in-Ash is a mage. (Recommended)
-'Talk to the Companion You Want |q Securing the Pass/Choose Healer
+talk the Companion You Want |q Securing the Pass/Choose Healer
 step
 goto 80.16,69.20
 'Open Trolhetta Cave |q Securing the Pass/Enter Trolhetta Cave |future

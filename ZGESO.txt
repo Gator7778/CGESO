@@ -3,7 +3,7 @@
 ## Author: snichols7778, Hydra9268
 ## Version: 1000
 ## AddOnVersion: 1000
-## APIVersion: 101033 101034
+## APIVersion: 101034 101035
 ; ## DependsOn: LibGPS AceTimer-3.0>=146
 ## DependsOn: LibGPS>=68
 ## SavedVariables: ZGESOSettings
@@ -136,7 +136,7 @@ Guides/MainQuestsOnly.lua
 Guides/Expansions.lua
 Guides/Companions.lua
 Guides/Legacy.lua
-Guides/DSL.lua
+Guides/SLD.lua
 
 -- Bindings
 Bindings.xml
