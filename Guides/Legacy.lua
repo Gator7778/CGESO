@@ -1,7 +1,7 @@
 local ZGV = _G.ZGV
 if ZGV:DoMutex("LevelingCommon") then return end
 ZGV.GuideMenuTier = "TAM"
-ZGV:RegisterGuide("Legacy Leveling Guides\\The Wailing Prison",[[
+ZGV:RegisterGuide("LEVELING\\The Wailing Prison",[[
 loadingimage loadscreen_chapter1_01.dds
 description Brave The Wailing Prison, a prisoner stronghold in Coldharbour.
 step
@@ -171,7 +171,7 @@ goto 49.40,51.56
 step
 goto khenarthisroost_base 55.70,75.41
 talk The Prophet
-turnin Soul Shriven in Coldharbour |next Legacy Leveling Guides\\Khenarthi's Roost
+turnin Soul Shriven in Coldharbour |next Aldmeri Dominion Leveling Guides\\Khenarthi's Roost
 |only Aldmeri Dominion
 step
 goto porthunding_base 36.16,87.59
@@ -185,7 +185,7 @@ turnin Soul Shriven in Coldharbour |next Ebonheart Pact Leveling Guides\\Bleakro
 |only Ebonheart Pact
 ]])
 
-ZGV:RegisterGuide("Legacy Leveling Guides\\Khenarthi's Roost",[[
+ZGV:RegisterGuide("Aldmeri Dominion Leveling Guides\\Khenarthi's Roost",[[
 loadingimage loadscreen_kenathis_roost_01.dds
 description This island off the south coast of Elsweyr is named after the Khajiiti goddess of weather and the sky, who is usually represented as a great hawk. She finds many worshipers among the cat-folk's sailors and farmers, especially those who grow moon-sugar cane.
 step
@@ -809,10 +809,10 @@ accept To Auridon
 step
 goto 61.53,29.33
 'Use Prowler Skiff |q To Auridon/Board the Skiff |future 
-|tip Manually skip to the next step. |next Legacy Leveling Guides\\Auridon
+|tip Manually skip to the next step. |next Aldmeri Dominion Leveling Guides\\Auridon
 ]])
 
-ZGV:RegisterGuide("Legacy Leveling Guides\\Auridon",[[
+ZGV:RegisterGuide("Aldmeri Dominion Leveling Guides\\Auridon",[[
 loadingimage loadscreen_auridon_01.dds
 description The second largest of the Summerset Isles, Auridon has always served the High Elves as a buffer between their serene archipelago and the turmoil of Tamriel. The Altmer of Auridon have been hardened by generations of repelling invaders, pirates, and plagues.
 step
@@ -3572,10 +3572,10 @@ step
 step
 goto vulkhelguard_base 59.98,66.83
 talk Captain Jimila |q The Great Tree/Talk to Captain Jimila in Vulkhel Guard |future
-'Tell her _I'm ready to leave for Haven._ |next Legacy Leveling Guides\\Grahtwood
+'Tell her _I'm ready to leave for Haven._ |next Aldmeri Dominion Leveling Guides\\Grahtwood
 ]])
 
-ZGV:RegisterGuide("Legacy Leveling Guides\\Grahtwood",[[
+ZGV:RegisterGuide("Aldmeri Dominion Leveling Guides\\Grahtwood",[[
 loadingimage loadscreen_grahtwood_01.dds
 description This region is the southern heart of the Wood Elves' great forest, and home to more of the gigantic graht-oaks than any other part of Valenwood. Its capital, now also the capital of the entire Aldmeri Dominion, is Elden Root.
 step
@@ -6376,10 +6376,10 @@ goto 17.52,19.50
 |tip Manually skip to the next step.
 step
 goto marbruk_base 73.50,35.60
-'Examine Monomyth: The Heart of the World |lorebook Monomyth: The Heart of the World/1/10/7 |next Legacy Leveling Guides\\Greenshade
+'Examine Monomyth: The Heart of the World |lorebook Monomyth: The Heart of the World/1/10/7 |next Aldmeri Dominion Leveling Guides\\Greenshade
 ]])
 
-ZGV:RegisterGuide("Legacy Leveling Guides\\Greenshade",[[
+ZGV:RegisterGuide("Aldmeri Dominion Leveling Guides\\Greenshade",[[
 loadingimage loadscreen_greenshade_01.dds
 description As the region of Valenwood farthest from all other realms, Greenshade's graht-oak forest is virtually pristine, the Tamriel jungle at its most primeval. Its capital is the trading port of Woodhearth.
 step
@@ -8920,10 +8920,10 @@ goto malabaltor_base 9.48,60.15
 step
 goto velynharbor_base 38.84,79.97
 talk Lieutenant Ehran
-turnin To Velyn Harbor |next Legacy Leveling Guides\\Malabal Tor
+turnin To Velyn Harbor |next Aldmeri Dominion Leveling Guides\\Malabal Tor
 ]])
 
-ZGV:RegisterGuide("Legacy Leveling Guides\\Malabal Tor",[[
+ZGV:RegisterGuide("Aldmeri Dominion Leveling Guides\\Malabal Tor",[[
 loadingimage loadscreen_malabaltor_01.dds
 description Malabal Tor is the northwest region of Valenwood, on the coast of the Abecean Sea and the Strid River estuary. Its capital is Silvenar, the spiritual home of all Wood Elves.
 step
@@ -11682,10 +11682,10 @@ goto baandaritradingpost_base 78.59,50.27
 |tip Manually skip to the next step.
 step
 goto reapersmarch_base 15.17,42.68
-'Examine Ancient Scrolls of the Dwemer IV |lorebook Ancient Scrolls of the Dwemer IV/1/12/16 |next Legacy Leveling Guides\\Reaper's March
+'Examine Ancient Scrolls of the Dwemer IV |lorebook Ancient Scrolls of the Dwemer IV/1/12/16 |next Aldmeri Dominion Leveling Guides\\Reaper's March
 ]])
 
-ZGV:RegisterGuide("Legacy Leveling Guides\\Reaper's March",[[
+ZGV:RegisterGuide("Aldmeri Dominion Leveling Guides\\Reaper's March",[[
 loadingimage loadscreen_reapersmarch_01.dds
 description Once known simply as Northern Valenwood, this region that borders Cyrodiil and Elsweyr has seen so much bloody warfare since the fall of the Second Empire that it's now known as Reaper's March, even to its battle-scarred inhabitants.
 step
@@ -14785,7 +14785,7 @@ goto 12.51,59.43
 step
 goto 12.51,59.43
 'Use Portal to Stirk |q The Weight of Three Crowns/Enter Portal to Stirk |future
-|tip Manually skip to the next step. |next Legacy Leveling Guides\\Coldharbour
+|tip Manually skip to the next step. |next LEVELING\\Coldharbour
 |only Aldmeri Dominion
 step
 goto dune_base 33.13,25.82
@@ -14822,7 +14822,7 @@ goto stonefalls_base 77.45,36.57
 step
 goto the_ebonheart_harborage_base 70.90,32.79
 talk Cadwell
-turnin Cadwell's Gold |next LEVELING\\Craglorn
+turnin Cadwell's Gold |next DLC\\Craglorn
 'Congratulations, you've explored all of the factions!
 |only Ebonheart Pact
 ]])
@@ -16549,7 +16549,7 @@ goto 58.72,25.91
 step
 goto 72.63,22.23 |achieve 216
 step
-goto 81.48,48.64 |achieve 216
+goto 81.48,48.64
 kill Sincano |achieve 216
 step
 goto 79.36,69.37
@@ -29880,7 +29880,7 @@ goto 36.46,29.97
 step
 goto 36.46,29.97
 'Use Portal to Stirk |q The Weight of Three Crowns/Enter Portal to Stirk |future
-|tip Manually skip to the next step. |next Legacy Leveling Guides\\Coldharbour
+|tip Manually skip to the next step. |next LEVELING\\Coldharbour
 |only Daggerfall Covenant
 step
 goto bangkorai_base 67.90,19.30
@@ -29901,7 +29901,7 @@ accept Cadwell's Gold
 |only Ebonheart Pact
 step
 goto 87.70,39.03
-'Use Light of Meridia |q Cadwell's Gold/Use the Light of Meridia |future |next Legacy Leveling Guides\\Khenarthi's Roost
+'Use Light of Meridia |q Cadwell's Gold/Use the Light of Meridia |future |next Aldmeri Dominion Leveling Guides\\Khenarthi's Roost
 |only Ebonheart Pact
 step
 goto bangkorai_base 67.90,19.30
@@ -45176,7 +45176,7 @@ goto 52.04,70.85
 step
 goto 52.04,70.85
 'Use Portal to Stirk |q The Weight of Three Crowns/Enter Portal to Stirk |future
-|tip Manually skip to the next step. |next Legacy Leveling Guides\\Coldharbour
+|tip Manually skip to the next step. |next LEVELING\\Coldharbour
 |only Ebonheart Pact
 step
 goto therift_base 78.38,75.01
@@ -45218,7 +45218,7 @@ turnin Cadwell's Gold |next LEVELING\\Craglorn
 |only Daggerfall Covenant
 ]])
 
-ZGV:RegisterGuide("Legacy Leveling Guides\\Coldharbour",[[
+ZGV:RegisterGuide("LEVELING\\Coldharbour",[[
 loadingimage loadscreen_coldharbor_01.dds
 description Skyrim's southernmost hold has a relatively temperate climate, thanks to northern mountains that block the frigid gales of the Sea of Ghosts, and warming volcanoes in the Velothi Mountains to the east. Its capital is Riften, on the shores of broad Lake Honrich.
 step
@@ -47953,7 +47953,7 @@ accept Cadwell's Silver
 |only Daggerfall Covenant
 step
 goto 53.76,72.17
-'Use Light of Meridia |q Cadwell's Silver /Use the Light of Meridia |future |next Legacy Leveling Guides\\Khenarthi's Roost
+'Use Light of Meridia |q Cadwell's Silver /Use the Light of Meridia |future |next Aldmeri Dominion Leveling Guides\\Khenarthi's Roost
 |only Daggerfall Covenant
 step
 goto the_ebonheart_harborage_base 65.57,35.55
@@ -47984,7 +47984,7 @@ goto 87.70,39.05
 |only Ebonheart Pact
 ]])
 
-ZGV:RegisterGuide("Legacy Leveling Guides\\Cyrodiil Tutorial",[[\
+ZGV:RegisterGuide("LEVELING\\Cyrodiil Tutorial",[[\
 loadingimage loadscreen_cyrodiil_01.dds
 description Tutorial into the Cyrodil Zone to unlock a healing spell or 30% Gallop for your character at level 10.
 step
