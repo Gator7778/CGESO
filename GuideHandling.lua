@@ -12,7 +12,7 @@ local completeionInterval = LONG_STEP_INTERVAL
 local tinsert,tremove,type,ipairs,class = table.insert,table.remove,type,ipairs,_G.class
 local CHAIN = ZGV.Utils.ChainCall
 local L = ZGV.L
-local GPS = LibGPS3
+local GPS = LibGPS2
 
 -----------------------------------------
 -- SAVED REFERENCES
@@ -379,11 +379,10 @@ function ZGV:SanitizeGuideTitle(title)
 	title = title:gsub("//","/")
 	title = title :gsub("ZGV's ","")
 	title = title
-	:gsub("^Legacy ","")
+	:gsub("^Common ","")
 	:gsub("^Aldmeri Dominion ","")
 	:gsub("^Ebonheart Pact ","")
 	:gsub("^Daggerfall Covenant ","")
-	:gsub("^DLC ","")
 
 	-- fix old-style guide paths
 	title = title
@@ -590,11 +589,12 @@ function ZGV:GuideLoadStartup()
 	if not self.CurrentGuide then
 		-- self:Print("Finding proper starter section.")
 		local gs = _G.gs
-		gs = self:FindSuggestedGuides()		if gs['LEVELING'] then
+		gs = self:FindSuggestedGuides()
+		if gs['LEVELING'] then
 			gs = gs['LEVELING']
 		end
 		if GetZoneNameByIndex(GetCurrentMapZoneIndex()) == '' then
-			local gps = GPS:GetCurrentMapMeasurement()
+			local gps = GPS:GetCurrentMapMeasurements()
 			if gps.mapIndex == Enums.IsleOfBalfieraMap then -- Temporary special case for Isle of Balfiera
 				self:SetGuide(ZGV:SanitizeGuideTitle("LEVELING/Isle of Balfiera"))
 			end

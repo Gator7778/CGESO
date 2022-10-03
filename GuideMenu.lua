@@ -394,7 +394,7 @@ function GuideMenu:RefreshUI()
 		for _,guide in pairs(ZGV.registeredguides) do
 			local wholefolder,topfolder = guide.title:match("LEVELING/("..folderslash.."([^/]+))/.+")
 			if not topfolder then
-				wholefolder,topfolder = guide.title:match("Extras/("..folderslash.."([^/]+))/.+")
+				wholefolder,topfolder = guide.title:match("MISCELLANEOUS/("..folderslash.."([^/]+))/.+")
 			end
 			if topfolder then
 				if not topfolders_seen[topfolder] then
@@ -405,7 +405,7 @@ function GuideMenu:RefreshUI()
 		end
 
 		for _,guide in pairs(ZGV.registeredguides) do
-			if (guide.title:match("^LEVELING/"..folderslash.."[^/]+$") or guide.title:match("^Extras/"..folderslash.."[^/]+$")) then
+			if (guide.title:match("^LEVELING/"..folderslash.."[^/]+$") or guide.title:match("^MISCELLANEOUS/"..folderslash.."[^/]+$")) then
 				table.insert(guides,guide)
 			end
 		end
@@ -563,8 +563,8 @@ function GuideMenu:RefreshUI()
 		end
 	else
 		frame.GuideTitle:SetText("Welcome to the Community Leveling Guides for ESO")
-		frame.GuideImage:SetTexture(ZGV.DIR.."/Viewer/Skins/Stealth/cgeso-highisle.dds")
-		frame.GuideData:SetText("Craglorn, Southern Elsweyr, Western Skyrim, The Reach, Blackwood, Deadlands, High Isles guides authored by |cffaa00snichols7778|r\nSummerset, Murkmire and Elsweyr guides authored by |cffaa00Hydra9268|r\nAdditional support by |cffaa00Sharlikran|r, |cffaa00Krandor1|r\n|c999999Original guide and Addon created by Zygor Guides|r")
+		frame.GuideImage:SetTexture(ZGV.DIR.."/Viewer/Skins/Stealth/cgeso-blackwood.dds")
+		frame.GuideData:SetText("Craglorn, Southern Elsweyr, Western Skyrim, The Reach, and Blackwood guides authored by |cffaa00snichols7778|r\nSummerset, Murkmire and Elsweyr guides authored by |cffaa00Hydra9268|r\nAdditional support by |cffaa00Sharlikran|r, |cffaa00Krandor1|r\n|c999999Original guide and Addon created by Zygor Guides|r")
 		frame.GuideData:SetPoint(TOPLEFT,frame.GuideImage,0,265)
 		frame.GuideImage:Show()
 		frame.OkButton:Hide()
