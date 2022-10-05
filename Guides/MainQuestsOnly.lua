@@ -42835,3 +42835,9 @@ goto 28.85,38.57
 talk Lady Arabelle Davaux
 turnin A Chance for Peace
 ]])
+
+ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Galen",[[
+loadingimage loadscreen_galen_zone.dds
+description The DLC will take place in a new zone, Galen and Y'ffelon, two of the smaller islands in the Systres archipelago.
+step
+]])

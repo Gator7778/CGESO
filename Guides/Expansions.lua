@@ -24191,7 +24191,7 @@ step
 goto 59.48,15.38
 talk Abnur Tharn
 turnin The Halls of Colossus
--- END: MERGED PROLOGUE GUIDE FOR NEW AND EXISTING PLAYERS
+-- END: MERGED PROLOGUE GUIDE
 
 -- BEGIN Northern ELSWEYR GUIDE
 step
@@ -33738,7 +33738,7 @@ loadingimage loadscreen_thereach_01.dds
 description The Gray Host marches on the Reach in The Elder Scrolls Online: Markarth, the epic conclusion to the Dark Heart of Skyrim storyline. Explore a dangerous new zone, gather a band of unlikely allies, and confront a Vampire Lord and his ancient army.
 step
 
--- BEGIN:THE REACH PROLOGUE GUIDE FOR EXISTING PLAYERS
+-- BEGIN:THE REACH PROLOGUE GUIDE
 
 -- Start: Aldmeri Dominion Faction
 'Open Audridon Map
@@ -34082,7 +34082,7 @@ step
 talk Gwendis
 turnin The Gray Council
 step
--- END: THE REACH PROLOGUE GUIDE FOR EXISTING PLAYERS
+-- END: THE REACH PROLOGUE GUIDE
 'Open The Reach Map
 'Travel to _North Markarth_ in The Reach |q The Despot of Markarth |future
 |tip Manually skip to the next step.
@@ -36385,9 +36385,9 @@ step
 goto 66.30,87.63
 talk Eveli Sharp-Arrow
 turnin The Emperor's Secret
--- END: MERGED PROLOGUE GUIDE FOR NEW AND EXISTING PLAYERS
+-- END: MERGED PROLOGUE GUIDE
 
--- BEGIN BLACKWOOD GUIDE FOR EXISTING PLAYERS
+-- BEGIN BLACKWOOD GUIDE
 step
 'Open Blackwood Map
 'Travel to _Leyawiin_ in Blackwood |q A Deadly Secret |future
@@ -39759,9 +39759,9 @@ step
 goto MarbrukOutlawsRefuge_base 55.14,60.13
 talk Lyranth
 turnin The Key and the Cataclyst
--- END: MERGED PROLOGUE GUIDE FOR NEW AND EXISTING PLAYERS
+-- END: MERGED PROLOGUE GUIDE
 
--- BEGIN DEADLANDS GUIDE FOR EXISTING PLAYERS
+-- BEGIN DEADLANDS GUIDE
 step
 'Open _Fargrave Map_
 'Travel to _Fargrave Outskirts_ in Fargrave |q The Celestial Palanquin |future
@@ -42159,9 +42159,9 @@ step
 goto 57.73,89.79
 talk Lady Arabelle
 turnin A King's Retreat
--- END: MERGED PROLOGUE GUIDE FOR NEW AND EXISTING PLAYERS
+-- END: MERGED PROLOGUE GUIDE
 
--- BEGIN HIGH ISLE GUIDE FOR EXISTING PLAYERS
+-- BEGIN HIGH ISLE GUIDE
 step
 'Open High Isle and Amenos Map
 'Travel to _Westbay_ Wayshrine |q Of Knights and Knaves |future
@@ -44487,7 +44487,259 @@ turnin A Chance for Peace
 
 ZGV:RegisterGuide("LEVELING\\Galen",[[
 loadingimage loadscreen_galen_zone.dds
-description Coming Soon.
+description The DLC will take place in a new zone, Galen and Y'ffelon, two of the smaller islands in the Systres archipelago.
 step
-Coming Soon.
+-- BEGIN: Firesong PROLOGUE GUIDE
+'Press _, to Open Crown Store._
+'Go to _Quest Starters_
+'Go to _Prologue_
+accept Sojourn of the Druid King
+
+-- START: ALDMERI DOMINION FACTION PROLOGUE GUIDE
+step
+'Open _Glenumbra_ Map
+'Travel to _Aldcroft_ |q Sojourn of the Druid King/Talk to Druid Laurel
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto glenumbra_base 56.64,47.96 |q Sojourn of the Druid King |future
+|only Aldmeri Dominion
+step
+goto 68.10,46.33 |q Sojourn of the Druid King |future
+|only Aldmeri Dominion
+step
+goto 67.54,49.90 |q Sojourn of the Druid King |future
+step
+goto 68.97,53.46 |q Sojourn of the Druid King |future
+|only Aldmeri Dominion
+step
+goto 69.83,53.39
+talk Druid Laurel |q Sojourn of the Druid King/Talk to Druid Laurel
+|only Aldmeri Dominion
+step
+goto 69.78,53.00
+'Open Mines of Khuras |q Sojourn of the Druid King/Find Dhulef
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto minesofkhuras_base 66.32,70.02 |q Sojourn of the Druid King/Find Dhulef
+|only Aldmeri Dominion
+step
+goto 60.10,47.43 |q Sojourn of the Druid King/Find Dhulef
+|only Aldmeri Dominion
+step
+goto 30.40,30.77 |q Sojourn of the Druid King/Find Dhulef
+|only Aldmeri Dominion
+step
+goto 23.91,34.49
+talk Dhulef |q Sojourn of the Druid King/Talk to Dhulef |future
+|only Aldmeri Dominion
+-- END: ALDMERI DOMINION FACTION PROLOGUE GUIDE
+
+-- START: DAGGERFALL COVENANT FACTION
+step
+'Open _Glenumbra_ Map
+'Travel to _Baelborne_ |q Sojourn of the Druid King/Talk to Druid Laurel
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto glenumbra_base 34.97,72.78
+talk Druid Laurel |q Sojourn of the Druid King/Talk to Druid Laurel
+|only Daggerfall Covenant
+step
+goto 34.80,72.60
+'Open _Ilessan Tower_ |q Sojourn of the Druid King/Find Dhulef
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto ilessantower_base 12.20,80.36 |q Sojourn of the Druid King/Find Dhulef
+|only Daggerfall Covenant
+step
+goto 68.22,80.04 |q Sojourn of the Druid King/Find Dhulef
+|only Daggerfall Covenant
+step
+goto 64.43,33.38 |q Sojourn of the Druid King/Find Dhulef
+|only Daggerfall Covenant
+step
+goto 68.42,24.56
+talk Dhulef |q Sojourn of the Druid King/Talk to Dhulef |future
+|only Daggerfall Covenant
+-- END: DAGGERFALL COVENANT FACTION
+
+-- START: EBONHEART PACT FACTION
+step
+'Open _Glenumbra_ Map
+'Travel to _Lion Guard Redoubt_ |q Sojourn of the Druid King/Talk to Druid Laurel
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto glenumbra_base 60.53,18.42
+talk Druid Laurel |q Sojourn of the Druid King/Talk to Druid Laurel
+|only Ebonheart Pact
+step
+goto 60.687,18.48
+'Open _Ebon Crypt_ |q Sojourn of the Druid King/Find Dhulef
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto eboncrypt_base 34.13,78.82 |q Sojourn of the Druid King/Find Dhulef
+|only Ebonheart Pact
+step
+goto 87.22,76.69 |q Sojourn of the Druid King/Find Dhulef
+|only Ebonheart Pact
+step
+goto 82.75,53.36 |q Sojourn of the Druid King/Find Dhulef
+|only Ebonheart Pact
+step
+goto 66.56,59.62
+talk Dhulef |q Sojourn of the Druid King/Talk to Dhulef |future
+|only Ebonheart Pact
+-- END: EBONHEART PACT FACTION
+
+-- BEGIN: MERGED PROLOGUE FOR ALL FACTIONS
+step
+'Open _Glenumbra_ Map
+'Travel to _Farwatch_ |q Sojourn of the Druid King/Go to the Beldama Wyrd Camp
+|tip Manually skip to the next step.
+step
+goto glenumbra_base 26.07,53.85
+talk Wyress Joslin |q Sojourn of the Druid King/Talk to Wyress Joslin |future
+step
+'Open _Glenumbra_ Map
+'Travel to _Wyrd Tree_ |q Sojourn of the Druid King/.*Search the Firesong Camps.*
+|tip Manually skip to the next step.
+step
+goto 32.62,58.52 |q Sojourn of the Druid King/.*Search the Firesong Camps.*
+step
+goto 31.68,59.00
+'Examine _Archdruid Michiel's Orders_ |q Sojourn of the Druid King/.*Search the Firesong Camps.* |count 1
+step
+goto 39.05,57.86 |q Sojourn of the Druid King/.*Search the Firesong Camps.*
+step
+goto 40.71,51.36
+'Enter _Firesong Encampment_ |q Sojourn of the Druid King/.*Search the Firesong Camps.*
+|tip Manually skip to the next stpe.
+step
+goto 42.03,49.79
+'Examine _Map of Eastern Glenumbra_ |q Sojourn of the Druid King/.*Search the Firesong Camps.* |count 2
+step
+goto 40.88,51.21
+'Enter _Glenumbra_ |q Sojourn of the Druid King/.*Search the Firesong Camps.*
+|tip Manually skip to the next stpe.
+step
+goto 39.79,57.76
+'Use _Wyrd Tree_ Wayshrine
+'Travel to _Eagle's Brook_ |q Sojourn of the Druid King/.*Search the Firesong Camps.*
+|tip Manually skip to the next stpe.
+step
+goto 37.98,37.68
+'Examine _Wyrd Totem_ |q Sojourn of the Druid King/.*Search the Firesong Camps.* |count 3
+step
+goto 48.02,37.01
+'Use _Eagle's Brook_ Wayshrine
+'Travel to _Farwatch_ |q Sojourn of the Druid King/Return to the Beldama Wyrd Camp
+|tip Manually skip to the next step.
+step
+goto 25.89,53.95
+talk Druid Laurel |q Sojourn of the Druid King/Talk to Druid Laurel |future
+step
+'Open _Glenumbra_ Map
+'Travel to _Burial Tombs_ |q Sojourn of the Druid King/Go to the Spot Marked on the Map
+|tip Manually skip to the next step.
+step
+goto 80.04,30.36 |q Sojourn of the Druid King/Go to the Spot Marked on the Map
+step
+goto 82.03,29.20
+'Enter _Eimhir's Cavern_ |q Sojourn of the Druid King/Enter Eimhir's Cavern |future
+|tip Manually skip to the next step.
+step
+goto U35_Prologue_Glenumbra_Cave 59.53,51.05 |q Sojourn of the Druid King/Find Wyress Tola
+step
+goto 31.96,46.25 |q Sojourn of the Druid King/Find Wyress Tola
+step
+goto 26.79,17.89 |q Sojourn of the Druid King/Find Wyress Tola
+step
+goto 52.29,16.45 |q Sojourn of the Druid King/Find Wyress Tola
+step
+goto 54.04,23.30
+'Enter _Ritual Cove_ |q Sojourn of the Druid King/Find Wyress Tola
+|tip Manually skip to the next step.
+step
+goto 57.74,37.83
+talk Wyress Tola |q Sojourn of the Druid King/Talk to Wyress Tola |future
+step
+goto 56.28,38.66
+talk Druid Laurel |q Sojourn of the Druid King/Talk to Druid Laurel
+step
+'Open _Bangkorai_ Map
+'Travel to _Eastern Evermore_ |q Sojourn of the Druid King/Go to the Glenmoril Wyrd Camp
+|tip Manually skip to the next step.
+step
+goto bangkorai_base 50.70,39.41
+talk Wyress Matilde |q Sojourn of the Druid King/Talk to Wyress Matilde |future
+step
+goto 46.63,37.16
+'Use _Eastern Evermore_ Wayshrine
+'Travel to _Sunken Road_ |q Sojourn of the Druid King/Go to the Sunken Road
+|tip Manually skip to the next step.
+step
+goto 31.67,53.89
+'Open _Sunken Road_ |q Sojourn of the Druid King/Find Entrance to the Ancient Ritual Site |future
+|tip Manually skip to the next step.
+step
+goto sunkenroad_base 46.34,57.22 |q Sojourn of the Druid King/Find Entrance to the Ancient Ritual Site
+step
+goto 38.73,71.34
+|tip Drop down and Climb the stairs.
+'Enter _Glenmoril Ritual Site_ |q Sojourn of the Druid King/Enter the Ancient Ritual Site |future
+|tip Manually skip to the next step.
+step
+goto U35_Prologue_Cursed_Cave 63.77,54.99 |q Sojourn of the Druid King/Find Archdruid Michiel
+step
+goto 59.02,69.42 |q Sojourn of the Druid King/Find Archdruid Michiel
+step
+goto 44.64,62.73 |q Sojourn of the Druid King/Find Archdruid Michiel
+step
+goto 40.21,37.83 |q Sojourn of the Druid King/Find Archdruid Michiel
+step
+goto 12.87,38.60 |q Sojourn of the Druid King/Find Archdruid Michiel
+step
+goto 11.78,22.69 |q Sojourn of the Druid King/Find Archdruid Michiel
+step
+goto 31.73,35.19
+'Open _Ritual Grove_ |q Sojourn of the Druid King/Find Archdruid Michiel
+|tip Manually skip to the next step.
+step
+goto 30.19,49.24
+kill Archdruid Michiel |q Sojourn of the Druid King/Kill Archdruid Michiel |future
+step
+goto 29.37,52.84
+'Open _Ancient Spirit Bindings_ |q Sojourn of the Druid King/Release the Ancient Nature Spirit
+step
+goto 29.37,52.84
+talk Frii |q Sojourn of the Druid King/Talk to Frii
+step
+goto 29.37,52.84
+talk Druid Laurel |q Sojourn of the Druid King/Talk to Druid Laurel
+step
+'Open _Bangkorai_ Map
+'Travel to _Eastern Evermore_ |q Sojourn of the Druid King/Return to Glenmoril Wyrd Camp
+|tip Manually skip to the next step.
+step
+goto bangkorai_base 50.55,39.53
+talk Druid Laurel
+turnin Sojourn of the Druid King
+-- END: MERGED PROLOGUE GUIDE
+
+-- BEGIN Galen GUIDE
+step
+'Open _Galen and Y'ffelon_ Map
+'Travel to _Vastyr Outskirts_ |q A Sea of Troubles |future
+|tip Manually skip to the next step.
+step
+goto u36_galenisland_base 29.11,62.37
+talk Dhulef
+accept A Sea of Troubles
+step
+goto 
 ]])

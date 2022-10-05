@@ -2540,7 +2540,13 @@ ZGV.MapData = {
 		["u34_ZQ5Crypt_base"] =                 { name = "Navire Dungeons",                         id = 796, xoffset = 0.053433, yoffset = 0.600486, scale = 0.005880, },
 		["U34_AllFlags_int1_base"] =            { name = "All Flags Islet",                         id = 797, xoffset = 0.068205, yoffset = 0.584803, scale = 0.006392, },
 		["U34_AllFlags_ext_base"] =             { name = "All Flags Islet",                         id = 797, xoffset = 0.056748, yoffset = 0.592167, scale = 0.003878, },
-		["U34_AllFlags_int2_base"] =            { name = "All Flags Islet",                         id = 797, xoffset = 0.058379, yoffset = 0.594017, scale = 0.000447, },		
+		["U34_AllFlags_int2_base"] =            { name = "All Flags Islet",                         id = 797, xoffset = 0.058379, yoffset = 0.594017, scale = 0.000447, },	
+		
+		-- Firesong
+		["U35_Prologue_Glenumbra_Cave"] =       { name = "Eimhir's Cavern",                         id = 798, xoffset = 0.138994, yoffset = 0.313918, scale = 0.003833, },
+		["U35_Prologue_Cursed_Cave"] =          { name = "Glenmoril Ritual Site",                   id = 799, xoffset = 0.260887, yoffset = 0.344625, scale = 0.003384, },
+		["u36_galenisland_base"] =              { name = "Galen and Y'ffelon",                      id = 800, xoffset = 0.050826, yoffset = 0.569079, scale = 0.030713, },
+		["u36_VastyrCity_base"] =               { name = "Vastyr",                                  id = 801, xoffset = 0.043984, yoffset = 0.567014, scale = 0.008255, },
 	},
 }
 
