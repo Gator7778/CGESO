@@ -25,6 +25,7 @@ Enums = {
 	DeshaanMap = 10,
 	EastmarchMap = 13,
 	FargraveMap = 44,
+	GalenMap = 48,
 	GlenumbraMap = 2,
 	GoldCoastMap = 29,
 	GrahtwoodMap = 7,

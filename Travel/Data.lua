@@ -908,6 +908,30 @@ Data.MapIdsByName = {
 	["All Flags Islet"]                     = 797,
 	
 	-- Firesong
+	["Eimhir's Cavern"]                     = 798,
+	["Glenmoril Ritual Site"]               = 799,
+	["Galen and Y'ffelon"]                  = 800,
+	["Suncleft Grotto"]                     = 801,
+	["Vastyr"]                              = 802,
+	["Castle Mornard"]                      = 803,
+	["Draoife Dell"]                        = 804,
+	["Castle Tonnere Dungeons"]             = 805,
+	["Castle Tonnere Courtyard"]            = 806,
+	["Eldertide Hollow"]                    = 807,
+	["Clohaigh"]                            = 808,
+	["Vastyr Cathedral District"]           = 809,
+	["Vastyr Old Druid Tunnels"]            = 810,
+	["Ivyhame"]                             = 811,
+	["Temple of Y'ffelon"]                  = 812,
+	["The Mad Maiden"]                      = 813,
+	["Y'ffelon"]                            = 814,
+	["Garrick's Rest Dungeons"]             = 815,
+	["Steadfast Manor Cellars"]             = 816,
+	["Ancient Druid Circle"]                = 817,
+	["Yfrees Path"]                         = 818,
+	["Mount Firesong"]                      = 819,
+	
+	-- Firesong
 }
 
 -----------------------------------------

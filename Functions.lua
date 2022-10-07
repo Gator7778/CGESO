@@ -671,6 +671,7 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 			    GetCurrentMapIndex() == Enums.BetnikhMap or
 				GetCurrentMapIndex() == Enums.Blackwood or
 			    GetCurrentMapIndex() == Enums.BleakrockIsleMap or
+				GetCurrentMapIndex() == Enums.GalenMap or
 				GetCurrentMapIndex() == Enums.GreymoorCaverns or
 			    GetCurrentMapIndex() == Enums.HighIsleMap or
 				GetCurrentMapIndex() == Enums.ImperialCityMap or
@@ -731,6 +732,7 @@ function Utils.DistanceOffsetForIsComplete()
 			    GetCurrentMapIndex() == Enums.BetnikhMap or
 				GetCurrentMapIndex() == Enums.Blackwood or
 			    GetCurrentMapIndex() == Enums.BleakrockIsleMap or
+				GetCurrentMapIndex() == Enums.GalenMap or
 				GetCurrentMapIndex() == Enums.GreymoorCaverns or
 			    GetCurrentMapIndex() == Enums.HighIsleMap or
 				GetCurrentMapIndex() == Enums.ImperialCityMap or
