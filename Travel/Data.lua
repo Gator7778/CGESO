@@ -908,32 +908,32 @@ Data.MapIdsByName = {
 	["All Flags Islet"]                     = 797,
 	
 	       -- Firesong
-	["Eimhir's Cavern"]
-	["Glenmoril Ritual Site"]
-	["Galen and Y'ffelon"]
-	["Suncleft Grotto"]
-	["Vastyr"]
-	["Vastyr Outlaws Refuge"]
-	["Castle Mornard"]
-	["Draoife Dell"]
-	["Fauns' Thicket"]
-	["Castle Tonnere Dungeons"]
-	["Castle Tonnere Courtyard"]
-	["Eldertide Hollow"]
-	["Embervine"]
-	["Sea Witch Sanctum"]
-	["Yfrees Path"]
-	["Clohaigh"]
-	["Vastyr Cathedral District"]
-	["Vastyr Old Druid Tunnels"]
-	["Ivyhame"]
-	["Temple of Y'ffelon"]
-	["The Mad Maiden"]
-	["Y'ffelon"]
-	["Garrick's Rest Dungeons"]
-	["Steadfast Manor Cellars"]
-	["Ancient Druid Circle"]
-	["Mount Firesong"]
+	["Eimhir's Cavern"]                     = 798,
+	["Glenmoril Ritual Site"]               = 799,
+	["Galen and Y'ffelon"]                  = 800,
+	["Suncleft Grotto"]                     = 801,
+	["Vastyr"]                              = 802,
+	["Vastyr Outlaws Refuge"]               = 803,
+	["Castle Mornard"]                      = 804,
+	["Draoife Dell"]                        = 805,
+	["Fauns' Thicket"]                      = 806,
+	["Castle Tonnere Dungeons"]             = 807,
+	["Castle Tonnere Courtyard"]            = 808,
+	["Eldertide Hollow"]                    = 809,
+	["Embervine"]                           = 810,
+	["Sea Witch Sanctum"]                   = 811,
+	["Yfrees Path"]                         = 812,
+	["Clohaigh"]                            = 813,
+	["Vastyr Cathedral District"]           = 814,
+	["Vastyr Old Druid Tunnels"]            = 815,
+	["Ivyhame"]                             = 816,
+	["Temple of Y'ffelon"]                  = 817,
+	["The Mad Maiden"]                      = 818,
+	["Y'ffelon"]                            = 819,
+	["Garrick's Rest Dungeons"]             = 820,
+	["Steadfast Manor Cellars"]             = 821,
+	["Ancient Druid Circle"]                = 822,
+	["Mount Firesong"]                      = 823,
 	
 }
 
