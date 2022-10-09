@@ -2348,7 +2348,7 @@ kill Den Mother
 'Explore Buried Sands |achieve 893
 step
 goto 69.28,15.64
-'Use Skyshard |achieve 727/7
+'Use _Skyshard_ |achieve 727/7
 step
 'Open Craglorn Map
 'Travel to _Sandy Path_ in Craglorn |q The Warrior's Call/Find the Ruined Library
@@ -2430,7 +2430,7 @@ click Tombs of the Na-Totambu |achieve 727/11
 |tip Manually skip to the next step.
 step
 goto cryptoftarishzizone_base 82.93,44.75
-'Use Skyshard |achieve 727/11
+'Use _Skyshard_ |achieve 727/11
 step
 'Open Craglorn Map
 'Travel to _Belkarth_ Wayshrine in Craglorn |q Elemental Army/Investigate the Proving Grounds Dolmen
@@ -2472,7 +2472,7 @@ goto 45.56,38.11 |tip Up the steps, across the bridge and down the steps. |q Ele
 step
 goto 66.28,24.11
 |tip Follow path and go up the steps.
-'Use Skyshard |achieve 727/5
+'Use _Skyshard_ |achieve 727/5
 step
 goto 71.77,16.39
 click Tower |q Elemental Army/Find Kelmen Locke
@@ -2563,7 +2563,7 @@ step
 goto 41.00,52.85 |achieve 727/1
 step
 goto 73.68,35.22
-'Use Skyshard |achieve 727/1
+'Use _Skyshard_ |achieve 727/1
 step
 'Open Craglorn Map
 'Travel to _Elinhir_ in Cragslorn |q Elemental Army/Find Kelmen Locke at Ritual Site
@@ -2610,7 +2610,7 @@ step
 goto 53.03,47.39 |achieve 727/9
 step
 goto 63.80,56.98
-'Use Skyshard |achieve 727/9
+'Use _Skyshard_ |achieve 727/9
 step
 goto 77.84,25.98
 kill Storm Mage Iribia
@@ -2748,7 +2748,7 @@ step
 goto 64.83,34.41  |achieve 897
 step
 goto 57.11,51.46
-'Use Skyshard |achieve 912/5
+'Use _Skyshard_ |achieve 912/5
 step
 goto 28.38,25.48 |achieve 897
 step
@@ -2809,7 +2809,7 @@ step
 goto 41.96,52.19 |achieve 912/1
 step
 goto 63.67,50.92
-'Use Skyshard |achieve 912/1
+'Use _Skyshard_ |achieve 912/1
 step
 goto 41.01,52.22 |q Slithering Brood/Kill the Progenitor Mantikora
 step
@@ -2878,7 +2878,7 @@ step
 goto 26.63,11.11 |q The Serpent's Fang/Kill Ilthag Ironblood
 step
 goto ilthagsundertower_base 36.78,16.46
-'Use Skyshard |achieve 912/2
+'Use _Skyshard_ |achieve 912/2
 step
 goto 18.26,47.56
 kill Rahk and Vosh
@@ -2925,7 +2925,7 @@ click Exarch's Stronghold |q The Serpent's Fang/Enter the Throne Room
 step
 goto 62.74,55.88
 |tip Jump off bridge.
-'Use Skyshard |achieve 912/6
+'Use _Skyshard_ |achieve 912/6
 step
 goto 50.18,58.99 |q The Serpent's Fang/Enter the Throne Room
 step
@@ -3018,7 +3018,7 @@ kill Akiirdal
 step
 goto 52.98,54.19
 |tip Outside Dragon Priest's Burial Chamber
-'Use Skyshard |achieve 912/4
+'Use _Skyshard_ |achieve 912/4
 step
 goto 47.12,54.03 |q Dawn of the Exalted Viper/Enter the Sanctum of Farsight
 step
@@ -3050,7 +3050,7 @@ click Loth'Na Caverns |q Dawn of the Exalted Viper/Enter Loth'Na Caverns |future
 |tip Manually skip to the next step.
 step
 goto lothna_base 40.10,41.08
-'Use Skyshard |achieve 912/3
+'Use _Skyshard_ |achieve 912/3
 step
 goto 64.41,56.39 |achieve 889
 step
@@ -3215,7 +3215,7 @@ step
 goto 81.30,56.30 |achieve 885
 step
 goto 71.67,37.43
-'Use Skyshard |achieve 727/2
+'Use _Skyshard_ |achieve 727/2
 step
 goto 48.50,38.00
 kill Mzeklok
@@ -3259,7 +3259,7 @@ goto 40.01,20.65
 talk Faryan |q The Shattered and the Lost/Find the Second Mage Aspect
 step
 goto 33.08,66.28
-'Use Skyshard |achieve 727/12
+'Use _Skyshard_ |achieve 727/12
 step
 goto 22.68,77.73
 kill Packleader Sigmund
@@ -3321,7 +3321,7 @@ click Mtharnaz |achieve 894
 |tip Manually skip to the next step.
 step
 goto mtharnaz_base 88.04,62.32
-'Use Skyshard |achieve 727/8
+'Use _Skyshard_ |achieve 727/8
 step
 goto 62.56,34.44 |achieve 894
 step
@@ -3369,7 +3369,7 @@ step
 goto 70.53,54.17 |achieve 888
 step
 goto 61.56,46.25
-'Use Skyshard |achieve 727/3
+'Use _Skyshard_ |achieve 727/3
 step
 goto 62.81,35.35
 kill Satagna
@@ -3414,7 +3414,7 @@ step
 goto chiselshriek_base 83.48,80.97 |achieve 892
 step
 goto 85.90,22.90
-'Use Skyshard |achieve 727/6
+'Use _Skyshard_ |achieve 727/6
 step
 goto 71.17,22.71
 kill The Gracious Beacon
@@ -3433,7 +3433,7 @@ step
 goto 53.12,31.12 |achieve 890
 step
 goto 46.15,37.71
-'Use Skyshard |achieve 727/4
+'Use _Skyshard_ |achieve 727/4
 step
 goto 21.07,49.66 |achieve 890
 step
@@ -3454,7 +3454,7 @@ step
 goto thaliasretreat_base 48.71,42.73 |achieve 899
 step
 goto 46.63,28.94
-'Use Skyshard |achieve 727/10
+'Use _Skyshard_ |achieve 727/10
 step
 goto 29.63,15.22
 kill Zalgaz and two Handmaiden's
@@ -3544,7 +3544,7 @@ step
 goto kennelrun_base 69.69,47.17 |achieve 1320/16
 step
 goto 89.75,70.82
-'Use Skyshard |achieve 1320/16
+'Use _Skyshard_ |achieve 1320/16
 step
 goto 77.19,67.00 |achieve 1297 |tip Open The Kennel
 step
@@ -3661,7 +3661,7 @@ kill Agolas
 click Suspicious Mound |q One Ugly Mug/Find the Stolen Goods
 step
 goto 43.29,62.80
-'Use Skyshard |achieve 1320/6
+'Use _Skyshard_ |achieve 1320/6
 step
 goto 39.84,73.88
 wayshrine Frostbreak Ridge
@@ -3971,7 +3971,7 @@ goto 52.30,78.47 |achieve 1320/4
 step
 goto 53.00,78.62
 |tip Go up the ramp and jump onto the platform.
-'Use Skyshard |achieve 1320/4
+'Use _Skyshard_ |achieve 1320/4
 step
 goto 52.24,76.40
 'Climb Graystone Quarry Depths |q Quarry Conundrum/Investigate the Quarry
@@ -4337,7 +4337,7 @@ step
 goto 61.16,76.18 |achieve 1298
 step
 goto 32.95,82.64
-'Use Skyshard |achieve 1320/13
+'Use _Skyshard_ |achieve 1320/13
 step
 goto 61.26,78.81 |achieve 1298
 step
@@ -4362,7 +4362,7 @@ goto 83.51,50.05
 'Take Wrathberries |q Kindred Spirits/.*Gather Wrathberries.*
 step
 goto 84.49,42.99
-'Use Skyshard |achieve 1320/9
+'Use _Skyshard_ |achieve 1320/9
 step
 goto 74.11,44.07 |q Kindred Spirits/Bring the Ingredients to Orzorga
 step
@@ -4375,7 +4375,7 @@ goto 71.17,49.95 |q In the Name of the King/Recruit the Chief of Clan Morkul
 step
 goto 64.35,49.91
 |tip Look to your right and jump on the rock.
-'Use Skyshard |achieve 1320/8
+'Use _Skyshard_ |achieve 1320/8
 step
 goto 64.26,50.99 |q Riekr Revenge |future
 step
@@ -4550,7 +4550,7 @@ talk Doranar
 accept Atypical Artistry
 step
 goto 12.81,46.36
-'Use Skyshard |achieve 1320/5
+'Use _Skyshard_ |achieve 1320/5
 step
 goto 19.16,54.20 |q Cultural Affections |future
 step
@@ -4943,7 +4943,7 @@ talk Youss
 accept Of Sentimental Value
 step
 goto 53.21,35.45
-'Use Skyshard |achieve 1320/7
+'Use _Skyshard_ |achieve 1320/7
 step
 goto 55.59,33.85
 click Materre's Fortune |q Where Loyalty Lies/Search Wrecks for Survivors
@@ -5045,7 +5045,7 @@ step
 goto 36.11,30.12 |achieve 1320/15
 step
 goto 11.99,11.74
-'Use Skyshard |achieve 1320/15
+'Use _Skyshard_ |achieve 1320/15
 step
 goto 36.08,56.20 |q An Unexpected Fall/Return to Raynor Vanos
 step
@@ -5446,7 +5446,7 @@ step
 goto 19.32,65.57 |achieve 1320/12
 step
 goto 19.02,84.26
-'Use Skyshard |achieve 1320/12
+'Use _Skyshard_ |achieve 1320/12
 step
 goto 56.65,83.41 |achieve 1299
 step
@@ -5487,7 +5487,7 @@ step
 goto 32.32,74.56 |achieve 1320/2
 step
 goto 33.41,75.27
-'Use Skyshard |achieve 1320/2
+'Use _Skyshard_ |achieve 1320/2
 step
 goto 31.19,70.51
 wayshrine Great Bay
@@ -5507,7 +5507,7 @@ step
 goto 17.50,44.06 |achieve 1320/14
 step
 goto 28.93,45.88
-'Use Skyshard |achieve 1320/14
+'Use _Skyshard_ |achieve 1320/14
 step
 goto 11.23,60.39 |q Thukhozod the Eternal/Search for Khoruzoth
 step
@@ -5641,7 +5641,7 @@ goto 22.78,68.51
 'Take Sedge Grass |q A Healthy Choice/.*Sedge Grass.*
 step
 goto 18.88,67.40
-'Use Skyshard |achieve 1320/3
+'Use _Skyshard_ |achieve 1320/3
 step
 'Open Wrothgar Map
 'Travel to _Shatul_ in Wrothgar |q A Healthy Choice/Bring the Ingredients to Orzorga
@@ -5731,7 +5731,7 @@ step
 goto 18.56,83.84 |achieve 1320/1
 step
 goto 19.46,82.99
-'Use Skyshard |achieve 1320/1
+'Use _Skyshard_ |achieve 1320/1
 step
 goto 19.65,85.32 |achieve 1301
 step
@@ -5754,7 +5754,7 @@ goto 73.06,65.90
 click Note to Sir Marq |q Broken Promises/Search for King Emeric's Messenger
 step
 goto 76.14,65.98
-'Use Skyshard |achieve 1320/17
+'Use _Skyshard_ |achieve 1320/17
 step
 goto 73.07,25.83 |achieve 1301
 step
@@ -6755,7 +6755,7 @@ step
 goto bahrahasgloom_base 34.36,44.64 |achieve 1347/5 |tip Follow rafters.
 step
 goto 25.69,52.50
-'Use Skyshard |achieve 1347/5
+'Use _Skyshard_ |achieve 1347/5
 step
 'Open Hew's Bane Map
 'Travel to _Abah's Landing_ in Hew's Bane |q A Secret Shame/Talk to Sabileh
@@ -6764,12 +6764,12 @@ step
 goto hewsbane_base 43.95,46.93 |achieve 1347/2
 step
 goto 43.71,48.17
-'Use Skyshard |achieve 1347/2
+'Use _Skyshard_ |achieve 1347/2
 step
 goto 47.47,65.73 |achieve 1347/4
 step
 goto 46.34,66.14
-'Use Skyshard |achieve 1347/4
+'Use _Skyshard_ |achieve 1347/4
 step
 goto hewsbane_base 40.58,56.71
 wayshrine Zeht's Displeasure
@@ -6957,7 +6957,7 @@ click Abah's Landing |achieve 1347/1
 |tip Manually skip to the next step.
 step
 goto 56.04,41.72
-'Use Skyshard |achieve 1347/1
+'Use _Skyshard_ |achieve 1347/1
 step
 goto 37.65,41.90 |q Shell Game/Talk to Walks-Softly at the Thieves Den |tip Go up the stairs.
 step
@@ -7451,7 +7451,7 @@ step
 goto hewsbane_base 38.18,77.11 |achieve 1347/3
 step
 goto hewsbane_base 41.47,75.95
-'Use Skyshard |achieve 1347/3
+'Use _Skyshard_ |achieve 1347/3
 step
 goto 32.07,78.18
 click Shark's Teeth Grotto |q Everyone Has A Price/Rescue Anais Velmont from Shark's Teeth Grotto
@@ -7504,7 +7504,7 @@ goto sharktoothgrotto2_base 58.25,38.14
 'Place Unmarked Wall |q The Shark's Teeth/Place Sigil on Plank Hill
 step
 goto 66.03,38.08
-'Use Skyshard |achieve 1347/6
+'Use _Skyshard_ |achieve 1347/6
 step
 goto sharktoothgrotto2_base 76.32,83.22
 talk Shalug the Shark
@@ -8368,7 +8368,7 @@ turnin Voices in the Dark
 accept Signed in Blood
 step
 goto goldcoast_base 25.54,58.12
-'Use Skyshard |achieve 1342/1
+'Use _Skyshard_ |achieve 1342/1
 step
 goto 28.60,58.03 |q A Profitable Venture |future
 step
@@ -8531,7 +8531,7 @@ click Secret Passage |achieve 1342/5
 |tip Manually skip to the next step.
 step
 goto 66.93,45.59
-'Use Skyshard |achieve 1342/5
+'Use _Skyshard_ |achieve 1342/5
 step
 goto 64.96,37.94
 click Secret Passage |q The Vampire's Prey/Find and Kill Zalar-do
@@ -8576,7 +8576,7 @@ step
 goto 53.54,89.44 |q Debts of War/Recover the City of Bravil Seal
 step
 goto 77.06,66.43
-'Use Skyshard |achieve 1342/6
+'Use _Skyshard_ |achieve 1342/6
 step
 goto 78.05,51.86
 click Gold Coast Shipping Crate |q Debts of War/Recover the City of Bravil Seal
@@ -8661,10 +8661,10 @@ click Eulogy for Emperor Varen
 lorebook Eulogy for Emperor Varen/1/19/6
 step
 goto 85.74,50.79
-'Use Skyshard |achieve 1342/3
+'Use _Skyshard_ |achieve 1342/3
 step
 goto 87.88,60.32
-'Use Skyshard |achieve 1342/4
+'Use _Skyshard_ |achieve 1342/4
 step
 goto 87.76,56.89 |q Contract: Kvatch/Go to Kvatch
 step
@@ -9462,7 +9462,7 @@ step
 goto goldcoast_base 34.71,31.86 |achieve 1342/2
 step
 goto goldcoast_base 29.91,19.21
-'Use Skyshard |achieve 1342/2
+'Use _Skyshard_ |achieve 1342/2
 |tip Top of the huge boulder.
 step
 goto 27.41,18.50
@@ -10184,7 +10184,7 @@ kill Tr'krak the Tunnel-King
 'Explore Matus-Akin Egg Mine |achieve 1861
 step
 goto 53.02,73.38
-'Use Skyshard |achieve 1843/16
+'Use _Skyshard_ |achieve 1843/16
 step
 goto 58.45,83.13 |q A Dangerous Breed/Talk to Ridena
 step
@@ -10210,7 +10210,7 @@ step
 goto 74.82,75.51 |achieve 1843/1
 step
 goto 76.06,68.72
-'Use Skyshard |achieve 1843/1
+'Use _Skyshard_ |achieve 1843/1
 step
 goto 74.82,75.51 |q An Armiger's Duty |future
 step
@@ -10318,7 +10318,7 @@ goto 56.62,64.30
 talk Barilzar |q Divine Inquiries/Investigate Barilzar's Tower
 step
 goto vvardenfell_base 76.91,83.53
-'Use Skyshard |achieve 1843/5
+'Use _Skyshard_ |achieve 1843/5
 step
 goto 74.92,81.21 |q A Hireling of House Telvanni/Travel to Zaintiraris
 step
@@ -10528,7 +10528,7 @@ goto pulkupper_base 40.37,41.25 |achieve 1843/17
 step
 goto pulklower_base 47.96,36.96
 |tip Jump down.
-'Use Skyshard |achieve 1843/17
+'Use _Skyshard_ |achieve 1843/17
 step
 goto 56.91,46.98 |achieve 1862
 step
@@ -10820,10 +10820,10 @@ goto 76.81,35.67 |achieve 1843/4
 step
 goto 77.89,36.61
 |tip Go between the rocks.
-'Use Skyshard |achieve 1843/4
+'Use _Skyshard_ |achieve 1843/4
 step
 goto 81.94,40.50
-'Use Skyshard |achieve 1843/2
+'Use _Skyshard_ |achieve 1843/2
 step
 'Open Vvardenfell Map
 'Travel to _Tel Mora_ in Vvardenfell |q Rising to Retainer/Meet Seythen Rendo
@@ -11106,7 +11106,7 @@ step
 goto 64.29,55.85 |achieve 1843/3
 step
 goto 65.23,55.60
-'Use Skyshard |achieve 1843/3
+'Use _Skyshard_ |achieve 1843/3
 step
 goto 62.51,56.62
 'Travel to Zalkin-Sul |q The Magister Makes a Move/Travel to Zalkin-Sul
@@ -11356,7 +11356,7 @@ goto vvardenfell_base 55.52,73.21
 wayshrine Suran
 step
 goto 49.30,70.86
-'Use Skyshard |achieve 1843/7
+'Use _Skyshard_ |achieve 1843/7
 step
 goto 54.29,73.01
 talk Avo Elarven
@@ -11646,7 +11646,7 @@ step
 goto 61.09,48.13 |achieve 1843/15
 step
 goto 77.39,25.24
-'Use Skyshard |achieve 1843/15
+'Use _Skyshard_ |achieve 1843/15
 step
 goto 59.26,51.84 |q A Hidden Harvest/Leave Zainsipilu
 step
@@ -11718,7 +11718,7 @@ talk Governor Omellian |q Breaking Through the Fog/Talk to Governor Omellian
 step
 goto 40.65,82.57
 |tip Outside the Governor's Office
-'Use Skyshard |achieve 1843/6
+'Use _Skyshard_ |achieve 1843/6
 step
 goto 40.79,82.63
 talk Sergeant Garil |q Breaking Through the Fog/Talk to Sergeant Garil
@@ -12023,7 +12023,7 @@ step
 goto 25.65,64.93 |achieve 1843/8
 step
 goto 25.38,63.66
-'Use Skyshard |achieve 1843/8
+'Use _Skyshard_ |achieve 1843/8
 step
 goto 30.35,65.38 |q Fleeing the Past/Enter the Ashurnibibi Ruins
 step
@@ -12489,7 +12489,7 @@ step
 goto 81.55,46.09 |achieve 1843/13
 step
 goto 61.46,45.99
-'Use Skyshard |achieve 1843/13
+'Use _Skyshard_ |achieve 1843/13
 step
 goto 81.55,45.70 |q A Smuggler's Last Stand/Find Wih-Waska
 step
@@ -13007,7 +13007,7 @@ talk Revus Demnevanni |q Hatching a Plan/Talk to Revus
 step
 goto 16.14,29.79
 |tip Jump down and go around and behind to this spot.
-'Use Skyshard |achieve 1843/10
+'Use _Skyshard_ |achieve 1843/10
 step
 goto 17.49,33.11 |q Hatching a Plan/Mark the Egg-Heaps with Revus's Divining Stone
 step
@@ -13151,7 +13151,7 @@ step
 goto 36.27,77.50 |achieve 1843/14
 step
 goto 33.60,92.84
-'Use Skyshard |achieve 1843/14
+'Use _Skyshard_ |achieve 1843/14
 step
 goto 27.67,60.14
 click Alshalmawia Shrine |q Haunted Grounds/Go to the Ashlander Urshilaku Camp
@@ -13235,7 +13235,7 @@ goto 41.74,22.07
 talk Theyo Prevette |q Haunted Grounds/Talk to Theyo
 step
 goto 42.32,25.57
-'Use Skyshard |achieve 1843/9
+'Use _Skyshard_ |achieve 1843/9
 step
 goto 40.48,26.46
 'Find Galgalah's Lair |q Haunted Grounds/Find Galgalah's Lair
@@ -13494,7 +13494,7 @@ step
 goto 38.71,59.33 |achieve 1843/18
 step
 goto 60.05,58.09
-'Use Skyshard |achieve 1843/18
+'Use _Skyshard_ |achieve 1843/18
 step
 'Open Vvardenfell Map
 'Travel to _Gnisis_ in Vvardenfell |q Divine Intervention/Retrieve Arkngthunch-Sturdumz Component
@@ -14160,7 +14160,7 @@ goto 45.57,50.67
 kill Firepot Spider+, Dancing Spider+ |q In Search of a Sponsor/.*Help Raynor Collect Firepot Oil.*
 step
 goto 46.32,50.54
-'Use Skyshard |achieve 1844/1
+'Use _Skyshard_ |achieve 1844/1
 step
 'Next to you:
 talk Raynor Vanos |q In Search of a Sponsor/Talk to Raynor
@@ -14440,7 +14440,7 @@ kill Factotum enemies in this area:
 step
 goto ccunderground_base 85.30,71.61
 'Jump off the edge
-'Use Skyshard |achieve 1844/3
+'Use _Skyshard_ |achieve 1844/3
 step
 goto 68.23,72.91 |q The Strangeness of Seht/Collect Lamp Tube
 step
@@ -14990,7 +14990,7 @@ click Acolyte's Scorched Scroll Plate |q The Shadow Cleft/Search the Area
 |tip Manually skip to the next step.
 step
 goto 83.08,56.91
-'Use Skyshard |achieve 1844/6
+'Use _Skyshard_ |achieve 1844/6
 step
 goto 71.66,84.40 |q The Shadow Cleft/Search the Area
 step
@@ -15588,7 +15588,7 @@ goto 45.56,68.06
 click Heirloom Sword |q The Merchant's Heirloom/Take Morkul Family Sword
 step
 goto 49.60,65.57
-'Use Skyshard |achieve 1844/2
+'Use _Skyshard_ |achieve 1844/2
 step
 goto 48.99,61.41
 click Clockwork Crossroads Wayshrine
@@ -15765,7 +15765,7 @@ step
 goto hallsofregulation_base 46.87,53.37 |q The Halls of Regulation/Collect Cleansing Crystal
 step
 goto 36.95,56.54
-'Use Skyshard |achieve 1844/5
+'Use _Skyshard_ |achieve 1844/5
 step
 goto 35.80,48.03
 click Ironstalk Mushroom |q Tarnished Truffles/.*Find Ironstalk Mushroom.* |count 2
@@ -16001,7 +16001,7 @@ goto 14.49,42.77
 click Gutted Factotum |q Most Complicated Machine/Search for Terari
 step
 goto 15.04,42.24
-|tip Add Skyshard steps.
+|tip Add _Skyshard_ steps.
 click Skybridge |q Most Complicated Machine/Find for Terari
 |tip Manually skip to the next step.
 step
@@ -16832,7 +16832,7 @@ step
 goto archonsgrove_base 65.53,39.19 |achieve 1845/15
 step
 goto 54.43,69.99
-'Use Skyshard |achieve 1845/15
+'Use _Skyshard_ |achieve 1845/15
 step
 goto 63.39,35.02 |q The Runaway's Tale/Find Niralin
 step
@@ -16872,7 +16872,7 @@ step
 goto summerset_base 55.49,53.29 |q The Queen's Decree/Travel to Artaeum
 step
 goto 55.44,52.54
-'Use Skyshard |achieve 1845/7
+'Use _Skyshard_ |achieve 1845/7
 step
 goto 55.49,54.52
 click Portal to Artaeum |q The Queen's Decree/Travel to Artaeum |future
@@ -16928,7 +16928,7 @@ talk Linwenvar
 accept Old Wounds
 step
 goto 54.39,42.05
-'Use Skyshard |achieve 1845/6
+'Use _Skyshard_ |achieve 1845/6
 step
 goto 49.44,42.65
 talk Tarnamir |q Old Wounds/Talk to Tarnamir
@@ -17124,7 +17124,7 @@ step
 goto 46.68,48.28 |achieve 1845/9
 step
 goto 46.99,49.64
-'Use Skyshard |achieve 1845/9
+'Use _Skyshard_ |achieve 1845/9
 step
 goto 40.42,47.48
 'Travel to Rellenthil |q A Pearl of Great Price/Travel to Rellenthil
@@ -17533,7 +17533,7 @@ step
 goto 27.05,56.10 |q Divine Deputation |future
 step
 goto 28.60,56.92
-'Use Skyshard |achieve 1845/1
+'Use _Skyshard_ |achieve 1845/1
 step
 goto alinor_base 33.68,32.60
 click _Divine Prosecution Notification_
@@ -17608,7 +17608,7 @@ step
 goto 52.24,80.06 |achieve 1845/16
 step
 goto 46.79,71.57
-'Use Skyshard |achieve 1845/16
+'Use _Skyshard_ |achieve 1845/16
 step
 goto torhamekhard_01_base 29.26,45.22
 kill Justiciar Avanaire |q Pearls Before Traitors/Kill Justiciar Avanaire
@@ -17939,7 +17939,7 @@ step
 goto 50.17,45.98 |q Lost at Sea/Locate Curtaros
 step
 goto 38.55,45.04
-'Use Skyshard |achieve 1845/17
+'Use _Skyshard_ |achieve 1845/17
 step
 goto 37.18,40.22
 talk Curtaros |q Lost at Sea/Locate Curtaros
@@ -18292,7 +18292,7 @@ step
 goto 48.14,16.99 |achieve 1845/5 |tip Follow the Wooden walkway to the Sksyhard.
 step
 goto 49.33,17.17
-'Use Skyshard |achieve 1845/5
+'Use _Skyshard_ |achieve 1845/5
 step
 goto 48.17,16.99 |q His Final Gift |future |tip Follow the wooden walkway back to the mainland.
 step
@@ -18686,7 +18686,7 @@ step
 goto 25.59,42.42 |achieve 1845/10
 step
 goto 23.36,42.06
-'Use Skyshard |achieve 1845/10
+'Use _Skyshard_ |achieve 1845/10
 step
 goto lillandrill_base 49.44,71.80
 wayshrine Lillandril
@@ -18979,7 +18979,7 @@ talk Ingarlas
 'Choose _Conservation is important. I'll spare the plant._ |q The Perils of Art/Leave the Last Aurialis Plant |or
 step
 goto 70.48,77.28
-'Use Skyshard |achieve 1845/8
+'Use _Skyshard_ |achieve 1845/8
 step
 goto 67.22,78.24
 'Dig _Dirt Mound_
@@ -19205,7 +19205,7 @@ goto 18.93,39.07
 'Take _Naliara's Notes, Day 8_ |q Savage Truths/.*Recover Naliara's Notes.*: |count 1
 step
 goto 19.60,38.33
-'Use Skyshard |achieve 1845/13
+'Use _Skyshard_ |achieve 1845/13
 step
 goto 07.24,43.66
 click King's Haven Pass |q Savage Truths/.*Recover Naliara's Notes.*: |count 2
@@ -19481,7 +19481,7 @@ step
 goto etonnir_01_base 30.18,43.92 |achieve 1845/14
 step
 goto 14.68,59.97
-'Use Skyshard |achieve 1845/14
+'Use _Skyshard_ |achieve 1845/14
 step
 goto 13.46,78.26
 kill Kayliriax the Spinner
@@ -19863,7 +19863,7 @@ step
 goto 71.95,47.32 |achieve 1845/18
 step
 goto 58.57,47.54
-'Use Skyshard |achieve 1845/18
+'Use _Skyshard_ |achieve 1845/18
 step
 goto TraitorsVault01_base 60.93,51.31 |q Half-Formed Understandings/Find the Next Library Pedestal |tip Drop down to the ground floor.
 step
@@ -20114,7 +20114,7 @@ goto 18.32,29.48 |achieve 1845/3
 step
 goto 17.91,29.36
 |tip Drop down.
-'Use Skyshard |achieve 1845/3
+'Use _Skyshard_ |achieve 1845/3
 step
 'Open Summerset Map
 'Travel to _Ebon Stadmont_ in Summerset |q Wasting Away |future
@@ -20302,7 +20302,7 @@ step
 goto 28.22,21.66 |achieve 1845/4
 step
 goto 29.56,19.58
-'Use Skyshard |achieve 1845/4
+'Use _Skyshard_ |achieve 1845/4
 step
 goto 28.22,21.66 |q A Necessary Alliance/Go to the Crystal Tower Gatehouse
 step
@@ -21627,7 +21627,7 @@ goto 57.39,75.46
 talk Famia Mercius |q Sunken Treasure/Talk to Famia |future
 step
 goto 63.68,76.01
-'Use Skyshard |achieve 2291/1
+'Use _Skyshard_ |achieve 2291/1
 step
 goto 64.43,76.71
 click Ixtaxh Xanmeer |q Sunken Treasure/Enter the Xanmeer |future
@@ -21813,7 +21813,7 @@ goto 54.11,43.15 |achieve 2291
 step
 goto 54.16,46.57
 |tip Drop down carefully or you will overshoot your mark and have to do it over again.
-'Use Skyshard |achieve 2291/3
+'Use _Skyshard_ |achieve 2291/3
 step
 goto 57.18,52.42 |q Empty Nest/Molted Scales
 step
@@ -22070,7 +22070,7 @@ goto 82.83,60.28
 click _Perfumed Snapper Pool_ |q The Assassin's Arbitration/Find Perfumed Snapper Oil
 step
 goto 92.59,69.14
-'Use Skyshard  |achieve 2291/2
+'Use _Skyshard_  |achieve 2291/2
 step
 goto 86.71,63.74 |q Monument of Change |future
 step
@@ -22814,7 +22814,7 @@ step
 goto 38.23,79.67 |achieve 2291/5
 step
 goto 26.49,82.86
-'Use Skyshard |achieve 2291/5
+'Use _Skyshard_ |achieve 2291/5
 step
 goto 21.43,86.63
 click Note from the Last Legionnaire |q The Lost Legion/Search for Clues
@@ -22865,7 +22865,7 @@ step
 goto 68.46,52.30 |achieve 2291/4
 step
 goto murkmire_base 19.22,27.82
-'Use Skyshard |achieve 2291/4
+'Use _Skyshard_ |achieve 2291/4
 step
 goto murkmire_base 34.44,37.70
 'Go to the Hunting Grounds |q Whispers in the Wood/Go to the Hunting Grounds
@@ -23028,7 +23028,7 @@ talk Nisswo Xode |q She Who Eats the Light/Talk to Nisswo Xode on Top of the Xan
 step
 goto 64.13,55.87
 |tip Follow bridge across.
-'Use Skyshard |achieve 2291/6
+'Use _Skyshard_ |achieve 2291/6
 step
 goto 66.46,71.74
 click Eastern Xanmeer |q She Who Eats the Light/.*Disrupt Altars.* |count 1
@@ -24237,7 +24237,7 @@ goto rimmen_base 10.56,37.27
 click Wasp Nest |q Love and Guar/.*Burn Wasps.* |count 1
 step
 goto elsweyr_base 73.27,25.90
-'Use Skyshard |achieve 2461/4
+'Use _Skyshard_ |achieve 2461/4
 step
 goto 73.15,24.94
 click Wasp Nest |q Love and Guar/.*Burn Wasps.* |count 2
@@ -24356,7 +24356,7 @@ step
 goto 67.84,72.13 |q An Animal's Grim Abode/.*Find Memory Stones.* |count 1
 step
 goto 74.85,78.63
-'Use Skyshard |achieve 2461/15
+'Use _Skyshard_ |achieve 2461/15
 step
 goto 75.20,80.66
 'Take Memory Stone |q An Animal's Grim Abode/.*Find Memory Stones.* |count 1
@@ -24411,7 +24411,7 @@ step
 goto 44.90,16.98 |achieve 2461/1
 step
 goto 44.28,16.99
-'Use Skyshard |achieve 2461/1
+'Use _Skyshard_ |achieve 2461/1
 step
 goto 44.70,14.15
 click Discarded Orders |q A Rage of Dragons/.*Investigate Power Surge Locations.* |count 3
@@ -24519,7 +24519,7 @@ goto 08.09,39.41
 'Take Anequina Fragment |q The Song of Kingdoms/Take the Missing Piece
 step
 goto 12.11,36.33
-'Use Skyshard |achieve 2461/18
+'Use _Skyshard_ |achieve 2461/18
 step
 goto 31.13,31.36
 click Akaviri Chest |q Strange Messengers/.*Gather Akaviri Relics.* |count 2
@@ -24743,7 +24743,7 @@ goto 42.52,34.67
 talk Numaia |q Preserving the Prowl/Talk to Numaia
 step
 goto 35.00,35.47
-'Use Skyshard |achieve 2461/2
+'Use _Skyshard_ |achieve 2461/2
 step
 goto 33.79,36.30
 click Numaia's Training Whistle |q Preserving the Prowl/Rescue Honeydew
@@ -24816,7 +24816,7 @@ step
 goto 51.84,22.85 |achieve 2461/14
 step
 goto 62.85,26.94
-'Use Skyshard |achieve 2461/14
+'Use _Skyshard_ |achieve 2461/14
 step
 goto 56.05,42.83
 kill Zahalar Oak-Eye
@@ -24920,7 +24920,7 @@ talk Vole |q Thick as Thieves/.*Recruit Tasnasi's Crew.* |count 2
 step
 goto 62.03,48.47
 |tip Carefully drop down.
-'Use Skyshard |achieve 2461/5
+'Use _Skyshard_ |achieve 2461/5
 step
 goto elsweyr_base 28.51,54.85
 'Take Nazdar's Lute |q Thick as Thieves/.*Recruit Tasnasi's Crew.* |count 3
@@ -25082,7 +25082,7 @@ step
 goto 28.18,57.80 |achieve 2461/9
 step
 goto 29.27,60.59
-'Use Skyshard |achieve 2461/9
+'Use _Skyshard_ |achieve 2461/9
 step
 goto 28.26,57.56 |q Scars of the Past |future
 step
@@ -25221,7 +25221,7 @@ goto 46.91,80.21
 click Hadaz's Final Letter |q Iron in the Blood/Find Hadaz
 step
 goto 55.93,49.72
-'Use Skyshard |achieve 2461/16
+'Use _Skyshard_ |achieve 2461/16
 step
 goto 55.05,49.49
 click Oil Pool |q Iron in the Blood/.*Burn Oil.* |count 1
@@ -25289,7 +25289,7 @@ step
 goto 24.96,73.93 |achieve 2461/6
 step
 goto 23.53,72.07
-'Use Skyshard |achieve 2461/6
+'Use _Skyshard_ |achieve 2461/6
 step
 goto 24.96,73.93 |achieve 2461/7
 step
@@ -25300,7 +25300,7 @@ step
 goto 38.45,68.88 |achieve 2461/7
 step
 goto 68.69,68.94
-'Use Skyshard |achieve 2461/7
+'Use _Skyshard_ |achieve 2461/7
 step
 goto 35.43,64.11 |q Cross-cultural Confusion/.*Gather Honey Flowers.* |count 1
 step
@@ -25585,7 +25585,7 @@ step
 goto 42.26,86.19 |achieve 2461/13
 step
 goto 37.85,84.91
-'Use Skyshard |achieve 2461/13
+'Use _Skyshard_ |achieve 2461/13
 step
 goto 49.30,84.40 |achieve 2398
 step
@@ -25966,10 +25966,10 @@ goto 55.43,36.94
 step
 goto 57.51,35.67 |achieve 2461/10
 step
-goto 56.97,35.28 |achieve 2461/10 |tip Follow the rocks around to the Skyshard.
+goto 56.97,35.28 |achieve 2461/10 |tip Follow the rocks around to the _Skyshard_.
 step
 goto 56.42,36.15
-'Use Skyshard |achieve 2461/10
+'Use _Skyshard_ |achieve 2461/10
 step
 goto 54.04,38.53 |q The Witch of Azurah/Place the West Descrying Stone |tip Drop down carefully.
 step
@@ -26276,7 +26276,7 @@ step
 goto 67.23,47.14 |achieve 2461/3
 step
 goto 66.19,47.16
-'Use Skyshard |achieve 2461/3
+'Use _Skyshard_ |achieve 2461/3
 step
 goto 64.25,51.47 |q Blood and Tears |future
 step
@@ -26367,7 +26367,7 @@ step
 goto 13.77,32.57 |achieve 2461/17
 step
 goto 10.37,61.17
-'Use Skyshard |achieve 2461/17
+'Use _Skyshard_ |achieve 2461/17
 step
 goto 44.94,62.94
 kill Zayreba Sharpclaw
@@ -26510,7 +26510,7 @@ step
 goto 54.95,56.43 |achieve 2461/8
 step
 goto 53.68,59.10
-'Use Skyshard |achieve 2461/8
+'Use _Skyshard_ |achieve 2461/8
 step
 goto 70.53,45.76
 click Hakoshae Wayshrine
@@ -27741,7 +27741,7 @@ step
 goto 26.53,75.24 |achieve 2562/2
 step
 goto 24.66,68.59
-'Use Skyshard |achieve 2562/2
+'Use _Skyshard_ |achieve 2562/2
 step
 goto 26.17,81.64 |q The Herbalist's Product/.*Deliver the Herbalist's Product.* |count 3
 step
@@ -28121,7 +28121,7 @@ goto 37.50,56.12
 talk Skordo the Knife |q The Deadliest Prey/Talk to Skordo the Knife
 step
 goto 34.52,56.67
-'Use Skyshard |achieve 2562/3
+'Use _Skyshard_ |achieve 2562/3
 step
 goto 32.42,57.71
 wayshrine Western Plains
@@ -28252,7 +28252,7 @@ goto 80.37,18.96
 'Drink Sacred Shrine |q Skooma Sequela/.*Drink the Sacramental Waters at Five Shrines.* |count 1
 step
 goto 76.38,22.49
-'Use Skyshard |achieve 2562/5
+'Use _Skyshard_ |achieve 2562/5
 step
 goto 84.95,40.64
 'Find Bahzahar's Hideout |q Uneasy Alliances/Find Bahzahar's Hideout
@@ -28498,7 +28498,7 @@ talk Janessa |q Take Your Lumps/Talk to Janessa
 step
 goto 25.77,32.02
 |tip Jump down the waterfall
-'Use Skyshard |achieve 2562/4
+'Use _Skyshard_ |achieve 2562/4
 step
 'Open Southern Elsweyr Map
 'Travel to _Black Heights_ in Southern Elsweyr |q Take Your Lumps/Find Juisa in Black Heights
@@ -28923,7 +28923,7 @@ step
 goto 53.27,57.05 |q Dreams of the Forsaken/.*Destroy the Corrupted Totems.* |count 1
 step
 goto 39.86,38.49
-'Use Skyshard |achieve 2562/6
+'Use _Skyshard_ |achieve 2562/6
 step
 goto 22.77,28.21 |q Dreams of the Forsaken/.*Destroy the Corrupted Totems.* |count 1
 step
@@ -28985,7 +28985,7 @@ step
 goto 46.95,26.71 |achieve 2562/1
 step
 goto 58.81,24.39
-'Use Skyshard |achieve 2562/1
+'Use _Skyshard_ |achieve 2562/1
 step
 goto 29.80,22.14
 'Travel to the New Moon Fortress |q Order of the New Moon/Travel to the New Moon Fortress
@@ -31018,7 +31018,7 @@ step
 goto 50.46,59.33 |achieve 2687/17
 step
 goto 45.65,61.52
-'Use Skyshard |achieve 2687/17
+'Use _Skyshard_ |achieve 2687/17
 step
 goto 50.46,59.33 |achieve 2643
 step
@@ -31274,7 +31274,7 @@ step
 goto 22.96,43.48 |achieve 2687/9
 step
 goto 24.34,44.15
-'Use Skyshard |achieve 2687/9
+'Use _Skyshard_ |achieve 2687/9
 step
 goto 18.33,39.20
 wayshrine Giant's Coast
@@ -31291,7 +31291,7 @@ step
 goto 43.78,70.55 |achieve 2687/14
 step
 goto 58.06,61.39
-'Use Skyshard |achieve 2687/14
+'Use _Skyshard_ |achieve 2687/14
 step
 goto 24.88,69.55 |q Spellbound/.*Retrieve the Lost Belongings.* |count 2
 step
@@ -31464,7 +31464,7 @@ step
 goto 27.03,56.22 |achieve 2687/5
 step
 goto 26.91,55.70
-'Use Skyshard |achieve 2687/5
+'Use _Skyshard_ |achieve 2687/5
 step
 goto 29.66,53.85
 talk Hyava
@@ -31519,7 +31519,7 @@ goto 88.32,46.17
 |tip Manually skip to the next step.
 step
 goto 87.25,55.03
-'Use Skyshard |achieve 2687/13
+'Use _Skyshard_ |achieve 2687/13
 step
 goto 65.37,73.42
 click Secluded Hideaway |q Dark Clouds Over Solitude/Search the Cave for the Assassin
@@ -31639,7 +31639,7 @@ step
 goto 32.47,70.99 |achieve 2687/7
 step
 goto 31.57,70.57
-'Use Skyshard |achieve 2687/7
+'Use _Skyshard_ |achieve 2687/7
 step
 goto 32.28,70.46
 click Bleakridge Barrow |q The Blood of Old Karth/Enter Bleakridge Barrow
@@ -31948,7 +31948,7 @@ goto 54.96,82.14
 talk Fennorian |q Dark Clouds Over Solitude/Talk to Fennorian
 step
 goto 53.54,75.30
-'Use Skyshard |achieve 2687/4
+'Use _Skyshard_ |achieve 2687/4
 step
 'Open Western Skyrim Map
 'Travel to _Solitude_ in Western Skyrim |q Dark Clouds Over Solitude/Talk to Svana
@@ -32047,7 +32047,7 @@ goto 60.54,43.86
 'Gather Raw Meat |q Of Ice and Death/.*Gather Raw Meat.*
 step
 goto 62.01,43.21
-'Use Skyshard |achieve 2687/6
+'Use _Skyshard_ |achieve 2687/6
 step
 goto 67.90,37.81
 'Bring Meat to the Silver Cormorant |q Of Ice and Death/Bring Meat to the Silver Cormorant
@@ -32118,7 +32118,7 @@ step
 goto 42.58,59.48 |achieve 2687/15
 step
 goto 35.92,57.92
-'Use Skyshard |achieve 2687/15
+'Use _Skyshard_ |achieve 2687/15
 step
 goto 38.45,50.58
 click Nelfthea's Crumbled Note |q The Fate of the Frozen/.*Search for Nelfthea.* |count 1
@@ -32302,7 +32302,7 @@ step
 goto 68.27,65.47 |achieve 2687/8
 step
 goto 67.14,65.15
-'Use Skyshard |achieve 2687/8
+'Use _Skyshard_ |achieve 2687/8
 step
 goto 70.57,61.50
 click Morthal Borrow |q Danger in the Holds/Go to the Morthal Barrow
@@ -32342,7 +32342,7 @@ talk Yvara Plouff
 accept The Aspiring Scholar
 step
 goto 50.59,57.86
-'Use Skyshard |achieve 2687/10
+'Use _Skyshard_ |achieve 2687/10
 step
 goto 50.18,64.30
 click Ancient Relief |q The Aspiring Scholar/Make Rubbing at Southern Mound
@@ -32718,7 +32718,7 @@ step
 goto 92.52,38.60 |achieve 2687/1
 step
 goto 91.34,46.41
-'Use Skyshard |achieve 2687/1
+'Use _Skyshard_ |achieve 2687/1
 step
 'Open Blackreach: Greymoor Caverns Map
 'Travel to _Lightless Hollow_ in Blackreach: Greymoor Caverns |q One Last Adventure |future
@@ -33073,7 +33073,7 @@ goto 22.35,68.99
 wayshrine Grotto Falls
 step
 goto 16.69,71.66
-'Use Skyshard |achieve 2687/2
+'Use _Skyshard_ |achieve 2687/2
 step
 goto 19.53,68.76 |q The Gray Host/Investigate the Blackreach Camp
 step
@@ -33129,7 +33129,7 @@ step
 goto 87.68,37.75 |achieve 2687/18
 step
 goto 72.89,50.49
-'Use Skyshard |achieve 2687/18
+'Use _Skyshard_ |achieve 2687/18
 step
 goto 87.68,37.75 |q Scraps Matter/.*Gather Power Nodes.* |count 3
 step
@@ -33260,7 +33260,7 @@ goto 61.35,59.01
 'Take Hagridden's Sword |q Prisoner of the Past/.*Find Jarl Hagridden's Remains.* |count 2
 step
 goto 70.33,40.25
-'Use Skyshard |achieve 2687/16
+'Use _Skyshard_ |achieve 2687/16
 step
 goto 61.35,59.01 |q The Gray Host/Secure a Path to the Undergrove
 step
@@ -33398,7 +33398,7 @@ step
 goto 67.80,19.36 |achieve 2687/3
 step
 goto 67.18,21.08
-'Use Skyshard |achieve 2687/3
+'Use _Skyshard_ |achieve 2687/3
 step
 'Open Blackreach: Greymoor Caverns Map
 'Travel to _Dusktown_ in Blackreach:Greymoor Caverns |q Reeh-La's Mining Samples/Find Ingfred the Tall
@@ -34452,7 +34452,7 @@ click Briar Rock Ruins |achieve 2857/5
 |tip Manually skip to the next step.
 step
 goto briarrockruins_ext_base 33.50,62.13
-'Use Skyshard |achieve 2857/5
+'Use _Skyshard_ |achieve 2857/5
 step
 goto 24.52,61.97
 click Dead Crone Tower |q Betrayal at Briar Rock/Find Faorin
@@ -34576,7 +34576,7 @@ goto 42.73,27.40
 'Inspect the Mage |q Blood of the Reach/.*Investigate Map Locations.* |count 2
 step
 goto 46.94,31.06
-'Use Skyshard |achieve 2857/1
+'Use _Skyshard_ |achieve 2857/1
 step
 goto 46.94,31.06
 talk Apprentice Fialyn
@@ -34808,7 +34808,7 @@ click Void Annomaly |achieve 2857/3
 |tip Manually skip to the next step.
 step
 goto 40.85,37.07
-'Use Skyshard |achieve 2857/3
+'Use _Skyshard_ |achieve 2857/3
 step
 goto 54.62,22.74
 click Falkfyr's Notes, Page 1
@@ -35036,7 +35036,7 @@ step
 goto 82.12,71.86 |q The Awakening Darkness/Search Lost Valley Redoubt
 step
 goto 82.12,71.86
-'Use Skyshard |achieve 2857/2
+'Use _Skyshard_ |achieve 2857/2
 step
 goto 83.51,75.38 |q The Awakening Darkness/Search Lost Valley Redoubt
 step
@@ -35163,7 +35163,7 @@ step
 goto 61.65,55.21 |q Endeavor in the Gloom/Contain Southern Tonal Disturbance
 step
 goto Gloomreach3_base 64.78,41.24
-'Use Skyshard |achieve 2857/6
+'Use _Skyshard_ |achieve 2857/6
 step
 goto Gloomreach2B_base 44.60,71.34 |q Endeavor in the Gloom/Contain Southern Tonal Disturbance
 step
@@ -35262,7 +35262,7 @@ talk Count Verandis Ravenwatch |q The Dark Heart/Talk to Count Verandis Ravenwat
 step
 goto 90.78,72.54
 click Void Portal
-'Use Skyshard |achieve 2857/4
+'Use _Skyshard_ |achieve 2857/4
 step
 goto 91.74,69.09
 click Nighthollow Keep |q The Dark Heart/Explore Nighthollow Keep
@@ -35917,15 +35917,15 @@ talk Norianwe |q The Gates of Adamant/Talk to Norianwe
 |tip Go Upstairs
 step
 goto 28.78,74.04
-click Balfiera Island |q The Gates of Adamant/Acquire the Skyshard
+click Balfiera Island |q The Gates of Adamant/Acquire the _Skyshard_
 |tip Manually skip to the next step.
 step
 goto u30_balfiera_ext 66.87,71.27
-'Use Skyshard Vault |q The Gates of Adamant/Acquire the Skyshard
+'Use _Skyshard_ Vault |q The Gates of Adamant/Acquire the _Skyshard_
 |tip Manually skip to the next step.
 step
-'Use Skyshard |q The Gates of Adamant/Acquire the Skyshard
-|tip Straight ahead. Kill the Gargoyle and then acquire the Skyshard.
+'Use _Skyshard_ |q The Gates of Adamant/Acquire the _Skyshard_
+|tip Straight ahead. Kill the Gargoyle and then acquire the _Skyshard_.
 step
 click Balfiera Island |q The Gates of Adamant/Return to the Gate
 |tip Manually skip to the next step.
@@ -35938,7 +35938,7 @@ goto u30_balfiera_int7_base 49.05,53.61
 'Return to the Gate |q The Gates of Adamant/Return to the Gate
 step
 goto 49.05,53.61
-'Activate Skyshard Aperture |q The Gates of Adamant/Repair the Gate
+'Activate _Skyshard_ Aperture |q The Gates of Adamant/Repair the Gate
 |tip Upstairs
 step
 goto 48.62,53.02
@@ -36447,7 +36447,7 @@ step
 goto 52.60,70.49 |achieve 2982/14
 step
 goto 52.45,40.52
-'Use Skyshard |achieve 2982/14
+'Use _Skyshard_ |achieve 2982/14
 |tip Follow Ramp
 step
 goto 50.31,16.06
@@ -36616,7 +36616,7 @@ goto 16.37,40.70
 wayshrine Borderwatch
 step
 goto 16.37,44.79
-'Use Skyshard |achieve 2982/3
+'Use _Skyshard_ |achieve 2982/3
 step
 goto 21.86,60.67
 click Aloysius's Note
@@ -36924,7 +36924,7 @@ goto 29.56,32.53
 wayshrine Fort Redmane
 step
 goto 30.22,22.63
-'Use Skyshard |achieve 2982/4
+'Use _Skyshard_ |achieve 2982/4
 step
 goto 34.18,20.66
 wayshrine Doomvault Vulpinaz
@@ -37005,7 +37005,7 @@ goto blackwood_base 36.24,66.51
 wayshrine Blueblood
 step
 goto 29.37,64.18
-'Use Skyshard |achieve 2982/1
+'Use _Skyshard_ |achieve 2982/1
 |tip Climb to the top of the tower
 step
 goto 30.95,63.81
@@ -37036,7 +37036,7 @@ step
 |tip Manually skip to the next step.
 step
 goto blackwood_base 46.73,56.32
-'Use Skyshard |achieve 2982/10
+'Use _Skyshard_ |achieve 2982/10
 step
 goto u30_Gideoncity_base 09.47,43.82
 click Author's Assistance Wanted!
@@ -37671,7 +37671,7 @@ click Doomvault Porcixid |achieve 2982/15
 |tip Manually skip to the next step.
 step
 goto VaultDelve_EXT02_base 87.32,34.70
-'Use Skyshard |achieve 2982/15
+'Use _Skyshard_ |achieve 2982/15
 step
 goto 87.62,25.13 |q A Battle of Silk and Flame/.*Investigate the Doomvault.* |count 2
 step
@@ -38051,7 +38051,7 @@ step
 goto 66.59,29.01 |q Destroying What Remains/.*Destroy Shadowscale Remains.* |count 2
 step
 goto 53.91,29.62
-'Use Skyshard |achieve 2982/17
+'Use _Skyshard_ |achieve 2982/17
 step
 goto 53.01,38.12
 click Shadowscale Remains |q Destroying What Remains/.*Destroy Shadowscale Remains.* |count 2
@@ -38175,7 +38175,7 @@ talk Mim-Jasa
 turnin Destroying What Remains
 step
 goto 58.10,18.24
-'Use Skyshard |achieve 2982/6
+'Use _Skyshard_ |achieve 2982/6
 step
 goto 66.36,22.11
 click Bloodrun Wayshrine
@@ -38271,7 +38271,7 @@ goto 60.41,77.85
 wayshrine Stonewastes
 step
 goto 58.84,76.49
-'Use Skyshard |achieve 2982/9
+'Use _Skyshard_ |achieve 2982/9
 step
 goto 55.02,77.52
 talk Jela
@@ -38315,7 +38315,7 @@ goto 50.54,48.68
 click Idol of Xulunaht |q Idol Threats/Destroy the Idol of Xulunaht
 step
 goto 68.07,51.11
-'Use Skyshard |achieve 2982/13
+'Use _Skyshard_ |achieve 2982/13
 step
 goto 71.07,68.90
 click Blackwood |q Idol Threats/Leave Xi-Tsei
@@ -38480,7 +38480,7 @@ goto 67.28,88.23
 'Meet Eveli Near Sul-Xan Territory |q A Hidden Vault/Meet Eveli Near Sul-Xan Territory
 step
 goto 70.33,91.09
-'Use Skyshard |achieve 2982/2
+'Use _Skyshard_ |achieve 2982/2
 step
 goto 67.28,88.23
 talk Eveli Sharp-Arrow |q A Hidden Vault/Talk to Eveli Sharp-Arrow
@@ -38951,7 +38951,7 @@ goto 51.47,47.33
 'Take Crimson Deadlands Sliver |q Weapons of Destruction/.*Gather the Deadlands Slivers.* |count 1
 step
 goto 53.69,45.71
-'Use Skyshard |achieve 2982/7
+'Use _Skyshard_ |achieve 2982/7
 step
 goto 47.51,51.42
 'Take Obsidian Deadlands Sliver |q Weapons of Destruction/.*Gather the Deadlands Slivers.* |count 2
@@ -38977,7 +38977,7 @@ step
 goto 77.57,71.77 |achieve 2982/8
 step
 goto 81.35,70.67
-'Use Skyshard |achieve 2982/8
+'Use _Skyshard_ |achieve 2982/8
 step
 goto 83.01,69.58
 talk Hokatsei
@@ -38998,7 +38998,7 @@ step
 goto 75.77,21.15 |achieve 2982/18
 step
 goto 85.67,21.13
-'Use Skyshard |achieve 2982/18
+'Use _Skyshard_ |achieve 2982/18
 step
 goto 54.52,42.69
 'Bathe Penitent Pool |q In Need of a Bath/Bathe Deet-Loh
@@ -39266,7 +39266,7 @@ step
 goto arpeniaH_base 90.44,53.01 |achieve 2982/16
 step
 goto 85.85,45.05
-'Use Skyshard |achieve 2982/16
+'Use _Skyshard_ |achieve 2982/16
 step
 goto 87.37,55.35 |q Glittering Lies/.*Free the Blackfeather Court.* |count 3
 step
@@ -39852,7 +39852,7 @@ goto 45.02,67.98 |achieve 3140/1
 step
 goto 46.36,67.72
 |tip Climb Rock to the top.
-'Use Skyshard |achieve 3140/1
+'Use _Skyshard_ |achieve 3140/1
 step
 goto 45.38,68.92 |q The Celestial Palanquin/Talk to Initiate Tilgo |tip Climb back down the rock.
 step
@@ -39955,7 +39955,7 @@ goto 34.69,37.97
 wayshrine The Shambles
 step
 goto 48.95,50.10
-'Use Skyshard |achieve 3140/4
+'Use _Skyshard_ |achieve 3140/4
 step
 goto 46.38,54.46
 |tip Drop down.
@@ -40320,7 +40320,7 @@ step
 goto 68.98,31.73 |achieve 3140/6
 step
 goto 75.68,54.97
-'Use Skyshard |achieve 3140/6
+'Use _Skyshard_ |achieve 3140/6
 step
 goto 72.78,50.23
 |tip Drop down carefully.
@@ -40380,7 +40380,7 @@ step
 goto 71.57,39.66 |achieve 3140/2
 step
 goto 71.08,38.96
-'Use Skyshard |achieve 3140/2
+'Use _Skyshard_ |achieve 3140/2
 |tip Jump from mount.
 step
 goto 77.73,42.42 |q Salvaged Plans/Find the Thieves
@@ -41538,7 +41538,7 @@ step
 goto 06.83,26.45 |achieve 3140/5
 step
 goto 26.26,25.14
-'Use Skyshard |achieve 3140/5
+'Use _Skyshard_ |achieve 3140/5
 step
 goto 22.46,19.77 |q Reformatory Rescue/Talk to Tufeh |tip Drop down.
 step
@@ -42284,7 +42284,7 @@ step
 |tip Manually skip to the next step.
 step
 goto u34_systreszone_base 51.48,78.24
-'Use Skyshard |q Of Knights and Knaves/Investigate the Shallows
+'Use _Skyshard_ |q Of Knights and Knaves/Investigate the Shallows
 |tip Manually skip to the next step.
 step
 goto u34_gonfalonbaycity_base 23.22,17.26 |q Of Knights and Knaves/Investigate the Shallows
@@ -42529,7 +42529,7 @@ step
 goto 29.80,74.19 |q An Experiment with Peace/Search the Backpack |future
 step
 goto 29.14,74.97
-'Use Skyshard |q An Experiment with Peace/Search the Backpack |future
+'Use _Skyshard_ |q An Experiment with Peace/Search the Backpack |future
 |tip Manually skip to the next step.
 step
 goto 30.81,73.57
@@ -42601,7 +42601,7 @@ step
 goto 25.19,83.55 |q People of Import/.*Search the Area.* |count 1 |future
 step
 goto 26.04,85.28
-'Use Skyshard |q People of Import/.*Search the Area.* |count 1 |future
+'Use _Skyshard_ |q People of Import/.*Search the Area.* |count 1 |future
 |tip Manually skip to the next step.
 step
 goto 28.07,81.03 |q People of Import/.*Search the Area.* |count 1 |future
@@ -42644,7 +42644,7 @@ goto 51.01,23.36
 talk Moric Guidroz |q A Sheep in Need/Talk to Moric Guidroz
 step
 goto 51.36,19.69
-'Use Skyshard |q A Sheep in Need/Search the Hadolid Lair
+'Use _Skyshard_ |q A Sheep in Need/Search the Hadolid Lair
 |tip Manually skip to the next step.
 step
 goto 59.06,30.53 |q A Sheep in Need/Search the Hadolid Lair
@@ -42798,7 +42798,7 @@ step
 goto 55.07,66.37 |q Scalding Scavengers/Find Tarrinore
 step
 goto 37.90,60.65
-'Use Skyshard |q Scalding Scavengers/Find Tarrinore
+'Use _Skyshard_ |q Scalding Scavengers/Find Tarrinore
 |tip Manually skip to the next step.
 step
 goto 55.07,66.37 |q Scalding Scavengers/Find Tarrinore
@@ -42987,7 +42987,7 @@ step
 goto 49.37,66.48 |q Deadly Investigations/.*Investigate Ascendant Order Sites.* |count 2
 step
 goto 50.05,65.51
-'Use Skyshard |q Deadly Investigations/.*Investigate Ascendant Order Sites.* |count 2
+'Use _Skyshard_ |q Deadly Investigations/.*Investigate Ascendant Order Sites.* |count 2
 |tip Manually skip to the next step.
 step
 goto 50.11,67.49 |q Deadly Investigations/.*Investigate Ascendant Order Sites.* |count 2
@@ -43384,7 +43384,7 @@ step
 goto 77.62,44.07 |q The Long Game/Find the South Key
 step
 goto 78.17,45.15
-'Use Skyshard |q The Long Game/Find the South Key
+'Use _Skyshard_ |q The Long Game/Find the South Key
 |tip Manually skip to the next step.
 step
 goto 81.09,48.38 |q The Long Game/Find the South Key
@@ -43460,7 +43460,7 @@ step
 goto 44.72,58.20 |q Pursuit of Freedom/Escort Louna and Anton to Safety
 step
 goto 47.08,58.90
-'Use Skyshard |q Pursuit of Freedom/Escort Louna and Anton to Safety
+'Use _Skyshard_ |q Pursuit of Freedom/Escort Louna and Anton to Safety
 |tip Manually skip to the next step.
 step
 goto 55.06,74.80 |q Pursuit of Freedom/Escort Louna and Anton to Safety
@@ -43728,7 +43728,7 @@ talk Queen Ayrenn |q Escape from Amenos/Talk to Queen Ayrenn
 step
 goto 80.03,26.36
 |tip Drop down carefully.
-'Use Skyshard |q Escape from Amenos/Find High King Emeric
+'Use _Skyshard_ |q Escape from Amenos/Find High King Emeric
 |tip Manually skip to the next step.
 step
 goto 84.02,24.42
@@ -43765,7 +43765,7 @@ goto u34_coralcliffsint_base 71.64,34.77
 'Destroy Corrupted Coral |q Coral Conundrum/.*Destroy the Coral.* |count 2
 step
 goto 31.62,34.77
-'Use Skyshard |q Coral Conundrum/.*Destroy the Coral.* |count 3
+'Use _Skyshard_ |q Coral Conundrum/.*Destroy the Coral.* |count 3
 |tip Manually skip to the next step.
 step
 goto 28.05,69.64
@@ -43839,7 +43839,7 @@ goto 67.32,24.19
 'Take Adwig's Pack |q The Missing Prowler/Find Adwig's Pack
 step
 goto 66.86,20.67
-'Use Skyshard |q The Missing Prowler/Talk to Adwig Racicot
+'Use _Skyshard_ |q The Missing Prowler/Talk to Adwig Racicot
 |tip Manually skip to the next step.
 step
 goto 69.59,25.62
@@ -44024,7 +44024,7 @@ step
 goto 27.52,58.98 |q The Long Way Home/Find the Scourge of Sentinel's Treasure
 step
 goto 35.56,65.81
-'Use Skyshard |q The Long Way Home/Find the Scourge of Sentinel's Treasure
+'Use _Skyshard_ |q The Long Way Home/Find the Scourge of Sentinel's Treasure
 |tip Manually skip to the next step.
 step
 goto 32.42,55.49 |q The Long Way Home/Find the Scourge of Sentinel's Treasure |tip Follow path back around.
@@ -44071,7 +44071,7 @@ step
 goto u34_hauntedsepulcherext_base 56.74,81.84 |q In Secret and Shadow/.*Recover the Items Sir Nathain Hid.* |count 1
 step
 goto 48.59,92.41
-'Use Skyshard |q In Secret and Shadow/.*Recover the Items Sir Nathain Hid.* |count 1
+'Use _Skyshard_ |q In Secret and Shadow/.*Recover the Items Sir Nathain Hid.* |count 1
 |tip Manually skip to the next step.
 step
 goto 69.41,66.91
@@ -44132,7 +44132,7 @@ goto 34.12,35.53
 talk Lady Arabelle Davaux |q To Catch a Magus/Talk to Lady Arabelle Davaux |future
 step
 goto 31.30,34.04
-'Use Skyshard |q To Catch a Magus/Search Mistmouth Cave
+'Use _Skyshard_ |q To Catch a Magus/Search Mistmouth Cave
 |tip Manually skip to the next step.
 step
 goto 32.20,34.95
@@ -44258,7 +44258,7 @@ goto u34_systreszone_base 15.47,56.93 |q The Ascendant Storm/Meet Your Allies at
 step
 goto 14.40,56.68
 |tip drop down carefully on the rock bridge.
-'Use Skyshard |q The Ascendant Storm |future
+'Use _Skyshard_ |q The Ascendant Storm |future
 |tip Manually skip to the next step.
 step
 goto 15.12,56.40
@@ -44422,7 +44422,7 @@ talk Stibbons
 turnin The All Flags Curse
 step
 goto 32.43,62.01
-'Use Skyshard |q A Chance for Peace/Go to Steadfast Manor
+'Use _Skyshard_ |q A Chance for Peace/Go to Steadfast Manor
 |tip Manually skip to the next step.
 step
 goto 32.65,65.78 |q A Chance for Peace/Go to Steadfast Manor
@@ -44488,7 +44488,7 @@ turnin A Chance for Peace
 
 ZGV:RegisterGuide("LEVELING\\Galen",[[
 loadingimage loadscreen_galen_zone.dds
-description The DLC will take place in a new zone, Galen and Y'ffelon, two of the smaller islands in the Systres archipelago.
+description The DLC will take place in a new zone, Galen and Y'ffelonn, two of the smaller islands in the Systres archipelago.
 step
 -- BEGIN: Firesong PROLOGUE GUIDE
 'Press _, to Open Crown Store._
@@ -44735,7 +44735,7 @@ turnin Sojourn of the Druid King
 
 -- BEGIN Galen GUIDE
 step
-'Open _Galen and Y'ffelon_ Map
+'Open _Galen and Y'ffelonn_ Map
 'Travel to _Vastyr Outskirts_ |q A Sea of Troubles |future
 |tip Manually skip to the next step.
 step
@@ -44749,9 +44749,46 @@ step
 goto 22.36,60.99
 talk Sir Stefan Mornard |q A Sea of Troubles/Talk to Sir Stefan Mornard
 step
+goto 19.40,59.58
+'Examine _Frog Stealing Plan_
+accept Dragon Frog Dilemma
+step
+goto 14.20,52.33
+talk Jocien Rane
+accept A Gulf of Time
+step
+goto 14.14,52.35
+'Examine _Jocien's Skeleton_ |q A Gulf of Time/Retrieve Jocien Rane's Ring
+step
 goto 29.11,62.37 |q A Sea of Troubles/Investigate Windwrack Fort
 step
+goto 29.89,53.77 |q A Sea of Troubles/Investigate Windwrack Fort
+step
+goto 28.58,51.30 |q A Sea of Troubles/Investigate Windwrack Fort
+step
+goto 28.96,53.16
+'Use __Skyshard__ |q A Sea of Troubles/Investigate Windwrack Fort
+|tip Manually skip to the next step.
+step
+'Open _Galen and Y'ffelon_ Map
+'Travel to _Vastyr Outskirts_ |q A Sea of Troubles/Investigate Windwrack Fort
+|tip Manually skip to the next step.
+step
 goto 31.69,65.66 |q A Sea of Troubles/Investigate Windwrack Fort
+step
+goto 38.05,64.78
+talk Lanazha
+accept The Freebooters
+step
+goto 38.05,64.78
+talk Kiko |q The Freebooters/Listen to the First Riddle
+step
+goto 39.99,70.16
+'Dig _Riddle Location_ |q The Freebooters/.*Follow the Clues.* |count 1
+|tip Manually skip to the next step.
+step
+goto 39.99,70.16
+'Search _Iron Locker_ |q The Freebooters/.*Follow the Clues.* |count 1
 step
 goto 46.32,66.15
 talk Dhulef |q A Sea of Troubles/Investigate Windwrack Fort
@@ -44809,8 +44846,16 @@ goto 52.00,55.78
 talk Druid Laurel |q A Sea of Troubles/Investigate Tuinh Village
 step
 goto 53.15,56.27
-'Open Galen |q A Sea of Troubles/Investigate Suncleft Cove
+'Open _Galen_ |q A Sea of Troubles/Investigate Suncleft Cove
 |tip Manually skip to the next step.
+step
+goto 51.69,53.50 |q A Sea of Troubles/Investigate Suncleft Cove
+step
+goto 51.69,54.74 |q A Sea of Troubles/Investigate Suncleft Cove
+step
+goto 52.00,54.57
+'Use __Skyshard__ |q A Sea of Troubles/Investigate Suncleft Cove
+|tip  Manually skip to the next step.
 step
 goto 54.54,54.38 |q A Sea of Troubles/Investigate Suncleft Cove
 step
@@ -44863,6 +44908,107 @@ step
 goto 63.85,46.04
 wayshrine Vastyr
 step
+goto 68.45,44.06
+'Open _The Jade Ornaug Tavern_ |q An Eye for an Eye |future
+|tip Manually skip to the next step.
+step
+goto 69.46,43.84
+talk Razum-dar
+accept An Eye for an Eye
+step
+goto 69.66,43.75
+talk Jeanette Floute |q An Eye for an Eye/Distract the Thugs
+|tip Manually skip to the next step.
+step
+goto 68.83,43.95
+'Open _Vastyr_ |q An Eye for an Eye/Meet Razum-dar Near the Tavern
+|tip Manually skip to the next step.
+step
+goto 70.05,41.13
+talk Razum-dar |q An Eye for an Eye/Talk to Razum-dar
+step
+goto 66.59,44.64
+|tip Keep your Distance or they will stop.
+'Follow Thugs |q An Eye for an Eye/Follow the Thugs
+step
+goto 75.18,52.50
+talk Razum-dar |q An Eye for an Eye/Talk to Razum-dar
+step
+goto 68.78,50.95 |q An Eye for an Eye/Enter the Gambling Parlor in the Outlaws Refuge
+step
+goto 70.63,46.96 |q An Eye for an Eye/Enter the Gambling Parlor in the Outlaws Refuge
+step
+goto 71.32,47.60
+'Open _Vastyr Outlaws Refuge_ |q An Eye for an Eye/Enter the Gambling Parlor in the Outlaws Refuge
+|tip Manually skip to the next step.
+step
+goto u36_VastyrCityOutlawRefug_base 28.71,56.92 |q An Eye for an Eye/Enter the Gambling Parlor in the Outlaws Refuge
+step
+goto 32.18,77.54 |q An Eye for an Eye/Enter the Gambling Parlor in the Outlaws Refuge
+step
+goto 45.94,73.46 |q An Eye for an Eye/Enter the Gambling Parlor in the Outlaws Refuge
+step
+goto 45.90,52.72
+'Open _Grandvache's Gambling Parlor_ |q An Eye for an Eye/Enter the Gambling Parlor in the Outlaws Refuge
+step
+goto u36_VastyrCity_base 70.49,39.65
+talk Razum-dar |q An Eye for an Eye/Talk to Razum-dar
+step
+goto 69.80,38.51
+|tip Win a Tribute Match.
+talk Florentino Scippius |q An Eye for an Eye/Win a Tribute Match in Grandvache
+step
+goto 68.92,40.07
+'Open _Patrician Suite_ |q An Eye for an Eye/Enter the Patrician Suite
+step
+goto 68.80,46.31
+'Use _Hiding Spot_ |q An Eye for an Eye/Eavesdrop on the Conversation
+step
+goto 69.76,45.30
+'Open _Vastyr_ |q An Eye for an Eye/Escpae the Gamling Parlor
+step
+goto 67.00,50.69
+talk Razum-dar |q An Eye for an Eye/Talk to Razum-dar
+step
+goto 66.87,50.67
+'Examine _Letter from Gad_ |lorebook Letter from Gad/3/47/19
+step
+goto 66.82,51.01
+'Examine _Yves Grandvache Ledger_ |lorebook Yves Grandvache Ledger/3/47/18
+step
+talk Razum-dar |q An Eye for an Eye/Talk to Razum-dar
+step
+goto 69.14,51.93
+talk Chef Rhazeez
+accept Spice of Life
+step
+goto 70.37,54.60
+'Examine _Swords Needed for House Mornard_
+accept Soldier of the Isles
+step
+goto 63.24,60.03
+talk Munubra
+turnin Dragon Frog Dilemma
+step
+goto 63.53,54.68
+talk Frelene Rane
+turnin A Gulf of Time
+step
+goto 56.16,45.64
+talk Arbaud Cedmaine
+turnin Soldier of the Isles
+step
+goto 68.45,44.09
+'Open _The Jaded Ornaug Tavern_ |q Spice of Life/Gather Vastyr Brandy
+|tip Manually skip to the next step.
+step
+goto 69.46,44.02
+talk Foucault Pierrane |q Spice of Life/Gather Vastyr Brandy
+step
+goto 68.83,43.95
+'Open _Vastyr_ |q Spice of Life/Talk to Chef Rhazeez
+|tip Manually skip to the next step.
+step
 goto 52.24,37.42
 'Open _Castle Mornard_ |q A Sea of Troubles/Go to Castle Mornard
 step
@@ -44913,7 +45059,14 @@ step
 goto 62.89,79.76
 'Enter _Galen_ |q A Sea of Troubles/Leave the Dell |future
 step
-goto u36_galenisland_base 32.16,51.02 |q A Sea of Troubles/Return to Castle Mornard
+goto u36_galenisland_base 26.19,47.11
+talk Joslin Coraver
+accept Cursed and Coniferous
+step
+goto 26.28,47.24
+talk Druid Fenas |q Cursed and Coniferous/Talk to Druid Fenas
+step
+goto 32.16,51.02 |q A Sea of Troubles/Return to Castle Mornard
 step
 goto 40.74,54.36 |q A Sea of Troubles/Return to Castle Mornard |tip Drop down carefully.
 step
@@ -44946,7 +45099,7 @@ step
 goto 93.41,52.99
 talk to Archdruid Rahval |q Tides of Ruin/Talk to Archdruid Rahval
 step
-'Open _Galen and Y'ffelon_ Map
+'Open _Galen and Y'ffelonn_ Map
 'Travel to _Embervine_ |q Tides of Ruin/Go to Castle Tonnere
 |tip Manually skip to the next step.
 step
@@ -44954,6 +45107,110 @@ goto u36_galenisland_base 36.55,43.37 |q Tides of Ruin/Go to Castle Tonnere
 step
 goto 17.50,37.29
 wayshrine Y'free's Path
+step
+goto 24.58,43.59 |q Cursed and Coniferous/Return to Druid Fenas
+step
+goto 22.47,45.90
+talk Druid Fenas |q Cursed and Coniferous/Talk to Fenas |future
+step
+goto 21.99,47.12
+talk Druid Edaen
+accept Fauns in Peril
+step
+goto 21.53,47.01
+'Enter _Fauns' Thicket_ |q Fauns in Peril/Enter Fauns' Thicket
+step
+goto u36_LKH_base 69.65,46.86
+'Place _Planting Soil_ |q Fauns in Peril/.*Plant the Seeds.* |count 1
+step
+goto 71.23,36.73
+talk Druid Fenas |q Cursed and Coniferous/Talk to Druid Fenas |future
+step
+goto 71.23,36.73
+'Ignite _Fire Shard_ |q Cursed and Coniferous/Ignite the Fire Shard
+step
+goto 70.82,37.63
+'Burn _Sacred Sap_ |q Cursed and Coniferous/Heat the Sacred Tree Sap
+step
+goto 70.73,37.36
+'Repair _Broken Tablet_ |q Cursed and Coniferous/Reforge the Tablet
+step
+goto 71.23,36.73
+talk Druid Fenas |q Cursed and Coniferous/Talk to Druid Fenas
+step
+goto 70.38,37.51
+|tip Choose who to lift curse from.
+talk Joslin Coravel |q Cursed and Coniferous/Choose Joslin |or
+'_OR_
+talk Octin Larouche |q Cursed and Coniferous/Choose Octin |or
+step
+goto 70.38,37.51
+talk Joslin Coravel
+turnin Cursed and Coniferous
+step
+goto 29.64,37.37 |q Fauns in Peril/.*Plant the Seeds.* |count 2
+step
+goto 30.57,44.41
+'Place _Planting Soil_ |q Fauns in Peril/.*Plant the Seeds.* |count 2
+step
+goto 27.22,36.03 |q Fauns in Peril/.*Plant the Seeds.* |count 3
+step
+goto 14.17,45.75 |q Fauns in Peril/.*Plant the Seeds.* |count 3
+step
+goto 15.57,60.75 |q Fauns in Peril/.*Plant the Seeds.* |count 3
+step
+goto 23.81,62.73 |q Fauns in Peril/.*Plant the Seeds.* |count 3
+step
+goto 30.99,71.66 |q Fauns in Peril/.*Plant the Seeds.* |count 3
+step
+goto 39.48,59.37 |q Fauns in Peril/.*Plant the Seeds.* |count 3
+step
+goto 56.85,52.50
+kill Bahltur |achieve 3490
+step
+goto 64.12,53.96
+'Place _Planting Soil_ |q Fauns in Peril/.*Plant the Seeds.* |count 3
+step
+goto 54.82,43.69 |q An Eye for an Eye/Find the Sea Cave in Fauns' Thicket
+step
+goto 49.62,19.74
+'Open _Briny Hollow Sea Cave_ |q An Eye for an Eye/Enter the Sea Cave
+step
+goto 41.27,02.29 |q An Eye for an Eye/Search the Sea Cave
+step
+'_Follow path to the main room._
+talk Razum-dar |q An Eye for an Eye/Talk to Razum-dar
+step
+'_Go up the stairs and Follow the wooden path around Placing Cavern Pillars all the way around then drop down and grab the one under the boat.
+'Place _Cavern Pillar_ |q An Eye for an Eye/Collapse the Sea Cave
+step
+goto 46.00,11.39
+'Enter _Fauns Thicket_ |q An Eye for an Eye/Escape the Sea Cave
+step
+goto 48.50,19.05
+talk Razum-dar
+turnin An Eye for an Eye
+step
+goto 35.53,21.53 |q Fauns in Peril/Leave Fauns' Thicket
+step
+goto 27.17,37.33 |q Fauns in Peril/Leave Fauns' Thicket
+step
+goto 68.32,39.81 |q Fauns in Peril/Leave Fauns' Thicket
+step
+goto 76.22,49.53 |q Fauns in Peril/Leave Fauns' Thicket
+step
+goto 45.88,75.03
+'Use _Skyshard_ |q Fauns in Peril/Leave Fauns' Thicket
+|tip Manually skip to the next step.
+step
+goto 90.76,58.17
+'Enter _Galen_ |q Fauns in Peril/Leave Fauns' Thicket
+step
+goto u36_galenisland_base 21.83,47.49
+talk Druid Edaen
+turnin Fauns in Peril
+step
+goto 24.97,42.95 |q Tides of Ruin/Talk to Captain Siravaen |future
 step
 goto 14.45,36.18
 talk Captain Siravaen |q Tides of Ruin/Talk to Captain Siravaen |future
@@ -45030,7 +45287,7 @@ goto u36_galenisland_base 09.92,27.50
 |tip Drop down carefully.
 talk Captain Siravaen |q Tides of Ruin/Talk to Captain Siravaen
 step
-'Open _Galen and Y'ffelon_ Map
+'Open _Galen and Y'ffelonn_ Map
 'Travel to _Vastyr_ |q Tides of Ruin/Talk to Archdruid Ellic
 |tip Manually skip to the next step.
 step
@@ -45064,8 +45321,151 @@ goto 63.96,46.03
 step
 goto u36_galenisland_base 49.90,46.09 |q Seeds of Destruction/Go to Glimmertarn
 step
+goto 52.10,45.36
+talk Hierot Birian
+accept Shaky Job Prospects
+step
+goto 52.97,44.94
+'Open _Embervine_ |q Shaky Job Prospects/Enter Embervine Cave
+step
+goto u36_embervine_int1_base 22.24,37.48 |q Shaky Job Prospects/Find the Druid Crystals
+step
+goto 35.59,60.91 |q Shaky Job Prospects/Find the Druid Crystals
+step
+goto 50.07,63.71
+talk Hierot Birian |q Shaky Job Prospects/Talk to Hierot Birian
+step
+goto 73.01,55.17 |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 1
+step
+goto 65.80,46.43
+'Open _Lower Jungle_ |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 1
+|tip Manually skip to the next step.
+step
+goto u36_embervine_base 47.35,73.24 |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 1
+step
+goto 48.53,36.38 |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 1
+step
+goto 62.69,69.09
+'Destroy _Druid Crystal_ |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 1
+step
+'Enter _Inner Caverns_ |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 2
+|tip Manually skip to the next step.
+step
+goto u36_embervine_int2_base 42.41,45.55
+'Destroy _Druid Crystal_ |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 2
+step
+goto 56.40,10.53 |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 3
+step
+goto 25.23,13.52 |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 3
+step
+goto 28.06,28.54
+'Open _Jungle Overlook_ |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 3
+|tip Manually skip to the next step.
+step
+goto u36_embervine_base 37.81,18.67
+'Use __Skyshard__ |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 3
+|tip Manually skip to the next step.
+step
+goto 24.88,09.76 |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 3
+step
+goto 26.50,29.47
+kill Traux the Ancient
+kill Druid Rerlas |achieve 3489
+step
+goto 22.69,34.02
+'Destroy _Master Druid Crystal_ |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 3
+step
+goto 18.67,10.61
+'Enter _Inner Caverns_ |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 4
+|tip Manually skip to the next step.
+step
+goto u36_embervine_int2_base 22.79,41.32 |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 4
+step
+goto 81.16,41.83 |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 4
+step
+goto 81.80,73.55
+'Enter _Upper Vista_ |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 4
+|tip Manually skip to the next step.
+step
+goto u36_embervine_base 59.97,91.61
+'Open _Outer Caverns_ |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 4
+|tip Manually skip to the next step.
+step
+goto u36_embervine_int1_base 82.73,56.64 |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 4
+step
+goto 55.03,59.65 |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 4
+step
+goto 50.63,64.69
+'Destroy _Druid Crystal_ |q Shaky Job Prospects/.*Destroy the Druid Crystals.* |count 4
+step
+goto 33.08,58.53 |q Shaky Job Prospects/Leave Embervine
+step
+goto 14.90,22.94 |q Shaky Job Prospects/Leave Embervine
+step
+goto 5.31,23.71
+'Enter _Galen_ |q Shaky Job Prospects/Leave Embervine
+step
+goto u36_galenisland_base 52.10,45.21
+talk Hierot Birian
+turnin Shaky Job Prospects
+step
 goto 50.05,39.39
 wayshrine Llanshara
+step
+goto 49.30,37.40
+'Dig _Riddle Location_ |q The Freebooters/.*Follow the Clues.* |count 2
+|tip Manually skip to the next step.
+step
+goto 49.30,37.40
+'Search _Iron Locker |q The Freebooters/.*Follow the Clues.* |count 2
+step
+goto 49.14,37.60
+talk Lanazha |q The Freebooters/Talk to Lanazha
+step
+goto 49.14,37.60
+talk Kiko |q The Freebooters/Talk to Kiko
+step
+goto 52.24,36.36
+'Search _Volcanic Reaper Pepper_ |q Spice of Life/Gather Volcanic Reaper Peppers
+step
+goto 58.58,35.79
+kill Elder Vulk'esh
+'Collect _Vulk'esh Meat_ |q Spice of Life/Gather Vulk'esh Meat
+step
+goto 57.67,34.50 |q Cursed and Coniferous/Talk to Joslin
+step
+goto 51.62,37.48
+talk Joslin |q Cursed and Coniferous/Talk to Joslin
+step
+goto 52.46,37.17
+'Extinguish _Fire Shard_ |q Cursed and Coniferous/Cast the Freezing Spell
+step
+goto 52.47,37.18
+'Take _Fire Shard_ |q Cursed and Coniferous/Retrieve the Fire Shard
+step
+goto 51.62,37.48
+talk Joslin |q Cursed and Coniferous/Talk to Joslin
+step
+goto 51.53,34.60 |q Cursed and Coniferous/Find Octin near the Sacred Tree
+step
+goto 54.02,32.70 |q Cursed and Coniferous/Find Octin near the Sacred Tree
+step
+goto 57.55,32.01
+'Use __Skyshard__ |q Cursed and Coniferous/Find Octin near the Sacred Tree
+|tip Manually skip to the next step.
+step
+goto 51.53,34.60 |q Cursed and Coniferous/Find Octin near the Sacred Tree
+step
+goto 47.79,30.51 |q Cursed and Coniferous/Find Octin near the Sacred Tree
+step
+goto 45.52,25.77
+talk Octin |q Cursed and Coniferous/Talk to Octin |future
+step
+goto 45.43,26.52
+'Take _Sacred Tree_ |q Cursed and Coniferous/Gather Sap from the Sacred Tree
+step
+goto 45.52,25.77
+talk Octin |q Cursed and Coniferous/Talk to Octin |future
 step
 goto 47.02,40.05 |q Seeds of Destruction/Go to Glimmertarn
 step
@@ -45073,10 +45473,297 @@ goto 39.14,36.88 |q Seeds of Destruction/Go to Glimmertarn
 step
 goto 34.53,24.47 |q Seeds of Destruction/Go to Glimmertarn
 step
+goto 47.17,22.64
+talk Quen
+accept The Sea Runs Restless
+step
+goto 54.01,19.47 |q The Sea Runs Restless/Search Llanshara for Umindior
+step
+goto 58.23,21.31 |q The Sea Runs Restless/Search Llanshara for Umindior
+step
+goto 59.59,24.75 |q The Sea Runs Restless/Search Llanshara for Umindior
+step
+goto 58.99,24.72
+'Open _Neri's Quarters_ |q The Sea Runs Restless/Search Llanshara for Umindior
+step
+goto 58.58,24.76
+talk Umindior |q The Sea Runs Restless/Talk to Umindior
+step
+goto 58.89,24.59
+'Take _Bucket of Water_ |q The Sea Runs Restless/Find Water Bucket
+step
+goto 58.57,24.76
+'Use _Bucket of Water_ |q The Sea Runs Restless/Find a Way to Rouse Umindior
+step
+goto 58.58,24.76
+talk Umindior |q The Sea Runs Restless/Talk to Umindior
+step
+goto 58.70,24.81
+'Examine _Note to Neri_ |lorebook Note to Neri/3/47/14
+step
+goto 58.58,24.76
+talk Umindior |q The Sea Runs Restless/Talk to Umindior
+step
+goto 58.95,24.71
+'Open Llanshara |q The Sea Runs Restless/Find the Prisoners
+|tip Manually skip to the next step.
+step
+goto 60.68,20.76
+talk Ellorien |q The Sea Runs Restless/Talk to the Prisoner
+step
+goto 60.75,20.66
+talk Umindior |q The Sea Runs Restless/Talk to Umindior
+step
+goto 57.03,22.90
+|tip Go up the stairs.
+'Open _Druid Ritual Chamber_ |q The Sea Runs Restless/Find the Druid Cavern
+step
+goto 56.89,23.52
+'Examine _Minahel's Note_ |lorebook Minahel's Note/3/47/16
+step
+'_FIX COORDIANTES_
+'Examine _Ritual of Life's Conmencement_ |lorebook Ritual of Life's Commencement/3/47/15
+step
+goto 56.59,20.94
+'Examine _Druidic Carvings |q The Sea Runs Restless/Explore the Ritual Chambers
+step
+goto 56.56,21.16
+talk Umindior |q The Sea Runs Restless/Talk to Umindior
+step
+goto 57.26,23.29
+'Open _Llanshara_ |q The Sea Runs Restless/Go to Umindior and Quen's Camp
+|tip Manually skip to the next step.
+step
+goto 60.08,23.05 |q The Sea Runs Restless/Go to Umindior and Quen's Camp
+step
+goto 53.97,17.07 |q The Sea Runs Restless/Go to Umindior and Quen's Camp
+step
+goto 51.09,17.14
+talk Quen |q The Sea Runs Restless/Talk to Quen
+step
+goto 49.54,17.67
+'Take _Blue-Backed Siltcrab_ |q The Sea Runs Restless/.*Gather Blue-Backed Siltcrabs.* |count 1
+step
+goto 49.37,18.38
+'Take _Blue-Backed Siltcrab_ |q The Sea Runs Restless/.*Gather Blue-Backed Siltcrabs.* |count 2
+step
+goto 50.75,17.18 |q The Sea Runs Restless/Talk to Veshin
+step
+goto 55.01,17.91 |q The Sea Runs Restless/Talk to Veshin
+step
+goto 54.66,18.42
+talk Veshin |q The Sea Runs Restless/Talk to Veshin
+step
+goto 54.56,18.39
+talk Quen |q The Sea Runs Restless/Talk to Quen
+step
+goto 56.66,19.97 |q The Sea Runs Restless/.*Gather Silverbloom.* |count 1
+step
+goto 55.57,19.63 |q The Sea Runs Restless/.*Gather Silverbloom.* |count 1
+step
+goto 53.78,19.30
+'Take _Silverbloom_ |q The Sea Runs Restless/.*Gather Silverbloom.* |count 1
+step
+goto 52.95,19.27
+'Take _Silverbloom_ |q The Sea Runs Restless/.*Gather Silverbloom.* |count 2
+step
+goto 54.57,18.32
+|tip Drop down carefully.
+talk Veshin |q The Sea Runs Restless/Give the Silverbloom to Veshin
+step
+goto 54.56,18.42
+'Search _Veshin_ |q The Sea Runs Restless/Take Veshin's Key
+step
+goto 51.02,17.54
+'Examine _Note from Umindior_ |lorebook Note from Umindior/3/47/17
+step
+goto 51.13,17.31
+talk Quen |q The Sea Runs Restless/Talk to Quen
+step
+goto 57.82,19.22 |q The Sea Runs Restless/Find the Magic Cloth
+step
+goto 57.87,17.64 |q The Sea Runs Restless/Find the Magic Cloth
+step
+goto 60.20,18.27
+'Take _Embroidered Sailcloth_ |q The Sea Runs Restless/Find the Magic Cloth
+step
+goto 55.72,19.98 |q The Sea Runs Restless/Meet Quen at the Sea Witch Sanctum
+step
+goto 53.18,19.90 |q The Sea Runs Restless/Meet Quen at the Sea Witch Sanctum
+step
+goto 47.67,21.98 |q The Sea Runs Restless/Meet Quen at the Sea Witch Sanctum
+step
+goto 52.09,22.38
+talk Quen |q The Sea Runs Restless/Enter the Sea Witch Sanctum |future
+|tip Manually skip to the next step.
+step
+goto 52.24,22.80
+'Open _Sea Witch Sanctum_ |q The Sea Runs Restless/Enter the Sea Witch Sanctum
+step
+goto u36_GNOBJ2Cave_base 77.67,28.63
+'Take _Gold Medallion_ |q The Sea Runs Restless/Pick up the Medallion
+step
+goto 76.53,30.19
+talk Quen |q The Sea Runs Restless/Talk to Quen
+step
+goto 53.00,68.43 |q The Sea Runs Restless/Continue Searching for the Relic
+step
+goto 24.19,87.82 |q The Sea Runs Restless/Continue Searching for the Relic
+step
+goto 22.15,72.87
+'Open _Minahel's Room_ |q The Sea Runs Restless/Continue Searching for the Relic |future
+|tip Manually skip to the next step.
+step
+goto 16.69,51.92
+kill Minahel |q The Sea Runs Restless/Free Umindior 01
+step
+goto 14.77,45.50
+'Destroy _Entangling Vines_ |q The Sea Runs Restless/Free Umindior 01
+step
+goto 14.77,45.50
+'Destroy _Entangling Vines_ |q The Sea Runs Restless/Rescue Umindior
+step
+goto 21.19,39.32
+'Open _Relic Room_ |q The Sea Runs Restless/Find the Relic
+step
+goto 19.93,16.15
+'Cover _Active Ancient Relic_ |q The Sea Runs Restless/Cover the Relic
+step
+goto 19.93,16.15
+'Take _Covered Relic_ |q The Sea Runs Restless/Take the Relic
+step
+goto 26.65,5.70
+'Open _Llanshara_ |q The Sea Runs Restless/Leave the Caves
+step
+goto 49.62,22.43
+talk Quen
+turnin The Sea Runs Restless
+step
+'Open _Galen and Y'ffelon_
+'Travel to _Llanshara_ |q A Heart Turned Black |future
+|tip Manually skip to the next step.
+step
+goto u36_galenisland_base 39.09,37.04 |q A Heart Turned Black |future
+step
+goto 37.04,26.56 |q A Heart Turned Black |future
+step
 goto 29.09,22.04
 wayshrine Glimmertarn
 step
-goto 27.95,22.32
+goto 26.18,25.04 |q A Heart Turned Black |future
+step
+goto 26.10,26.48
+'Use _Skyshard_ |q A Heart Turned Black |future
+|tip Manually skip to the next step.
+step
+goto 30.32,25.72
+talk Elder Pitof
+accept A Heart Turned Black
+step
+goto 28.19,29.11 |q A Heart Turned Black/Search for Elder Gwenaelle
+step
+goto 29.20,32.18
+'Examine _Druid Vitache_ |q A Heart Turned Black/Search for Elder Gwenaelle
+step
+goto 24.11,34.90
+'Examine _Druid Senn's Last Account_ |lorebook Druid Senna's Last Account/3/47/12
+step
+goto 24.11,34.90
+talk Elder Pitof |q A Heart Turned Black/Talk to Elder Pitof
+step
+goto 24.86,28.51
+talk Druid Henyra |q A Heart Turned Black/Talk to Druid Henyra |future
+step
+goto 24.79,27.80
+talk Elder Pitof |q A Heart Turned Black/Talk to Elder Pitof
+step
+goto 24.77,27.33
+'Open _Chronicle's Tunnel |q A Heart Turned Black/Enter the Chronicle's Tunnels
+step
+goto u36_yfreesint1_base 40.12,79.93 |q A Heart Turned Black/Search for Elder Gwenaelle
+step
+goto 51.09,81.34 |q A Heart Turned Black/Search for Elder Gwenaelle
+step
+goto 44.12,68.60
+'Examine _Muse-Mouth Plant_ |q A Heart Turned Black/Examine the Muse-Mouth Plant
+step
+goto 43.37,54.45
+talk Elder Pitof |q A Heart Turned Black/Talk to Elder Pitof
+step
+goto 40.34,59.64
+'Open _Chronicle's Tunnels_ |q A Heart Turned Black/Search for Elder Gwenaelle
+|tip Manually skip to the next step.
+step
+goto 32.28,63.62
+'Examine _Muse-Mouth Plant_ |q A Heart Turned Black/Examine the Muse-Mouth Plant
+step
+goto 32.28,63.62
+talk Elder Pitof |q A Heart Turned Black/Talk to Elder Pitof
+step
+goto 21.89,52.46 |q A Heart Turned Black/Search for Elder Gwenaelle
+step
+goto 24.31,52.67
+talk Elder Pitof |q A Heart Turned Black/Talk to Elder Pitof
+step
+goto 27.45,54.62
+'Pour _Bloated Muse-Mouth Plant_ |q A Heart Turned Black/.*Pour Y'ffre's Rain on the Bloated Muse-Mouth.* |count 1
+step
+goto 29.67,50.13
+'Pour _Bloated Muse-Mouth Plant_ |q A Heart Turned Black/.*Pour Y'ffre's Rain on the Bloated Muse-Mouth.* |count 2
+step
+goto 25.76,49.29
+|tip Go up the steps.
+'Pour _Bloated Muse-Mouth Plant_ |q A Heart Turned Black/.*Pour Y'ffre's Rain on the Bloated Muse-Mouth.* |count 3
+step
+goto 30.65,52.76
+'Open _Chronicle's Overlook_ |q A Heart Turned Black/Search for Elder Gwenaelle
+|tip Manually skip to the next step.
+step
+goto 43.07,48.46
+talk Elder Pitof |q A Heart Turned Black/Talk to Elder Pitof
+step
+goto 46.28,52.78
+'Open _Chronicle's Tunnels_ |q A Heart Turned Black/Find Elder Gwenaelle
+|tip Manually skip to the next step.
+step
+goto 62.16,68.88 |q A Heart Turned Black/Find Elder Gwenaelle
+step
+goto 59.30,53.87
+'Pour _Bloated Muse-Mouth Plant_ |q A Heart Turned Black/.*Pour Y'ffre's Rain on the Bloated Muse-Mouth.* |count 1
+step
+goto 59.64,50.04
+'Pour _Bloated Muse-Mouth Plant_ |q A Heart Turned Black/.*Pour Y'ffre's Rain on the Bloated Muse-Mouth.* |count 2
+step
+goto 69.39,59.51
+'Pour _Bloated Muse-Mouth Plant_ |q A Heart Turned Black/.*Pour Y'ffre's Rain on the Bloated Muse-Mouth.* |count 3
+step
+goto 65.22,51.82
+'Pour _Bloated Muse-Mouth Plant_ |q A Heart Turned Black/.*Pour Y'ffre's Rain on the Bloated Muse-Mouth.* |count 4
+step
+goto 48.10,52.65 |q A Heart Turned Black/Find Elder Gwenaelle |tip Drop down carefully.
+step
+goto 42.97,38.58
+talk The Chronicle |q A Heart Turned Black/Talk to the Chronicle
+step
+goto 40.06,36.51
+'Pour _Roots of the Chronicle |q A Heart Turned Black/Pour Y'ffre's Rain on the Roots
+|tip Manually skip to the next step.
+step
+goto 45.79,36.49
+'Pour _Roots of the Chronicle |q A Heart Turned Black/Pour Y'ffre's Rain on the Roots
+step
+goto 43.07,38.29
+'Pour _Spirit Orb of the Chronicle_ |q A Heart Turned Black/Pour Y'ffre's Rain on the Spirit Orb
+step
+goto 43.01,38.88
+talk Elder Pitof
+turnin A Heart Turned Black
+step
+'Open _Galen and Y'ffelon_
+'Travel to _Glimmertarn_ |q Seeds of Destruction/Talk to Druid Laurel |future
+|tip Manually skip to the next step.
+step
+goto u36_galenisland_base 27.95,22.32
 talk Druid Laurel |q Seeds of Destruction/Talk to Druid Laurel |future
 step
 goto 35.48,21.06 |q Seeds of Destruction/Find Path to Broken Oar Cove
@@ -45088,7 +45775,7 @@ step
 goto 34.89,16.16
 'Take _Everflame Torch_ |q Seeds of Destruction/Retrieve the Everflame Torch
 step
-'Open _Galen and Y'ffelon_ Map
+'Open _Galen and Y'ffelonn_ Map
 'Tavel to _Glimmertarn_ |q Seeds of Destruction/Meet Druid Laurel at Veil's Bluff
 step
 goto 20.94,17.11 |q Seeds of Destruction/Meet Druid Laurel at Veil's Bluff
@@ -45150,7 +45837,7 @@ step
 goto 49.80,69.68
 'Take _Stonelore Sacred Seed_ |q Seeds of Destruction/Take the Stonelore Seed
 step
-'Open _Galen and Y'ffelon_ Map
+'Open _Galen and Y'ffelonn_ Map
 'Travel to _Glimmertarn_ |q Seeds of Destruction/Return to Glimmertarn
 step
 goto u36_galenisland_base 27.79,23.52
@@ -45165,6 +45852,18 @@ goto 28.99,22.06
 'Use _Glimmertarn_ Wayshrine
 'Travel to _Y'free's Path_ |q City Under Siege/Go to the Western Shore
 |tip Manually skip to the next step.
+step
+goto 25.02,42.69 |q The Freebooters/Solve the Third Riddle
+step
+goto 25.56,41.90
+'Dig _Riddle Location_ |q The Freebooters/Solve the Third Riddle
+|tip Manually skip to the next step.
+step
+goto 25.56,41.90
+'Search _Lost Treasure_ |q The Freebooters/Solve the Third Riddle
+step
+goto 25.51,42.19
+talk Lanazha |q The Freebooters/Talk to Lanazha
 step
 goto 13.76,29.77 |q City Under Siege/Talk to Captain Siravaen |future
 step
@@ -45277,7 +45976,26 @@ goto 55.58,72.87
 'Open _Vastyr_ |q The Dream of Kasorayn/Go to Glimmertarn
 |tip Manually skip to the next step.
 step
-goto u36_VastyrCity_base 63.72,45.73
+goto u36_VastyrCity_base 68.50,44.12
+'Open _The Jaded Ornaug Taver_ |q The Freebooters/talk to Lanazha
+|tip Manually skip to the next step.
+step
+goto 69.77,44.24
+'Drink _Mug to Toast With Lanazha_ |q The Freebooters/Toast with Lanazha
+step
+goto 69.73,44.29
+talk Lanazha
+turnin The Freebooters
+step
+goto 68.83,43.95
+'Open _Vastyr_ |q Spice of Life/Talk to Chef Rhazeez
+|tip Manually skip to the next step.
+step
+goto 69.59,52.18
+talk Chef Rhazeez
+turnin Spice of Life
+step
+goto 63.72,45.73
 'Use _Vastyr_
 'Travel to _Glimmertarn_ |q The Dream of Kasorayn/Go to Glimmertarn
 |tip Manually skip to the next step.
@@ -45432,7 +46150,7 @@ step
 goto 68.08,31.58
 talk Frii |q The Dream of Kasorayn/Talk to Frii
 step
-'Open _Galen and Y'ffelon_ Map
+'Open _Galen and Y'ffelonn_ Map
 'Travel to _Vastyr_ |q The Dream of Kasorayn/Go to Vastyr
 step
 goto u36_VastyrCity_base 52.26,37.40
@@ -45554,7 +46272,7 @@ step
 goto 52.62,87.37
 talk Frii |q Guardian of Y'ffelon/Talk to Frii
 step
-'Open _Galen and Y'ffelon_ Map
+'Open _Galen and Y'ffelonn_ Map
 'Travel to _Vastyr_ |q Guardian of Y'ffelon/Return to Vastyr |future
 |tip Manually skip to the next step.
 step
@@ -45595,7 +46313,7 @@ goto 73.50,44.80
 step
 goto 47.54,42.98
 'Use _Gonfalon Bay_ Wayshrine
-'Travel to _Vastyr in Galen and Y'ffelon_ |q The Hidden Lord/Meet Count Stefan Mornard at Mornard Castle
+'Travel to _Vastyr in Galen and Y'ffelonn_ |q The Hidden Lord/Meet Count Stefan Mornard at Mornard Castle
 |tip manually skip to the next step.
 step
 goto u36_VastyrCity_base 54.24,37.42
@@ -45898,7 +46616,7 @@ talk Lady Arabelle Davaux
 turnin The Hidden Lord
 accept The Ivy Throne
 step
-'Open _Galen and Y'ffelo_ Map
+'Open _Galen and Y'ffelon_ Map
 'Travel to _Vastyr_ |q The Ivy Throne/Meet Count Stefan in Vastyr
 |tip Manually skip to the next step.
 step
@@ -45918,7 +46636,7 @@ step
 goto 54.64,26.53
 talk Count Stefan Mornard |q The Ivy Throne/Talk to Count Stefan Mornard |future
 step
-'Open _Galen and Y'ffelon_ Map
+'Open _Galen and Y'ffelonn_ Map
 'Travel to _Glimmertarn_ |q The Ivy Throne/Go to Glimmertarn
 |tip Manually skip to the next step.
 step
@@ -45980,7 +46698,7 @@ step
 goto 55.30,83.17
 talk Druid Laurel |q The Ivy Throne/Talk to Druid Laurel
 step
-'Open _Galen and Y'ffelon_ Map
+'Open _Galen and Y'ffelonn_ Map
 'Travel to _Vastyr_ |q The Ivy Throne/Return to Castle Mornard
 |tip Manually skip to the next step.
 step
@@ -46135,7 +46853,7 @@ goto 73.50,44.88
 step
 goto 47.02,42.84
 'Use _Gonfalon Square_ Wayshrine
-'Travel to _West Bay in Galen and Y'ffelon_ |q And Now, Perhaps, Peace/.*Gather Your Allies.* |count 1
+'Travel to _West Bay in Galen and Y'ffelonn_ |q And Now, Perhaps, Peace/.*Gather Your Allies.* |count 1
 |tip Manually skip to the next step.
 step
 goto 14.50,58.67
@@ -46150,7 +46868,7 @@ goto 46.04,82.56 |q And Now, Perhaps, Peace/.*Gather Your Allies.* |count 3
 step
 goto u34_gonfalonbaycity_base 5.29,48.28
 'Use _West Bay_ Wayshrine
-'Travel _Vastyr in Galen and Y'ffelon_ |q And Now, Perhaps, Peace/.*Gather Your Allies.* |count 3
+'Travel _Vastyr in Galen and Y'ffelonn_ |q And Now, Perhaps, Peace/.*Gather Your Allies.* |count 3
 |tip Manually skip to the next step.
 step
 goto u36_VastyrCity_base 52.31,37.29
