@@ -691,7 +691,6 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 				GetCurrentMapIndex() == Enums.HewsBaneMap or
 				GetCurrentMapIndex() == Enums.MurkmireMap or
 				GetCurrentMapIndex() == Enums.NorgTzelMap or
-				GetCurrentMapIndex() == Enums.RivenspireMap or
 				GetCurrentMapIndex() == Enums.SouthernElsweyrMap or
 				GetCurrentMapIndex() == Enums.StonefallsMap or
 				GetCurrentMapIndex() == Enums.StrosMKaiMap or
@@ -704,8 +703,8 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 			    GetCurrentMapIndex() == Enums.GrahtwoodMap or
 			    GetCurrentMapIndex() == Enums.GreenshadeMap or
 			    GetCurrentMapIndex() == Enums.ReapersMarchMap or
+				GetCurrentMapIndex() == Enums.RivenspireMap or
 				GetCurrentMapIndex() == Enums.ShadowfenMap or
-				GetCurrentMapIndex() == Enums.StormhaveMap or
 				GetCurrentMapIndex() == Enums.SummersetMap or
 				GetCurrentMapIndex() == Enums.TheDeadlandsMap or
 				GetCurrentMapIndex() == Enums.TheRiftMap then return 5
@@ -714,6 +713,7 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 				GetCurrentMapIndex() == Enums.ArtaeumMap or
 		        GetCurrentMapIndex() == Enums.AuridonMap or
 				GetCurrentMapIndex() == Enums.MalabalTorMap or
+				GetCurrentMapIndex() == Enums.StormhaveMap or
 				GetCurrentMapIndex() == Enums.WesternSkyrimMap then return 7
 		
 		else return dist or selfdist or 1 -- default value
@@ -752,7 +752,6 @@ function Utils.DistanceOffsetForIsComplete()
 				GetCurrentMapIndex() == Enums.HewsBaneMap or
 				GetCurrentMapIndex() == Enums.MurkmireMap or
 				GetCurrentMapIndex() == Enums.NorgTzelMap or
-				GetCurrentMapIndex() == Enums.RivenspireMap or
 				GetCurrentMapIndex() == Enums.SouthernElsweyrMap or
 				GetCurrentMapIndex() == Enums.StonefallsMap or
 				GetCurrentMapIndex() == Enums.StrosMKaiMap or
@@ -766,8 +765,8 @@ function Utils.DistanceOffsetForIsComplete()
 			    GetCurrentMapIndex() == Enums.GrahtwoodMap or
 			    GetCurrentMapIndex() == Enums.GreenshadeMap or
 			    GetCurrentMapIndex() == Enums.ReapersMarchMap or
+				GetCurrentMapIndex() == Enums.RivenspireMap or
 				GetCurrentMapIndex() == Enums.ShadowfenMap or
-				GetCurrentMapIndex() == Enums.StormhaveMap or
 				GetCurrentMapIndex() == Enums.SummersetMap or
 				GetCurrentMapIndex() == Enums.TheDeadlandsMap or
 				GetCurrentMapIndex() == Enums.TheRiftMap then return 5
@@ -776,6 +775,7 @@ function Utils.DistanceOffsetForIsComplete()
 				GetCurrentMapIndex() == Enums.ArtaeumMap or
 		        GetCurrentMapIndex() == Enums.AuridonMap or
 			    GetCurrentMapIndex() == Enums.MalabalTorMap or
+				GetCurrentMapIndex() == Enums.StormhaveMap or
 				GetCurrentMapIndex() == Enums.WesternSkyrimMap then return 7
 			
 		else return dist or selfdist or 1 -- default value

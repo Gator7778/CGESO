@@ -1,10 +1,9 @@
 ## Title: |cfd5b02Community Leveling Guides|r v1018
-## Description: A Zygor addon updated by snichols7778, Hydra9268, Krandor1, and Sharlikran for the Blackwood expansion.
+## Description: A Zygor addon updated by snichols7778, Hydra9268, Krandor1, and Sharlikran for the Firesong DLC.
 ## Author: snichols7778, Hydra9268
-## Version: 1018
-## AddOnVersion: 1018
+## Version: 1023
+## AddOnVersion: 1023
 ## APIVersion: 100035 100036
-; ## DependsOn: LibGPS AceTimer-3.0>=146
 ## DependsOn: LibGPS
 ## SavedVariables: ZGESOSettings
 ## Disclaimer: This Add-on is not created by, affiliated with or sponsored by ZeniMax Media Inc. or its affiliates. The Elder Scrolls and related logos are registered trademarks or trademarks of ZeniMax Media Inc. in the United States and/or other countries. All rights reserved. This Add-on is not sponsored by Zygor Guides.

@@ -297,6 +297,7 @@ goto 76.74,54.20
 'Open Catacombs |q Tears of the Two Moons/Enter the Temple Catacombs
 step
 goto templeofthemourningspring_base 19.73,50.80
+|tip Far left, 3rd, 4thm and 2nd.
 'Activate _New Moons Stone_
 'Activate _Waxing Moons Stone_
 'Activate _Full Moons Stone_
@@ -333,7 +334,6 @@ talk Rurelion |q Tears of the Two Moons/Talk to Rurelion
 step
 goto 64.59,49.37
 talk Gathwen |q Tears of the Two Moons/Talk to Gathwen
-'Tell her _I need to hear Rurelion's thoughts before making a decision._
 step
 goto 65.01,48.63
 talk Rurelion |q Tears of the Two Moons/Let Uldor Claim Rurelion
@@ -10764,12 +10764,7 @@ step
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
-goto baandaritradingpost_base 64.03,49.67
-|tip The Prophet appears.
-accept Valley of Blades
-|only Aldmeri Dominion
-step
-goto 68.71,58.45
+goto baandaritradingpost_base 68.71,58.45
 |tip Inside the Mages Guild.
 talk Valaste |q Chateau of the Ravenous Rodent/Talk to Valaste
 |only Aldmeri Dominion
@@ -13003,7 +12998,7 @@ talk Jofnir Iceblade
 turnin Will of the Council
 |only Aldmeri Dominion
 step
-goto reapersmarch_base 50.85,54.43
+goto 50.85,54.43
 |tip Inside the Mages Guild.
 talk Valaste |q The Mad God's Bargain/Talk to Valaste
 |only Aldmeri Dominion
@@ -14714,6 +14709,7 @@ goto 53.91,51.48
 'Use _Elden Root_ Wayshrine
 'Travel to _Skywatch_ in Auridon |q Messages Across Tamriel/Talk to Razum-dar in Skywatch
 |tip Manually skip to the next step.
+|only Aldmeri Dominion
 step
 goto skywatch_base 52.06,37.58
 |tip Inside the Mages Guild.
@@ -27029,6 +27025,11 @@ talk Varen Aquilarios
 turnin Council of the Five Companions
 |only Daggerfall Covenant
 step
+'Open _Bangkorai_ Map
+'Travel to _Eastern Evermore_ Wayshrine |q Beyond the Call |future
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
 goto 47.22,33.57
 'Examine _Aspects of Lord Hircine_ |lorebook Aspects of Lord Hircine/1/4/5
 step
@@ -34283,6 +34284,9 @@ goto 54.01,49.22
 talk Rigurt the Brash
 accept Cultural Exchange
 step
+goto 66.49,65.44
+wayshrine Mournhold
+step
 goto 56.03,36.53
 'Go to _Tribunal Temple_ |q A Favor Returned/Go to the Tribunal Temple
 step
@@ -34439,10 +34443,6 @@ goto 49.21,68.92
 talk Bera Moorsmith
 accept The Prismatic Core
 |only Ebonheart Pact
-step
-goto 66.96,65.91
-|tip Leave Fighters Guild.
-wayshrine Mournhold
 step
 goto 74.44,56.47
 |tip Inside the building.
@@ -38965,11 +38965,6 @@ turnin The Dream of the Hist
 accept Swamp to Snow
 step
 goto 32.05,60.99
-|tip The Prophet appears.
-accept Halls of Torment
-|only Ebonheart Pact
-step
-goto 32.05,60.99
 'Use _Alten Corimont_ Wayshrine
 'Travel to _The Harborage_ in Stonefalls |q Halls of Torment/Enter the Harborage
 |tip Manually skip to the next step.
@@ -40246,10 +40241,6 @@ step
 goto 65.75,39.15
 talk Merric at-Aswala |q Proving the Deed/Talk to Merric
 |only Ebonheart Pact
-step
-goto 70.14,42.63
-talk Thane Oda Wolf-Sister
-turnin Victory at Morvunskar
 step
 goto 50.88,34.27
 talk Hloenor Chill-Owl |q Sleeping on the Job/Find Commander Yjarnn
@@ -42498,7 +42489,7 @@ goto 56.79,59.36
 'Open _Nimalten_ |q Concealed Weapons/Exit Thane's Hall
 step
 goto 56.02,57.68
-talk Nimalten Guard |q Concealed Weapons/Talk to the Wounded Housecarl
+talk Thane's Housecarl |q Concealed Weapons/Talk to the Wounded Housecarl
 step
 goto 60.68,55.86
 |tip Drop down.
@@ -42988,7 +42979,6 @@ goto 12.42,43.25
 |tip All around this area.
 kill Worm Cult enemies
 'Collect _Lost Notes_ |q The Shackled Guardian/.*Collect Lost Notes.*
-talk Delvers
 'Save _Captive Delvers_ |q The Shackled Guardian/.*Save Captive Delvers.*
 step
 goto 10.97,45.12
@@ -45058,46 +45048,19 @@ goto 46.47,54.71
 talk Countess Hakruba |q The Weight of Three Crowns/Talk to Countess Hakruba
 step
 goto 49.52,45.40
-talk High King Emeric |q The Weight of Three Crowns/Talk to High King Emeric
-'Tell him _[Persuade] The guilds have considerable experience fighting Daedra._
-|only Aldmeri Dominion
-step
-goto 49.52,45.40
-talk High King Emeric |q The Weight of Three Crowns/Talk to High King Emeric
-|only Daggerfall Covenant
-step
-goto 49.52,45.40
-talk High King Emeric |q The Weight of Three Crowns/Talk to High King Emeric
-'Tell him _[Persuade] The guilds have considerable experience fighting Daedra._
-|only Ebonheart Pact
+talk High King Emeric |q The Weight of Three Crowns/Talk to the Alliance Leaders
+|tip Persuade him.
+|tip Manually skip to the next step.
 step
 goto 57.54,54.86
-talk Queen Ayrenn |q The Weight of Three Crowns/Talk to Queen Ayrenn
-|only Aldmeri Dominion
-step
-goto 57.54,54.86
-talk Queen Ayrenn |q The Weight of Three Crowns/Talk to Queen Ayrenn
-'Tell him _[Persuade] The guilds have considerable experience fighting Daedra._
-|only Daggerfall Covenant
-step
-goto 57.54,54.86
-talk Queen Ayrenn |q The Weight of Three Crowns/Talk to Queen Ayrenn
-'Tell her _[Intimidate] Do you want history to remember you as the king who surrendered to Molag Bal?_
-|only Ebonheart Pact
+talk Queen Ayrenn
+'Talk to the Alliance Leader |q The Weight of Three Crowns/Talk to the Alliance Leaders
+|tip Manually skip to the next step.
 step
 goto 47.82,63.81
-talk Jorunn the Skald-King |q The Weight of Three Crowns/Talk to the Alliance Leaders
-'Tell him _[Intimidate] Do you want history to remember you as the king who surrendered to Molag Bal?_
-|only Aldmeri Dominion
-step
-goto 47.82,63.81
-talk Jorunn the Skald-King |q The Weight of Three Crowns/Talk to the Alliance Leaders
-'Tell him _[Intimidate] Do you want history to remember you as the king who surrendered to Molag Bal?_
-|only Daggerfall Covenant
-step
-goto 47.82,63.81
-talk Jorunn the Skald-King |q The Weight of Three Crowns/Talk to the Alliance Leaders
-|only Ebonheart Pact
+talk Jorunn the Skald-King
+|tip Intimidate him.
+'Talk to the Alliance Leader |q The Weight of Three Crowns/Talk to the Alliance Leaders
 step
 goto 47.53,55.40
 |tip Watch the dialogue
