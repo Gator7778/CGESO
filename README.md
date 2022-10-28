@@ -1,6 +1,6 @@
 # ZGESO
 
-<img src="https://i.imgur.com/RzUTk8n.png">
+<img src="https://i.imgur.com/ipdf8ei.jpg">
 
 A Public Domain leveling guide produced by Zygor Guides, updated and maintained by Hydra9268. The purpose of this project is to add leveling guides for new content and extend the life for as long as ESO is available.
 
@@ -23,11 +23,84 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 <br/>
 
 
-### 7/24/21 Remaster Legacy guides and Stand-alone Blackwood Companions guide (Thank you, snichols7778)! 
-<img src="https://i.imgur.com/5DZTFBl.png">
+### 11/01/2022 Firesong Guide.
+<img src="https://i.imgur.com/UpbeItJ.png">
 <i>artwork &copy; ZeniMax Media</i>
 
 ### Recent Updates
+11/01/2022
+* Rewrite Aldmeri Dominion Legacy Guide For Accountwide Achievements
+* Reimplement and complete re-write of Imperial City Guide and Maps
+* Rewrite Daggerfall Covenant Legacy Guide For Accountwide Achievements
+* Rewrite Ebonheart Pact Legacy Guide For Accountwide Achievements
+* Firesong DLC
+* Main Quest Only
+* Full Guide
+
+06/06/2022
+* Edited Vvardenfel step to Examine Bothamul's Orders because the syntax looked incorrect
+* Edited the Readme to add some things from the manifext file
+* Removed superfluous stuff like Lua comments from the manifest file because that's not a valid comment.
+* However, only adding needed lines is always best.
+* Used 7zip to make the .zip file using its Zip format rather then the 7z format
+
+06/06/2022
+* Completed All DLC Main Quest Only Guides.
+* Added Ember and Isobel Veloise Companion Guides.
+* Added All Rapport Guide for all 4 Companions.
+* Added Main Guide Only for High Isle and Amenos
+* Complete High Isle and Amenos Leveling Guide.
+
+05/29/2022
+*Fixes Isle of Balfiera bug due to API change
+
+04/16/2022
+*Fixed Map name bug in Northern Elsweyr
+
+04/16/2022
+*Created Legacy Main Quest Only Guides
+*Fixed Various Issues
+
+11/2/2021
+* Fixed Typo in Southern Elsweyr
+
+11/2/2021
+* Fixed Vulkhel Guard Map issues in Blackwood Prologue guide.
+
+10/31/2021
+Deadlands DLC
+* Include Skyshards, Delves and all quests.
+
+Wrothgar
+* Added Skyshards, Delves, and Missing Quests
+* Reorganized quest order to have sidequests done along side storyline to speed up guide.
+
+Thieves Guild
+* Added Skyshards, Delves, and Faction commands for certain quests that require it.
+
+Dark Brotherhood
+* Added Skyshards ,Delves, and Added missing quests.
+
+Vvardenfell
+* Added Prologue, Skyshards, Delves, Missing Quests, and Clarification steps.
+
+Clockwork City
+* Added Prologue, Skyshards, Delves, Missing Quests, and Clarification steps.
+
+Summerset
+* Added Prologue, Missing Quests, Skyshards, Delves, and Commands to steps to alieviate alot of Manual skips
+
+Murkmire
+* Added Prologue, Missing Quests, Skyshards, Delves
+* Commands to steps to alieviate alot of Manual --skips
+
+Northern Elsweyr
+* Added Prologue, Missing Quest, Skyshards, Delves, Commands to steps to alieviate alot of Manual skips
+* Reordered Quest for faster guide
+
+Blackwood
+* Removed Companion quests from main guide and moved them into miscellanous
+* Each Companion has its own guide now.
 
 * 6/1/21 Blackwood, Dragonhold (Southern Elsweyr), and Craglorn guides now available (Thank you, snichols7778)! 
 * 3/27/21 Skyrim Guides Now Available (Thanks to snichols7778)!
@@ -38,12 +111,6 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 * 11/2/20: API version now supports Dragonhold
 * 8/12/20: API version now supports Scalebreaker
 * 7/27/20: Northern Elsweyr Guide Out Now!
-
-<!--
-### Coming Soon
-
-* Western Skyrim guide by snichols7778
--->
 
 # Development Guide
 
