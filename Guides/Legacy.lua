@@ -45286,7 +45286,7 @@ goto 72.07,58.05
 kill Nerazakan
 step
 goto 77.75,57.90
-click _Idria's Lute_
+click Idria's Lute
 accept The Lost Lute
 step
 goto 63.86,55.20
@@ -45296,7 +45296,7 @@ step
 goto 53.78,45.18 |q The Lost Lute/Find Minstrel Idria
 step
 goto 82.25,27.97
-click _Coldharbour_ |q The Lost Lute/Find Minstrel Idria
+click Coldharbour |q The Lost Lute/Find Minstrel Idria
 |tip Manually skip to the next step.
 step
 goto coldharbour_base 39.88,78.14
@@ -45341,17 +45341,17 @@ step
 goto 31.52,82.40 |q Wisdom of the Ages/Place the Gems
 step
 goto 31.48,83.26
-click _Statue of Time_ |q Wisdom of the Ages/Place the Gems
+click Statue of Time |q Wisdom of the Ages/Place the Gems
 'Choose _<Place the Gem of Preservation.>_
 |tip Manually skip to the next step.
 step
 goto 31.58,83.26
-click _Statue of Life_ |q Wisdom of the Ages/Place the Gems
+click Statue of Life |q Wisdom of the Ages/Place the Gems
 'Choose _<Place the Gem of Endurance.>_
 |tip Manually skip to the next step.
 step
 goto 31.48,83.16
-click _Statue of the Unknown_ |q Wisdom of the Ages/Place the Gems
+click Statue of the Unknown |q Wisdom of the Ages/Place the Gems
 'Choose _<Place the Gem of Courage.>_
 step
 goto 32.38,82.26
@@ -45367,49 +45367,49 @@ step
 goto 31.51,79.56 |q Wisdom of the Ages/Enter Sap Collection Facility
 step
 goto 31.51,78.76
-click _North Pyramid_ |q Wisdom of the Ages/Enter Sap Collection Facility
+click North Pyramid |q Wisdom of the Ages/Enter Sap Collection Facility
 |tip Manually skip to the next step.
 step
 goto hajuxith_base 18.04,40.35 |q Wisdom of the Ages/Enter Sap Collection Facility
 step
 goto 31.70,41.78
-click _Hist Sap Chamber_ |q Wisdom of the Ages/Enter Sap Collection Facility
+click Hist Sap Chamber |q Wisdom of the Ages/Enter Sap Collection Facility
 |tip Manually skip to the next step.
 step
 goto 66.01,52.02
-'Enter the _Sap Collection Facility_ |q Wisdom of the Ages/Enter Sap Collection Facility
+'Enter the Sap Collection Facility |q Wisdom of the Ages/Enter Sap Collection Facility
 step
 goto 75.41,60.27
-click _Treated Wood_ |q Wisdom of the Ages/Overheat the Sap Vats
+click Treated Wood |q Wisdom of the Ages/Overheat the Sap Vats
 |tip Manually skip to the next step.
 step
 goto 72.39,59.35
-click _Hist Sap Vat_ |q Wisdom of the Ages/Overheat the Sap Vats
+click Hist Sap Vat |q Wisdom of the Ages/Overheat the Sap Vats
 |tip Manually skip to the next step.
 step
 goto 77.22,55.49
-click _Hist Sap Vat_ |q Wisdom of the Ages/Overheat the Sap Vats
+click Hist Sap Vat |q Wisdom of the Ages/Overheat the Sap Vats
 |tip Manually skip to the next step.
 step
 goto 86.03,59.37
-click _Hist Sap Vat_ |q Wisdom of the Ages/Overheat the Sap Vats
+click Hist Sap Vat |q Wisdom of the Ages/Overheat the Sap Vats
 |tip Manually skip to the next step.
 step
 goto 87.61,44.94
-click _Hist Sap Vat_ |q Wisdom of the Ages/Overheat the Sap Vats
+click Hist Sap Vat |q Wisdom of the Ages/Overheat the Sap Vats
 |tip Manually skip to the next step.
 step
 goto 77.24,48.10
-click _Hist Sap Vat_ |q Wisdom of the Ages/Overheat the Sap Vats
+click Hist Sap Vat |q Wisdom of the Ages/Overheat the Sap Vats
 |tip Manually skip to the next step.
 step
 goto 72.51,44.96
-click _Hist Sap Vat_ |q Wisdom of the Ages/Overheat the Sap Vats
+click Hist Sap Vat |q Wisdom of the Ages/Overheat the Sap Vats
 step
 goto 82.42,64.60 |q Wisdom of the Ages/Exit the Facility
 step
 goto 76.88,78.99
-click _Haj Uxith_ |q Wisdom of the Ages/Exit the Facility
+click Haj Uxith |q Wisdom of the Ages/Exit the Facility
 step
 goto coldharbour_base 34.06,81.24
 talk An-Jeen-Sakka |q Wisdom of the Ages/Talk to An-Jeen-Sakka
@@ -45465,7 +45465,7 @@ talk Raynor Vanos |q The Library of Dusk/Find Raynor Vanos
 step
 goto 10.28,65.75
 talk Raynor Vanos |q The Library of Dusk/Talk to Raynor Vanos
-'Tell him _[Persuade] Look around. This isn't a normal library. It's affecting your mind._
+|tip Persuade him.
 step
 goto 10.28,65.75
 talk Raynor Vanos |q The Library of Dusk/Find Lady Clarisse Laurent |future
@@ -45572,7 +45572,6 @@ talk Sergeant Kamu |q Into the Woods/Talk to Sergeant Kamu
 step
 goto 23.03,66.41
 talk Faraniel
-'Tell her _Very well, I'll help you._
 turnin Into the Woods
 accept The Shadow's Embrace
 step
@@ -45581,7 +45580,7 @@ goto 28.16,67.16
 step
 goto 28.04,67.11
 talk Faraniel |q The Shadow's Embrace/Talk to Faraniel
-'Tell her _[Persuade] It sounds like just defeating the lamia champion should be sufficient._
+|tip Persaude her.
 step
 goto 28.75,72.49 |q The Shadow's Embrace/Defeat the Lamia Champion
 step
@@ -45802,18 +45801,18 @@ goto 20.17,40.88
 |tip Manually skip to the next step.
 step
 goto coldharbour_base 33.84,55.72
-click _Hastily Written Note_
+click Hastily Written Note
 accept Saving Stibbons
 step
 goto 34.82,55.07
-click _If I May Beseech You_ |q Saving Stibbons/Rescue Stibbons
+click If I May Beseech You |q Saving Stibbons/Rescue Stibbons
 |tip Manually skip to the next step.
 step
 goto 38.58,55.45
 wayshrine Shrouded Plains
 step
 goto 41.15,53.53
-click _Aba-Loria_ |q Saving Stibbons/Rescue Stibbons
+click Aba-Loria |q Saving Stibbons/Rescue Stibbons
 |tip Manually skip to the next step.
 step
 goto aba-loria_base 36.06,37.53 |q Saving Stibbons/Rescue Stibbons
@@ -45836,7 +45835,7 @@ step
 |tip Manually skip to the next step.
 step
 goto coldharbour_base 34.78,53.37
-click _Situation Becoming Urgent_ |q Saving Stibbons/Rescue Stibbons
+click Situation Becoming Urgent |q Saving Stibbons/Rescue Stibbons
 |tip Manually skip to the next step.
 step
 goto 33.00,53.24 |q Saving Stibbons/Rescue Stibbons
@@ -45844,7 +45843,7 @@ step
 goto 32.27,52.42 |q Saving Stibbons/Rescue Stibbons
 step
 goto 32.58,51.17
-click _Prompt Rescue is Imperative_ |q Saving Stibbons/Rescue Stibbons
+click Prompt Rescue is Imperative |q Saving Stibbons/Rescue Stibbons
 |tip Manually skip to the next step.
 step
 goto 31.76,52.14 |q Saving Stibbons/Rescue Stibbons
@@ -45897,19 +45896,19 @@ talk Zur |q The Soul-Meld Mage/Collect Zur's Notes and Tincture |future
 |tip Manually skip to the next step.
 step
 goto 57.56,75.72
-click _Pearl Tincture_ |q The Soul-Meld Mage/.*Gather Zur's Notes and Tincture.* |count 1
+click Pearl Tincture |q The Soul-Meld Mage/.*Gather Zur's Notes and Tincture.* |count 1
 step
 goto 60.13,75.57
-click _Transmutation of Living Creatures_ |q The Soul-Meld Mage/.*Gather Zur's Notes and Tincture.* |count 2
+click Transmutation of Living Creatures |q The Soul-Meld Mage/.*Gather Zur's Notes and Tincture.* |count 2
 step
 goto 59.48,76.77
-click _Transmutation Potion Recipe_ |q The Soul-Meld Mage/.*Gather Zur's Notes and Tincture.* |count 3
+click Transmutation Potion Recipe |q The Soul-Meld Mage/.*Gather Zur's Notes and Tincture.* |count 3
 step
 goto 60.69,77.22
 'Find the _Entrance_ |q The Soul-Meld Mage/Find the Entrance
 step
 goto 61.19,77.47
-click _Vile Laboratory_ |q The Soul-Meld Mage/Give Items to the Soul-Meld Mage
+'Open _Vile Laboratory_ |q The Soul-Meld Mage/Give Items to the Soul-Meld Mage
 |tip Manually skip to the next step.
 step
 goto thevilelaboratory_base 80.24,31.79
@@ -45922,52 +45921,52 @@ goto 79.70,34.01
 talk Gadris |q The Soul-Meld Mage/Get the Transmutation Potion
 step
 goto 82.77,32.26
-click _Rubble-Blocked Door_ |q The Soul-Meld Mage/Squeeze Through the Rubble
+click Rubble-Blocked Door |q The Soul-Meld Mage/Squeeze Through the Rubble
 step
 goto 94.53,37.34 |q The Soul-Meld Mage/Find the Metallurgy Workshop
 step
 goto 84.67,56.13
-click _Rubble-Blocked Passage_ |q The Soul-Meld Mage/Find the Metallurgy Workshop
+click Rubble-Blocked Passage |q The Soul-Meld Mage/Find the Metallurgy Workshop
 |tip Manually skip to the next step.
 step
 goto 79.07,55.48
 'Find the _Metallurgy Workshop_ |q The Soul-Meld Mage/Find the Metallurgy Workshop
 step
 goto 69.26,55.34
-click _The Notebook of Mage Gadris_ |q The Soul-Meld Mage/Read Gadris's Notebook
+click The Notebook of Mage Gadris |q The Soul-Meld Mage/Read Gadris's Notebook
 step
 goto 61.86,47.90
-click _Crystalline Essence Matrix_ |q The Soul-Meld Mage/Gather Crystalline Essence Matrix
+click Crystalline Essence Matrix |q The Soul-Meld Mage/Gather Crystalline Essence Matrix
 step
 goto 60.43,58.66
-click _Ebony Ore_ |q The Soul-Meld Mage/Gather Ebony Ore
+click Ebony Ore |q The Soul-Meld Mage/Gather Ebony Ore
 step
 goto 75.32,62.29
-click _Refined Void Salts_ |q The Soul-Meld Mage/Gather Refined Void Salts
+click Refined Void Salts |q The Soul-Meld Mage/Gather Refined Void Salts
 step
 goto 69.26,56.14
-click _Catalyst Notes_ |q The Soul-Meld Mage/Read Catalyst Note
+click Catalyst Notes |q The Soul-Meld Mage/Read Catalyst Note
 step
 goto 68.65,71.93
-click _Experiment Chamber_ |q The Soul-Meld Mage/Gather Corrupted Blood
+click Experiment Chamber |q The Soul-Meld Mage/Gather Corrupted Blood
 |tip Manually skip to the next step.
 step
 goto 68.65,86.65
 kill Phazkad
-click _Corrupted Blood_ |q The Soul-Meld Mage/Gather Corrupted Blood
+click Corrupted Blood |q The Soul-Meld Mage/Gather Corrupted Blood
 step
 goto 68.64,72.90
-click _Metallurgy Workshop_ |q The Soul-Meld Mage/Melt the Components
+click Metallurgy Workshop |q The Soul-Meld Mage/Melt the Components
 |tip Manually skip to the next step.
 step
 goto 61.16,62.69
-click _Forge Furnace_ |q The Soul-Meld Mage/Melt the Components
+click Forge Furnace |q The Soul-Meld Mage/Melt the Components
 step
 goto 64.24,63.78
-click _Weapon Anvil_ |q The Soul-Meld Mage/.*Craft the Antipodal Rods.*
+click Weapon Anvil |q The Soul-Meld Mage/.*Craft the Antipodal Rods.*
 step
 goto 68.59,43.97
-click _Vile Laboratory_ |q The Soul-Meld Mage/Meet the Soul-Meld Mage
+click Vile Laboratory |q The Soul-Meld Mage/Meet the Soul-Meld Mage
 |tip Manually skip to the next step.
 step
 goto 54.92,33.09 |q The Soul-Meld Mage/Meet the Soul-Meld Mage
@@ -45979,12 +45978,12 @@ goto 35.03,36.18
 talk Gadris |q The Soul-Meld Mage/Talk to the Soul-Meld Mage
 step
 goto 33.76,35.48
-click _Overseer's Atelier_ |q The Soul-Meld Mage/Find the Power Crystal
+click Overseer's Atelier |q The Soul-Meld Mage/Find the Power Crystal
 |tip Manually skip to the next step.
 step
 goto 22.00,35.47
 kill Overseer Xvarik
-click _Light of Meridia_ |q The Soul-Meld Mage/Find the Power Crystal
+click Light of Meridia |q The Soul-Meld Mage/Find the Power Crystal
 step
 goto 10.48,35.38
 'Find the _Dwarven Device_ |q The Soul-Meld Mage/Find the Dwarven Device
@@ -45993,32 +45992,32 @@ goto 9.44,35.50
 talk Zur |q The Soul-Meld Mage/Meet the Soul-Meld Mage
 step
 goto 5.90,35.44
-click _Dwarven Power Mechanism_ |q The Soul-Meld Mage/Place the Crystal
+click Dwarven Power Mechanism |q The Soul-Meld Mage/Place the Crystal
 step
 goto 8.31,33.94
-click _Right Pillar_ |q The Soul-Meld Mage/Insert the Right Antipodal Rod
+click Right Pillar |q The Soul-Meld Mage/Insert the Right Antipodal Rod
 step
 goto 8.39,36.81
-click _Left Pillar_ |q The Soul-Meld Mage/Insert the Left Antipodal Rod
+click Left Pillar |q The Soul-Meld Mage/Insert the Left Antipodal Rod
 step
 goto 8.93,36.48
-click _Left Pillar Lever_ |q The Soul-Meld Mage/Choose One Soul to Restore
+click Left Pillar Lever |q The Soul-Meld Mage/Choose One Soul to Restore
 step
 goto 9.28,36.13
 talk Gadris |q The Soul-Meld Mage/Talk to Gadris
 step
 goto 5.90,35.46
-click _Light of Meridia_ |q The Soul-Meld Mage/Take the Light of Meridia
+click Light of Meridia |q The Soul-Meld Mage/Take the Light of Meridia
 step
 goto 21.81,18.01
-click _Coldharbour_ |q The Soul-Meld Mage/Leave the Laboratory |future
+click Coldharbour |q The Soul-Meld Mage/Leave the Laboratory |future
 step
 goto coldharbour_base 59.60,77.90
 talk Gadris
 turnin The Soul-Meld Mage
 step
 goto 59.40,77.94
-click _Portal to the Hollow City_ |q Hall of Judgment/.*Destroy Elemental Crystals.* |count 1 |future
+click Portal to the Hollow City |q Hall of Judgment/.*Destroy Elemental Crystals.* |count 1 |future
 |tip Manually skip to the next step.
 step
 goto hollowcity_base 80.29,55.08 |q Hall of Judgment/.*Destroy Elemental Crystals.* |count 1 |future
@@ -46036,7 +46035,7 @@ goto 60.40,62.97 |q Hall of Judgment/.*Destroy Elemental Crystals.* |count 1
 step
 goto 60.54,61.29
 |tip Go upstairs in the tower.
-click _Fire Crystal_ |q Hall of Judgment/.*Destroy Elemental Crystals.* |count 1
+click Fire Crystal |q Hall of Judgment/.*Destroy Elemental Crystals.* |count 1
 step
 goto 62.10,61.19 |q Hall of Judgment/.*Destroy Elemental Crystals.* |count 2
 step
@@ -46044,13 +46043,13 @@ goto 61.37,59.91 |q Hall of Judgment/.*Destroy Elemental Crystals.* |count 2
 step
 goto 60.99,59.35
 kill Kyngogurth
-click _Daedric Coffer_ |q Hall of Judgment/Collect the Gate Key
+click Daedric Coffer |q Hall of Judgment/Collect the Gate Key
 step
 goto 62.10,61.25 |q Hall of Judgment/.*Destroy Elemental Crystals.* |count 2
 step
 goto 60.52,64.58
 |tip Go upstairs in the tower.
-click _Air Crystal_ |q Hall of Judgment/.*Destroy Elemental Crystals.* |count 2
+click Air Crystal |q Hall of Judgment/.*Destroy Elemental Crystals.* |count 2
 step
 goto 61.34,64.81
 |tip Leave the tower.
@@ -46059,43 +46058,43 @@ goto 61.34,64.81
 step
 goto 63.78,64.42
 |tip Go upstairs in the tower.
-click _Earth Crystal_ |q Hall of Judgment/.*Destroy Elemental Crystals.* |count 3
+click Earth Crystal |q Hall of Judgment/.*Destroy Elemental Crystals.* |count 3
 step
 goto 63.53,61.78
 |tip Leave the tower.
 talk Malkur Valos |q Hall of Judgment/Talk to Malkur Valos
 step
 goto 63.65,61.68
-click _Hall of Judgment_ |q Hall of Judgment/Enter the Hall of Judgement |future
+click Hall of Judgment |q Hall of Judgment/Enter the Hall of Judgement |future
 |tip Manually skip to the next step.
 step
 goto 65.27,60.39
-click _Holding Cells_ |q Hall of Judgment/Enter the Holding Cells
+click Holding Cells |q Hall of Judgment/Enter the Holding Cells
 step
 goto courtofcontempt_base 45.88,42.94
-click _Pack_ |q Hall of Judgment/Collect the Cage Key
+click Pack |q Hall of Judgment/Collect the Cage Key
 step
 goto 42.44,59.07
-click _Cage_ |q Hall of Judgment/Rescue Tarrami
+click Cage |q Hall of Judgment/Rescue Tarrami
 step
 goto 62.17,42.80
-click _Cage_ |q Hall of Judgment/Rescue Denthis Romori
+click Cage |q Hall of Judgment/Rescue Denthis Romori
 step
 goto 65.05,57.99
-click _Cage_ |q Hall of Judgment/Rescue Dithis Romori
+click Cage |q Hall of Judgment/Rescue Dithis Romori
 step
 goto 48.72,50.57
 talk Tarrami |q Hall of Judgment/Talk to Tarrami
 step
 goto 17.48,45.72
-click _Hall of Judgment_ |q Hall of Judgment/Meet the Mages Outside
+click Hall of Judgment |q Hall of Judgment/Meet the Mages Outside
 step
 goto coldharbour_base 64.33,61.05
 |tip Kill the waves of enemies that attack you.
 kill Judge Xiven |q Hall of Judgment/Defend the Mages
 step
 goto 63.71,61.61
-click _Court of Contempt_ |q Hall of Judgment/Exit the Hall of Judgment
+click Court of Contempt |q Hall of Judgment/Exit the Hall of Judgment
 step
 goto 62.28,64.68 |q Hall of Judgment/Meet the Mages Outside
 step
@@ -46106,11 +46105,11 @@ goto 62.19,65.85
 talk Malkur Valos
 turnin Hall of Judgment
 step
-goto 58.68,64.44_ |lorebook The Lightless Oubliette/1/29/7
+goto 58.68,64.44 |lorebook The Lightless Oubliette/1/29/7
 step
-goto 58.00,59.15_ |lorebook The Lightless Oubliette/1/29/7
+goto 58.00,59.15 |lorebook The Lightless Oubliette/1/29/7
 step
-goto 66.96,56.08_ |lorebook The Lightless Oubliette/1/29/7
+goto 66.96,56.08 |lorebook The Lightless Oubliette/1/29/7
 step
 goto 67.55,57.21
 'Examine _The Lightless Oubliette_ |lorebook The Lightless Oubliette/1/29/7
@@ -46141,15 +46140,15 @@ step
 goto 59.29,28.20 |q A Misplaced Pendant |future |tip Jump down here |q The Endless War/.*Aid the Mages Guild Members.* |count 1 |future
 step
 goto 44.03,35.21
-click _Pendant_
+click Pendant
 accept A Misplaced Pendant
 step
 goto 69.99,9.67
-click _Coldharbour_ |q The Endless War/.*Aid the Mages Guild Members.* |count 1 |future
+click Coldharbour |q The Endless War/.*Aid the Mages Guild Members.* |count 1 |future
 |tip Manually skip to the next step.
 step
 goto coldharbour_base 65.47,55.45
-click _Portal to the Cliffs of Failure_ |q The Endless War/.*Aid the Mages Guild Members.* |count 1 |future
+click Portal to the Cliffs of Failure |q The Endless War/.*Aid the Mages Guild Members.* |count 1 |future
 |tip Manually skip to the next step.
 step
 goto 66.98,52.81
@@ -46157,11 +46156,11 @@ talk The Observer
 accept The Endless War
 step
 goto 66.53,52.47
-click _Portal to the Battlegrounds Antechamber_ |q The Endless War/.*Aid the Mages Guild Members.* |count 1
+click Portal to the Battlegrounds Antechamber |q The Endless War/.*Aid the Mages Guild Members.* |count 1
 |tip Manually skip to the next step.
 step
 goto 68.93,51.01
-click _Cliffs of Failure_ |q The Endless War/.*Aid the Mages Guild Members.* |count 1
+click Cliffs of Failure |q The Endless War/.*Aid the Mages Guild Members.* |count 1
 |tip Manually skip to the next step.
 step
 goto 69.47,51.11
@@ -46170,7 +46169,7 @@ talk Juline Ginis |q The Endless War/.*Aid the Mages Guild Members.* |count 1
 step
 goto 69.09,52.66
 kill Heritance Soldiers
-'Plant _Seeds on the Dead_ |q The Endless War/.*Aid the Mages Guild Members.* |count 1
+'Plant Seeds on the Dead |q The Endless War/.*Aid the Mages Guild Members.* |count 1
 |tip Manually skip to the next step.
 step
 goto 69.44,51.17
@@ -46185,7 +46184,7 @@ talk Thallik Wormfather |q The Endless War/.*Aid the Mages Guild Members.* |coun
 |tip Manually skip to the next step.
 step
 goto 68.37,52.93
-click _Rune Circle_ |q The Endless War/.*Aid the Mages Guild Members.* |count 2
+click Rune Circle |q The Endless War/.*Aid the Mages Guild Members.* |count 2
 |tip Manually skip to the next step.
 step
 goto 67.52,53.17
@@ -46206,15 +46205,15 @@ talk Shadow Court Jester |q The Endless War/.*Aid the Mages Guild Members.* |cou
 |tip Manually skip to the next step.
 step
 goto 69.80,53.83
-click _Piece of Broken Mask_ |q The Endless War/.*Aid the Mages Guild Members.* |count 3
+click Piece of Broken Mask |q The Endless War/.*Aid the Mages Guild Members.* |count 3
 |tip Manually skip to the next step.
 step
 goto 67.41,53.26
-click _Piece of Broken Mask_ |q The Endless War/.*Aid the Mages Guild Members.* |count 3
+click Piece of Broken Mask |q The Endless War/.*Aid the Mages Guild Members.* |count 3
 |tip Manually skip to the next step.
 step
 goto 66.79,51.82
-click _Piece of Broken Mask_ |q The Endless War/.*Aid the Mages Guild Members.* |count 3
+click Piece of Broken Mask |q The Endless War/.*Aid the Mages Guild Members.* |count 3
 |tip Manually skip to the next step.
 step
 goto 68.89,51.73 |q The Endless War/.*Aid the Mages Guild Members.* |count 3
@@ -46223,11 +46222,11 @@ goto 68.81,51.19
 talk High Kinlady Estre |q The Endless War/.*Aid the Mages Guild Members.* |count 3
 step
 goto 70.10,50.50
-click _The Battlegrounds Antechamber_ |q The Endless War/Talk to the Observer
+click The Battlegrounds Antechamber |q The Endless War/Talk to the Observer
 |tip Manually skip to the next step.
 step
 goto 66.88,50.89
-click _Portal to the Observer's Watch_ |q The Endless War/Talk to the Observer
+click Portal to the Observer's Watch |q The Endless War/Talk to the Observer
 |tip Manually skip to the next step.
 step
 goto 66.97,52.79
@@ -46238,11 +46237,11 @@ turnin The Endless War
 accept A Thorn in Your Side
 step
 goto 66.48,52.46
-click _Portal to the Battlegrounds Antechamber_ |q A Thorn in Your Side/Talk to Angof the Undying
+click Portal to the Battlegrounds Antechamber |q A Thorn in Your Side/Talk to Angof the Undying
 |tip Manually skip to the next step.
 step
 goto 68.95,51.00
-click _Cliffs of Failure_ |q A Thorn in Your Side/Talk to Angof the Undying
+click Cliffs of Failure |q A Thorn in Your Side/Talk to Angof the Undying
 |tip Manually skip to the next step.
 step
 goto 67.06,51.96 |q A Thorn in Your Side/Talk to Angof the Undying
@@ -46269,13 +46268,13 @@ step
 goto 69.07,51.92 |q A Thorn in Your Side/Return to the Cave Entrance
 step
 goto 69.94,50.67
-'Return to the _Cave Entrance_ |q A Thorn in Your Side/Return to the Cave Entrance
+'Return to the Cave Entrance |q A Thorn in Your Side/Return to the Cave Entrance
 step
 goto 69.95,50.61
 talk Juline Ginis |q A Thorn in Your Side/Talk to Juline Ginis
 step
 goto 70.10,50.50
-click _The Battlegrounds Antechamber_ |q A Thorn in Your Side/Enter the Observer's Watch
+click The Battlegrounds Antechamber |q A Thorn in Your Side/Enter the Observer's Watch
 |tip Manually skip to the next step.
 step
 goto 68.24,50.99
@@ -46285,14 +46284,14 @@ goto 67.59,50.89
 kill Watchers |q A Thorn in Your Side/Survive the Observer's Challenge
 step
 goto 66.89,50.88
-click _Portal to the Observer's Watch_ |q A Thorn in Your Side/Defeat the Observer
+click Portal to the Observer's Watch |q A Thorn in Your Side/Defeat the Observer
 |tip Manually skip to the next step.
 step
 goto 67.33,52.76
 kill The Observer |q A Thorn in Your Side/Defeat the Observer
 step
 goto 67.35,51.90
-click _Portal to Coldharbour_ |q A Thorn in Your Side/Find the Mages
+click Portal to Coldharbour |q A Thorn in Your Side/Find the Mages
 step
 goto 68.39,52.34
 talk The Observer |q A Thorn in Your Side/Talk to the Observer
@@ -46319,7 +46318,7 @@ goto 67.62,70.02
 'Examine _The Black Forge_ |lorebook The Black Forge/1/29/6
 step
 goto 68.39,72.44
-click _Vault of Haman Forgefire_ |q Special Blend |future
+click Vault of Haman Forgefire |q Special Blend |future
 |tip Manually skip to the next step.
 step
 goto vaultofhamanforgefire_base 32.04,46.00 |q Special Blend |future
@@ -46340,11 +46339,11 @@ goto 67.72,66.72
 kill Haman Forgefire
 step
 goto 67.92,72.44
-click _Vault of Haman_ |q Special Blend |future
+click Vault of Haman |q Special Blend |future
 |tip Manually skip to the next step.
 step
 goto 36.52,90.48
-click _Coldharbour_ |q Special Blend |future
+click Coldharbour |q Special Blend |future
 |tip Manually skip to the next step.
 step
 goto coldharbour_base 68.22,76.34 |q Special Blend |future
@@ -46354,7 +46353,7 @@ talk Gamirth
 accept Special Blend
 step
 goto 70.19,78.65
-click _Gamirth's Final Message_ |q Special Blend/Read the Note
+click Gamirth's Final Message |q Special Blend/Read the Note
 step
 goto 70.66,79.13
 |tip Inside the building.
@@ -46370,11 +46369,11 @@ goto 76.07,82.76
 'Locate _Kyne's Shrine_ |q Special Blend/Locate Kyne's Shrine
 step
 goto 75.27,83.29
-click _Runestone of Kyne_ |q Special Blend/Find a Runestone of Kyne
+click Runestone of Kyne |q Special Blend/Find a Runestone of Kyne
 step
 goto 74.81,79.63
 |tip They look like bunches of small red flowers at the base of old trees all around this area.
-click _Kyne's Tears_ |q Special Blend/.*Gather Kyne's Tears.*
+click Kyne's Tears |q Special Blend/.*Gather Kyne's Tears.*
 step
 goto 73.01,81.64 |q Special Blend/Give Kyne's Tears to Nelhilda
 step
@@ -46384,17 +46383,17 @@ talk Nelhilda |q Special Blend/Give Kyne's Tears to Nelhilda
 step
 goto 70.42,79.53
 |tip Watch the dialogue.
-click _Kyne's Purifying Potion_ |q Special Blend/Take the Purifying Potion
+click Kyne's Purifying Potion |q Special Blend/Take the Purifying Potion
 step
 goto 70.78,79.26
 |tip Go downstairs.
-click _Everfull Special Blend_ |q Special Blend/.*Purify the Casks of Special Blend.* |count 1
+click Everfull Special Blend |q Special Blend/.*Purify the Casks of Special Blend.* |count 1
 step
 goto 70.36,79.26
-click _Everfull Special Blend_ |q Special Blend/.*Purify the Casks of Special Blend.* |count 2
+click Everfull Special Blend |q Special Blend/.*Purify the Casks of Special Blend.* |count 2
 step
 goto 70.35,79.53
-click _Everfull Special Blend_ |q Special Blend/.*Purify the Casks of Special Blend.* |count 3
+click Everfull Special Blend |q Special Blend/.*Purify the Casks of Special Blend.* |count 3
 step
 goto 70.66,79.13
 talk Bernt the Brittle |q Special Blend/Talk to Bernt the Brittle
@@ -46412,16 +46411,16 @@ talk Hautt Silvertongue |q Special Blend/Find Hridi's Dueling Daggers
 step
 goto 71.09,77.40
 |tip Inside the building.
-click _Urn_ |q Special Blend/Find Hautt's Lute
+click Urn |q Special Blend/Find Hautt's Lute
 step
 goto 73.63,76.82
 |tip Inside the building.
-click _Old Chest_ |q Special Blend/Find Hridi's Dueling Daggers
+click Old Chest |q Special Blend/Find Hridi's Dueling Daggers
 step
 goto 72.03,79.96 |q Special Blend/Return to the Everfull Flagon
 step
 goto 70.45,79.13
-click _The Everfull Flagon_ |q Special Blend/Return to the Everfull Flagon
+click The Everfull Flagon |q Special Blend/Return to the Everfull Flagon
 step
 goto 70.37,79.50
 |tip Go upstairs.
@@ -46437,23 +46436,23 @@ goto 68.36,79.75
 'Find the _Thane's Lair_ |q Special Blend/Find the Thane's Lair
 step
 goto 68.44,79.75
-click _Thane's Lair_ |q Special Blend/Defeat the Thane
+click Thane's Lair |q Special Blend/Defeat the Thane
 |tip Manually skip to the next step.
 step
 goto theeverfullflagon_base 52.60,77.16
 kill Thane Fellrig |q Special Blend/Defeat the Thane
 step
 goto 53.66,89.04
-click _Soul Keeper_ |q Special Blend/Set the Villagers' Souls Free
+click Soul Keeper |q Special Blend/Set the Villagers' Souls Free
 step
 goto 41.86,5.95
-click _Coldharbour_ |q Special Blend/Return to the Everfull Flagon
+click Coldharbour |q Special Blend/Return to the Everfull Flagon
 |tip Manually skip to the next step.
 step
 goto coldharbour_base 68.24,78.37 |q Special Blend/Return to the Everfull Flagon
 step
 goto 70.45,79.13
-click _The Everfull Flagon_ |q Special Blend/Return to the Everfull Flagon
+click The Everfull Flagon |q Special Blend/Return to the Everfull Flagon
 step
 goto 70.67,79.23
 |tip Go upstairs.
@@ -46514,19 +46513,19 @@ talk Galerion's Stamina |q Vanus Unleashed/Talk to Galerion's Essence
 step
 goto 41.84,57.46
 talk Hillaz |q Vanus Unleashed/.*Collect Galerion's Stamina.* |count 1
-'Tell him _[Intimidate] Give me the energy or I'll rip it from you._
+|tip Intimidate him.
 step
 goto 40.62,55.55
 talk Midura |q Vanus Unleashed/.*Collect Galerion's Stamina.* |count 2
-'Tell her _[Intimidate] If you don't return the energy. I'll give you a terrible beating._
+|tip Intimidate her.
 step
 goto 39.31,55.74
 talk Talian |q Vanus Unleashed/.*Collect Galerion's Stamina.* |count 3
-'Tell him _[Persuade] This won't hurt you. If you give me the energy, it will help._
+|tip Persaude him.
 step
 goto 37.82,57.26
 talk Guzash gra-Bar |q Vanus Unleashed/.*Collect Galerion's Stamina.* |count 4
-'Tell her _[Persuade] If you give it to me, I can use it to destroy this forge._
+|tip Persaude her.
 step
 goto 39.34,45.34
 kill Taskmaster Vyrotesn
@@ -46914,7 +46913,7 @@ talk Virgar the Red
 turnin The Harvest Heart
 step
 goto 45.31,50.78
-click _Mal Sorra's Tomb_
+click Mal Sorra's Tomb
 |tip Manually skip to the next step.
 step
 goto malsorrastomb_base 21.81,35.15
@@ -46926,7 +46925,7 @@ goto 36.60,41.27
 |tip Manually skip to the next step.
 step
 goto 57.26,50.66
-click _Nettira's Journal_
+click Nettira's Journal
 accept News of Fallen Kin
 step
 goto 78.25,37.08
@@ -46939,7 +46938,7 @@ step
 goto 32.56,33.86 |q News of Fallen Kin/Talk to Grundskar
 step
 goto 4.85,48.34
-click _Coldharbour_ |q News of Fallen Kin/Talk to Grundskar
+click Coldharbour |q News of Fallen Kin/Talk to Grundskar
 |tip Manually skip to the next step.
 step
 goto coldharbour_base 43.77,45.42
@@ -46957,7 +46956,7 @@ goto 42.43,42.89
 wayshrine Manor of Revelry
 step
 goto 42.19,41.74
-click _The Manor of Revelry Grounds_ |q What the Heart Wants/Enter the Manor |future
+click The Manor of Revelry Grounds |q What the Heart Wants/Enter the Manor |future
 |tip Manually skip to the next step.
 step
 goto themanorofrevelry_base 40.46,47.19
@@ -46968,7 +46967,7 @@ talk Fatahala |q What the Heart Wants/Meet Stibbons at the Banquet
 |tip Manually skip to the next step.
 step
 goto 40.42,25.38
-click _Meringue Tart_ |q What the Heart Wants/Meet Stibbons at the Banquet
+click Meringue Tart |q What the Heart Wants/Meet Stibbons at the Banquet
 |tip Manually skip to the next step.
 step
 goto 40.42,25.38
@@ -46990,7 +46989,7 @@ goto 76.50,58.70
 talk Fatahala |q What the Heart Wants/Talk to Fatahala
 step
 goto 81.45,49.65
-click _Wash Basin_ |q What the Heart Wants/Use the Basin
+click Wash Basin |q What the Heart Wants/Use the Basin
 step
 goto 76.86,48.22
 talk Fatahala |q What the Heart Wants/Talk to Fatahala
@@ -46998,67 +46997,67 @@ step
 goto 54.10,78.14 |q What the Heart Wants/Enter the Manor House
 step
 goto 49.38,47.68
-click _The Manor of Revelry_ |q What the Heart Wants/Enter the Manor House
+click The Manor of Revelry |q What the Heart Wants/Enter the Manor House
 step
 goto manorofrevelryint02_base 62.31,52.72
-click _Storage Room_ |q What the Heart Wants/Find Stibbons
+click Storage Room |q What the Heart Wants/Find Stibbons
 |tip Upstairs
 step
 goto manorofrevelryint05_base 28.04,56.36
-click _The Manor of Revelry_ |q What the Heart Wants/Collect the Cage Key
+click The Manor of Revelry |q What the Heart Wants/Collect the Cage Key
 |tip Manually skip to the next step.
 step
 goto manorofrevelryint01_base 74.56,55.63
 kill Shayaifa
-click _Coffer_ |q What the Heart Wants/Collect the Cage Key
+click Coffer |q What the Heart Wants/Collect the Cage Key
 |tip downstairs.
 step
 goto manorofrevelryint02_base 62.35,52.60
-click _Storage Room_ |q What the Heart Wants/Free Stibbons
+click Storage Room |q What the Heart Wants/Free Stibbons
 |tip Upstairs
 |tip Manually skip to the next step.
 step
 goto manorofrevelryint05_base 55.51,51.13
-click _Cage_ |q What the Heart Wants/Free Stibbons
+click Cage |q What the Heart Wants/Free Stibbons
 step
 goto 53.53,58.55
 talk Stibbons |q What the Heart Wants/Talk to Stibbons
 step
 goto 28.04,56.29
-click _The Manor of Revelry_ |q What the Heart Wants/Collect Lady Laurent's Emerald
+click The Manor of Revelry |q What the Heart Wants/Collect Lady Laurent's Emerald
 |tip Manually skip to the next step.
 step
 goto manorofrevelryint01_base 69.11,45.39
-click _Festivity Chamber_ |q What the Heart Wants/Collect Lady Laurent's Emerald
+click Festivity Chamber |q What the Heart Wants/Collect Lady Laurent's Emerald
 |tip Downstairs.
 |tip Manually skip to the next step.
 step
 goto manorofrevelryint03_base 42.75,34.81
 |tip Go downstairs.
 kill Nuzara
-click _Coffer_ |q What the Heart Wants/Collect Lady Laurent's Emerald
+click Coffer |q What the Heart Wants/Collect Lady Laurent's Emerald
 step
 goto 47.14,82.49
 |tip Go upstairs.
-click _The Manor of Revelry_ |q What the Heart Wants/Collect Lady Laurent's Diamond
+click The Manor of Revelry |q What the Heart Wants/Collect Lady Laurent's Diamond
 |tip Manually skip to the next step.
 step
 goto manorofrevelryint01_base 69.40,60.22
-click _Debauchery Chamber_ |q What the Heart Wants/Collect Lady Laurent's Diamond
+click Debauchery Chamber |q What the Heart Wants/Collect Lady Laurent's Diamond
 |tip Manually skip to the next step.
 step
 goto manorofrevelryint04_base 36.04,84.73
 |tip Go downstairs.
 kill Rayyaima
-click _Coffer_ |q What the Heart Wants/Collect Lady Laurent's Diamond
+click Coffer |q What the Heart Wants/Collect Lady Laurent's Diamond
 step
 goto 35.50,30.70
 |tip Go upstairs.
-click _The Manor of Revelry_ |q What the Heart Wants/Talk to Stibbons
+click The Manor of Revelry |q What the Heart Wants/Talk to Stibbons
 |tip Manually skip to the next step.
 step
 goto manorofrevelryint01_base 14.42,51.66
-click _The Manor of Revelry Grounds_ |q What the Heart Wants/Talk to Stibbons
+click The Manor of Revelry Grounds |q What the Heart Wants/Talk to Stibbons
 |tip Manually skip to the next step.
 step
 goto themanorofrevelry_base 54.10,78.14 |q What the Heart Wants/Talk to Stibbons
@@ -47067,14 +47066,14 @@ goto 86.69,70.78
 talk Stibbons |q What the Heart Wants/Talk to Stibbons
 step
 goto 88.26,70.93
-click _The Manor of Revelry Cave_ |q What the Heart Wants/Reach the Far Side of the Cave
+click The Manor of Revelry Cave |q What the Heart Wants/Reach the Far Side of the Cave
 |tip Manually skip to the next step.
 step
 goto manorofrevelrycave_base 42.88,27.18
 'Reach the _Far Side of the Cave_ |q What the Heart Wants/Reach the Far Side of the Cave
 step
 goto 42.88,27.18
-click _Coldharbour_ |q What the Heart Wants/Leave the Manor of Revelry |future
+click Coldharbour |q What the Heart Wants/Leave the Manor of Revelry |future
 |tip Manually skip to the next step.
 step
 goto coldharbour_base 43.59,48.03
@@ -47108,7 +47107,7 @@ goto 61.04,41.14
 kill the waves of enemies that attack you |q A Graveyard of Ships/Protect First Mate Jalan
 step
 goto 61.04,41.16
-click _The Winsome Lass_
+click The Winsome Lass
 'Follow _First Mate Jalan_ |q A Graveyard of Ships/Follow First Mate Jalan
 step
 goto 60.99,41.32
@@ -47116,7 +47115,7 @@ kill First Mate Jalan |q A Graveyard of Ships/Defeat First Mate Jalan
 step
 goto 63.67,37.94
 |tip Leave the ship.
-click _Wreck of the Bonnie Spriggan_ |q A Graveyard of Ships/Find One-Eye
+click Wreck of the Bonnie Spriggan |q A Graveyard of Ships/Find One-Eye
 step
 goto 63.58,38.02
 talk Captain One-Eye
@@ -47134,7 +47133,7 @@ goto 63.47,37.96
 talk Captain One-Eye |q Between Blood and Bone/Talk to Captain One-Eye
 step
 goto 66.05,37.58
-click _The Wailing Maw_
+click The Wailing Maw
 |tip Manually skip to the next step.
 step
 goto wailingmaw_base 24.58,19.52
@@ -47156,7 +47155,7 @@ step
 goto 61.05,56.84 |q The Anguish Gem/Destroy the Anguish Gem
 step
 goto 65.39,29.82
-click _Anguish Gem_ |q The Anguish Gem/Destroy the Anguish Gem
+click Anguish Gem |q The Anguish Gem/Destroy the Anguish Gem
 step
 goto 67.53,36.51 |tip Drop down here.
 step
@@ -47166,7 +47165,7 @@ step
 goto 47.50,09.28 |q The Anguish Gem/Talk to Dralnas Moryon
 step
 goto 37.77,12.35
-click _The Wailing Maw_ |q The Anguish Gem/Talk to Dralnas Moryon
+click The Wailing Maw |q The Anguish Gem/Talk to Dralnas Moryon
 |tip Manually skip to the next step.
 step
 goto 25.00,19.67
@@ -47174,7 +47173,7 @@ talk Dralnas Moryon
 turnin The Anguish Gem
 step
 goto 22.77,13.89
-click _Coldharbour_ |q Between Blood and Bone/Enter the Golden Era's Hold
+click Coldharbour |q Between Blood and Bone/Enter the Golden Era's Hold
 |tip Manually skip to the next step.
 step
 goto coldharbour_base 63.43,38.67 |q Between Blood and Bone/Enter the Golden Era's Hold
@@ -47186,17 +47185,17 @@ step
 goto 62.44,45.02 |q Between Blood and Bone/Enter the Golden Era's Hold
 step
 goto 62.95,44.32
-click _Golden Era_ |q Between Blood and Bone/Enter the Golden Era's Hold
+click Golden Era |q Between Blood and Bone/Enter the Golden Era's Hold
 step
 goto 61.99,43.70
-click _Journal of Tsona-Ei, Part Four_ |q Between Blood and Bone/Find the Journal
+click Journal of Tsona-Ei, Part Four |q Between Blood and Bone/Find the Journal
 step
 goto 62.37,44.02
 talk Captain One-Eye |q Between Blood and Bone/Talk to Captain One-Eye
 step
 goto 63.06,44.40
 |tip Go through the door.
-click _Coldharbour_ |q Between Blood and Bone/Enter the Tunnel
+click Coldharbour |q Between Blood and Bone/Enter the Tunnel
 |tip Manually skip to the next step.
 step
 goto 64.77,45.00
@@ -47214,19 +47213,19 @@ goto 64.77,45.00
 talk Bosun Bones |q Old Bones/Talk to Bosun Bones
 step
 goto 64.79,44.91
-click _Ground_ |q Old Bones/Place Bones
+click Ground |q Old Bones/Place Bones
 step
 goto 64.82,44.90
 talk Bosun Bones
 turnin Old Bones
 step
 goto 65.04,44.60
-click _Coral Tower Tunnel_ |q Between Blood and Bone/Enter the Tunnel
+click Coral Tower Tunnel |q Between Blood and Bone/Enter the Tunnel
 step
 goto thelostfleet_base 77.97,47.28 |q Between Blood and Bone/Go to the Coral Tower
 step
 goto 33.64,25.46
-click _Coldharbour_ |q Between Blood and Bone/Go to the Coral Tower
+click Coldharbour |q Between Blood and Bone/Go to the Coral Tower
 |tip Manually skip to the next step.
 step
 goto coldharbour_base 67.58,40.35
