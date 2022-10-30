@@ -45559,7 +45559,6 @@ goto 30.45,65.42
 'Follow the _Shadow Runner_ |q Into the Woods/Follow a Shadow Runner
 |tip Manually skip to the next step.
 step
-step
 goto 20.37,62.87
 'Use _Skyshard_ |q Into the Woods/Talk to Sergeant Kamu
 |tip Manually skip to the next step.

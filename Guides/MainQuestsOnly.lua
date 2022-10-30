@@ -261,7 +261,7 @@ goto 76.74,54.20
 |tip Manually skip to the next step.
 step
 goto templeofthemourningspring_base 19.73,50.80
-|tip Far left, 3rd, 4thm and 2nd.
+|tip Far left, 3rd, 4th and 2nd.
 'Activate _New Moons Stone_
 'Activate _Waxing Moons Stone_
 'Activate _Full Moons Stone_
@@ -298,7 +298,6 @@ talk Rurelion |q Tears of the Two Moons/Talk to Rurelion
 step
 goto 64.59,49.37
 talk Gathwen |q Tears of the Two Moons/Talk to Gathwen
-'Tell her _I need to hear Rurelion's thoughts before making a decision._
 step
 goto 65.01,48.63
 talk Rurelion |q Tears of the Two Moons/Let Uldor Claim Rurelion |or
@@ -306,21 +305,21 @@ talk Rurelion |q Tears of the Two Moons/Let Uldor Claim Rurelion |or
 talk Gathwen |q Tears of the Two Moons/Let Uldor Claim Gathwen |or
 step
 goto 71.24,48.86
-'Open Uldor's Tomb |q Tears of the Two Moons/Seal Uldor's Tomb
+'Open _Uldor's Tomb_ |q Tears of the Two Moons/Seal Uldor's Tomb
 |tip Manually skip to the next step.
 step
 goto 80.86,39.55
 |tip Watch the dialogue
-'Place Tears of the Two Moons Pedestal |q Tears of the Two Moons/New Moons Pedestal |future
+'Place _Tears of the Two Moons Pedestal_ |q Tears of the Two Moons/New Moons Pedestal |future
 step
 goto 89.70,39.49
-'Place Tears of the Two Moons Pedestal |q Tears of the Two Moons/Crescent Moons Pedestal
+'Place _Tears of the Two Moons Pedestal_ |q Tears of the Two Moons/Crescent Moons Pedestal
 step
 goto 89.70,58.10
-'Place Tears of the Two Moons Pedestal |q Tears of the Two Moons/Gibbous Moons Pedestal
+'Place _Tears of the Two Moons Pedestal_ |q Tears of the Two Moons/Gibbous Moons Pedestal
 step
 goto 80.66,58.18
-'Place Tears of the Two Moons Pedestal |q Tears of the Two Moons/Full Moons Pedestal
+'Place _Tears of the Two Moons Pedestal_ |q Tears of the Two Moons/Full Moons Pedestal
 step
 goto 85.17,49.58
 talk Rurelion |q Tears of the Two Moons/Talk to Rurelion |future |or
@@ -328,7 +327,6 @@ talk Rurelion |q Tears of the Two Moons/Talk to Rurelion |future |or
 talk Gathwen |q Tears of the Two Moons/Talk to Gathwen |future |or
 step
 goto 65.57,48.88
-|tip Leave Uldor's Tomb.
 talk Gathwen or Rurelion
 turnin Tears of the Two Moons
 step
@@ -343,27 +341,15 @@ talk Sergeant Firion
 accept Cast Adrift
 step
 goto 33.79,72.03
-|tip They look like small glass bottles on the ground.
-'Take _Torchbug Treacle_ |q Cast Adrift/.*Gather Torchbug Treacle for Injured Marines |future
-|tip Manually skip to the next step.
-step
-goto 33.79,72.03
+|tip Take Torchbug Treacle. They look like small glass bottles on the ground.
 talk Edhelas |q Cast Adrift/Find Edhelas
 step
 goto 31.13,67.64
-|tip They look like small glass bottles on the ground.
-'Take _Torchbug Treacle_ |q Cast Adrift/.*Gather Torchbug Treacle for Injured Marines |future
-|tip Manually skip to the next step.
-step
-goto 31.13,67.64
+|tip Take Torchbug Treacle. They look like small glass bottles on the ground.
 talk Nistel |q Cast Adrift/Find Nistel
 step
 goto 26.34,63.19
-|tip They look like small glass bottles on the ground.
-'Take _Torchbug Treacle_ |q Cast Adrift/.*Gather Torchbug Treacle for Injured Marines |future
-|tip Manually skip to the next step.
-step
-goto 26.34,63.19
+|tip Take Torchbug Treacle. They look like small glass bottles on the ground.
 talk Onglorn |q Cast Adrift/Find Onglorn
 step
 goto 31.75,55.87 |q Cast Adrift/Go to the Cave
@@ -661,6 +647,7 @@ description The second largest of the Summerset Isles, Auridon has always served
 step
 goto vulkhelguard_base 60.21,66.53
 talk The Prophet |q The Harborage/Talk to the Prophet
+|only Aldmeri Dominion
 step
 goto 60.21,66.53
 'If your are level 10 or higher use Cyrodiil Introduction guide and and complete it to gain a healing spell and 30% gallop mount speed through the Assault War/Alliance Skill Line. |q Welcome to Cyrodiil |future 
@@ -6649,7 +6636,7 @@ kill Tazzak
 'Take _Crystal_ |q The Mad God's Bargain/Close the Southeast Portal
 |only Aldmeri Dominion
 step
-goto 82.00,60.35
+goto 82.00,60.35 |q The Mad God's Bargain/Close the Northeast Portal
 step
 goto 69.35,25.80
 kill Watcher
@@ -8460,7 +8447,7 @@ goto glenumbra_base 33.54,54.36
 'Open _South Hut Portal Cave_ |q Reclaiming the Elements/.*Open Portals.* |count 2
 |tip Manually skip to the next step.
 step
-goto south_hut_portal_cave_base 72.42,69.54
+goto south_hut_portal_cave_base 72.42,69.54 |q Reclaiming the Elements/.*Open Portals.* |count 2
 step
 goto 68.26,27.85
 'Use _South Portal Stone_ |q Reclaiming the Elements/.*Open Portals.* |count 2
@@ -8813,9 +8800,9 @@ step
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto glenumbra_base 36.80,58.41 |lorebook The Werewolf's Hide/1/1/4
+goto glenumbra_base 36.80,58.41 |q Werewolves to the North/Talk to Chamberlain Weller
 step
-goto 31.58,60.72 |lorebook The Werewolf's Hide/1/1/4
+goto 31.58,60.72 |q Werewolves to the North/Talk to Chamberlain Weller
 step
 goto 24.09,60.00
 'Examine _The Werewolf's Hide_ |lorebook The Werewolf's Hide/1/1/4
@@ -12451,7 +12438,7 @@ goto sentinel_base 17.93,45.44
 talk Guard Captain Zafira
 turnin Risen From the Depths
 step
-goto 22.18,54.08 |q Monkey Magic |future
+goto 22.18,54.08 |q Rise of the Dead/Talk to King Fahara'jad
 step
 goto 27.92,58.33
 |tip Inside the Fighters Guild.
@@ -20434,7 +20421,7 @@ goto 45.83,38.41
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
-goto eastmarch_base 35.87,44.64
+goto eastmarch_base 35.87,44.64 |q Strange Allies |future
 step
 goto 32.21,45.23
 talk Aspera Giant-Friend
@@ -21643,7 +21630,7 @@ talk Worm Nightfrenzy |q Dangerous Union/Interrogate Cultist |or |future
 '_OR_
 talk Memory of Stral |q Dangerous Union/Talk to the Memory of Stral |or |future
 step
-goto 43.80,31.77
+goto 43.80,31.77 |q Dangerous Union/Talk to Gift of the Worm
 step
 goto 43.63,30.84
 talk Dajaheel
@@ -23236,6 +23223,8 @@ step
 goto 40.04,58.93
 talk Lyranth |q Truth, Lies, and Prisoners/Talk to Lyranth
 step
+goto 40.53,58.69 |q Truth, Lies, and Prisoners/Kill Ifriz
+step
 goto 41.38,60.50
 |tip Follow the path up.
 kill Ifriz the Unraveler |q Truth, Lies, and Prisoners/Kill Ifriz
@@ -23393,13 +23382,7 @@ goto 29.36,65.02
 'Cross the _Ayleid Bridge_ |q Into the Woods/Follow a Shadow Runner
 |tip Manually skip to the next step.
 step
-goto 30.45,65.42
-|tip Keep an Eye on Lighting the Way buff.
-'Follow the _Shadow Runner_ |q Into the Woods/Follow a Shadow Runner
-|tip Manually skip to the next step.
-step
-goto 22.20,65.10
-'Follow the _Shadow Runner_ |q Into the Woods/Follow a Shadow Runner
+goto 22.20,65.10 |q Into the Woods/Follow a Shadow Runner
 step
 goto 23.86,61.73
 wayshrine Moonless Walk
@@ -23566,7 +23549,7 @@ goto 44.99,56.65
 |tip Manually skip to the next step.
 step
 goto lightlesscell_base 15.32,16.27
-'Take _Light of Meridia_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Place _Light of Meridia_ |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 17.33,13.88
@@ -23594,7 +23577,7 @@ goto 17.69,20.87
 |tip Manually skip to the next step.
 step
 goto 27.41,25.76
-'Take _Light of Meridia_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Place _Light of Meridia_ |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 27.67,20.94
@@ -24019,10 +24002,6 @@ goto 50.85,46.78
 'Locate the _Harvest Heart_ |q The Harvest Heart/Locate the Harvest Heart
 step
 goto 51.06,46.69
-talk Virgar the Red |q The Harvest Heart/Talk to Virgar the Red
-step
-talk Vanus Galerion |q The Harvest Heart/Support Vanus Galerion
-'_OR_
 talk Virgar the Red |q The Harvest Heart/Support Virgar the Red
 step
 goto 52.11,44.05 |q The Harvest Heart/Defend West Ritual Site
@@ -24428,6 +24407,8 @@ step
 goto heartsgrief1_base 10.80,53.05
 talk Abnur Tharn |q God of Schemes/Enter Heart's Grief
 |tip Manually skip to the next step.
+step
+goto 16.13,42.82 |q God of Schemes/Enter Heart's Grief |future
 step
 goto 65.64,59.46
 'Open _Heart's Grief Vestibule_ |q God of Schemes/Enter Heart's Grief |future

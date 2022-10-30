@@ -33,9 +33,7 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 * Reimplement and complete re-write of Imperial City Guide and Maps
 * Rewrite Daggerfall Covenant Legacy Guide For Accountwide Achievements
 * Rewrite Ebonheart Pact Legacy Guide For Accountwide Achievements
-* Firesong DLC
-* Main Quest Only
-* Full Guide
+* Firesong DLC (Main Quest Only & Full Guide with Delves & Skyshards)
 
 06/06/2022
 * Edited Vvardenfel step to Examine Bothamul's Orders because the syntax looked incorrect

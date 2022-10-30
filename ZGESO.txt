@@ -1,8 +1,8 @@
-## Title: |cfd5b02Community Leveling Guides|r v1028
+## Title: |cfd5b02Community Leveling Guides|r v1029
 ## Description: A Zygor addon updated by snichols7778, Hydra9268, Krandor1, and Sharlikran for the Firesong DLC.
 ## Author: snichols7778, Hydra9268
-## Version: 1028
-## AddOnVersion: 1028
+## Version: 1029
+## AddOnVersion: 1029
 ## APIVersion: 100035 100036
 ## DependsOn: LibGPS
 ## SavedVariables: ZGESOSettings
