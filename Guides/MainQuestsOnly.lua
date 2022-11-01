@@ -883,6 +883,10 @@ goto 50.97,38.67
 |only Aldmeri Dominion
 step
 goto 58.85,24.72 |q To Tanzelwil/Find the Queen's Entourage at Tanzelwil |tip Leave building.
+|tip Only Aldmeri Dominion
+step
+goto 58.85,24.72 |q To Tanzelwil/Find the Queen's Entourage at Tanzelwil |tip Leave building.
+|only not Aldmeri Dominion
 step
 goto auridon_base 60.82,81.30 |q To Tanzelwil/Find the Queen's Entourage at Tanzelwil
 step
@@ -2078,12 +2082,12 @@ step
 goto 46.59,52.11 |q Unsafe Haven/Enter Fort
 step
 goto 50.05,9.49
-'Climb _Fort_ |q Unsafe Haven/Enter Fort |future
+'Climb _Fort_ |q Unsafe Haven/Enter Fort
 |tip Manually skip to the next step.
 step
 goto haven_base 48.23,42.68
 |tip Inside the building.
-'Unlock _Gate Mechanism_ |q Unsafe Haven/Open Gate
+'Unlock _Gate Mechanism_ |q Unsafe Haven/Open Gate |future
 step
 goto 49.99,43.52
 'Open _Haven_ |q Unsafe Haven/Talk to Lord Gharesh-ri
@@ -2206,6 +2210,7 @@ goto eldenrootcrafting_base 82.38,49.04
 |tip Follow the path up.
 'Open _Mages Guild_ |q Simply Misplaced/Talk to Valaste
 |tip Manually skip to the next step.
+|only Aldmeri Dominion
 step
 goto eldenrootmagesguilddown_base 36.95,54.28
 talk Valaste |q Simply Misplaced/Talk to Valaste
@@ -2353,10 +2358,18 @@ step
 goto 30.10,24.54
 'Open _Upper Level_ |q The Great Tree/Talk to King Camoran Aeradan in Elden Root
 |tip Manually skip to the next step.
+|only Aldmeri Dominion
 step
 goto eldenrootcrafting_base 77.78,68.15
 'Open _Throne Room_ |q The Great Tree/Talk to King Camoran Aeradan in Elden Root
 |tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto eldenrootcrafting_base 77.78,68.15
+|tip Go up the ramp.
+'Open _Throne Room_ |q The Great Tree/Talk to King Camoran Aeradan in Elden Root
+|tip Manually skip to the next step.
+|only not Aldmeri Dominion
 step
 goto eldenrootthroneroom_base 33.52,43.03
 talk King Camoran Aeradan
@@ -2370,6 +2383,7 @@ step
 goto 70.21,61.56
 'Open _Upper Level_ |q The Dangerous Past |future
 |tip Manually skip to the next step.
+|only Aldmeri Dominion
 step
 goto eldenrootcrafting_base 64.65,82.33
 'Open _Fighters Guild_ |q The Dangerous Past |future
@@ -2585,11 +2599,11 @@ goto 65.44,77.70
 kill Falion |q The Honor of the Queen/Search the Middens for Ambassador Tarinwe
 step
 'Open _Grahtwood_ Map
-'Travel to _Elden Root_ |q The Honor of the Queen/Return to Elden Root |future
+'Travel to _Elden Root_ |q The Honor of the Queen/Return to Elden Root
 |tip Manually skip to the next step.
 step
 goto eldenrootservices_base 32.70,26.16
-'Open _Upper Level_ |q The Honor of the Queen/Return to the Elden Root Throne Room
+'Open _Upper Level_ |q The Honor of the Queen/Return to the Elden Root Throne Room |future
 |tip Manually skip to the next step.
 step
 goto eldenrootcrafting_base 78.02,67.63
@@ -3170,10 +3184,10 @@ step
 goto eldenrootgroundfloor_base 49.46,57.18 |q The Orrery of Elden Root/Enter the Orrery
 step
 goto 44.07,55.42
-'Open _The Orrery_ |q The Orrery of Elden Root/Talk to Conservator Daraneth |future
+'Open _The Orrery_ |q The Orrery of Elden Root/Talk to Conservator Daraneth
 |tip Manually skip to the next step.
 step
-goto orrery_base 12.18,25.10 |q The Orrery of Elden Root/Talk to Conservator Daraneth
+goto orrery_base 12.18,25.10 |q The Orrery of Elden Root/Talk to Conservator Daraneth |future
 step
 goto 27.44,24.98 |q The Orrery of Elden Root/Talk to Conservator Daraneth
 step
@@ -3413,39 +3427,39 @@ goto marbruk_base 73.57,35.77
 |only Aldmeri Dominion
 step
 goto 55.29,46.50
-talk Captain Sarandil |q The Staff of Magnus/Find Captain Sarandil |future
+talk Captain Sarandil |q The Staff of Magnus/Find Captain Sarandil
 step
 goto 34.48,31.65
 'Open _Mages Guild_ |q The Staff of Magnus/Follow Captain Sarandil to the Mages Guild
 step
 goto 34.47,31.67
-'Open _Mages Guild_ |q The Staff of Magnus/Follow Captain Sarandil to the Mages Guild
+'Open _Mages Guild_ |q The Staff of Magnus/Follow Captain Sarandil to the Mages Guild |future
 step
 goto 24.40,33.84
 'Wait for _Captain Sarandil to Unlock the Vault_ |q The Staff of Magnus/Wait for Captain Sarandil to Unlock the Vault
 step
 goto 24.18,33.69
-'Open _Primary Vault_ |q The Staff of Magnus/Enter the Relic Room |future
+'Open _Primary Vault_ |q The Staff of Magnus/Enter the Relic Room
 |tip Manually skip to the next step.
 step
 goto 28.72,18.10
-talk Captain Sarandil |q The Staff of Magnus/Enter the Relic Room
+talk Captain Sarandil |q The Staff of Magnus/Enter the Relic Room |future
 |tip Manually skip to the next step.
 step
 goto 28.36,17.57
-'Open _Relic Room_ |q The Staff of Magnus/Enter the Inner Vault |future
+'Open _Relic Room_ |q The Staff of Magnus/Enter the Inner Vault
 |tip Manually skip to the next step.
 step
 goto greenshade_base 66.54,47.76
-talk Captain Sarandil |q The Staff of Magnus/Enter the Inner Vault
+talk Captain Sarandil |q The Staff of Magnus/Enter the Inner Vault |future
 |tip Manually skip to the next step.
 step
 goto 66.48,47.68
-'Open _Inner Vault_ |q The Staff of Magnus/Secure the Staff of Magnus |future
+'Open _Inner Vault_ |q The Staff of Magnus/Secure the Staff of Magnus
 |tip Manually skip to the next step.
 step
 goto 65.86,47.31
-'Take _Staff of Magnus_ |q The Staff of Magnus/Secure the Staff of Magnus
+'Take _Staff of Magnus_ |q The Staff of Magnus/Secure the Staff of Magnus |future
 step
 goto 66.00,47.33
 talk Captain Sarandil |q The Staff of Magnus/Talk to Captain Sarandil
@@ -3559,6 +3573,7 @@ accept Chateau of the Ravenous Rodent
 |only Aldmeri Dominion
 step
 goto 58.64,41.39 |q The Prismatic Core |future
+|only Aldmeri Dominion
 step
 goto 68.05,28.33
 |tip Inside the Fighters Guild.
@@ -3705,7 +3720,7 @@ goto 70.87,64.75
 'Search _Shimmering Kollopi Tree_ |q Frighten the Fearsome/Gather Seeds
 step
 goto 70.68,66.40
-'Open Passage to the Wood Orc Camp |q Frighten the Fearsome/Plant Northern Seed
+'Open _Passage to the Wood Orc Camp_ |q Frighten the Fearsome/Plant Northern Seed
 |tip Manually skip to the next step.
 step
 goto 74.80,63.01
@@ -4302,7 +4317,7 @@ goto 43.14,63.35
 step
 goto 41.33,68.30
 '_Fix_
-kill the enemies that appear on the ship |q Pelidil's End/Repel Maormer Boarders
+kill the enemies that appear on the ship |q Pelidil's End/Repel Maormer Boarders |future
 step
 goto 39.97,63.60
 'Use _Portal to the Maormer Ship_ |q Pelidil's End/Kill Vicereeve Pelidil
@@ -4392,6 +4407,7 @@ goto 67.03,36.81
 'Take _Skulls to Indaenir at Stone Table_ |q Retaking the Pass/Take Skulls to Indaenir at Stone Table
 step
 goto 67.02,37.99
+|tip Watch the dialogue.
 'Use _Stone Table_
 talk Indaenir |q Retaking the Pass/Interrogate the Skulls with Indaenir |future
 |tip Manually skip to the next step.
@@ -5026,8 +5042,10 @@ talk Aelif |q Proving the Deed/Report to Aelif
 |only Aldmeri Dominion
 step
 goto 55.17,63.89 |q The Hound's Plan/Find the Silvenar in Jathsogur
+|only Aldmeri Dominion
 step
 goto malabaltor_base 55.38,54.42 |q The Hound's Plan/Find the Silvenar in Jathsogur
+|only Aldmeri Dominion
 step
 goto 58.15,55.25 |q The Hound's Plan/Find the Silvenar in Jathsogur
 step
@@ -5090,9 +5108,9 @@ goto 68.30,77.49
 'Use the _Runestone of Malacath on Ambassador Sariel_ |q The Prisoner of Jathsogur/Sacrifice Ambassador Sariel
 step
 goto 68.36,77.61
-talk Ambassador Raen |q The Prisoner of Jathsogur/Talk to Ambassador Raen |or
+talk Ambassador Raen |q The Prisoner of Jathsogur/Talk to Ambassador Raen |or |future
 '_OR_
-talk Ambassador Sariel |q The Prisoner of Jathsogur/Talk to Ambassador Sariel |or
+talk Ambassador Sariel |q The Prisoner of Jathsogur/Talk to Ambassador Sariel |or |future
 step
 goto 70.56,78.69 |q The Prisoner of Jathsogur/Disrupt Essence Stone
 step
@@ -5781,6 +5799,10 @@ step
 goto reapersmarch_base 20.26,43.12
 wayshrine Vinedusk
 step
+goto 21.58,36.11 |q The Dark Mane/Go to Fort Grimwatch
+step
+goto 24.86,32.59 |q The Dark Mane/Go to Fort Grimwatch
+step
 goto 24.41,29.61
 talk Englor
 turnin The Dark Mane
@@ -5838,7 +5860,7 @@ goto 31.08,25.48
 |tip Manually skip to the next step.
 step
 goto khajrawlith_base 32.98,38.99
-'Explore the Temple |q Grimmer Still/Explore the Temple
+'Explore the _Temple_ |q Grimmer Still/Explore the Temple
 step
 'Next to you:
 talk Khali |q Grimmer Still/Talk to Khali
@@ -6036,11 +6058,11 @@ goto 60.12,58.57
 'Destroy _Anchor Pinion_ |q Stonefire Machinations/Stop the Stonefire Ritual
 step
 goto 65.30,63.75
-'Open _Temple to the Divines_ |q Stonefire Machinations/Enter the Temple to the Divines |future
+'Open _Temple to the Divines_ |q Stonefire Machinations/Enter the Temple to the Divines
 |tip Manually skip to the next step.
 step
 goto 66.43,64.21
-'Open _Temple Undercroft_ |q Stonefire Machinations/Find and Defeat Mane Akkhuz-ri
+'Open _Temple Undercroft_ |q Stonefire Machinations/Find and Defeat Mane Akkhuz-ri |future
 |tip Manually skip to the next step.
 step
 goto 66.43,60.84
@@ -6082,7 +6104,9 @@ talk Kazirra
 turnin Stonefire Machinations
 accept To Rawl'kha
 step
-goto reapersmarch_base 47.33,23.82 |q To Rawl'kha/Talk to a Moon Priest of Rawl'kha
+goto reapersmarch_base 49.48,16.53 |q To Rawl'kha/Talk to a Moon Priest of Rawl'kha
+step
+goto 47.33,23.82 |q To Rawl'kha/Talk to a Moon Priest of Rawl'kha
 step
 goto 34.96,29.26 |q To Rawl'kha/Talk to a Moon Priest of Rawl'kha
 step
@@ -6125,7 +6149,7 @@ goto 51.69,32.21
 talk Kauzanabi-jo |q The First Step/Talk to Kauzanabi-jo
 step
 goto 51.69,32.21
-'Watch the Ceremony |q The First Step/Watch Ceremony
+'Watch the _Ceremony_ |q The First Step/Watch Ceremony
 step
 goto 51.40,31.38
 'Take _Moon Sugar Elixir_ |q The First Step/Drink Elixir
@@ -6764,6 +6788,7 @@ step
 'Open _Reaper's March_ Map
 'Travel to _Rawl'kha_ |q The Path to Moonmont/Meet the Champions at Moonmont
 |tip Manually skip to the next step.
+|only Aldmeri Dominion
 step
 goto rawlkha_base 38.67,52.41
 accept Messages Across Tamriel
@@ -7093,11 +7118,11 @@ goto 57.66,43.85
 talk Shazah |q The Den of Lorkhaj/Talk to the Lunar Champion
 step
 goto 57.98,43.64
-'Use _Portal to the Den of Lorkhaj_ |q The Den of Lorkhaj/Enter the Portal to Den of Lorkhaj |future
+'Use _Portal to the Den of Lorkhaj_ |q The Den of Lorkhaj/Enter the Portal to Den of Lorkhaj
 |tip Manually skip to the next step.
 step
 goto planeofjodedenoflorkhaj_base 49.69,45.45
-'Follow the _Lunar Champion_ |q The Den of Lorkhaj/Follow the Lunar Champion
+'Follow the _Lunar Champion_ |q The Den of Lorkhaj/Follow the Lunar Champion |future
 step
 goto 49.69,45.45
 kill Khali
@@ -15535,7 +15560,7 @@ goto 79.19,44.81
 'Open _Skyshroud Barrow_ |q What Waits Beneath/Enter Skyshroud Barrow |future
 step
 goto skyshroudbarrow_base 49.39,43.03
-'Sanctify the _Priest's Body_ |q What Waits Beneath/Sanctify the Priest's Body
+'Use _Haldriin_ |q What Waits Beneath/Sanctify the Priest's Body
 step
 goto 62.84,60.93
 'Examine _Scroll of Banishment_ |q What Waits Beneath/Search for Evidence
