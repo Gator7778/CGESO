@@ -5675,6 +5675,7 @@ goto 23.28,22.40
 step
 goto 23.28,22.40
 talk Gargak |q A Chief Concern/Talk to Gargak
+|tip Propose to avoid further bloodshed
 step
 goto 23.28,22.40
 talk Gargak |q A Chief Concern/Convince Gargak to End His Feud
