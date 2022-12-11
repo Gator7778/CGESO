@@ -1029,7 +1029,7 @@ goto 43.79,70.95
 talk Battlereeve Urcelmo
 accept To Mathiisen
 step
-goto 42.48,69.93
+goto 44.72,68.27
 'Examine _Boethiah's Proving_ |lorebook Boethiah's Proving/1/8/2
 |only Aldmeri Dominion
 step
@@ -1118,7 +1118,10 @@ goto 13.80,67.68
 'Wait for _Haskill to Open the Door_ |q Long Lost Lore/Wait for Haskill to Open the Door
 |only Aldmeri Dominion
 step
-goto 13.36,75.91 |q Long Lost Lore/Explore the Hollow
+goto 13.39,75.12 |q Long Lost Lore/Explore the Hollow
+|only Aldmeri Dominion
+step
+goto 28.24,75.45 |q Long Lost Lore/Explore the Hollow
 |only Aldmeri Dominion
 step
 goto 69.89,35.54
@@ -3183,8 +3186,8 @@ goto eldenrootservices_base 51.62,89.10 |q The Orrery of Elden Root/Enter the Or
 step
 goto eldenrootgroundfloor_base 49.46,57.18 |q The Orrery of Elden Root/Enter the Orrery
 step
-goto 44.07,55.42
-'Open _The Orrery_ |q The Orrery of Elden Root/Talk to Conservator Daraneth
+goto eldenrootgroundfloor_base 44.07,55.42
+'Open _The Orrery_ |q The Orrery of Elden Root/Enter the Orrery |future
 |tip Manually skip to the next step.
 step
 goto orrery_base 12.18,25.10 |q The Orrery of Elden Root/Talk to Conservator Daraneth |future
@@ -6743,17 +6746,17 @@ wayshrine Eyevea
 step
 goto 86.59,35.76
 'Use _Eyevea_ Wayshrine
-'Travel to _The Harborage_ in Auridon |q Council of the Five Companions/Go to the Harborage |future
+'Travel to _The Harborage_ in Auridon |q Council of the Five Companions/Go to the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
 goto auridon_base 69.64,92.85
-'Open _The Harborage_ |q Council of the Five Companions/Go to the Harborage |future
+'Open _The Harborage_ |q Council of the Five Companions/Go to the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
 goto the_aldmiri_harborage_map_base 59.99,36.62
-talk Varen Aquilarios |q Council of the Five Companions/Talk to Varen Aquilarios
+talk Varen Aquilarios |q Council of the Five Companions/Talk to Varen Aquilarios |future
 |only Aldmeri Dominion
 step
 goto 61.35,32.81
@@ -6878,7 +6881,7 @@ talk Shazah |q Motes in the Moonlight/Choose Khali to Contain the Dark Mane |or
 step
 goto 12.46,49.44
 |tip Watch the dialogue.
-talk Shazah or Khali
+talk Champion
 turnin Motes in the Moonlight
 step
 goto 13.10,46.52
@@ -8651,7 +8654,10 @@ goto 13.80,67.68
 'Wait for _Haskill to Open the Door_ |q Long Lost Lore/Wait for Haskill to Open the Door
 |only Daggerfall Covenant
 step
-goto 13.36,75.91 |q Long Lost Lore/Explore the Hollow
+goto 13.39,75.12 |q Long Lost Lore/Explore the Hollow
+|only Daggerfall Covenant
+step
+goto 28.24,75.45 |q Long Lost Lore/Explore the Hollow
 |only Daggerfall Covenant
 step
 goto 69.89,35.54
@@ -10909,6 +10915,7 @@ talk High King Emeric |q Vaermina's Gambit/Talk to High King Emeric
 step
 goto 31.03,51.84
 |tip Inside of the building.
+kill Sir Hughes
 'Search _Basket_ |q Vaermina's Gambit/Collect Key of the Knight
 step
 goto 48.98,61.12 |q Vaermina's Gambit/Collect Key of the Thief
@@ -16455,7 +16462,10 @@ talk Haskill |q Long Lost Lore/Explore the Hollow
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
-goto 13.36,75.91 |q Long Lost Lore/Explore the Hollow
+goto 13.39,75.12 |q Long Lost Lore/Explore the Hollow
+|only Ebonheart Pact
+step
+goto 28.24,75.45 |q Long Lost Lore/Explore the Hollow
 |only Ebonheart Pact
 step
 goto 69.89,35.54
@@ -20080,6 +20090,121 @@ goto 56.00,52.49
 |tip Behind the building, in an alley.
 'Search _Hidden Cache_ |q Shadows Over Windhelm/.*Find Hidden Caches.* |count 2
 step
+goto 49.59,44.52
+|tip Upstairs inside the Mages Guild.
+talk Valaste |q Chateau of the Ravenous Rodent/Talk to Valaste
+|only Ebonheart Pact
+step
+goto 49.59,44.52
+'Wait for _Valaste to Open the Portal_ |q Chateau of the Ravenous Rodent/Wait for Valaste to Open the Portal
+|only Ebonheart Pact
+step
+goto 48.80,43.91
+'Use _Portal to the Shivering Isles_ |q Chateau of the Ravenous Rodent/Talk to Shalidor |future
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto chateauravenousrodent_base 23.65,23.61
+talk Arch-Mage Shalidor |q Chateau of the Ravenous Rodent/Talk to Shalidor
+|only Ebonheart Pact
+step
+goto 23.65,23.61
+'Watch _Sheogorath and Shalidor_ |q Chateau of the Ravenous Rodent/Watch Sheogorath and Shalidor
+|only Ebonheart Pact
+step
+goto 24.05,24.14
+talk Sheogorath |q Chateau of the Ravenous Rodent/Talk to Sheogorath
+|only Ebonheart Pact
+step
+goto 31.73,38.62
+'Open _Chateau Guesthouse_ |q Chateau of the Ravenous Rodent/Enter the Chateau Guesthouse
+|only Ebonheart Pact
+step
+goto 37.12,39.97
+|tip Random Door.
+'Listen _Door_ |q Chateau of the Ravenous Rodent/Evict the Guest That Doesn't Belong
+|only Ebonheart Pact
+step
+goto 34.00,42.50
+'Enter _Portal to Chateau Gardens_ |q Chateau of the Ravenous Rodent/Enter the Portal
+|only Ebonheart Pact
+step
+goto 39.11,50.68
+talk Sheogorath |q Chateau of the Ravenous Rodent/Talk to Sheogorath
+|only Ebonheart Pact
+step
+goto 55.98,62.37
+'Light _Cold Brazier_ |q Chateau of the Ravenous Rodent/.*Light the Braziers.* |count 1
+|only Ebonheart Pact
+step
+goto 41.38,66.27 |q Chateau of the Ravenous Rodent/.*Light the Braziers.*
+|only Ebonheart Pact
+step
+goto 42.49,68.99
+'Light _Cold Brazier_ |q Chateau of the Ravenous Rodent/.*Light the Braziers.* |count 2
+|only Ebonheart Pact
+step
+goto 45.08,65.40 |q Chateau of the Ravenous Rodent/.*Light the Braziers.*
+|only Ebonheart Pact
+step
+goto 42.72,72.03
+'Light _Cold Brazier_ |q Chateau of the Ravenous Rodent/.*Light the Braziers.* |count 3
+|only Ebonheart Pact
+step
+goto 50.27,69.06 |q Chateau of the Ravenous Rodent/.*Light the Braziers.*
+|only Ebonheart Pact
+step
+goto 47.33,74.87
+'Light _Cold Brazier_ |q Chateau of the Ravenous Rodent/.*Light the Braziers.* |count 4
+|only Ebonheart Pact
+step
+goto 63.31,71.86
+'Find the _Maze Exit_ |q Chateau of the Ravenous Rodent/Find the Maze Exit
+|only Ebonheart Pact
+step
+goto 65.90,75.97
+talk Sheogorath |q Chateau of the Ravenous Rodent/Talk to Sheogorath
+|only Ebonheart Pact
+step
+goto 86.83,70.74
+'Explore _Manse_ |q Chateau of the Ravenous Rodent/Explore the Manse
+|only Ebonheart Pact
+step
+goto 86.87,66.05
+'Channel _Crystals 1, 4, 2, 3, 1_ |q Chateau of the Ravenous Rodent/Light All the Heirlooms
+|only Ebonheart Pact
+step
+goto 86.03,64.01
+talk Sheogorath |q Chateau of the Ravenous Rodent/Talk to Sheogorath
+|only Ebonheart Pact
+step
+goto 86.82,63.39
+'Open _The Master Bedroom_ |q Chateau of the Ravenous Rodent/Kill Uncle Leo
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto chateaumasterbedroom_base 68.05,47.83
+kill Uncle Leo |q Chateau of the Ravenous Rodent/Kill Uncle Leo
+|only Ebonheart Pact
+step
+goto 42.38,49.32
+talk Sheogorath |q Chateau of the Ravenous Rodent/Talk to Sheogorath
+|only Ebonheart Pact
+step
+goto 42.61,48.02
+'Examine _A Gift of Sanctuary_ |q Chateau of the Ravenous Rodent/Collect the Tome
+|only Ebonheart Pact
+step
+goto windhelm_base 49.51,44.45
+talk Valaste
+turnin Chateau of the Ravenous Rodent
+|only Ebonheart Pact
+step
+goto 49.37,53.58
+talk Arch-Mage Shalidor
+accept The Mad God's Bargain
+|only Ebonheart Pact
+step
 goto 27.97,61.30 |q Shadows Over Windhelm/.*Find Hidden Caches.* |count 3
 step
 goto 28.63,49.36 |q Shadows Over Windhelm/.*Find Hidden Caches.* |count 3
@@ -20311,140 +20436,6 @@ accept Victory at Morvunskar
 step
 goto 36.91,42.45
 wayshrine Fort Morvunskar
-step
-goto 36.91,42.45
-'Use _Fort Morvunskar_ Wayshrine
-'Travel to _Windhelm_ |q Chateau of the Ravenous Rodent/Talk to Valaste
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto windhelm_base 49.41,52.43
-'Open _Mages Guild_ |q Chateau of the Ravenous Rodent/Talk to Valaste
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto 49.59,44.52
-talk Valaste |q Chateau of the Ravenous Rodent/Talk to Valaste
-|only Ebonheart Pact
-step
-goto 49.59,44.52
-'Wait for _Valaste to Open the Portal_ |q Chateau of the Ravenous Rodent/Wait for Valaste to Open the Portal
-|only Ebonheart Pact
-step
-goto 48.80,43.91
-'Use _Portal to the Shivering Isles_ |q Chateau of the Ravenous Rodent/Talk to Shalidor |future
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto chateauravenousrodent_base 23.65,23.61
-talk Arch-Mage Shalidor |q Chateau of the Ravenous Rodent/Talk to Shalidor
-|only Ebonheart Pact
-step
-goto 23.65,23.61
-'Watch _Sheogorath and Shalidor_ |q Chateau of the Ravenous Rodent/Watch Sheogorath and Shalidor
-|only Ebonheart Pact
-step
-goto 24.05,24.14
-talk Sheogorath |q Chateau of the Ravenous Rodent/Talk to Sheogorath
-|only Ebonheart Pact
-step
-goto 31.73,38.62
-'Open _Chateau Guesthouse_ |q Chateau of the Ravenous Rodent/Enter the Chateau Guesthouse
-|only Ebonheart Pact
-step
-goto 37.12,39.97
-|tip Random Door.
-'Listen _Door_ |q Chateau of the Ravenous Rodent/Evict the Guest That Doesn't Belong
-|only Ebonheart Pact
-step
-goto 34.00,42.50
-'Enter _Portal to Chateau Gardens_ |q Chateau of the Ravenous Rodent/Enter the Portal
-|only Ebonheart Pact
-step
-goto 39.11,50.68
-talk Sheogorath |q Chateau of the Ravenous Rodent/Talk to Sheogorath
-|only Ebonheart Pact
-step
-goto 55.98,62.37
-'Light _Cold Brazier_ |q Chateau of the Ravenous Rodent/.*Light the Braziers.* |count 1
-|only Ebonheart Pact
-step
-goto 41.38,66.27 |q Chateau of the Ravenous Rodent/.*Light the Braziers.*
-|only Ebonheart Pact
-step
-goto 42.49,68.99
-'Light _Cold Brazier_ |q Chateau of the Ravenous Rodent/.*Light the Braziers.* |count 2
-|only Ebonheart Pact
-step
-goto 45.08,65.40 |q Chateau of the Ravenous Rodent/.*Light the Braziers.*
-|only Ebonheart Pact
-step
-goto 42.72,72.03
-'Light _Cold Brazier_ |q Chateau of the Ravenous Rodent/.*Light the Braziers.* |count 3
-|only Ebonheart Pact
-step
-goto 50.27,69.06 |q Chateau of the Ravenous Rodent/.*Light the Braziers.*
-|only Ebonheart Pact
-step
-goto 47.33,74.87
-'Light _Cold Brazier_ |q Chateau of the Ravenous Rodent/.*Light the Braziers.* |count 4
-|only Ebonheart Pact
-step
-goto 63.31,71.86
-'Find the _Maze Exit_ |q Chateau of the Ravenous Rodent/Find the Maze Exit
-|only Ebonheart Pact
-step
-goto 65.90,75.97
-talk Sheogorath |q Chateau of the Ravenous Rodent/Talk to Sheogorath
-|only Ebonheart Pact
-step
-goto 86.83,70.74
-'Explore _Manse_ |q Chateau of the Ravenous Rodent/Explore the Manse
-|only Ebonheart Pact
-step
-goto 86.87,66.05
-'Channel _Crystals 1, 4, 2, 3, 1_ |q Chateau of the Ravenous Rodent/Light All the Heirlooms
-|only Ebonheart Pact
-step
-goto 86.03,64.01
-talk Sheogorath |q Chateau of the Ravenous Rodent/Talk to Sheogorath
-|only Ebonheart Pact
-step
-goto 86.82,63.39
-'Open _The Master Bedroom_ |q Chateau of the Ravenous Rodent/Kill Uncle Leo
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto chateaumasterbedroom_base 68.05,47.83
-kill Uncle Leo |q Chateau of the Ravenous Rodent/Kill Uncle Leo
-|only Ebonheart Pact
-step
-goto 42.38,49.32
-talk Sheogorath |q Chateau of the Ravenous Rodent/Talk to Sheogorath
-|only Ebonheart Pact
-step
-goto 42.61,48.02
-'Examine _A Gift of Sanctuary_ |q Chateau of the Ravenous Rodent/Collect the Tome
-|only Ebonheart Pact
-step
-goto windhelm_base 49.51,44.45
-talk Valaste
-turnin Chateau of the Ravenous Rodent
-|only Ebonheart Pact
-step
-goto 49.37,53.58
-talk Arch-Mage Shalidor
-accept The Mad God's Bargain
-|only Ebonheart Pact
-step
-goto 45.71,53.12 |q Strange Allies |future
-|only Ebonheart Pact
-step
-goto 45.83,38.41
-'Use _Windhelm_ Wayshrine
-'Travel to _Fort Morvunskar_ |q Strange Allies |future
-|tip Manually skip to the next step.
-|only Ebonheart Pact
 step
 goto eastmarch_base 35.87,44.64 |q Strange Allies |future
 step
@@ -21569,19 +21560,18 @@ goto 63.78,27.48
 'Open _Fallowstone Hall_ |q Storming the Hall/Kill Chieftain Frostfang
 |tip Manually skip to the next step.
 step
-goto shorsstone_base 28.71,29.62
-|tip STay downstairs.
+goto 64.67,26.91
 'Open _Fallowstone Undercroft_ |q Storming the Hall/Kill Chieftain Frostfang
 |tip Manually skip to the next step.
 step
-goto 29.36,32.05
+goto 64.75,27.28
 kill Chieftain Frostfang |q Storming the Hall/Kill Chieftain Frostfang
 step
-goto 29.74,31.75
+goto goto 64.78,27.25
 'Open _Fallowstone Vault Entry_ |q Storming the Hall/Meet Vigrod Wraithbane at the Vault Entrance
 |tip Manually skip to the next step.
 step
-goto therift_base 64.23,27.16
+goto 64.23,27.16
 'Meet _Vigrod Wraithbane at the Vault Entrance_ |q Storming the Hall/Meet Vigrod Wraithbane at the Vault Entrance
 step
 goto 64.23,27.16
@@ -28815,7 +28805,7 @@ goto 19.72,49.63
 'Examine _The Scroll of Vaia_ |lorebook The Scroll of Vaia/3/25/87
 step
 goto 23.00,42.32
-talk Elder Akarah_
+talk Elder Akarah
 'Choose a _Blessing_ |q The Anger of a King/Complete the Trials
 |tip Manually skip to the next step.
 step
@@ -33998,7 +33988,7 @@ goto 47.71,63.68
 step
 goto 47.27,63.58
 talk Bailiff Roland |q The Dreaming Cave/Talk to Bailiff Roland
-'Select _I'll pay for someone to clean this up if you tell me where to find Raz. [### gold]_
+|tip Pay him.
 step
 goto 58.28,49.30
 'Follow the _Scribbles to Razum-dar_ |q The Dreaming Cave/Follow the Scribbles to Razum-dar
@@ -35944,7 +35934,7 @@ step
 step
 goto rimmen_base 25.57,59.76
 talk Abnur Tharn |q The Usurper Queen/Meet Abnur Tharn in Rimmen
-'Tell him _Let's skip the tour and get on with the parley._
+|tip Tell him to skip the tour.
 step
 goto 52.21,34.23 |q The Usurper Queen/Go to Euraxia's Throne Room
 step
@@ -37394,7 +37384,7 @@ goto 29.76,60.83
 step
 goto 29.76,60.83
 talk Kazahn |q Order of the New Moon/Talk to Kazahn
-'Tell her _[Persuade] We're trying to find  Lahini to help her. If she meant anythiing to you, you'll help us._
+|tip Persuade her.
 step
 goto 29.76,60.83
 talk Kazahn |q Order of the New Moon/Talk to Kazahn

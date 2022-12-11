@@ -671,6 +671,7 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 			    GetCurrentMapIndex() == Enums.BetnikhMap or
 				GetCurrentMapIndex() == Enums.Blackwood or
 			    GetCurrentMapIndex() == Enums.BleakrockIsleMap or
+				GetCurrentMapIndex() == Enums.CraglornMap or
 				GetCurrentMapIndex() == Enums.GalenMap or
 				GetCurrentMapIndex() == Enums.GreymoorCaverns or
 			    GetCurrentMapIndex() == Enums.HighIsleMap or
@@ -683,7 +684,6 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 				GetCurrentMapIndex() == Enums.BalFoyenMap or
 			    GetCurrentMapIndex() == Enums.BangkoraiMap or
 				GetCurrentMapIndex() == Enums.ColdharbourMap or
-				GetCurrentMapIndex() == Enums.CraglornMap or
 			    GetCurrentMapIndex() == Enums.CyrodiilMap or
 				GetCurrentMapIndex() == Enums.DeshaanMap or
 				GetCurrentMapIndex() == Enums.EastmarchMap or
@@ -732,6 +732,7 @@ function Utils.DistanceOffsetForIsComplete()
 			    GetCurrentMapIndex() == Enums.BetnikhMap or
 				GetCurrentMapIndex() == Enums.Blackwood or
 			    GetCurrentMapIndex() == Enums.BleakrockIsleMap or
+				GetCurrentMapIndex() == Enums.CraglornMap or
 				GetCurrentMapIndex() == Enums.GalenMap or
 				GetCurrentMapIndex() == Enums.GreymoorCaverns or
 			    GetCurrentMapIndex() == Enums.HighIsleMap or
@@ -744,7 +745,6 @@ function Utils.DistanceOffsetForIsComplete()
 				GetCurrentMapIndex() == Enums.BalFoyenMap or			    
 				GetCurrentMapIndex() == Enums.BangkoraiMap or
 				GetCurrentMapIndex() == Enums.ColdharbourMap or
-				GetCurrentMapIndex() == Enums.CraglornMap or
 			    GetCurrentMapIndex() == Enums.CyrodiilMap or
 				GetCurrentMapIndex() == Enums.DeshaanMap or
 				GetCurrentMapIndex() == Enums.EastmarchMap or
