@@ -2,10 +2,10 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local ZGV = _G.ZGV
+local CGV = _G.CGV
 
 --POI:QUEST,QUEST,QUEST
-ZGV._QuestPOIData = [[
+CGV._QuestPOIData = [[
 109002:1090003
 109008:1090010
 109004:1090009

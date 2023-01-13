@@ -2,11 +2,11 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local ZGV = _G.ZGV
+local CGV = _G.CGV
 
-if ZGV.Utils.GetFaction() ~= "EP" and not ZGV.CFG_LOAD_ALL_FACTIONS then return end
+if CGV.Utils.GetFaction() ~= "EP" and not CGV.CFG_LOAD_ALL_FACTIONS then return end
 
-ZGV._QuestStepDataEP = {
+CGV._QuestStepDataEP = {
 	[0093001] = {
 		[1]={
 			[[Q1 A Nord commander named Holgunn asked me to help defend Davon's Watch.]],
@@ -816,7 +816,7 @@ ZGV._QuestStepDataEP = {
 		},
 		[5]={
 			[[Q1 Bala, an Ashlander, is searching for her___can't find his tomb.]],
-			[[S1 == Eanen's feelings for Bala were a lie. He___ Bala … something.]],
+			[[S1 == Eanen's feelings for Bala were a lie. He___ Bala ï¿½ something.]],
 			[[S1C0 == Talk to Bala]],
 			[[S1C1 == Talk to Bala]],
 			[[S1C2 Talk to Bala]],
@@ -3744,7 +3744,7 @@ ZGV._QuestStepDataEP = {
 		},
 		[4]={
 			[[Q1 I met a confused Nord named Norgred on ___ to get it back.]],
-			[[S1 == The axe has been found. Evigna and ___ … more or less.]],
+			[[S1 == The axe has been found. Evigna and ___ ï¿½ more or less.]],
 			[[S1C0 == Return Nogred's Pants]],
 		},
 		[5]={

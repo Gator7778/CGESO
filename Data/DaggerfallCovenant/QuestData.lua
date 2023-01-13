@@ -2,11 +2,11 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local ZGV = _G.ZGV
+local CGV = _G.CGV
 
-if ZGV.Utils.GetFaction() ~= "DC" and not ZGV.CFG_LOAD_ALL_FACTIONS then return end
+if CGV.Utils.GetFaction() ~= "DC" and not CGV.CFG_LOAD_ALL_FACTIONS then return end
 
-ZGV._QuestDataDC = [[
+CGV._QuestDataDC = [[
 
 Blood and the Crescent Moon=0022001
 Basile's Invitation=0022002

@@ -2,9 +2,9 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local ZGV = _G.ZGV
+local CGV = _G.CGV
 
-ZGV._NpcDataAD = [[
+CGV._NpcDataAD = [[
 
 Niraselya=-21474836481026
 Earnaana=-21474836481018

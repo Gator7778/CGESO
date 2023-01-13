@@ -2,11 +2,11 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local ZGV = _G.ZGV
+local CGV = _G.CGV
 
-if ZGV.Utils.GetFaction() ~= "EP" and not ZGV.CFG_LOAD_ALL_FACTIONS then return end
+if CGV.Utils.GetFaction() ~= "EP" and not CGV.CFG_LOAD_ALL_FACTIONS then return end
 
-ZGV._QuestDataEP = [[
+CGV._QuestDataEP = [[
 
 Legacy of the Ancestors=0093001
 Exquisite Tears=0093002

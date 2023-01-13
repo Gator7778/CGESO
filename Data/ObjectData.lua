@@ -2,9 +2,9 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local ZGV = _G.ZGV
+local CGV = _G.CGV
 
-ZGV._ObjectDataCommon = [[
+CGV._ObjectDataCommon = [[
 The Wailing Prison=3360001
 The Bleeding Forge=3360002
 The Ashen Mines=3360003

@@ -2,11 +2,11 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local ZGV = _G.ZGV
+local CGV = _G.CGV
 
 -- 3 diget zone id then 4 diget uniqueid
 
-ZGV._NpcDataCommon = [[
+CGV._NpcDataCommon = [[
 The Prophet=3360001
 Soul Shriven=3360002
 Er-Jaseen=3360003

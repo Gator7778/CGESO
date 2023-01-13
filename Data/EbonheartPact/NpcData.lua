@@ -2,11 +2,11 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local ZGV = _G.ZGV
+local CGV = _G.CGV
 
-if ZGV.Utils.GetFaction() ~= "EP" and not ZGV.CFG_LOAD_ALL_FACTIONS then return end
+if CGV.Utils.GetFaction() ~= "EP" and not CGV.CFG_LOAD_ALL_FACTIONS then return end
 
-ZGV._NpcDataEP = [[
+CGV._NpcDataEP = [[
 
 Uncle Leo=-21474836483050
 Sen Dres=-21474836483008

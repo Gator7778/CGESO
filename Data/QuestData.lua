@@ -2,11 +2,11 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local ZGV = _G.ZGV
+local CGV = _G.CGV
 
 -- 3 diget zone id then 4 diget uniqueid
 
-ZGV._QuestDataCommon = [[
+CGV._QuestDataCommon = [[
 Soul Shriven in Coldharbour=3360001
 The Hollow City=1540001
 The Army of Meridia=1540002

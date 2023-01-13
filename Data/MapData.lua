@@ -1,9 +1,9 @@
 ﻿-----------------------------------------
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
-local ZGV = _G.ZGV
+local CGV = _G.CGV
 
-ZGV.MapData = {
+CGV.MapData = {
 	["ZoneNameToTex"] =
 	{
     -- Aldmeri Dominion
@@ -719,14 +719,14 @@ ZGV.MapData = {
 	{
 
 		--[[ Go to a map, execute this in chat:
-			/zgpos gps - For general map data. Works in any map.
-			/zgpos - For city and delve data, and also to confirm DDS map filename is correct.
+			/cgpos gps - For general map data. Works in any map.
+			/cgpos - For city and delve data, and also to confirm DDS map filename is correct.
 		]]--
 
         -- Aldmeri Dominion
         -- Khenarthi's Roost
         ["khenarthisroost_base"] =              { name = "Khenarthi's Roost",                       id =   1, xoffset = 0.489800, yoffset = 0.782845, scale = 0.032000, },
-        ["templeofthemourningspring_base"] =    { name = "templeofthemourningspring_base",          id =   2, xoffset = 0.513228, yoffset = 0.798633, scale = 0.005250, },
+        ["templeofthemourningspring_base"] =    { name = "Temple of the Mourning Springs",          id =   2, xoffset = 0.513228, yoffset = 0.798633, scale = 0.005250, },
         ["hazikslair_base"] =                   { name = "Hazak's Lair",                            id =   3, xoffset = 0.511925, yoffset = 0.795048, scale = 0.002938, },
         ["shatteredshoals_base"] =              { name = "Shattered Shoals",                        id =   4, xoffset = 0.499753, yoffset = 0.799970, scale = 0.001750, },
         ["themangroves_base"] =                 { name = "The Mangroves",                           id =   5, xoffset = 0.498597, yoffset = 0.792798, scale = 0.003016, },
@@ -737,7 +737,7 @@ ZGV.MapData = {
         ["vulkhelguard_base"] =                 { name = "Vulkhel Guard",                           id =   8, xoffset = 0.219382, yoffset = 0.725738, scale = 0.031974, },
         ["auridonoutlawrefuge_base"] =          { name = "Vulkhel Guard Outlaws Refuge",            id =   9, xoffset = 0.233701, yoffset = 0.742722, scale = 0.000617, },
         ["auridon_base"] =                      { name = "Auridon",                                 id =  10, xoffset = 0.137230, yoffset = 0.596874, scale = 0.157920, },
-        ["delsclaim_base"] =                    { name = "Del's Claim",                             id =  11, xoffset = 0.228383, yoffset = 0.727934, scale = 0.004355, },
+        ["delsclaim_base"] =                    { name = "Del's Claim",                             id =  11, xoffset = 0.227883, yoffset = 0.725254, scale = 0.007355, },
         ["ondil_base"] =                        { name = "Ondil",                                   id =  12, xoffset = 0.222550, yoffset = 0.700412, scale = 0.008047, },
         ["phaercatacombs_base"] =               { name = "Phaer Catacombs",                         id =  13, xoffset = 0.219719, yoffset = 0.701331, scale = 0.011250, },
         ["innertanzelwil_base"] =               { name = "Inner Tanzelwil",                         id =  14, xoffset = 0.193312, yoffset = 0.697394, scale = 0.014023, },
@@ -809,7 +809,7 @@ ZGV.MapData = {
         ["rajhinsvault_base"] =                 { name = "Nairume's Prison",                        id =  67, xoffset = 0.410414, yoffset = 0.737310, scale = 0.006685, },
         ["rajhinsvaultsmallroom_base"] =        { name = "Nairume's Prison",                        id =  67, xoffset = 0.410414, yoffset = 0.737310, scale = 0.006685, },
         ["orrery_base"] =                       { name = "The Orrery",                              id =  68, xoffset = 0.431596, yoffset = 0.729172, scale = 0.008500, },
-        ["wormrootdepths_base"] =               { name = "Wormroot Depths",                         id =  69, xoffset = 0.381230, yoffset = 0.681844, scale = 0.003945, },
+        ["wormrootdepths_base"] =               { name = "Wormroot Depths",                         id =  69, xoffset = 0.380930, yoffset = 0.681284, scale = 0.008945, },
 
         -- Greenshade
         ["marbruk_base"] =                      { name = "Marbruk",                                 id =  70, xoffset = 0.345430, yoffset = 0.688476, scale = 0.017774, },
@@ -817,9 +817,9 @@ ZGV.MapData = {
         ["greenshade_base"] =                   { name = "Greenshade",                              id =  72, xoffset = 0.271875, yoffset = 0.635312, scale = 0.117109, },
         ["gurzagsmine_base"] =                  { name = "Guzrag's Mine",                           id =  73, xoffset = 0.357986, yoffset = 0.705802, scale = 0.004160, },
         ["campgushnukbur_base"] =               { name = "Camp Gushnukbur",                         id =  74, xoffset = 0.361406, yoffset = 0.712031, scale = 0.005586, },
-        ["shroudedhollowarea1_base"] =          { name = "Shrouded Hollow",                         id =  75, xoffset = 0.350618, yoffset = 0.726983, scale = 0.004276, },
-        ["shroudedhollowarea2_base"] =          { name = "Shrouded Hollow",                         id =  75, xoffset = 0.350658, yoffset = 0.726983, scale = 0.004264, },
-        ["shroudedhollowcenter_base"] =         { name = "Fading Tree",                             id =  76, xoffset = 0.351039, yoffset = 0.728318, scale = 0.002144, },
+        ["shroudedhollowarea1_base"] =          { name = "Shrouded Hollow",                         id =  75, xoffset = 0.347858, yoffset = 0.726783, scale = 0.008276, },
+        ["shroudedhollowarea2_base"] =          { name = "Shrouded Hollow",                         id =  75, xoffset = 0.347858, yoffset = 0.726783, scale = 0.008276, },
+        ["shroudedhollowcenter_base"] =         { name = "Fading Tree",                             id =  76, xoffset = 0.348639, yoffset = 0.729218, scale = 0.004144, },
         ["caracdena_base"] =                    { name = "Carac Dena",                              id =  77, xoffset = 0.336592, yoffset = 0.739346, scale = 0.003984, },
         ["silatar_base"] =                      { name = "Silatar",                                 id =  78, xoffset = 0.340429, yoffset = 0.720918, scale = 0.007867, },
         ["hollowlair_base"] =                   { name = "Hollow Den",                              id =  79, xoffset = 0.321211, yoffset = 0.703086, scale = 0.015312, },
@@ -849,7 +849,7 @@ ZGV.MapData = {
         ["malabaltor_base"] =                   { name = "Malabal Tor",                             id =  95, xoffset = 0.297188, yoffset = 0.558125, scale = 0.129375, },
         ["velynharbor_base"] =                  { name = "Velyn Harbor",                            id =  96, xoffset = 0.297969, yoffset = 0.609296, scale = 0.029688, },
         ["malabaltoroutlawrefuge_base"] =       { name = "Velyn Harbor Outlaws Refuge",             id =  97, xoffset = 0.312032, yoffset = 0.626375, scale = 0.002812, },
-        ["stormwardenundercroft_base"] =        { name = "Stormwarden Undercroft",                  id =  98, xoffset = 0.323580, yoffset = 0.618314, scale = 0.006879, },
+        ["stormwardenundercroft_base"] =        { name = "Stormwarden Undercroft",                  id =  98, xoffset = 0.322580, yoffset = 0.617114, scale = 0.009879, },
         ["deadmansdrop_base"] =                 { name = "Dead Man's Drop",                         id =  99, xoffset = 0.337776, yoffset = 0.606878, scale = 0.005336, },
         ["tomboftheapostates_base"] =           { name = "Tomb of the Apostates",                   id = 100, xoffset = 0.344888, yoffset = 0.636065, scale = 0.006250, },
         ["hoarvorpit_base"] =                   { name = "Hoarvor Pit",                             id = 101, xoffset = 0.355524, yoffset = 0.627340, scale = 0.006367, },
@@ -857,7 +857,7 @@ ZGV.MapData = {
         ["ogrimsyawn_base"] =                   { name = "Ogrim's Yawn",                            id = 103, xoffset = 0.377680, yoffset = 0.597348, scale = 0.007774, },
         ["abamath_base"] =                      { name = "Abamath Ruins",                           id = 104, xoffset = 0.363890, yoffset = 0.657245, scale = 0.007091, },
         ["shrineofmauloch_base"] =              { name = "Shrine of Mauloch",                       id = 105, xoffset = 0.359598, yoffset = 0.650436, scale = 0.019688, },
-        ["shaelruins_base"] =                   { name = "Shael Ruins",                             id = 106, xoffset = 0.373537, yoffset = 0.664496, scale = 0.005152, },
+        ["shaelruins_base"] =                   { name = "Shael Ruins",                             id = 106, xoffset = 0.373537, yoffset = 0.664496, scale = 0.009152, },
         ["belarata_base"] =                     { name = "Belarata",                                id = 107, xoffset = 0.375803, yoffset = 0.646908, scale = 0.005724, },
         ["rootsofsilvenar_base"] =              { name = "Roots of Silvenar",                       id = 108, xoffset = 0.388398, yoffset = 0.621196, scale = 0.003504, },
         ["ouze_base"] =                         { name = "Ouze",                                    id = 109, xoffset = 0.397475, yoffset = 0.615262, scale = 0.009334, },
@@ -891,7 +891,7 @@ ZGV.MapData = {
         ["jodeslight_base"] =                   { name = "Jode's Light",                            id = 135, xoffset = 0.472262, yoffset = 0.595752, scale = 0.005363, },
         ["kunasdelve_base"] =                   { name = "Kuna's Delve",                            id = 136, xoffset = 0.462429, yoffset = 0.582954, scale = 0.005296, },
         ["rendrocaverns_base"] =                { name = "Ren-dro Caverns",                         id = 137, xoffset = 0.474670, yoffset = 0.579904, scale = 0.004309, },
-        ["fortsphinxmoth_base"] =               { name = "Fort Sphinxmoth",                         id = 138, xoffset = 0.491375, yoffset = 0.563886, scale = 0.010471, },
+        ["fortsphinxmoth_base"] =               { name = "Fort Sphinxmoth",                         id = 138, xoffset = 0.485074, yoffset = 0.557186, scale = 0.030471, },
         ["fardirsfolly_base"] =                 { name = "Fardir's Folly",                          id = 139, xoffset = 0.489995, yoffset = 0.560437, scale = 0.005020, },
         ["dune_base"] =                         { name = "Dune",                                    id = 140, xoffset = 0.479062, yoffset = 0.581484, scale = 0.026172, },
         ["planeofjodetemple_base"] =            { name = "Temple of the Dance",                     id = 141, xoffset = 0.496088, yoffset = 0.592916, scale = 0.003480, },
@@ -1187,8 +1187,8 @@ ZGV.MapData = {
         ["hajuxith_base"] =                     { name = "Haj Uxith",                               id = 382, xoffset = -0.131832, yoffset = 0.269370, scale = 0.012286, },
         ["thelibrarydusk_base"] =               { name = "Library of Dusk",                         id = 383, xoffset = -0.120770, yoffset = 0.264508, scale = 0.005390, },
         ["libraryofdusk_base"] =                { name = "Library of Dusk",                         id = 383, xoffset = -0.120214, yoffset = 0.261524, scale = 0.009844, },
-        ["lightlessoubliette_base"] =           { name = "Lightless Oubliette",                     id = 384, xoffset = -0.150717, yoffset = 0.246813, scale = 0.006458, },
-        ["lightlessoubliettelava_base"] =       { name = "Lightless Oubliette",                     id = 384, xoffset = -0.149911, yoffset = 0.249495, scale = 0.001858, },
+        ["lightlessoubliette_base"] =           { name = "Lightless Oubliette",                     id = 384, xoffset = -0.157517, yoffset = 0.242512, scale = 0.014458, },
+        ["lightlessoubliettelava_base"] =       { name = "Lightless Oubliette",                     id = 384, xoffset = -0.155711, yoffset = 0.249895, scale = 0.001858, },
         ["lightlesscell_base"] =                { name = "Lightless Cell",                          id = 385, xoffset = -0.148912, yoffset = 0.248194, scale = 0.012331, },
         ["aba-loria_base"] =                    { name = "Aba-Loria",                               id = 386, xoffset = -0.118156, yoffset = 0.234672, scale = 0.004793, },
         ["thevilelaboratory_base"] =            { name = "The Vile Laboratory",                     id = 387, xoffset = -0.092074, yoffset = 0.270503, scale = 0.015195, },
@@ -1430,11 +1430,17 @@ ZGV.MapData = {
         ["knightsgrave03_base"] =               { name = "Knightsgrave",                            id = 539, xoffset = 0.317836, yoffset = 0.524284, scale = 0.007670, },
         ["knightsgrave04_base"] =               { name = "Knightsgrave",                            id = 539, xoffset = 0.312831, yoffset = 0.530994, scale = 0.011020, },
         ["cathedralofakatosh_base"] =           { name = "Cathedral of Akatosh",                    id = 540, xoffset = 0.364826, yoffset = 0.555075, scale = 0.007095, },
+
+        -- Vvardenfell
+        ["coldbloodcavernmain"] =               { name = "Cold-Blood Cavern",                       id = 541, xoffset = 0.717538, yoffset = 0.537234, scale = 0.005466, },
+        ["DyzeraRealm"] =                       { name = "Dyzera's Realm",                          id = 542, xoffset = 0.721225, yoffset = 0.539590, scale = 0.002555, },
+        ["vvardenfell_base"] =                  { name = "Vvardenfell",                             id = 543, xoffset = 0.681140, yoffset = 0.221244, scale = 0.179984, },
+        ["andrano_base"] =                      { name = "Andrano Ancestral Tomb",                  id = 544, xoffset = 0.755530, yoffset = 0.359722, scale = 0.007649, },
      },
 }
 
-ZGV.MapData.LocalizedMapNames = {}
-ZGV.MapData.LocalizedMapNames['en']={
+CGV.MapData.LocalizedMapNames = {}
+CGV.MapData.LocalizedMapNames['en']={
       [1] = "Khenarthi's Roost",
       [2] = "Temple of the Mourning Springs",
       [3] = "Hazak's Lair",
