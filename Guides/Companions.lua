@@ -1,7 +1,7 @@
-local ZGV = _G.ZGV
-ZGV.GuideMenuTier = "TAM"
+local CGV = _G.CGV
+CGV.GuideMenuTier = "TAM"
 
-ZGV:RegisterGuide("Extras\\Extras\\Companions\\Bastian Hallix",[[
+CGV:RegisterGuide("Extras\\Extras\\Companions\\Bastian Hallix",[[
 loadingimage loadscreen_u30_blackwood_zone_01.dds
 description Bastian Hallix Unlock quest and Rapport Quests.
 step
@@ -280,7 +280,7 @@ talk Bastian Hallix
 turnin Family Secrets
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Companions\\Ember",[[
+CGV:RegisterGuide("Extras\\Extras\\Companions\\Ember",[[
 loadingimage loadscreen_hi_systres_zone_01.dds
 description Ember Unlock quest and Rapport Quests.
 step
@@ -729,7 +729,7 @@ talk Ember
 turnin Green with Envy
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Companions\\Isobel Veloise",[[
+CGV:RegisterGuide("Extras\\Extras\\Companions\\Isobel Veloise",[[
 loadingimage loadscreen_hi_systres_zone_01.dds
 description Isobel Veloise Unlock quest and Rapport Quests.
 step
@@ -1316,7 +1316,7 @@ talk Isobel Veloise
 turnin The Princess Detective
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Companions\\Mirri Elendis",[[
+CGV:RegisterGuide("Extras\\Extras\\Companions\\Mirri Elendis",[[
 loadingimage loadscreen_deadlandsvault_01.dds
 description Guide to Unlock Mirri Elendis and Rapport Quests.
 step

@@ -1,6 +1,6 @@
 -----------------------------------------
 -- INFORMATION
--- 	Loaded before ZGESO.lua
+-- 	Loaded before CGESO.lua
 -- 	Options get put in "Option" instead of in the main group. No reason to comingle them.
 -----------------------------------------
 
@@ -197,7 +197,7 @@ GuideViewer("Main", "enUS", function() local f = {
 			['static_nextguide_anyzone'] = "\nThis is the recommended next zone. However, since ESO has no zone level restrictions anymore, you're free to visit any other zone and load a guide for it manually.",
 			['static_badguide'] = "\nThe selected guide:\n|cffee00%s|r\n is |cffbbaaimproper|r for your character.\n|cff6644%s|r\n\nDo you really want to load it?",
 			["static_endguide"] = "\nYou've reached the end of the current guide.",
-			["static_help"] = "\nYou can set keybindings in Esc-Controls-Keybindings.\n\nPlease visit |cfe6100tinyurl.com/ZGESO|r if you need additional assistance.",
+			["static_help"] = "\nYou can set keybindings in Esc-Controls-Keybindings.\n\nPlease visit |cfe6100tinyurl.com/CGESO|r if you need additional assistance.",
 
 			['static_profile'] = "Switch to profile %s?",
 			['static_deleteprofile'] = "Delete profile %s?",
@@ -284,8 +284,8 @@ GuideViewer("Option", "enUS", function() local f = {
 			["opt_extras"] = "Extras",
 			["opt_extras_desc"] = "",
 
-			["opt_showmapbutton"] = "Enable Zygor toggle button",
-			["opt_showmapbutton_desc"] = "Show the Zygor button that toggles the viewer.",
+			["opt_showmapbutton"] = "Enable Community toggle button",
+			["opt_showmapbutton_desc"] = "Show the Community button that toggles the viewer.",
 
 			["opt_revealmappoi"] = "Reveal map locations",
 			["opt_revealmappoi_desc"] = "Show all unknown locations on the world map.",
@@ -315,7 +315,7 @@ GuideViewer("Option", "enUS", function() local f = {
 
 			------ DEVELOPER/DEBUG -------
 			["opt_dev"] = "Developer/Debug",
-			["opt_dev_desc"] = "Options for developing ZGV and various debug options.",
+			["opt_dev_desc"] = "Options for developing CGV and various debug options.",
 
 			["opt_debug"] = "Toggle debug",
 			["opt_debug_desc"] = "",
