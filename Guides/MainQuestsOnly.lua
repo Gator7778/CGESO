@@ -1,18 +1,18 @@
-local ZGV = _G.ZGV
-if ZGV:DoMutex("MainQuestsOnly") then return end
-ZGV.GuideMenuTier = "MOR"
+local CGV = _G.CGV
+if CGV:DoMutex("MainQuestsOnly") then return end
+CGV.GuideMenuTier = "MOR"
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\The Wailing Prison",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\The Wailing Prison",[[
 loadingimage loadscreen_chapter1_01.dds
 description Brave The Wailing Prison, a prisoner stronghold in Coldharbour.
 step
 'Open _Auridon_ Map
-'Travel to _Vulkhel Guard_ |q Soul Shriven in Coldharbour |future
+'Travel to _Vulkhel Guard_ |q Soul Shriven in Coldharbour
 |tip Manually skip to the next step
 |only Aldmeri Dominion
 step
 goto vulkhelguard_base 55.29,38.95
-talk The Hooded Figure |q Soul Shriven in Coldharbour/Talk to the Hooded Figure |future
+talk The Hooded Figure |q Soul Shriven in Coldharbour/Talk to the Hooded Figure
 |only Aldmeri Dominion
 step
 goto 59.70,68.01
@@ -26,7 +26,7 @@ talk The Benefactor |q Soul Shriven in Coldharbour/Talk to the Benefactor
 |only Aldmeri Dominion
 step
 'Open _Glenumbra_ Map
-'Travel to _Daggerfall_ |q Soul Shriven in Coldharbour |future
+'Travel to _Daggerfall_ |q Soul Shriven in Coldharbour
 |tip Manually skip to the next step
 |only Daggerfall Covenant
 step
@@ -46,12 +46,12 @@ talk Benefactor |q Soul Shriven in Coldharbour/Talk to the Benefactor
 |only Daggerfall Covenant
 step
 'Open _Stonesfalls_ Map
-'Travel to _Davon's Watch_ |q Soul Shriven in Coldharbour |future
+'Travel to _Davon's Watch_ |q Soul Shriven in Coldharbour
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
 goto davonswatch_base 56.25,76.25
-talk Hooded Figure |q Soul Shriven in Coldharbour/Talk to the Hooded Figure |future
+talk Hooded Figure |q Soul Shriven in Coldharbour/Talk to the Hooded Figure
 |only Ebonheart Pact
 step
 goto 48.72,72.08 |q Soul Shriven in Coldharbour/Talk to the Benefactor
@@ -87,7 +87,7 @@ goto 85.88,65.96
 step
 goto 85.08,66.34
 |tip Watch the dialogue.
-talk Lyris Titanborn |q Soul Shriven in Coldharbour/Talk to Lyris |future
+talk Lyris Titanborn |q Soul Shriven in Coldharbour/Talk to Lyris
 step
 goto 87.92,61.39
 'Open _The Bleeding Forge_ |q Soul Shriven in Coldharbour/Continue through the Bleeding Forge
@@ -166,7 +166,7 @@ goto 49.35,56.86
 'Use _Skyshard_ |q Soul Shriven in Coldharbour/Collect the Skyshard
 step
 goto 49.40,51.56
-'Approach the _Portal_ |q Soul Shriven in Coldharbour/Approach the Portal |future
+'Approach the _Portal_ |q Soul Shriven in Coldharbour/Approach the Portal
 step
 goto khenarthisroost_base 55.70,75.41
 talk The Prophet
@@ -184,7 +184,7 @@ turnin Soul Shriven in Coldharbour |next Extras\\Extras\\Main Quests Only\\Ebonh
 |only Ebonheart Pact
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Khenarthi's Roost",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Khenarthi's Roost",[[
 loadingimage loadscreen_kenathis_roost_01.dds
 description This island off the south coast of Elsweyr is named after the Khajiiti goddess of weather and the sky, who is usually represented as a great hawk. She finds many worshipers among the cat-folk's sailors and farmers, especially those who grow moon-sugar cane.
 step
@@ -192,11 +192,11 @@ step
 '_Save 2 Extra skill Points as you Level_
 |tip Don't spend them yet.
 |tip You'll be able to invest them into the Intimidate and Persuade skills soon, which will save you a lot of time on certain quests as you level.
-|tip Manually skip to the next step |q Storm on the Horizon |future
+|tip Manually skip to the next step |q Storm on the Horizon
 |only Aldmeri Dominion
 step
 goto khenarthisroost_base 55.73,75.57
-'Open _Eagle's Strand_ |q Storm on the Horizon |future
+'Open _Eagle's Strand_ |q Storm on the Horizon
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -210,7 +210,7 @@ goto 59.43,57.56 |q Storm on the Horizon/Talk to the Boatswain
 |only not Aldmeri Dominion
 step
 goto 73.43,59.01
-talk Sugar Claws |q Storm on the Horizon/Talk to the Boatswain |future
+talk Sugar Claws |q Storm on the Horizon/Talk to the Boatswain
 |tip Manually skip to the next step.
 |only not Aldmeri Dominion
 step
@@ -265,7 +265,7 @@ goto templeofthemourningspring_base 19.73,50.80
 'Activate _New Moons Stone_
 'Activate _Waxing Moons Stone_
 'Activate _Full Moons Stone_
-'Activate _Waning Moons Stone_ |q Tears of the Two Moons/Disrupt the Barrier |future
+'Activate _Waning Moons Stone_ |q Tears of the Two Moons/Disrupt the Barrier
 step
 goto 23.34,50.60
 talk Gathwen |q Tears of the Two Moons/Talk to Gathwen
@@ -310,7 +310,7 @@ goto 71.24,48.86
 step
 goto 80.86,39.55
 |tip Watch the dialogue
-'Place _Tears of the Two Moons Pedestal_ |q Tears of the Two Moons/New Moons Pedestal |future
+'Place _Tears of the Two Moons Pedestal_ |q Tears of the Two Moons/New Moons Pedestal
 step
 goto 89.70,39.49
 'Place _Tears of the Two Moons Pedestal_ |q Tears of the Two Moons/Crescent Moons Pedestal
@@ -322,9 +322,9 @@ goto 80.66,58.18
 'Place _Tears of the Two Moons Pedestal_ |q Tears of the Two Moons/Full Moons Pedestal
 step
 goto 85.17,49.58
-talk Rurelion |q Tears of the Two Moons/Talk to Rurelion |future |or
+talk Rurelion |q Tears of the Two Moons/Talk to Rurelion |or
 '_OR_
-talk Gathwen |q Tears of the Two Moons/Talk to Gathwen |future |or
+talk Gathwen |q Tears of the Two Moons/Talk to Gathwen |or
 step
 goto 65.57,48.88
 talk Gathwen or Rurelion
@@ -355,13 +355,13 @@ step
 goto 31.75,55.87 |q Cast Adrift/Go to the Cave
 step
 goto shatteredshoals_base 59.52,70.67
-'Examine _Lieutenant Gelin_ |q Cast Adrift/Find Lieutenant Gelin |future
+'Examine _Lieutenant Gelin_ |q Cast Adrift/Find Lieutenant Gelin
 step
 goto khenarthisroost_base 29.87,55.66
 talk Sergeant Firion |q Cast Adrift/Talk to Sergeant Firion
 step
 goto 25.36,56.45
-talk Quartermaster Oblan |q Cast Adrift/Talk to Quartermaster Oblan |future
+talk Quartermaster Oblan |q Cast Adrift/Talk to Quartermaster Oblan
 step
 goto 25.61,56.16
 talk Sergeant Firion
@@ -410,7 +410,7 @@ goto 34.51,60.46 |q Storm on the Horizon/Go to Mistral
 step
 goto mistral_base 21.54,78.64 |q Storm on the Horizon/Go to Mistral
 step
-goto mistral_base 45.51,54.44 |q Storm on the Horizon/Talk to Razum-dar |future
+goto mistral_base 45.51,54.44 |q Storm on the Horizon/Talk to Razum-dar
 step
 goto 39.75,49.72
 wayshrine Mistral
@@ -490,7 +490,7 @@ goto 48.83,26.18
 step
 goto 61.78,42.14
 |tip Go upstairs in this building.
-'Hide _Hiding Spot_ |q The Perils of Diplomacy/Stake Out the Warehouse |future
+'Hide _Hiding Spot_ |q The Perils of Diplomacy/Stake Out the Warehouse
 |tip Manually skip to the next step.
 step
 goto 60.26,40.22
@@ -559,7 +559,7 @@ goto 79.07,33.85
 talk Berantin |q The Tempest Unleashed/Direct Survivors to Safety
 step
 goto 78.79,31.60
-talk Sergeant Firion |q The Tempest Unleashed/Talk to Sergeant Firion |future
+talk Sergeant Firion |q The Tempest Unleashed/Talk to Sergeant Firion
 step
 goto 79.13,31.82
 talk Sergeant Firion (Marine) |q The Tempest Unleashed/The Marine |or
@@ -638,10 +638,10 @@ turnin The Tempest Unleashed
 accept To Auridon
 step
 goto 61.53,29.33
-'Use _Prowler Skiff_ |q To Auridon/Board the Skiff |future |next Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Auridon
+'Use _Prowler Skiff_ |q To Auridon/Board the Skiff |next Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Auridon
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Auridon",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Auridon",[[
 loadingimage loadscreen_auridon_01.dds
 description The second largest of the Summerset Isles, Auridon has always served the High Elves as a buffer between their serene archipelago and the turmoil of Tamriel. The Altmer of Auridon have been hardened by generations of repelling invaders, pirates, and plagues.
 step
@@ -650,7 +650,7 @@ talk The Prophet |q The Harborage/Talk to the Prophet
 |only Aldmeri Dominion
 step
 goto 60.21,66.53
-'If your are level 10 or higher use Cyrodiil Introduction guide and and complete it to gain a healing spell and 30% gallop mount speed through the Assault War/Alliance Skill Line. |q Welcome to Cyrodiil |future 
+'If your are level 10 or higher use Cyrodiil Introduction guide and and complete it to gain a healing spell and 30% gallop mount speed through the Assault War/Alliance Skill Line. |q Welcome to Cyrodiil 
 |tip If your not Level 10 once your are level it is recommended.
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -706,7 +706,7 @@ turnin Ensuring Security
 accept A Hostile Situation
 step
 goto 39.65,41.78
-talk Watch Captain Astanya |q A Hostile Situation/Talk to Watch Captain Astanya |future
+talk Watch Captain Astanya |q A Hostile Situation/Talk to Watch Captain Astanya
 step
 goto 50.01,51.39
 talk Razum-dar |q A Hostile Situation/Talk to Razum-dar
@@ -777,22 +777,22 @@ goto auridon_base 50.88,91.03
 'Examine _History of the Fighters Guild Pt. 1_ |lorebook History of the Fighters Guild Pt. 1/1/19/3
 |only Aldmeri Dominion
 step
-goto vulkhelguard_base 22.97,57.61 |q A Hostile Situation/Talk to Battlereeve Urcelmo Near the Temple |future
+goto vulkhelguard_base 22.97,57.61 |q A Hostile Situation/Talk to Battlereeve Urcelmo Near the Temple
 step
 goto 39.32,44.20
-talk Battlereeve Urcelmo |q A Hostile Situation/Talk to Battlereeve Urcelmo Near the Temple |future
+talk Battlereeve Urcelmo |q A Hostile Situation/Talk to Battlereeve Urcelmo Near the Temple
 step
 goto 39.16,44.13
 |tip Watch the dialogue.
 'Allow _Urcelmo and Ayrenn to Consult_ |q A Hostile Situation/Allow Urcelmo and Ayrenn to Consult
 step
 goto 39.40,49.77
-'Open _Temple of Auri-El_ |q A Hostile Situation/Enter the Temple |future
+'Open _Temple of Auri-El_ |q A Hostile Situation/Enter the Temple
 |tip Manually skip to the next step.
 step
 '_Go to middle of room_
 |tip Watch the dialogue.
-kill Watch Captain Astanya |q A Hostile Situation/Defeat the Assassins |future
+kill Watch Captain Astanya |q A Hostile Situation/Defeat the Assassins
 step
 goto 39.46,44.20
 |tip Leave the building.
@@ -801,12 +801,12 @@ turnin A Hostile Situation
 accept To Tanzelwil
 step
 goto auridon_base 69.66,92.87
-'Open _The Harborage_ |q The Harborage/Find the Harborage |future
+'Open _The Harborage_ |q The Harborage/Find the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
 goto the_aldmiri_harborage_map_base 60.13,36.29
-talk The Prophet |q The Harborage/Talk to the Prophet |future
+talk The Prophet |q The Harborage/Talk to the Prophet
 |only Aldmeri Dominion
 step
 goto 60.13,36.29
@@ -922,7 +922,7 @@ goto 54.55,69.60
 |only Aldmeri Dominion
 step
 goto 54.31,69.87
-'Open _Ondil_ |q Long Lost Lore/Enter the Ruins |future
+'Open _Ondil_ |q Long Lost Lore/Enter the Ruins
 |only Aldmeri Dominion
 |tip Manually skip to the next step.
 step
@@ -961,7 +961,7 @@ goto 49.15,76.50
 step
 goto 49.20,75.26
 |tip Watch the dialogue.
-talk Queen Ayrenn |q In the Name of the Queen/Talk to Queen Ayrenn |future
+talk Queen Ayrenn |q In the Name of the Queen/Talk to Queen Ayrenn
 step
 goto 47.71,76.60 |q In the Name of the Queen/Aid the Priestess at the West Ritual Site
 step
@@ -990,26 +990,26 @@ goto 43.76,70.89
 talk Queen Ayrenn |q In the Name of the Queen/Speak to Queen Ayrenn
 step
 goto 43.51,70.48
-talk Queen Ayrenn |q Rites of the Queen/Follow Queen Ayrenn |future
+talk Queen Ayrenn |q Rites of the Queen/Follow Queen Ayrenn
 |tip Manually skip to the next step.
 step
 goto 43.58,70.64
-'Open _Inner Tanzelwil_ |q Rites of the Queen/Follow Queen Ayrenn |future
+'Open _Inner Tanzelwil_ |q Rites of the Queen/Follow Queen Ayrenn
 |tip Manually skip to the next step.
 step
 goto innertanzelwil_base 74.91,50.36 |q Rites of the Queen/Follow Queen Ayrenn |tip Protect Queen Ayrenn
 step
-goto 86.48,49.16 |q Rites of the Queen/Destroy the Crystal to Open the Door |future |tip Destroy the Crystal to Open the Door.
+goto 86.48,49.16 |q Rites of the Queen/Destroy the Crystal to Open the Door |tip Destroy the Crystal to Open the Door.
 step
 goto 66.57,49.59
-'Open _Inner Tanzelwil_ |q Rites of the Queen/Continue to Follow Queen Ayrenn |future
+'Open _Inner Tanzelwil_ |q Rites of the Queen/Continue to Follow Queen Ayrenn
 |tip Manually skip to the next step.
 step
 goto 38.91,32.22 |q Rites of the Queen/Continue to Follow Queen Ayrenn |tip Protect Queen Ayrenn
 step
 goto 37.18,31.92
 |tip Watch dialogue.
-'Open _Ancestral Chamber_ |q Rites of the Queen/Enter the Ancestral Chamber |future
+'Open _Ancestral Chamber_ |q Rites of the Queen/Enter the Ancestral Chamber
 step
 goto 24.63,40.13
 kill Norion |q Rites of the Queen/Defeat Norion
@@ -1097,7 +1097,7 @@ talk Arch-Mage Shalidor |q Long Lost Lore/Talk to Arch-Mage Shalidor
 |only Aldmeri Dominion
 step
 goto 23.01,48.64
-'Use _Portal to Cheesemonger's Hollow_ |q Long Lost Lore/Enter the Portal to Sheogorath's Shrine |future
+'Use _Portal to Cheesemonger's Hollow_ |q Long Lost Lore/Enter the Portal to Sheogorath's Shrine
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -1303,10 +1303,10 @@ goto 59.91,47.11
 |tip Manually skip to the next step.
 step
 goto 64.47,47.94
-talk Skywatch Noble |q Lifting the Veil/Talk to the Noble |future
+talk Skywatch Noble |q Lifting the Veil/Talk to the Noble
 step
 goto 64.07,51.62
-talk Razum-dar |q Lifting the Veil/Talk to Razum-dar |future
+talk Razum-dar |q Lifting the Veil/Talk to Razum-dar
 step
 goto 64.62,47.02 |q Lifting the Veil/Enter the Barbed Hook Tavern
 step
@@ -1338,7 +1338,7 @@ goto 80.47,51.30
 |tip It's a random riddle, so you have to figure out which item to select yourself.
 'Select _Your Answer_ |q Wearing the Veil/Select Your Answer |or
 '_OR_
-talk to Ohmonir |q Wearing the Veil/You Chose Poorly |or |future
+talk to Ohmonir |q Wearing the Veil/You Chose Poorly |or
 step
 goto 80.47,51.30
 talk Ohmonir |q Wearing the Veil/Talk to Ohmonir
@@ -1347,7 +1347,7 @@ goto 80.47,51.30
 |tip It's a random riddle, so you have to figure out which item to select yourself.
 'Select Your Answer |q Wearing the Veil/Select Your Answer |or
 '_OR_
-talk to Ohmonir |q Wearing the Veil/You Chose Poorly |or |future
+talk to Ohmonir |q Wearing the Veil/You Chose Poorly |or
 step
 goto 80.47,51.30
 talk Ohmonir |q Wearing the Veil/Talk to Ohmonir
@@ -1382,7 +1382,7 @@ goto 80.12,52.73 |q Wearing the Veil/Complete the Race |tip Reach Next Marker
 step
 goto 80.94,51.92 |q Wearing the Veil/Complete the Race |tip Reach Next Marker
 step
-goto 81.59,51.32 |q Wearing the Veil/Complete the Race |future
+goto 81.59,51.32 |q Wearing the Veil/Complete the Race
 step
 goto 81.22,51.82
 talk Varustante |q Wearing the Veil/Talk to Varustante
@@ -1399,7 +1399,7 @@ turnin Wearing the Veil
 accept The Veil Falls
 step
 goto 83.01,49.49
-'Open _Veiled Keep_ |q The Veil Falls/Enter the Veiled Keep |future
+'Open _Veiled Keep_ |q The Veil Falls/Enter the Veiled Keep
 |tip Manually skip to the next step.
 step
 goto veiledKeepBase 60.96,17.25
@@ -1420,7 +1420,7 @@ step
 goto 73.49,78.47
 kill Endartirinque
 kill Ondicantar
-kill Nenaronald |q The Veil Falls/Defeat the Leaders of the Veiled Heritance |future
+kill Nenaronald |q The Veil Falls/Defeat the Leaders of the Veiled Heritance
 step
 goto 60.97,8.11
 'Open _Errinorne Island_ |q The Veil Falls/Return to Skywatch
@@ -1445,7 +1445,7 @@ step
 goto 17.10,47.23 |q To Dawnbreak/Talk to Canonreeve Sinyon in Dawnbreak
 step
 goto auridon_base 60.88,53.73
-'Help _Aelif Defeat Daedra_ |q Anchors from the Harbour/Help Aelif Defeat Daedra |future
+'Help _Aelif Defeat Daedra_ |q Anchors from the Harbour/Help Aelif Defeat Daedra
 |only Aldmeri Dominion
 step
 goto 62.46,55.69
@@ -1465,7 +1465,7 @@ talk Jofnir Iceblade |q Anchors from the Harbour/Speak with the Ghost
 |only Aldmeri Dominion
 step
 goto 69.78,62.98
-'Open _Buraniim_ |q Anchors from the Harbour/Enter Doshia's Lair |future
+'Open _Buraniim_ |q Anchors from the Harbour/Enter Doshia's Lair
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -1492,12 +1492,12 @@ turnin Anchors from the Harbour
 |only Aldmeri Dominion
 step
 'Open _Auridon_ Map
-'Travel to _The Harborage_ |q Daughter of Giants/Go to the Harborage |future
+'Travel to _The Harborage_ |q Daughter of Giants/Go to the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
 goto 69.65,92.86
-'Open _The Harborage_ |q Daughter of Giants/Go to the Harborage |future
+'Open _The Harborage_ |q Daughter of Giants/Go to the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -1506,7 +1506,7 @@ talk The Prophet |q Daughter of Giants/Talk to the Prophet
 |only Aldmeri Dominion
 step
 goto 60.27,30.68
-'Use _Portal to Coldharbour_ |q Daughter of Giants/Enter Coldharbour |future
+'Use _Portal to Coldharbour_ |q Daughter of Giants/Enter Coldharbour
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -1542,7 +1542,7 @@ goto 31.67,48.17
 |only Aldmeri Dominion
 step
 goto 29.89,53.28
-'Open _Imperial Footlocker_ |q Daughter of Giants/Find Lyris's Armor |future
+'Open _Imperial Footlocker_ |q Daughter of Giants/Find Lyris's Armor
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -1602,11 +1602,11 @@ goto 65.36,36.07
 |only Aldmeri Dominion
 step
 goto 76.70,40.91
-kill Manifestation of Terror |q Daughter of Giants/Vanquish Lyris's Terror |future
+kill Manifestation of Terror |q Daughter of Giants/Vanquish Lyris's Terror
 |only Aldmeri Dominion
 step
 goto 78.87,42.42
-'Use _Portal to the Harborage_ |q Daughter of Giants/Escape the Foundry of Woe |future
+'Use _Portal to the Harborage_ |q Daughter of Giants/Escape the Foundry of Woe
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -1889,7 +1889,7 @@ goto 50.10,29.22
 'Open _Firsthold Castle_ |q Sever All Ties/Enter the Castle
 step
 goto 50.04,23.17
-'Use _Portal to the Refuge of Dread_ |q Sever All Ties/Enter the Portal |future
+'Use _Portal to the Refuge of Dread_ |q Sever All Ties/Enter the Portal
 |tip Manually skip to the next step.
 step
 goto therefugeofdread_base 53.61,56.97
@@ -1933,12 +1933,12 @@ goto 18.30,42.02
 |tip Manually skip to the next step.
 step
 goto auridon_base 69.65,92.86
-'Open _The Harborage_ |q Chasing Shadows/Go to the Harborage |future
+'Open _The Harborage_ |q Chasing Shadows/Go to the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
 goto the_aldmiri_harborage_map_base 60.26,36.36
-talk The Prophet |q Chasing Shadows/Talk to the Prophet |future
+talk The Prophet |q Chasing Shadows/Talk to the Prophet
 |only Aldmeri Dominion
 step
 goto 29.03,77.24
@@ -1968,7 +1968,7 @@ goto 73.08,42.45
 |only Aldmeri Dominion
 step
 goto 73.08,42.45
-'Open _Abandoned Cellar_ |q Chasing Shadows/Enter the Cellar |future
+'Open _Abandoned Cellar_ |q Chasing Shadows/Enter the Cellar
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -1994,7 +1994,7 @@ goto vulkhelguard_base 55.08,41.05
 |only Aldmeri Dominion
 step
 goto auridon_base 69.65,92.86
-'Open _The Harborage_ |q Chasing Shadows/Return to the Harborage |future
+'Open _The Harborage_ |q Chasing Shadows/Return to the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -2013,10 +2013,10 @@ step
 |only Aldmeri Dominion
 step
 goto vulkhelguard_base 59.98,66.83
-talk Captain Jimila |q The Great Tree/Talk to Captain Jimila in Vulkhel Guard |future |next Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Grahtwood
+talk Captain Jimila |q The Great Tree/Talk to Captain Jimila in Vulkhel Guard |next Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Grahtwood
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Grahtwood",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Grahtwood",[[
 loadingimage loadscreen_grahtwood_01.dds
 description This region is the southern heart of the Wood Elves' great forest, and home to more of the gigantic graht-oaks than any other part of Valenwood. Its capital, now also the capital of the entire Aldmeri Dominion, is Elden Root.
 step
@@ -2071,7 +2071,7 @@ goto 21.51,69.59
 talk Lieutenant Kazargi |q Unsafe Haven/Talk to Lieutenant Kazargi
 step
 goto 22.82,68.54
-'Open _Aquifer_ |q Unsafe Haven/Enter Aquifer |future
+'Open _Aquifer_ |q Unsafe Haven/Enter Aquifer
 |tip Manually skip to the next step.
 step
 goto havensewers_base 28.11,81.62 |q Unsafe Haven/Enter Fort
@@ -2090,7 +2090,7 @@ goto 50.05,9.49
 step
 goto haven_base 48.23,42.68
 |tip Inside the building.
-'Unlock _Gate Mechanism_ |q Unsafe Haven/Open Gate |future
+'Unlock _Gate Mechanism_ |q Unsafe Haven/Open Gate
 step
 goto 49.99,43.52
 'Open _Haven_ |q Unsafe Haven/Talk to Lord Gharesh-ri
@@ -2228,7 +2228,7 @@ goto 63.26,48.78
 |only Aldmeri Dominion
 step
 goto eldenrootmagesguilddown_base 62.43,45.67
-'Use _Portal to the Shivering Isles_ |q Simply Misplaced/Enter Portal |future
+'Use _Portal to the Shivering Isles_ |q Simply Misplaced/Enter Portal
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -2325,7 +2325,7 @@ goto 46.25,39.10
 step
 goto 51.46,84.71
 kill Maleel al-Akir
-'Retrieve _Staff_ |q Simply Misplaced/Retrieve the Staff |future
+'Retrieve _Staff_ |q Simply Misplaced/Retrieve the Staff
 |only Aldmeri Dominion
 step
 goto 49.38,55.09
@@ -2350,7 +2350,7 @@ talk Sheogorath |q Simply Misplaced/Talk to Sheogorath
 |only Aldmeri Dominion
 step
 goto 51.70,56.30
-'Take _Circus of Cheerful Slaughter_ |q Simply Misplaced/Collect the Book |future
+'Take _Circus of Cheerful Slaughter_ |q Simply Misplaced/Collect the Book
 |only Aldmeri Dominion
 step
 goto eldenrootmagesguilddown_base 36.10,53.44
@@ -2384,12 +2384,12 @@ talk Prince Naemon |q The Honor of the Queen/Talk to Prince Naemon
 |tip Persuade him.
 step
 goto 70.21,61.56
-'Open _Upper Level_ |q The Dangerous Past |future
+'Open _Upper Level_ |q The Dangerous Past
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
 goto eldenrootcrafting_base 64.65,82.33
-'Open _Fighters Guild_ |q The Dangerous Past |future
+'Open _Fighters Guild_ |q The Dangerous Past
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -2404,7 +2404,7 @@ goto 67.07,63.33
 |only Aldmeri Dominion
 step
 goto 69.93,64.11
-'Use _Portal to Mzeneldt_ |q The Dangerous Past/Talk to Sees-All-Colors |future
+'Use _Portal to Mzeneldt_ |q The Dangerous Past/Talk to Sees-All-Colors
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -2441,7 +2441,7 @@ goto 83.98,43.62
 |only Aldmeri Dominion
 step
 goto 83.75,47.41
-'Witness the _Scene_ |q The Dangerous Past/Witness the Scene |future
+'Witness the _Scene_ |q The Dangerous Past/Witness the Scene
 |only Aldmeri Dominion
 step
 goto 83.49,47.77
@@ -2518,7 +2518,7 @@ talk Jofnir Iceblade |q The Dangerous Past/Talk to Jofnir Iceblade
 |only Aldmeri Dominion
 step
 goto 37.04,45.50
-'Use _Portal to the Guildhall_ |q The Dangerous Past/Talk to Merric at-Aswala |future
+'Use _Portal to the Guildhall_ |q The Dangerous Past/Talk to Merric at-Aswala
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -2539,7 +2539,7 @@ goto 56.73,65.45
 step
 goto 34.77,75.37
 |tip Upstairs inside Altmer Embassy.
-talk Ambassador Tarinwe |q The Honor of the Queen/Talk to Ambassador Tarinwe |future
+talk Ambassador Tarinwe |q The Honor of the Queen/Talk to Ambassador Tarinwe
 step
 goto 45.07,80.87
 talk Corporal Malin |q The Honor of the Queen/Investigate the Storeroom
@@ -2583,7 +2583,7 @@ goto 67.99,37.92
 talk Azareth |q The Honor of the Queen/Talk to Azareth
 step
 goto 62.89,37.69
-'Open _The Middens_ |q The Honor of the Queen/Enter the Middens |future
+'Open _The Middens_ |q The Honor of the Queen/Enter the Middens
 |tip Manually skip to the next step.
 step
 goto themiddens_base 48.72,39.91 |q The Honor of the Queen/Search the Middens for Ambassador Tarinwe
@@ -2606,7 +2606,7 @@ step
 |tip Manually skip to the next step.
 step
 goto eldenrootservices_base 32.70,26.16
-'Open _Upper Level_ |q The Honor of the Queen/Return to the Elden Root Throne Room |future
+'Open _Upper Level_ |q The Honor of the Queen/Return to the Elden Root Throne Room
 |tip Manually skip to the next step.
 step
 goto eldenrootcrafting_base 78.02,67.63
@@ -2625,10 +2625,10 @@ goto 40.33,53.51
 talk Meleras |q Fit to Rule/Talk to Meleras
 step
 'Open _Grahtwood_ Map
-'Travel to _Elden Root Temple_ |q Lost in Study |future
+'Travel to _Elden Root Temple_ |q Lost in Study
 |tip Manually skip to the next step.
 step
-goto grahtwood_base 58.45,40.01 |q Lost in Study |future
+goto grahtwood_base 58.45,40.01 |q Lost in Study
 |only not Aldmeri Dominion
 step
 goto 50.76,37.95
@@ -2641,14 +2641,14 @@ step
 goto 51.21,26.58 |lorebook The House of Troubles/1/8/4
 |only Aldmeri Dominion
 step
-goto 59.45,30.78 |q Lost in Study |future
+goto 59.45,30.78 |q Lost in Study
 |only not Aldmeri Dominion
 step
 goto 51.86,27.18
 'Examine _The House of Troubles_ |lorebook The House of Troubles/1/8/4
 |only Aldmeri Dominion
 step
-goto 53.53,24.72 |q Lost in Study |future
+goto 53.53,24.72 |q Lost in Study
 |only Aldmeri Dominion
 step
 goto 55.15,27.08
@@ -2675,7 +2675,7 @@ goto 43.61,74.20
 talk Laranalda |q Lost in Study/Talk to Laranalda
 step
 goto 43.61,74.20
-talk Laranalda |q Lost in Study/Find Tedryni |future
+talk Laranalda |q Lost in Study/Find Tedryni
 |tip Manually skip to the next step.
 step
 goto 48.17,55.78
@@ -2786,7 +2786,7 @@ talk Laranalda |q Heart of the Matter/Pursue Ukaezai
 |tip Manually skip to the next step.
 step
 goto 71.44,50.40
-'Open _Reliquary Vault_ |q Heart of the Matter/Pursue Ukaezai |future
+'Open _Reliquary Vault_ |q Heart of the Matter/Pursue Ukaezai
 |tip Manually skip to the next step.
 step
 goto reliquaryvaulttop_base 53.72,52.47
@@ -2813,22 +2813,22 @@ goto 45.94,26.79
 |only Aldmeri Dominion
 step
 'Open _Grahtwood_ Map
-'Travel to _Haven_ |q The Grip of Madness |future
+'Travel to _Haven_ |q The Grip of Madness
 |tip Manually skip to the next step.
 step
 goto haven_base 57.10,37.38
-'Open _Haven City Gates_ |q The Grip of Madness |future
+'Open _Haven City Gates_ |q The Grip of Madness
 |tip Manually skip to the next step.
 step
 goto 16.08,48.50
-'Open _Haven City Gates_ |q The Grip of Madness |future
+'Open _Haven City Gates_ |q The Grip of Madness
 |tip Manually skip to the next step.
 step
 goto grahtwood_base 64.58,74.24
 'Examine _Common Arms of Valenwood_ |lorebook Common Arms of Valenwood/1/26/4
 |only Aldmeri Dominion
 step
-goto 65.86,72.71 |q The Grip of Madness |future
+goto 65.86,72.71 |q The Grip of Madness
 step
 goto 57.64,71.61
 wayshrine Gray Mire
@@ -2913,7 +2913,7 @@ goto 38.90,76.46 |q The Grip of Madness/Enter the Cathedral |tip Leave Daraneth'
 step
 goto 37.42,77.48
 'Use _Old Scroll Locked Door_
-'Open _Cathedral of the Golden Path_ |q The Grip of Madness/Enter the Cathedral |future
+'Open _Cathedral of the Golden Path_ |q The Grip of Madness/Enter the Cathedral
 |tip Manually skip to the next step.
 step
 goto southpoint_base 48.72,81.60
@@ -2968,18 +2968,18 @@ talk Sheogorath
 turnin The Grip of Madness
 step
 'Open _Grahtwood_ Map
-'Travel to _Elden Root Temple_ |q A Lasting Winter |future
+'Travel to _Elden Root Temple_ |q A Lasting Winter
 |tip Manually skip to the next step.
 step
-goto grahtwood_base 58.28,40.05 |q A Lasting Winter |future
+goto grahtwood_base 58.28,40.05 |q A Lasting Winter
 step
-goto 45.93,37.23 |q A Lasting Winter |future
+goto 45.93,37.23 |q A Lasting Winter
 |only not Aldmeri Dominion
 step
-goto 41.96,35.11 |q A Lasting Winter |future
+goto 41.96,35.11 |q A Lasting Winter
 |only not Aldmeri Dominion
 step
-goto 39.30,35.37 |q A Lasting Winter |future
+goto 39.30,35.37 |q A Lasting Winter
 |only not Aldmeri Dominion
 step
 goto 44.49,36.60
@@ -2993,10 +2993,10 @@ step
 goto 34.62,38.78
 wayshrine Gil-Var-Delle
 step
-goto 30.94,26.22 |q A Lasting Winter |future
+goto 30.94,26.22 |q A Lasting Winter
 |only not Aldmeri Dominion
 step
-goto 31.78,22.02 |q A Lasting Winter |future
+goto 31.78,22.02 |q A Lasting Winter
 |only not Aldmeri Dominion
 step
 goto 38.03,39.19
@@ -3007,13 +3007,13 @@ goto 39.01,42.57
 'Examine _Ancient Scrolls of the Dwemer V_ |lorebook Ancient Scrolls of the Dwemer V/1/12/4
 |only Aldmeri Dominion
 step
-goto 37.79,39.44 |q A Lasting Winter |future
+goto 37.79,39.44 |q A Lasting Winter
 |only Aldmeri Dominion
 step
-goto 34.62,38.78 |q A Lasting Winter |future
+goto 34.62,38.78 |q A Lasting Winter
 |only Aldmeri Dominion
 step
-goto 30.79,26.31 |q A Lasting Winter |future
+goto 30.79,26.31 |q A Lasting Winter
 |only Aldmeri Dominion
 step
 goto 28.76,25.67
@@ -3029,7 +3029,7 @@ wayshrine Redfur Trading Post
 step
 goto 40.55,75.60
 'Use _Redfur Trading Post_ Wayshrine
-'Travel to _Gil-Var-Delle_ |q A Lasting Winter |future
+'Travel to _Gil-Var-Delle_ |q A Lasting Winter
 |tip Manually skip to the next step.
 step
 goto grahtwood_base 29.85,43.28
@@ -3049,7 +3049,7 @@ goto 29.45,56.02
 'Examine _Monomyth: "Shezarr's Song"_ |lorebook Monomyth: "Shezarr's Song"/1/10/5
 |only Aldmeri Dominion
 step
-goto 36.65,50.47 |q A Lasting Winter |future
+goto 36.65,50.47 |q A Lasting Winter
 step
 goto 44.36,50.59
 |tip She runs up to you.
@@ -3096,17 +3096,17 @@ goto 40.90,54.67 |q A Lasting Winter/Enter the Dig Site
 step
 goto 42.46,56.09 |q A Lasting Winter/Enter the Dig Site |tip Follow ramp to the ground.
 step
-goto 42.36,52.80 |q A Lasting Winter/Northern Cave |future
+goto 42.36,52.80 |q A Lasting Winter/Enter the Dig Site
 step
 goto 42.33,50.09
-talk Nairume |q A Lasting Winter/Talk to the Frost Creature |future
+talk Nairume |q A Lasting Winter/Talk to the Frost Creature
 step
 goto 42.36,52.80 |q A Lasting Winter/Enter the Vault
 step
 goto 43.10,56.27 |q A Lasting Winter/Enter the Vault
 step
 goto 43.04,58.73
-'Open _Nairume's Prison_ |q A Lasting Winter/Talk to Nairume |future
+'Open _Nairume's Prison_ |q A Lasting Winter/Talk to Nairume
 |tip Manually skip to the next step.
 step
 goto rajhinsvault_base 64.56,76.41
@@ -3187,10 +3187,10 @@ step
 goto eldenrootgroundfloor_base 49.46,57.18 |q The Orrery of Elden Root/Enter the Orrery
 step
 goto eldenrootgroundfloor_base 44.07,55.42
-'Open _The Orrery_ |q The Orrery of Elden Root/Enter the Orrery |future
+'Open _The Orrery_ |q The Orrery of Elden Root/Enter the Orrery
 |tip Manually skip to the next step.
 step
-goto orrery_base 12.18,25.10 |q The Orrery of Elden Root/Talk to Conservator Daraneth |future
+goto orrery_base 12.18,25.10 |q The Orrery of Elden Root/Talk to Conservator Daraneth
 step
 goto 27.44,24.98 |q The Orrery of Elden Root/Talk to Conservator Daraneth
 step
@@ -3242,7 +3242,7 @@ step
 |only Aldmeri Dominion
 step
 goto auridon_base 69.65,92.87
-'Open _The Harborage_ |q Castle of the Worm/Talk to the Prophet |future
+'Open _The Harborage_ |q Castle of the Worm/Talk to the Prophet
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -3255,7 +3255,7 @@ talk Abnur Tharn |q Castle of the Worm/Talk to Abnur Tharn
 |only Aldmeri Dominion
 step
 goto 60.30,31.13
-'Use _Portal to Coldharbour_ |q Castle of the Worm/Talk to Abnur |future
+'Use _Portal to Coldharbour_ |q Castle of the Worm/Talk to Abnur
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -3295,7 +3295,7 @@ goto 55.51,26.09 |q Castle of the Worm/Follow Cadwell |tip Kill everything on yo
 |only Aldmeri Dominion
 step
 goto 55.51,26.09
-talk Cadwell |q Castle of the Worm/Enter the Keep |future
+talk Cadwell |q Castle of the Worm/Enter the Keep
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -3385,7 +3385,7 @@ goto 14.13,75.24
 |only Aldmeri Dominion
 step
 goto 15.41,77.99
-'Use _Portal to the Harborage_ |q Castle of the Worm/Talk to Abnur Tharn |future
+'Use _Portal to the Harborage_ |q Castle of the Worm/Talk to Abnur Tharn
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -3421,7 +3421,7 @@ goto grahtwood_base 17.52,19.51
 |tip Manually skip to the next step. |next Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Greenshade
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Greenshade",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Greenshade",[[
 loadingimage loadscreen_greenshade_01.dds
 description As the region of Valenwood farthest from all other realms, Greenshade's graht-oak forest is virtually pristine, the Tamriel jungle at its most primeval. Its capital is the trading port of Woodhearth.
 step
@@ -3436,7 +3436,7 @@ goto 34.48,31.65
 'Open _Mages Guild_ |q The Staff of Magnus/Follow Captain Sarandil to the Mages Guild
 step
 goto 34.47,31.67
-'Open _Mages Guild_ |q The Staff of Magnus/Follow Captain Sarandil to the Mages Guild |future
+'Open _Mages Guild_ |q The Staff of Magnus/Follow Captain Sarandil to the Mages Guild
 step
 goto 24.40,33.84
 'Wait for _Captain Sarandil to Unlock the Vault_ |q The Staff of Magnus/Wait for Captain Sarandil to Unlock the Vault
@@ -3446,7 +3446,7 @@ goto 24.18,33.69
 |tip Manually skip to the next step.
 step
 goto 28.72,18.10
-talk Captain Sarandil |q The Staff of Magnus/Enter the Relic Room |future
+talk Captain Sarandil |q The Staff of Magnus/Enter the Relic Room
 |tip Manually skip to the next step.
 step
 goto 28.36,17.57
@@ -3454,7 +3454,7 @@ goto 28.36,17.57
 |tip Manually skip to the next step.
 step
 goto greenshade_base 66.54,47.76
-talk Captain Sarandil |q The Staff of Magnus/Enter the Inner Vault |future
+talk Captain Sarandil |q The Staff of Magnus/Enter the Inner Vault
 |tip Manually skip to the next step.
 step
 goto 66.48,47.68
@@ -3462,7 +3462,7 @@ goto 66.48,47.68
 |tip Manually skip to the next step.
 step
 goto 65.86,47.31
-'Take _Staff of Magnus_ |q The Staff of Magnus/Secure the Staff of Magnus |future
+'Take _Staff of Magnus_ |q The Staff of Magnus/Secure the Staff of Magnus
 step
 goto 66.00,47.33
 talk Captain Sarandil |q The Staff of Magnus/Talk to Captain Sarandil
@@ -3490,7 +3490,7 @@ accept Circus of Cheerful Slaughter
 |only Aldmeri Dominion
 step
 goto 30.40,24.97
-'Examine _Circus of Cheerful Slaughter_ |q Circus of Cheerful Slaughter/Talk to Sheogorath |future
+'Examine _Circus of Cheerful Slaughter_ |q Circus of Cheerful Slaughter/Talk to Sheogorath
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -3575,7 +3575,7 @@ talk Arch-Mage Shalidor
 accept Chateau of the Ravenous Rodent
 |only Aldmeri Dominion
 step
-goto 58.64,41.39 |q The Prismatic Core |future
+goto 58.64,41.39 |q The Prismatic Core
 |only Aldmeri Dominion
 step
 goto 68.05,28.33
@@ -3585,7 +3585,7 @@ accept The Prismatic Core
 |only Aldmeri Dominion
 step
 goto 68.80,29.27
-'Enter _Portal to Abagarlas_ |q The Prismatic Core/Enter Portal |future
+'Enter _Portal to Abagarlas_ |q The Prismatic Core/Enter Portal
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -3623,7 +3623,7 @@ talk Guildmaster Sees-All-Colors |q The Prismatic Core/Talk to Guildmaster Sees-
 |only Aldmeri Dominion
 step
 goto 38.95,81.21
-'Enter _Portal to the Earth Forge_ |q The Prismatic Core/Go to The Earth Forge |future
+'Enter _Portal to the Earth Forge_ |q The Prismatic Core/Go to The Earth Forge
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -3827,7 +3827,7 @@ goto 60.97,75.65
 talk Maruin |q The Witch of Silatar/Talk to Maruin
 step
 goto 61.12,75.33
-talk Spinner Maruin |q The Witch of Silatar/Ask Maruin to Begin the Story |future
+talk Spinner Maruin |q The Witch of Silatar/Ask Maruin to Begin the Story
 |tip Manually skip to the next step.
 step
 goto silatar_base 43.11,36.01
@@ -3910,7 +3910,7 @@ talk Spinner Maruin |q The Witch of Silatar/Talk to Maruin
 step
 goto 58.37,24.18
 |tip Watch the dialogue.
-talk Aranias |q The Witch of Silatar/Talk to Aranias |future
+talk Aranias |q The Witch of Silatar/Talk to Aranias
 step
 goto greenshade_base 60.53,76.19
 talk Spinner Maruin
@@ -3996,17 +3996,17 @@ goto 46.19,79.60
 'Open _Throne Plateau_ |q Throne of the Wilderking/Find Aranias and Andur
 |tip Manually skip to the next step.
 step
-goto 47.76,79.25 |q Throne of the Wilderking/Talk to Aranias |future
+goto 47.76,79.25 |q Throne of the Wilderking/Talk to Aranias
 step
 goto 47.57,85.63
 talk Aranias |q Throne of the Wilderking/Talk to Aranias
 step
 goto 47.06,86.13 |q Throne of the Wilderking/Follow Aranias
 step
-goto 45.65,85.21 |q Throne of the Wilderking/Reach the Wilderking's Throne |tip Use the Bundle of Roots to Burrow Under Fires. |future
+goto 45.65,85.21 |q Throne of the Wilderking/Reach the Wilderking's Throne |tip Use the Bundle of Roots to Burrow Under Fires.
 step
 goto 45.13,85.12
-'Open _Throne Plateau_ |q Throne of the Wilderking/Reach the Wilderking's Throne |future
+'Open _Throne Plateau_ |q Throne of the Wilderking/Reach the Wilderking's Throne
 step
 goto 46.92,84.33 |q Throne of the Wilderking/Find the Wilderking
 step
@@ -4074,7 +4074,7 @@ step
 goto 50.90,49.71 |q Veil of Illusion/Enter the Imperial Underground
 step
 goto 40.08,60.69
-'Open _Imperial Underground_ |q Veil of Illusion/Meet Asteril |future
+'Open _Imperial Underground_ |q Veil of Illusion/Meet Asteril
 |tip Manually skip to the next step.
 step
 goto imperialundergroundpart1_base 30.45,34.58
@@ -4093,7 +4093,7 @@ step
 goto 77.84,36.33 |q Veil of Illusion/Search the Old Imperial Tunnels for Asteril
 step
 goto 65.11,31.07
-'Take _Orders from Vicereeve Pelidil_ |q Veil of Illusion/Retrieve Pelidil's Orders |future
+'Take _Orders from Vicereeve Pelidil_ |q Veil of Illusion/Retrieve Pelidil's Orders
 step
 goto 25.64,33.57
 talk Razum-dar |q Veil of Illusion/Talk to Razum-dar
@@ -4126,7 +4126,7 @@ goto 17.61,61.78
 talk Oromin |q Double Jeopardy/Talk to Oromin
 step
 goto 17.70,62.13
-'Open _Imperial Underground_ |q Double Jeopardy/Search for Clues |future
+'Open _Imperial Underground_ |q Double Jeopardy/Search for Clues
 |tip Manually skip to the next step.
 step
 goto imperialundergroundpart2_base 91.83,30.99
@@ -4144,7 +4144,7 @@ goto 52.03,63.54
 talk Laryaril |q Double Jeopardy/Talk to Laryaril
 step
 goto 6.34,59.62
-'Open _Woodhearth_ |q Double Jeopardy/Talk to Treethane Fariel |future
+'Open _Woodhearth_ |q Double Jeopardy/Talk to Treethane Fariel
 |tip Manually skip to the next step.
 step
 goto woodhearth_base 53.66,54.11 |q Double Jeopardy/Talk to Treethane Fariel
@@ -4161,7 +4161,7 @@ goto greenshade_base 28.89,50.39
 wayshrine Serpent's Grotto
 step
 'Use _Serpent's Grotto_ Wayshrine
-'Travel to _Vulkhel Guard_ |q The Tharn Speaks/Travel to the Mages Guild |future
+'Travel to _Vulkhel Guard_ |q The Tharn Speaks/Travel to the Mages Guild
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -4230,15 +4230,15 @@ turnin The Tharn Speaks
 |only Aldmeri Dominion
 step
 'Open _Greenshade_ Map
-'Travel to _Serpent's Grotto_ |q Before the Storm/Talk to Major Cirenwe |future
+'Travel to _Serpent's Grotto_ |q Before the Storm/Talk to Major Cirenwe
 |tip Manually skip to the next step.
 step
 goto greenshade_base 27.54,49.95
-'Open _Serpent's Grotto_ |q Before the Storm/Talk to Major Cirenwe |future
+'Open _Serpent's Grotto_ |q Before the Storm/Talk to Major Cirenwe
 |tip Manually skip to the next step.
 step
 goto serpentsgrotto_base 50.73,27.33
-'Open _Greenshade_ |q Before the Storm/Talk to Major Cirenwe |future
+'Open _Greenshade_ |q Before the Storm/Talk to Major Cirenwe
 |tip Manually skip to the next step.
 step
 goto greenshade_base 28.25,40.35
@@ -4306,7 +4306,7 @@ accept Pelidil's End
 step
 goto albeceansea_base 38.98,63.61
 |tip Go upstairs.
-'Open _Deck_ |q Pelidil's End/Go to the Ship's Deck |future
+'Open _Deck_ |q Pelidil's End/Go to the Ship's Deck
 step
 goto 39.62,64.40
 'Repel _Maomer Boarders_ |q Pelidil's End/Repel Maormer Boarders
@@ -4320,7 +4320,7 @@ goto 43.14,63.35
 step
 goto 41.33,68.30
 '_Fix_
-kill the enemies that appear on the ship |q Pelidil's End/Repel Maormer Boarders |future
+kill the enemies that appear on the ship |q Pelidil's End/Repel Maormer Boarders
 step
 goto 39.97,63.60
 'Use _Portal to the Maormer Ship_ |q Pelidil's End/Kill Vicereeve Pelidil
@@ -4330,7 +4330,7 @@ goto 85.44,48.49
 kill Vicereeve Pelidil |q Pelidil's End/Kill Vicereeve Pelidil
 step
 goto 77.20,37.18
-'Use _Portal to the Prowler_ |q Pelidil's End/Return to Seaside Sanctuary |future
+'Use _Portal to the Prowler_ |q Pelidil's End/Return to Seaside Sanctuary
 |tip Manually skip to the next step.
 step
 goto greenshade_base 21.49,36.82
@@ -4343,7 +4343,7 @@ accept Report to Marbruk
 step
 goto 32.71,37.35
 'Use _Seaside Sanctuary_ Wayshrine
-'Travel to _Marbruk_ |q Report to Marbruk/Talk to Queen Ayrenn |future
+'Travel to _Marbruk_ |q Report to Marbruk/Talk to Queen Ayrenn
 |tip Manually skip to the next step.
 step
 goto marbruk_base 24.68,58.26
@@ -4412,7 +4412,7 @@ step
 goto 67.02,37.99
 |tip Watch the dialogue.
 'Use _Stone Table_
-talk Indaenir |q Retaking the Pass/Interrogate the Skulls with Indaenir |future
+talk Indaenir |q Retaking the Pass/Interrogate the Skulls with Indaenir
 |tip Manually skip to the next step.
 step
 goto 67.05,37.96
@@ -4461,7 +4461,7 @@ goto 66.64,37.91
 kill Servant of Naemon |q Retaking the Pass/Defeat the Servant of Naemon
 step
 goto 67.06,37.90
-talk Indaenir |q Retaking the Pass/Talk to Bodring |future
+talk Indaenir |q Retaking the Pass/Talk to Bodring
 |tip Manually skip to the next step.
 step
 goto 66.55,38.79 |q Retaking the Pass/Talk to Bodring
@@ -4471,16 +4471,16 @@ talk Bodring
 turnin Retaking the Pass
 accept Shades of Green
 step
-goto 65.32,37.85 |q The Blight of the Bosmer |future
+goto 65.32,37.85 |q The Blight of the Bosmer
 step
-goto 61.78,36.82 |q The Blight of the Bosmer |future
+goto 61.78,36.82 |q The Blight of the Bosmer
 step
-goto 55.20,38.80 |q The Blight of the Bosmer |future
+goto 55.20,38.80 |q The Blight of the Bosmer
 step
 goto 59.29,41.31
 wayshrine Falinesti
 step
-goto 54.05,34.93 |q The Blight of the Bosmer |future
+goto 54.05,34.93 |q The Blight of the Bosmer
 step
 goto 59.80,34.77
 |tip Cross bridge do not drop down. He approaches you.
@@ -4578,7 +4578,7 @@ step
 talk Indaenir |q Right of Theft/Talk to Indaenir
 step
 goto 38.36,38.12
-'Open _Nereid Temple_ |q Right of Theft/Find General Malgoth's Remains |future
+'Open _Nereid Temple_ |q Right of Theft/Find General Malgoth's Remains
 |tip Manually skip to the next step.
 step
 goto nereidtemple_base 32.87,31.30 |q Right of Theft/Find General Malgoth's Remains
@@ -4667,7 +4667,7 @@ goto 47.12,25.52
 |tip Manually skip to the next step.
 step
 goto 45.24,19.89
-'Open _Hectahame Grotto_ |q Striking at the Heart/Search for the Shade in Hectahame |future
+'Open _Hectahame Grotto_ |q Striking at the Heart/Search for the Shade in Hectahame
 |tip Manually skip to the next step.
 step
 goto hectahamegrottomain_base 36.42,42.30
@@ -4736,7 +4736,7 @@ goto 37.06,42.12
 'Wait for _Indaenir to Unseal the Door_ |q Striking at the Heart/Wait for Indaenir to Unseal the Door
 step
 goto 37.38,43.41
-'Open _Valenheart_ |q Striking at the Heart/Obtain the Staff of Magnus from the Shade |future
+'Open _Valenheart_ |q Striking at the Heart/Obtain the Staff of Magnus from the Shade
 |tip Manually skip to the next step.
 step
 goto hectahamegrottovalenheart_base 172.19,198.01
@@ -4801,11 +4801,11 @@ goto 34.47,15.50
 wayshrine Moonhenge
 step
 goto malabaltor_base 09.48,60.16
-'Open _Malabal Tor_ |q To Velyn Harbor/Go to Velyn Harbor |future
+'Open _Malabal Tor_ |q To Velyn Harbor/Go to Velyn Harbor
 |tip Manually skip to the next step. |next Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Malabal Tor
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Malabal Tor",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Malabal Tor",[[
 loadingimage loadscreen_malabaltor_01.dds
 description Malabal Tor is the northwest region of Valenwood, on the coast of the Abecean Sea and the Strid River estuary. Its capital is Silvenar, the spiritual home of all Wood Elves.
 step
@@ -4988,7 +4988,7 @@ step
 step
 '_Inside the Arena:_
 |tip Go to the western big wooden gate.
-'Open _Dra'bul_ |q Reap What Is Sown/Talk to the Green Lady |future
+'Open _Dra'bul_ |q Reap What Is Sown/Talk to the Green Lady
 |tip Manually skip to the next step.
 step
 goto 42.25,48.87
@@ -5111,9 +5111,9 @@ goto 68.30,77.49
 'Use the _Runestone of Malacath on Ambassador Sariel_ |q The Prisoner of Jathsogur/Sacrifice Ambassador Sariel
 step
 goto 68.36,77.61
-talk Ambassador Raen |q The Prisoner of Jathsogur/Talk to Ambassador Raen |or |future
+talk Ambassador Raen |q The Prisoner of Jathsogur/Talk to Ambassador Raen |or
 '_OR_
-talk Ambassador Sariel |q The Prisoner of Jathsogur/Talk to Ambassador Sariel |or |future
+talk Ambassador Sariel |q The Prisoner of Jathsogur/Talk to Ambassador Sariel |or
 step
 goto 70.56,78.69 |q The Prisoner of Jathsogur/Disrupt Essence Stone
 step
@@ -5185,7 +5185,7 @@ goto 63.47,49.21
 |only Aldmeri Dominion
 step
 goto auridon_base 69.64,92.85
-'Open _The Harborage_ |q Halls of Torment/Talk to Varen Aquilarios |future
+'Open _The Harborage_ |q Halls of Torment/Talk to Varen Aquilarios
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -5204,7 +5204,7 @@ goto 56.56,32.85
 |only Aldmeri Dominion
 step
 goto 56.56,32.85
-'Use _Portal to Halls of Torment_ |q Halls of Torment/Explore the Halls of Torment |future
+'Use _Portal to Halls of Torment_ |q Halls of Torment/Explore the Halls of Torment
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -5285,7 +5285,7 @@ talk Sai Sahan |q Halls of Torment/Talk to Sai Sahan
 |only Aldmeri Dominion
 step
 goto 62.41,35.78
-'Use _Portal to the Harborage_ |q Halls of Torment/Talk to Varen Aquilarios |future
+'Use _Portal to the Harborage_ |q Halls of Torment/Talk to Varen Aquilarios
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -5313,7 +5313,7 @@ goto 69.05,57.58
 |only Aldmeri Dominion
 step
 goto 69.55,59.22
-'Use _Portal to the Shivering Isles_ |q Chateau of the Ravenous Rodent/Enter the Shivering Isles |future
+'Use _Portal to the Shivering Isles_ |q Chateau of the Ravenous Rodent/Enter the Shivering Isles
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -5445,7 +5445,7 @@ goto 86.50,23.30
 |only Aldmeri Dominion
 step
 goto 86.50,23.30
-'Open _Ragnthar_ |q Proving the Deed/Enter Ragnthar |future
+'Open _Ragnthar_ |q Proving the Deed/Enter Ragnthar
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -5542,7 +5542,7 @@ goto 46.04,79.02
 |only Aldmeri Dominion
 step
 goto auridon_base 69.65,92.86
-'Open _The Harborage_ |q Valley of Blades/Enter The Harborage |future
+'Open _The Harborage_ |q Valley of Blades/Enter The Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -5551,7 +5551,7 @@ talk Sai Sahan |q Valley of Blades/Talk to Sai Sahan
 |only Aldmeri Dominion
 step
 goto 60.30,32.63
-'Use _Portal to Valley of Blades_ |q Valley of Blades/Travel to the Valley of Blades |future
+'Use _Portal to Valley of Blades_ |q Valley of Blades/Travel to the Valley of Blades
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -5567,7 +5567,7 @@ goto 34.82,24.26 |q Valley of Blades/Enter the Abbey of Blades
 |only Aldmeri Dominion
 step
 goto 50.91,45.68
-'Find _Kasura_ |q Valley of Blades/Find Kasura |future
+'Find _Kasura_ |q Valley of Blades/Find Kasura
 |only Aldmeri Dominion
 step
 goto 50.91,45.68
@@ -5598,7 +5598,7 @@ goto 58.54,48.89 |q Valley of Blades/Enter the Ancestral Crypt
 |only Aldmeri Dominion
 step
 goto 74.43,44.86
-'Open _Ancestral Crypt_ |q Valley of Blades/Enter the Ancestral Crypt |future
+'Open _Ancestral Crypt_ |q Valley of Blades/Enter the Ancestral Crypt
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -5628,7 +5628,7 @@ talk Sai Sahan |q Valley of Blades/Talk to Sai Sahan
 |only Aldmeri Dominion
 step
 goto 72.65,49.20
-'Use _Portal to The Harborage_ |q Valley of Blades/Return to the Harborage |future
+'Use _Portal to The Harborage_ |q Valley of Blades/Return to the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -5752,7 +5752,7 @@ goto 70.63,44.52
 |tip Manually skip to the next step.
 step
 goto 70.34,44.25
-'Climb _Silvenar's Audience Hall_ |q Restore the Silvenar/Defeat the Hound |future
+'Climb _Silvenar's Audience Hall_ |q Restore the Silvenar/Defeat the Hound
 |tip Manually skip to the next step.
 step
 goto silvenarthroneroom_base 50.48,50.28
@@ -5773,7 +5773,7 @@ talk Spinner Dothriel
 turnin Restore the Silvenar
 step
 goto 27.15,17.94
-'Open _Silvenar_ |q The Dark Mane/Wait for Lord Gharesh-ri |future
+'Open _Silvenar_ |q The Dark Mane/Wait for Lord Gharesh-ri
 |tip Manually skip to the next step.
 step
 goto malabaltor_base 70.92,43.78
@@ -5795,7 +5795,7 @@ goto baandaritradingpost_base 78.59,50.24
 |tip Manually skip to the next step. |next Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Reaper's March
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Reaper's March",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Reaper's March",[[
 loadingimage loadscreen_reapersmarch_01.dds
 description Once known simply as Northern Valenwood, this region that borders Cyrodiil and Elsweyr has seen so much bloody warfare since the fall of the Second Empire that it's now known as Reaper's March, even to its battle-scarred inhabitants.
 step
@@ -5930,7 +5930,7 @@ step
 goto 43.59,10.31 |q A Door Into Moonlight/Go to the Moonlit Clearing
 step
 goto 46.08,10.87
-talk Kauzanabi-jo |q A Door Into Moonlight/Talk to Kauzanabi-jo |future
+talk Kauzanabi-jo |q A Door Into Moonlight/Talk to Kauzanabi-jo
 step
 goto 46.11,10.81
 |tip Watch dialogue
@@ -6065,7 +6065,7 @@ goto 65.30,63.75
 |tip Manually skip to the next step.
 step
 goto 66.43,64.21
-'Open _Temple Undercroft_ |q Stonefire Machinations/Find and Defeat Mane Akkhuz-ri |future
+'Open _Temple Undercroft_ |q Stonefire Machinations/Find and Defeat Mane Akkhuz-ri
 |tip Manually skip to the next step.
 step
 goto 66.43,60.84
@@ -6132,7 +6132,7 @@ turnin To Rawl'kha
 accept The First Step
 step
 goto 73.76,51.47
-'Open _Rawl'kha Temple_ |q The First Step/Enter Rawl'kha Temple |future
+'Open _Rawl'kha Temple_ |q The First Step/Enter Rawl'kha Temple
 |tip Manually skip to the next step.
 step
 goto rawlkhatemple_base 52.47,26.23
@@ -6266,12 +6266,12 @@ goto 51.45,15.24
 step
 goto rawlkha_base 37.79,54.46
 'Use _Rawl'kha_ Wayshrine
-'Travel to _The Harborage_ in Auridon |q Shadow of Sancre Tor/Enter the Harborage |future
+'Travel to _The Harborage_ in Auridon |q Shadow of Sancre Tor/Enter the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
 goto auridon_base 69.65,92.88
-'Open _The Harborage_ |q Shadow of Sancre Tor/Enter the Harborage |future
+'Open _The Harborage_ |q Shadow of Sancre Tor/Enter the Harborage
 |tip Manually skip to the next step.
 step
 goto the_aldmiri_harborage_map_base 60.11,36.34
@@ -6279,7 +6279,7 @@ talk Varen Aquilarios |q Shadow of Sancre Tor/Talk to Varen Aquilarios
 |only Aldmeri Dominion
 step
 goto 54.24,31.48
-talk Sai Sahan |q Shadow of Sancre Tor/Talk to Sai Sahan |future
+talk Sai Sahan |q Shadow of Sancre Tor/Talk to Sai Sahan
 |only Aldmeri Dominion
 step
 goto 60.28,29.93
@@ -6287,7 +6287,7 @@ goto 60.28,29.93
 |only Aldmeri Dominion
 step
 goto 60.28,29.93
-'Use _Portal to Sancre Tor_ |q Shadow of Sancre Tor/Enter Portal to Sancre Tor |future
+'Use _Portal to Sancre Tor_ |q Shadow of Sancre Tor/Enter Portal to Sancre Tor
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -6446,7 +6446,7 @@ goto 23.53,50.60
 |only Aldmeri Dominion
 step
 goto 18.72,50.49
-'Use _Portal to Harborage_ |q Shadow of Sancre Tor/Return to the Harborage |future
+'Use _Portal to Harborage_ |q Shadow of Sancre Tor/Return to the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -6456,7 +6456,7 @@ turnin Shadow of Sancre Tor
 |only Aldmeri Dominion
 step
 'Open _Reaper's March_ Map
-'Travel to _Rawl'kha_ |q Will of the Council/Talk to Aelif |future
+'Travel to _Rawl'kha_ |q Will of the Council/Talk to Aelif
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -6470,12 +6470,12 @@ goto 49.08,31.11
 |only Aldmeri Dominion
 step
 goto 49.08,31.11
-talk Aelif |q Will of the Council/Enter Portal to the Earth Forge |future
+talk Aelif |q Will of the Council/Enter Portal to the Earth Forge
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
 goto 49.26,31.96
-'Use _Portal to Earth Forge_ |q Will of the Council/Enter Portal to the Earth Forge |future
+'Use _Portal to Earth Forge_ |q Will of the Council/Enter Portal to the Earth Forge
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -6499,7 +6499,7 @@ goto 39.03,24.29
 |only Aldmeri Dominion
 step
 goto 39.70,24.47
-'Use _Portal to Halls of Submission_ |q Will of the Council/Enter Portal to Halls of Submission |future
+'Use _Portal to Halls of Submission_ |q Will of the Council/Enter Portal to Halls of Submission
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -6564,7 +6564,7 @@ goto 66.86,50.04
 |only Aldmeri Dominion
 step
 goto theearthforge_base 39.03,22.38
-talk Jofnir Iceblade |q Will of the Council/Talk to Jofnir |future
+talk Jofnir Iceblade |q Will of the Council/Talk to Jofnir
 |only Aldmeri Dominion
 step
 goto 38.85,22.15
@@ -6592,7 +6592,7 @@ talk Merric at-Aswala |q Will of the Council/Talk to Merric
 |only Aldmeri Dominion
 step
 goto 73.44,45.35
-'Use _Portal to the Guildhall_ |q Will of the Council/Return to the Guild Hall |future
+'Use _Portal to the Guildhall_ |q Will of the Council/Return to the Guild Hall
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -6635,7 +6635,7 @@ goto 50.69,54.45
 |only Aldmeri Dominion
 step
 goto 50.61,54.54
-'Use _Portal to Eyevea_ |q The Mad God's Bargain/Enter Portal to Eyevea |future
+'Use _Portal to Eyevea_ |q The Mad God's Bargain/Enter Portal to Eyevea
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -6701,7 +6701,7 @@ talk Arch-Mage Shalidor |q The Mad God's Bargain/Talk to Shalidor
 |only Aldmeri Dominion
 step
 goto 51.62,48.25
-'Open _Mages Guild Hall_ |q The Mad God's Bargain/Enter the Guildhall |future
+'Open _Mages Guild Hall_ |q The Mad God's Bargain/Enter the Guildhall
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -6756,11 +6756,11 @@ goto auridon_base 69.64,92.85
 |only Aldmeri Dominion
 step
 goto the_aldmiri_harborage_map_base 59.99,36.62
-talk Varen Aquilarios |q Council of the Five Companions/Talk to Varen Aquilarios |future
+talk Varen Aquilarios |q Council of the Five Companions/Talk to Varen Aquilarios
 |only Aldmeri Dominion
 step
 goto 61.35,32.81
-talk Sai Sahan |q Council of the Five Companions/Talk to Sai Sahan |future
+talk Sai Sahan |q Council of the Five Companions/Talk to Sai Sahan
 |only Aldmeri Dominion
 step
 goto 61.35,32.81
@@ -6841,7 +6841,7 @@ goto 27.99,84.35
 'Dispel the _Temple Ward_ |q Motes in the Moonlight/Dispel the Temple Ward
 step
 goto 27.73,84.72
-'Open _Moonmont_ |q Motes in the Moonlight/Enter Moonmont |future
+'Open _Moonmont_ |q Motes in the Moonlight/Enter Moonmont
 |tip Manually skip to the next step.
 step
 goto moonmonttemple_base 56.27,49.16
@@ -6885,7 +6885,7 @@ talk Champion
 turnin Motes in the Moonlight
 step
 goto 13.10,46.52
-'Use _Portal_ |q To Dune |future
+'Use _Portal_ |q To Dune
 |tip Manually skip to the next step.
 step
 goto reapersmarch_base 33.41,80.85
@@ -6998,7 +6998,7 @@ goto 60.10,59.51
 'Use _Altar of Jone_ |q The Fires of Dune/Cleanse Shrine of Jone
 step
 goto 60.48,73.60
-'Open _Shrine of Lorkhaj_ |q The Fires of Dune/Find the Champion |future
+'Open _Shrine of Lorkhaj_ |q The Fires of Dune/Find the Champion
 step
 goto reapersmarch_base 86.52,51.09
 kill Harvester |q The Fires of Dune/Face Down Javad Tharn
@@ -7019,7 +7019,7 @@ turnin The Fires of Dune
 accept The Moonlit Path
 step
 goto 67.28,50.33
-'Open _Temple of the Dance_ |q The Moonlit Path/Enter the Temple |future
+'Open _Temple of the Dance_ |q The Moonlit Path/Enter the Temple
 |tip Manually skip to the next step.
 step
 goto planeofjodetemple_base 35.69,48.52
@@ -7044,13 +7044,13 @@ goto 44.75,44.42
 'Use _Crystal_ |q The Moonlit Path/Align the Final Reflector
 step
 goto 58.57,49.76
-'Enter _Portal to The Demi-Plane of Jode_ |q The Moonlit Path/Enter the Portal |future
+'Enter _Portal to The Demi-Plane of Jode_ |q The Moonlit Path/Enter the Portal
 step
 goto planeofjodehubhillbos_base 50.99,52.76
 talk Champion |q The Moonlit Path/Talk to the Champion
 step
 goto 58.62,54.00
-'Use _Portal_ |q The Moonlit Path/Follow the Path |future
+'Use _Portal_ |q The Moonlit Path/Follow the Path
 step
 goto jodeplane_base 62.94,65.32
 talk Elilor |q The Moonlit Path/Talk to Spinner Elilor
@@ -7072,7 +7072,7 @@ goto 56.76,38.22
 talk The Green Lady |q The Moonlit Path/Talk to the Green Lady
 step
 goto 58.40,38.96
-'Use _Portal_ |q The Moonlit Path/Return to the Temple |future
+'Use _Portal_ |q The Moonlit Path/Return to the Temple
 step
 goto planeofjodehubhillbos_base 58.13,53.68
 talk Champion |q The Moonlit Path/Talk to the Champion
@@ -7080,7 +7080,7 @@ step
 goto 62.81,46.03 |q The Moonlit Path/Follow the Path
 step
 goto 48.99,38.34
-'Use _Portal_ |q The Moonlit Path/Follow the Path |future
+'Use _Portal_ |q The Moonlit Path/Follow the Path
 step
 goto urcelmosbetrayal_base 53.32,39.77
 talk Cariel |q The Moonlit Path/Talk to Cariel
@@ -7092,12 +7092,12 @@ goto 38.32,50.27
 talk Razum-dar |q The Moonlit Path/Talk to Razum-dar
 step
 goto 44.05,47.74
-'Open _Ayrenn's Last Stand_ |q The Moonlit Path/Find the Queen |future
+'Open _Ayrenn's Last Stand_ |q The Moonlit Path/Find the Queen
 |tip Manually skip to the next step.
 step
 goto planeofjodecave_base 75.28,49.32
 |tip Go through the door.
-kill Battlereeve Urcelmo |q The Moonlit Path/Save the Queen |future
+kill Battlereeve Urcelmo |q The Moonlit Path/Save the Queen
 step
 goto 68.93,42.47
 'Open _Summerset Isles_ |q The Moonlit Path/Talk to Queen Ayrenn
@@ -7107,7 +7107,7 @@ goto urcelmosbetrayal_base 40.91,32.50
 talk Queen Ayrenn |q The Moonlit Path/Talk to Queen Ayrenn
 step
 goto 39.18,29.59
-'Use _Portal_ |q The Moonlit Path/Return to the Temple |future
+'Use _Portal_ |q The Moonlit Path/Return to the Temple
 step
 goto planeofjodehubhillbos_base 49.48,38.40
 talk Shazah or Khali
@@ -7125,7 +7125,7 @@ goto 57.98,43.64
 |tip Manually skip to the next step.
 step
 goto planeofjodedenoflorkhaj_base 49.69,45.45
-'Follow the _Lunar Champion_ |q The Den of Lorkhaj/Follow the Lunar Champion |future
+'Follow the _Lunar Champion_ |q The Den of Lorkhaj/Follow the Lunar Champion
 step
 goto 49.69,45.45
 kill Khali
@@ -7136,7 +7136,7 @@ goto 49.69,45.45
 'Wait for the _Lunar Champion to Complete the Ritual_ |q The Den of Lorkhaj/Wait for the Lunar Champion to Complete the Ritual
 step
 goto 48.69,43.11
-'Enter _Portal to Dune_ |q The Den of Lorkhaj/Return to Dune |future
+'Enter _Portal to Dune_ |q The Den of Lorkhaj/Return to Dune
 |tip Manually skip to the next step.
 step
 goto dune_base 64.49,50.33
@@ -7181,7 +7181,7 @@ talk Vanus Galerion |q Messages Across Tamriel/Talk to Vanus Galerion
 |only Aldmeri Dominion
 step
 goto 53.05,36.90
-'Use _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal |future
+'Use _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -7198,7 +7198,7 @@ talk Vanus Galerion |q Messages Across Tamriel/Talk to Vanus Galerion
 |only Aldmeri Dominion
 step
 '_Run back towards the place you came in, opposite of the throne:_
-'Use _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal |future
+'Use _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -7216,7 +7216,7 @@ talk Vanus Galerion |q Messages Across Tamriel/Talk to Vanus Galerion
 |only Aldmeri Dominion
 step
 '_Run back towards the place you came in:_
-'Open _Portal to Elden Root_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal |future
+'Open _Portal to Elden Root_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -7231,7 +7231,7 @@ goto 12.51,59.43
 |only Aldmeri Dominion
 step
 goto 12.51,59.43
-'Use _Portal to Stirk_ |q The Weight of Three Crowns/Enter Portal to Stirk |future
+'Use _Portal to Stirk_ |q The Weight of Three Crowns/Enter Portal to Stirk
 |tip Manually skip to the next step. |next Extras\\Extras\\Main Quests Only\\Coldharbour
 |only Aldmeri Dominion
 step
@@ -7253,7 +7253,7 @@ accept Cadwell's Gold
 |only Daggerfall Covenant
 step
 goto 53.70,72.08
-'Use _Light of Meridia_ |q Cadwell's Gold/Use the Light of Meridia |future |next Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Bleakrock Isle
+'Use _Light of Meridia_ |q Cadwell's Gold/Use the Light of Meridia |next Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Bleakrock Isle
 |only Daggerfall Covenant
 step
 goto dune_base 33.13,25.82
@@ -7274,11 +7274,11 @@ turnin Cadwell's Gold |next Extras\\Extras\\Main Quests Only\\DLC\\Imperial City
 |only Ebonheart Pact
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Stros M'Kai",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Stros M'Kai",[[
 loadingimage loadscreen_strosmkai_01.dds
 description One of the first landfalls settled by the Redguards when they sailed east from their lost homeland of Yokuda, the island of Stros M'Kai is now a haven for freebooters, sea-rovers, and other nautical entrepeneurs who roam the Abecean Sea.
 step
-'_Save 2 Extra Skill Points as you Level_ |q The Broken Spearhead/Talk to the Boatswain |future
+'_Save 2 Extra Skill Points as you Level_ |q The Broken Spearhead/Talk to the Boatswain
 |tip Don't spend them yet
 |tip You'll be able to invest them into the Intimidate and Persuade skills soon, which will save you a lot of time on certain quests as you level.
 |tip Manually skip to the next step.
@@ -7289,7 +7289,7 @@ talk Tumma-Shah
 accept The Broken Spearhead
 step
 goto 41.92,88.55
-'Open _Stros M'Kai_ |q The Broken Spearhead |future
+'Open _Stros M'Kai_ |q The Broken Spearhead
 |tip Manually skip to the next step.
 step
 goto 30.14,68.34
@@ -7297,14 +7297,14 @@ talk Captain Kaleen |q The Broken Spearhead/Talk to Captain Kaleen
 step
 goto 30.14,68.34
 talk Captain Kaleen
-'Choose to _Look for Lerisa_ |q The Broken Spearhead/Look for Lerisa, Jakarn, or Neramo |future
+'Choose to _Look for Lerisa_ |q The Broken Spearhead/Look for Lerisa, Jakarn, or Neramo
 step
 goto 43.70,49.37
 talk Irien
 accept Innocent Scoundrel
 step
 goto 46.20,40.56
-'Open _The Grave_ |q Innocent Scoundrel/Enter the Grave |future
+'Open _The Grave_ |q Innocent Scoundrel/Enter the Grave
 step
 goto thegrave_base 32.22,52.81 |q Innocent Scoundrel/Find Jakarn
 step
@@ -7349,13 +7349,13 @@ step
 goto 74.18,16.58 |q Innocent Scoundrel/Reach Goblin Mine
 step
 goto 73.47,14.78
-'Open _Goblin Mine_ |q Innocent Scoundrel/Reach Goblin Mine |future
+'Open _Goblin Mine_ |q Innocent Scoundrel/Reach Goblin Mine
 |tip Manually skip to the next step.
 step
-goto goblinminesstart_base 36.34,34.82 |q Innocent Scoundrel/Reach Upper Level of Mine |future
+goto goblinminesstart_base 36.34,34.82 |q Innocent Scoundrel/Reach Upper Level of Mine
 step
 goto 12.54,63.98
-'Open _Stros M'Kai_ |q Innocent Scoundrel/Reach Upper Level of Mine |future
+'Open _Stros M'Kai_ |q Innocent Scoundrel/Reach Upper Level of Mine
 step
 goto goblinminesend_base 94.10,49.30 |q Innocent Scoundrel/Talk to Jakarn
 step
@@ -7408,7 +7408,7 @@ goto 29.73,46.18
 'Observe _Neramo's Experiment_ |q Buried Secrets/Observe Neramo's Experiment
 step
 goto 29.01,45.80
-'Open _Bthzark_ |q Buried Secrets/Enter Bthzark |future
+'Open _Bthzark_ |q Buried Secrets/Enter Bthzark
 step
 goto bthzark_base 55.80,11.71
 talk Neramo |q Buried Secrets/Talk to Neramo
@@ -7464,7 +7464,7 @@ turnin The Broken Spearhead
 accept Like Moths to a Candle
 step
 goto 55.23,80.25
-talk Crafty Lerisa |q Like Moths to a Candle/Talk to Crafty Lerisa |future
+talk Crafty Lerisa |q Like Moths to a Candle/Talk to Crafty Lerisa
 |tip Manually skip to the next step.
 step
 goto 55.15,80.43
@@ -7514,7 +7514,7 @@ talk Nicolene
 accept The Spearhead's Crew
 step
 'Open _Stros M'Kai_ Map
-'Travel to _Port Hunding_ |q The Spearhead's Crew |future
+'Travel to _Port Hunding_ |q The Spearhead's Crew
 |tip Manually skip to the next step.
 step
 goto porthunding_base 36.06,66.85 |q Innocent Scoundrel/Meet Jakarn at the Inn
@@ -7526,7 +7526,7 @@ talk Irien |q Innocent Scoundrel/Meet Jakarn at the Inn
 |tip Manually skip to the next step.
 step
 goto 67.63,69.15
-'Open _Screaming Mermaid_ |q Innocent Scoundrel/Meet Jakarn at the Inn |future
+'Open _Screaming Mermaid_ |q Innocent Scoundrel/Meet Jakarn at the Inn
 step
 goto strosmkai_base 74.69,50.07
 talk Jakarn
@@ -7618,14 +7618,14 @@ goto 43.88,89.73
 talk Captain Kaleen |q Tip of the Spearhead/Talk to Captain Kaleen |next Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Betnikh
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Betnikh",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Betnikh",[[
 loadingimage loadscreen_betnikh_01.dds
 description Nine generations ago, the island of Betony was conquered by the Stonetooth Orcs, who renamed it Betnikh. A proud, self-reliant people, the Orcs fiercely protect their new home from incursion by outsiders.
 step
 '_Save 2 Extra Skill Points as you Level_
 |tip Don't spend them yet.
 |tip You'll be able to invest them into the Intimidate and Persuade skills soon, which will save you a lot of time on certain quests as you level.
-'Manually skip to the Next Step |q The Bloodthorn Plot/Talk to Lambur |future
+'Manually skip to the Next Step |q The Bloodthorn Plot/Talk to Lambur
 |only Daggerfall Covenant
 step
 goto stonetoothfortress_base 80.03,61.34
@@ -7683,7 +7683,7 @@ goto 25.03,48.17
 'Listen to _Vardan_ |q Into the Hills/Listen to Vardan
 step
 goto 21.90,25.06
-'Open _Betnikh_ |q Into the Hills/Exit the Lair |future
+'Open _Betnikh_ |q Into the Hills/Exit the Lair
 step
 goto betnihk_base 53.31,73.37
 talk Laganakh
@@ -7738,7 +7738,7 @@ goto 20.19,57.09
 talk King Renwic |q Unearthing the Past/Talk to King Renwic
 step
 goto 20.17,57.26
-'Activate _Vision of the Past_ |q Unearthing the Past/Enter Renwic's Vision |future
+'Activate _Vision of the Past_ |q Unearthing the Past/Enter Renwic's Vision
 |tip Manually skip to the next step.
 step
 goto ancientcarzogsdemise_base 17.48,51.38
@@ -7768,7 +7768,7 @@ goto 47.14,53.10
 'Confront _King Renwic_ |q Unearthing the Past/Confront King Renwic
 step
 goto 47.03,52.29
-'Use _Portal to the Present_ |q Unearthing the Past/Return to the Present |future
+'Use _Portal to the Present_ |q Unearthing the Past/Return to the Present
 |tip Manually skip to the next step.
 step
 goto betnihk_base 20.19,57.07
@@ -7790,7 +7790,7 @@ goto 40.24,28.67
 'Wait for _Neramo to Unseal the Door_ |q Tormented Souls/Wait for Neramo to Unseal the Door
 step
 goto 41.15,27.92
-'Open _Moriseli_ |q Tormented Souls/Enter Moriseli |future
+'Open _Moriseli_ |q Tormented Souls/Enter Moriseli
 step
 goto moriseli_base 27.87,26.51
 talk Warcaller Targoth |q Tormented Souls/Talk to Targoth's Ghost
@@ -7821,7 +7821,7 @@ goto 28.01,73.90
 |tip Manually skip to the next step.
 step
 goto 8.81,34.64
-'Open _Betnikh_ |q Tormented Souls/Leave Moriseli |future
+'Open _Betnikh_ |q Tormented Souls/Leave Moriseli
 step
 goto betnihk_base 40.60,28.06
 talk Azlakha
@@ -7892,11 +7892,11 @@ goto 65.42,27.77
 step
 goto 66.71,27.63
 |tip Watch the dialogue
-'Open _Ayleid Sanctuary_ |q Carzog's Demise/Enter Ayleid Sanctuary |future
+'Open _Ayleid Sanctuary_ |q Carzog's Demise/Enter Ayleid Sanctuary
 |tip Manually skip to the next step.
 step
 goto carzogsdemise_base 62.27,56.40
-talk Lerisa |q Carzog's Demise/Reach the Inner Sanctuary |future
+talk Lerisa |q Carzog's Demise/Reach the Inner Sanctuary
 |tip Manually skip to the next step.
 step
 goto 88.58,56.56 |q Carzog's Demise/Reach the Inner Sanctuary
@@ -7935,7 +7935,7 @@ goto 47.03,53.04
 talk Neramo |q Carzog's Demise/Talk to Neramo
 step
 goto 46.94,45.40
-kill Vardan |q Carzog's Demise/Kill Vardan |future
+kill Vardan |q Carzog's Demise/Kill Vardan
 |tip Manually skip to the next step.
 step
 goto 47.07,51.18
@@ -7967,7 +7967,7 @@ step
 goto 28.08,57.36 |q On to Glenumbra/Talk to Captain Kaleen
 step
 goto 79.75,60.49
-talk Captain Kaleen |q On to Glenumbra/Talk to Captain Kaleen |future
+talk Captain Kaleen |q On to Glenumbra/Talk to Captain Kaleen
 |tip Manually skip to the next step.
 step
 goto daggerfall_base 64.56,80.30 |q On to Glenumbra/Talk to Sir Lanis Shaldon
@@ -7977,17 +7977,17 @@ talk Sir Lanis Shaldon
 turnin On to Glenumbra |next Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Glenumbra
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Glenumbra",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Glenumbra",[[
 loadingimage loadscreen_glenumbra_01.dds
 description Glenumbra, the westernmost region of High Rock, contains the city-states of Daggerfall and Camlorn, the great cemetery of Cath Bedraud, and the wild areas of Hag Fen, Glenumbra Moors, and the forests of Daenia.
 step
-'_Save 2 extra skill points, don't spend them yet_ |q The Harborage/Find the Harborage |future
+'_Save 2 extra skill points, don't spend them yet_ |q The Harborage/Find the Harborage
 |tip Don't spend them yet
 |tip You'll be able to invest them into the Intimidate and Persuade skills soon, which will save you a lot of time on certain quests as you level.
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-'_If your are level 10 or higher use Cyrodiil Introduction guide_ and and complete it to gain a healing spell and 30% gallop mount speed through the Assault War/Alliance Skill Line. |q Welcome to Cyrodiil |future 
+'_If your are level 10 or higher use Cyrodiil Introduction guide_ and and complete it to gain a healing spell and 30% gallop mount speed through the Assault War/Alliance Skill Line. |q Welcome to Cyrodiil 
 |tip Located in Extra's Main Quest Only Folders.
 |tip If your not Level 10 once your are level it is recommended.
 |only Daggerfall Covenant
@@ -7997,7 +7997,7 @@ goto daggerfall_base 74.88,69.87
 |only Daggerfall Covenant
 step
 goto glenumbra_base 35.51,79.29
-'Open _The Harborage_ |q The Harborage/Find the Harborage |future
+'Open _The Harborage_ |q The Harborage/Find the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -8048,15 +8048,15 @@ talk The Prophet
 turnin The Harborage
 |only Daggerfall Covenant
 step
-goto 66.94,29.96 |q Blood and the Crescent Moon/Read the Note |future
+goto 66.94,29.96 |q Blood and the Crescent Moon/Read the Note
 |only Daggerfall Covenant
 step
 goto the_daggerfall_harborage 25.58,27.22
-'Open _Glenumbra_ |q Blood and the Crescent Moon/Read the Note |future
+'Open _Glenumbra_ |q Blood and the Crescent Moon/Read the Note
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto daggerfall_base 69.09,64.60 |q Blood and the Crescent Moon/Read the Note |future
+goto daggerfall_base 69.09,64.60 |q Blood and the Crescent Moon/Read the Note
 step
 goto 66.87,51.07
 'Examine _Corpse_
@@ -8171,12 +8171,12 @@ step
 goto 42.21,42.89 |q Bloodthorn Assassins/Enter Daggerfall Castle
 step
 goto 33.54,48.63
-'Open _Daggerfall Castle_ |q Bloodthorn Assassins/Enter Daggerfall Castle |future
+'Open _Daggerfall Castle_ |q Bloodthorn Assassins/Enter Daggerfall Castle
 |tip Manually skip to the next step.
 step
 goto 29.36,48.77
 |tip Watch the dialogue
-'Find _King Casimir_ |q Bloodthorn Assassins/Find King Casimir |future
+'Find _King Casimir_ |q Bloodthorn Assassins/Find King Casimir
 step
 goto 31.73,48.78
 |tip Go upstairs.
@@ -8187,9 +8187,9 @@ goto 31.47,49.12
 talk King Casimir
 turnin Bloodthorn Assassins
 step
-goto 42.13,48.72 |q Turning of the Trees |future
+goto 42.13,48.72 |q Turning of the Trees
 step
-goto 42.65,41.56 |q Turning of the Trees |future
+goto 42.65,41.56 |q Turning of the Trees
 step
 goto glenumbra_base 34.34,75.40
 talk Merric at-Aswala |q Anchors from the Harbour/Find Merric and Aelif
@@ -8211,7 +8211,7 @@ goto 55.80,33.69
 talk Guildmaster Sees-All-Colors |q Anchors from the Harbour/Return to Sees-All-Colors
 |only Daggerfall Covenant
 step
-goto daggerfall_base 64.12,39.77 |q Turning of the Trees |future
+goto daggerfall_base 64.12,39.77 |q Turning of the Trees
 |only Daggerfall Covenant
 step
 goto glenumbra_base 37.40,73.01
@@ -8349,7 +8349,7 @@ talk Jofnir Iceblade |q Anchors from the Harbour/Speak with the Ghost
 |only Daggerfall Covenant
 step
 goto 56.53,72.34
-'Open _Dourstone Vault_ |q Anchors from the Harbour/Enter Doshia's Lair |future
+'Open _Dourstone Vault_ |q Anchors from the Harbour/Enter Doshia's Lair
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -8540,7 +8540,7 @@ goto 33.63,52.36
 |tip Manually skip to the next step.
 step
 goto 33.42,51.73
-kill Corruption of the Tree |q Purifying the Wyrd Tree/Save the Wyrd Tree |future
+kill Corruption of the Tree |q Purifying the Wyrd Tree/Save the Wyrd Tree
 step
 goto 33.62,52.32
 'Open _Glenumbra_ |q Purifying the Wyrd Tree/Return to Wyress Gwen
@@ -8567,7 +8567,7 @@ goto 28.25,65.15 |q Long Lost Lore/Enter the Ruins
 |only Daggerfall Covenant
 step
 goto 27.23,67.81
-'Open _Silumm_ |q Long Lost Lore/Enter the Ruins |future
+'Open _Silumm_ |q Long Lost Lore/Enter the Ruins
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -8612,7 +8612,7 @@ goto daggerfall_base 51.02,39.03
 |only Daggerfall Covenant
 step
 goto 46.93,38.33
-talk Valaste |q Long Lost Lore/Talk to Valaste |future
+talk Valaste |q Long Lost Lore/Talk to Valaste
 |only Daggerfall Covenant
 step
 goto 44.31,39.04
@@ -8633,7 +8633,7 @@ talk Arch-Mage Shalidor |q Long Lost Lore/Talk to Arch-Mage Shalidor
 |only Daggerfall Covenant
 step
 goto 46.83,39.95
-'Use _Portal to Cheesemonger's Hollow_ |q Long Lost Lore/Enter the Portal to Sheogorath's Shrine |future
+'Use _Portal to Cheesemonger's Hollow_ |q Long Lost Lore/Enter the Portal to Sheogorath's Shrine
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -8705,7 +8705,7 @@ talk The Prophet |q Daughter of Giants/Talk to the Prophet
 |only Daggerfall Covenant
 step
 goto 69.74,61.27
-'Use _Portal to Coldharbour_ |q Daughter of Giants/Enter Coldharbour |future
+'Use _Portal to Coldharbour_ |q Daughter of Giants/Enter Coldharbour
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -8745,7 +8745,7 @@ goto 31.67,48.17
 |only Daggerfall Covenant
 step
 goto 29.89,53.28
-'Open _Imperial Footlocker_ |q Daughter of Giants/Find Lyris's Armor |future
+'Open _Imperial Footlocker_ |q Daughter of Giants/Find Lyris's Armor
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -8809,11 +8809,11 @@ goto 65.36,36.07
 |only Daggerfall Covenant
 step
 goto 76.70,40.91
-kill Manifestation of Terror |q Daughter of Giants/Vanquish Lyris's Terror |future
+kill Manifestation of Terror |q Daughter of Giants/Vanquish Lyris's Terror
 |only Daggerfall Covenant
 step
 goto 78.87,42.42
-'Use _Portal to the Harborage_ |q Daughter of Giants/Escape the Foundry of Woe |future
+'Use _Portal to the Harborage_ |q Daughter of Giants/Escape the Foundry of Woe
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -8916,7 +8916,7 @@ turnin A Duke in Exile
 accept Wolves in the Fold
 step
 goto 28.69,52.87
-talk Gloria Fausta |q Wolves in the Fold/Talk to Gloria Fausta |future
+talk Gloria Fausta |q Wolves in the Fold/Talk to Gloria Fausta
 |tip Manually skip to the next step.
 step
 goto 45.80,50.39
@@ -9123,7 +9123,7 @@ goto 50.80,49.60
 |tip Manually skip to the next step.
 step
 goto 49.19,50.39
-talk Saravith Yunlin |q The Nameless Soldier/Talk to the Mages Guild |future
+talk Saravith Yunlin |q The Nameless Soldier/Talk to the Mages Guild
 step
 goto 51.52,48.96
 talk Alana Relin |q The Nameless Soldier/Talk to Grahla
@@ -9436,7 +9436,7 @@ talk Gabrielle Benele |q Mastering the Talisman/Talk to Gabrielle Benele
 step
 goto 54.93,19.05
 |tip Watch the ritual
-talk Gabrielle Benele |q Mastering the Talisman/Destroy the Daedric Entity |future
+talk Gabrielle Benele |q Mastering the Talisman/Destroy the Daedric Entity
 |tip Manually skip to the next step.
 step
 goto 57.58,15.34
@@ -9558,7 +9558,7 @@ talk Sir Thomas Kinlin |q Angof the Gravesinger/Collect the Shard of the Lost
 'Tell him _Release from slumber! Eternal darkness, come forth!_
 step
 goto 70.86,16.26
-talk Sir Pierre Ginsen |q The Labyrinth/Find Limren |future
+talk Sir Pierre Ginsen |q The Labyrinth/Find Limren
 |tip Manually skip to the next step.
 step
 goto 63.98,51.07 |q The Labyrinth/Find Limren
@@ -9576,7 +9576,7 @@ step
 goto 62.73,84.20 |q Angof the Gravesinger/Enter Angof's Sanctum
 step
 goto 69.07,34.04
-'Open _Angof's Sanctum_ |q Angof the Gravesinger/Enter Angof's Sanctum |future
+'Open _Angof's Sanctum_ |q Angof the Gravesinger/Enter Angof's Sanctum
 |tip Manually skip to the next step.
 step
 goto angofssanctum_base 80.85,59.15
@@ -9650,7 +9650,7 @@ talk Captain Jerick
 turnin A Dangerous Dream |next Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Stormhaven
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Stormhaven",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Stormhaven",[[
 loadingimage loadscreen_stormhaven_01.dds
 description I spent some time studying and painting in the Stormhaven countryside; a charming realm of rolling hills, lush flood plains, rocky outcrops, and copses of ancient woodland. The place would be idyllic were it not for the perpetual unsettled gloom, occasional crackles of thunder, and bolts of Kynareth’s rage that arc across the skies.
 step
@@ -9716,7 +9716,7 @@ goto 72.50,42.65
 |only Daggerfall Covenant
 step
 goto glenumbra_base 35.49,79.27
-'Open _The Harborage_ |q Chasing Shadows/Go to the Harborage |future
+'Open _The Harborage_ |q Chasing Shadows/Go to the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -9758,7 +9758,7 @@ goto 65.79,65.04
 |only Daggerfall Covenant
 step
 goto 65.11,65.99
-'Open _Abandoned Cellar_ |q Chasing Shadows/Enter the Cellar |future
+'Open _Abandoned Cellar_ |q Chasing Shadows/Enter the Cellar
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -9781,7 +9781,7 @@ goto daggerfall_base 68.79,64.35 |q Chasing Shadows/Return to the Harborage
 |only Daggerfall Covenant
 step
 goto glenumbra_base 35.49,79.27
-'Open _The Harborage_ |q Chasing Shadows/Return to the Harborage |future
+'Open _The Harborage_ |q Chasing Shadows/Return to the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -9795,7 +9795,7 @@ turnin Chasing Shadows
 |only Daggerfall Covenant
 step
 'Open _Stormhaven_ Map
-'Travel to _Koeglin Village_ |q Can't Leave Without Her |future
+'Travel to _Koeglin Village_ |q Can't Leave Without Her
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -9805,9 +9805,9 @@ goto stormhaven_base 14.72,33.44
 'Examine _The House of Troubles_ |lorebook The House of Troubles/1/8/4
 |only Daggerfall Covenant
 step
-goto koeglinvillage_base 31.34,15.92 |q Army at the Gates |future
+goto koeglinvillage_base 31.34,15.92 |q Army at the Gates
 step
-goto stormhaven_base 21.21,35.70 |q Army at the Gates |future
+goto stormhaven_base 21.21,35.70 |q Army at the Gates
 step
 goto 20.81,29.80
 'Examine _Wayrest, Jewel of the Bay_ |lorebook Wayrest, Jewel of the Bay/1/2/10
@@ -9846,7 +9846,7 @@ goto 40.07,43.70
 talk Duchess Lakana |q Two Sides to Every Coin/Talk to Duchess Lakana in Her Room
 step
 goto 74.61,62.56
-'Challenge _Five Alik'r Soldiers_ |q Two Sides to Every Coin/.*Challenge Alik'r Soldiers.* |future
+'Challenge _Five Alik'r Soldiers_ |q Two Sides to Every Coin/.*Challenge Alik'r Soldiers.*
 |tip Manually skip to the next step.
 step
 goto 83.25,64.97
@@ -9978,10 +9978,10 @@ goto 33.77,29.90
 step
 goto 33.06,29.59
 |tip She walks around.
-talk Odette Jerick |q Sir Hughes' Fate/Talk to Odette |future
+talk Odette Jerick |q Sir Hughes' Fate/Talk to Odette
 step
 goto 32.98,29.75
-'Examine _Sir Hughes_ |q Sir Hughes' Fate/Examine Sir Hughes |future
+'Examine _Sir Hughes_ |q Sir Hughes' Fate/Examine Sir Hughes
 |tip Manually skip to the next step.
 step
 '_Go upstairs on the right:_
@@ -10227,7 +10227,7 @@ goto 37.16,32.38
 |only Daggerfall Covenant
 step
 goto 36.70,32.70
-'Use _Portal to Mzeneldt_ |q The Dangerous Past/Enter the Portal |future
+'Use _Portal to Mzeneldt_ |q The Dangerous Past/Enter the Portal
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -10264,7 +10264,7 @@ goto 83.98,43.62
 |only Daggerfall Covenant
 step
 goto 83.75,47.41
-'Witness the _Scene_ |q The Dangerous Past/Witness the Scene |future
+'Witness the _Scene_ |q The Dangerous Past/Witness the Scene
 |only Daggerfall Covenant
 step
 goto 83.49,47.77
@@ -10340,7 +10340,7 @@ talk Jofnir Iceblade |q The Dangerous Past/Talk to Jofnir Iceblade
 |only Daggerfall Covenant
 step
 goto 37.04,45.50
-'Use _Portal to the Guildhall_ |q The Dangerous Past/Talk to Merric at-Aswala |future
+'Use _Portal to the Guildhall_ |q The Dangerous Past/Talk to Merric at-Aswala
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -10381,7 +10381,7 @@ talk Arch-Mage Shalidor
 |only Daggerfall Covenant
 step
 goto 59.09,52.84
-'Use _Portal to the Shivering Isles_ |q Simply Misplaced/Enter Portal |future
+'Use _Portal to the Shivering Isles_ |q Simply Misplaced/Enter Portal
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -10478,7 +10478,7 @@ goto 46.25,39.10
 step
 goto 51.46,84.71
 kill Maleel al-Akir
-'Retrieve _Staff_ |q Simply Misplaced/Retrieve the Staff |future
+'Retrieve _Staff_ |q Simply Misplaced/Retrieve the Staff
 |only Daggerfall Covenant
 step
 goto 49.38,55.09
@@ -10503,7 +10503,7 @@ talk Sheogorath |q Simply Misplaced/Talk to Sheogorath
 |only Daggerfall Covenant
 step
 goto 51.70,56.30
-'Take _Circus of Cheerful Slaughter_ |q Simply Misplaced/Collect the Book |future
+'Take _Circus of Cheerful Slaughter_ |q Simply Misplaced/Collect the Book
 |only Daggerfall Covenant
 step
 goto wayrest_base 55.02,48.73
@@ -10754,10 +10754,10 @@ goto 75.61,39.80
 step
 goto 71.12,38.72
 |tip Persuade him.
-talk Ghashur |q Ending the Ogre Threat/Get a Pickaxe |future
+talk Ghashur |q Ending the Ogre Threat/Get a Pickaxe
 step
 goto 71.75,36.89
-'Open _Mountain Cavern_ |q Ending the Ogre Threat/Enter Mountain Cavern |future
+'Open _Mountain Cavern_ |q Ending the Ogre Threat/Enter Mountain Cavern
 step
 goto 70.91,34.27
 'Destroy _Support Column_ |q Ending the Ogre Threat/Destroy the Support Beams
@@ -10791,35 +10791,35 @@ talk Abbot Durak
 accept Godrun's Dream
 step
 goto 74.15,48.34
-'Examine _General Godrun_ |q Godrun's Dream/Enter Godrun's Dream |future
+'Examine _General Godrun_ |q Godrun's Dream/Enter Godrun's Dream
 |tip Manually skip to the next step.
 step
 goto godrunsdream_base 20.65,29.76
-'Examine _Godrun's Orders_ |q Godrun's Dream/Find Godrun |future
+'Examine _Godrun's Orders_ |q Godrun's Dream/Find Godrun
 |tip Manually skip to the next step.
 step
 goto 24.52,31.00
 |tip Watch the dialogue.
-'Examine _Vaermina's Mirror_ |q Godrun's Dream/Follow Godrun through His Dream |future
+'Examine _Vaermina's Mirror_ |q Godrun's Dream/Follow Godrun through His Dream
 |tip Manually skip to the next step.
 step
 goto 81.49,20.65
 |tip Watch the dialogue.
-'Examine _Godrun's Rage_ |q Godrun's Dream/Follow Godrun through His Dream |future
+'Examine _Godrun's Rage_ |q Godrun's Dream/Follow Godrun through His Dream
 |tip Manually skip to the next step.
 step
 goto 80.64,19.49
 |tip Watch the dialogue.
-'Examine _Vaermina's Mirror_ |q Godrun's Dream/Continue to Follow Godrun through His Dream |future
+'Examine _Vaermina's Mirror_ |q Godrun's Dream/Continue to Follow Godrun through His Dream
 |tip Manually skip to the next step.
 step
 goto 50.41,56.42
-'Examine _Godrun's Bargain_ |q Godrun's Dream/Continue to Follow Godrun through His Dream |future
+'Examine _Godrun's Bargain_ |q Godrun's Dream/Continue to Follow Godrun through His Dream
 |tip Manually skip to the next step.
 step
 goto 50.32,54.06
 |tip Watch the dialogue.
-'Rescue _General Godrun_ |q Godrun's Dream/Free Godrun |future
+'Rescue _General Godrun_ |q Godrun's Dream/Free Godrun
 step
 goto 50.32,54.06
 kill Omen of Betrayal |q Godrun's Dream/Defeat the Omen
@@ -10829,7 +10829,7 @@ goto 49.76,46.67
 talk Statue of Vaermina |q Godrun's Dream/Talk to Vaermina's Statue
 step
 goto 49.55,46.80
-'Examine _Vaermina's Mirror_ |q Godrun's Dream/Escape Quagmire |future
+'Examine _Vaermina's Mirror_ |q Godrun's Dream/Escape Quagmire
 step
 goto stormhaven_base 74.30,48.35
 talk Abbot Durak
@@ -10905,7 +10905,7 @@ turnin Azura's Aid
 accept Vaermina's Gambit
 step
 goto 43.08,46.43
-'Examine _High King Emeric_ |q Vaermina's Gambit/Enter High King Emeric's Dream |future
+'Examine _High King Emeric_ |q Vaermina's Gambit/Enter High King Emeric's Dream
 step
 goto emericsdream_base 46.09,51.78
 talk High King Emeric |q Vaermina's Gambit/Find High King Emeric
@@ -10929,12 +10929,12 @@ kill Hosni at-Tura
 'Open _Chest_ |q Vaermina's Gambit/Collect Key of the Thief
 step
 goto 42.91,67.27
-'Open _Wayrest Castle_ |q Vaermina's Gambit/Enter High King Emeric's Palace |future
+'Open _Wayrest Castle_ |q Vaermina's Gambit/Enter High King Emeric's Palace
 |tip Manually skip to the next step.
 step
 goto 31.02,71.97
 kill High King Emeric
-kill Galthis |q Vaermina's Gambit/Kill the Night Terror |future
+kill Galthis |q Vaermina's Gambit/Kill the Night Terror
 step
 goto 45.90,52.51
 talk High King Emeric |q Vaermina's Gambit/Free the High King
@@ -10950,11 +10950,11 @@ goto 61.36,75.14
 |tip Manually skip to the next step.
 step
 goto 52.81,24.64
-'Enter _Tamriel_ |q Vaermina's Gambit/Escape Quagmire |future
+'Enter _Tamriel_ |q Vaermina's Gambit/Escape Quagmire
 |tip Manually skip to the next step.
 step
 goto wayrest_base 42.27,44.71
-talk High King Emeric |q Vaermina's Gambit/Talk to High King Emeric |future
+talk High King Emeric |q Vaermina's Gambit/Talk to High King Emeric
 step
 goto 38.28,45.67
 |tip Go downstairs.
@@ -10975,7 +10975,7 @@ goto 40.07,50.16
 |only Daggerfall Covenant
 step
 goto glenumbra_base 35.49,79.27
-'Open _The Harborage_ |q Castle of the Worm/Go to the Harborage |future
+'Open _The Harborage_ |q Castle of the Worm/Go to the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -10988,7 +10988,7 @@ talk Abnur Tharn |q Castle of the Worm/Talk to Abnur Tharn
 |only Daggerfall Covenant
 step
 goto 69.96,61.29
-'Use _Portal to Coldharbour_ |q Castle of the Worm/Enter Coldharbour |future
+'Use _Portal to Coldharbour_ |q Castle of the Worm/Enter Coldharbour
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -11028,7 +11028,7 @@ goto 55.51,26.09 |q Castle of the Worm/Follow Cadwell |tip Kill everything on yo
 |only Daggerfall Covenant
 step
 goto 55.51,26.09
-talk Cadwell |q Castle of the Worm/Enter the Keep |future
+talk Cadwell |q Castle of the Worm/Enter the Keep
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -11118,7 +11118,7 @@ goto 14.13,75.24
 |only Daggerfall Covenant
 step
 goto 15.41,77.99
-'Use _Portal to the Harborage_ |q Castle of the Worm/Talk to Abnur Tharn |future
+'Use _Portal to the Harborage_ |q Castle of the Worm/Talk to Abnur Tharn
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -11147,11 +11147,11 @@ goto wayrest_base 40.07,50.16
 |only not Daggerfall Covenant
 step
 goto stormhaven_base 23.01,19.57
-'Open _Rivenspire_ |q The Road to Rivenspire/Go to Rivenspire |future
+'Open _Rivenspire_ |q The Road to Rivenspire/Go to Rivenspire
 |tip Manually skip to the next step. |next Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Rivenspire
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Rivenspire",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Rivenspire",[[
 loadingimage loadscreen_rivenspire_01.dds
 description This northwestern region of High Rock contains some of the province's most dramatic terrain, including towering, flinty crags, windswept moors, and narrow canyons. Many folk find the environment oppressive, even threatening.
 step
@@ -11206,7 +11206,7 @@ talk Guildmaster Sees-All-Colors |q The Prismatic Core/Talk to Guildmaster Sees-
 |only Daggerfall Covenant
 step
 goto 76.38,64.40
-'Enter _Portal to Abagarlas_ |q The Prismatic Core/Enter Portal |future
+'Enter _Portal to Abagarlas_ |q The Prismatic Core/Enter Portal
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -11244,7 +11244,7 @@ talk Guildmaster Sees-All-Colors |q The Prismatic Core/Talk to Guildmaster Sees-
 |only Daggerfall Covenant
 step
 goto 38.95,81.21
-'Enter _Portal to the Earth Forge_ |q The Prismatic Core/Go to The Earth Forge |future
+'Enter _Portal to the Earth Forge_ |q The Prismatic Core/Go to The Earth Forge
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -11380,12 +11380,12 @@ goto 29.10,52.84
 |tip Manually skip to the next step.
 step
 goto 46.96,17.25
-'Open _Fevered Mews_ |q Shornhelm Divided/Enter the Fevered Mews |future
+'Open _Fevered Mews_ |q Shornhelm Divided/Enter the Fevered Mews
 |tip Manually skip to the next step.
 step
 goto fevered_mews_base 46.74,58.37
 kill Montclair enemies
-'Collect _Key to Unlock Cages_ |q Shornhelm Divided/Find Key to Unlock Nobles' Cells |future
+'Collect _Key to Unlock Cages_ |q Shornhelm Divided/Find Key to Unlock Nobles' Cells
 step
 goto 38.69,58.08 |q Shornhelm Divided/Free Lady Aurine Tamrith
 step
@@ -11402,13 +11402,13 @@ goto 70.55,37.08
 'Open _Cell_ |q Shornhelm Divided/Free Sir Estienn Guillon
 step
 '_Next to you:_
-talk Count Verandis Ravenwatch |q Shornhelm Divided/Confront Reezal-Jul |future
+talk Count Verandis Ravenwatch |q Shornhelm Divided/Confront Reezal-Jul
 |tip Manually skip to the next step.
 step
 goto 68.26,62.03 |q Shornhelm Divided/Confront Reezal-Jul
 step
 goto 92.10,64.20
-'Open _Ruins_ |q Shornhelm Divided/Confront Reezal-Jul |future
+'Open _Ruins_ |q Shornhelm Divided/Confront Reezal-Jul
 step
 goto fevered_mews_subzone_base 67.36,40.45
 kill Bloodfiend enemies
@@ -11418,7 +11418,7 @@ step
 talk Count Verandis Ravenwatch |q Shornhelm Divided/Close the Portal
 step
 goto 74.96,77.03
-talk Count Verandis Ravenwatch |q Shornhelm Divided/Meet High King Emeric at Shornhelm Castle |future
+talk Count Verandis Ravenwatch |q Shornhelm Divided/Meet High King Emeric at Shornhelm Castle
 |tip Manually skip to the next step.
 step
 goto 20.67,70.85
@@ -11443,7 +11443,7 @@ accept Dream-Walk Into Darkness
 step
 goto 28.35,37.95 |q Dream-Walk Into Darkness/Talk to Verandis at Ravenwatch Castle
 step
-goto 36.38,64.11 |q Circus of Cheerful Slaughter |future
+goto 36.38,64.11 |q Circus of Cheerful Slaughter
 |only Daggerfall Covenant
 step
 goto 23.95,67.87
@@ -11453,12 +11453,12 @@ accept Circus of Cheerful Slaughter
 |only Daggerfall Covenant
 step
 goto 25.53,66.70
-'Examine _Circus of Cheerful Slaughter_ |q Circus of Cheerful Slaughter/Read "Circus of Cheerful Slaughter" |future
+'Examine _Circus of Cheerful Slaughter_ |q Circus of Cheerful Slaughter/Read "Circus of Cheerful Slaughter"
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
 goto circusofcheerfulslaughter_base 57.93,71.95
-talk Sheogorath |q Circus of Cheerful Slaughter/Talk to Sheogorath |future
+talk Sheogorath |q Circus of Cheerful Slaughter/Talk to Sheogorath
 |only Daggerfall Covenant
 step
 goto 75.00,61.97
@@ -11598,15 +11598,15 @@ goto 28.29,45.66
 'Examine _Translated Ayleid Texts_ |q Dream-Walk Into Darkness/Learn the Secret of the Second Memory
 step
 goto 28.39,45.65
-talk Count Verandis Ravenwatch |q Dream-Walk Into Darkness/Talk to Verandis Ravenwatch |future
+talk Count Verandis Ravenwatch |q Dream-Walk Into Darkness/Talk to Verandis Ravenwatch
 step
 goto doomcragshroudedpass_base 48.22,54.05
 |tip Listen to the Montclairs.
-'Open _Doomcrag Lower Tier_ |q Dream-Walk Into Darkness/Enter the Doomcrag |future
+'Open _Doomcrag Lower Tier_ |q Dream-Walk Into Darkness/Enter the Doomcrag
 |tip Manually skip to the next step.
 step
 goto 48.17,61.80
-kill the Ancient Warriors |q Dream-Walk Into Darkness/Defeat the Ancient Warriors |future
+kill the Ancient Warriors |q Dream-Walk Into Darkness/Defeat the Ancient Warriors
 step
 goto 48.42,79.36
 |tip Run up the ramp.
@@ -11636,7 +11636,7 @@ talk Baron Wylon Montclair |q Dream-Walk Into Darkness/Enter the Relic Chamber
 |tip Manually skip to the next step.
 step
 goto 47.44,60.57
-'Open _Relic Chamber_ |q Dream-Walk Into Darkness/Enter the Relic Chamber |future
+'Open _Relic Chamber_ |q Dream-Walk Into Darkness/Enter the Relic Chamber
 step
 goto 48.49,63.33
 talk Baron Wylon Montclair |q Dream-Walk Into Darkness/Talk to Baron Montclair
@@ -11699,10 +11699,10 @@ step
 goto 26.73,63.47
 talk Lieutenant Sgugh |q The Blood-Splattered Shield/Ask Guards About Captain Janeve
 step
-goto 21.57,64.69 |q The Blood-Splattered Shield/Talk to Darien Gautier |future
+goto 21.57,64.69 |q The Blood-Splattered Shield/Talk to Darien Gautier
 step
 goto 21.48,64.75
-talk Darien Gautier |q The Blood-Splattered Shield/Talk to Darien Gautier |future
+talk Darien Gautier |q The Blood-Splattered Shield/Talk to Darien Gautier
 step
 goto 22.10,66.26
 'Find the _Cave Entrance_ |q The Blood-Splattered Shield/Find Cave Entrance
@@ -11717,10 +11717,10 @@ goto 22.67,65.87
 |tip Manually skip to the next step.
 step
 goto 21.03,71.63
-'Open _Shadowfate Cavern_ |q The Blood-Splattered Shield/Enter Shadowfate Cavern |future
+'Open _Shadowfate Cavern_ |q The Blood-Splattered Shield/Enter Shadowfate Cavern
 |tip Manually skip to the next step.
 step
-goto shadowfatecavern_base 74.59,61.71 |q The Blood-Splattered Shield/Kill Reezal-Jul |future
+goto shadowfatecavern_base 74.59,61.71 |q The Blood-Splattered Shield/Kill Reezal-Jul
 step
 goto 58.10,68.45 |q The Blood-Splattered Shield/Kill Reezal-Jul
 step
@@ -11781,7 +11781,7 @@ step
 goto 60.35,47.59
 talk Count Verandis Ravenwatch |q The Concealing Veil/Talk to Verandis at Lorkrata Hills
 step
-goto 62.51,42.68 |q The Concealing Veil/Find a Way to Unlock the Trap Door |future
+goto 62.51,42.68 |q The Concealing Veil/Find a Way to Unlock the Trap Door
 step
 goto 60.77,41.82
 |tip Upstairs and inside the crumbled tower.
@@ -11791,14 +11791,14 @@ goto 60.23,43.03 |q The Concealing Veil/Enter the Chambers Beneath the Ruins |ti
 step
 goto 58.54,43.77
 |tip Inside the crumbled tower.
-'Open _Lorkrata Ruins_ |q The Concealing Veil/Enter the Chambers Beneath the Ruins |future
+'Open _Lorkrata Ruins_ |q The Concealing Veil/Enter the Chambers Beneath the Ruins
 |tip Manually skip to the next step.
 step
 goto lorkrataruinsa_base 21.19,66.52
 talk Count Verandis Ravenwatch |q The Concealing Veil/Talk to Verandis Ravenwatch
 step
 goto 20.28,65.60
-'Examine _Tear_ |q The Concealing Veil/Examine the Tear |future
+'Examine _Tear_ |q The Concealing Veil/Examine the Tear
 step
 goto lorkrataruinsb_base 41.32,44.43 |q The Concealing Veil/Explore the Ruins
 step
@@ -11827,11 +11827,11 @@ goto lorkrataruinsa_base 66.85,36.65
 'Go to the _Double Doors_ |q The Concealing Veil/Go to the Double Doors
 step
 goto 67.28,34.43
-'Open _Relic Vault_ |q The Concealing Veil/Follow Verandis Ravenwatch |future
+'Open _Relic Vault_ |q The Concealing Veil/Follow Verandis Ravenwatch
 |tip Manually skip to the next step.
 step
 goto 52.90,23.49
-'Open _Lorkrata Ruins_ |q The Concealing Veil/Follow Verandis Ravenwatch |future
+'Open _Lorkrata Ruins_ |q The Concealing Veil/Follow Verandis Ravenwatch
 |tip Manually skip to the next step.
 step
 goto 28.06,23.92
@@ -11844,7 +11844,7 @@ goto 27.06,23.95
 talk Count Verandis Ravenwatch |q The Concealing Veil/Talk to Verandis Ravenwatch
 step
 goto 36.16,31.50
-'Examine _Tear_ |q The Concealing Veil/Find a Way to Exit the Veil |future
+'Examine _Tear_ |q The Concealing Veil/Find a Way to Exit the Veil
 |tip Manually skip to the next step.
 step
 goto rivenspire_base 59.96,48.02
@@ -12006,7 +12006,7 @@ goto 53.92,60.60
 step
 goto 50.57,57.28
 |tip Watch the dialogue.
-talk Baron Alard Dorell |q The Liberation of Northpoint/Talk to Baron Alard Dorell |future
+talk Baron Alard Dorell |q The Liberation of Northpoint/Talk to Baron Alard Dorell
 step
 goto 50.57,57.28
 talk Baron Alard Dorell
@@ -12127,12 +12127,12 @@ goto rivenspire_base 31.94,40.76
 talk Count Verandis Ravenwatch |q The Lightless Remnant/Cross the Bridge and Talk to Verandis
 step
 goto 31.97,41.02
-'Open _The Doomcrag_ |q The Lightless Remnant/Enter the Doomcrag |future
+'Open _The Doomcrag_ |q The Lightless Remnant/Enter the Doomcrag
 |tip Manually skip to the next step.
 step
 goto doomcragground_base 48.53,36.13
 |tip Watch the dialogue.
-'Survive the _Initial Assault_ |q The Lightless Remnant/Survive the Initial Assault |future
+'Survive the _Initial Assault_ |q The Lightless Remnant/Survive the Initial Assault
 step
 goto 49.03,47.20
 talk Count Verandis Ravenwatch |q The Lightless Remnant/Talk to Verandis Ravenwatch
@@ -12160,7 +12160,7 @@ talk Count Verandis Ravenwatch |q The Lightless Remnant/Talk to Verandis Ravenwa
 step
 goto 54.63,65.15
 |tip Up the ramp.
-'Open _Doomcrag Upper Tier_ |q The Lightless Remnant/Go to the Top of the Doomcrag |future
+'Open _Doomcrag Upper Tier_ |q The Lightless Remnant/Go to the Top of the Doomcrag
 |tip Manually skip to the next step.
 step
 goto 47.18,22.86
@@ -12220,7 +12220,7 @@ goto 72.74,38.89
 step
 goto 72.74,38.89
 'Use _Shornhelm_ Wayshrine
-'Travel to _Daggerfall_ in Glenumbra |q The Tharn Speaks/Travel to the Mages Guild |future
+'Travel to _Daggerfall_ in Glenumbra |q The Tharn Speaks/Travel to the Mages Guild
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -12272,12 +12272,12 @@ talk Abnur Tharn |q The Tharn Speaks/Talk to Abnur Tharn
 |only Daggerfall Covenant
 step
 'Open _Glenumbra_ Map
-'Travel _The Harborage_ in Glenumbra |q The Tharn Speaks/Enter the Harborage |future
+'Travel _The Harborage_ in Glenumbra |q The Tharn Speaks/Enter the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
 goto glenumbra_base 35.51,79.26
-'Open _The Harborage_ |q The Tharn Speaks/Enter the Harborage |future
+'Open _The Harborage_ |q The Tharn Speaks/Enter the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -12287,7 +12287,7 @@ turnin The Tharn Speaks
 |only Daggerfall Covenant
 step
 goto 25.65,26.61
-'Open _Glenumbra_ |q Halls of Torment/Listen to Varen |future
+'Open _Glenumbra_ |q Halls of Torment/Listen to Varen
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -12297,7 +12297,7 @@ accept Halls of Torment
 |only Daggerfall Covenant
 step
 goto glenumbra_base 35.49,79.28
-'Open _The Harborage_ |q Halls of Torment/Talk to Varen Aquilarios |future
+'Open _The Harborage_ |q Halls of Torment/Talk to Varen Aquilarios
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -12316,7 +12316,7 @@ goto 70.25,63.94
 |only Daggerfall Covenant
 step
 goto 70.25,63.94
-'Use _Portal to Halls of Torment_ |q Halls of Torment/Explore the Halls of Torment |future
+'Use _Portal to Halls of Torment_ |q Halls of Torment/Explore the Halls of Torment
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -12397,7 +12397,7 @@ talk Sai Sahan |q Halls of Torment/Talk to Sai Sahan
 |only Daggerfall Covenant
 step
 goto 62.41,35.78
-'Use _Portal to the Harborage_ |q Halls of Torment/Talk to Varen Aquilarios |future
+'Use _Portal to the Harborage_ |q Halls of Torment/Talk to Varen Aquilarios
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -12416,7 +12416,7 @@ step
 |only Daggerfall Covenant
 step
 goto rivenspire_base 71.91,14.70
-talk First Mate Elvira Derre |q Favor for the Queen/Talk to Elvira |future
+talk First Mate Elvira Derre |q Favor for the Queen/Talk to Elvira
 |tip Manually skip to the next step.
 step
 goto sentinel_base 27.79,15.53
@@ -12424,7 +12424,7 @@ talk First Mate Elvira Derre
 turnin Favor for the Queen |next Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Alik'r Desert
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Alik'r Desert",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Alik'r Desert",[[
 loadingimage loadscreen_alikir_01.dds
 description A sacred flame rises above the fire, The ghosts of great men and women without names, Cities long dead rise and fall in the flame, The Dioscori Song of Revelation, Bursting walls and deathless rock, Fiery sand that heals and destroys.
 step
@@ -12697,16 +12697,16 @@ goto 45.48,62.14 |q The Initiation/Reach the Elven Leader
 step
 goto 54.70,49.31 |q The Initiation/Reach the Elven Leader
 step
-goto 39.40,31.71 |q The Initiation/Reach the Elven Leader |future
+goto 39.40,31.71 |q The Initiation/Reach the Elven Leader
 step
 goto 38.99,29.56
 |tip She walks around.
-kill Kinlady Iniel |q The Initiation/Kill Kinlady Iniel |future
+kill Kinlady Iniel |q The Initiation/Kill Kinlady Iniel
 step
 goto 49.53,25.33
-'Open _Crypt Passage_ |q The Initiation/Enter the Crypt Passage |future
+'Open _Crypt Passage_ |q The Initiation/Enter the Crypt Passage
 step
-goto yokudanpalace_base 18.70,47.58 |q The Initiation/Enter the Palace |future
+goto yokudanpalace_base 18.70,47.58 |q The Initiation/Enter the Palace
 step
 goto 88.13,53.99
 'Climb _Palace Sanctum_ |q The Initiation/Enter the Palace
@@ -12734,7 +12734,7 @@ goto 35.69,60.40
 talk Vizier Yeqdah |q The Initiation/Talk to the Vizier
 step
 goto 36.85,77.82
-'Use _Alik'r_ |q The Initiation/Leave the Palace |future
+'Use _Alik'r_ |q The Initiation/Leave the Palace
 |tip Manually skip to the next step.
 step
 goto alikr_base 29.71,65.87
@@ -12768,18 +12768,18 @@ wayshrine Goat's Head Oasis
 step
 goto 41.24,55.87 |q Tu'whacca's Breath/Light the South Brazier
 step
-goto 40.71,55.00 |q Tu'whacca's Breath/Light the South Brazier |future
+goto 40.71,55.00 |q Tu'whacca's Breath/Light the South Brazier
 step
 goto 44.60,56.42
-'Use _Southern Tower Brazier_ |q Tu'whacca's Breath/Light the South Brazier |future
+'Use _Southern Tower Brazier_ |q Tu'whacca's Breath/Light the South Brazier
 |tip Manually skip to the next step.
 step
 goto 46.89,53.05
-'Use _Eastern Tower Brazier_ |q Tu'whacca's Breath/Light the East Brazier |future
+'Use _Eastern Tower Brazier_ |q Tu'whacca's Breath/Light the East Brazier
 |tip Manually skip to the next step.
 step
 goto 44.59,49.62
-'Use _Northern Tower Brazier_ |q Tu'whacca's Breath/Light the North Brazier |future
+'Use _Northern Tower Brazier_ |q Tu'whacca's Breath/Light the North Brazier
 'Defend the _North Brazier_ |q Tu'whacca's Breath/Defend North Brazier
 step
 goto 40.21,53.05
@@ -12795,7 +12795,7 @@ goto 42.92,53.03
 'Wait for the _Throne Keeper to Open the Door_ |q A Reckoning with Uwafa/Wait for Throne Keeper to Open Door
 step
 goto 43.52,53.04
-'Open _Tu'whacca's Sanctum_ |q A Reckoning with Uwafa/Enter Tu'whacca's Sanctum |future
+'Open _Tu'whacca's Sanctum_ |q A Reckoning with Uwafa/Enter Tu'whacca's Sanctum
 |tip Manually skip to the next step.
 step
 goto 45.18,53.06
@@ -12805,7 +12805,7 @@ goto 45.47,53.04
 'Take _Ansei Radan's Ward_ |q A Reckoning with Uwafa/Collect Ansei Ward
 step
 goto 43.62,53.06
-'Open _Tu'whacca's Throne_ |q A Reckoning with Uwafa |future
+'Open _Tu'whacca's Throne_ |q A Reckoning with Uwafa
 |tip Manually skip to the next step.
 step
 goto 43.16,53.06
@@ -12814,7 +12814,7 @@ turnin A Reckoning with Uwafa
 accept The Scholar of Bergama
 step
 'Open _Alik'r Desert_ Map
-'Travel to _Divad's Chagrin Mine_ |q Gone Missing |future
+'Travel to _Divad's Chagrin Mine_ |q Gone Missing
 |tip Manually skip to the next step.
 step
 goto bergama_base 20.00,55.87
@@ -12841,7 +12841,7 @@ talk Akhita |q Proving the Deed/.*Talk to Fighters Guild Members.* |count 2
 step
 goto 44.31,47.98
 |tip Inside the Fighters Guild.
-talk Provost Riud |q Proving the Deed/.*Talk to Fighters Guild Members.* |future
+talk Provost Riud |q Proving the Deed/.*Talk to Fighters Guild Members.*
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -12909,14 +12909,14 @@ goto 39.73,62.02
 |tip Manually skip to the next step.
 step
 goto magistratesbasement_base 85.65,48.70
-'Examine _Note from Alasan_ |q Gone Missing/Search the Basement |future
+'Examine _Note from Alasan_ |q Gone Missing/Search the Basement
 step
 goto 9.99,49.25
 'Climb _Magistrate Sulma's House_ |q Gone Missing/Return Go upstairs with the Evidence
 |tip Manually skip to the next step.
 step
 goto bergama_base 41.06,61.66
-talk Magistrate Sulma |q Gone Missing/Confront the Magistrate |future
+talk Magistrate Sulma |q Gone Missing/Confront the Magistrate
 step
 goto 52.81,47.18
 talk Istah
@@ -12951,7 +12951,7 @@ goto 68.71,59.48
 |only Daggerfall Covenant
 step
 goto 68.70,59.48
-'Open _Ragnthar_ |q Proving the Deed/Enter Ragnthar |future
+'Open _Ragnthar_ |q Proving the Deed/Enter Ragnthar
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -13043,7 +13043,7 @@ goto 49.41,46.91
 |only Daggerfall Covenant
 step
 goto 48.55,45.91
-'Use _Portal to the Shivering Isles_ |q Chateau of the Ravenous Rodent/Enter the Shivering Isles |future
+'Use _Portal to the Shivering Isles_ |q Chateau of the Ravenous Rodent/Enter the Shivering Isles
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -13148,34 +13148,34 @@ talk Arch-Mage Shalidor
 accept The Mad God's Bargain
 |only Daggerfall Covenant
 step
-goto 54.32,44.74 |q Alasan's Plot |future
+goto 54.32,44.74 |q Alasan's Plot
 |only Daggerfall Covenant
 step
-goto 54.15,48.86 |q Alasan's Plot |future
+goto 54.15,48.86 |q Alasan's Plot
 |only Daggerfall Covenant
 step
-goto 40.79,55.07 |q Alasan's Plot |future
+goto 40.79,55.07 |q Alasan's Plot
 |only Daggerfall Covenant
 step
-goto 44.31,63.28 |q Alasan's Plot |future
+goto 44.31,63.28 |q Alasan's Plot
 |only Daggerfall Covenant
 step
 goto 29.99,72.41
 'Use _Sentinel_ Wayshrine
-'Travel to _Bergama_ |q Alasan's Plot |future
+'Travel to _Bergama_ |q Alasan's Plot
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto alikr_base 58.76,52.21 |q Alasan's Plot |future
+goto alikr_base 58.76,52.21 |q Alasan's Plot
 step
 goto 53.56,47.91
 wayshrine Kulati Mines
 step
 goto 51.05,36.44
 |tip Leave the house.
-wayshrine Aswala Stables |q Alasan's Plot |future
+wayshrine Aswala Stables |q Alasan's Plot
 step
-goto 51.35,38.71 |q Alasan's Plot |future
+goto 51.35,38.71 |q Alasan's Plot
 step
 goto 56.78,35.55
 talk Talia at-Marimah
@@ -13202,7 +13202,7 @@ step
 goto 58.15,27.77 |q Alasan's Plot/Enter the Lighthouse
 step
 goto 56.84,25.33
-'Open _Lighthouse_ |q Alasan's Plot/Enter the Lighthouse |future
+'Open _Lighthouse_ |q Alasan's Plot/Enter the Lighthouse
 |tip Manually skip to the next step.
 step
 goto 56.80,25.42
@@ -13216,10 +13216,10 @@ goto 56.83,25.41
 talk Ansei Maja |q Alasan's Plot/Talk to Ansei Maja
 step
 goto 56.79,25.32
-'Open _Tava's Blessing_ |q Alasan's Plot/Exit the Lighthouse |future
+'Open _Tava's Blessing_ |q Alasan's Plot/Exit the Lighthouse
 |tip Manually skip to the next step.
 step
-goto 57.15,26.89 |q Alasan's Plot/Collect Goat's Milk |future
+goto 57.15,26.89 |q Alasan's Plot/Collect Goat's Milk
 step
 goto 57.88,30.98
 'Use _Goat_ |q Alasan's Plot/Collect Goat's Milk
@@ -13234,7 +13234,7 @@ goto 58.46,33.21
 'Use _Coals_ |q Alasan's Plot/Reforge the Blade
 step
 goto 58.47,33.21
-'Take _Ansei Ward_ |q Alasan's Plot/Collect Reforged Blade |future
+'Take _Ansei Ward_ |q Alasan's Plot/Collect Reforged Blade
 |tip Manually skip to the next step.
 step
 goto 58.47,29.84
@@ -13261,7 +13261,7 @@ goto 56.60,35.62
 talk Shiri
 accept Shiri's Research
 step
-goto 63.90,34.98 |q March of the Ra Gada |future
+goto 63.90,34.98 |q March of the Ra Gada
 step
 goto 66.31,38.93
 wayshrine Sep's Spine
@@ -13355,19 +13355,19 @@ talk Throne Keeper Farvad
 turnin Trials of the Hero
 step
 goto 75.59,56.82
-'Use _Portal_ |q The Search for Shiri |future
+'Use _Portal_ |q The Search for Shiri
 |tip Manually skip to the next step.
 step
 goto 73.67,50.92
 talk Captain Rawan
 accept The Search for Shiri
 step
-goto 76.90,49.30 |q Imperial Incursion |future
+goto 76.90,49.30 |q Imperial Incursion
 step
 goto 83.22,50.85
 wayshrine Shrikes' Aerie
 step
-goto 85.14,48.86 |q Imperial Incursion |future
+goto 85.14,48.86 |q Imperial Incursion
 step
 goto 83.49,39.41
 wayshrine Satakalaam
@@ -13453,14 +13453,14 @@ goto 80.20,35.41
 talk Talia at-Marimah |q Amputating the Hand/Talk to Talia
 step
 goto 80.13,35.48
-'Open _Motalion Necropolis_ |q Amputating the Hand/Enter Motalion |future
+'Open _Motalion Necropolis_ |q Amputating the Hand/Enter Motalion
 step
 goto 78.22,33.51 |q Amputating the Hand/Search for Prince Azah
 step
 goto 77.51,30.84 |q Amputating the Hand/Search for Prince Azah
 step
 goto 79.65,31.90
-'Open _Crypt of the Virtuous Maidens_ |q Amputating the Hand/Search for Prince Azah |future
+'Open _Crypt of the Virtuous Maidens_ |q Amputating the Hand/Search for Prince Azah
 step
 goto 81.20,31.11
 talk Prince Azah |q Amputating the Hand/Rescue Prince Azah
@@ -13485,7 +13485,7 @@ step
 goto 76.25,27.82 |q Amputating the Hand/Find Throne Keeper Farvad
 step
 goto 79.21,26.58
-'Open _Tomb of Blessed Interment_ |q Amputating the Hand/Find Throne Keeper Farvad |future
+'Open _Tomb of Blessed Interment_ |q Amputating the Hand/Find Throne Keeper Farvad
 |tip Manually skip to the next step.
 step
 goto 81.18,25.53
@@ -13518,18 +13518,18 @@ goto 77.52,29.73
 'Wait for the _Door to Unseal_ |q Amputating the Hand/Wait for Door to Unseal
 step
 goto 77.47,29.84
-'Open _Suturah's Crypt_ |q Amputating the Hand/Enter the Final Tomb |future
+'Open _Suturah's Crypt_ |q Amputating the Hand/Enter the Final Tomb
 |tip Manually skip to the next step.
 step
 goto suturahs_crypt_base 50.79,73.83
 kill Shiri
-kill Suturah |q Amputating the Hand/Defeat All Enemies in the Crypt |future
+kill Suturah |q Amputating the Hand/Defeat All Enemies in the Crypt
 step
 goto 50.79,73.83
 'Take _Ansei Halelah's Ward_ |q Amputating the Hand/Collect the Final Ward
 step
 goto 36.06,8.93
-'Open _Motalion Necropolis_ |q Amputating the Hand/Meet Your Friends Outside |future
+'Open _Motalion Necropolis_ |q Amputating the Hand/Meet Your Friends Outside
 |tip Manually skip to the next step.
 step
 goto alikr_base 77.42,29.61
@@ -13538,14 +13538,14 @@ turnin Amputating the Hand
 accept Restoring the Ansei Wards
 step
 goto 77.46,29.62
-'Enter _Portal to the Impervious Vault_ |q Restoring the Ansei Wards/Return to Sentinel |future
+'Enter _Portal to the Impervious Vault_ |q Restoring the Ansei Wards/Return to Sentinel
 |tip Manually skip to the next step.
 step
 goto imperviousvault_base 74.50,32.20
-talk King Fahara'jad |q Restoring the Ansei Wards/Talk to King Fahara'jad |future
+talk King Fahara'jad |q Restoring the Ansei Wards/Talk to King Fahara'jad
 step
 goto 74.05,55.21
-'Use _Shrine of the Ansei Wards 3 times_ |q Restoring the Ansei Wards/Return Ansei Halelah's Ward |future
+'Use _Shrine of the Ansei Wards 3 times_ |q Restoring the Ansei Wards/Return Ansei Halelah's Ward
 |tip Manually skip to the next step.
 step
 goto 74.80,54.52
@@ -13572,7 +13572,7 @@ talk Sergeant Antieve
 accept A City in Black |next Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Bangkorai
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Bangkorai",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Bangkorai",[[
 loadingimage loadscreen_bankorai_01.dds
 description This region takes its name from its most famous feature, the Bangkorai Pass, which has served as High Rock's defense against the wild raiders of Hammerfell for countless generations. The uplands north of the pass and the desert to the south are both ruled from the port city of Evermore.
 step
@@ -13591,12 +13591,12 @@ wayshrine Eastern Evermore
 step
 goto 46.63,37.16
 'Use _Eastern Evermore_ Wayshrine
-'Travel to _The Harborage_ in Glenumbra |q Valley of Blades/Enter the Harborage |future
+'Travel to _The Harborage_ in Glenumbra |q Valley of Blades/Enter the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
 goto glenumbra_base 35.50,79.27
-'Open _The Harborage_ |q Valley of Blades/Enter the Harborage |future
+'Open _The Harborage_ |q Valley of Blades/Enter the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -13605,7 +13605,7 @@ talk Sai Sahan |q Valley of Blades/Talk to Sai Sahan
 |only Daggerfall Covenant
 step
 goto 69.80,60.90
-'Use _Portal to Valley of Blades_ |q Valley of Blades/Travel to the Valley of Blades |future
+'Use _Portal to Valley of Blades_ |q Valley of Blades/Travel to the Valley of Blades
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -13621,7 +13621,7 @@ goto 34.82,24.26 |q Valley of Blades/Enter the Abbey of Blades
 |only Daggerfall Covenant
 step
 goto 50.91,45.68
-'Find _Kasura_ |q Valley of Blades/Find Kasura |future
+'Find _Kasura_ |q Valley of Blades/Find Kasura
 |only Daggerfall Covenant
 step
 goto 50.91,45.68
@@ -13652,7 +13652,7 @@ goto 58.54,48.89 |q Valley of Blades/Enter the Ancestral Crypt
 |only Daggerfall Covenant
 step
 goto 74.43,44.86
-'Open _Ancestral Crypt_ |q Valley of Blades/Enter the Ancestral Crypt |future
+'Open _Ancestral Crypt_ |q Valley of Blades/Enter the Ancestral Crypt
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -13682,7 +13682,7 @@ talk Sai Sahan |q Valley of Blades/Talk to Sai Sahan
 |only Daggerfall Covenant
 step
 goto 72.65,49.20
-'Use _Portal to The Harborage_ |q Valley of Blades/Return to the Harborage |future
+'Use _Portal to The Harborage_ |q Valley of Blades/Return to the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -13692,7 +13692,7 @@ turnin Valley of Blades
 |only Daggerfall Covenant
 step
 goto 25.85,26.71
-'Open _Glenumbra_ |q Shadow of Sancre Tor |future
+'Open _Glenumbra_ |q Shadow of Sancre Tor
 |tip Manually skip to the next step.
 step
 goto daggerfall_base 71.30,66.36
@@ -13701,7 +13701,7 @@ accept Shadow of Sancre Tor
 |only Daggerfall Covenant
 step
 goto glenumbra_base 35.51,79.29
-'Open _The Harborage_ |q Shadow of Sancre Tor/Enter the Harborage |future
+'Open _The Harborage_ |q Shadow of Sancre Tor/Enter the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -13718,7 +13718,7 @@ goto 70.00,64.06
 |only Daggerfall Covenant
 step
 goto 69.05,59.73
-'Use _Portal to Sancre Tor_ |q Shadow of Sancre Tor/Enter Portal to Sancre Tor |future
+'Use _Portal to Sancre Tor_ |q Shadow of Sancre Tor/Enter Portal to Sancre Tor
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -13876,7 +13876,7 @@ goto 23.53,50.60
 |only Daggerfall Covenant
 step
 goto 18.72,50.49
-'Use _Portal to Harborage_ |q Shadow of Sancre Tor/Return to the Harborage |future
+'Use _Portal to Harborage_ |q Shadow of Sancre Tor/Return to the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -13926,7 +13926,7 @@ goto 64.01,46.08
 |only Daggerfall Covenant
 step
 goto 64.04,46.20
-'Use _Portal to Eyevea_ |q The Mad God's Bargain/Enter Portal to Eyevea |future
+'Use _Portal to Eyevea_ |q The Mad God's Bargain/Enter Portal to Eyevea
 |tip Manually skip to the next step.
 step
 goto eyevea_base 83.99,37.81
@@ -13989,7 +13989,7 @@ talk Arch-Mage Shalidor |q The Mad God's Bargain/Talk to Shalidor
 |only Daggerfall Covenant
 step
 goto 51.62,48.25
-'Open _Mages Guild Hall_ |q The Mad God's Bargain/Enter the Guildhall |future
+'Open _Mages Guild Hall_ |q The Mad God's Bargain/Enter the Guildhall
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -14034,16 +14034,16 @@ wayshrine Eyevea
 step
 goto 86.59,35.76
 'Use _Eyevea_ Wayshrine
-'Travel to _Eastern Evermore_ in Bangkorai |q Will of the Council |future
+'Travel to _Eastern Evermore_ in Bangkorai |q Will of the Council
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto evermore_base 71.08,54.04 |q Will of the Council |future
+goto evermore_base 71.08,54.04 |q Will of the Council
 |only Daggerfall Covenant
 step
-goto 47.42,50.98 |q Will of the Council |future
+goto 47.42,50.98 |q Will of the Council
 step
-goto 46.00,61.04 |q Will of the Council |future
+goto 46.00,61.04 |q Will of the Council
 |only Daggerfall Covenant
 step
 goto 49.72,57.94
@@ -14053,7 +14053,7 @@ accept Will of the Council
 |only Daggerfall Covenant
 step
 goto 49.22,58.24
-'Use _Portal to Earth Forge_ |q Will of the Council/Enter Portal to the Earth Forge |future
+'Use _Portal to Earth Forge_ |q Will of the Council/Enter Portal to the Earth Forge
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -14077,7 +14077,7 @@ goto 39.03,24.29
 |only Daggerfall Covenant
 step
 goto 39.70,24.47
-'Use _Portal to Halls of Submission_ |q Will of the Council/Enter Portal to Halls of Submission |future
+'Use _Portal to Halls of Submission_ |q Will of the Council/Enter Portal to Halls of Submission
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -14142,7 +14142,7 @@ goto 66.86,50.04
 |only Daggerfall Covenant
 step
 goto theearthforge_base 39.03,22.38
-talk Jofnir Iceblade |q Will of the Council/Talk to Jofnir |future
+talk Jofnir Iceblade |q Will of the Council/Talk to Jofnir
 |only Daggerfall Covenant
 step
 goto 38.85,22.15
@@ -14170,7 +14170,7 @@ talk Merric at-Aswala |q Will of the Council/Talk to Merric
 |only Daggerfall Covenant
 step
 goto 73.44,45.35
-'Use _Portal to the Guildhall_ |q Will of the Council/Return to the Guild Hall |future
+'Use _Portal to the Guildhall_ |q Will of the Council/Return to the Guild Hall
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -14190,7 +14190,7 @@ step
 |only Daggerfall Covenant
 step
 goto glenumbra_base 35.51,79.29
-'Open _The Harborage_ |q Council of the Five Companions/Go to the Harborage |future
+'Open _The Harborage_ |q Council of the Five Companions/Go to the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -14199,7 +14199,7 @@ talk Varen Aquilarios |q Council of the Five Companions/Talk to Varen Aquilarios
 |only Daggerfall Covenant
 step
 goto the_daggerfall_harborage 69.52,61.82
-talk Sai Sahan |q Council of the Five Companions/Talk to Sai Sahan |future
+talk Sai Sahan |q Council of the Five Companions/Talk to Sai Sahan
 |only Daggerfall Covenant
 step
 goto 67.26,63.58
@@ -14228,7 +14228,7 @@ turnin Council of the Five Companions
 |only Daggerfall Covenant
 step
 'Open _Bangkorai_ Map
-'Travel to _Eastern Evermore_ |q Beyond the Call |future
+'Travel to _Eastern Evermore_ |q Beyond the Call
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -14243,7 +14243,7 @@ step
 goto 67.22,24.51
 wayshrine Evermore
 step
-goto 72.40,31.98 |q Beyond the Call |future
+goto 72.40,31.98 |q Beyond the Call
 step
 goto bangkorai_base 46.03,30.48
 talk Captain Eugien Gaercroft
@@ -14296,11 +14296,11 @@ goto 48.40,32.86
 step
 goto 51.07,34.20
 |tip Go downstairs inside this building.
-kill Duraeg |q Beyond the Call/Defeat Duraeg |future
+kill Duraeg |q Beyond the Call/Defeat Duraeg
 step
 goto 51.90,34.19
 |tip Leave the building.
-talk Isabeth Gaercroft |q Beyond the Call/Talk to Isabeth Gaercroft |future
+talk Isabeth Gaercroft |q Beyond the Call/Talk to Isabeth Gaercroft
 step
 goto 50.01,33.76
 'Destroy the _Seed Stores_ |q Beyond the Call/.*Destroy Seed Stores.* |count 1
@@ -14323,7 +14323,7 @@ step
 goto 46.05,29.84 |q Beyond the Call/Return to the Evermore Camp
 step
 goto 45.99,30.05
-'Witness the _Reunion_ |q Beyond the Call/Witness the Reunion |future
+'Witness the _Reunion_ |q Beyond the Call/Witness the Reunion
 step
 goto 45.94,30.08
 talk Isabeth Gaercroft |q Beyond the Call/Talk to Isabeth Gaercroft
@@ -14421,10 +14421,10 @@ step
 goto 39.48,46.00
 talk Dame Valyrie Spenard |q The Waking Darkness/Talk to Dame Valyrie
 step
-goto 42.03,45.27 |q The Waking Darkness/Talk to the Blue Flames |future
+goto 42.03,45.27 |q The Waking Darkness/Talk to the Blue Flames
 step
 goto 42.91,45.00
-talk Blue Flames |q The Waking Darkness/Talk to the Blue Flames |future
+talk Blue Flames |q The Waking Darkness/Talk to the Blue Flames
 step
 goto 42.94,45.02
 'Use the _Holy Water_ |q The Waking Darkness/.*Cleanse the Mausoleums.* |count 1
@@ -14655,24 +14655,24 @@ talk Duke Renchant |q Imperial Infiltration/Confront Duke Renchant
 step
 goto 61.88,71.52
 |tip Watch the dialogue.
-'Let the _Queen Decide_ |q Imperial Infiltration/Let the Queen Decide |or |future
+'Let the _Queen Decide_ |q Imperial Infiltration/Let the Queen Decide |or
 '_OR_
-'Watch _Renchant's Arrest_ |q Imperial Infiltration/Watch Renchant's Arrest |or |future
+'Watch _Renchant's Arrest_ |q Imperial Infiltration/Watch Renchant's Arrest |or
 step
 goto 53.90,61.62
 |tip Leave the building.
 talk Queen Arzhela
 turnin Imperial Infiltration
 step
-goto 70.98,53.98 |q Heart of Evil |future
+goto 70.98,53.98 |q Heart of Evil
 step
-goto bangkorai_base 47.86,27.87 |q Heart of Evil |future
+goto bangkorai_base 47.86,27.87 |q Heart of Evil
 step
-goto 52.57,27.17 |q Heart of Evil |future
+goto 52.57,27.17 |q Heart of Evil
 step
-goto 52.27,18.70 |q Heart of Evil |future
+goto 52.27,18.70 |q Heart of Evil
 step
-goto 49.71,14.67 |q Heart of Evil |future
+goto 49.71,14.67 |q Heart of Evil
 step
 goto 52.50,08.55
 wayshrine Halcyon Lake
@@ -14720,7 +14720,7 @@ talk Wyress Rashan |q Heart of Evil/Talk to Wyress Rashan
 step
 goto 59.04,16.17
 |tip Wait for Wyress Rashan to Weaken the Ward
-'Open _Uela's Lair_ |q Heart of Evil/Enter Uela's Lair |future
+'Open _Uela's Lair_ |q Heart of Evil/Enter Uela's Lair
 step
 goto 59.98,14.59
 kill Uela
@@ -14738,7 +14738,7 @@ talk Wyress Rashan |q Heart of Evil/Talk to Wyress Rashan
 step
 goto 60.08,14.80
 |tip Watch the dialogue.
-'Throw the _Heart in the Ritual Circle_ |q Heart of Evil/Throw the Heart in the Ritual Circle |future
+'Throw the _Heart in the Ritual Circle_ |q Heart of Evil/Throw the Heart in the Ritual Circle
 step
 goto 60.30,14.66
 talk Wyress Rashan
@@ -14785,17 +14785,17 @@ goto 64.24,71.93
 |tip Manually skip to the next step.
 step
 goto nchuduabtharthreshold_base 46.99,39.09
-'Go to the _Strategic Position_ |q The Parley/Go to the Strategic Position |future
+'Go to the _Strategic Position_ |q The Parley/Go to the Strategic Position
 step
 goto nchuduabtharthreshold_base 46.99,39.09
 'Keep _Watch During the Parley_ |q The Parley/Keep Watch During Parley
 step
 goto nchuduabtharthreshold_base 47.67,36.08
 |tip Drop down.
-kill the enemies that attack |q The Parley/Help the Queen Escape |future
+kill the enemies that attack |q The Parley/Help the Queen Escape
 step
 goto 47.21,50.42
-'Use _Evermore Castle_ |q The Parley/Return to Evermore Castle |future
+'Use _Evermore Castle_ |q The Parley/Return to Evermore Castle
 |tip Manually skip to the next step.
 step
 goto evermore_base 65.39,72.66
@@ -14832,16 +14832,16 @@ step
 goto 46.05,53.76
 wayshrine Bangkorai Pass
 step
-goto 41.75,53.30 |q Storming the Garrison |future
+goto 41.75,53.30 |q Storming the Garrison
 step
-goto 35.20,57.02 |q Storming the Garrison |future
+goto 35.20,57.02 |q Storming the Garrison
 step
 goto 33.27,54.90
 wayshrine Sunken Road
 step
 goto 33.27,54.90
 'Use _Sunken Road_ Wayshrine
-'Travel to _Bangkorai Pass_ |q Storming the Garrison |future
+'Travel to _Bangkorai Pass_ |q Storming the Garrison
 |tip Manually skip to the next step.
 step
 goto 47.12,54.93
@@ -14849,10 +14849,10 @@ talk High King Emeric
 accept Storming the Garrison
 step
 goto 47.40,55.38
-'Open _Garrison Sewers_ |q Storming the Garrison/Enter the Sewer |future
+'Open _Garrison Sewers_ |q Storming the Garrison/Enter the Sewer
 |tip Manually skip to the next step.
 step
-goto bangkoraigarrisonsewer_base 13.42,35.73 |q Storming the Garrison/Find the Gatehouse |future
+goto bangkoraigarrisonsewer_base 13.42,35.73 |q Storming the Garrison/Find the Gatehouse
 step
 goto 28.35,52.70 |q Storming the Garrison/Find the Gatehouse
 step
@@ -14865,11 +14865,11 @@ step
 goto 68.22,41.47 |q Storming the Garrison/Find the Gatehouse
 step
 goto 81.38,44.70
-'Climb _Garrison Gatehouse_ |q Storming the Garrison/Find the Gatehouse |future
+'Climb _Garrison Gatehouse_ |q Storming the Garrison/Find the Gatehouse
 |tip Manually skip to the next step.
 step
 goto bangkorai_base 52.58,56.73
-'Activate _Main Gate Switch_ |q Storming the Garrison/Activate the Main Gate Switch |future
+'Activate _Main Gate Switch_ |q Storming the Garrison/Activate the Main Gate Switch
 step
 goto 52.78,56.53
 'Open _Garrison Courtyard_ |q Storming the Garrison/Meet High King Emeric Outside
@@ -14885,10 +14885,10 @@ step
 goto 51.30,59.29 |q Storming the Garrison/Assault the Barracks
 step
 goto 48.95,57.65
-'Open _Garrison Barracks_ |q Storming the Garrison/Assault the Barracks |future
+'Open _Garrison Barracks_ |q Storming the Garrison/Assault the Barracks
 |tip Manually skip to the next step.
 step
-goto bangkoraigarrisontop_base 47.68,50.96 |q Storming the Garrison/.*Free the Imprisoned Knights.* |future
+goto bangkoraigarrisontop_base 47.68,50.96 |q Storming the Garrison/.*Free the Imprisoned Knights.*
 step
 goto 60.05,31.95
 'Open _Barracks Dungeon_ |q Storming the Garrison/.*Free the Imprisoned Knights.*
@@ -14929,7 +14929,7 @@ goto 56.30,54.60
 'Open _Royal Crypt_ |q Storming the Garrison/Enter the Royal Crypt
 |tip Manually skip to the next step.
 step
-goto bangkoraigarrison_alt_base 65.15,38.86 |q Storming the Garrison/Defeat Battlemage Papus |future
+goto bangkoraigarrison_alt_base 65.15,38.86 |q Storming the Garrison/Defeat Battlemage Papus
 step
 goto 84.74,55.58 |q Storming the Garrison/Defeat Battlemage Papus
 step
@@ -14962,24 +14962,24 @@ goto 54.66,60.30
 talk High King Emeric
 accept Striking Back
 step
-goto 55.84,64.66 |q Hallin's Burden |future
+goto 55.84,64.66 |q Hallin's Burden
 step
-goto 58.96,66.41 |q Hallin's Burden |future
+goto 58.96,66.41 |q Hallin's Burden
 step
 goto 57.20,71.30
 wayshrine Old Tower
 step
-goto 58.98,66.29 |q Hallin's Burden |future
+goto 58.98,66.29 |q Hallin's Burden
 step
-goto 44.32,61.41 |q Hallin's Burden |future
+goto 44.32,61.41 |q Hallin's Burden
 step
 goto 33.35,63.52
 wayshrine Nilata Ruins
 step
-goto hallinsstand_base 58.61,20.82 |q Hallin's Burden |future
+goto hallinsstand_base 58.61,20.82 |q Hallin's Burden
 step
 goto 56.95,28.93
-'Open _Hallin's Stand_ |q Hallin's Burden |future
+'Open _Hallin's Stand_ |q Hallin's Burden
 |tip Manually skip to the next step.
 step
 goto 56.15,28.90
@@ -15241,19 +15241,19 @@ step
 goto 47.28,90.96
 'Examine _On the Chamber of Passage_ |lorebook On the Chamber of Passage/3/14/77
 step
-goto 47.76,92.81 |q Trials and Tribulations/Enter the Hall of Heroes |future
+goto 47.76,92.81 |q Trials and Tribulations/Enter the Hall of Heroes
 step
 goto 47.78,94.59
 'Open _Hall of Heroes_ |q Trials and Tribulations/Enter the Hall of Heroes
 |tip Manually skip to the next step.
 step
 goto hallofheroes_base 23.52,49.48
-talk Keeper of the Hall |q Trials and Tribulations/Talk to the Keeper of the Hall |future
+talk Keeper of the Hall |q Trials and Tribulations/Talk to the Keeper of the Hall
 step
 goto 22.02,69.68 |q Trials and Tribulations/Find Frandar Hunding's Burial Chamber
 step
 goto 7.22,69.69
-talk Frandar Hunding |q Trials and Tribulations/Speak to Frandar Hunding |future
+talk Frandar Hunding |q Trials and Tribulations/Speak to Frandar Hunding
 step
 goto 13.36,68.74
 'Take _Mastery of Sacrifice_ |lorebook Mastery of Sacrifice/3/9/87
@@ -15267,7 +15267,7 @@ step
 goto 29.44,63.58
 'Take _Mastery of Discipline_ |lorebook Mastery of Discipline/3/9/84
 step
-goto 21.49,69.65 |q Trials and Tribulations/Return Frandar's Scrolls |future
+goto 21.49,69.65 |q Trials and Tribulations/Return Frandar's Scrolls
 step
 goto 7.93,70.50
 'Use _Pedestal_
@@ -15295,7 +15295,7 @@ step
 goto 49.76,77.42 |q Trials and Tribulations/Find Divad Hunding's Burial Chamber
 step
 goto 50.28,87.87
-talk Divad Hunding |q Trials and Tribulations/Speak to Divad Hunding |future
+talk Divad Hunding |q Trials and Tribulations/Speak to Divad Hunding
 step
 goto 49.76,77.42 |q Trials and Tribulations/Light the Braziers in the Proper Colors
 step
@@ -15316,7 +15316,7 @@ step
 goto 60.13,64.50 |q Trials and Tribulations/Find Makela Leki's Burial Chamber
 step
 goto 60.13,50.18
-talk Makela Leki |q Trials and Tribulations/Talk to Makela Leki's Spirit |future
+talk Makela Leki |q Trials and Tribulations/Talk to Makela Leki's Spirit
 step
 goto 61.38,56.02
 'Use _Simple Training Sword_ |q Trials and Tribulations/Bring the Correct Sword to Makela Leki
@@ -15353,7 +15353,7 @@ talk High King Emeric |q To Walk on Far Shores/Talk to King Emeric
 step
 goto 73.84,16.83
 |tip Run into the huge white light.
-'Cross into the _Far Shores_ |q To Walk on Far Shores/Cross into the Far Shores |future
+'Cross into the _Far Shores_ |q To Walk on Far Shores/Cross into the Far Shores
 |tip Manually skip to the next step.
 step
 goto thefarshores_base 63.94,40.37
@@ -15403,7 +15403,7 @@ talk Vanus Galerion |q Messages Across Tamriel/Talk to Vanus Galerion
 |only Daggerfall Covenant
 step
 goto 49.38,38.42
-'Use _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal |future
+'Use _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -15421,7 +15421,7 @@ talk Vanus Galerion |q Messages Across Tamriel/Talk to Vanus Galerion
 |only Daggerfall Covenant
 step
 '_Run back towards the place you came in:_
-'Use _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal |future
+'Use _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -15438,7 +15438,7 @@ talk Vanus Galerion |q Messages Across Tamriel/Talk to Vanus Galerion
 |only Daggerfall Covenant
 step
 '_Go to the opposite end of the room:_
-'Use _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal |future
+'Use _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -15453,7 +15453,7 @@ goto 36.46,29.97
 |only Daggerfall Covenant
 step
 goto 36.46,29.97
-'Use _Portal to Stirk_ |q The Weight of Three Crowns/Enter Portal to Stirk |future
+'Use _Portal to Stirk_ |q The Weight of Three Crowns/Enter Portal to Stirk
 |tip Manually skip to the next step. |next Extras\\Extras\\Main Quests Only\\Coldharbour
 |only Daggerfall Covenant
 step
@@ -15475,7 +15475,7 @@ accept Cadwell's Gold
 |only Ebonheart Pact
 step
 goto 87.70,39.03
-'Use _Light of Meridia_ |q Cadwell's Gold/Use the Light of Meridia |future |next Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Khenarthi's Roost
+'Use _Light of Meridia_ |q Cadwell's Gold/Use the Light of Meridia |next Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Khenarthi's Roost
 |only Ebonheart Pact
 step
 goto bangkorai_base 67.90,19.30
@@ -15497,11 +15497,11 @@ turnin Cadwell's Gold |next Extras\\Extras\\Main Quests Only\\DLC\\Imperial City
 step
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Bleakrock Isle",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Bleakrock Isle",[[
 loadingimage loadscreen_bleakrock_01.dds
 description Bleakrock is an island off the northeast coast of Skyrim between Windhelm and Solstheim. The hardy Nords who inhabit Bleakrock are mostly farmers and fisherfolk. A small contingent of Pact soldiers keeps a sharp lookout for pirates and raiders.
 step
-'_Save 2 Extra Skill Points as you Level_ |q A Beginning at Bleakrock |future
+'_Save 2 Extra Skill Points as you Level_ |q A Beginning at Bleakrock
 |tip Don't spend them yet.
 |tip You'll be able to invest them into the Intimidate and Persuade skills soon, which will save you a lot of time on certain quests as you level.
 |tip Manually skip to the next step.
@@ -15518,7 +15518,7 @@ goto 78.79,47.18
 talk Captain Rana
 'Tell her _What is Skyshroud Barrow?_
 'Tell her _I'll start at Skyshroud Barrow._
-'Help Captain Rana |q A Beginning at Bleakrock/Find Darj |future
+'Help Captain Rana |q A Beginning at Bleakrock/Find Darj
 |tip Manually skip to the next step.
 step
 goto 69.40,35.61 |q A Beginning at Bleakrock/Find Darj |tip Leave this building.
@@ -15564,7 +15564,7 @@ goto 78.93,44.22
 'Place _Snake Runestone Column_ |q What Waits Beneath/Place the Snake Runestone
 step
 goto 79.19,44.81
-'Open _Skyshroud Barrow_ |q What Waits Beneath/Enter Skyshroud Barrow |future
+'Open _Skyshroud Barrow_ |q What Waits Beneath/Enter Skyshroud Barrow
 step
 goto skyshroudbarrow_base 49.39,43.03
 'Use _Haldriin_ |q What Waits Beneath/Sanctify the Priest's Body
@@ -15577,11 +15577,11 @@ talk Darj the Hunter
 turnin What Waits Beneath
 accept The Missing of Bleakrock
 step
-goto 73.98,42.89 |q Hozzin's Folly |future
+goto 73.98,42.89 |q Hozzin's Folly
 step
-goto 64.90,59.32 |q Hozzin's Folly |future
+goto 64.90,59.32 |q Hozzin's Folly
 step
-goto bleakrockvillage_base 22.38,32.71 |q Hozzin's Folly |future
+goto bleakrockvillage_base 22.38,32.71 |q Hozzin's Folly
 step
 goto bleakrock_base 27.52,51.69
 talk Sergeant Seyne
@@ -15611,26 +15611,26 @@ goto hozzinsfolley_base 32.92,80.98 |q Hozzin's Folly/Find a Way into the Tomb
 step
 goto 43.14,7.75 |q Hozzin's Folly/Find a Way into the Tomb
 step
-goto 59.57,9.77 |q Hozzin's Folly/Bypass the Fire Traps |future
+goto 59.57,9.77 |q Hozzin's Folly/Bypass the Fire Traps
 step
 goto 59.75,39.68 |q Hozzin's Folly/Bypass the Fire Traps |tip Bypass the Fire Traps.
 step
 goto 59.99,47.04
-'Use _Portal to Oblivion_ |q Hozzin's Folly/Use the Portal to Enter Oblivion |future
+'Use _Portal to Oblivion_ |q Hozzin's Folly/Use the Portal to Enter Oblivion
 step
 '_In the cave:_
 |tip Follow the path into the open room and go downstairs.
 'Destroy _Unspeakable Sigil_ |q Hozzin's Folly/Destroy the Unspeakable Sigil
 step
 goto 73.37,71.77
-'Open _Bleakrock Isle_ |q Hozzin's Folly/Leave the Mine |future
+'Open _Bleakrock Isle_ |q Hozzin's Folly/Leave the Mine
 step
 goto bleakrock_base 25.99,39.69
 talk Sergeant Seyne
 turnin Hozzin's Folly
 step
 'Open _Bleakrock Isle_ Map
-'Travel to _Bleakrock_ |q The Frozen Man |future
+'Travel to _Bleakrock_ |q The Frozen Man
 |tip Manually skip to the next step.
 step
 goto 49.08,22.77
@@ -15638,7 +15638,7 @@ talk Rolunda
 accept The Frozen Man
 step
 goto 51.01,18.45
-'Open _Orkey's Hollow_ |q The Frozen Man/Enter Orkey's Hollow |future
+'Open _Orkey's Hollow_ |q The Frozen Man/Enter Orkey's Hollow
 step
 goto orkeyshollow_base 36.25,82.06
 'Find _Eiman_ |q The Frozen Man/Find Eiman
@@ -15738,7 +15738,7 @@ turnin Sparking the Flame
 accept Escape from Bleakrock
 step
 goto 62.50,68.65
-'Open _Last Rest_ |q Escape from Bleakrock/Enter Last Rest |future
+'Open _Last Rest_ |q Escape from Bleakrock/Enter Last Rest
 step
 goto lastresortbarrow_base 59.75,12.08
 talk Captain Rana |q Escape from Bleakrock/Talk to Captain Rana
@@ -15789,7 +15789,7 @@ turnin Escape from Bleakrock
 accept If By Sea |next Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Stonefalls
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Stonefalls",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Stonefalls",[[
 loadingimage loadscreen_stonefalls_01.dds
 description The ashfall from the volcanoes of the Velothi Mountains and from great Ash Mountain itself is Stonefalls' bane and benefit, fertilizing the soil where the land isn't too arid to grow crops. It was here that the recent invading army from Akavir met its bloody end.
 step
@@ -15912,7 +15912,7 @@ goto 18.49,56.21
 'Open _Stonefalls_ |q Warning Davon's Watch/Talk to Holgunn
 |tip Manually skip to the next step.
 step
-'If your are level 10 or higher use Cyrodiil Introduction guide and and complete it to gain a healing spell and 30% gallop mount speed through the Assault War/Alliance Skill Line. |q Welcome to Cyrodiil |future 
+'If your are level 10 or higher use Cyrodiil Introduction guide and and complete it to gain a healing spell and 30% gallop mount speed through the Assault War/Alliance Skill Line. |q Welcome to Cyrodiil 
 |tip Located in Extras Main Quest Only Folders.
 |tip If your not Level 10 once your are level it is recommended.
 |tip Manually skip to the next step.
@@ -15949,7 +15949,7 @@ turnin Rudrasa's Invitation
 |only Ebonheart Pact
 step
 'Use one of the _skill points_ you saved
-'Learn the _Persuasive Will skill_ under Fighters Guild |q Long Lost Lore |future
+'Learn the _Persuasive Will skill_ under Fighters Guild |q Long Lost Lore
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -16039,7 +16039,7 @@ goto stonefalls_base 75.64,32.30 |q The Harborage/Find the Harborage
 |only Ebonheart Pact
 step
 goto 77.44,36.58
-'Open _The Harborage_ |q The Harborage/Find the Harborage |future
+'Open _The Harborage_ |q The Harborage/Find the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -16270,7 +16270,7 @@ goto 47.29,25.82
 |tip It takes a few seconds for the goal to complete.
 step
 goto 48.88,13.97
-talk Mavos Siloreth |q Rending Flames/Talk to Mavos |future
+talk Mavos Siloreth |q Rending Flames/Talk to Mavos
 step
 goto 48.67,13.01
 'Use _Altar of Binding_ |q Rending Flames/Use the Altar
@@ -16330,15 +16330,15 @@ goto 72.92,42.55
 |tip It will take a moment for the summon to complete.
 step
 goto 73.18,40.94
-talk Mavos Siloreth |q The Death of Balreth/Talk to Mavos Siloreth |future
+talk Mavos Siloreth |q The Death of Balreth/Talk to Mavos Siloreth
 step
 goto 73.15,40.83
-'Use _Portal_ |q The Death of Balreth/Enter Ash Mountain |future
+'Use _Portal_ |q The Death of Balreth/Enter Ash Mountain
 |tip Manually skip to the next step.
 step
 goto ashmountain_base 48.64,56.96
 |tip Watch the dialogue.
-kill Balreth |q The Death of Balreth/Defeat Balreth |future
+kill Balreth |q The Death of Balreth/Defeat Balreth
 step
 goto 47.01,57.15
 'Contain _Balreth_ |q The Death of Balreth/Contain Balreth's Spirit
@@ -16351,7 +16351,7 @@ goto 49.01,58.63
 talk Mavos Siloreth |q The Death of Balreth/Talk to Mavos Siloreth
 step
 goto 39.86,51.87
-'Use _Ash Mountain_ |q The Death of Balreth/Leave Ash Mountain |future
+'Use _Ash Mountain_ |q The Death of Balreth/Leave Ash Mountain
 |tip Manually skip to the next step.
 step
 goto stonefalls_base 72.61,55.05
@@ -16359,7 +16359,7 @@ talk Walks-in-Ash
 turnin The Death of Balreth
 accept In With the Tide
 step
-goto 71.61,56.30 |q The Coral Heart |future
+goto 71.61,56.30 |q The Coral Heart
 step
 goto 72.14,59.14
 'Use _Othrenis_ Wayshrine
@@ -16371,7 +16371,7 @@ goto 73.79,37.45 |q Long Lost Lore/Enter the Ruins
 |only Ebonheart Pact
 step
 goto 71.78,39.72
-'Open _Inner Sea Armature_ |q Long Lost Lore/Enter the Ruins |future
+'Open _Inner Sea Armature_ |q Long Lost Lore/Enter the Ruins
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -16436,7 +16436,7 @@ talk Arch-Mage Shalidor |q Long Lost Lore/Talk to Arch-Mage Shalidor
 |only Ebonheart Pact
 step
 goto 48.90,41.16
-'Use _Portal to Cheesemonger's Hollow_ |q Long Lost Lore/Enter the Portal to Sheogorath's Shrine |future
+'Use _Portal to Cheesemonger's Hollow_ |q Long Lost Lore/Enter the Portal to Sheogorath's Shrine
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -16502,11 +16502,11 @@ goto stonefalls_base 85.75,40.54 |lorebook Varieties of Faith: The Dark Elves/1/
 step
 goto davonswatch_base 58.46,78.19
 'Use _Davon's Watch_ Wayshrine
-'Travel to _Othrenis_ |q The Coral Heart |future
+'Travel to _Othrenis_ |q The Coral Heart
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
-goto stonefalls_base 71.83,59.16 |q The Coral Heart |future
+goto stonefalls_base 71.83,59.16 |q The Coral Heart
 |only not Ebonheart Pact
 step
 goto stonefalls_base 64.55,62.51
@@ -16534,7 +16534,7 @@ goto 65.28,55.13 |lorebook Boethiah's Proving/1/8/2
 |only Ebonheart Pact
 step
 goto 62.97,56.67
-'Help _Aelif Defeat Daedra_ |q Anchors from the Harbour/Help Aelif Defeat Daedra |future
+'Help _Aelif Defeat Daedra_ |q Anchors from the Harbour/Help Aelif Defeat Daedra
 |only Ebonheart Pact
 step
 goto 60.38,56.26
@@ -16549,20 +16549,20 @@ goto 57.68,57.23
 'Examine _Boethiah's Proving_ |lorebook Boethiah's Proving/1/8/2
 |only Ebonheart Pact
 step
-goto 58.87,65.22 |q The Coral Heart |future
+goto 58.87,65.22 |q The Coral Heart
 step
 goto 53.90,60.93
 wayshrine Brothers of Strife
 step
-goto ebonheart_base 48.82,86.94 |q The Coral Heart |future
+goto ebonheart_base 48.82,86.94 |q The Coral Heart
 step
 goto 45.40,75.49
 'Examine _Nords of Skyrim_ |lorebook Nords of Skyrim/1/20/5
 |only Ebonheart Pact
 step
-goto 52.05,76.59 |q The Coral Heart |future
+goto 52.05,76.59 |q The Coral Heart
 step
-goto 52.20,64.49 |q The Coral Heart |future
+goto 52.20,64.49 |q The Coral Heart
 step
 goto 46.05,63.04
 wayshrine Ebonheart
@@ -16580,7 +16580,7 @@ goto 52.78,36.24
 |only Ebonheart Pact
 step
 goto 52.88,36.28
-'Open _Stonefang Cavern_ |q Anchors from the Harbour/Enter Doshia's Lair |future
+'Open _Stonefang Cavern_ |q Anchors from the Harbour/Enter Doshia's Lair
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -16602,7 +16602,7 @@ turnin Anchors from the Harbour
 |only Ebonheart Pact
 step
 'Open _Stonefalls_ Map
-'Travel to _Ebonheart_ |q The Coral Heart |future
+'Travel to _Ebonheart_ |q The Coral Heart
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -16612,9 +16612,9 @@ talk Bera Moorsmith
 accept The Dangerous Past
 |only Ebonheart Pact
 step
-goto 51.44,80.09 |q The Coral Heart |future
+goto 51.44,80.09 |q The Coral Heart
 step
-goto stonefalls_base 50.55,55.06 |q The Coral Heart |future
+goto stonefalls_base 50.55,55.06 |q The Coral Heart
 step
 goto 50.05,58.34
 'Examine _Galerion the Mystic_ |lorebook Galerion the Mystic/1/9/1
@@ -16628,7 +16628,7 @@ goto 47.61,63.72
 |only Ebonheart Pact
 step
 'Open _Stonefalls_ Map
-'Travel to _Vivec's Antlers_ |q The Coral Heart |future
+'Travel to _Vivec's Antlers_ |q The Coral Heart
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -16677,7 +16677,7 @@ goto 43.77,54.81
 'Place _South Coral Cluster_ |q The Coral Heart/Place Egg in South Coral Cluster
 step
 goto 42.32,53.64
-'Open _Coral Heart Chamber_ |q The Coral Heart/Enter Coral Heart Chamber |future
+'Open _Coral Heart Chamber_ |q The Coral Heart/Enter Coral Heart Chamber
 |tip Manually skip to the next step.
 step
 goto coralheartchamber_base 75.40,12.53 |q The Coral Heart/Find the Coral Heart
@@ -16717,7 +16717,7 @@ goto 35.08,52.91
 |only Ebonheart Pact
 step
 goto 77.42,36.60
-'Open _The Harborage_ |q Daughter of Giants/Go to the Harborage |future
+'Open _The Harborage_ |q Daughter of Giants/Go to the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -16726,7 +16726,7 @@ talk The Prophet |q Daughter of Giants/Talk to the Prophet
 |only Ebonheart Pact
 step
 goto 65.28,33.82
-'Use _Portal to Coldharbour_ |q Daughter of Giants/Enter Coldharbour |future
+'Use _Portal to Coldharbour_ |q Daughter of Giants/Enter Coldharbour
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -16766,7 +16766,7 @@ goto 31.67,48.17
 |only Ebonheart Pact
 step
 goto 29.89,53.28
-'Open _Imperial Footlocker_ |q Daughter of Giants/Find Lyris's Armor |future
+'Open _Imperial Footlocker_ |q Daughter of Giants/Find Lyris's Armor
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -16830,11 +16830,11 @@ goto 65.36,36.07
 |only Ebonheart Pact
 step
 goto 76.70,40.91
-kill Manifestation of Terror |q Daughter of Giants/Vanquish Lyris's Terror |future
+kill Manifestation of Terror |q Daughter of Giants/Vanquish Lyris's Terror
 |only Ebonheart Pact
 step
 goto 78.87,42.42
-'Use _Portal to the Harborage_ |q Daughter of Giants/Escape the Foundry of Woe |future
+'Use _Portal to the Harborage_ |q Daughter of Giants/Escape the Foundry of Woe
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -16909,7 +16909,7 @@ goto 20.47,28.07
 talk Garyn Indoril |q Breaking Fort Virak/Talk to Garyn Indoril
 step
 goto 17.99,26.91
-'Open _Fort Virak Ruin_ |q Breaking Fort Virak/Enter the Ruins |future
+'Open _Fort Virak Ruin_ |q Breaking Fort Virak/Enter the Ruins
 |tip Manually skip to the next step.
 step
 goto fortvirakruin_base 63.90,80.44
@@ -16935,7 +16935,7 @@ turnin Breaking Fort Virak
 accept Evening the Odds
 step
 goto 16.25,69.69
-'Open _Fort Virak_ |q Evening the Odds/Enter Fort Virak from the Ruins |future
+'Open _Fort Virak_ |q Evening the Odds/Enter Fort Virak from the Ruins
 |tip Manually skip to the next step.
 step
 goto stonefalls_base 19.86,23.74
@@ -16972,7 +16972,7 @@ goto 17.50,24.78
 'Open _Inner Courtyard_ |q The General's Demise/Enter the Manor Gate
 step
 goto 15.33,23.55
-'Open _Virak Keep_ |q The General's Demise/Enter the Keep |future
+'Open _Virak Keep_ |q The General's Demise/Enter the Keep
 |tip Manually skip to the next step.
 step
 '_Inside Virak Keep:_
@@ -16981,7 +16981,7 @@ step
 kill General Serien |q The General's Demise/Kill General Serien
 step
 '_Inside Virak Keep:_
-'Open _Fort Virak_ |q The General's Demise/Meet Holgunn outside Keep |future
+'Open _Fort Virak_ |q The General's Demise/Meet Holgunn outside Keep
 |tip Manually skip to the next step.
 step
 goto 15.67,23.48
@@ -17036,7 +17036,7 @@ goto 21.93,58.39
 talk Riinsi Dreloth 
 turnin City at the Spire
 step
-goto kragenmoor_base 37.40,47.48 |q Aggressive Negotiations |future
+goto kragenmoor_base 37.40,47.48 |q Aggressive Negotiations
 step
 goto 50.66,51.36
 wayshrine Kragenmoor
@@ -17174,7 +17174,7 @@ goto 36.54,61.55
 'Use _Atronach Ward Stone_ |q Climbing the Spire/Lower the Atronach Ward
 step
 goto 36.81,61.29
-'Open _Tormented Spire_ |q Climbing the Spire/Enter Tormented Spire |future
+'Open _Tormented Spire_ |q Climbing the Spire/Enter Tormented Spire
 |tip Manually skip to the next step.
 step
 goto tormented_spire_base 75.73,67.21
@@ -17287,7 +17287,7 @@ turnin Opening the Portal
 accept Sadal's Final Defeat
 step
 goto 39.24,52.29
-'Use _Sadal's Prison_ |q Sadal's Final Defeat/Enter Sadal's Prison |future
+'Use _Sadal's Prison_ |q Sadal's Final Defeat/Enter Sadal's Prison
 |tip Manually skip to the next step.
 step
 goto tormentedspireinstance_base 76.15,65.26
@@ -17329,7 +17329,7 @@ goto 32.95,61.07
 |only Ebonheart Pact
 step
 goto stonefalls_base 77.43,36.57
-'Open _The Harborage_ |q Chasing Shadows/Go to the Harborage |future
+'Open _The Harborage_ |q Chasing Shadows/Go to the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -17361,7 +17361,7 @@ talk Feduria Llaren |q Chasing Shadows/Investigate Davon's Watch
 |only Ebonheart Pact
 step
 goto 76.88,59.64
-'Open _Abandoned Cellar_ |q Chasing Shadows/Enter the Cellar |future
+'Open _Abandoned Cellar_ |q Chasing Shadows/Enter the Cellar
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -17381,7 +17381,7 @@ step
 |only Ebonheart Pact
 step
 goto stonefalls_base 77.42,36.60
-'Open _The Harborage_ |q Chasing Shadows/Return to the Harborage |future
+'Open _The Harborage_ |q Chasing Shadows/Return to the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -17425,7 +17425,7 @@ talk Dandrii Dran
 turnin A Letter for Deshaan |next Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Deshaan
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Deshaan",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Deshaan",[[
 loadingimage loadscreen_deshaan_01.dds
 description Deshaan is the fertile, central plain of Morrowind and the triumphant fruition of Dunmeri agriculture. Primitive irrigation along low-lying lands around the Lake Amaya basin provide all the water needed to sustain both plants and animals, although the tribes seem more concerned with rituals than recompense.
 step
@@ -17474,7 +17474,7 @@ talk Nilyne Hlor
 accept Proprietary Formula
 step
 goto 8.46,43.69
-'Open _The Serk Catacombs_ |q Bad Medicine/Enter the Maulborn Quarantine |future
+'Open _The Serk Catacombs_ |q Bad Medicine/Enter the Maulborn Quarantine
 |tip Manually skip to the next step.
 step
 goto quarantineserk_base 19.36,35.81
@@ -17500,7 +17500,7 @@ goto 30.07,64.58
 step
 goto 35.55,43.86
 |tip Watch the dialogue.
-talk Dethisam Berendas |q Bad Medicine/Investigate the Maulborn Quarantine |future
+talk Dethisam Berendas |q Bad Medicine/Investigate the Maulborn Quarantine
 step
 goto 35.55,43.86
 talk Aerona |q Bad Medicine/Talk to Aerona
@@ -17528,7 +17528,7 @@ goto 43.33,71.32
 'Destroy _Maulborn Research_ |q Bad Medicine/Destroy Maulborn Research
 step
 goto 41.58,68.62
-'Open _The Serk_ |q Bad Medicine/Exit the Maulborn Quarantine |future
+'Open _The Serk_ |q Bad Medicine/Exit the Maulborn Quarantine
 |tip Manually skip to the next step.
 step
 goto deshaan_base 12.90,42.78
@@ -17592,25 +17592,25 @@ step
 goto narsis_base 19.63,49.46
 wayshrine West Narsis
 step
-goto deshaan_base 12.64,51.37 |q For Their Own Protection |future
+goto deshaan_base 12.64,51.37 |q For Their Own Protection
 step
 goto 11.79,56.52
 'Examine _Dwemer Dungeons: What I Know_ |lorebook Dwemer Dungeons: What I Know/1/23/5
 |only Ebonheart Pact
 step
-goto 11.13,54.98 |q For Their Own Protection |future
+goto 11.13,54.98 |q For Their Own Protection
 step
-goto 14.50,59.26 |q For Their Own Protection |future
+goto 14.50,59.26 |q For Their Own Protection
 step
 goto 18.64,59.61
 |tip Go through the cave.
 'Examine _Legend of the Ghost Snake_ |lorebook Legend of the Ghost Snake/1/23/6
 |only Ebonheart Pact
 step
-goto 18.03,59.47 |q For Their Own Protection |future |tip Go through the cave.
+goto 18.03,59.47 |q For Their Own Protection |tip Go through the cave.
 |only not Ebonheart Pact
 step
-goto 22.22,56.32 |q For Their Own Protection |future
+goto 22.22,56.32 |q For Their Own Protection
 step
 goto 26.99,54.97
 wayshrine Muth Gnaar Hills
@@ -17625,7 +17625,7 @@ goto 24.04,54.64
 step
 goto 26.98,54.94
 'Use _Muth Gnaar Hills_ Wayshrine
-'Travel to _West Narsis_ |q For Their Own Protection |future
+'Travel to _West Narsis_ |q For Their Own Protection
 |tip Manually skip to the next step.
 step
 goto narsis_base 35.09,52.54
@@ -17752,7 +17752,7 @@ goto deshaan_base 12.86,53.23
 'Find the _Ruins Entrance_ |q Hiding in Plain Sight/Find the Ruins Entrance
 step
 goto 12.85,53.43
-'Open _Narsis Ruins_ |q Hiding in Plain Sight/Enter the Ruins |future
+'Open _Narsis Ruins_ |q Hiding in Plain Sight/Enter the Ruins
 |tip Manually skip to the next step.
 step
 goto narsisruins_base 52.06,58.37 |q Hiding in Plain Sight/Stop Giron Sadri
@@ -17866,7 +17866,7 @@ goto 32.05,47.45
 talk Captain Diiril |q Plague Bringer/Talk to Diiril
 step
 goto 32.16,48.11
-'Open _Apothecarium_ |q Plague Bringer/Enter the Alchemist's Lair |future
+'Open _Apothecarium_ |q Plague Bringer/Enter the Alchemist's Lair
 |tip Manually skip to the next step.
 step
 goto apothacarium_base 48.54,32.25
@@ -17888,7 +17888,7 @@ goto 32.14,47.43
 talk Varon Davel
 accept Message to Mournhold
 step
-goto 35.35,45.22 |q A Favor Returned |future
+goto 35.35,45.22 |q A Favor Returned
 step
 goto 40.44,45.11
 'Examine _Arcana Restored_ |lorebook Arcana Restored/1/15/1
@@ -17901,7 +17901,7 @@ step
 goto 44.20,41.22
 wayshrine Mzithumz
 step
-goto 39.26,45.71 |q A Favor Returned |future
+goto 39.26,45.71 |q A Favor Returned
 step
 goto mournhold_base 33.04,39.88
 talk Ordinator
@@ -17927,7 +17927,7 @@ goto 31.53,56.68
 |only Ebonheart Pact
 step
 goto 32.54,56.82
-'Use _Portal to the Shivering Isles_ |q Simply Misplaced/Enter Portal |future
+'Use _Portal to the Shivering Isles_ |q Simply Misplaced/Enter Portal
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -18024,7 +18024,7 @@ goto 46.25,39.10
 step
 goto 51.46,84.71
 kill Maleel al-Akir
-'Retrieve _Staff_ |q Simply Misplaced/Retrieve the Staff |future
+'Retrieve _Staff_ |q Simply Misplaced/Retrieve the Staff
 |only Ebonheart Pact
 step
 goto 49.38,55.09
@@ -18049,7 +18049,7 @@ talk Sheogorath |q Simply Misplaced/Talk to Sheogorath
 |only Ebonheart Pact
 step
 goto 51.70,56.30
-'Take _Circus of Cheerful Slaughter_ |q Simply Misplaced/Collect the Book |future
+'Take _Circus of Cheerful Slaughter_ |q Simply Misplaced/Collect the Book
 |only Ebonheart Pact
 step
 goto mournhold_base 33.55,57.14
@@ -18083,14 +18083,14 @@ goto 56.36,35.68
 talk Naryu Virian |q A Favor Returned/Talk to Naryu Virian
 step
 goto 56.44,33.04
-'Open _Tribunal Temple_ |q A Favor Returned/Enter the Tribunal Temple |future
+'Open _Tribunal Temple_ |q A Favor Returned/Enter the Tribunal Temple
 |tip Manually skip to the next step.
 step
 goto 57.51,31.85
 talk Almalexia |q A Favor Returned/Talk to Almalexia
 step
 goto 57.23,33.68
-'Open _Mournhold_ |q A Favor Returned/Leave the Tribunal Temple |future
+'Open _Mournhold_ |q A Favor Returned/Leave the Tribunal Temple
 step
 goto 51.28,47.45 |q Message to Mournhold/Report to Ordinator Kilao in Mournhold
 step
@@ -18111,7 +18111,7 @@ goto 51.68,71.54
 |only Ebonheart Pact
 step
 goto 51.45,71.53
-'Use _Portal to Mzeneldt_ |q The Dangerous Past/Talk to Sees-All-Colors |future
+'Use _Portal to Mzeneldt_ |q The Dangerous Past/Talk to Sees-All-Colors
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -18147,7 +18147,7 @@ goto 83.98,43.62
 |only Ebonheart Pact
 step
 goto 83.75,47.41
-'Witness the _Scene_ |q The Dangerous Past/Witness the Scene |future
+'Witness the _Scene_ |q The Dangerous Past/Witness the Scene
 |only Ebonheart Pact
 step
 goto 83.49,47.77
@@ -18223,7 +18223,7 @@ talk Jofnir Iceblade |q The Dangerous Past/Talk to Jofnir Iceblade
 |only Ebonheart Pact
 step
 goto 37.04,45.50
-'Use _Portal to the Guildhall_ |q The Dangerous Past/Talk to Merric at-Aswala |future
+'Use _Portal to the Guildhall_ |q The Dangerous Past/Talk to Merric at-Aswala
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -18263,7 +18263,7 @@ goto 76.28,57.65
 step
 goto 40.30,69.54 |q A Favor Returned/Go to the House Dres Farm |tip Leave this building.
 step
-goto 35.32,82.73 |q A Favor Returned/Investigate the Dres Farmhouses |future
+goto 35.32,82.73 |q A Favor Returned/Investigate the Dres Farmhouses
 step
 goto 45.92,86.13
 |tip Upstairs in the barn.
@@ -18280,7 +18280,7 @@ turnin A Favor Returned
 accept The Mournhold Underground
 step
 goto 36.83,91.38
-'Open _Mournhold Underground_ |q The Mournhold Underground/Enter the Trap Door |future
+'Open _Mournhold Underground_ |q The Mournhold Underground/Enter the Trap Door
 |tip Manually skip to the next step.
 step
 goto mournholdsewers_base 29.15,86.90 |q The Mournhold Underground/Follow Naryu
@@ -18308,7 +18308,7 @@ goto 27.91,63.00
 |tip Manually skip to the next step.
 step
 goto 36.03,62.27
-'Examine _Stone Lever_ |q The Mournhold Underground/Open the Hidden Door |future
+'Examine _Stone Lever_ |q The Mournhold Underground/Open the Hidden Door
 step
 goto 36.41,61.61
 'Open _Mournhold Sewer_ |q The Mournhold Underground/Talk to Naryu
@@ -18346,7 +18346,7 @@ goto 56.00,36.41
 talk Almalexia |q The Seal of Three/Talk to Almalexia
 step
 goto 56.45,32.95
-'Open _Tribunal Temple_ |q The Seal of Three/Enter the Tribunal Temple |future
+'Open _Tribunal Temple_ |q The Seal of Three/Enter the Tribunal Temple
 |tip Manually skip to the next step.
 step
 goto tribunaltemple_base 34.75,67.47
@@ -18458,7 +18458,7 @@ goto 60.38,52.17
 |tip Manually skip to the next step.
 step
 goto 50.37,80.95
-'Open _Mournhold_ |q The Seal of Three/Exit the Tribunal Temple |future
+'Open _Mournhold_ |q The Seal of Three/Exit the Tribunal Temple
 |tip Manually skip to the next step.
 step
 goto mournhold_base 56.13,34.64
@@ -18750,7 +18750,7 @@ talk Saint Veloth
 turnin A Saint Asunder
 step
 'Open _Deshaan_ Map
-'Travel to _Eidolon's Hollow_ |q Into the Mouth of Madness/Sit by the Fire |future
+'Travel to _Eidolon's Hollow_ |q Into the Mouth of Madness/Sit by the Fire
 |tip Manually skip to the next step.
 step
 goto 86.60,40.89
@@ -18795,7 +18795,7 @@ goto 90.24,36.04
 'Find the _Entrance to Vox's Lair_ |q Into the Mouth of Madness/Find the Entrance to Vox's Lair
 step
 goto 90.24,36.04
-'Open _The Hollow Cave_ |q Into the Mouth of Madness/Enter the Hollow Cave |future
+'Open _The Hollow Cave_ |q Into the Mouth of Madness/Enter the Hollow Cave
 |tip Manually skip to the next step.
 step
 goto eidolonshollow2_base 53.29,77.76
@@ -18864,7 +18864,7 @@ goto 90.30,24.66
 talk Meram Vox |q The Judgment of Veloth/Convince Meram to Join You
 step
 goto 90.29,24.79
-'Use _Portal to the Reservoir of Souls_ |q The Judgment of Veloth/Enter the Reservoir of Souls |future
+'Use _Portal to the Reservoir of Souls_ |q The Judgment of Veloth/Enter the Reservoir of Souls
 |tip Manually skip to the next step.
 step
 goto welloflostsouls_base 59.94,38.81
@@ -18886,7 +18886,7 @@ talk Almalexia
 turnin The Judgment of Veloth
 step
 goto 60.69,45.62
-'Use _Portal to Mournhold_ |q Onward to Shadowfen |future
+'Use _Portal to Mournhold_ |q Onward to Shadowfen
 |tip Manually skip to the next step.
 step
 goto deshaan_base 40.00,48.71
@@ -18900,7 +18900,7 @@ goto mournhold_base 67.11,64.98
 |only Ebonheart Pact
 step
 goto stonefalls_base 77.41,36.59
-'Open _The Harborage_ |q Castle of the Worm/Go to the Harborage |future
+'Open _The Harborage_ |q Castle of the Worm/Go to the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -18913,7 +18913,7 @@ talk Abnur Tharn |q Castle of the Worm/Talk to Abnur Tharn
 |only Ebonheart Pact
 step
 goto 65.01,34.34
-'Use _Portal to Coldharbour_ |q Castle of the Worm/Enter Coldharbour |future
+'Use _Portal to Coldharbour_ |q Castle of the Worm/Enter Coldharbour
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -18952,7 +18952,7 @@ goto 55.51,26.09 |q Castle of the Worm/Follow Cadwell |tip Kill everything on yo
 |only Ebonheart Pact
 step
 goto 55.51,26.09
-talk Cadwell |q Castle of the Worm/Enter the Keep |future
+talk Cadwell |q Castle of the Worm/Enter the Keep
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -19042,7 +19042,7 @@ goto 14.13,75.24
 |only Ebonheart Pact
 step
 goto 15.41,77.99
-'Use _Portal to the Harborage_ |q Castle of the Worm/Talk to Abnur Tharn |future
+'Use _Portal to the Harborage_ |q Castle of the Worm/Talk to Abnur Tharn
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -19066,7 +19066,7 @@ step
 step
 goto mournhold_base 40.33,69.45 |q Onward to Shadowfen/Find the Shadowfen Border
 step
-goto deshaan_base 39.15,58.49 |q Onward to Shadowfen/Find the Shadowfen Border |future
+goto deshaan_base 39.15,58.49 |q Onward to Shadowfen/Find the Shadowfen Border
 step
 goto 38.75,61.96
 'Examine _The Dreamstride_ |lorebook The Dreamstride/1/8/3
@@ -19078,10 +19078,10 @@ goto 36.71,64.18
 step
 goto 38.79,65.98 |q Onward to Shadowfen/Find the Shadowfen Border
 step
-goto shadowfen_base 57.28,20.73 |q Onward to Shadowfen/Find the Shadowfen Border |future |next Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Shadowfen
+goto shadowfen_base 57.28,20.73 |q Onward to Shadowfen/Find the Shadowfen Border |next Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Shadowfen
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Shadowfen",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Shadowfen",[[
 loadingimage loadscreen_shadowfen_01.dds
 description On the border with Morrowind, the Shadowfen region has had more contact with Tamrielic civilization than most of Black Marsh—due primarily to the activities of the Dunmeri slavers who once operated out of the city of Stormhold. Now the Argonians are back in charge.
 step
@@ -19100,7 +19100,7 @@ talk Guildmaster Sees-All-Colors |q The Prismatic Core/Talk to Guildmaster Sees-
 |only Ebonheart Pact
 step
 goto 71.57,66.36
-'Use _Portal to Abagarlas_ |q The Prismatic Core/Enter Portal |future
+'Use _Portal to Abagarlas_ |q The Prismatic Core/Enter Portal
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -19138,7 +19138,7 @@ talk Guildmaster Sees-All-Colors |q The Prismatic Core/Talk to Guildmaster Sees-
 |only Ebonheart Pact
 step
 goto 38.95,81.21
-'Enter _Portal to the Earth Forge_ |q The Prismatic Core/Go to The Earth Forge |future
+'Enter _Portal to the Earth Forge_ |q The Prismatic Core/Go to The Earth Forge
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -19226,7 +19226,7 @@ talk Valaste |q Circus of Cheerful Slaughter/Talk to Valaste
 |only Ebonheart Pact
 step
 goto 30.61,68.00
-'Examine _Circus of Cheerful Slaughter_ |q Circus of Cheerful Slaughter/Read "Circus of Cheerful Slaughter" |future
+'Examine _Circus of Cheerful Slaughter_ |q Circus of Cheerful Slaughter/Read "Circus of Cheerful Slaughter"
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -19387,10 +19387,10 @@ goto 18.23,45.09
 'Examine _Listens-to-Water's Observations_ |q Getting to the Truth/Find Listens-to-Water's Reports
 step
 goto 35.00,50.71
-'Open _Silyanorn Ruins_ |q Getting to the Truth/Enter Silyanorn Ruins |future
+'Open _Silyanorn Ruins_ |q Getting to the Truth/Enter Silyanorn Ruins
 |tip Manually skip to the next step.
 step
-goto stormholdayleidruin_base 43.32,28.88 |q Getting to the Truth/Investigate Silyanorn Ruins  |future
+goto stormholdayleidruin_base 43.32,28.88 |q Getting to the Truth/Investigate Silyanorn Ruins 
 step
 goto 56.38,10.35 |q Getting to the Truth/Investigate Silyanorn Ruins
 step
@@ -19425,7 +19425,7 @@ goto 67.35,72.39
 |tip Manually skip to the next step.
 step
 goto stormholdmortuary_map 62.62,9.14
-'Open _Stormhold_ |q Getting to the Truth/Find Vicecanon Hrondar |future
+'Open _Stormhold_ |q Getting to the Truth/Find Vicecanon Hrondar
 |tip Manually skip to the next step.
 step
 goto stormhold_base 64.07,62.94
@@ -19476,7 +19476,7 @@ step
 goto 64.48,42.39 |q Trail of the Skin-Stealer/Follow the Trail with Ukatsei
 step
 goto 66.55,40.77
-'Examine _Vicecanon Hrondar_ |q Trail of the Skin-Stealer/Examine Vicecanon Hrondar's Body |future
+'Examine _Vicecanon Hrondar_ |q Trail of the Skin-Stealer/Examine Vicecanon Hrondar's Body
 step
 goto 66.61,40.85
 talk Ukatsei
@@ -19525,11 +19525,11 @@ goto 84.71,75.36
 talk Lyranth |q The Skin-Stealer's Lair/Talk to Lyranth
 step
 goto 92.07,75.63
-'Open _Lair of the Skin Stealer_ |q The Skin-Stealer's Lair/Enter the Vault |future
+'Open _Lair of the Skin Stealer_ |q The Skin-Stealer's Lair/Enter the Vault
 |tip Manually skip to the next step.
 step
 goto tenmaurwolk_base 56.15,37.17
-'Destroy _Hist Vat_ |q The Skin-Stealer's Lair/Destroy the Hist Vats |future
+'Destroy _Hist Vat_ |q The Skin-Stealer's Lair/Destroy the Hist Vats
 |tip Manually skip to the next step.
 step
 goto 56.27,39.71
@@ -19809,7 +19809,7 @@ goto 19.06,66.05
 talk Gerent Kepanuu |q The Dominion's Alchemist/Talk to Gerent Kepanuu
 step
 goto 23.09,67.69
-'Open _Loriasel_ |q The Dominion's Alchemist/Enter the Ruins of Loriasel |future
+'Open _Loriasel_ |q The Dominion's Alchemist/Enter the Ruins of Loriasel
 |tip Manually skip to the next step.
 step
 goto loriasellowerlevel_base 42.43,48.72
@@ -19820,7 +19820,7 @@ goto loriasel_base 39.53,66.09
 talk Kazdi |q The Dominion's Alchemist/Find Ruuvitar
 step
 goto 39.58,66.28
-talk Kazdi |q The Dominion's Alchemist/Find a Way into the Inner Bailey |future
+talk Kazdi |q The Dominion's Alchemist/Find a Way into the Inner Bailey
 |tip Manually skip to the next step.
 step
 goto 39.34,69.02
@@ -19897,7 +19897,7 @@ goto visionofthehist_base 47.10,14.65
 'Active _All four Corner Plumes_
 'Activate _Heart Plume_ |q The Dream of the Hist/Investigate the Mnemic Egg
 step
-goto 54.89,66.39 |q The Dream of the Hist/Talk to the Hist-Brothers |future
+goto 54.89,66.39 |q The Dream of the Hist/Talk to the Hist-Brothers
 step
 goto 62.11,65.17
 talk Hist-Brother |q The Dream of the Hist/Talk to the Hist-Brothers
@@ -19928,7 +19928,7 @@ goto 32.05,60.99
 |only Ebonheart Pact
 step
 goto stonefalls_base 77.41,36.59
-'Open _The Harborage_ |q Halls of Torment/Enter the Harborage |future
+'Open _The Harborage_ |q Halls of Torment/Enter the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -20028,7 +20028,7 @@ talk Sai Sahan |q Halls of Torment/Talk to Sai Sahan
 |only Ebonheart Pact
 step
 goto 62.41,35.78
-'Use _Portal to the Harborage_ |q Halls of Torment/Talk to Varen Aquilarios |future
+'Use _Portal to the Harborage_ |q Halls of Torment/Talk to Varen Aquilarios
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -20050,7 +20050,7 @@ goto altencorimont_base 62.14,68.73
 talk Muz-Muz |q Swamp to Snow/Talk to the Boatmaster |next Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Eastmarch
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Eastmarch",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Eastmarch",[[
 loadingimage loadscreen_eastmarch_01.dds
 description One of the "Old Holds," Eastmarch was among the first regions of Skyrim settled by the Nords when they arrived from Atmora. Its capital, Windhelm, is the oldest continuously inhabited human settlement in Tamriel, and was founded by Ysgramor himself.
 step
@@ -20100,7 +20100,7 @@ goto 49.59,44.52
 |only Ebonheart Pact
 step
 goto 48.80,43.91
-'Use _Portal to the Shivering Isles_ |q Chateau of the Ravenous Rodent/Talk to Shalidor |future
+'Use _Portal to the Shivering Isles_ |q Chateau of the Ravenous Rodent/Talk to Shalidor
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -20230,17 +20230,17 @@ step
 goto 18.13,49.77
 'Use _Starting Flare_ |q The Konunleikar/Light the Starting Flare
 step
-goto 22.42,60.19 |q The Konunleikar/Reach the First Tower |future
+goto 22.42,60.19 |q The Konunleikar/Reach the First Tower
 step
-goto 31.37,64.76 |q The Konunleikar/Reach the Second Tower |future
+goto 31.37,64.76 |q The Konunleikar/Reach the Second Tower
 step
-goto 43.80,64.73 |q The Konunleikar/Reach the Fourth Tower |future
+goto 43.80,64.73 |q The Konunleikar/Reach the Fourth Tower
 step
-goto 56.17,64.71 |q The Konunleikar/Reach the Fourth Tower |future
+goto 56.17,64.71 |q The Konunleikar/Reach the Fourth Tower
 step
-goto 65.96,61.31 |q The Konunleikar/Reach the Sixth Tower |future
+goto 65.96,61.31 |q The Konunleikar/Reach the Sixth Tower
 step
-goto 70.54,51.82 |q The Konunleikar/Reach the Sixth Tower |future
+goto 70.54,51.82 |q The Konunleikar/Reach the Sixth Tower
 step
 goto 69.86,45.22
 talk Hadring the Swift |q The Konunleikar/Help Hadring the Swift
@@ -20287,10 +20287,10 @@ turnin Windhelm's Champion
 accept One Victor, One King
 step
 goto 85.38,24.61
-'Open _Hall of Trials_ |q One Victor, One King/Enter the Hall of Trials |future
+'Open _Hall of Trials_ |q One Victor, One King/Enter the Hall of Trials
 |tip Manually skip to the next step.
 step
-goto halloftrials_base 60.51,36.55 |q One Victor, One King/Enter the Arena |future
+goto halloftrials_base 60.51,36.55 |q One Victor, One King/Enter the Arena
 step
 goto 42.00,36.56
 'Observe the _Champion_ |q One Victor, One King/Observe the Champion
@@ -20382,7 +20382,7 @@ goto 32.29,36.70
 talk Queen Nurnhilde |q Sleep for the Dead/Talk to Queen Nurnhilde
 step
 goto 32.05,36.69
-'Open _Fort Morvunskar_ |q Sleep for the Dead/Enter the Royal Tombs |future
+'Open _Fort Morvunskar_ |q Sleep for the Dead/Enter the Royal Tombs
 |tip Manually skip to the next step.
 step
 goto fortmorvunskar_base 52.91,21.57
@@ -20412,14 +20412,14 @@ step
 goto 37.54,87.25
 talk Queen Nurnhilde |q Sleep for the Dead/Talk to Queen Nurnhilde
 step
-goto 47.09,82.90 |q Sleep for the Dead/Exit the Tomb Via the Tunnel |future
+goto 47.09,82.90 |q Sleep for the Dead/Exit the Tomb Via the Tunnel
 step
 goto 53.39,71.44
-'Open _Eastmarch_ |q Sleep for the Dead/Exit the Tomb Via the Tunnel |future
+'Open _Eastmarch_ |q Sleep for the Dead/Exit the Tomb Via the Tunnel
 |tip Manually skip to the next step.
 step
 goto eastmarch_base 33.51,41.08
-kill Shukul gro-Agluk |q Sleep for the Dead/Defeat Shukul gro-Agluk |future
+kill Shukul gro-Agluk |q Sleep for the Dead/Defeat Shukul gro-Agluk
 step
 goto 35.08,40.86 |q Sleep for the Dead/Talk to Captain Hamar
 step
@@ -20437,7 +20437,7 @@ step
 goto 36.91,42.45
 wayshrine Fort Morvunskar
 step
-goto eastmarch_base 35.87,44.64 |q Strange Allies |future
+goto eastmarch_base 35.87,44.64 |q Strange Allies
 step
 goto 32.21,45.23
 talk Aspera Giant-Friend
@@ -20515,7 +20515,7 @@ goto 28.75,48.02
 talk Aspera Giant-Friend |q The Siege of Cradlecrush/Talk to Aspera Giant-Friend
 step
 goto 28.97,48.07
-'Open _Cradlecrush Arena_ |q The Siege of Cradlecrush/Enter Cradlecrush Arena |future
+'Open _Cradlecrush Arena_ |q The Siege of Cradlecrush/Enter Cradlecrush Arena
 |tip Manually skip to the next step.
 step
 goto giantsrun_base 48.39,57.71
@@ -20525,7 +20525,7 @@ goto 48.46,44.21
 kill Lob the Cleaver |q The Siege of Cradlecrush/Survive the Arena Challenge
 step
 goto 48.65,78.49
-'Open _Cradlecrush_ |q The Siege of Cradlecrush/Exit Cradelcrush Arena |future
+'Open _Cradlecrush_ |q The Siege of Cradlecrush/Exit Cradelcrush Arena
 |tip Manually skip to the next step.
 step
 goto eastmarch_base 28.64,48.01
@@ -20656,7 +20656,7 @@ goto 24.14,24.42
 'Use _Crate_ |q The Pride of a Prince/.*Collect Dunmer Wine.* |count 4
 step
 goto 25.70,21.92
-'Take _Dunmer Wine_ |q The Pride of a Prince/.*Collect Dunmer Wine.* |count 4 |future
+'Take _Dunmer Wine_ |q The Pride of a Prince/.*Collect Dunmer Wine.* |count 4
 |tip Manually skip to the next step.
 step
 goto 68.51,27.76
@@ -20725,7 +20725,7 @@ talk Way-with-Words |q The War Council/Rescue the Pact Leaders
 step
 goto 45.60,80.37
 |tip Go through the door.
-talk Naryu Virian |q The War Council/Talk to Naryu |future
+talk Naryu Virian |q The War Council/Talk to Naryu
 step
 goto 43.73,76.41
 talk Prince Irnskar
@@ -20798,7 +20798,7 @@ step
 goto 38.14,67.72
 talk Stormy-Eyes |q Lifeline/Get the Help of the Dreamwalker
 step
-goto 35.39,67.59 |q A Right to Live |future
+goto 35.39,67.59 |q A Right to Live
 step
 goto 43.04,56.54
 wayshrine Wittestadr
@@ -20897,7 +20897,7 @@ goto 46.97,53.88
 talk Majorn the Ancient |q Lifeline/Get the Blood of the Vampire from Wittestadr
 step
 'Open _Eastmarch_ Map
-'Travel to _Wittestadr_ |q Eternal Slumber/Talk to Jadvar |future
+'Travel to _Wittestadr_ |q Eternal Slumber/Talk to Jadvar
 |tip Manually skip to the next step.
 step
 goto 43.41,63.89
@@ -20912,7 +20912,7 @@ goto 46.50,64.34
 talk Jadvar |q Eternal Slumber/Talk to Jadvar
 step
 goto 46.54,64.24
-'Use _Portal to Mistwatch_ |q Eternal Slumber/Enter the Ritual Grounds |future
+'Use _Portal to Mistwatch_ |q Eternal Slumber/Enter the Ritual Grounds
 |tip Manually skip to the next step.
 step
 goto 45.62,67.45
@@ -21125,7 +21125,7 @@ goto 64.09,56.31
 talk General Yeveth Noramil
 accept Sneak Peak
 step
-goto 65.41,55.47 |q Sneak Peak/Talk to Scout Snowhunter |future
+goto 65.41,55.47 |q Sneak Peak/Talk to Scout Snowhunter
 step
 goto 68.11,54.19 |q Sneak Peak/Talk to Scout Snowhunter
 step
@@ -21135,13 +21135,13 @@ turnin Sneak Peak
 accept Snow and Flame
 step
 goto 68.16,51.45
-'Open _Hidden Tunnel_ |q Snow and Flame/Enter the Hidden Tunnel |future
+'Open _Hidden Tunnel_ |q Snow and Flame/Enter the Hidden Tunnel
 step
 goto 70.15,48.63
 'Navigate the _Hidden Tunnel_ |q Snow and Flame/Navigate the Hidden Tunnel
 step
 goto 70.39,48.62
-'Open _Skuldafn_ |q Snow and Flame/Exit the Hidden Tunnel |future
+'Open _Skuldafn_ |q Snow and Flame/Exit the Hidden Tunnel
 step
 goto 77.82,49.39
 talk Thane Mera Stormcloak |q Snow and Flame/Talk to Thane Mera Stormcloak
@@ -21170,7 +21170,7 @@ goto 82.35,50.55
 'Use _Signal Fire_ |q Snow and Flame/Light the Signal Fire
 step
 goto 84.11,50.48
-'Open _Skuldafn Tombs_ |q Snow and Flame/Enter the Skuldafn Tombs |future
+'Open _Skuldafn Tombs_ |q Snow and Flame/Enter the Skuldafn Tombs
 |tip Manually skip to the next step.
 step
 goto 84.01,49.26
@@ -21186,31 +21186,31 @@ goto 83.05,49.37 |q Songs of Sovngarde/Enter Sovngarde
 step
 goto 84.05,49.73 |q Songs of Sovngarde/Enter Sovngarde
 step
-goto 84.07,47.14 |q Songs of Sovngarde/Enter Sovngarde |future
+goto 84.07,47.14 |q Songs of Sovngarde/Enter Sovngarde
 step
 '_Walk East:_
-kill Fildgor Orcthane |q Songs of Sovngarde/Defeat Fildgor Orcthane |future
+kill Fildgor Orcthane |q Songs of Sovngarde/Defeat Fildgor Orcthane
 step
 '_After you Defeat Fildgor Orcthane:_
 talk Fildgor Orcthane |q Songs of Sovngarde/Talk to Fildgor Orcthane
 step
 '_Nearby:_
-talk Queen Nurnhilde |q Songs of Sovngarde/Talk to Nurnhilde |or |future
+talk Queen Nurnhilde |q Songs of Sovngarde/Talk to Nurnhilde |or
 '_OR_
-'Examine _Fildgor Orcthanke_ |q Songs of Sovngarde/Retrieve the Crown of Freydis |or |future
+'Examine _Fildgor Orcthanke_ |q Songs of Sovngarde/Retrieve the Crown of Freydis |or
 step
 '_Nearby:_
 talk Queen Nurnhilde |q Songs of Sovngarde/Talk to Nurnhilde
 step
 '_Walk West into the Portal:_
-'Return to _Skuldafn's Peak_ |q Songs of Sovngarde/Return to Skuldafn's Peak |future
+'Return to _Skuldafn's Peak_ |q Songs of Sovngarde/Return to Skuldafn's Peak
 |tip Manually skip to the next step.
 step
 goto 84.07,47.96
 talk Jorunn the Skald-King |q Songs of Sovngarde/Talk to Jorunn the Skald-King
 step
 goto 84.00,48.06
-'Witness the _Great Moot_ |q Songs of Sovngarde/Witness the Great Moot |future
+'Witness the _Great Moot_ |q Songs of Sovngarde/Witness the Great Moot
 step
 'Open _Eastmarch_ Map
 'Travel to _Jorunn's Stand_ |q Songs of Sovngarde/Talk to Prince Irnskar
@@ -21251,7 +21251,7 @@ goto 52.90,38.95
 |only Ebonheart Pact
 step
 goto 52.65,39.11
-'Open _Ragnthar_ |q Proving the Deed/Enter Ragnthar |future
+'Open _Ragnthar_ |q Proving the Deed/Enter Ragnthar
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -21336,7 +21336,7 @@ goto 14.16,13.13
 |only Ebonheart Pact
 step
 goto stonefalls_base 77.43,36.58
-'Open _The Harborage_ |q Valley of Blades/Enter the Harborage |future
+'Open _The Harborage_ |q Valley of Blades/Enter the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -21345,7 +21345,7 @@ talk Sai Sahan |q Valley of Blades/Talk to Sai Sahan
 |only Ebonheart Pact
 step
 goto 64.81,34.27
-'Use _Portal to Valley of Blades_ |q Valley of Blades/Travel to the Valley of Blades |future
+'Use _Portal to Valley of Blades_ |q Valley of Blades/Travel to the Valley of Blades
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -21361,7 +21361,7 @@ goto 34.82,24.26 |q Valley of Blades/Enter the Abbey of Blades
 |only Ebonheart Pact
 step
 goto 50.91,45.68
-'Find _Kasura_ |q Valley of Blades/Find Kasura |future
+'Find _Kasura_ |q Valley of Blades/Find Kasura
 |only Ebonheart Pact
 step
 goto 50.91,45.68
@@ -21392,7 +21392,7 @@ goto 58.54,48.89 |q Valley of Blades/Enter the Ancestral Crypt
 |only Ebonheart Pact
 step
 goto 74.43,44.86
-'Open _Ancestral Crypt_ |q Valley of Blades/Enter the Ancestral Crypt |future
+'Open _Ancestral Crypt_ |q Valley of Blades/Enter the Ancestral Crypt
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -21422,7 +21422,7 @@ talk Sai Sahan |q Valley of Blades/Talk to Sai Sahan
 |only Ebonheart Pact
 step
 goto 72.65,49.20
-'Use _Portal to The Harborage_ |q Valley of Blades/Return to the Harborage |future
+'Use _Portal to The Harborage_ |q Valley of Blades/Return to the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -21449,7 +21449,7 @@ goto shorsstone_base 55.78,43.67
 talk Vigrod Wraithbane |q Beneath the Stone/Talk to Vigrod Wraithbane |next Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\The Rift
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\The Rift",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\The Rift",[[
 loadingimage loadscreen_rift_01.dds
 description Skyrim's southernmost hold has a relatively temperate climate, thanks to northern mountains that block the frigid gales of the Sea of Ghosts, and warming volcanoes in the Velothi Mountains to the east. Its capital is Riften, on the shores of broad Lake Honrich.
 step
@@ -21469,7 +21469,7 @@ goto 33.82,49.18
 'Use _Effigy of Death_ |q Beneath the Stone/Imbue Effigies and Enter Mine
 step
 goto 32.79,47.87
-'Open _Shor's Stone Mine_ |q Beneath the Stone/Enter Mine |future
+'Open _Shor's Stone Mine_ |q Beneath the Stone/Enter Mine
 |tip Manually skip to the next step.
 step
 goto shorsstonemine_base 76.49,43.18
@@ -21527,7 +21527,7 @@ goto 77.53,60.98
 |tip Manually skip to the next step.
 step
 goto 92.63,53.32
-'Open _Shor's Stone_ |q Unearthed/Find Vigrod Outside the Mine |future
+'Open _Shor's Stone_ |q Unearthed/Find Vigrod Outside the Mine
 |tip Manually skip to the next step.
 step
 goto shorsstone_base 38.06,51.47
@@ -21543,7 +21543,7 @@ goto therift_base 61.70,31.17
 wayshrine Fallowstone Hall
 step
 goto 59.31,28.41
-talk Vigrod Wraithbane |q Storming the Hall/.*Rally Survivors.* |count 2 |future
+talk Vigrod Wraithbane |q Storming the Hall/.*Rally Survivors.* |count 2
 |tip Persuade him.
 step
 goto 60.85,28.52
@@ -21629,21 +21629,21 @@ talk Dajaheel |q Dangerous Union/Talk to Dajaheel
 step
 goto 42.98,32.94
 |tip Cruel option.
-'Use _Pale Dagger on Worm Cult_ |q Dangerous Union/Use Dagger on Dead Cultist |or |future
+'Use _Pale Dagger on Worm Cult_ |q Dangerous Union/Use Dagger on Dead Cultist |or
 '_OR_
 |tip Less cruel option.
-'Use _Ornate Globe on Cultists_ |q Dangerous Union/.*Use Globe on Cultist Then Kill Them.* |or |future
+'Use _Ornate Globe on Cultists_ |q Dangerous Union/.*Use Globe on Cultist Then Kill Them.* |or
 step
 goto 43.89,31.67
-talk Lieutenant Belron |q Dangerous Union/Talk to Belron |or |future
+talk Lieutenant Belron |q Dangerous Union/Talk to Belron |or
 '_OR_
-'Give _Globe to Belron_ |q Dangerous Union/Give Globe to Belron |or |future
+'Give _Globe to Belron_ |q Dangerous Union/Give Globe to Belron |or
 step
 goto 43.80,31.82
 'Use _Beating Heart on Worm Nightfrenzy_
-talk Worm Nightfrenzy |q Dangerous Union/Interrogate Cultist |or |future
+talk Worm Nightfrenzy |q Dangerous Union/Interrogate Cultist |or
 '_OR_
-talk Memory of Stral |q Dangerous Union/Talk to the Memory of Stral |or |future
+talk Memory of Stral |q Dangerous Union/Talk to the Memory of Stral |or
 step
 goto 43.80,31.77 |q Dangerous Union/Talk to Gift of the Worm
 step
@@ -21697,7 +21697,7 @@ talk Lieutenant Belron |q Through the Shroud/Talk to Belron
 |tip Persuade him.
 step
 goto 40.02,34.01
-'Open _Vaults of Vernim_ |q Through the Shroud/Enter the Ruins |future
+'Open _Vaults of Vernim_ |q Through the Shroud/Enter the Ruins
 |tip Manually skip to the next step.
 step
 goto vernimwood_base 66.88,44.29
@@ -21829,7 +21829,7 @@ talk Thane's Housecarl |q Concealed Weapons/Talk to the Wounded Housecarl
 step
 goto 60.68,55.86
 |tip Drop down.
-'Open _Crypt_ |q Concealed Weapons/Find Aera |future
+'Open _Crypt_ |q Concealed Weapons/Find Aera
 |tip Manually skip to the next step.
 step
 goto nimaltenpart1_base 72.77,19.07
@@ -21847,9 +21847,9 @@ goto 48.48,87.02
 |tip Manually skip to the next step.
 step
 goto 49.07,57.93
-kill Morgane |q Concealed Weapons/Kill Worm Cultist and Leave the Crypt |or |future
+kill Morgane |q Concealed Weapons/Kill Worm Cultist and Leave the Crypt |or
 '_OR_
-kill Aera Earth-Turner |q Concealed Weapons/Kill Aera Earth-Turner |or |future
+kill Aera Earth-Turner |q Concealed Weapons/Kill Aera Earth-Turner |or
 |tip Manually skip to the next step.
 step
 goto 48.94,72.08
@@ -22086,7 +22086,7 @@ goto 41.53,47.46
 'Confront _Thallik Wormfather at the Central Ruins_ |q Shattered Hopes/Confront Thallik Wormfather at the Central Ruins
 step
 goto 40.99,47.58
-'Use _Portal to Arcwind Point_ |q Shattered Hopes/Enter the Portal to Arcwind Point |future
+'Use _Portal to Arcwind Point_ |q Shattered Hopes/Enter the Portal to Arcwind Point
 step
 goto arcwindpoint_base 40.08,48.16 |q Shattered Hopes/Find Captain Hrosta
 step
@@ -22103,20 +22103,20 @@ goto 71.99,74.27
 talk Captain Hrosta |q Shattered Hopes/Trick a Reachman Prisoner
 step
 goto 73.14,38.15
-talk Lesuin |q Shattered Hopes/Find a Reachman Prisoner |future
+talk Lesuin |q Shattered Hopes/Find a Reachman Prisoner
 step
 goto 72.18,75.74
-'Lead the _Reachman to the Ritual Circle_ |q Shattered Hopes/Lead Reachman to Ritual Circle |future
+'Lead the _Reachman to the Ritual Circle_ |q Shattered Hopes/Lead Reachman to Ritual Circle
 step
 goto 72.18,75.74
-talk Lesuin |q Shattered Hopes/Sacrifice Reachman Prisoner |future
+talk Lesuin |q Shattered Hopes/Sacrifice Reachman Prisoner
 step
 goto 71.01,76.97
 |tip Watch the dialogue.
-'Witness the _Sacrifice_ |q Shattered Hopes/Witness the Sacrifice |future
+'Witness the _Sacrifice_ |q Shattered Hopes/Witness the Sacrifice
 step
 goto 70.93,74.08
-'Open _Arcwind Point Ruins_ |q Shattered Hopes/Find Thallik Wormfather |future
+'Open _Arcwind Point Ruins_ |q Shattered Hopes/Find Thallik Wormfather
 |tip Manually skip to the next step.
 step
 '_Follow the path down:_
@@ -22133,7 +22133,7 @@ step
 'Take _Wuuthrad's Haft_ |q Shattered Hopes/Collect the Haft of Wuuthrad
 step
 '_On the stone stage area:_
-'Use _Portal to Honrich Tower_ |q Shattered Hopes/Enter the Portal to Honrich Tower |future
+'Use _Portal to Honrich Tower_ |q Shattered Hopes/Enter the Portal to Honrich Tower
 |tip Manually skip to the next step.
 step
 goto therift_base 41.28,52.46
@@ -22176,16 +22176,16 @@ turnin In His Wake
 accept Pulled Under
 step
 goto 67.23,48.43
-'Open _Windtorn House_ |q Pulled Under/Enter Yiri's Home |future
+'Open _Windtorn House_ |q Pulled Under/Enter Yiri's Home
 |tip Manually skip to the next step.
 step
 goto 69.83,46.91
 |tip Go upstairs.
-talk Bonohild Windtorn |q Pulled Under/Talk to Bonohild Windtorn |future
+talk Bonohild Windtorn |q Pulled Under/Talk to Bonohild Windtorn
 step
 goto 69.83,46.93
 'Search _Worm Cult Assassin_
-'_Use or Else_ |q Pulled Under/Read Cultist Note Near Bonohild |future
+'_Use or Else_ |q Pulled Under/Read Cultist Note Near Bonohild
 step
 goto 69.92,47.11
 talk Bonohild Windtorn |q Pulled Under/Find Out What Happened to Yiri's Father
@@ -22239,7 +22239,7 @@ talk Aelif |q Will of the Council/Talk to Aelif
 |only Ebonheart Pact
 step
 goto 60.03,85.44
-'Use _Portal to Earth Forge_ |q Will of the Council/Enter Portal to the Earth Forge |future
+'Use _Portal to Earth Forge_ |q Will of the Council/Enter Portal to the Earth Forge
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -22260,7 +22260,7 @@ goto 39.03,24.29
 |only Ebonheart Pact
 step
 goto 39.70,24.47
-'Use _Portal to Halls of Submission_ |q Will of the Council/Enter Portal to Halls of Submission |future
+'Use _Portal to Halls of Submission_ |q Will of the Council/Enter Portal to Halls of Submission
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -22325,7 +22325,7 @@ goto 66.86,50.04
 |only Ebonheart Pact
 step
 goto theearthforge_base 39.03,22.38
-talk Jofnir Iceblade |q Will of the Council/Talk to Jofnir |future
+talk Jofnir Iceblade |q Will of the Council/Talk to Jofnir
 |only Ebonheart Pact
 step
 goto 38.85,22.15
@@ -22353,7 +22353,7 @@ talk Merric at-Aswala |q Will of the Council/Talk to Merric
 |only Ebonheart Pact
 step
 goto 73.44,45.35
-'Use _Portal to the Guildhall_ |q Will of the Council/Return to the Guild Hall |future
+'Use _Portal to the Guildhall_ |q Will of the Council/Return to the Guild Hall
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -22369,7 +22369,7 @@ goto 72.39,53.95
 |only Ebonheart Pact
 step
 goto stonefalls_base 77.40,36.60
-'Open _The Harborage_ |q Shadow of Sancre Tor/Enter the Harborage |future
+'Open _The Harborage_ |q Shadow of Sancre Tor/Enter the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -22386,7 +22386,7 @@ goto 62.30,38.95
 |only Ebonheart Pact
 step
 goto 61.86,31.86
-'Use _Portal to Sancre Tor_ |q Shadow of Sancre Tor/Enter Portal to Sancre Tor |future
+'Use _Portal to Sancre Tor_ |q Shadow of Sancre Tor/Enter Portal to Sancre Tor
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -22544,7 +22544,7 @@ goto 23.53,50.60
 |only Ebonheart Pact
 step
 goto 18.72,50.49
-'Use _Portal to Harborage_ |q Shadow of Sancre Tor/Return to the Harborage |future
+'Use _Portal to Harborage_ |q Shadow of Sancre Tor/Return to the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -22593,7 +22593,7 @@ goto 76.59,61.14
 |only Ebonheart Pact
 step
 goto 77.00,61.18
-'Use _Portal to Eyevea_ |q The Mad God's Bargain/Enter Portal to Eyevea |future
+'Use _Portal to Eyevea_ |q The Mad God's Bargain/Enter Portal to Eyevea
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -22657,7 +22657,7 @@ talk Arch-Mage Shalidor |q The Mad God's Bargain/Talk to Shalidor
 |only Ebonheart Pact
 step
 goto 51.62,48.25
-'Open _Mages Guild Hall_ |q The Mad God's Bargain/Enter the Guildhall |future
+'Open _Mages Guild Hall_ |q The Mad God's Bargain/Enter the Guildhall
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -22707,7 +22707,7 @@ goto 86.40,35.84
 |only Ebonheart Pact
 step
 goto stonefalls_base 77.40,36.60
-'Open _The Harborage_ |q Council of the Five Companions/Go to the Harborage |future
+'Open _The Harborage_ |q Council of the Five Companions/Go to the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -22716,7 +22716,7 @@ talk Varen Aquilarios |q Council of the Five Companions/Talk to Varen Aquilarios
 |only Ebonheart Pact
 step
 goto 64.59,33.74
-talk Sai Sahan |q Council of the Five Companions/Talk to Sai Sahan |future
+talk Sai Sahan |q Council of the Five Companions/Talk to Sai Sahan
 |only Ebonheart Pact
 step
 goto 64.59,33.74
@@ -22792,7 +22792,7 @@ talk Holgunn (Warrior)|q Securing the Pass/Choose Warrior |or
 talk Walks-in-Ash (Mage)|q Securing the Pass/Choose Firemage |or
 step
 goto 80.16,69.20
-'Open _Trolhetta Cave_ |q Securing the Pass/Enter Trolhetta Cave |future
+'Open _Trolhetta Cave_ |q Securing the Pass/Enter Trolhetta Cave
 |tip Manually skip to the next step.
 step
 goto trolhettacave_base 49.12,20.91 |q Securing the Pass/Destroy the Reaper Orb
@@ -22821,7 +22821,7 @@ goto 35.27,94.05
 'Open _Trolhetta_ |q Securing the Pass/Destroy the Necrosis Orb
 |tip Manually skip to the next step.
 step
-goto therift_base 80.14,78.54 |q Worm Cult Summoner/Kill Kerelia Lucullus |future
+goto therift_base 80.14,78.54 |q Worm Cult Summoner/Kill Kerelia Lucullus
 step
 goto 79.12,78.70
 talk Plays-With-Fire
@@ -22862,7 +22862,7 @@ turnin Securing the Pass
 accept Stomping Sinmur
 step
 goto 78.02,74.78
-'Open _Trolhetta Summit_ |q Stomping Sinmur/Enter Trolhetta Summit |future
+'Open _Trolhetta Summit_ |q Stomping Sinmur/Enter Trolhetta Summit
 |tip Manually skip to the next step.
 step
 goto trolhettasummit_base 25.63,50.00
@@ -22883,7 +22883,7 @@ goto 60.77,64.77
 talk Jorunn the Skald-King |q Stomping Sinmur/Talk to Jorunn the Skald-King
 step
 goto 21.02,50.01
-'Open _Trolhetta_ |q Stomping Sinmur/Exit Trolhetta |future
+'Open _Trolhetta_ |q Stomping Sinmur/Exit Trolhetta
 |tip Manually skip to the next step.
 step
 goto therift_base 78.34,74.72
@@ -22924,7 +22924,7 @@ talk Vanus Galerion |q Messages Across Tamriel/Talk to Vanus Galerion
 |only Ebonheart Pact
 step
 goto 35.59,55.59
-'Use _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal |future
+'Use _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -22941,7 +22941,7 @@ talk Vanus Galerion |q Messages Across Tamriel/Talk to Vanus Galerion
 |only Ebonheart Pact
 step
 '_Go to the opposite end of the room:_
-'Use _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal |future
+'Use _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -22959,7 +22959,7 @@ talk Vanus Galerion |q Messages Across Tamriel/Talk to Vanus Galerion
 |only Ebonheart Pact
 step
 '_Run back towards the place you came in, opposite of the throne:_
-'Use _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal |future
+'Use _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -22974,7 +22974,7 @@ goto 52.04,70.85
 |only Ebonheart Pact
 step
 goto 52.04,70.85
-'Use _Portal to Stirk_ |q The Weight of Three Crowns/Enter Portal to Stirk |future
+'Use _Portal to Stirk_ |q The Weight of Three Crowns/Enter Portal to Stirk
 |tip Manually skip to the next step. |next Extras\\Extras\\Main Quests Only\\Coldharbour
 |only Ebonheart Pact
 step
@@ -22990,7 +22990,7 @@ accept Cadwell's Gold
 |only Aldmeri Dominion
 step
 goto 71.98,22.09
-'Use _Light of Meridia_ |q Cadwell's Gold/Use the Light of Meridia |future |next Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Stros M'Kai
+'Use _Light of Meridia_ |q Cadwell's Gold/Use the Light of Meridia |next Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Stros M'Kai
 |only Aldmeri Dominion
 step
 goto glenumbra_base 35.49,79.27
@@ -23005,7 +23005,7 @@ turnin Cadwell's Gold |next Extras\\Extras\\Main Quests Only\\DLC\\Imperial City
 |only Daggerfall Covenant
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Coldharbour",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Coldharbour",[[
 loadingimage loadscreen_coldharbor_01.dds
 description Skyrim's southernmost hold has a relatively temperate climate, thanks to northern mountains that block the frigid gales of the Sea of Ghosts, and warming volcanoes in the Velothi Mountains to the east. Its capital is Riften, on the shores of broad Lake Honrich.
 step
@@ -23110,11 +23110,11 @@ step
 goto 78.60,68.38 |q The Weight of Three Crowns/Enter the Portal Valley
 step
 goto 78.60,68.38
-talk Vanus Galerion |q The Weight of Three Crowns/Wait for Portal |future
+talk Vanus Galerion |q The Weight of Three Crowns/Wait for Portal
 |tip Manually skip to the next step.
 step
 goto 78.60,68.38
-'Wait for the _Portal_ |q The Weight of Three Crowns/Wait for Portal |future
+'Wait for the _Portal_ |q The Weight of Three Crowns/Wait for Portal
 step
 goto 80.01,68.59
 'Use _Portal to Coldharbour_ |q The Weight of Three Crowns/Take Portal to Coldharbour
@@ -23136,14 +23136,14 @@ talk The Groundskeeper
 turnin The Hollow City
 accept The Army of Meridia
 step
-goto 53.63,61.94 |q Truth, Lies, and Prisoners/Jump Into the Water |future
+goto 53.63,61.94 |q Truth, Lies, and Prisoners/Jump Into the Water
 step
-goto 52.60,33.55 |q Truth, Lies, and Prisoners/Jump Into the Water |future
+goto 52.60,33.55 |q Truth, Lies, and Prisoners/Jump Into the Water
 step
 goto 19.97,41.13
 wayshrine Hollow City
 step
-goto 31.47,32.71 |q Truth, Lies, and Prisoners/Jump Into the Water |future
+goto 31.47,32.71 |q Truth, Lies, and Prisoners/Jump Into the Water
 step
 goto coldharbour_base 43.21,62.56
 talk Gwilir
@@ -23260,7 +23260,7 @@ goto 45.20,64.86
 talk Skordo the Knife
 turnin Truth, Lies, and Prisoners
 step
-goto 42.90,65.37 |q Through the Daedric Lens |future
+goto 42.90,65.37 |q Through the Daedric Lens
 step
 goto 40.99,69.26
 talk Projection of Kireth Vanos
@@ -23301,7 +23301,7 @@ goto 72.89,47.18
 'Examine _Prisoner Information_ |q The Library of Dusk/.*Examine the Prisoner Notes.* |count 3
 step
 goto 67.32,12.81
-'Open _Library of Dusk_ |q The Library of Dusk/Enter the Library of Dusk |future
+'Open _Library of Dusk_ |q The Library of Dusk/Enter the Library of Dusk
 |tip Manually skip to the next step.
 step
 goto libraryofdusk_base 20.59,66.01 |q The Library of Dusk/Find Raynor Vanos
@@ -23314,7 +23314,7 @@ talk Raynor Vanos |q The Library of Dusk/Talk to Raynor Vanos
 |tip Persuade him.
 step
 goto 10.28,65.75
-talk Raynor Vanos |q The Library of Dusk/Find Lady Clarisse Laurent |future
+talk Raynor Vanos |q The Library of Dusk/Find Lady Clarisse Laurent
 |tip Manually skip to the next step.
 step
 goto 31.37,76.72 |q The Library of Dusk/Find Lady Clarisse Laurent
@@ -23347,7 +23347,7 @@ goto 80.84,24.84
 talk Telenger the Artificer |q The Library of Dusk/Talk to Telenger the Artificer
 step
 goto 89.08,24.49
-'Use _Portal to Mysterious Power Source_ |q The Library of Dusk/Enter the Library Vault Portal |future
+'Use _Portal to Mysterious Power Source_ |q The Library of Dusk/Enter the Library Vault Portal
 |tip Manually skip to the next step.
 step
 goto coldharbour_base 36.91,71.07
@@ -23493,7 +23493,7 @@ step
 goto 24.18,63.22 |q The Shadow's Embrace/Enter the Ruined Passage
 step
 goto 22.79,62.42
-'Open _Ruined Passage_ |q The Shadow's Embrace/Enter the Ruined Passage |future
+'Open _Ruined Passage_ |q The Shadow's Embrace/Enter the Ruined Passage
 |tip Manually skip to the next step.
 step
 goto lightlessoubliette_base 76.46,59.69
@@ -23560,7 +23560,7 @@ goto 51.63,57.09
 'Place _Mindshadow Crystal_ |q Light from the Darkness/.*Use Light of Meridia to Disrupt Binding Shadows.* |count 3
 step
 goto 44.99,56.65
-'Open _King Dynar's Prison_ |q Light from the Darkness/Enter King Dynar's Prison |future
+'Open _King Dynar's Prison_ |q Light from the Darkness/Enter King Dynar's Prison
 |tip Manually skip to the next step.
 step
 goto lightlesscell_base 15.32,16.27
@@ -23615,7 +23615,7 @@ goto 22.73,18.69
 talk King Laloriaran Dynar |q Light from the Darkness/Talk to King Laloriaran Dynar
 step
 goto 29.92,18.79
-'Use _Portal to the Hollow City_ |q Light from the Darkness/Meet King Laloriaran Dynar in the Hollow City |future
+'Use _Portal to the Hollow City_ |q Light from the Darkness/Meet King Laloriaran Dynar in the Hollow City
 |tip Manually skip to the next step.
 step
 goto hollowcity_base 78.79,41.57
@@ -23635,23 +23635,23 @@ goto 84.76,30.07
 talk Darien Gautier |q The Army of Meridia/Rescue King Laloriaran Dynar
 step
 goto 80.15,40.56
-'Open _The Hollow City_ |q Vanus Unleashed |future
+'Open _The Hollow City_ |q Vanus Unleashed
 |tip Manually skip to the next step.
 step
-goto 79.90,55.18 |q Vanus Unleashed |future
+goto 79.90,55.18 |q Vanus Unleashed
 step
-goto coldharbour_base 56.51,68.70 |q Vanus Unleashed |future
+goto coldharbour_base 56.51,68.70 |q Vanus Unleashed
 step
-goto 59.15,67.00 |q Vanus Unleashed |future
+goto 59.15,67.00 |q Vanus Unleashed
 step
 goto 58.01,62.25
 wayshrine Court of Contempt
 step
-goto 59.10,67.39 |q Vanus Unleashed |future
+goto 59.10,67.39 |q Vanus Unleashed
 step
-goto 62.83,69.95 |q Vanus Unleashed |future
+goto 62.83,69.95 |q Vanus Unleashed
 step
-goto 64.31,69.66 |q Vanus Unleashed |future
+goto 64.31,69.66 |q Vanus Unleashed
 step
 goto 65.42,71.34
 wayshrine Everfull Flagon
@@ -23755,22 +23755,22 @@ goto 89.25,82.89
 'Find _Vanus Galerion_ |q Vanus Unleashed/Find Vanus Galerion
 step
 goto 89.71,78.40
-'Use _Health Conduit_ |q Vanus Unleashed/Release Vanus Galerion |future
+'Use _Health Conduit_ |q Vanus Unleashed/Release Vanus Galerion
 |tip Manually skip to the next step.
 step
 goto 88.41,77.53
-'Use _Magicka Conduit_ |q Vanus Unleashed/Release Vanus Galerion |future
+'Use _Magicka Conduit_ |q Vanus Unleashed/Release Vanus Galerion
 |tip Manually skip to the next step.
 step
 goto 90.71,77.01
-'Use _Stamina Conduit_ |q Vanus Unleashed/Release Vanus Galerion |future
+'Use _Stamina Conduit_ |q Vanus Unleashed/Release Vanus Galerion
 |tip Manually skip to the next step.
 step
 goto 89.78,77.06
 'Release _Vanus Galerion_ |q Vanus Unleashed/Release Vanus Galerion
 step
 goto 89.22,74.10
-'Open _The Shackle Bridge_ |q Vanus Unleashed/Follow Vanus Galerion |future
+'Open _The Shackle Bridge_ |q Vanus Unleashed/Follow Vanus Galerion
 |tip Manually skip to the next step.
 step
 goto greatshackle1_base 23.85,65.61
@@ -23835,7 +23835,7 @@ goto 62.69,34.63
 step
 goto 42.27,39.97
 |tip Drop down.
-'Open _The Mooring_ |q Breaking the Shackle/Enter the Mooring |future
+'Open _The Mooring_ |q Breaking the Shackle/Enter the Mooring
 |tip Manually skip to the next step.
 step
 goto themooring_base 46.22,51.76
@@ -23845,7 +23845,7 @@ goto 47.76,51.82
 'Observe the _Great Shackle_ |q Breaking the Shackle/Observe the Great Shackle
 step
 goto 50.42,54.52
-'Use _Portal to The Hollow City_ |q Breaking the Shackle/Return to the Hollow City |future
+'Use _Portal to The Hollow City_ |q Breaking the Shackle/Return to the Hollow City
 |tip Manually skip to the next step.
 step
 goto hollowcity_base 18.25,79.21
@@ -23874,7 +23874,7 @@ goto 53.77,47.54
 talk The Groundskeeper |q The Army of Meridia/Talk to the Groundskeeper outside the Chapel
 step
 goto 55.34,47.42
-'Open _Chapel of Light_ |q The Army of Meridia/Enter the Chapel of Light |future
+'Open _Chapel of Light_ |q The Army of Meridia/Enter the Chapel of Light
 |tip Manually skip to the next step.
 step
 '_Walk east inside the Chapel of Light:_
@@ -23946,7 +23946,7 @@ goto 51.04,55.93
 talk Cadwell |q Crossing the Chasm/Talk to Cadwell at the Gatehouse
 step
 goto 50.95,55.68
-'Open _Gatehouse Span_ |q Crossing the Chasm/Enter the Gatehouse Span |future
+'Open _Gatehouse Span_ |q Crossing the Chasm/Enter the Gatehouse Span
 |tip Manually skip to the next step.
 step
 goto grundasgatehousemain_base 49.53,29.58
@@ -23972,7 +23972,7 @@ kill Tiny
 kill Molag Grunda |q Crossing the Chasm/Kill Molag Grunda
 step
 goto 15.39,52.18
-'Open _Coldharbour_ |q Crossing the Chasm/Exit the Gatehouse |future
+'Open _Coldharbour_ |q Crossing the Chasm/Exit the Gatehouse
 |tip Manually skip to the next step.
 step
 goto coldharbour_base 50.88,52.02
@@ -24050,7 +24050,7 @@ goto 51.42,46.86
 'Return to the _Harvest Heart_ |q The Harvest Heart/Return to the Harvest Heart
 step
 goto 51.06,46.78
-talk Virgar the Red |q The Harvest Heart/Talk to Virgar the Red |future
+talk Virgar the Red |q The Harvest Heart/Talk to Virgar the Red
 step
 goto 51.12,45.69
 'Destroy _Binding Totem_ |q The Harvest Heart/Help Virgar and Vanus Complete the Ritual
@@ -24084,7 +24084,7 @@ wayshrine Manor of Revelry
 step
 goto 42.49,42.89 
 'Use _Manor of Revelry_ Wayshine
-'Travel to _Reaver Citadel_ |q The Citadel Must Fall |future
+'Travel to _Reaver Citadel_ |q The Citadel Must Fall
 |tip Manually skip to the next step.
 step
 goto 51.83,41.93
@@ -24167,7 +24167,7 @@ goto 48.11,34.05
 talk Lyranth |q The Citadel Must Fall/Talk to Lyranth
 step
 goto 48.27,34.01
-'Open _Reaver Citadel Pyramid_ |q The Citadel Must Fall/Enter the Pyramid |future
+'Open _Reaver Citadel Pyramid_ |q The Citadel Must Fall/Enter the Pyramid
 |tip Manually skip to the next step.
 step
 goto reavercitadelpyramid_base 39.89,58.35
@@ -24236,7 +24236,7 @@ goto 49.59,25.77
 talk Vanus Galerion |q The Final Assault/Talk to Vanus Galerion
 step
 goto 49.63,24.97
-'Open _The Labyrinth_ |q The Final Assault/Enter the Labyrinth |future
+'Open _The Labyrinth_ |q The Final Assault/Enter the Labyrinth
 |tip Manually skip to the next step.
 step
 'Follow the path _NORTHEAST_:
@@ -24279,7 +24279,7 @@ step
 'Open the Library Gate |q The Final Assault/Open the Library Gate
 step
 'Follow the path _NORTHEAST_ and then _NORTHWEST_:
-'Use _Labyrinth_ |q The Final Assault/Enter the Next Area |future
+'Use _Labyrinth_ |q The Final Assault/Enter the Next Area
 step
 'Follow the path _NORTHWEST_:
 'Continue following the path all the way to the end
@@ -24289,14 +24289,14 @@ goto 46.51,24.94
 'Cross the _Bridge_ |q The Final Assault/Cross the Bridge
 step
 goto 46.39,24.94
-'Open _Statue Room_ |q The Final Assault/Enter the Next Area |future
+'Open _Statue Room_ |q The Final Assault/Enter the Next Area
 step
 'On your _RIGHT_ after you enter:
 |tip Follow her and defend her while she breaks the barrier.
 talk Gabrielle Benele |q The Final Assault/Find a Path Through the Statue Room
 step
 'Near you to the _SOUTHWEST_:
-'Open _The Endless Stair_ |q The Final Assault/Exit the Statue Room |future
+'Open _The Endless Stair_ |q The Final Assault/Exit the Statue Room
 step
 goto 43.57,26.30
 talk Vanus Galerion |q The Final Assault/Talk to Vanus Galerion
@@ -24313,11 +24313,11 @@ goto 47.08,27.77
 talk The Groundskeeper |q The Final Assault/Talk to the Groundskeeper
 step
 goto 47.16,27.41
-'Use _Portal to the Planar Vortex_ |q The Final Assault/Enter the Planar Vortex Portal |future
+'Use _Portal to the Planar Vortex_ |q The Final Assault/Enter the Planar Vortex Portal
 |tip Manually skip to the next step.
 step
 goto theendlessstair_base 50.55,52.80
-talk Meridia |q The Final Assault/Talk to Meridia |future
+talk Meridia |q The Final Assault/Talk to Meridia
 step
 goto 49.44,55.99
 talk Meridia |q The Final Assault/Let Meridia Know When You Are Ready
@@ -24366,7 +24366,7 @@ goto 19.97,41.40
 |only Aldmeri Dominion
 step
 goto auridon_base 69.65,92.90
-'Open _The Harborage_ |q God of Schemes/Go to the Harborage |future
+'Open _The Harborage_ |q God of Schemes/Go to the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -24375,7 +24375,7 @@ talk Varen Aquilarios |q God of Schemes/Talk to Varen Aquilarios
 |only Aldmeri Dominion
 step
 goto 72.84,48.98
-'Enter _Portal to Coldharbour_ |q God of Schemes/Enter Coldharbour |future
+'Enter _Portal to Coldharbour_ |q God of Schemes/Enter Coldharbour
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -24386,7 +24386,7 @@ goto hollowcity_base 19.97,41.40
 |only Daggerfall Covenant
 step
 goto glenumbra_base 35.51,79.29
-'Open _The Harborage_ |q God of Schemes/Go to the Harborage |future
+'Open _The Harborage_ |q God of Schemes/Go to the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -24395,7 +24395,7 @@ talk Varen Aquilarios |q God of Schemes/Talk to Varen Aquilarios
 |only Daggerfall Covenant
 step
 goto 66.34,63.28
-'Use _Portal to Coldharbour_ |q God of Schemes/Enter Coldharbour |future
+'Use _Portal to Coldharbour_ |q God of Schemes/Enter Coldharbour
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -24406,7 +24406,7 @@ goto hollowcity_base 19.97,41.40
 |only Ebonheart Pact
 step
 goto stonefalls_base 77.45,36.57
-'Open _The Harborage_ |q God of Schemes/Go to the Harborage |future
+'Open _The Harborage_ |q God of Schemes/Go to the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -24415,7 +24415,7 @@ talk Varen Aquilarios |q God of Schemes/Talk to Varen Aquilarios
 |only Ebonheart Pact
 step
 goto 65.95,32.84
-'Use _Portal to Coldharbour_ |q God of Schemes/Enter Coldharbour |future
+'Use _Portal to Coldharbour_ |q God of Schemes/Enter Coldharbour
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -24423,10 +24423,10 @@ goto heartsgrief1_base 10.80,53.05
 talk Abnur Tharn |q God of Schemes/Enter Heart's Grief
 |tip Manually skip to the next step.
 step
-goto 16.13,42.82 |q God of Schemes/Enter Heart's Grief |future
+goto 16.13,42.82 |q God of Schemes/Enter Heart's Grief
 step
 goto 65.64,59.46
-'Open _Heart's Grief Vestibule_ |q God of Schemes/Enter Heart's Grief |future
+'Open _Heart's Grief Vestibule_ |q God of Schemes/Enter Heart's Grief
 step
 goto heartsgrief2_base 35.31,48.18
 'Explore the _Hall_ |q God of Schemes/Explore the Hall
@@ -24441,7 +24441,7 @@ step
 goto 91.04,48.66 |q God of Schemes/Continue to the Throne Room
 step
 goto 91.31,55.33
-'Open _Seat of Tyranny_ |q God of Schemes/Continue to the Throne Room |future
+'Open _Seat of Tyranny_ |q God of Schemes/Continue to the Throne Room
 step
 goto heartsgrief3_base 54.27,13.80
 'Approach the _Seat of Tyranny_ |q God of Schemes/Approach the Seat of Tyranny
@@ -24456,11 +24456,11 @@ goto 55.23,15.12
 'Choose the _Sacrifice_ |q God of Schemes/Choose the Sacrifice
 step
 goto 54.19,12.88
-'Stand in _Position_ |q God of Schemes/Perform the Ritual |future
+'Stand in _Position_ |q God of Schemes/Perform the Ritual
 |tip Manually skip to the next step.
 step
 goto 63.88,24.28
-'Destroy _Fortress Wall_ |q God of Schemes/Vanquish Molag Bal |future
+'Destroy _Fortress Wall_ |q God of Schemes/Vanquish Molag Bal
 |tip Manually skip to the next step.
 step
 goto 69.13,31.54 |q God of Schemes/Vanquish Molag Bal
@@ -24505,7 +24505,7 @@ goto 43.65,82.58
 talk Meridia |q God of Schemes/Talk to Meridia
 step
 goto the_aldmiri_harborage_map_base 48.95,29.85
-'Return to the _Harborage_ |q God of Schemes/Return to the Harborage |future
+'Return to the _Harborage_ |q God of Schemes/Return to the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -24528,11 +24528,11 @@ accept Cadwell's Silver
 |only Aldmeri Dominion
 step
 goto 72.80,22.40
-'Use _Light of Meridia_ |q Cadwell's Silver /Use the Light of Meridia |future  |next Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Bleakrock Isle
+'Use _Light of Meridia_ |q Cadwell's Silver /Use the Light of Meridia  |next Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Bleakrock Isle
 |only Aldmeri Dominion
 step
 goto the_daggerfall_harborage 71.12,53.92
-'Return to the _Harborage_ |q God of Schemes/Return to the Harborage |future
+'Return to the _Harborage_ |q God of Schemes/Return to the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -24555,11 +24555,11 @@ accept Cadwell's Silver
 |only Daggerfall Covenant
 step
 goto 53.76,72.17
-'Use _Light of Meridia_ |q Cadwell's Silver /Use the Light of Meridia |future |next Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Khenarthi's Roost
+'Use _Light of Meridia_ |q Cadwell's Silver /Use the Light of Meridia |next Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Khenarthi's Roost
 |only Daggerfall Covenant
 step
 goto the_ebonheart_harborage_base 65.57,35.55
-'Return to the _Harborage_ |q God of Schemes/Return to the Harborage |future
+'Return to the _Harborage_ |q God of Schemes/Return to the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -24582,17 +24582,17 @@ accept Cadwell's Silver
 |only Ebonheart Pact
 step
 goto 87.70,39.05
-'Use _Light of Meridia_ |q Cadwell's Silver/Use the Light of Meridia |future  |next Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Stros M'Kai
+'Use _Light of Meridia_ |q Cadwell's Silver/Use the Light of Meridia  |next Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Stros M'Kai
 |only Ebonheart Pact
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Cyrodiil Tutorial",[[\
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Cyrodiil Tutorial",[[\
 loadingimage loadscreen_cyrodiil_01.dds
 description Tutorial into the Cyrodil Zone to unlock a healing spell or 30% Gallop for your character at level 10.
 step
 'Press _L_ to open Alliance War Campaigns
 'Choose a Home Campaign if you don't already have one
-'Right-click and hit Enter Campaign |q Welcome to Cyrodiil |future
+'Right-click and hit Enter Campaign |q Welcome to Cyrodiil
 |tip Manually skip to the next step.
 step
 goto westelsweyrgate_base 58.20,57.69
@@ -24777,12 +24777,12 @@ turnin Reporting for Duty
 step
 goto 65.18,49.43
 'Activate _Transitus Shrine_
-'Travel to _Northern High Rock Gate_ |q The Harborage |future
+'Travel to _Northern High Rock Gate_ |q The Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
 goto northhighrockgate_base 62.70,47.55
-'Use _Northern High Rock Gate_ Wayshrine |q The Harborage |future
+'Use _Northern High Rock Gate_ Wayshrine |q The Harborage
 'Travel to _Daggerfall_ in Glenumbra
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
@@ -24893,13 +24893,13 @@ goto northmorrowgate_base 56.88,45.03
 step
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Imperial City",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Imperial City",[[
 loadingimage loadscreen_imperialcity_01.dds
 description Join with three other adventurers in a race to the top of the White-Gold Tower in pursuit of a stolen Elder Scroll.
 step
 'Press _L_ to open Alliance War Campaigns
 'Choose _Imperial City_
-'Right-click and hit Enter Campaign |q City on the Brink |future
+'Right-click and hit Enter Campaign |q City on the Brink
 |tip Manually skip to the next step.
 step
 goto Imperialsewers_aldmeri1_base 84.73,72.15
@@ -24920,7 +24920,7 @@ accept Scouting the Elven Gardens
 step
 goto 87.22,73.10
 'Climb _Elven Gardens District_
-'Investigate the _Elven Gardens District_ |q Scouting the Elven Gardens/Investigate the Elven Gardens District |future
+'Investigate the _Elven Gardens District_ |q Scouting the Elven Gardens/Investigate the Elven Gardens District
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -25044,7 +25044,7 @@ accept Scouting the Nobles District
 |only Aldmeri Dominion
 step
 goto 87.36,73.00
-'Climb _Nobles District Ladder_ |q Scouting the Nobles District/Investigate the Nobles District |future
+'Climb _Nobles District Ladder_ |q Scouting the Nobles District/Investigate the Nobles District
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -25136,7 +25136,7 @@ accept Scouting the Memorial District
 |only Aldmeri Dominion
 step
 goto 86.94,73.11
-'Climb _Memorial District_ |q Scouting the Memorial District/Investigate the Memorial District |future
+'Climb _Memorial District_ |q Scouting the Memorial District/Investigate the Memorial District
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -25264,7 +25264,7 @@ accept Scouting the Arboretum
 |only Aldmeri Dominion
 step
 goto 86.81,72.53
-'Climb _Arboretum_ |q Scouting the Arboretum/Investigate the Arboretum |future
+'Climb _Arboretum_ |q Scouting the Arboretum/Investigate the Arboretum
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -25365,7 +25365,7 @@ accept Scouting the Temple District
 |only Aldmeri Dominion
 step
 goto 87.35,72.52
-'Climb _Temple District_ |q Scouting the Temple District/Investigate the Temple District |future
+'Climb _Temple District_ |q Scouting the Temple District/Investigate the Temple District
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -25452,7 +25452,7 @@ accept Scouting the Arena District
 |only Aldmeri Dominion
 step
 goto 86.79,73.00
-'Climb _Arena District_ |q Scouting the Arena District/Investigate the Arena District |future
+'Climb _Arena District_ |q Scouting the Arena District/Investigate the Arena District
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -25664,7 +25664,7 @@ accept Scouting the Nobles District
 |only Daggerfall Covenant
 step
 goto 6.62,60.45
-'Climb _Nobles District_ |q Scouting the Nobles District/Investigate the Nobles District |future
+'Climb _Nobles District_ |q Scouting the Nobles District/Investigate the Nobles District
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -25754,7 +25754,7 @@ accept Scouting the Arboretum
 |only Daggerfall Covenant
 step
 goto 6.14,61.03
-'Climb _Arboretum_ |q Scouting the Arboretum/Investigate the Arboretum |future
+'Climb _Arboretum_ |q Scouting the Arboretum/Investigate the Arboretum
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -25856,7 +25856,7 @@ accept Scouting the Memorial District
 |only Daggerfall Covenant
 step
 goto imperialcity_base 6.72,60.89
-'Climb _Memorial District_ |q Scouting the Memorial District/Investigate the Memorial District |future
+'Climb _Memorial District_ |q Scouting the Memorial District/Investigate the Memorial District
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -25965,7 +25965,7 @@ accept Scouting the Elven Gardens
 |only Daggerfall Covenant
 step
 goto 6.70,60.61
-'Climb _Elven Gardens District_ |q Scouting the Elven Gardens/Investigate the Elven Gardens District |future
+'Climb _Elven Gardens District_ |q Scouting the Elven Gardens/Investigate the Elven Gardens District
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -26071,7 +26071,7 @@ accept Scouting the Temple District
 |only Daggerfall Covenant
 step
 goto 6.13,60.48
-'Climb _Temple District_ |q Scouting the Temple District/Investigate the Temple District |future
+'Climb _Temple District_ |q Scouting the Temple District/Investigate the Temple District
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -26155,7 +26155,7 @@ accept Scouting the Arena District
 |only Daggerfall Covenant
 step
 goto 6.59,61.06
-'Climb _Arena District_ |q Scouting the Arena District/Investigate the Arena District |future
+'Climb _Arena District_ |q Scouting the Arena District/Investigate the Arena District
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -26350,7 +26350,7 @@ accept Scouting the Memorial District
 |only Ebonheart Pact
 step
 goto 52.26,23.24
-'Climb _Memorial District_ |q Scouting the Memorial District/Investigate the Memorial District |future
+'Climb _Memorial District_ |q Scouting the Memorial District/Investigate the Memorial District
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -26465,7 +26465,7 @@ accept Scouting the Arboretum
 |only Ebonheart Pact
 step
 goto 52.09,22.79
-'Climb _Arboretum_ |q Scouting the Arboretum/Investigate the Arboretum |future
+'Climb _Arboretum_ |q Scouting the Arboretum/Investigate the Arboretum
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -26563,7 +26563,7 @@ accept Scouting the Temple District
 |only Ebonheart Pact
 step
 goto 52.26,22.65
-'Climb _Temple District_ |q Scouting the Temple District/Investigate the Temple District |future
+'Climb _Temple District_ |q Scouting the Temple District/Investigate the Temple District
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -26652,7 +26652,7 @@ accept Scouting the Nobles District
 |only Ebonheart Pact
 step
 goto 52.56,22.67
-'Open _Nobles District_ |q Scouting the Nobles District/Investigate the Nobles District |future
+'Open _Nobles District_ |q Scouting the Nobles District/Investigate the Nobles District
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -26752,7 +26752,7 @@ accept Scouting the Elven Gardens
 |only Ebonheart Pact
 step
 goto 52.55,23.23
-'Climb _Elven Gardens District_ |q Scouting the Elven Gardens/Investigate the Elven Gardens District |future
+'Climb _Elven Gardens District_ |q Scouting the Elven Gardens/Investigate the Elven Gardens District
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -26880,7 +26880,7 @@ accept Scouting the Arena District
 |only Ebonheart Pact
 step
 goto 52.10,23.09
-'Climb _Arena District_ |q Scouting the Arena District/Investigate the Arena District |future
+'Climb _Arena District_ |q Scouting the Arena District/Investigate the Arena District
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -27056,12 +27056,12 @@ turnin The Sublime Brazier |next Extras\\Extras\\Main Quests Only\\DLC\\Craglorn
 |only Ebonheart Pact
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Craglorn",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Craglorn",[[
 loadingimage loadscreen_craglorn_01.dds
 description The constellations have disappeared. Ancient Yokudan warriors and deadly atronachs menace the rocky expanse of Craglorn.
 step
 'Open _Grahtwood_ Map
-'Travel to the _Elden Root_ |q The Star-Gazers |future
+'Travel to the _Elden Root_ |q The Star-Gazers
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -27071,19 +27071,19 @@ accept The Star-Gazers
 |only Aldmeri Dominion
 step
 goto 66.76,45.06
-'Use _Cart to Belkarth_ |q The Star-Gazers/Board the Cart |future
+'Use _Cart to Belkarth_ |q The Star-Gazers/Board the Cart
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
 'Open _Stormhaven_ Map
-'Travel to _Wayrest_ |q The Star-Gazers |future
+'Travel to _Wayrest_ |q The Star-Gazers
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto wayrest_base 74.50,85.44 |q The Star-Gazers |future
+goto wayrest_base 74.50,85.44 |q The Star-Gazers
 |only Daggerfall Covenant
 step
-goto 68.10,62.94 |q The Star-Gazers |future
+goto 68.10,62.94 |q The Star-Gazers
 |only Daggerfall Covenant
 step
 goto 40.65,15.43
@@ -27092,12 +27092,12 @@ accept The Star-Gazers
 |only Daggerfall Covenant
 step
 goto 41.28,16.05
-'Use _Cart to Belkarth_ |q The Star-Gazers/Board the Cart |future
+'Use _Cart to Belkarth_ |q The Star-Gazers/Board the Cart
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
 'Open _Deshaan_ Map
-'Travel to _Mourhold_ |q The Star-Gazers/Board the Cart |future
+'Travel to _Mourhold_ |q The Star-Gazers/Board the Cart
 |tip Manually skip to the next step
 |only Ebonheart Pact
 step
@@ -27107,7 +27107,7 @@ accept The Star-Gazers
 |only Ebonheart Pact
 step
 goto 65.87,48.34
-'Use _Cart to Belkarth_ |q The Star-Gazers/Board the Cart |future
+'Use _Cart to Belkarth_ |q The Star-Gazers/Board the Cart
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -27174,7 +27174,7 @@ step
 goto 15.66,45.03 |q The Warrior's Call/Travel to Buried Sands
 step
 goto 14.35,46.28
-'Open _Buried Sands_ |q The Warrior's Call/Travel to Buried Sands |future
+'Open _Buried Sands_ |q The Warrior's Call/Travel to Buried Sands
 |tip Manually skip to the next step.
 step
 goto burriedsands_base 40.61,63.69 |q The Warrior's Call/Search for the Burial Chamber
@@ -27200,7 +27200,7 @@ goto 37.88,71.89
 |tip Manually skip to the next step.
 step
 '_Go straight then left_
-'Examine _Book back left stack_ |q The Warrior's Call/Help Titus Locate the Legend of Tarish-Zi |future
+'Examine _Book back left stack_ |q The Warrior's Call/Help Titus Locate the Legend of Tarish-Zi
 |tip Watch Dialogue
 step
 '_Go back straight then right_
@@ -27257,7 +27257,7 @@ goto 40.62,57.33
 |tip Manually skip to the next step.
 step
 goto cryptoftarishzi2_base 41.40,86.98
-kill Emperor Tarish-Zi |q The Warrior's Call/Defeat Emperor Tarish-Zi |future
+kill Emperor Tarish-Zi |q The Warrior's Call/Defeat Emperor Tarish-Zi
 step
 goto 41.48,63.46
 talk Thief
@@ -27491,7 +27491,7 @@ goto 57.78,75.68
 'Activate _Guidestone_ |q The Missing Guardian/Find a Way Inside Reinhold's Retreat
 step
 goto 58.11,75.98
-'Enter _Reinhold's Retreat_ |q The Missing Guardian/Enter Reinhold's Retreat |future
+'Enter _Reinhold's Retreat_ |q The Missing Guardian/Enter Reinhold's Retreat
 |tip Manually skip to the next step.
 step
 goto reinholdsretreatcave_base 35.87,54.78 |q The Missing Guardian/Search the Ruins
@@ -27522,7 +27522,7 @@ talk Hara
 turnin The Missing Guardian
 step
 goto 25.06,56.15
-'Open _Belkarth_ |q Slithering Brood |future
+'Open _Belkarth_ |q Slithering Brood
 |tip Manually skip to the next step.
 step
 goto 25.82,60.59
@@ -27665,7 +27665,7 @@ turnin A Leaf in the Wind
 accept The Serpent's Fang
 step
 goto 58.27,42.70
-'Open _Ilthag's Undertower_ |q The Serpent's Fang/Meet Little Leaf in Ilthag's Undertower |future
+'Open _Ilthag's Undertower_ |q The Serpent's Fang/Meet Little Leaf in Ilthag's Undertower
 |tip Manually skip to the next step.
 step
 goto ilthagsundertower_base 56.05,66.13
@@ -27789,7 +27789,7 @@ step
 goto craglorn_base 66.26,33.09 |q Dawn of the Exalted Viper/Enter the Howling Sepulchers
 step
 goto 66.32,33.13
-'Open _The Howling Sepulchers_ |q Dawn of the Exalted Viper/Enter the Howling Sepulchers |future
+'Open _The Howling Sepulchers_ |q Dawn of the Exalted Viper/Enter the Howling Sepulchers
 |tip Manually skip to the next step
 step
 goto howlingsepulchersoverland_base 43.34,86.67
@@ -27815,23 +27815,23 @@ step
 goto craglorn_base 36.01,32.95 |q Dawn of the Exalted Viper/Enter Loth'Na Caverns
 step
 goto 40.02,30.91
-'Open _Loth'Na Caverns_ |q Dawn of the Exalted Viper/Enter Loth'Na Caverns |future
+'Open _Loth'Na Caverns_ |q Dawn of the Exalted Viper/Enter Loth'Na Caverns
 |tip Manually skip to the next step.
 step
-goto lothna_base 35.00,62.11 |q Dawn of the Exalted Viper/Enter Skyreach Temple |future
+goto lothna_base 35.00,62.11 |q Dawn of the Exalted Viper/Enter Skyreach Temple
 step
-goto 64.41,56.39 |q Dawn of the Exalted Viper/Enter Skyreach Temple |future
+goto 64.41,56.39 |q Dawn of the Exalted Viper/Enter Skyreach Temple
 step
-goto 61.67,44.81 |q Dawn of the Exalted Viper/Enter Skyreach Temple |future
+goto 61.67,44.81 |q Dawn of the Exalted Viper/Enter Skyreach Temple
 step
-goto 64.18,43.63 |q Dawn of the Exalted Viper/Enter Skyreach Temple |future
+goto 64.18,43.63 |q Dawn of the Exalted Viper/Enter Skyreach Temple
 step
 goto 65.78,24.84
-'Activate _All 4 bridge triggers_ |q Dawn of the Exalted Viper/Enter Skyreach Temple |future
+'Activate _All 4 bridge triggers_ |q Dawn of the Exalted Viper/Enter Skyreach Temple
 |tip Manually skip to the next step.
 step
 goto 73.00,07.63
-'Open _Skyreach Temple_ |q Dawn of the Exalted Viper/Enter Skyreach Temple |future
+'Open _Skyreach Temple_ |q Dawn of the Exalted Viper/Enter Skyreach Temple
 |tip Manually skip to the next step.
 step
 goto skyreachtemple_base 51.94,42.90
@@ -27839,7 +27839,7 @@ goto skyreachtemple_base 51.94,42.90
 kill Little Leaf and The Exalted Viper |q Dawn of the Exalted Viper/Defeat the Exalted Viper
 step
 goto 51.59,50.17
-'Use _Portal to the Star-Gazer's Observatory_ |q Dawn of the Exalted Viper/Return to the Star-Gazer's Observatory |future
+'Use _Portal to the Star-Gazer's Observatory_ |q Dawn of the Exalted Viper/Return to the Star-Gazer's Observatory
 |tip Manually skip to the next step.
 step
 goto belkarth_base 29.79,45.30
@@ -27876,12 +27876,12 @@ turnin The Time-Lost Warrior |next Extras\\Extras\\Main Quests Only\\DLC\\Wrothg
 step
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Wrothgar",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Wrothgar",[[
 loadingimage loadscreen_wrothgar_01.dds
 description King Kurog has begun to rebuild the great city of Orsinium, the long-abandoned capital city of the Orcs. But already there are whispered plots from those who would seize power for themselves.
 step
 'Open _Auridon_ Map
-'Travel to _Vulkhel Guard_ |q Invitation to Orsinium |future
+'Travel to _Vulkhel Guard_ |q Invitation to Orsinium
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -27895,7 +27895,7 @@ talk Ambassador Lazgara |q Invitation to Orsinium/Talk to Wrothgar Ambassador
 |only Aldmeri Dominion
 step
 'Open _Glenumbra_ Map
-'Travel to _Daggerfall_ |q Invitation to Orsinium |future
+'Travel to _Daggerfall_ |q Invitation to Orsinium
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -27909,11 +27909,11 @@ talk Ambassador Lazgara |q Invitation to Orsinium/Talk to Wrothgar Ambassador
 |only Daggerfall Covenant
 step
 'Open _Stonefalls_ Map
-'Travel to _Davon's Watch_ |q Invitation to Orsinium |future
+'Travel to _Davon's Watch_ |q Invitation to Orsinium
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
-goto davonswatch_base 48.72,72.16 |future |q Invitation to Orsinium
+goto davonswatch_base 48.72,72.16 |q Invitation to Orsinium
 |only Ebonheart Pact
 step
 goto 51.81,65.14
@@ -28030,11 +28030,11 @@ goto 39.16,83.72
 talk Alinon the Alchemist |q The Hidden Harvest/Talk to Alinon the Alchemist
 step
 goto 40.82,84.69
-'Open _Frostbreak Fortress_ |q The Hidden Harvest/Get Alinon Inside the Fort |future
+'Open _Frostbreak Fortress_ |q The Hidden Harvest/Get Alinon Inside the Fort
 |tip Manually skip to the next step.
 step
 goto frostbreakfortint_map_base 86.32,52.84
-talk Alinon the Alchemist |q The Hidden Harvest/Talk to Alinon the Alchemist |future
+talk Alinon the Alchemist |q The Hidden Harvest/Talk to Alinon the Alchemist
 step
 goto 80.81,60.41
 'Burn _Briarheart Sapling_ |q The Hidden Harvest/Destroy Briarheart Saplings
@@ -28092,11 +28092,11 @@ goto 36.76,85.23
 |tip Manually skip to the next step.
 step
 goto frostbreakfortint_map_base 42.19,25.27
-'Open _Ice-Heart's Lair_ |q For King and Glory/Find Urfon Ice-Heart |future
+'Open _Ice-Heart's Lair_ |q For King and Glory/Find Urfon Ice-Heart
 |tip Manually skip to the next step.
 step
 goto iceheartslair_map_base 50.51,49.52
-kill Urfon Ice-Heart |q For King and Glory/Kill Urfon Ice-Heart |future
+kill Urfon Ice-Heart |q For King and Glory/Kill Urfon Ice-Heart
 step
 goto 54.51,45.22
 talk King Kurog |q For King and Glory/Talk to King Kurog
@@ -28127,14 +28127,14 @@ talk King Kurog
 turnin For King and Glory
 step
 goto 34.07,82.85
-'Open _Main Hall_ |q A King-Sized Problem |future
+'Open _Main Hall_ |q A King-Sized Problem
 |tip Manually skip to the next step.
 step
 goto scarpkeeplower_base 35.48,34.08
-'Open _Orsinium_ |q A King-Sized Problem |future
+'Open _Orsinium_ |q A King-Sized Problem
 |tip Manually skip to the next step.
 step
-goto orsinium_base 62.02,64.23 |q A King-Sized Problem |future
+goto orsinium_base 62.02,64.23 |q A King-Sized Problem
 step
 goto 32.26,87.96
 talk Talviah Aliaria
@@ -28182,7 +28182,7 @@ talk Priest Rooghub |q A King-Sized Problem/Find a Way Into the Temple
 |tip Manually skip to the next step.
 step
 goto 28.40,52.44
-'Open _Temple of Ire_ |q A King-Sized Problem/Enter the Temple |future
+'Open _Temple of Ire_ |q A King-Sized Problem/Enter the Temple
 |tip Manually skip to the next step.
 step
 goto orsiniumtempleupper_base 26.68,47.64 |q A King-Sized Problem/Get the Key to the Rectory |tip Avoid NPC patrols and stay in _Stealth_ mode by pressing Control
@@ -28203,13 +28203,13 @@ goto rectory01_base 50.47,38.22
 kill the Malacath Forces
 talk Priest Uugus |q A King-Sized Problem/Save Priest Uugus
 step
-goto 72.36,28.59 |q A King-Sized Problem/'Rescue High Priestess Solgra |future
+goto 72.36,28.59 |q A King-Sized Problem/'Rescue High Priestess Solgra
 step
-goto 69.37,61.56 |q A King-Sized Problem/'Rescue High Priestess Solgra |future
+goto 69.37,61.56 |q A King-Sized Problem/'Rescue High Priestess Solgra
 step
-goto 39.90,44.93 |q A King-Sized Problem/'Rescue High Priestess Solgra |future
+goto 39.90,44.93 |q A King-Sized Problem/'Rescue High Priestess Solgra
 step
-goto 26.48,77.90 |q A King-Sized Problem/'Rescue High Priestess Solgra |future
+goto 26.48,77.90 |q A King-Sized Problem/'Rescue High Priestess Solgra
 step
 goto 60.98,87.75
 kill Mazogug the Bold
@@ -28237,7 +28237,7 @@ talk Forge-Mother Alga
 turnin A King-Sized Problem
 step
 goto 65.15,13.69
-'Open _Orsinium_ |q In the Name of the King/Talk to King Kurog |future
+'Open _Orsinium_ |q In the Name of the King/Talk to King Kurog
 |tip Manually skip to the next step.
 step
 goto orsinium_base 30.48,46.06
@@ -28301,15 +28301,15 @@ goto 32.41,72.16
 |tip If not here skip this step and the guide will take you to the next spot hes been found.
 talk Neramo |q Quarry Conundrum/Find the High Elf
 step
-goto 36.13,63.18 |q Quarry Conundrum/Find the Dwarven Control Center |future
+goto 36.13,63.18 |q Quarry Conundrum/Find the Dwarven Control Center
 step
-goto 46.94,57.61 |q Quarry Conundrum/Find the Dwarven Control Center |future
+goto 46.94,57.61 |q Quarry Conundrum/Find the Dwarven Control Center
 step
-goto 49.45,50.56 |q Quarry Conundrum/Find the Dwarven Control Center |future
+goto 49.45,50.56 |q Quarry Conundrum/Find the Dwarven Control Center
 step
-goto 61.63,49.84 |q Quarry Conundrum/Find the Dwarven Control Center |future
+goto 61.63,49.84 |q Quarry Conundrum/Find the Dwarven Control Center
 step
-goto 70.46,55.82 |q Quarry Conundrum/Find the Dwarven Control Center |future
+goto 70.46,55.82 |q Quarry Conundrum/Find the Dwarven Control Center
 step
 goto 69.37,46.87
 talk Neramo |q Quarry Conundrum/Find the High Elf
@@ -28678,7 +28678,7 @@ goto 43.01,32.55
 |tip Manually skip to the next step.
 step
 goto 34.74,5.38
-'Open _Fharun Stronghold_ |q To Save a Chief/Escort Chief Bazrag to Safety |future
+'Open _Fharun Stronghold_ |q To Save a Chief/Escort Chief Bazrag to Safety
 |tip Manually skip to the next step.
 step
 goto fharunstronghold01_base 89.57,53.52
@@ -28701,7 +28701,7 @@ goto 75.32,33.61
 wayshrine Two Rivers
 step
 'Use Two Rivers Wayshrine
-'Travel to _Orsinium_ |q The Anger of a King |future
+'Travel to _Orsinium_ |q The Anger of a King
 |tip Manually skip to the next step.
 step
 'Next to you:
@@ -28778,14 +28778,14 @@ goto 12.77,76.48
 'Examine _Vosh Rakh Overseer_ |q The Anger of a King/Find a Vosh Rakh Disguise
 step
 goto 7.62,78.40
-'Open Paragon's Remembrance |q The Anger of a King/Enter Paragon's Remembrance |future
+'Open Paragon's Remembrance |q The Anger of a King/Enter Paragon's Remembrance
 |tip Manually skip to the next step.
 step
 goto paragonsrememberance_base 87.92,19.66
 talk Eveli Sharp-Arrow |q The Anger of a King/Find Your Companions
 step
 goto 87.34,17.88
-'Open the _Chambers of Loyalty_ |q The Anger of a King/Enter the Chambers of Loyalty |future
+'Open the _Chambers of Loyalty_ |q The Anger of a King/Enter the Chambers of Loyalty
 |tip Manually skip to the next step.
 step
 goto chambersofloyalty_base 23.06,69.41
@@ -28863,7 +28863,7 @@ talk Eveli Sharp-Arrow
 turnin The Anger of a King
 step
 'Open _Wrothgar_ Map
-'Travel to _Orsinium_ |q The King's Gambit |future
+'Travel to _Orsinium_ |q The King's Gambit
 |tip Manually skip to the next step.
 step
 goto orsinium_base 31.57,88.73
@@ -28962,7 +28962,7 @@ step
 goto 33.33,44.39 |q Blood on a King's Hands/Enter the Temple
 step
 goto 30.82,50.34
-'Open the _Temple_ |q Blood on a King's Hands/Enter the Temple |future
+'Open the _Temple_ |q Blood on a King's Hands/Enter the Temple
 |tip Manually skip to the next step.
 step
 goto orsiniumtemplelower_base 25.93,62.14
@@ -29003,7 +29003,7 @@ step
 goto 61.87,78.42 |q Blood on a King's Hands/Go to the Temple Library |tip Go up the stairs.
 step
 goto 62.37,87.18
-'Open _Temple Library_ |q Blood on a King's Hands/Go to the Temple Library |future
+'Open _Temple Library_ |q Blood on a King's Hands/Go to the Temple Library
 |tip Manually skip to the next step.
 step
 goto pathtothemoo_library_base 56.21,81.26
@@ -29143,20 +29143,20 @@ talk King Bazrag
 turnin Long Live the King |next Extras\\Extras\\Main Quests Only\\DLC\\Thieves Guild
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Thieves Guild",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Thieves Guild",[[
 loadingimage loadscreen_outlaw_refuge_nedic_01.dds
 description Help restore the Thieves Guild in Abah's Landing, currently besieged by the mercenary force known as the Iron Wheel.
 step
 'Open _Greenshade_ Map
-'Travel to _Marbruk_ |q Partners in Crime |future
+'Travel to _Marbruk_ |q Partners in Crime
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
-goto marbruk_base 63.44,39.39 |q Partners in Crime |future
+goto marbruk_base 63.44,39.39 |q Partners in Crime
 |only Aldmeri Dominion
 step
 goto 61.66,25.85
-'Open _Marbruk Outlaws Refuge_ |q Partners in Crime |future
+'Open _Marbruk Outlaws Refuge_ |q Partners in Crime
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -29181,17 +29181,17 @@ talk Quen |q Partners in Crime/Meet Quen at the Woodhearth Docks
 |only Aldmeri Dominion
 step
 goto 18.04,53.78
-'Travel _Fulstrom Homestead_ |q Partners in Crime/Travel to Fulstrom Homestead |future
+'Travel _Fulstrom Homestead_ |q Partners in Crime/Travel to Fulstrom Homestead
 |only Aldmeri Dominion
 |tip Manually skip to the next step.
 step
 'Open _Stormhaven_ Map
-'Travel to _Wayrest_ |q Partners in Crime |future
+'Travel to _Wayrest_ |q Partners in Crime
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
 goto wayrest_base 26.85,48.06
-'Open _Wayrest Outlaws Refuge_ |q Partners in Crime |future
+'Open _Wayrest Outlaws Refuge_ |q Partners in Crime
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -29216,17 +29216,17 @@ talk Quen |q Partners in Crime/Meet Quen at the Wayrest Docks
 |only Daggerfall Covenant
 step
 goto 79.85,74.52
-'Travel _Fulstrom Homestead_ |q Partners in Crime/Travel to Fulstrom Homestead |future
+'Travel _Fulstrom Homestead_ |q Partners in Crime/Travel to Fulstrom Homestead
 |only Daggerfall Covenant
 |tip Manually skip to the next step.
 step
 'Open _Eastmarch_ Map
-'Travel to _Windhelm_ |q Partners in Crime |future
+'Travel to _Windhelm_ |q Partners in Crime
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
 goto windhelm_base 65.95,44.44
-'Open _Windhelm Outlaws Refuge_ |q Partners in Crime |future
+'Open _Windhelm Outlaws Refuge_ |q Partners in Crime
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -29248,7 +29248,7 @@ talk Quen |q Partners in Crime/Meet Quen at the Windhelm Docks
 |only Ebonheart Pact
 step
 goto 83.60,48.91
-'Travel _Fulstrom Homestead_ |q Partners in Crime/Approach Fulstrom Homestead |future
+'Travel _Fulstrom Homestead_ |q Partners in Crime/Approach Fulstrom Homestead
 |only Ebonheart Pact
 |tip Manually skip to the next step.
 step
@@ -29342,7 +29342,7 @@ goto 39.23,35.41
 'Examine tip board if dialogue does not begin with "Esteemed Thieves" backout and try again. 
 |tip Once you have the quest go to Daggerfall docks and steal everything off the two ships, then go to any Outlaws Refuge and DO NOT SELL but launder everything. 
 |tip Then do the quest turn it in rinse and repeat till rank 10 this is the quickest way to through this guide. 
-|tip You should only need to loot the two boats once it should be enough items in your bags to get you to Rank 10 and also open the satchels you get for your turn in they also have some of them supplies as well. |q Cleaning House/Meet Zeira Outside Abah's Landing |future
+|tip You should only need to loot the two boats once it should be enough items in your bags to get you to Rank 10 and also open the satchels you get for your turn in they also have some of them supplies as well. |q Cleaning House/Meet Zeira Outside Abah's Landing
 |tip Manually skip to the next step.
 step
 goto 43.71,63.32 |q Cleaning House/Meet Zeira Outside Abah's Landing
@@ -29387,7 +29387,7 @@ goto 53.04,53.47 |q Cleaning House/Find Velsa's Villa
 'Find _Velsa's Villa_ |q Cleaning House/Find Velsa's Villa
 step
 goto 52.90,52.94
-talk Velsa |q Cleaning House/Talk to Velsa in Her Garden |future
+talk Velsa |q Cleaning House/Talk to Velsa in Her Garden
 step
 goto 52.90,52.94
 talk Silver-Claw |q Cleaning House/Meet Velsa Outside Silver-Claw's Warehouse
@@ -29447,7 +29447,7 @@ goto 33.01,87.31
 'Hide _Hiding Spot_ |q Cleaning House/Hide in Silver-Claw's Office
 step
 'Open _Hew's Bane_ Map
-'Travel _Abah's Landing_ |q Cleaning House/Return Silver-Claw's Ledger |future
+'Travel _Abah's Landing_ |q Cleaning House/Return Silver-Claw's Ledger
 |tip Manually skip to the next step.
 step
 goto 21.38,43.10
@@ -29539,9 +29539,9 @@ goto 56.71,69.78
 talk Velsa |q The Long Game/Meet Velsa Outside No Shira Citadel
 |tip Persuade her.
 step
-goto 58.00,69.71 |q The Long Game/.*Learn the Iron Wheel Headquarters Pass-Phrase.* |future |tip Go up the stairs and put on Servant's Outfit
+goto 58.00,69.71 |q The Long Game/.*Learn the Iron Wheel Headquarters Pass-Phrase.* |tip Go up the stairs and put on Servant's Outfit
 step
-goto 59.33,70.23 |q The Long Game/.*Learn the Iron Wheel Headquarters Pass-Phrase.* |future
+goto 59.33,70.23 |q The Long Game/.*Learn the Iron Wheel Headquarters Pass-Phrase.*
 step
 goto 58.56,72.44
 'Examine _Iron Wheel Precept 21_ |lorebook Iron Wheel Precept 21/3/28/44
@@ -29558,7 +29558,7 @@ goto 64.82,72.51
 'Open Iron Wheel Headquarters
 'Select _"A ring of iron around them."_
 'Select _"We burn our truth upon their canvas."_
-'Select _"The Wheel turns ever onward."_ |q The Long Game/Enter Iron Wheel Headquarters With Pass-Phrase |future
+'Select _"The Wheel turns ever onward."_ |q The Long Game/Enter Iron Wheel Headquarters With Pass-Phrase
 |tip Manually skip to the next step.
 step
 goto hiradirgecitadeltg3_base 32.64,73.92
@@ -29614,7 +29614,7 @@ goto 43.04,38.00
 'Find _Percius Loche's Trail_ |q A Flawless Plan/Find Percius Loche's Trail
 step
 goto 25.79,63.04
-talk Percius Loche |q A Flawless Plan/Talk to Percius Loche |future
+talk Percius Loche |q A Flawless Plan/Talk to Percius Loche
 step
 goto 29.15,57.55 |q A Flawless Plan/Talk to Zeira
 step
@@ -29623,7 +29623,7 @@ step
 goto 40.30,39.55
 talk Zeira |q A Flawless Plan/Talk to Zeira
 step
-talk Zeira |q A Flawless Plan/Travel to al-Danobia Tomb |future
+talk Zeira |q A Flawless Plan/Travel to al-Danobia Tomb
 |tip Manually skip to the next step.
 step
 goto aldanobia_base 44.13,58.72
@@ -29765,14 +29765,14 @@ step
 |tip Manually skip to the next step.
 step
 goto abahslanding_base 21.40,42.99
-'Open _Thieves Den_ |q A Flawless Plan/Return to the Thieves Den |future
+'Open _Thieves Den_ |q A Flawless Plan/Return to the Thieves Den
 |tip Manually skip to the next step.
 step
 goto safehouse_base 35.24,40.14
 talk Zeira
 turnin A Flawless Plan
 step
-goto safehouse_base 43.36,52.43 |q Forever Hold Your Peace |future
+goto safehouse_base 43.36,52.43 |q Forever Hold Your Peace
 step
 goto 32.51,64.52
 talk Andarri
@@ -29815,7 +29815,7 @@ step
 goto 30.66,36.19 |q Forever Hold Your Peace/Return to the Thieves Den |tip Go up the stairs.
 step
 goto 27.19,33.05
-'Open _Thieves Den_ |q Forever Hold Your Peace/Return to the Thieves Den |future
+'Open _Thieves Den_ |q Forever Hold Your Peace/Return to the Thieves Den
 |tip Manually skip to the next step.
 step
 goto safehouse_base 33.65,43.60
@@ -29844,7 +29844,7 @@ goto 58.28,48.74
 talk Muazel |q Forever Hold Your Peace/Give Forged Invitation to the Gatekeeper
 step
 goto 58.65,49.04
-'Open _Hubalajad Palace_ |q Forever Hold Your Peace/Enter the Wedding |future
+'Open _Hubalajad Palace_ |q Forever Hold Your Peace/Enter the Wedding
 |tip Manually skip to the next step.
 step
 goto hubalajadpalace_base 31.18,29.36
@@ -29859,7 +29859,7 @@ talk Zeira |q Forever Hold Your Peace/Talk to Zeira
 step
 goto 54.89,56.00
 |tip Watch dialogue
-'Escort _Zeira to the Palace_ |q Forever Hold Your Peace/Escort Zeira to the Palace |future
+'Escort _Zeira to the Palace_ |q Forever Hold Your Peace/Escort Zeira to the Palace
 step
 goto 49.77,57.28
 talk Zeira |q Forever Hold Your Peace/Talk to Zeira
@@ -29952,7 +29952,7 @@ step
 goto 32.47,38.07 |q Forever Hold Your Peace/Return to the Thieves Den |tip Go up the stairs.
 step
 goto 27.21,33.06
-'Open _Thieves Den_ |q Forever Hold Your Peace/Return to the Thieves Den |future
+'Open _Thieves Den_ |q Forever Hold Your Peace/Return to the Thieves Den
 |tip Manually skip to the next step.
 step
 goto safehouse_base 40.77,42.69
@@ -30119,7 +30119,7 @@ goto 64.24,38.77 |q The One That Got Away/Find Bellulor Chatterbeak in the Marbr
 |only Aldmeri Dominion
 step
 goto marbruk_base 61.81,26.02
-'Open _Marbruk Outlaws Refuge_ |q The One That Got Away/Find Bellulor Chatterbeak in the Marbruk Outlaws Refuge |future
+'Open _Marbruk Outlaws Refuge_ |q The One That Got Away/Find Bellulor Chatterbeak in the Marbruk Outlaws Refuge
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -30195,7 +30195,7 @@ goto 82.36,58.71 |q The One That Got Away/Find Bellulor Chatterbeak in the Shorn
 |only Daggerfall Covenant
 step
 goto rivenspire_base 47.35,53.19
-'Open _Shornhelm Outlaws Refuge_ |q The One That Got Away/Find Bellulor Chatterbeak in the Shornhelm Outlaws Refuge |future
+'Open _Shornhelm Outlaws Refuge_ |q The One That Got Away/Find Bellulor Chatterbeak in the Shornhelm Outlaws Refuge
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -30267,7 +30267,7 @@ goto 32.85,24.49
 |only Ebonheart Pact
 step
 goto 60.40,16.52
-'Open _Stormhold Outlaws Refuge_ |q The One That Got Away/Find Bellulor Chatterbeak in the Stormhold Outlaws Refuge |future
+'Open _Stormhold Outlaws Refuge_ |q The One That Got Away/Find Bellulor Chatterbeak in the Stormhold Outlaws Refuge
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -30330,12 +30330,12 @@ talk Zeira
 turnin The One That Got Away |next Extras\\Extras\\Main Quests Only\\DLC\\Dark Brotherhood
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Dark Brotherhood",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Dark Brotherhood",[[
 loadingimage loadscreen_dbsanctuary_01.dds
 description Sometimes the best way to deal with a troublesome person is permanent removal. As a Dark Brotherhood assassin, you'll be tasked to fill that need.
 step
 'Open _Gold Coast_ Map
-'Travel to _Anvil_ |q Voices in the Dark |future
+'Travel to _Anvil_ |q Voices in the Dark
 |tip Manually skip to the next step.
 step
 goto anvilcity_base 36.18,50.13
@@ -30350,7 +30350,7 @@ step
 goto 37.92,51.92 |q Voices in the Dark/Search for Amelie Crowe Near the Anvil Docks
 step
 goto 37.92,51.92
-talk Courier |q Voices in the Dark/Talk to the Courier |future
+talk Courier |q Voices in the Dark/Talk to the Courier
 step
 goto 19.36,47.11 |q Voices in the Dark/Go to the Anvil Lighthouse
 step
@@ -30379,7 +30379,7 @@ goto 29.79,37.06
 |tip Manually skip to the next step.
 step
 goto 25.05,38.49
-'Unlock _Jarol Estate_ |q Signed in Blood/Find a Way Into the Jarol Estate |future
+'Unlock _Jarol Estate_ |q Signed in Blood/Find a Way Into the Jarol Estate
 |tip Manually skip to the next step.
 step
 goto goldcoast_base 24.39,38.23
@@ -30413,11 +30413,11 @@ goto 61.59,22.80
 'Unlock _Gate_ |q Signed in Blood/Find Lord Quintus Jarol
 |tip Manually skip to the next step.
 step
-goto 71.26,61.54 |q Signed in Blood/Assassinate Lord Quintus Jarol |future
+goto 71.26,61.54 |q Signed in Blood/Assassinate Lord Quintus Jarol
 step
-goto 57.97,50.98 |q Signed in Blood/Assassinate Lord Quintus Jarol |future
+goto 57.97,50.98 |q Signed in Blood/Assassinate Lord Quintus Jarol
 step
-goto 11.79,37.15 |q Signed in Blood/Assassinate Lord Quintus Jarol |future
+goto 11.79,37.15 |q Signed in Blood/Assassinate Lord Quintus Jarol
 step
 goto varoestatecaves02_base 59.43,69.48 |q Signed in Blood/Assassinate Lord Quintus Jarol
 step
@@ -30429,11 +30429,11 @@ goto 31.94,31.25
 kill Lord Quintus Jarol |q Signed in Blood/Assassinate Lord Quintus Jarol
 step
 'Open _Gold Coast_ Map
-'Travel to _Anvil_ |q Signed in Blood/Report to Speaker Terenus |future
+'Travel to _Anvil_ |q Signed in Blood/Report to Speaker Terenus
 |tip Manually skip to the next step.
 step
 goto anvilcity_base 22.62,67.00
-'Open _Anvil Lighthouse_ |q Signed in Blood/Report to Speaker Terenus |future
+'Open _Anvil Lighthouse_ |q Signed in Blood/Report to Speaker Terenus
 |tip Manually skip to the next step.
 step
 goto 23.57,68.84
@@ -30482,7 +30482,7 @@ step
 goto 74.11,50.02 |q Welcome Home/Meet Kor and Hildegard
 step
 goto 91.87,50.01
-talk Kor |q Welcome Home/Meet Kor and Hildegard |future
+talk Kor |q Welcome Home/Meet Kor and Hildegard
 |tip Manually skip to the next step.
 step
 goto 73.64,47.87 |q Welcome Home/Talk to Elam Drals
@@ -30509,7 +30509,7 @@ step
 goto kvatchcity_base 51.67,89.58
 wayshrine Kvatch
 step
-kill Kvatch Contract |q Contract: Kvatch/Kill Kvatch Contact |future
+kill Kvatch Contract |q Contract: Kvatch/Kill Kvatch Contact
 |tip The Contract is random so you will have to search for the contact and kill them.
 |tip Manually skip to the next step.
 step
@@ -30556,7 +30556,7 @@ step
 goto 19.48,73.92 |q A Lesson in Silence/Enter the Grand Sermonizer's Estate 
 step
 goto goldcoast_base 72.73,46.36
-'Open _At-Himah Family Estate_ |q A Lesson in Silence/Enter the Grand Sermonizer's Estate |future
+'Open _At-Himah Family Estate_ |q A Lesson in Silence/Enter the Grand Sermonizer's Estate
 |tip Manually skip to the next step.
 step
 goto athimahmanson03_base 47.17,68.55
@@ -30596,7 +30596,7 @@ step
 |tip Manually skip to the next step.
 step
 goto goldcoast_base 53.52,31.96
-'Open _Dark Brotherhood Sanctuary_ |q A Lesson in Silence/Return to the Sanctuary |future
+'Open _Dark Brotherhood Sanctuary_ |q A Lesson in Silence/Return to the Sanctuary
 |tip Manually skip to the next step.
 step
 goto dbsanctuary_base 49.87,72.56 |q A Lesson in Silence/Talk to Astara |tip Go up the stairs.
@@ -30606,7 +30606,7 @@ talk Astara Caerellius |q A Lesson in Silence/Talk to Astara
 step
 goto 51.52,9.96
 |tip Watch the dialogue:
-'Wait for _Kor and Hildegard_ |q A Lesson in Silence/Wait for Kor and Hildegard |future
+'Wait for _Kor and Hildegard_ |q A Lesson in Silence/Wait for Kor and Hildegard
 step
 goto 50.10,7.74
 talk Tanek
@@ -30655,25 +30655,25 @@ goto 60.81,13.33
 step
 goto 60.89,13.25
 talk Bilami the Caravaneer
-'Travel to the _Jerall Mountains_ |q Questions of Faith/Travel to the Jerall Mountains |future
+'Travel to the _Jerall Mountains_ |q Questions of Faith/Travel to the Jerall Mountains
 |tip Manually skip to the next step.
 step
 goto db3jerallmountains_base 64.14,81.97 |q Questions of Faith/Track Hildegard
 step
 goto 59.98,74.13
-'Examine _Silver Dawn Hunter_ |q Questions of Faith/Investigate Dead Nord |future
+'Examine _Silver Dawn Hunter_ |q Questions of Faith/Investigate Dead Nord
 |tip Manually skip to the next step.
 step
 goto 32.03,83.26
-'Examine _Disturbed Flowers_ |q Questions of Faith/Investigate Flowers |future
+'Examine _Disturbed Flowers_ |q Questions of Faith/Investigate Flowers
 |tip Manually skip to the next step.
 step
 goto 38.57,60.79
-'Examine _Slaughtered Deer_ |q Questions of Faith/Investigate Deer |future
+'Examine _Slaughtered Deer_ |q Questions of Faith/Investigate Deer
 |tip Manually skip to the next step.
 step
 goto 58.07,38.78
-kill Purifier Gunthafur |q Questions of Faith/Defeat the Silver Dawn |future
+kill Purifier Gunthafur |q Questions of Faith/Defeat the Silver Dawn
 step
 goto 63.06,81.77
 'Continue _Tracking Hildegard_ |q Questions of Faith/Continue Tracking Hildegard
@@ -30682,7 +30682,7 @@ goto 62.90,82.04
 talk Hildegard |q Questions of Faith/Talk to Hildegard
 step
 goto 73.18,82.97
-talk Bilami the Caravaneer |q Questions of Faith/Return to Anvil |future
+talk Bilami the Caravaneer |q Questions of Faith/Return to Anvil
 |tip Manually skip to the next step.
 step
 goto anvilcity_base 60.28,12.92
@@ -30757,7 +30757,7 @@ goto 60.33,28.63
 |tip Manually skip to the next step.
 step
 goto 55.71,18.04
-'Trespass _Castle Kvatch Vaults_ |q A Special Request/Infiltrate Castle Kvatch |future
+'Trespass _Castle Kvatch Vaults_ |q A Special Request/Infiltrate Castle Kvatch
 |tip Manually skip to the next step.
 step
 goto castlekvatch03_base 27.23,9.94
@@ -30871,7 +30871,7 @@ goto 82.15,63.34
 |tip Manually skip to the next step.
 step
 goto orderenclave03_base 31.43,13.93
-kill Captain Marie Elena, Lieutenant Vinicius |q Dark Revelations/Stop the Negotiations |future
+kill Captain Marie Elena, Lieutenant Vinicius |q Dark Revelations/Stop the Negotiations
 step
 goto 27.65,20.89 |q Dark Revelations/Stop the Initiation |tip Go down the stairs.
 step
@@ -30949,7 +30949,7 @@ goto 60.50,12.46
 'Meet _Green-Venom-Tongue Near Anvil_ |q A Ghost from the Past/Meet Green-Venom-Tongue Near Anvil
 step
 goto 61.11,13.32
-'Travel _Blackwood Borderlands_ |q A Ghost from the Past/Travel to the Purified Sanctuary |future
+'Travel _Blackwood Borderlands_ |q A Ghost from the Past/Travel to the Purified Sanctuary
 |tip Manually skip to the next step.
 step
 goto blackwoodsborderlands01_base 60.45,57.10 |q A Ghost from the Past/Enter the Purified Sanctuary
@@ -30960,7 +30960,7 @@ goto 73.12,52.03
 step
 goto blackwoodsborderlands02_base 35.18,43.89
 |tip Wait for Green-Venom-Tongue to Open the Door
-'Open _Xith-Izkul Sanctuary_ |q A Ghost from the Past/Talk to Green-Venom-Tongue |future
+'Open _Xith-Izkul Sanctuary_ |q A Ghost from the Past/Talk to Green-Venom-Tongue
 |tip Manually skip to the next step.
 step
 goto 39.97,43.45
@@ -31117,7 +31117,7 @@ goto 51.40,40.12
 kill _The Black Dragon_ |q The Wrath of Sithis/Defeat the Black Dragon
 step
 'Open _Gold Coast_ Map
-'Travel to _Gold Coast_ |q The Wrath of Sithis/Talk to Astara in the Sanctuary |future
+'Travel to _Gold Coast_ |q The Wrath of Sithis/Talk to Astara in the Sanctuary
 |tip Manually skip to the next step.
 step
 goto goldcoast_base 53.52,31.96
@@ -31208,12 +31208,12 @@ talk Speaker Terenus
 turnin Filling the Void |next Extras\\Extras\\Main Quests Only\\DLC\\Vvardenfell
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Vvardenfell",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Vvardenfell",[[
 loadingimage loadscreen_balfoyen_01.dds
 description Stop a meteor from crashing into Vivec City by helping a demi-god regain his lost powers in this Morrowind expansion.
 step
 'Open _Vvardenfell_ Map
-'Travel to _Seyda Neen_ |q Divine Conundrum |future
+'Travel to _Seyda Neen_ |q Divine Conundrum
 |tip Manually skip to the next step.
 step
 goto vvardenfell_base 40.88,79.88
@@ -31227,7 +31227,7 @@ goto 43.52,79.23
 talk Canon Llevule |q Divine Conundrum/Talk to Canon Llevule
 step
 goto 43.15,79.30
-'Open _Andrano Ancestral Tomb_ |q Divine Conundrum/Enter the Andrano Ancestral Tomb |future
+'Open _Andrano Ancestral Tomb_ |q Divine Conundrum/Enter the Andrano Ancestral Tomb
 |tip Manually skip to the next step.
 step
 goto andrano_base 31.24,79.05 |q Divine Conundrum/Escort Canon Llevule to the Summoning Chamber
@@ -31240,7 +31240,7 @@ goto 37.71,13.31
 'Escort _Canon Llevule to the Summoning Chamber_ |q Divine Conundrum/Escort Canon Llevule to the Summoning Chamber
 step
 goto 29.57,15.83
-talk Farena Andrano |q Divine Conundrum/Talk to Canon Llevule Outside the Tomb |future
+talk Farena Andrano |q Divine Conundrum/Talk to Canon Llevule Outside the Tomb
 |tip Manually skip to the next step.
 step
 goto 32.10,47.75
@@ -31274,7 +31274,7 @@ goto 50.19,71.68
 'Open _Vivec's Palace_ |q Divine Conundrum/Enter Vivec's Palace
 step
 goto vivecthroneroom01_base 50.96,63.63
-talk Vivec |q Divine Conundrum/Talk to Archcanon Tarvus |future
+talk Vivec |q Divine Conundrum/Talk to Archcanon Tarvus
 |tip Manually skip to the next step.
 step
 goto viviccity_base 51.69,55.41
@@ -31484,25 +31484,25 @@ talk Seryn |q Divine Delusions/Talk to Seryn
 step
 goto 40.27,46.57
 |tip It's inside the small hut.
-'Open _Wise-Woman Dovrosi's Hute_ |q Divine Delusions/Go to the Cavern of the Incarnate |future
+'Open _Wise-Woman Dovrosi's Hute_ |q Divine Delusions/Go to the Cavern of the Incarnate
 |tip Manually skip to the next step.
 step
 goto 40.27,46.58
 |tip Watch the dialogue.
-talk Seryn |q Divine Delusions/Go to the Cavern of the Incarnate |future
+talk Seryn |q Divine Delusions/Go to the Cavern of the Incarnate
 |tip Manually skip to the next step.
 step
 goto 40.19,46.55
-'Open _Ald'ruhn_ |q Divine Delusions/Go to the Cavern of the Incarnate |future
+'Open _Ald'ruhn_ |q Divine Delusions/Go to the Cavern of the Incarnate
 |tip Manually skip to the next step.
 step
-goto 35.77,49.31 |q Divine Delusions/Go to the Cavern of the Incarnate |future
+goto 35.77,49.31 |q Divine Delusions/Go to the Cavern of the Incarnate
 step
-goto 35.94,53.32 |q Divine Delusions/Go to the Cavern of the Incarnate |future
+goto 35.94,53.32 |q Divine Delusions/Go to the Cavern of the Incarnate
 step
-goto 31.62,50.90 |q Divine Delusions/Go to the Cavern of the Incarnate |future
+goto 31.62,50.90 |q Divine Delusions/Go to the Cavern of the Incarnate
 step
-goto 31.99,46.93 |q Divine Delusions/Go to the Cavern of the Incarnate |future
+goto 31.99,46.93 |q Divine Delusions/Go to the Cavern of the Incarnate
 step
 goto 28.97,44.70
 wayshrine West Gash
@@ -31607,7 +31607,7 @@ goto vvardenfell_base 39.30,46.30
 talk Seryn |q Divine Delusions/Talk to Seryn
 step
 goto 39.70,45.54
-'Open _Skar_ |q Divine Delusions/Enter Skar |future
+'Open _Skar_ |q Divine Delusions/Enter Skar
 |tip Manually skip to the next step.
 step
 goto skar_base 52.92,46.62
@@ -31627,7 +31627,7 @@ step
 goto vvardenfell_base 39.05,46.63 |q Divine Delusions/Follow Seryn
 step
 goto 39.01,46.68
-talk Azura |q Divine Delusions/Talk to Azura |future
+talk Azura |q Divine Delusions/Talk to Azura
 step
 goto 36.41,48.20
 'Use _Ald'ruhn_ Wayshrine
@@ -31833,7 +31833,7 @@ goto 84.31,59.48
 talk Seryn |q Divine Intervention/Give Seryn the Tonal Inverter
 step
 goto 84.07,59.52
-'Open _Kaushtarari_ |q Divine Intervention/Enter Kaushtarari |future
+'Open _Kaushtarari_ |q Divine Intervention/Enter Kaushtarari
 |tip Manually skip to the next step.
 step
 goto kaushtarari_base 43.61,29.99
@@ -31969,7 +31969,7 @@ goto 74.97,48.72
 talk Barilzar |q Divine Restoration/Talk to Barilzar
 step
 goto 84.66,45.44
-'Use _Portal to Seht's Vault_ |q Divine Restoration/Reach the Entrance to the Clockwork City |future
+'Use _Portal to Seht's Vault_ |q Divine Restoration/Reach the Entrance to the Clockwork City
 |tip Manually skip to the next step.
 step
 goto clockwork01_base 39.74,48.95 |q Divine Restoration/Reach the Entrance to the Clockwork City
@@ -32000,7 +32000,7 @@ goto 47.09,64.27
 |tip Manually skip to the next step.
 step
 goto 82.53,6.96
-'Open _Access Bridge_ |q Divine Restoration/Follow Barbas |future
+'Open _Access Bridge_ |q Divine Restoration/Follow Barbas
 |tip Manually skip to the next step.
 step
 goto clockwork06_base 53.93,46.70
@@ -32018,7 +32018,7 @@ goto 33.63,51.04
 'Open _The Divinity Atelier_ |q Divine Restoration/Enter the Divinity Atelier
 step
 goto clockwork04_base 70.89,51.64
-kill Clockwork Defense Core |q Divine Restoration/Destroy Central Core and Unlock South Platform |future
+kill Clockwork Defense Core |q Divine Restoration/Destroy Central Core and Unlock South Platform
 |tip Manually skip to the next step.
 step
 goto 68.57,63.23
@@ -32083,7 +32083,7 @@ goto vivechow02_base 23.14,66.64
 'Search _Archcanon's Lockbox_ |q Divine Blessings/Retrieve the Archcanon's Signet
 step
 goto viviccity_base 48.06,54.43
-talk Vivec |q Divine Blessings/Talk to Vivec |future
+talk Vivec |q Divine Blessings/Talk to Vivec
 step
 goto 48.09,54.71
 'Reward _Overseer Shiralas_ |q Divine Blessings/Reward Overseer Shiralas
@@ -32099,7 +32099,7 @@ talk Vivec
 turnin Divine Blessings |next Extras\\Extras\\Main Quests Only\\DLC\\Clockwork City
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Clockwork City",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Clockwork City",[[
 loadingimage loadscreen_clockworkcity_zone_01.dds
 description The Clockwork City is a giant complex the size of a world, but it fits inside a glass dome no larger than a good-sized netch.
 step
@@ -32132,7 +32132,7 @@ goto 67.89,11.63
 'Meet _Divayth Fyr at the Waterfall_ |q To The Clockwork City/Meet Divayth Fyr at the Waterfall
 step
 goto 66.79,10.15
-'Open _Secret Cavern_ |q To The Clockwork City/Enter the Secret Cavern |future
+'Open _Secret Cavern_ |q To The Clockwork City/Enter the Secret Cavern
 |tip Manually skip to the next step.
 step
 goto ccq1_map1_base 74.50,38.77 |q To The Clockwork City/Find the Entrance to the Clockwork City |tip Follow Divayth Fyr
@@ -32206,7 +32206,7 @@ goto 17.33,19.54
 'Protect _Divayth Fyr_ |q To The Clockwork City/Protect Divayth Fyr
 step
 goto 17.27,14.40
-'Open _The Clockwork City_ |q To The Clockwork City/Exit the Pneumatic Forge |future
+'Open _The Clockwork City_ |q To The Clockwork City/Exit the Pneumatic Forge
 |tip Manually skip to the next step.
 step
 goto clockwork_base 49.54,54.90 |q To The Clockwork City/Reach the Brass Fortress |tip Cross the bridge.
@@ -32279,7 +32279,7 @@ goto 52.55,73.93
 |tip Manually skip to the next step.
 step
 goto brassfortress_base 57.96,47.71
-'Use _Serviflume_ |q In Search of a Sponsor/Activate the Skeevaton |future
+'Use _Serviflume_ |q In Search of a Sponsor/Activate the Skeevaton
 |tip Manually skip to the next step.
 step
 goto ccq2serviflume_base 74.67,33.66 |q In Search of a Sponsor/Navigate the Serviflume
@@ -32357,7 +32357,7 @@ step
 goto 27.42,53.88 |q In Search of a Sponsor/Enter the Mechanical Fundament
 step
 goto 11.64,36.38
-'Open _Mechanical Fundament_ |q In Search of a Sponsor/Enter the Mechanical Fundament |future
+'Open _Mechanical Fundament_ |q In Search of a Sponsor/Enter the Mechanical Fundament
 |tip Manually skip to the next step.
 step
 goto mechanicalfundamentlow01_base 66.26,34.91
@@ -32381,7 +32381,7 @@ goto 57.44,87.29 |q In Search of a Sponsor/Search for Lankin
 step
 goto mechanicalfundamentup02_base 20.33,51.72 |q In Search of a Sponsor/Search for Lankin
 step
-goto 42.19,52.26 |q In Search of a Sponsor/Find Lankin |future
+goto 42.19,52.26 |q In Search of a Sponsor/Find Lankin
 step
 goto 70.42,39.34
 'Find _Lankin_ |q In Search of a Sponsor/Find Lankin
@@ -32599,7 +32599,7 @@ step
 goto 48.63,68.63 |q Deepening Shadows/Follow Snuffler
 step
 goto 48.63,73.27
-'Open _The Clockwork City_ |q Deepening Shadows/Follow Gascone's Footprints |future
+'Open _The Clockwork City_ |q Deepening Shadows/Follow Gascone's Footprints
 |tip Manually skip to the next step.
 step
 goto clockwork_base 47.36,45.00 |q Deepening Shadows/Follow Snuffler |tip Follow Snuffler
@@ -32672,7 +32672,7 @@ goto 23.42,66.45
 'Find _Another Entrance to the Ventral Terminus_ |q Deepening Shadows/Find Another Entrance to the Ventral Terminus
 step
 goto 23.45,66.46
-'Open _Ventral Terminus_ |q Deepening Shadows/Enter the Ventral Terminus |future
+'Open _Ventral Terminus_ |q Deepening Shadows/Enter the Ventral Terminus
 |tip Manually skip to the next step.
 step
 goto ventralterminus01_base 57.25,7.56
@@ -32901,7 +32901,7 @@ goto 71.46,71.66
 talk Duke of Crows |q Lost in the Gloam/Talk to the Duke of Crows
 step
 goto 74.27,67.87
-'Open _Incarnatorium_ |q Lost in the Gloam/Enter the Incarnatorium |future
+'Open _Incarnatorium_ |q Lost in the Gloam/Enter the Incarnatorium
 |tip Manually skip to the next step.
 step
 goto ccq5_FL1_base 15.78,70.77
@@ -32918,11 +32918,11 @@ goto 43.64,53.80
 'Use _Strange Lever_ |q Lost in the Gloam/Pull a Lever
 step
 goto 43.72,57.25
-'Use _Strange Lever_ |q Lost in the Gloam/Pull the Final Lever |future
+'Use _Strange Lever_ |q Lost in the Gloam/Pull the Final Lever
 |tip Manually skip to the next step.
 step
 goto 44.55,54.87
-'Use _Strange Lever_ |q Lost in the Gloam/Pull the Final Lever |future
+'Use _Strange Lever_ |q Lost in the Gloam/Pull the Final Lever
 |tip Manually skip to the next step.
 step
 goto 44.55,56.18
@@ -32949,7 +32949,7 @@ goto 43.28,80.00
 'Claim the _Key_ |q Lost in the Gloam/Claim the Key
 step
 goto 43.28,80.00
-kill the Wraith-of-Crows |q Lost in the Gloam/Defeat the Wraith-of-Crows |future
+kill the Wraith-of-Crows |q Lost in the Gloam/Defeat the Wraith-of-Crows
 step
 goto 42.70,68.67 |q Lost in the Gloam/Talk to the Duke of Crows
 step
@@ -33014,7 +33014,7 @@ step
 goto 82.49,47.31 |q Unto the Dark/Find and Enter the Gloaming Gate
 step
 goto 83.27,46.78
-'Enter _Portal to Evergloam_ |q Unto the Dark/Find and Enter the Gloaming Gate |future
+'Enter _Portal to Evergloam_ |q Unto the Dark/Find and Enter the Gloaming Gate
 |tip Manually skip to the next step.
 step
 goto evergloam_base 16.56,42.23 |q Unto the Dark/Navigate the Evergloam
@@ -33052,7 +33052,7 @@ goto 77.68,42.27
 kill Nightmaiden Viriana |q Unto the Dark/Defeat Nightmaiden Viriana
 step
 goto 76.26,43.28
-'Enter _Portal to the Clockwork City_ |q Unto the Dark/Enter the Final Gloaming Gate |future
+'Enter _Portal to the Clockwork City_ |q Unto the Dark/Enter the Final Gloaming Gate
 |tip Manually skip to the next step.
 step
 goto ccunderground02_base 43.79,11.67 |q Unto the Dark/Talk to Luciana
@@ -33064,7 +33064,7 @@ turnin Unto the Dark
 accept Where Shadows Lie
 step
 goto 66.28,4.25
-'Open _The Cogitum Centralis_ |q Where Shadows Lie/Enter the Cogitum Centralis |future
+'Open _The Cogitum Centralis_ |q Where Shadows Lie/Enter the Cogitum Centralis
 |tip Manually skip to the next step.
 step
 goto ccq7_map1_base 36.09,50.63 |q Where Shadows Lie/Activate the Left Core Pump
@@ -33155,7 +33155,7 @@ goto 12.87,49.77
 'Open _The Throne Aligned_ |q Where Shadows Lie/Find Sotha Sil
 step
 goto ccq7_map4_base 42.26,52.13
-kill Shadow of Sotha Sil |q Where Shadows Lie/Defeat the Shadow of Sotha Sil |future
+kill Shadow of Sotha Sil |q Where Shadows Lie/Defeat the Shadow of Sotha Sil
 step
 goto 28.28,52.09
 |tip This takes a few minutes before you get the prompt to turn the key.
@@ -33163,7 +33163,7 @@ goto 28.28,52.09
 |tip Watch the dialogue.
 step
 goto 34.90,52.05
-'Open _The Brass Fortress_ |q Where Shadows Lie/Exit the Cogitum Centralis |future
+'Open _The Brass Fortress_ |q Where Shadows Lie/Exit the Cogitum Centralis
 |tip Manually skip to the next step.
 step
 goto basilica_01_base 52.45,24.03
@@ -33189,12 +33189,12 @@ talk Sotha Sil
 turnin The Light of Knowledge |next Extras\\Extras\\Main Quests Only\\DLC\\Summerset
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Summerset",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Summerset",[[
 loadingimage loadscreen_summerset_01.dds
 description The land called Summerset is the birthplace of civilization and magic as we know it in Tamriel. On its idyllic sea-kissed shores live the Altmer, the High Elves.
 step
 'Open _Summetset_ Map
-'Travel _Shimmerene_ |q The Queen's Decree |future
+'Travel _Shimmerene_ |q The Queen's Decree
 |tip Manually skip to the next step.
 step
 goto shimmerene_base 23.17,66.32
@@ -33243,7 +33243,7 @@ step
 goto 66.21,61.04 |q The Queen's Decree/Enter the Monastery of Serene Harmony
 step
 goto 63.34,50.87
-'Open _Monastery of Serene Harmony_ |q The Queen's Decree/Enter the Monastery of Serene Harmony |future
+'Open _Monastery of Serene Harmony_ |q The Queen's Decree/Enter the Monastery of Serene Harmony
 |tip Manually skip to the next step.
 step
 goto monasteryoshfloor01_base 38.24,64.14
@@ -33269,12 +33269,12 @@ step
 goto 40.98,52.67 |q The Queen's Decree |q The Queen's Decree/Investigate the Undercroft
 step
 goto monasteryoshfloor01_base 57.26,72.74
-'Open _Monastery Undercroft_ |q The Queen's Decree/Investigate the Undercroft |future
+'Open _Monastery Undercroft_ |q The Queen's Decree/Investigate the Undercroft
 |tip Manually skip to the next step.
 step
 goto monasteryoshfloor03_base 79.52,62.46
 talk Minone Aloette
-'Unlock _Cage_ |q The Queen's Decree/Free the Prisoner |future
+'Unlock _Cage_ |q The Queen's Decree/Free the Prisoner
 step
 goto 78.99,71.53
 talk Valsirenn |q The Queen's Decree/Talk to Valsirenn
@@ -33296,12 +33296,12 @@ step
 goto 22.79,33.42 |q The Queen's Decree/Escape the Undercroft
 step
 goto 07.81,25.18
-'Open _Summerset_ |q The Queen's Decree/Escape the Undercroft |future
+'Open _Summerset_ |q The Queen's Decree/Escape the Undercroft
 |tip Go down the stairs.
 |tip Manually skip to the next step.
 step
 goto shimmerene_base 51.60,50.24
-'Open _Anchors Aweigh Inn_ |q The Queen's Decree/Talk to Razum-dar |future
+'Open _Anchors Aweigh Inn_ |q The Queen's Decree/Talk to Razum-dar
 |tip Manually skip to the next step.
 step
 goto 53.40,51.29
@@ -33359,7 +33359,7 @@ goto 67.05,56.36
 talk Razum-dar |q The Queen's Decree/Talk to Razum-dar
 step
 goto 67.05,56.36
-talk Kinlady Avinisse |q The Queen's Decree/Confront Kinlady Avinisse |future
+talk Kinlady Avinisse |q The Queen's Decree/Confront Kinlady Avinisse
 |tip Manually skip to the next step.
 step
 goto 66.87,58.08
@@ -33379,7 +33379,7 @@ step
 goto 55.49,53.29 |q The Queen's Decree/Travel to Artaeum
 step
 goto 55.49,54.52
-'Open _Portal to Artaeum_ |q The Queen's Decree/Travel to Artaeum |future
+'Open _Portal to Artaeum_ |q The Queen's Decree/Travel to Artaeum
 |tip Manually skip to the next step.
 step
 goto artaeum_base 64.49,27.12
@@ -33440,7 +33440,7 @@ step
 goto 41.48,46.48 |q A Pearl of Great Price/Enter the Rellenthil Sinkhole
 step
 goto 43.11,45.75
-'Enter _Rellenthil Sinkhole_ |q A Pearl of Great Price/Enter the Rellenthil Sinkhole |future
+'Enter _Rellenthil Sinkhole_ |q A Pearl of Great Price/Enter the Rellenthil Sinkhole
 |tip Manually skip to the next step.
 step
 goto sinkhole_base 20.35,59.24
@@ -33490,7 +33490,7 @@ goto 51.50,50.21
 step
 goto 51.91,45.31 |q A Pearl of Great Price/Continue Exploring the Sinkhole Caverns
 step
-goto 42.90,45.95 |q A Pearl of Great Price/Talk to Valsirenn |future
+goto 42.90,45.95 |q A Pearl of Great Price/Talk to Valsirenn
 step
 goto 36.07,36.57
 'Continue _Exploring the Sinkhole Caverns_ |q A Pearl of Great Price/Continue Exploring the Sinkhole Caverns
@@ -33499,7 +33499,7 @@ goto 36.07,36.57
 kill Yaghra Monstrosity |q A Pearl of Great Price/Destroy the Yaghra Monstrosity
 step
 goto 35.60,30.79
-'Enter _Summerset_ |q A Pearl of Great Price/Exit the Sinkhole |future
+'Enter _Summerset_ |q A Pearl of Great Price/Exit the Sinkhole
 |tip Manually skip to the next step.
 step
 goto summerset_base 43.17,43.44
@@ -33567,7 +33567,7 @@ goto 66.39,78.57
 'Destroy _Abyssal Pearl_ |q Buried Memories/Destroy the Abyssal Pearl
 step
 goto 60.27,79.22
-'Open _Psijic Relic Vaults_ |q Buried Memories/Enter the Vaults |future
+'Open _Psijic Relic Vaults_ |q Buried Memories/Enter the Vaults
 |tip Manually skip to the next step.
 step
 goto psijicrelicvaults01_base 62.26,94.05
@@ -33577,7 +33577,7 @@ goto 48.81,64.17
 'Go to the _Central Rotunda_ |q Buried Memories/Go to the Central Rotunda
 step
 goto 48.81,64.17
-'Burn _Mephala's Barrier_ |q Buried Memories/Burn Mephala's Barrier |future
+'Burn _Mephala's Barrier_ |q Buried Memories/Burn Mephala's Barrier
 |tip Wait for the Golden Knight to burn the web.
 step
 goto 49.10,63.41
@@ -33642,7 +33642,7 @@ goto psijicrelicvaults01_base 53.06,56.85
 talk Sotha Sil |q Buried Memories/Talk to Sotha Sil
 step
 'Open _Artaeum_ Map
-'Travel to the _Artaeum_ |q Buried Memories/Exit the Vaults |future
+'Travel to the _Artaeum_ |q Buried Memories/Exit the Vaults
 |tip Manually skip to the next step.
 step
 goto artaeum_base 64.96,26.72
@@ -33681,7 +33681,7 @@ step
 goto 56.67,85.58 |q The Tower Sentinels/Go to Alinor's Royal Palace
 step
 goto 64.50,46.25
-'Open _Alinor's Royal Palace_ |q The Tower Sentinels/Go to Alinor's Royal Palace |future
+'Open _Alinor's Royal Palace_ |q The Tower Sentinels/Go to Alinor's Royal Palace
 |tip Manually skip to the next step.
 step
 goto alinorroyalpalace1_base 40.24,30.89
@@ -33723,7 +33723,7 @@ goto summerset_base 11.76,39.82
 talk Sapiarch Ellimil |q The Tower Sentinels/Talk to Sapiarch Ellimil
 step
 goto 10.55,40.08
-'Open _College of Sapiarchs' Labyrinth_ |q The Tower Sentinels/Enter the Sapiarchs' Labyrinth |future
+'Open _College of Sapiarchs' Labyrinth_ |q The Tower Sentinels/Enter the Sapiarchs' Labyrinth
 |tip Maually skip to the next step.
 step
 goto SQ4Sapiarch01_base 90.01,73.11
@@ -33790,7 +33790,7 @@ goto 30.29,33.58
 'Take _Letter to Imedril_ |q The Tower Sentinels/Search Hannayel's Room
 step
 goto 30.29,33.58
-talk Razum-dar |q The Tower Sentinels/Talk to Razum-dar |future
+talk Razum-dar |q The Tower Sentinels/Talk to Razum-dar
 |tip Manually skip to the next step.
 step
 goto 30.16,33.48
@@ -33835,7 +33835,7 @@ goto 31.96,32.64
 step
 goto 32.02,32.65
 'Place _Reading Podium_
-'_Select I place "The Year 2920, Vol 4."_ |q The Tower Sentinels/Find Hannayel's Quiet Room_ |future
+'_Select I place "The Year 2920, Vol 4."_ |q The Tower Sentinels/Find Hannayel's Quiet Room_
 |tip Manually skip to the next step.
 step
 goto 32.16,32.73
@@ -33931,7 +33931,7 @@ step
 |tip Manually skip to the next step.
 step
 goto artaeum_base 64.90,26.62
-'Use _Portal to Ceporah Tower_ |q The Tower Sentinels/Talk to Ritemaster Iachesis |future
+'Use _Portal to Ceporah Tower_ |q The Tower Sentinels/Talk to Ritemaster Iachesis
 |tip Manually skip to the next step.
 step
 goto dreamingcave02_base 55.80,64.14
@@ -33957,7 +33957,7 @@ goto artaeum_base 65.92,27.03
 |tip Manually skip to the next step.
 step
 goto dreamingcave01_base 39.50,54.50
-talk Ritemaster in the Dreaming Cave |q The Dreaming Cave/Meet the Ritemaster in the Dreaming Cave |future
+talk Ritemaster in the Dreaming Cave |q The Dreaming Cave/Meet the Ritemaster in the Dreaming Cave
 |tip Manually skip to the next step.
 step
 goto 39.50,54.50
@@ -34230,10 +34230,10 @@ goto 41.68,76.32 |q Lost in Translation/Follow the Path
 step
 goto 43.90,62.53 |q Lost in Translation/Follow the Path
 step
-goto 60.32,68.87 |q Lost in Translation/Follow the Path |future |tip Wait for Ritemaster Iachesis to catch up.
+goto 60.32,68.87 |q Lost in Translation/Follow the Path |tip Wait for Ritemaster Iachesis to catch up.
 step
 goto 60.32,68.87
-talk Ritemaster Iachesis |q Lost in Translation/Talk to Ritemaster Iachesis |future
+talk Ritemaster Iachesis |q Lost in Translation/Talk to Ritemaster Iachesis
 step
 goto 65.29,63.36 |q Lost in Translation/Follow the Path
 step
@@ -34247,10 +34247,10 @@ goto 67.34,49.45 |q Lost in Translation/Follow the Path
 step
 goto 49.33,44.01 |q Lost in Translation/Follow the Path
 step
-goto 39.21,46.60 |q Lost in Translation/Follow the Path |future |tip Wait for Ritemaster Iachesis to catch up.
+goto 39.21,46.60 |q Lost in Translation/Follow the Path |tip Wait for Ritemaster Iachesis to catch up.
 step
 goto 39.21,46.60
-talk Ritemaster Iachesis |q Lost in Translation/Talk to Ritemaster Iachesis |future
+talk Ritemaster Iachesis |q Lost in Translation/Talk to Ritemaster Iachesis
 step
 goto 35.31,47.32 |q Lost in Translation/Follow the Path
 step
@@ -34260,10 +34260,10 @@ goto 15.96,36.81 |q Lost in Translation/Follow the Path
 step
 goto 18.91,29.44 |q Lost in Translation/Follow the Path
 step
-goto 26.82,34.44 |q Lost in Translation/Follow the Path |future |tip Wait for Ritemaster Iachesis to catch up.
+goto 26.82,34.44 |q Lost in Translation/Follow the Path |tip Wait for Ritemaster Iachesis to catch up.
 step
 goto 26.82,34.44
-talk Ritemaster Iachesis |q Lost in Translation/Talk to Ritemaster Iachesis |future
+talk Ritemaster Iachesis |q Lost in Translation/Talk to Ritemaster Iachesis
 step
 goto 26.91,35.34
 'Use _Portal to Mountain Top_ |q Lost in Translation/Use the Portal
@@ -34345,7 +34345,7 @@ goto 28.86,25.84
 step
 goto 31.97,24.77
 |tip Go down the stairs.
-talk Valsirenn |q A Necessary Alliance/Talk to Valsirenn |future
+talk Valsirenn |q A Necessary Alliance/Talk to Valsirenn
 step
 goto 32.05,25.75
 'Defend the _South Ritual Platform_ |q A Necessary Alliance/Defend the South Ritual Platform
@@ -34406,7 +34406,7 @@ goto 26.29,35.10
 |tip Manually skip to the next step.
 step
 goto ceytarncaveInt01_base 16.34,67.24
-talk Clavicus Vile |q A Necessary Alliance/Talk to Clavicus Vile |future
+talk Clavicus Vile |q A Necessary Alliance/Talk to Clavicus Vile
 step
 goto 40.87,35.58 |q A Necessary Alliance/Gather Vile's Key
 step
@@ -34440,7 +34440,7 @@ goto 20.28,29.15
 talk Earl Leythen |q A Necessary Alliance/Talk to Earl Leythen
 step
 goto 20.28,29.15
-'Open _Cathedral of Webs_ |q A Necessary Alliance/Enter the Cathedral of Webs |future
+'Open _Cathedral of Webs_ |q A Necessary Alliance/Enter the Cathedral of Webs
 |tip Manually skip to the next step.
 step
 goto sq7courtofbedlamruins_base 29.78,36.54 |q A Necessary Alliance/Explore the Cathedral of Webs
@@ -34561,7 +34561,7 @@ goto 55.38,62.35
 'Wait for the _Portal to Reset_ |q The Crystal Tower/Wait for the Portal to Reset
 step
 goto 50.99,53.02
-'Enter The _Dreaming Cave Portal_ |q The Crystal Tower/Follow Barbas into the Fields of Regret |future
+'Enter The _Dreaming Cave Portal_ |q The Crystal Tower/Follow Barbas into the Fields of Regret
 |tip Manually skip to the next step.
 step
 goto crystaltower_approach_base 26.07,38.53 |q The Crystal Tower/Reach the Entrance of the Crystal Tower
@@ -34732,7 +34732,7 @@ goto 50.01,49.56
 talk Valsirenn |q The Crystal Tower/Talk to Valsirenn
 step
 goto 47.89,47.98
-'Use _Portal to Artaeum_ |q The Crystal Tower/Leave the Crystal Tower |future
+'Use _Portal to Artaeum_ |q The Crystal Tower/Leave the Crystal Tower
 |tip Manually skip to the next step.
 step
 goto dreamingcave01_base 57.18,40.95
@@ -34807,12 +34807,12 @@ talk Razum-dar
 turnin A New Alliance |next Extras\\Extras\\Main Quests Only\\DLC\\Murkmire
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Murkmire",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Murkmire",[[
 loadingimage loadscreen_murkmire_01.dds
 description Investigate Murkmire's long-forgotten past and help an Imperial scholar recover a mysterious and powerful relic that will take you deep into Black Marsh, its history, and its people.
 step
 'Open _Murkmire_ Map
-'Travel to the _Lilmoth_ |q Sunken Treasure |future
+'Travel to the _Lilmoth_ |q Sunken Treasure
 |tip Manually skip to the next step.
 step
 goto lilmothcity_base 46.67,45.69
@@ -34820,7 +34820,7 @@ talk Famia Mercius
 accept Sunken Treasure
 step
 goto 22.41,38.85
-talk Zadaza |q Sunken Treasure/Talk to Zadaza |future
+talk Zadaza |q Sunken Treasure/Talk to Zadaza
 step
 goto 23.20,39.41
 talk Famia Mercius |q Sunken Treasure/Talk to Famia
@@ -34834,7 +34834,7 @@ goto 63.44,67.12
 'Take _Dinia's Sword_ |q Sunken Treasure/.*Search for Famia's Explorers.* |count 2
 step
 goto 57.38,74.64
-'Examine _Eshraf's Journal_ |q Sunken Treasure/.*Search Hut for Clues.* |count 1 |future
+'Examine _Eshraf's Journal_ |q Sunken Treasure/.*Search Hut for Clues.* |count 1
 step
 goto 57.38,74.51
 'Search _Dinia's Bag_ |q Sunken Treasure/.*Search Hut for Clues.* |count 2
@@ -34843,13 +34843,13 @@ goto 57.39,75.46
 'Listen to _Famia Mercius_ |q Sunken Treasure/Listen to Famia
 step
 goto 57.39,75.46
-talk Xukas |q Sunken Treasure/Talk to Xukas |future
+talk Xukas |q Sunken Treasure/Talk to Xukas
 step
 goto 57.39,75.46
-talk Famia Mercius |q Sunken Treasure/Talk to Famia |future
+talk Famia Mercius |q Sunken Treasure/Talk to Famia
 step
 goto 64.43,76.71
-'Open _Ixtaxh Xanmeer_ |q Sunken Treasure/Enter the Xanmeer |future
+'Open _Ixtaxh Xanmeer_ |q Sunken Treasure/Enter the Xanmeer
 |tip Manually skip to the next step.
 step
 goto sunkenxanmeer01_base 27.98,85.19
@@ -34857,24 +34857,24 @@ goto sunkenxanmeer01_base 27.98,85.19
 step
 goto sunkenxanmeer02_base 28.92,81.75
 |tip Watch dialogue then you may have to move your mouse around for it to let you open the door.
-'Open _Simple Xanmeer Depths_ |q Sunken Treasure/Pick the Lock on the Door |future
+'Open _Simple Xanmeer Depths_ |q Sunken Treasure/Pick the Lock on the Door
 step
 goto 22.18,66.73
 |tip On the left use the Pulley Levers to match the height:
 '1. _Highest height: Anchor_
 '2. _Lowest height: Hook_
-'3. _Medium height: Clouds_ |q Sunken Treasure/Lower the Ancient Drawbridge |future
+'3. _Medium height: Clouds_ |q Sunken Treasure/Lower the Ancient Drawbridge
 |tip Manually skip to the next step.
 step
 goto 22.18,66.73
 |tip On the right use the Pulley Levers to match the height:
 '1. _Highest height: Dagger Point_
 '2. _Medium height: Egg_
-'3. _Lowest height: Lizard Creature_ |q Sunken Treasure/Lower the Ancient Drawbridge |future
+'3. _Lowest height: Lizard Creature_ |q Sunken Treasure/Lower the Ancient Drawbridge
 step
 goto 40.20,52.20 |q Sunken Treasure/Find the Missing Explorers |tip |tip Watch the dialogue. scene
 step
-goto 35.76,37.48 |q Sunken Treasure/.*Gather Flint Vine.* |count 1 |future
+goto 35.76,37.48 |q Sunken Treasure/.*Gather Flint Vine.* |count 1
 step
 goto 25.96,37.27 |q Sunken Treasure/.*Gather Flint Vine.* |count 1
 step
@@ -34904,27 +34904,27 @@ goto 39.26,58.00
 'Place _Stone Outcropping_ |q Sunken Treasure/Lower the Flint Vine Ladder
 step
 goto 45.25,37.40
-'Open _Skittering Cavern_ |q Sunken Treasure/Search for Varo |future
+'Open _Skittering Cavern_ |q Sunken Treasure/Search for Varo
 |tip Wait for Famia to climb up rope.
 |tip Manually skip to the next step.
 step
 goto 58.84,34.76
 kill 4 waves of low-level mobs, then
-kill Websnare Spider Matriarch |q Sunken Treasure/Defeat the Spiders |future
+kill Websnare Spider Matriarch |q Sunken Treasure/Defeat the Spiders
 step
 goto 61.87,34.63
 'Open _Stone Furnace_ |q Sunken Treasure/Explore the Xanmeer
 step
 goto 70.40,30.31
 |tip Dodge the traps until complete.
-'Open _Kajin-Jat Vault_ |q Sunken Treasure/Enter the Treasure Vault |future
+'Open _Kajin-Jat Vault_ |q Sunken Treasure/Enter the Treasure Vault
 step
 goto 70.17,15.91
-kill Ixtaxh Voriplasm |q Sunken Treasure/Kill the Ixtaxh Voriplasm |future
+kill Ixtaxh Voriplasm |q Sunken Treasure/Kill the Ixtaxh Voriplasm
 step
 goto 77.93,45.39
 |tip Unlock chests is optional.
-'Climb _Murkmire_ |q Sunken Treasure/Return to the Surface |future
+'Climb _Murkmire_ |q Sunken Treasure/Return to the Surface
 |tip Manually skip to the next step.
 step
 goto murkmire_base 66.58,70.32
@@ -34961,7 +34961,7 @@ goto 50.00,68.05
 talk Lozwug |q Missing/Talk to Lozwug
 step
 goto 49.75,68.97
-talk Xukas |q Missing/Talk to Xukas |future
+talk Xukas |q Missing/Talk to Xukas
 step
 goto 42.69,59.65
 wayshrine Blackrose Prison
@@ -35044,14 +35044,14 @@ step
 goto 62.57,62.91
 talk Xukas |q Missing/Talk to Xukas
 step
-goto 59.94,58.18 |q Missing/Track Jaxsik-Orrn |future
+goto 59.94,58.18 |q Missing/Track Jaxsik-Orrn
 step
 goto 57.57,53.98 |q Missing/Continue Tracking Jaxsik-Orrn
 step
 goto 54.03,51.24 |q Missing/Continue Tracking Jaxsik-Orrn
 step
 goto 52.14,52.92
-talk Jaxsik-Orrn |q Missing/Talk to Jaxsik-Orrn |future
+talk Jaxsik-Orrn |q Missing/Talk to Jaxsik-Orrn
 step
 goto 50.32,53.23
 'Destroy _Supply Crate_ |q Missing/.*Smash Crates.* |count 1
@@ -35087,7 +35087,7 @@ goto 48.83,57.19
 'Destroy _Supply Crate_ |q Missing/.*Smash Crates.* |count 6
 step
 goto 42.73,55.95
-talk Jaxsik-Orrn |q Missing/Talk to Jaxsik-Orrn |future
+talk Jaxsik-Orrn |q Missing/Talk to Jaxsik-Orrn
 step
 goto 42.73,55.95
 talk Xukas |q Missing/Talk to Xukas
@@ -35132,7 +35132,7 @@ goto 18.43,35.76
 talk Xukas |q Whispers in the Wood/Talk to Xukas
 step
 goto murkmire_base 66.28,49.49
-talk Chime-Maker Shuvu |q Whispers in the Wood/Talk to Chime-Maker Shuvu |future
+talk Chime-Maker Shuvu |q Whispers in the Wood/Talk to Chime-Maker Shuvu
 step
 goto 70.20,45.73 |q Whispers in the Wood/Go to the Wither-Vault
 step
@@ -35171,7 +35171,7 @@ goto 66.32,49.88
 step
 goto 66.18,49.56
 |tip Watch dialogue
-talk Xukas |q Whispers in the Wood/Talk to Xukas |future
+talk Xukas |q Whispers in the Wood/Talk to Xukas
 step
 'Open _Murkmire_ Map
 'Travel to the _Blackrose Prison_ |q Whispers in the Wood/Meet Kassandra at Alten Meerhleel
@@ -35180,12 +35180,12 @@ step
 goto 47.49,62.36 |q Whispers in the Wood/Meet Kassandra at Alten Meerhleel
 step
 goto 50.72,71.96
-talk Famia Mercius |q Whispers in the Wood/Talk to Famia |future
+talk Famia Mercius |q Whispers in the Wood/Talk to Famia
 step
-goto 37.12,69.74 |q Whispers in the Wood/Talk to Kassandra |future
+goto 37.12,69.74 |q Whispers in the Wood/Talk to Kassandra
 step
 goto 31.84,62.20
-talk Kassandra |q Whispers in the Wood/Talk to Kassandra |future
+talk Kassandra |q Whispers in the Wood/Talk to Kassandra
 step
 goto 32.06,62.08
 'Examine _Heetzasi's Journal, Page 1_ |q Whispers in the Wood/.*Search for Clues.* |count 1
@@ -35205,7 +35205,7 @@ goto deadwatervillage_base 72.52,62.82
 wayshrine Dead-Water
 step
 goto 57.98,59.11
-talk Jaxsik-Orrn |q Whispers in the Wood/Talk to Jaxsik-Orrn |future
+talk Jaxsik-Orrn |q Whispers in the Wood/Talk to Jaxsik-Orrn
 step
 goto 70.95,49.06 |q Whispers in the Wood/Go to the Hunting Grounds
 step
@@ -35232,7 +35232,7 @@ goto 34.60,35.92
 |tip Manually skip to the next step.
 step
 goto 30.43,34.07
-'Destroy _Bog-Blight Fumer_ |q Whispers in the Wood/Destroy the Fumers |future
+'Destroy _Bog-Blight Fumer_ |q Whispers in the Wood/Destroy the Fumers
 |tip Manually skip to the next step.
 step
 goto 27.50,33.11
@@ -35243,7 +35243,7 @@ step
 goto 30.40,28.35 |q Whispers in the Wood/Go to the Main Blackguard Camp
 step
 goto 30.83,27.58
-talk Jaxsik-Orrn |q Whispers in the Wood/Talk to Jaxsik-Orrn |future
+talk Jaxsik-Orrn |q Whispers in the Wood/Talk to Jaxsik-Orrn
 step
 goto 29.92,27.17 |q Whispers in the Wood/Kill Etra of the Many Spears
 step
@@ -35298,7 +35298,7 @@ goto murkmire_base 40.37,47.13
 |tip Watch the dialogue
 'Enter _Swallowed Grove_ |q Death and Dreaming/Enter the Swallowed Grove
 step
-goto UI_Map_swallowedgrove_base 22.09,79.68 |q Death and Dreaming/Explore the Swallowed Grove |future
+goto UI_Map_swallowedgrove_base 22.09,79.68 |q Death and Dreaming/Explore the Swallowed Grove
 step
 goto 38.48,86.94 |q Death and Dreaming/Explore the Swallowed Grove
 step
@@ -35308,7 +35308,7 @@ goto 44.78,72.47 |q Death and Dreaming/Explore the Swallowed Grove
 step
 goto 70.35,61.17
 |tip Follow Xukas
-'Meet _Xukas here_ |q Death and Dreaming/Follow Xukas |future
+'Meet _Xukas here_ |q Death and Dreaming/Follow Xukas
 step
 goto 61.27,59.96
 talk Xukas |q Death and Dreaming/Talk to Xukas
@@ -35330,7 +35330,7 @@ kill Aki-Kahz, Bringer of Dust |q Death and Dreaming/Explore the Swallowed Grove
 |tip Manually skip to the next step.
 step
 goto 67.52,30.06
-'Open _The Dreaming Nest_ |q Death and Dreaming/Enter the Dreaming Nest |future
+'Open _The Dreaming Nest_ |q Death and Dreaming/Enter the Dreaming Nest
 |tip Manually skip to the next step.
 step
 goto themists01_base 63.01,31.51
@@ -35457,7 +35457,7 @@ step
 goto 61.29,33.75 |q The Swamp and the Serpent/Find Jaxsik-Orrn
 step
 goto 54.15,29.13
-talk Jaxsik-Orrn |q The Swamp and the Serpent/Talk to Jaxsik-Orrn |future
+talk Jaxsik-Orrn |q The Swamp and the Serpent/Talk to Jaxsik-Orrn
 step
 goto 53.94,29.06
 talk Xukas |q The Swamp and the Serpent/Talk to Xukas
@@ -35471,7 +35471,7 @@ step
 goto 60.61,23.84 |q The Swamp and the Serpent/Traverse the Deepmire
 step
 goto 63.35,23.78
-'Enter _Xul-Thuxis_ |q The Swamp and the Serpent/Traverse the Deepmire |future
+'Enter _Xul-Thuxis_ |q The Swamp and the Serpent/Traverse the Deepmire
 |tip Manually skip to the next step.
 step
 goto DeepMire01_base 36.93,19.07 |q The Swamp and the Serpent/Search for Signs of Kassandra
@@ -35504,7 +35504,7 @@ goto 73.01,68.08
 step
 goto 60.10,63.31
 |tip Watch dialogue
-'Open _Xul-Thuxis Passage_ |q The Swamp and the Serpent/Rescue Famia |future
+'Open _Xul-Thuxis Passage_ |q The Swamp and the Serpent/Rescue Famia
 |tip Manually skip to the next step.
 step
 goto 40.62,48.30 |q The Swamp and the Serpent/Rescue Famia
@@ -35537,7 +35537,7 @@ goto 37.40,61.83
 talk Xukas |q The Swamp and the Serpent/Talk to Xukas
 step
 goto 61.51,91.28
-'Open _Root-Whisper Village_ |q The Swamp and the Serpent/Find the Dreaming Hist Tree |future
+'Open _Root-Whisper Village_ |q The Swamp and the Serpent/Find the Dreaming Hist Tree
 |tip Manually skip to the next step.
 step
 goto rootwhisper_base 43.25,52.04
@@ -35575,7 +35575,7 @@ goto UI_Map_Xal-Vakka02_base 45.04,53.50 |q The Remnant of Argon/Search the Xanm
 step
 goto 46.36,53.52 |q The Remnant of Argon/Search the Xanmeer for Kassandra
 step
-goto 57.38,66.71 |q The Remnant of Argon/Acquire a Welkynd Stone |future |tip Drop down
+goto 57.38,66.71 |q The Remnant of Argon/Acquire a Welkynd Stone |tip Drop down
 step
 goto 73.45,68.45 |q The Remnant of Argon/Acquire a Welkynd Stone
 step
@@ -35596,7 +35596,7 @@ goto 45.94,52.98
 step
 goto UI_Map_Xal-Vakka03_base 73.18,51.28
 |tip Go down to the stairs.
-talk Famia Mercius |q The Remnant of Argon/Talk to Famia |future
+talk Famia Mercius |q The Remnant of Argon/Talk to Famia
 step
 goto 25.90,29.58
 'Use _Nexus Gate_ |q The Remnant of Argon/Acquire a Vakka Stone
@@ -35659,7 +35659,7 @@ goto UI_Map_Xal-Vakka03_base 76.56,48.72
 'Return to _Famia_ |q The Remnant of Argon/Return to Famia
 step
 goto 76.25,48.93
-'Use _Grand Nexus Gate_ |q The Remnant of Argon/Enter the Gateway |future
+'Use _Grand Nexus Gate_ |q The Remnant of Argon/Enter the Gateway
 |tip Manually skip to the next step.
 step
 goto UI_Map_DeepRoot_base01 40.93,22.73 |q The Remnant of Argon/Pursue Kassandra
@@ -35670,17 +35670,17 @@ goto 33.82,37.52 |q The Remnant of Argon/Pursue Kassandra
 step
 goto 34.99,42.03 |q The Remnant of Argon/Pursue Kassandra
 step
-goto 58.59,52.11 |q The Remnant of Argon/Reach the Remnant of Argon |future
+goto 58.59,52.11 |q The Remnant of Argon/Reach the Remnant of Argon
 step
 goto 58.56,63.21
 'Open _Remnant Chamber_ |q The Remnant of Argon/Reach the Remnant of Argon
 |tip Manually skip to the next step.
 step
 goto 52.91,87.78
-kill Colossal Miregaunt (aka Kassandra) |q The Remnant of Argon/Kill Kassandra |future
+kill Colossal Miregaunt (aka Kassandra) |q The Remnant of Argon/Kill Kassandra
 step
 goto 54.29,87.34
-'Climb _Root-Whisper Village_ |q The Remnant of Argon/Leave the Xanmeer |future
+'Climb _Root-Whisper Village_ |q The Remnant of Argon/Leave the Xanmeer
 |tip Manually skip to the next step.
 step
 goto rootwhisper_base 48.75,53.60
@@ -35727,12 +35727,12 @@ talk Xukas or Jaxsik-Orrn
 turnin By River and Root |next Extras\\Extras\\Main Quests Only\\DLC\\Northern Elsweyr
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Northern Elsweyr",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Northern Elsweyr",[[
 loadingimage loadscreen_elsweyr_zone_01.dds
 description This region, also known as Anequina, merged with the southern region of Pellitine several centuries ago to form the province of Elsweyr. It's a patchwork that united many former small kingdoms, including Rimmen, Orcrest, Riverhold, and Meirvale.
 step
 'Open _Northern Elsweyr_ Map
-'Travel to _Rimmen_ |q A Rage of Dragons |future
+'Travel to _Rimmen_ |q A Rage of Dragons
 |tip Manually skip to the next step.
 step
 goto rimmen_base 26.06,55.18
@@ -35765,7 +35765,7 @@ goto 55.64,72.69
 talk Khamira |q A Rage of Dragons/Talk to Khamira
 step
 goto 55.64,72.69
-talk Lord Gharesh-ri |q A Rage of Dragons/Talk to Lord Gharesh-ri |future
+talk Lord Gharesh-ri |q A Rage of Dragons/Talk to Lord Gharesh-ri
 |tip Manually skip to the next step.
 step
 goto elsweyr_base 49.20,22.75 |q A Rage of Dragons/.*Investigate Power Surge Locations.* |count 1
@@ -35882,21 +35882,21 @@ goto 33.34,70.60 |q A Rage of Dragons/Find the Source of the Undead
 step
 goto 63.66,70.41 |q A Rage of Dragons/Find the Source of the Undead
 step
-goto 73.16,58.53 |q A Rage of Dragons/Find the Source of the Undead |future
+goto 73.16,58.53 |q A Rage of Dragons/Find the Source of the Undead
 step
 goto 73.92,54.02
-kill Gravestalker Gemmia |q A Rage of Dragons/Kill Gravestalker Gemmia |future
+kill Gravestalker Gemmia |q A Rage of Dragons/Kill Gravestalker Gemmia
 step
 goto 63.51,53.56
 '_DON'T LEAVE BEFORE DIALOGUE COMPLETES._
-'Enter _Elsweyr_ |q A Rage of Dragons/Follow the Dragon |future
+'Enter _Elsweyr_ |q A Rage of Dragons/Follow the Dragon
 |tip Manually skip to the next step.
 step
 goto elsweyr_base 23.11,49.86
-talk Mulaamnir |q A Rage of Dragons/Talk to Mulaamnir |future
+talk Mulaamnir |q A Rage of Dragons/Talk to Mulaamnir
 step
 goto 22.81,50.15
-talk Khamira |q A Rage of Dragons/Talk to Khamira |future
+talk Khamira |q A Rage of Dragons/Talk to Khamira
 step
 goto 25.87,54.29 |q A Rage of Dragons/Return to Riverhold
 step
@@ -35912,7 +35912,7 @@ goto 16.38,70.66
 |tip Manually skip to the next step.
 step
 goto riverholdcity_base 54.27,68.22
-talk Cadwell |q A Rage of Dragons/Talk to Cadwell |future
+talk Cadwell |q A Rage of Dragons/Talk to Cadwell
 step
 goto 56.70,69.07
 'Open _K'har Zhab Hall_ |q A Rage of Dragons/Talk to Abnur Tharn
@@ -35925,7 +35925,7 @@ accept The Usurper Queen
 step
 goto 54.13,71.06
 talk Captain Nala-do
-talk Lord Gharesh-ri |q The Usurper Queen/Talk to Lord Gharesh-ri |future
+talk Lord Gharesh-ri |q The Usurper Queen/Talk to Lord Gharesh-ri
 |tip Manually skip to the next step.
 step
 'Open _Northern Elsweyr_ Map
@@ -35943,14 +35943,14 @@ goto 73.65,38.38
 |tip Manually skip to the next step.
 step
 goto 76.45,37.24
-talk Zumog Phoom |q The Usurper Queen/Talk to Zumog Phoom |future
+talk Zumog Phoom |q The Usurper Queen/Talk to Zumog Phoom
 step
 goto 76.52,37.21
 'Open _Rimmen Palace Throne Room_ |q The Usurper Queen/Enter the Rimmen Palace Throne Room
 |tip Manually skip to the next step.
 step
 goto 77.49,36.82
-'Wait to _Be Introduced_ |q The Usurper Queen/Wait to Be Introduced |future
+'Wait to _Be Introduced_ |q The Usurper Queen/Wait to Be Introduced
 step
 goto 77.81,36.70
 talk Euraxia Tharn |q The Usurper Queen/Talk to Euraxia Tharn
@@ -35974,7 +35974,7 @@ step
 goto 40.77,52.61 |q The Usurper Queen/Escort Tharn Out of the Sewers
 step
 goto 39.57,03.49
-'Open _Rimmen_ |q The Usurper Queen/Go to Desert Wind Adeptorium |future
+'Open _Rimmen_ |q The Usurper Queen/Go to Desert Wind Adeptorium
 |tip Manually skip to the next step.
 step
 goto rimmen_base 66.01,28.77
@@ -35993,7 +35993,7 @@ step
 goto 41.49,44.74 |q The Usurper Queen/Find a Way Into the Adeptorium
 step
 goto 39.68,43.10
-'Enter _Desert Wind Caverns_ |q The Usurper Queen/Find a Way Into the Adeptorium |future
+'Enter _Desert Wind Caverns_ |q The Usurper Queen/Find a Way Into the Adeptorium
 |tip Manually skip to the next step.
 step
 goto DesertWind_Base 34.02,84.85 |q The Usurper Queen/Enter the Adeptorium
@@ -36047,7 +36047,7 @@ turnin The Usurper Queen
 accept The Battle for Riverhold
 step
 goto 54.61,71.51
-talk Lord Gharesh-ri |q The Battle for Riverhold/Talk to Gharesh-ri |future
+talk Lord Gharesh-ri |q The Battle for Riverhold/Talk to Gharesh-ri
 |tip Manually skip to the next step.
 step
 goto 57.04,69.04
@@ -36058,7 +36058,7 @@ goto 54.42,80.01
 talk Khamira |q The Battle for Riverhold/Talk to Khamira
 step
 goto 54.42,80.01
-talk Zamarak |q The Battle for Riverhold/Talk to Zamarak |future
+talk Zamarak |q The Battle for Riverhold/Talk to Zamarak
 |tip Manually skip to the next step.
 step
 goto 37.17,48.01 |q The Battle for Riverhold/Go to the Greenleaf Farm
@@ -36128,7 +36128,7 @@ goto 48.94,23.43
 |tip Wait for him to finish his spell.
 step
 goto 49.37,22.98
-talk Cadwell |q The Battle for Riverhold/Talk to Cadwell |future
+talk Cadwell |q The Battle for Riverhold/Talk to Cadwell
 step
 goto 50.36,20.02
 talk Khamira |q The Battle for Riverhold/Talk to Khamira
@@ -36178,7 +36178,7 @@ goto 49.05,57.17
 kill the Dragon |q The Battle for Riverhold/Kill the Dragon
 step
 goto 56.63,69.18
-'Open _K'har Zhab Hall_ |q The Battle for Riverhold/Go to K'har Zhab Hall |future
+'Open _K'har Zhab Hall_ |q The Battle for Riverhold/Go to K'har Zhab Hall
 |tip Manually skip to the next step.
 step
 goto riverholdcity_base 57.96,72.51
@@ -36321,7 +36321,7 @@ goto 61.67,31.94
 talk Captain Nala-do |q Two Queens/Talk to Captain Nala-do
 step
 goto 66.74,28.95
-'Open _Rimmen Palace Recesses_ |q Two Queens/Enter the Palace Sewer |future
+'Open _Rimmen Palace Recesses_ |q Two Queens/Enter the Palace Sewer
 |tip Manually skip to the next step.
 step
 goto rimmensewer_base 44.02,12.47
@@ -36346,12 +36346,12 @@ goto 78.71,27.75
 talk Zamarak |q Two Queens/Talk to Zamarak
 step
 goto 90.93,36.61
-'Open _Rimmen Palace_ |q Two Queens/Enter Rimmen Palace |future
+'Open _Rimmen Palace_ |q Two Queens/Enter Rimmen Palace
 |tip Manually skip to the next step.
 step
-goto rimmenpalaceinterior_base 51.27,47.77 |q Two Queens/Go to the Chapel of the Guiding Moons |future
+goto rimmenpalaceinterior_base 51.27,47.77 |q Two Queens/Go to the Chapel of the Guiding Moons
 step
-goto 48.16,14.89 |q Two Queens/Go to the Chapel of the Guiding Moons |future
+goto 48.16,14.89 |q Two Queens/Go to the Chapel of the Guiding Moons
 step
 goto 23.27,24.59 |q Two Queens/Go to the Chapel of the Guiding Moons
 step
@@ -36361,14 +36361,14 @@ goto 29.84,42.82
 step
 goto 35.94,57.77
 |tip Watch dialogue
-'Fight the _Forces_ |q Two Queens/Escape the Chapel |future
+'Fight the _Forces_ |q Two Queens/Escape the Chapel
 step
 goto 55.97,85.13
-'Open _The Great Hall_ |q Two Queens/Enter the Great Hall |future
+'Open _The Great Hall_ |q Two Queens/Enter the Great Hall
 |tip Manually skip to the next step.
 step
 goto 73.15,75.11
-'Destory _Necromantic Glass_ |q Two Queens/Destroy the Necromantic Glass |future
+'Destory _Necromantic Glass_ |q Two Queens/Destroy the Necromantic Glass
 |tip Manually skip to the next step.
 step
 goto 73.87,78.73
@@ -36393,7 +36393,7 @@ goto 64.12,42.86
 kill Euraxia Tharn |q Two Queens/Kill Euraxia Tharn
 step
 goto 64.28,49.26
-talk to Abnur Tharn |q Two Queens/Talk to Abnur Tharn |future
+talk to Abnur Tharn |q Two Queens/Talk to Abnur Tharn
 |tip Manually skip to the next step.
 step
 goto 43.17,75.01
@@ -36424,7 +36424,7 @@ goto 77.65,35.56
 'Examine _Captain's Letter_ |lorebook Captain's Letter/3/37/21
 step
 goto 77.54,35.89
-talk Abnur Tharn |q The Final Order/Rendezvous at Sandswirl Manor |future
+talk Abnur Tharn |q The Final Order/Rendezvous at Sandswirl Manor
 |tip Manually skip to the next step.
 step
 goto 77.60,36.10
@@ -36472,7 +36472,7 @@ goto 66.69,24.56
 |tip Manually skip to the next step.
 step
 goto 66.68,24.78
-talk Abnur Tharn |q The Final Order/Talk to Abnur Tharn |future
+talk Abnur Tharn |q The Final Order/Talk to Abnur Tharn
 step
 goto 65.65,24.59 |q The Final Order/Find Prefect Calo
 step
@@ -36496,7 +36496,7 @@ goto 65.16,22.63
 'Examine _Dragonguard Report_ |q The Final Order/Find the Dragonguard Report
 step
 goto 65.23,22.89
-talk Prefect Calo |q The Final Order/Talk to Prefect Calo |future
+talk Prefect Calo |q The Final Order/Talk to Prefect Calo
 step
 'Open _Northern Elsweyr_ Map
 'Travel to _The Stitches_ |q The Final Order/Go to the Stitches
@@ -36507,29 +36507,29 @@ step
 goto 51.27,55.03 |q The Final Order/Go to the Stitches
 step
 goto 42.49,58.27
-talk Zamarak |q The Final Order/Talk to Zamarak |future
+talk Zamarak |q The Final Order/Talk to Zamarak
 step
 goto 49.24,35.92 |q The Final Order/Track Down the Assassination Squad
 step
 goto elsweyr_base 34.42,51.85 |q The Final Order/Track Down the Assassination Squad
 step
-goto 31.38,53.11 |q The Final Order/Track Down the Assassination Squad |future
+goto 31.38,53.11 |q The Final Order/Track Down the Assassination Squad
 step
 goto 32.36,56.10
-'Open _Dov-Vahl Shrine_ |q The Final Order/Enter the Hidden Shrine |future
+'Open _Dov-Vahl Shrine_ |q The Final Order/Enter the Hidden Shrine
 |tip Manually skip to the next step.
 step
 goto dragonguardoutpost_base 61.84,17.18
 |tip Follow path down.
-'Examine _Stone Pedestal_ |q The Final Order/Examine the Stone Pedestal |future
+'Examine _Stone Pedestal_ |q The Final Order/Examine the Stone Pedestal
 step
 goto 61.84,17.18
-talk Zamarak |q The Final Order/Talk to Zamarak |future
+talk Zamarak |q The Final Order/Talk to Zamarak
 |tip Manually skip to the next step.
 step
-goto 65.64,50.45 |q The Final Order/Search the Underground Complex |future |tip Watch for traps and pressure plates.
+goto 65.64,50.45 |q The Final Order/Search the Underground Complex |tip Watch for traps and pressure plates.
 step
-goto 66.55,64.74 |q The Final Order/Search the Underground Complex |future |tip Watch for traps and pressure plates.
+goto 66.55,64.74 |q The Final Order/Search the Underground Complex |tip Watch for traps and pressure plates.
 step
 goto 57.69,83.91 |q The Final Order/Follow Captain Saulinia |tip Watch traps.
 step
@@ -36623,7 +36623,7 @@ goto 42.10,51.46
 talk Abnur Tharn |q Cadwell the Betrayer/Talk to Abnur Tharn
 step
 goto 42.23,51.49
-'Open _Sepulcher of Mischance_ |q Cadwell the Betrayer/Enter the Sepulcher of Mischance |future
+'Open _Sepulcher of Mischance_ |q Cadwell the Betrayer/Enter the Sepulcher of Mischance
 |tip Manually skip to the next step.
 step
 goto SepulcherofMischance00_base 33.56,50.68
@@ -36661,7 +36661,7 @@ goto SepulcherofMischance04_base 38.38,51.52
 'Recover _Cadwell's Stolen Energy_ |q Cadwell the Betrayer/Recover Cadwell's Stolen Energy
 step
 goto 38.38,51.52
-talk Captain Nala-do |q Cadwell the Betrayer/Talk to Nala-do's Spirit |future
+talk Captain Nala-do |q Cadwell the Betrayer/Talk to Nala-do's Spirit
 |tip Manually skip to the next step.
 step
 goto 32.32,69.70
@@ -36682,7 +36682,7 @@ goto 52.74,52.05
 |tip Manually skip to the next step.
 step
 goto rimmen_base 76.52,37.21
-'Open _Rimmen Palace Throne Room_ |q Cadwell the Betrayer/Talk to Khamira |future
+'Open _Rimmen Palace Throne Room_ |q Cadwell the Betrayer/Talk to Khamira
 |tip Manually skip to the next step.
 step
 goto 77.73,36.74
@@ -36714,7 +36714,7 @@ goto 63.96,48.35
 talk Khamira |q Cadwell the Betrayer/Talk to Khamira
 step
 goto 63.87,48.15
-'Use _Portal to Shadow Dance Temple_ |q Cadwell the Betrayer/Follow Khamira |future
+'Use _Portal to Shadow Dance Temple_ |q Cadwell the Betrayer/Follow Khamira
 |tip Manually skip to the next step.
 step
 goto dancingmoon01_base 66.24,47.64
@@ -36722,12 +36722,12 @@ goto dancingmoon01_base 66.24,47.64
 |tip Manually skip to the next step.
 step
 goto dancingmoon02_base 12.33,37.19
-'Examine _Temple Relic_ |q Cadwell the Betrayer/Examine the Temple Relic |future
+'Examine _Temple Relic_ |q Cadwell the Betrayer/Examine the Temple Relic
 step
 goto 40.56,31.12 |q Cadwell the Betrayer/Find the Next Temple Relic
 step
 goto 62.04,45.66
-'Activate _Temple Relic_ |q Cadwell the Betrayer/Activate the Temple Relic |future
+'Activate _Temple Relic_ |q Cadwell the Betrayer/Activate the Temple Relic
 step
 goto 72.45,71.29 |q Cadwell the Betrayer/Find the Final Temple Relic
 step
@@ -36735,13 +36735,13 @@ goto 92.00,62.43
 'Find the _Final Temple Relic_ |q Cadwell the Betrayer/Find the Final Temple Relic
 step
 goto 92.00,62.43
-'Activate _Temple Relic_ |q Cadwell the Betrayer/Activate the Temple Relic |future
+'Activate _Temple Relic_ |q Cadwell the Betrayer/Activate the Temple Relic
 step
 goto 86.51,45.66
-talk Khamira |q Cadwell the Betrayer/Talk to Khamira |future
+talk Khamira |q Cadwell the Betrayer/Talk to Khamira
 step
 goto 86.42,44.70
-'Open _Vault of the Heavenly Scourage_ |q Cadwell the Betrayer/Enter the Temple Sanctuary |future
+'Open _Vault of the Heavenly Scourage_ |q Cadwell the Betrayer/Enter the Temple Sanctuary
 |tip Manually skip to the next step.
 step
 goto dancingmoon03_base 49.16,48.92
@@ -36760,7 +36760,7 @@ goto 54.20,32.85
 talk Cadwell |q Cadwell the Betrayer/Talk to Cadwell
 step
 goto 54.20,32.85
-'Use _Portal to Rimmen_ |q Cadwell the Betrayer/Return to Rimmen Palace |future
+'Use _Portal to Rimmen_ |q Cadwell the Betrayer/Return to Rimmen Palace
 |tip Manually skip to the next step.
 step
 goto rimmen_base 77.72,36.72
@@ -36809,24 +36809,24 @@ goto 30.07,84.45
 talk Prefect Calo |q Jode's Core/Talk to Prefect Calo
 step
 goto 71.36,62.97
-kill Euraxian Forces |q Jode's Core/Defeat the Euraxians |future
+kill Euraxian Forces |q Jode's Core/Defeat the Euraxians
 step
 goto 63.88,51.48 |q Jode's Core/Ascend the Moon Gate
 step
 goto 51.69,54.64
-talk Zamarak |q Jode's Core/Talk to Zamarak |future
+talk Zamarak |q Jode's Core/Talk to Zamarak
 step
 goto 42.52,60.16
 'Open _Upper Moon Gate Landing_ |q Jode's Core/Ascend the Moon Gate
 |tip Manually skip to the next step.
 step
 goto 37.96,46.65
-kill Euraxian Forces |q Jode's Core/Defeat the Euraxians |future
+kill Euraxian Forces |q Jode's Core/Defeat the Euraxians
 step
 goto 38.07,34.28 |q Jode's Core/Ascend the Moon Gate
 step
 goto 68.75,22.07
-'Use _Combat Dragonhorn_ |q Jode's Core/Sound the Dragonhorn |future
+'Use _Combat Dragonhorn_ |q Jode's Core/Sound the Dragonhorn
 step
 goto 68.75,22.07
 talk Khamira |q Jode's Core/Talk to Khamira
@@ -36859,7 +36859,7 @@ goto 74.55,43.12
 'Use _Dragonhorn_ |q Jode's Core/Sound the Dragonhorn
 step
 goto 73.65,43.64
-'Open _Elsweyr_ |q Jode's Core/Leave the Plane of Jode |future
+'Open _Elsweyr_ |q Jode's Core/Leave the Plane of Jode
 |tip Manually skip to the next step.
 step
 goto rimmen_base 70.91,41.98
@@ -36892,7 +36892,7 @@ goto 50.35,39.45
 talk Envoy Cashia |q The Heir of Anequina/Talk to Envoy Cashia
 step
 goto 71.93,38.95
-talk Abnur Tharn |q The Heir of Anequina/Talk to Abnur Tharn |future
+talk Abnur Tharn |q The Heir of Anequina/Talk to Abnur Tharn
 step
 goto 73.62,38.33
 'Open _Rimmen Palace_ |q The Heir of Anequina/Talk to Khamira
@@ -36915,12 +36915,12 @@ talk Queen Khamira
 turnin The Heir of Anequina |next Extras\\Extras\\Main Quests Only\\DLC\\Southern Elsweyr
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Southern Elsweyr",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Southern Elsweyr",[[
 loadingimage loadscreen_southernelsweyr_01.dds
 description Devastated by a terrible plague and its purging fire decades ago, Southern Elsweyr devolved into a lawless region beset by slavers, pirates, and brigands.
 step
 'Open _Southern Elsweyr_ Map
-'Travel to _Senchal_ |q The Dragon's Lair |future
+'Travel to _Senchal_ |q The Dragon's Lair
 |tip Manually skip to the next step.
 step
 goto senchal_base 57.97,59.80
@@ -36979,7 +36979,7 @@ goto Senchalpalace01_base 80.98,60.55
 'Open _General Renmus's Office_ |q The Dragon's Lair/Meet General Renmus
 step
 goto 84.92,56.49
-talk General Renmus |q The Dragon's Lair/Meet Sai Sahan Outside |future
+talk General Renmus |q The Dragon's Lair/Meet Sai Sahan Outside
 |tip Manually skip to the next step.
 step
 goto 82.43,59.19
@@ -37040,7 +37040,7 @@ talk Nartise Merys |q The Dragon's Lair/Talk to Nartise Merys
 step
 goto 71.25,66.45
 talk Za'ji
-talk Sai Sahan |q The Dragon's Lair/Talk to Sai Sahan |future
+talk Sai Sahan |q The Dragon's Lair/Talk to Sai Sahan
 step
 goto 74.80,71.96
 'Find the _Perfect Pounce_ |q The Dragon's Lair/Find the Perfect Pounce
@@ -37062,7 +37062,7 @@ goto 80.11,26.43
 talk Sai Sahan |q The Dragon's Lair/Talk to Sai Sahan
 step
 goto 79.70,26.52
-'Travl to _Tideholm_ |q The Dragon's Lair/Sail to the Island |future
+'Travl to _Tideholm_ |q The Dragon's Lair/Sail to the Island
 |tip Manually skip to the next step.
 step
 goto ELS_Dragonguard_island01_base 53.56,81.85
@@ -37216,7 +37216,7 @@ step
 goto 21.19,63.90 |q Uneasy Alliances/Enter Moonlit Cove
 step
 goto 16.52,61.96
-'Open _Moonlit Cove_ |q Uneasy Alliances/Enter Moonlit Cove |future
+'Open _Moonlit Cove_ |q Uneasy Alliances/Enter Moonlit Cove
 |tip Manually skip to the next step.
 step
 goto moonlitcove05_base 56.66,54.39 |q Uneasy Alliances/Find Bahzahar's Hideout
@@ -37236,7 +37236,7 @@ step
 goto 71.82,30.82 |q Uneasy Alliances/Follow Za'ji
 step
 goto 71.82,30.82
-talk Za'ji |q Uneasy Alliances/Talk to Za'ji |future
+talk Za'ji |q Uneasy Alliances/Talk to Za'ji
 step
 goto 71.88,33.07
 |tip Look up in the quest area and get on the tallest part of the rock so you can use the grappling hook.
@@ -37326,7 +37326,7 @@ goto empyreanquarry_base 41.03,30.52
 |tip Manually skip to the next step.
 step
 goto 44.61,50.92
-kill Yahgrondu |q Uneasy Alliances/Defeat Yahgrondu |future
+kill Yahgrondu |q Uneasy Alliances/Defeat Yahgrondu
 step
 goto 41.87,49.05
 talk Nahfahlaar |q Uneasy Alliances/Talk to Nahfahlaar
@@ -37390,7 +37390,7 @@ goto 29.76,60.83
 talk Kazahn |q Order of the New Moon/Talk to Kazahn
 step
 goto 29.76,60.83
-'Listen to _Ranza_ |q Order of the New Moon/Listen to Ranza |future
+'Listen to _Ranza_ |q Order of the New Moon/Listen to Ranza
 step
 goto 29.73,60.12
 'Take _Map_ |q Order of the New Moon/Take Ranza's Map
@@ -37400,10 +37400,10 @@ goto 33.67,55.91
 'Open _Senchal_ |q Order of the New Moon/Follow Ranza's Map
 |tip Manually skip to the next step.
 step
-goto 59.55,70.56 |q Order of the New Moon/Explore House |future
+goto 59.55,70.56 |q Order of the New Moon/Explore House
 step
 goto 72.04,43.48
-'Open _House_ |q Order of the New Moon/Explore House |future
+'Open _House_ |q Order of the New Moon/Explore House
 |tip Manually skip to the next step.
 step
 goto 74.31,41.82
@@ -37411,7 +37411,7 @@ goto 74.31,41.82
 |tip Upstairs in this house.
 step
 goto 73.85,43.35
-'Examine _Letter to Shirnama_ |q Order of the New Moon/Read the Note |future
+'Examine _Letter to Shirnama_ |q Order of the New Moon/Read the Note
 step
 goto 74.18,42.48
 'Open _House_ |q Order of the New Moon/Talk to Caska
@@ -37485,7 +37485,7 @@ goto 29.80,22.14
 talk Vinbaza |q Order of the New Moon/Talk to New Moon Fortress Guard
 step
 goto 29.71,21.93
-'Open _New Moon Fortress_ |q Order of the New Moon/Enter the New Moon Fortress |future
+'Open _New Moon Fortress_ |q Order of the New Moon/Enter the New Moon Fortress
 |tip Manually skip to the next step.
 step
 goto newmoonfortress1_base 79.40,39.98
@@ -37625,7 +37625,7 @@ goto 24.92,47.28
 talk Caska |q Order of the New Moon/Talk to Caska
 step
 'Open _Southern Elsweyr_ Map
-'Travel to _Dragonguard Sanctum_ |q Order of the New Moon/Return to the Dragonguard Sanctum |future
+'Travel to _Dragonguard Sanctum_ |q Order of the New Moon/Return to the Dragonguard Sanctum
 |tip Manually skip to the next step.
 step
 goto ELS_DG_Sanctuary_base 32.99,66.03
@@ -37687,13 +37687,13 @@ goto 34.80,17.76
 |tip Manually skip to the next step.
 step
 goto 33.86,17.37
-talk Clan Mother Hizuni |q The Pride of Alkosh/Talk to Clan Mother Hizuni |future
+talk Clan Mother Hizuni |q The Pride of Alkosh/Talk to Clan Mother Hizuni
 step
 goto 33.48,17.25
 'Examine _Statue of Ja'darri_ |q The Pride of Alkosh/Examine the Statue
 step
 goto 34.03,17.44
-talk Sai Sahan |q The Pride of Alkosh/Find Nahfahlaar |future
+talk Sai Sahan |q The Pride of Alkosh/Find Nahfahlaar
 |tip Manually skip to the next step.
 step
 goto 35.40,18.00
@@ -37763,7 +37763,7 @@ goto 22.18,46.87
 talk Clan Mother Tadali |q The Pride of Alkosh/Talk to Clan Mother Tadali
 step
 goto 21.81,46.87
-'Open _Halls of the Highmane_ |q The Pride of Alkosh/Enter the Halls of the Highmane |future
+'Open _Halls of the Highmane_ |q The Pride of Alkosh/Enter the Halls of the Highmane
 |tip Manually skip to the next step.
 step
 goto HallsOfHighmane_EXT_base 58.85,50.03
@@ -37915,7 +37915,7 @@ goto 43.07,32.89
 'Take the _Mask of Alkosh_ |q The Pride of Alkosh/Claim the Mask of Alkosh
 step
 'Open _Southern Elsweyr_ Map
-'Travel to _Dragonguard Sanctum_ |q The Pride of Alkosh/Leave the Halls of the Highmane |future
+'Travel to _Dragonguard Sanctum_ |q The Pride of Alkosh/Leave the Halls of the Highmane
 |tip Manually skip to the next step.
 step
 goto ELS_DG_Sanctuary_base 19.95,74.14 |q The Pride of Alkosh/Talk to Sai Sahan
@@ -37968,7 +37968,7 @@ step
 goto 56.17,20.17 |q The Dragonguard/Find a Way Into Doomstone Keep
 step
 goto 59.54,17.68
-'Open _Doomstone Caverns_ |q The Dragonguard/Find a Way Into Doomstone Keep |future
+'Open _Doomstone Caverns_ |q The Dragonguard/Find a Way Into Doomstone Keep
 |tip Follow path to the right
 step
 goto doomstonkeep_base 59.04,25.98 |q The Dragonguard/Search the Caverns
@@ -38049,11 +38049,11 @@ goto 60.15,73.47
 kill Laatvulon |q The Dragonguard/Kill Laatvulon
 step
 'Open _Southern Elsweyr_ Map
-'Travel to _Dragonguard Sanctum_ |q The Dragonguard/Return to Dragonguard Sanctum |future
+'Travel to _Dragonguard Sanctum_ |q The Dragonguard/Return to Dragonguard Sanctum
 |tip Manually skip to the next step.
 step
 goto ELS_DG_Sanctuary_base 31.16,67.45
-talk Sai Sahan |q The Dragonguard/Talk to Sai Sahan |future
+talk Sai Sahan |q The Dragonguard/Talk to Sai Sahan
 step
 goto 19.80,74.34 |q The Dragonguard/Talk to Nahfahlaar
 step
@@ -38127,7 +38127,7 @@ goto 49.34,61.60
 'Wait for _Tharn to Open the Portal_ |q The Dark Aeon/Wait for Tharn to Open the Portal
 step
 goto 49.34,61.60
-'Enter _Portal to Dragonhold_ |q The Dark Aeon/Enter the Portal to Dragonhold |future
+'Enter _Portal to Dragonhold_ |q The Dark Aeon/Enter the Portal to Dragonhold
 |tip Manually skip to the next step.
 step
 goto dragonholdlower01_base 83.77,13.29
@@ -38246,10 +38246,10 @@ goto 42.21,43.21
 'Travel to _Western Plains_ |q New Moon Rising/Go to Moonlit Cove
 |tip Manually skip to the next step.
 step
-goto southernelsweyr_base 20.46,63.61 |q New Moon Rising/Go to Moonlit Cove |future
+goto southernelsweyr_base 20.46,63.61 |q New Moon Rising/Go to Moonlit Cove
 step
 goto 16.52,61.97
-'Open _Moonlit Cove_ |q New Moon Rising/Go to Moonlit Cove |future
+'Open _Moonlit Cove_ |q New Moon Rising/Go to Moonlit Cove
 |tip Manually skip to the next step.
 step
 goto moonlitcove05_base 67.16,63.54
@@ -38322,7 +38322,7 @@ goto 67.25,79.49
 'Search the _Sarcophagus_ |q New Moon Rising/Take Khunzar-ri's Claw
 step
 'Open _Southern Elsweyr_ Map
-'Travel to _Dragonguard Sanctum_ |q New Moon Rising/Go to the Dragonguard Sanctum |future
+'Travel to _Dragonguard Sanctum_ |q New Moon Rising/Go to the Dragonguard Sanctum
 |tip Manually skip to the next step.
 step
 goto ELS_DG_Sanctuary_base 64.15,55.27
@@ -38335,7 +38335,7 @@ goto 28.65,69.07
 talk Khamira |q New Moon Rising/Talk to Khamira
 step
 goto 29.98,69.92
-'Use _Enter to Jonelight Path_ |q New Moon Rising/Enter the Portal |future
+'Use _Enter to Jonelight Path_ |q New Moon Rising/Enter the Portal
 |tip Manually skip to the next step.
 step
 goto jonelightpassage_base 37.79,68.32 |q New Moon Rising/Explore the Jonelight Path
@@ -38398,13 +38398,13 @@ goto 49.46,62.22
 talk Abnur Tharn |q New Moon Rising/Talk to Abnur Tharn
 step
 goto 48.39,62.69
-'Enter _Khamira's Portal_ |q New Moon Rising/Use Khamira's Portal |future
+'Enter _Khamira's Portal_ |q New Moon Rising/Use Khamira's Portal
 step
 goto southernelsweyr_base 33.58,66.89
 talk Khamira |q New Moon Rising/Talk to Khamira
 step
 'Open _Southern Elsweyr_ Map
-'Travel to _Dragonguard_ |q New Moon Rising/Go to the Dragonguard Sanctum |future
+'Travel to _Dragonguard_ |q New Moon Rising/Go to the Dragonguard Sanctum
 |tip Manually skip to the next step.
 step
 goto ELS_DG_Sanctuary_base 34.85,49.38
@@ -38457,12 +38457,12 @@ talk Queen Khamira
 turnin The Pride of Elsweyr |next Extras\\Extras\\Main Quests Only\\DLC\\Western Skyrim
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Western Skyrim",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Western Skyrim",[[
 loadingimage loadscreen_westernskyrim_01.dds
 description Sundered from Eastern Skyrim in years past, High King Svargrim rules the cold and unforgiving land known as Western Skyrim. Consisting of the holds of Haafingar, Karthald, and Hjaalmarch, the realm gives rise to hardy natures, brave warriors, and suspicious townsfolk.
 step
 'Open _Western Skyrim_ Map
-'Travel to _Solitude Docks_ |q The Gathering Storm |future
+'Travel to _Solitude Docks_ |q The Gathering Storm
 |tip Manually skip to next step.
 step
 goto westernskryim_base 51.25,43.10
@@ -38581,7 +38581,7 @@ goto 42.95,35.80
 wayshrine Kilkreath Temple
 step
 goto 42.29,37.32
-talk Fennorian |q The Gathering Storm/Talk to Fennorian |future
+talk Fennorian |q The Gathering Storm/Talk to Fennorian
 step
 goto 37.85,37.83
 'Examine _Depleted Witch Pikes_ |q The Gathering Storm/.*Examine Witch Pike.* |count 1
@@ -38872,7 +38872,7 @@ step
 goto 49.01,78.91 |q Dark Clouds Over Solitude/Enter Kagnthamz
 step
 goto 56.57,84.46
-'Open _Kagnthamz_ |q Dark Clouds Over Solitude/Enter Kagnthamz |future
+'Open _Kagnthamz_ |q Dark Clouds Over Solitude/Enter Kagnthamz
 |tip Manually skip to the next step.
 step
 goto blackreachcrypts.base 48.95,31.35 |q Dark Clouds Over Solitude/Find the Queen's Assassin
@@ -38905,7 +38905,7 @@ goto 28.25,78.19
 kill Sister Tharda |q Dark Clouds Over Solitude/Kill Sister Tharda
 step
 goto 28.46,67.94
-'Open _Blackreach: Dusktown Caverns_ |q Dark Clouds Over Solitude/Follow Lyris and Fennorian |future
+'Open _Blackreach: Dusktown Caverns_ |q Dark Clouds Over Solitude/Follow Lyris and Fennorian
 |tip Manually skip to the next step.
 step
 goto blackreach_base 54.96,82.14
@@ -38988,7 +38988,7 @@ step
 goto 68.42,62.52 |q Danger in the Holds/Go to the Morthal Barrow |tip Leave Jarl Reddharn's Hall
 step
 goto 70.57,61.50
-'Open _Morthal Borrow_ |q Danger in the Holds/Go to the Morthal Barrow |future
+'Open _Morthal Borrow_ |q Danger in the Holds/Go to the Morthal Barrow
 |tip Manually skip to the next step.
 step
 goto morthalburialcave_base 53.54,23.86 |q Danger in the Holds/Search Morthal Barrow
@@ -39032,7 +39032,7 @@ goto 43.54,75.87
 |tip Manually skip to the next step.
 step
 goto 38.53,72.23
-'Destroy _Gray Reliquary_ |q Danger in the Holds/Destroy the Gray Reliquary |future
+'Destroy _Gray Reliquary_ |q Danger in the Holds/Destroy the Gray Reliquary
 step
 goto 38.05,71.20
 talk Svana |q Danger in the Holds/Talk to Svana
@@ -39181,7 +39181,7 @@ goto 71.98,57.15
 talk Edjar |q The Vampire Scholar/Talk to Edjar
 step
 goto 71.35,56.46
-'Open _Tzinghalis's Tower_ |q The Vampire Scholar/Enter the Dwarven Tower |future
+'Open _Tzinghalis's Tower_ |q The Vampire Scholar/Enter the Dwarven Tower
 |tip Manually skip to the next step.
 step
 goto _Tzingalas_base 86.72,62.25
@@ -39492,7 +39492,7 @@ goto blackreach_base 76.75,36.89
 'Climb _Midnight Barrow_ |q The Gray Host/Go to the Midnight Barrow
 |tip Manually skip to the next step.
 step
-goto midnightbarrow_base 37.54,79.85 |q The Gray Host/Secure a Path to the Undergrove |future
+goto midnightbarrow_base 37.54,79.85 |q The Gray Host/Secure a Path to the Undergrove
 step
 goto 48.74,79.91 |q The Gray Host/Secure a Path to the Undergrove
 step
@@ -39502,7 +39502,7 @@ goto 45.81,36.71
 'Secure a _Path to the Undergrove_ |q The Gray Host/Secure a Path to the Undergrove
 step
 goto 45.81,36.71
-'Open _The Undergrove_ |q The Gray Host/Enter the Undergrove |future
+'Open _The Undergrove_ |q The Gray Host/Enter the Undergrove
 |tip Manually skip to the next step.
 step
 goto MidnightSK5Barrow 45.03,31.43
@@ -39605,7 +39605,7 @@ step
 goto 57.38,19.38 |q Greymoor Rising/Cross the Bridge to Greymoor Keep
 step
 goto 58.02,16.02
-'Open _Greymoor Keep_ |q Greymoor Rising/Enter Greymoor Keep |future
+'Open _Greymoor Keep_ |q Greymoor Rising/Enter Greymoor Keep
 |tip Manually skip to the next step.
 step
 goto greymooreintsec01_base 39.25,70.82 |q Greymoor Rising/Find the Ritual Site
@@ -39629,18 +39629,18 @@ step
 goto 56.41,40.84
 'Open _Greymoor Keep Central Tower_ |q Greymoor Rising/Find High King Svargrim
 step
-goto 47.94,35.28 |q Greymoor Rising/Talk to Rada al-Saran |future
+goto 47.94,35.28 |q Greymoor Rising/Talk to Rada al-Saran
 step
-goto 55.36,23.42 |q Greymoor Rising/Talk to Rada al-Saran |future
+goto 55.36,23.42 |q Greymoor Rising/Talk to Rada al-Saran
 step
-goto 33.75,18.44 |q Greymoor Rising/Talk to Rada al-Saran |future
+goto 33.75,18.44 |q Greymoor Rising/Talk to Rada al-Saran
 step
 goto 35.83,33.31
-'Open _Central Overlook_ |q Greymoor Rising/Talk to Rada al-Saran |future
+'Open _Central Overlook_ |q Greymoor Rising/Talk to Rada al-Saran
 |tip Manually skip to the next step.
 step
 goto 40.31,33.24
-talk Rada al-Saran |q Greymoor Rising/Talk to Rada al-Saran |future
+talk Rada al-Saran |q Greymoor Rising/Talk to Rada al-Saran
 step
 goto 40.52,35.95
 'Open _Upper Corridors_ |q Greymoor Rising/Ascend Greymoor Keep
@@ -39688,7 +39688,7 @@ step
 goto 65.13,14.19 |q Greymoor Rising/Find High King Svargrim
 step
 goto 84.90,14.13
-'Open _Greymoor Keep Bridge Passage_ |q Greymoor Rising/Reach the Surface |future
+'Open _Greymoor Keep Bridge Passage_ |q Greymoor Rising/Reach the Surface
 |tip Manually skip to the next step.
 step
 goto blackreach_base 58.22,16.91
@@ -39795,12 +39795,12 @@ talk Svana
 turnin Daughter of the Wolf |next Extras\\Extras\\Main Quests Only\\DLC\\The Reach
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\The Reach",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\The Reach",[[
 loadingimage loadscreen_thereach_01.dds
 description The Gray Host marches on the Reach in The Elder Scrolls Online: Markarth, the epic conclusion to the Dark Heart of Skyrim storyline. Explore a dangerous new zone, gather a band of unlikely allies, and confront a Vampire Lord and his ancient army.
 step
 'Open _The Reach_ Map
-'Travel to _North Markarth_ |q The Despot of Markarth |future
+'Travel to _North Markarth_ |q The Despot of Markarth
 |tip Manually skip to the next step.
 step
 goto reach_base 34.72,47.87
@@ -39911,7 +39911,7 @@ step
 goto 64.31,74.88 |q The Despot of Markarth/Go to Valthume
 step
 goto 66.26,77.93
-'Open _Valthume_ |q The Despot of Markarth/Go to Valthume |future
+'Open _Valthume_ |q The Despot of Markarth/Go to Valthume
 |tip Manually skip to the next step.
 step
 goto valthume_base 20.28,48.34 |q The Despot of Markarth/Find Lady Belain
@@ -39977,7 +39977,7 @@ talk Nolovan |q Blood of the Reach/Talk to Nolovan
 |tip Pay him.
 step
 goto 79.56,65.81
-talk Gwendis |q Blood of the Reach/Talk to Gwendis |future
+talk Gwendis |q Blood of the Reach/Talk to Gwendis
 step
 goto 79.42,65.17
 'Open _Markarth_ |q Blood of the Reach/Go to Rebel's Retreat
@@ -40060,7 +40060,7 @@ talk Count Verandis Ravenwatch |q Blood of the Reach/Enter Bthar-Zel
 |tip Manually skip to the next step.
 step
 goto 34.81,15.11
-'Open _Bthar-Zel_ |q Blood of the Reach/Enter Bthar-Zel |future
+'Open _Bthar-Zel_ |q Blood of the Reach/Enter Bthar-Zel
 |tip Manually skip to the next step.
 step
 goto btharzel_base 26.36,38.57 |q Blood of the Reach/Search for the Arkthzand Keystone
@@ -40132,7 +40132,7 @@ goto 22.56,39.72
 'Use _Void Portal_ |q The Study of Souls/Navigate the Void Portals
 step
 goto 18.82,38.35
-'Open _Library of Arkthzand_ |q The Study of Souls/Enter the Library of Arkthzand |future
+'Open _Library of Arkthzand_ |q The Study of Souls/Enter the Library of Arkthzand
 |tip Manually skip to the next step.
 step
 goto u28_hallsofarthzand_base 71.45,31.32
@@ -40144,7 +40144,7 @@ goto 18.26,54.13
 'Explore the _Library of Arkthzand_ |q The Study of Souls/Explore the Library of Arkthzand
 step
 goto 18.26,54.13
-talk Count Verandis Ravenwatch |q The Study of Souls/Talk to Count Verandis Ravenwatch |future
+talk Count Verandis Ravenwatch |q The Study of Souls/Talk to Count Verandis Ravenwatch
 |tip Manually skip to the next step.
 step
 goto 14.25,57.55
@@ -40317,7 +40317,7 @@ goto 48.99,53.43
 |tip Manually skip to the next step.
 step
 goto 52.59,81.06
-'Examine _Senan's Note_ |q The Awakening Darkness/Examine the Note |future
+'Examine _Senan's Note_ |q The Awakening Darkness/Examine the Note
 step
 goto 52.59,81.06
 talk Arana |q The Awakening Darkness/Talk to Arana
@@ -40325,7 +40325,7 @@ step
 goto 37.82,78.47 |q The Awakening Darkness/Enter the Dark Descent
 step
 goto 49.67,87.12
-'Open _The Dark Descent_ |q The Awakening Darkness/Enter the Dark Descent |future
+'Open _The Dark Descent_ |q The Awakening Darkness/Enter the Dark Descent
 |tip Manually skip to the next step.
 step
 goto DarkDescent_base 62.60,27.59
@@ -40489,7 +40489,7 @@ goto 29.14,39.48
 talk Count Verandis Ravenwatch |q The Dark Heart/Talk to Count Verandis Ravenwatch
 step
 goto 13.53,51.31
-'Open _Blackreach: Arkthzand Caverns_ |q The Dark Heart/Leave the Dark Heart Chamber |future
+'Open _Blackreach: Arkthzand Caverns_ |q The Dark Heart/Leave the Dark Heart Chamber
 |tip Manually skip to the next step.
 step
 goto U28_blackreach_base 14.44,43.67
@@ -40514,11 +40514,11 @@ goto markunderstonekeep_base 60.58,27.37
 talk Ard Caddach |q A Feast of Souls/Talk to Ard Caddach
 step
 goto 59.47,28.18
-talk Gwendis |q A Feast of Souls/Talk to Gwendis |future
+talk Gwendis |q A Feast of Souls/Talk to Gwendis
 |tip Manually skip to the next step.
 step
 goto 58.64,85.59
-'Open _Nchuand-Zel_ |q A Feast of Souls/Enter Nchuand-Zel |future
+'Open _Nchuand-Zel_ |q A Feast of Souls/Enter Nchuand-Zel
 |tip Manually skip to the next step.
 step
 goto nchuandzel_base 50.39,70.80
@@ -40563,7 +40563,7 @@ goto 24.77,48.29
 talk Count Verandis Ravenwatch |q A Feast of Souls/Talk to Count Verandis Ravenwatch
 step
 goto 23.83,47.23
-'Enter _Arkthzand Orrery_ |q A Feast of Souls/Enter the Orrery Chamber |future
+'Enter _Arkthzand Orrery_ |q A Feast of Souls/Enter the Orrery Chamber
 |tip Manually skip to the next step.
 step
 goto u28_OrreryChamber_base 53.53,47.92
@@ -40577,7 +40577,7 @@ goto 25.77,48.41
 talk Arana |q A Feast of Souls/Talk to Arana
 step
 goto 25.28,53.55
-'Use _Arana's Portal_ |q A Feast of Souls/Return to the Orrery Chamber |future
+'Use _Arana's Portal_ |q A Feast of Souls/Return to the Orrery Chamber
 |tip Manually skip to the next step.
 step
 goto u28_OrreryChamber_base 29.01,47.63
@@ -40840,14 +40840,14 @@ talk Count Verandis Ravenwatch |q Kingdom of Ash/Talk to Count Verandis Ravenwat
 |tip Persuade him.
 step
 goto 28.81,47.58
-'Enter _The Dark Heart_ |q Kingdom of Ash/Enter the Gateway |future
+'Enter _The Dark Heart_ |q Kingdom of Ash/Enter the Gateway
 |tip Manually skip to the next step.
 step
 goto UI_MAP_SKR_RBC2_base 77.53,60.24 
-'Find _Lyris Titanborn_ |q Kingdom of Ash/Find Lyris Titanborn |future
+'Find _Lyris Titanborn_ |q Kingdom of Ash/Find Lyris Titanborn
 step
 goto 56.84,54.55
-'Search for _Count Verandis Ravenwatch_ |q Kingdom of Ash/Search for Count Verandis Ravenwatch |future
+'Search for _Count Verandis Ravenwatch_ |q Kingdom of Ash/Search for Count Verandis Ravenwatch
 step
 goto 52.52,31.75 |q Kingdom of Ash/Follow the Darkstorm
 step
@@ -40871,11 +40871,11 @@ goto 33.41,39.65
 talk Count Verandis Ravenwatch |q Kingdom of Ash/Talk to Count Verandis Ravenwatch
 step
 goto 33.24,39.04
-'Enter _Portal to the Orrery_ |q Kingdom of Ash/Go to the Orrery Chamber |future
+'Enter _Portal to the Orrery_ |q Kingdom of Ash/Go to the Orrery Chamber
 |tip Manually skip to the next step.
 step
 goto u28_OrreryChamber_base 52.42,47.39
-'Listen to _Your Companions_ |q Kingdom of Ash/Listen to Your Companions |future
+'Listen to _Your Companions_ |q Kingdom of Ash/Listen to Your Companions
 step
 goto 49.36,47.17
 talk Arana |q Kingdom of Ash/Talk to Arana
@@ -40936,12 +40936,12 @@ talk Ard Caddach
 turnin Second Chances |next Extras\\Extras\\Main Quests Only\\DLC\\Blackwood
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Blackwood",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Blackwood",[[
 loadingimage loadscreen_u30_blackwood_zone_01.dds
 description Blackwood needs heroes to stand against Oblivion. Retake the village of Rockgrove from Daedric-worshipping Argonians
 step
 'Open _Blackwood_ Map
-'Travel to _Leyawiin Outskirts_ |q A Deadly Secret |future
+'Travel to _Leyawiin Outskirts_ |q A Deadly Secret
 |tip Manually skip to the next step.
 step
 goto u30_leyawiincity_base 47.13,07.73
@@ -40966,7 +40966,7 @@ goto 33.25,57.60
 'Examine _Letter to Councilor Lovidicus_ |lorebook Letter to Councilor Lovidicus/3/42/9
 step
 goto 33.17,57.51
-talk Milona Hanus |q A Deadly Secret/Talk to Milona |future
+talk Milona Hanus |q A Deadly Secret/Talk to Milona
 step
 goto 27.72,53.07
 'Find _Councilor Jiricsh_ |q A Deadly Secret/Find Councilor Jirich
@@ -41171,7 +41171,7 @@ step
 goto U30_castleGiovesse1_base 61.63,27.49 |q A Deadly Secret/Search the Twyllbek Ruins
 step
 goto 69.73,46.14
-'Open _Hidden Chamber_ |q A Deadly Secret/Examine the Bookshelf |future
+'Open _Hidden Chamber_ |q A Deadly Secret/Examine the Bookshelf
 step
 goto U30_castleGiovesse2_base 85.48,47.36
 'Examine _Letter from Astra_ |q A Deadly Secret/Search the Hidden Chamber
@@ -41237,7 +41237,7 @@ goto 66.34,22.15
 wayshrine Bloodrun
 step
 goto 64.12,18.22
-'Enter _Bloodrun Cave_ |q An Unexpected Adversary/Go to Bloodrun Cave |future
+'Enter _Bloodrun Cave_ |q An Unexpected Adversary/Go to Bloodrun Cave
 |tip Manually skip to the next step.
 step
 goto u30_bloodruncave_base 48.89,08.03
@@ -41272,7 +41272,7 @@ goto 41.79,86.15
 |tip Manually skip to the next step
 step
 goto 41.79,93.46
-talk Elam Drals |q An Unexpected Adversary/Talk to Elam Drals |future
+talk Elam Drals |q An Unexpected Adversary/Talk to Elam Drals
 step
 goto 46.84,94.24
 'Open _Dark Brotherhood Sanctuary Storage Halls_ |q An Unexpected Adversary/Explore the Sanctuary
@@ -41328,7 +41328,7 @@ goto 36.98,28.47
 |tip Manually skip to the next step.
 step
 goto 37.05,28.38
-'Use _Portal_ |q An Unexpected Adversary/Enter the Portal |future
+'Use _Portal_ |q An Unexpected Adversary/Enter the Portal
 step
 goto u30_welke_quest_base 31.73,60.88
 'Explore the _Ayleid Ruins_ |q An Unexpected Adversary/Explore the Ayleid Ruins
@@ -41362,7 +41362,7 @@ goto 78.06,67.01
 talk Eveli Sharp-Arrow |q An Unexpected Adversary/Talk to Eveli Sharp-Arrow
 step
 goto 78.35,68.04
-'Open _Leyawiin Castle_ |q An Unexpected Adversary/Enter Leyawiin Castle |future
+'Open _Leyawiin Castle_ |q An Unexpected Adversary/Enter Leyawiin Castle
 |tip Manually skip to the next step.
 step
 goto u30_leyawiincastleint02_base 21.63,48.10 |q An Unexpected Adversary/Find the Councilors |tip Go upstairs.
@@ -41391,7 +41391,7 @@ goto 85.52,53.00
 kill Disciple of Aspiration |q An Unexpected Adversary/Defeat the Disciple of Aspiration
 step
 goto 80.87,53.25
-'Open _Leyawiin_ |q An Unexpected Adversary/Leave Leyawiin Castle |future
+'Open _Leyawiin_ |q An Unexpected Adversary/Leave Leyawiin Castle
 |tip Manually skip to the next step.
 step
 goto 77.50,54.05
@@ -41461,7 +41461,7 @@ goto 62.69,89.53
 'Turn _Ward Cube three times_ |q A Hidden Vault/Find a Way Into the Vault
 step
 goto 62.35,89.75
-'Open _Doomvault Capraxus_ |q A Hidden Vault/Enter the Daedric Vault |future
+'Open _Doomvault Capraxus_ |q A Hidden Vault/Enter the Daedric Vault
 |tip Manually skip to the next step.
 step
 goto deadlands_vault_base 62.39,62.73
@@ -41606,11 +41606,11 @@ goto 54.24,67.36
 talk Lyranth |q A Hidden Vault/Talk to Lyranth
 step
 'Open _Blackwood_ Map
-'Travel to _Gideon_ |q A Hidden Vault/Return to Gideon |future
+'Travel to _Gideon_ |q A Hidden Vault/Return to Gideon
 |tip Manually skip to the next step.
 step
 goto u30_Gideoncity_base 63.69,40.04
-'Open _Govenor's Mansion_ |q A Hidden Vault/Talk to Keshu the Black Fin |future
+'Open _Govenor's Mansion_ |q A Hidden Vault/Talk to Keshu the Black Fin
 |tip Manually skip to the next step.
 step
 goto 63.73,39.73
@@ -41725,7 +41725,7 @@ goto 64.36,85.83
 talk Eveli Sharp-Arrow |q A Mysterious Event/Board the Calamity and Talk to Eveli Sharp-Arrow
 step
 goto 65.96,90.72
-'Rest _Calamity Birth_ |q A Mysterious Event/Rest on the Calamity |future
+'Rest _Calamity Birth_ |q A Mysterious Event/Rest on the Calamity
 |tip Manually skip to the next step.
 step
 goto u30_deadlandskeep_ext_base 32.77,50.56
@@ -41750,7 +41750,7 @@ goto 66.81,67.19
 |tip Manually skip to the next step.
 step
 goto 79.07,67.16
-talk Sombren |q A Mysterious Event/Talk to Sombren |future
+talk Sombren |q A Mysterious Event/Talk to Sombren
 step
 goto 67.60,67.17
 'Open _Inner Keep Chambers_ |q A Mysterious Event/Find the Key
@@ -41909,7 +41909,7 @@ step
 goto 71.93,74.80 |q Weapons of Destruction/Enter the Portal
 step
 goto 70.80,73.45
-'Use _Portal to the Ashen Forest_ |q Weapons of Destruction/Enter the Portal |future
+'Use _Portal to the Ashen Forest_ |q Weapons of Destruction/Enter the Portal
 |tip Manually skip to the next step.
 step
 goto u30_ashenforest_ext_base 29.45,78.59
@@ -42023,7 +42023,7 @@ goto 50.86,10.29
 kill Xynaa |q Weapons of Destruction/Kill Xynaa
 step
 goto 50.68,10.62
-'Use _Portal to Gideon_ |q Weapons of Destruction/Return to Gideon |future
+'Use _Portal to Gideon_ |q Weapons of Destruction/Return to Gideon
 |tip Manually skip to the next step.
 step
 goto u30_Gideoncity_base 37.73,46.86
@@ -42096,7 +42096,7 @@ goto 28.22,28.94
 talk Keshu the Black Fin |q Pyre of Ambition/Talk to Keshu the Black Fin
 step
 goto 28.48,28.36
-'Open _Fort Redmane_ |q Pyre of Ambition/Enter Fort Redmane |future
+'Open _Fort Redmane_ |q Pyre of Ambition/Enter Fort Redmane
 |tip Manually skip to the next step.
 step
 goto u30_redmayne_ext_base 49.90,62.18
@@ -42135,7 +42135,7 @@ goto 53.33,40.55
 step
 goto 50.14,47.26
 |tip Watch the dialogue.
-'Open _Fort Redmane Keep_ |q Pyre of Ambition/Go to the Keep |future
+'Open _Fort Redmane Keep_ |q Pyre of Ambition/Go to the Keep
 step
 goto u30_redmayne_int_base 38.02,35.36
 'Secure the _Keep_ |q Pyre of Ambition/Secure the Keep
@@ -42160,7 +42160,7 @@ goto 63.66,53.59
 'Listen to _Mehrunes Dagon_ |q Pyre of Ambition/Listen to Mehrunes Dagon
 step
 goto 71.33,44.03
-'Open _Blackwood_ |q Pyre of Ambition/Leave Fort Redmane |future
+'Open _Blackwood_ |q Pyre of Ambition/Leave Fort Redmane
 |tip Manually skip to the next step.
 step
 goto blackwood_base 28.20,28.85
@@ -42215,12 +42215,12 @@ talk Eveli Sharp-Arrow
 turnin Heroes of Blackwood |next Extras\\Extras\\Main Quests Only\\DLC\\The Deadlands
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\The Deadlands",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\The Deadlands",[[
 loadingimage loadscreen_ardent_hope_01.dds
 description The Deadlands is Mehrunes Dagon's realm of Oblivion.
 step
 'Open _Fargrave_ Map
-'Travel to _Fargrave Outskirts_ |q The Celestial Palanquin |future
+'Travel to _Fargrave Outskirts_ |q The Celestial Palanquin
 |tip Manually skip to the next step.
 step
 goto u32_fargrave_base 57.31,79.08
@@ -42325,13 +42325,13 @@ goto 70.28,80.82
 |tip Manually skip to the next step.
 step
 goto u32_fargrave_base 78.63,23.59
-talk The Anchorite |q The Celestial Palanquin/Talk to The Anchorite |future
+talk The Anchorite |q The Celestial Palanquin/Talk to The Anchorite
 step
 goto 81.85,21.53
-'Open _The Shambles_ |q The Celestial Palanquin/Go to the Shambles |future
+'Open _The Shambles_ |q The Celestial Palanquin/Go to the Shambles
 |tip Manually skip to the next step.
 step
-goto u32_theshambles_base 54.37,64.05 |q The Celestial Palanquin/Reach the Bathhouse |future
+goto u32_theshambles_base 54.37,64.05 |q The Celestial Palanquin/Reach the Bathhouse
 step
 goto 34.69,37.97
 wayshrine The Shambles
@@ -42345,17 +42345,17 @@ step
 goto 63.33,24.87 |q The Celestial Palanquin/Reach the Bathhouse
 step
 goto 62.59,20.67
-'Examine _The Bathhouse_ |q The Celestial Palanquin/Inspect the Bathhouse Door |future
+'Examine _The Bathhouse_ |q The Celestial Palanquin/Inspect the Bathhouse Door
 step
 goto 69.29,21.82
 'Unlock _Bathhouse Courtyard_ |q The Celestial Palanquin/Find a Way Into the Bathhouse Courtyard
 step
 goto 68.58,11.35
-'Enter _Bathhouse Undercroft_ |q The Celestial Palanquin/Explore the Bathhouse Undercroft |future
+'Enter _Bathhouse Undercroft_ |q The Celestial Palanquin/Explore the Bathhouse Undercroft
 |tip Manually skip to the next step.
 step
 goto u32_bathhouse_base 50.27,76.04
-talk The Anchorite |q The Celestial Palanquin/Talk to the Anchorite |future
+talk The Anchorite |q The Celestial Palanquin/Talk to the Anchorite
 step
 goto 45.47,78.36
 'Take _Lucent_ |q The Celestial Palanquin/Dispel the Ward
@@ -42387,7 +42387,7 @@ goto 57.91,27.70
 step
 goto 36.20,37.11
 |tip Watch dialogue.
-'Destroy _Votive Rune_ |q The Celestial Palanquin/.*Disrupt Sister Celdina's Ritual.* |count 1 |future
+'Destroy _Votive Rune_ |q The Celestial Palanquin/.*Disrupt Sister Celdina's Ritual.* |count 1
 step
 goto 38.20,21.18
 'Destroy _Votive Rune_ |q The Celestial Palanquin/.*Disrupt Sister Celdina's Ritual.* |count 2
@@ -42400,7 +42400,7 @@ goto 28.67,38.28
 |tip Manually skip to the next step.
 step
 goto u32_bathhouse2_base 28.23,47.87
-talk Lyranth |q The Celestial Palanquin/Talk to Lyranth |future
+talk Lyranth |q The Celestial Palanquin/Talk to Lyranth
 step
 goto u32_bathhouse3_base 54.04,42.46
 |tip Go up the stairs.
@@ -42433,7 +42433,7 @@ talk Madam Whim |q Destruction Incarnate/Talk to Madam Whim
 step
 goto 46.02,32.22
 |tip Go down the stairs.
-talk The Anchorite |q Destruction Incarnate/Talk to the Anchorite |future
+talk The Anchorite |q Destruction Incarnate/Talk to the Anchorite
 step
 goto 49.53,32.17 |q Destruction Incarnate/Go to the Collector's Villa
 step
@@ -42442,7 +42442,7 @@ step
 goto 30.65,33.75 |q Destruction Incarnate/Go to the Collector's Villa
 step
 goto 16.79,29.98
-'Open _The Collector's Villa_ |q Destruction Incarnate/Go to the Collector's Villa |future
+'Open _The Collector's Villa_ |q Destruction Incarnate/Go to the Collector's Villa
 |tip Manually skip to the next step.
 step
 goto u32_collectorvilla_ext_base 51.75,47.01
@@ -42467,7 +42467,7 @@ goto 09.49,36.20
 'Open The Collector's Prized Exhibits |q Destruction Incarnate/Find the Arox |tip Watch dialogue.
 step
 goto u32_collectorvilla_int4_base 53.44,43.23
-'Use Cage Release Lever |q Destruction Incarnate/Release Arox the Mutilator |future
+'Use Cage Release Lever |q Destruction Incarnate/Release Arox the Mutilator
 step
 goto 56.19,48.28
 talk Arox the Mutilator |q Destruction Incarnate/Talk to Arox the Mutilator
@@ -42503,14 +42503,14 @@ goto 46.98,32.21
 step
 goto 45.78,32.12
 |tip Go up the stairs.
-talk Arox the Mutilator |q Destruction Incarnate/Talk to Arox the Mutilator |future
+talk Arox the Mutilator |q Destruction Incarnate/Talk to Arox the Mutilator
 step
 'Open The Deadlands Map
 'Travel to _Raging Coast_ |q Destruction Incarnate/Go to Burning Gyre Keep
 |tip Manually skip to the next step.
 step
 goto u32deadlandszone_base 34.96,77.49
-'Open Burning Gyre Keep |q Destruction Incarnate/Enter Burning Gyre Keep |future
+'Open Burning Gyre Keep |q Destruction Incarnate/Enter Burning Gyre Keep
 |tip Manually skip to the next step.
 step
 goto u32_burninggyre_base 27.44,28.28 |q Destruction Incarnate/Explore Burning Gyre Keep
@@ -42518,7 +42518,7 @@ step
 goto 33.68,80.16 |q Destruction Incarnate/Explore Burning Gyre Keep
 step
 goto 47.26,73.77
-'Search Broken Bladebearer Sword |q Destruction Incarnate/Examine the Blade-Bearer's Sword |future
+'Search Broken Bladebearer Sword |q Destruction Incarnate/Examine the Blade-Bearer's Sword
 |tip Manually skip to the next step.
 step
 goto 51.42,83.09
@@ -42527,11 +42527,11 @@ goto 51.42,83.09
 step
 goto 70.70,53.42
 |tip Follow the Green circle around the edge of the room starting on the left side.
-kill The Cyclone Incarnate |q Destruction Incarnate/Kill the Cyclone Incarnate |future
+kill The Cyclone Incarnate |q Destruction Incarnate/Kill the Cyclone Incarnate
 step
 goto 70.85,43.22
 |tip Watch the dialogue.
-'Enter Portal to the House of Whims |q Destruction Incarnate/Escape Burning Gyre Keep |future
+'Enter Portal to the House of Whims |q Destruction Incarnate/Escape Burning Gyre Keep
 |tip Manually skip to the next step.
 step
 goto u32_fargrave_base 45.76,32.26
@@ -42552,7 +42552,7 @@ step
 goto u32deadlandszone_base 74.56,50.85 |q The Durance Vile/Meet Lyranth at Wretched Spire
 step
 goto 70.52,45.81
-talk Rynkyus |q The Durance Vile/Talk to Rynkyus |future
+talk Rynkyus |q The Durance Vile/Talk to Rynkyus
 step
 goto 70.86,41.81 |q The Durance Vile/Investigate Jynd's Foundry
 step
@@ -42614,28 +42614,28 @@ talk Rynkyus |q The Durance Vile/Investigate Zynoahz's Gaol
 step
 goto 38.90,55.69
 |tip Listen to the Conversation
-talk Arox The Mutilator |q The Durance Vile/Talk to Arox the Mutilator |future
+talk Arox The Mutilator |q The Durance Vile/Talk to Arox the Mutilator
 step
 goto 35.77,59.05
 'Use _Ardent Hope_ Wayshrine
-'Travel to _The Blood Pit_ |q The Durance Vile/Explore the Blood Pit |future
+'Travel to _The Blood Pit_ |q The Durance Vile/Explore the Blood Pit
 |tip Manually skip to the next step.
 step
 goto 25.66,59.19
-talk The Anchorite |q The Durance Vile/Explore the Blood Pit |future
+talk The Anchorite |q The Durance Vile/Explore the Blood Pit
 |tip Manually skip to the next step.
 step
 goto 26.16,59.87 |q The Durance Vile/Explore the Blood Pit
 step
 goto 26.69,60.49
-'Observe the _Overseer_ |q The Durance Vile/Observe the Overseer |future
+'Observe the _Overseer_ |q The Durance Vile/Observe the Overseer
 step
 goto 28.55,61.32 |q The Durance Vile/Explore the Blood Pit
 step
 goto 29.92,63.97 |q The Durance Vile/Explore the Blood Pit
 step
 goto 29.54,67.59
-'Use _Portal to Warden's Overlook_ |q The Durance Vile/Search the Warden's Overlook |future
+'Use _Portal to Warden's Overlook_ |q The Durance Vile/Search the Warden's Overlook
 |tip Manually skip to the next step.
 step
 goto 29.78,68.25
@@ -42706,7 +42706,7 @@ talk Elegian |q The Durance Vile/Talk to Elegian
 step
 |tip Listen to the Conversation.
 'Open _The Deadlands_ Map
-'Travel to _The Scourshales_ |q The Durance Vile/Return to Wretched Spire |future
+'Travel to _The Scourshales_ |q The Durance Vile/Return to Wretched Spire
 |tip Manually skip to the next step.
 step
 goto 68.02,43.77 |q The Durance Vile/Return to Wretched Spire
@@ -42731,10 +42731,10 @@ goto 70.60,23.00
 step
 goto 68.74,15.80
 |tip Climb the Summit
-'Enter _Passage to Annihilarch's Summit_ |q Born of Grief/Enter the Passage |future
+'Enter _Passage to Annihilarch's Summit_ |q Born of Grief/Enter the Passage
 step
 goto 67.46,13.86
-talk Arox the Mutilator |q Born of Grief/Talk to Arox the Mutilator |future
+talk Arox the Mutilator |q Born of Grief/Talk to Arox the Mutilator
 step
 goto 67.21,13.92
 'Take _Twisted Rod_ |q Born of Grief/Find Twisted Rod
@@ -42763,18 +42763,18 @@ goto 67.04,12.68
 'Unlock _Wind-Gate Lock_ |q Born of Grief/Open the Wind-Gate
 step
 goto 67.13,14.44
-talk Lyranth |q Born of Grief/Talk to Lyranth |future
+talk Lyranth |q Born of Grief/Talk to Lyranth
 step
 goto 67.41,14.65
-'Use _Portal to Fort Grief_ |q Born of Grief/Use the Portal |future
+'Use _Portal to Fort Grief_ |q Born of Grief/Use the Portal
 |tip Manually skip to the next step.
 step
 goto u32_GriefEXT_base 61.27,68.40 |q Born of Grief/Explore the Fort
 step
 goto 76.80,76.18
-'Unlock _Bladebearers' Cage_ |q Born of Grief/Free the Captive Bladebearers |future
+'Unlock _Bladebearers' Cage_ |q Born of Grief/Free the Captive Bladebearers
 step
-goto 61.82,29.77 |q Born of Grief/'Free the Captive Bladebearers |future
+goto 61.82,29.77 |q Born of Grief/'Free the Captive Bladebearers
 step
 goto 64.59,21.24
 'Unlock _Bladebearers' Cage_ |q Born of Grief/Free the Captive Bladebearers
@@ -42787,7 +42787,7 @@ step
 goto 37.78,36.88 |q Born of Grief/Enter Fort Grief Citadel
 step
 goto 42.07,51.41
-'Open _Fort Grief Citadel_ |q Born of Grief/Enter Fort Grief Citadel |future
+'Open _Fort Grief Citadel_ |q Born of Grief/Enter Fort Grief Citadel
 |tip Manually skip to the next step.
 step
 goto u32_GriefINT_base 38.55,43.44 |q Born of Grief/Find the Riven Cataclyst |tip Follow path down.
@@ -42811,7 +42811,7 @@ goto 51.16,59.73
 'Destroy _Cataclyst Core_ |q Born of Grief/Destroy the Riven Cataclyst
 step
 goto 52.61,65.71
-'Use _Portal to Wretched Spire_ |q Born of Grief/Exit Fort Grief |future
+'Use _Portal to Wretched Spire_ |q Born of Grief/Exit Fort Grief
 |tip Manually skip to the next step.
 step
 goto u32deadlandszone_base 70.59,45.60
@@ -42873,10 +42873,10 @@ step
 |tip Manually skip to the next step.
 step
 goto 19.01,61.36
-talk Lyranth |q Deadlight/Talk to Lyranth |future
+talk Lyranth |q Deadlight/Talk to Lyranth
 step
 goto 18.94,61.27
-'Use _Portal to Deadlight_ |q Deadlight/Enter the Portal |future
+'Use _Portal to Deadlight_ |q Deadlight/Enter the Portal
 |tip Manually skip to the next step.
 step
 goto u32_Deadlight_EXT_base 45.89,45.80 |q Deadlight/Infiltrate Deadlight Citadel
@@ -42949,13 +42949,13 @@ step
 goto u32_Deadlight_Summit_base 39.95,64.94 |q Deadlight/Reach the Anchorite
 step
 goto 60.99,68.77
-kill Sister Celdina |q Deadlight/Kill Sister Celdina |future
+kill Sister Celdina |q Deadlight/Kill Sister Celdina
 step
 goto 63.80,68.98
 'Take _The Anchorite's Amulet_ |q Deadlight/Retrieve the Anchorite's Amulet
 step
 goto 66.12,69.17
-'Use _Portal to Fargrave_ |q Deadlight/Escape from Deadlight |future
+'Use _Portal to Fargrave_ |q Deadlight/Escape from Deadlight
 |tip Manually skip to the next step.
 step
 goto u32_fargrave_base 46.03,32.14
@@ -42982,7 +42982,7 @@ goto 33.86,54.30 |q Against All Hope/Go to the Old Portal Dais
 step
 goto 34.64,55.80
 |tip turn Stone three times.
-'Turn _Runic Stone_ |q Against All Hope/Reactivate the Portal |future
+'Turn _Runic Stone_ |q Against All Hope/Reactivate the Portal
 |tip Manually skip to the next step.
 step
 goto 34.89,56.24
@@ -43001,7 +43001,7 @@ goto 35.13,56.14
 talk Arox the Mutilator |q Against All Hope/Talk to Arox
 step
 goto 35.12,55.81
-'Use _Portal to Ardent Hope_ |q Against All Hope/Enter the Portal |future
+'Use _Portal to Ardent Hope_ |q Against All Hope/Enter the Portal
 |tip Manually skip to the next step.
 step
 goto u32_dl6_ahope_inner_keep_base 69.09,70.50 |q Against All Hope/Reach the Inner Keep
@@ -43024,7 +43024,7 @@ step
 goto 68.33,68.31 |q Against All Hope/Search for the Anchorite
 step
 goto 85.64,67.25
-'Eavesdrop on the _Blood Adepts_ |q Against All Hope/Eavesdrop on the Blood Adepts |future
+'Eavesdrop on the _Blood Adepts_ |q Against All Hope/Eavesdrop on the Blood Adepts
 step
 goto 78.48,61.22
 'Open _Inner Keep_ |q Against All Hope/Pursue the Anchorite
@@ -43035,22 +43035,22 @@ goto 68.33,10.42
 |tip Manually skip to the next step.
 step
 goto u32_dl6_ahope_inner_keep_base 77.32,28.13
-talk Lyranth |q Against All Hope/Talk to Lyranth |future
+talk Lyranth |q Against All Hope/Talk to Lyranth
 step
 goto 77.62,28.06
 'Break the _Twisted Rod_ |q Against All Hope/Break the Twisted Rod
 step
 goto 63.61,23.25
-'Open _Path of Cinders_ |q Against All Hope/Reach the Path of Cinders |future
+'Open _Path of Cinders_ |q Against All Hope/Reach the Path of Cinders
 |tip Manually skip to the next step.
 step
 goto u32_dl6_ahope_vpass_base 60.10,76.66
 |tip Wait for fire to burn down and kill waves of forces.
-'Use _Twisted Rod Fragment_ |q Against All Hope/Breach the First Gate |future
+'Use _Twisted Rod Fragment_ |q Against All Hope/Breach the First Gate
 step
 goto 43.80,56.54
 |tip Wait for fire to burn down and kill waves of forces.
-'Use _Twisted Rod Fragment_ |q Against All Hope/Breach the Second Gate |future
+'Use _Twisted Rod Fragment_ |q Against All Hope/Breach the Second Gate
 step
 goto 36.45,38.39
 |tip Wait for fire to burn down and kill waves of forces.
@@ -43073,7 +43073,7 @@ goto 49.86,52.11
 'Destroy _Perfected Cataclyst Core_ |q Against All Hope/Destroy the Perfected Cataclyst
 step
 |tip Watch the dialogue then you will be teleported out of here.
-'Return to _Fargrave_ |q Against All Hope/Return to Fargrave |future
+'Return to _Fargrave_ |q Against All Hope/Return to Fargrave
 |tip Manually skip to the next step.
 step
 goto u32_fargrave_base 46.98,32.17
@@ -43087,7 +43087,7 @@ accept The Last Ambition
 step
 goto 61.41,42.49
 |tip Leave The House of Whims.
-talk Eveli Sharp-Arrow |q The Last Ambition/Talk to Eveli Sharp-Arrow |future
+talk Eveli Sharp-Arrow |q The Last Ambition/Talk to Eveli Sharp-Arrow
 step
 goto 47.13,32.15
 |tip Watch the dialogue upstairs.
@@ -43118,7 +43118,7 @@ step
 goto 60.46,52.56 |q The Last Ambition/Explore the Brandfire Reformatory
 step
 goto 83.26,53.50
-'Open _Reformatory Forge_ |q The Last Ambition/Enter the Door |future
+'Open _Reformatory Forge_ |q The Last Ambition/Enter the Door
 step
 goto u32_drefuge_forge_base 42.68,52.14
 'Examine _Waking Flame Journal_ |lorebook Waking Flame Journal/3/44/17
@@ -43174,20 +43174,20 @@ goto 51.90,48.79
 'Place _Discharge Labrum_ |q The Last Ambition/Ignite the Furnace
 step
 goto 54.52,45.59
-talk Emperor Moricar |q The Last Ambition/Talk to Emperor Moricar |future
+talk Emperor Moricar |q The Last Ambition/Talk to Emperor Moricar
 step
 goto 59.59,48.06
 |tip Observe Sombren
-talk Eveli Sharp-Arrow |q The Last Ambition/Talk to Eveli Sharp-Arrow |future
+talk Eveli Sharp-Arrow |q The Last Ambition/Talk to Eveli Sharp-Arrow
 step
 'Open _The Deadlands_ Map
 'Travel to _The Blood Pit_ |q The Last Ambition/Meet Eveli at the Isle of Joys
 |tip Manually skip to the next step.
 step
-goto u32deadlandszone_base 21.35,63.48 |q The Last Ambition/Explore the Isle of Joys |future
+goto u32deadlandszone_base 21.35,63.48 |q The Last Ambition/Explore the Isle of Joys
 step
 goto 16.30,65.69
-'Open _Portal to the Isle of Joys_ |q The Last Ambition/Explore the Isle of Joys |future
+'Open _Portal to the Isle of Joys_ |q The Last Ambition/Explore the Isle of Joys
 |tip Manually skip to the next step.
 step
 goto u32_IsleOfJoy_base 68.81,63.05 |q The Last Ambition/Explore the Isle of Joys
@@ -43219,12 +43219,12 @@ goto 37.45,14.25
 'Open _Doomvault Vulpinaz_ |q The Last Ambition/Meet Eveli at Doomvault Vulpinaz
 |tip Manually skip to the next step.
 step
-goto u30_shattered_vault_1_base 38.93,75.47 |q The Last Ambition/Search Doomvault Vulpinaz |future
+goto u30_shattered_vault_1_base 38.93,75.47 |q The Last Ambition/Search Doomvault Vulpinaz
 step
 goto 51.29,50.93 |q The Last Ambition/Search Doomvault Vulpinaz
 step
 goto 63.02,49.33
-'Use _Rune-Etched Ring_ |q The Last Ambition/Use the Rune-Etched Ring |future
+'Use _Rune-Etched Ring_ |q The Last Ambition/Use the Rune-Etched Ring
 step
 goto 63.02,49.33
 'Use _Portal to Living Chambers_ |q The Last Ambition/Enter the Portal
@@ -43242,12 +43242,12 @@ goto 48.50,36.70
 talk Lyranth |q The Last Ambition/Talk to Lyranth
 step
 goto 48.50,36.70
-'Use _Portal to Annihilarch's Summit_ |q The Last Ambition/Travel to Annihilarch's Summit |future
+'Use _Portal to Annihilarch's Summit_ |q The Last Ambition/Travel to Annihilarch's Summit
 |tip Manually skip to the next step.
 step
 goto u32deadlandszone_base 70.54,18.52
 |tip Follow path to top.
-'Open _Ambition's End_ |q The Last Ambition/Confront Sombren |future
+'Open _Ambition's End_ |q The Last Ambition/Confront Sombren
 |tip Manually skip to the next step.
 step
 goto u32deadlandszone_base 73.51,18.38
@@ -43255,7 +43255,7 @@ goto u32deadlandszone_base 73.51,18.38
 kill Destron's Echo |q The Last Ambition/Confront Sombren
 step
 goto 73.22,18.64
-'Use _Portal to Fargrave_ |q The Last Ambition/Return to Fargrave |future
+'Use _Portal to Fargrave_ |q The Last Ambition/Return to Fargrave
 |tip Manually skip to the next step.
 step
 goto u32_fargrave_base 45.67,32.00
@@ -43271,7 +43271,7 @@ goto 45.98,32.31
 step
 goto 45.74,32.21
 |tip Watch the dialogue.
-talk Lyranth |q Ambition's End/Talk to Lyranth |future
+talk Lyranth |q Ambition's End/Talk to Lyranth
 step
 goto 63.37,25.04
 |tip Go downstairs.
@@ -43291,7 +43291,7 @@ step
 goto u32_theshambles_base 39.41,63.96 |q Ambition's End/Find Arox the Mutilator
 step
 goto 42.22,67.88
-talk Grasp-Kyn Xar |q Ambition's End/Talk to Grasp-Kyn Xar |future
+talk Grasp-Kyn Xar |q Ambition's End/Talk to Grasp-Kyn Xar
 |tip Pay him.
 |tip Manually skip to the next step.
 step
@@ -43305,7 +43305,7 @@ step
 goto u32deadlandszone_base 74.44,50.85 |q Ambition's End/Meet Lyranth at Wretched Spire
 step
 goto 71.25,45.76
-talk Lyranth |q Ambition's End/Talk to Lyranth |future
+talk Lyranth |q Ambition's End/Talk to Lyranth
 step
 goto 67.88,43.93 |q Ambition's End/Enter Destruction's Solace
 step
@@ -43314,17 +43314,17 @@ step
 goto 49.90,39.58 |q Ambition's End/Enter Destruction's Solace
 step
 goto 46.29,40.23
-'Open _Destruction's Solace_ |q Ambition's End/Enter Destruction's Solace |future
+'Open _Destruction's Solace_ |q Ambition's End/Enter Destruction's Solace
 |tip Manually skip to the next step.
 step
 goto u32_dsolace_ext1_base 80.85,55.57
 |tip Step forward and watch dialogue  you will be teleported.
-talk Lyranth |q Ambition's End/Talk to Lyranth |future
+talk Lyranth |q Ambition's End/Talk to Lyranth
 step
 goto 64.87,57.57 |q Ambition's End/Find Your Allies
 step
 goto 51.02,50.66
-'Open _Solace Keep_ |q Ambition's End/Find the Anchorite |future |tip Follow path to the top.
+'Open _Solace Keep_ |q Ambition's End/Find the Anchorite |tip Follow path to the top.
 step
 goto u32_dsolace_int1_base 13.96,41.72
 'Open _Solace Keep Battlements_ |q Ambition's End/Find the Anchorite
@@ -43335,7 +43335,7 @@ goto u32_dsolace_ext1_base 31.65,50.41
 'Find _The Anchorite_ |q Ambition's End/Find the Anchorite
 step
 goto 21.62,50.66
-'Open _Solace Palace_ |q Ambition's End/Find Sombren |future
+'Open _Solace Palace_ |q Ambition's End/Find Sombren
 |tip Manually skip to the next step.
 step
 goto u32_dsolace_int2_base 23.38,50.21
@@ -43343,14 +43343,14 @@ goto u32_dsolace_int2_base 23.38,50.21
 step
 goto u32_dsolace_ext2_base 65.68,44.01 |q Ambition's End/Find Sombren
 step
-goto 65.43,57.55 |q Ambition's End/Follow Sombren |future
+goto 65.43,57.55 |q Ambition's End/Follow Sombren
 step
-goto 45.91,57.78 |q Ambition's End/Follow Sombren |future
+goto 45.91,57.78 |q Ambition's End/Follow Sombren
 step
-goto 46.05,39.83 |q Ambition's End/Follow Sombren |future
+goto 46.05,39.83 |q Ambition's End/Follow Sombren
 step
 goto 18.78,39.69
-'Use _Portal to Sundercliff_ |q Ambition's End/Follow Sombren |future
+'Use _Portal to Sundercliff_ |q Ambition's End/Follow Sombren
 |tip Manually skip to the next step.
 step
 goto u32_Sundercliff_base 18.68,20.14
@@ -43371,7 +43371,7 @@ goto 77.83,24.32
 'Banish _Mehrunes Dagon_ |q Ambition's End/Banish Mehrunes Dagon
 step
 goto 84.10,22.20
-'Use _Portal to Wretched Spire_ |q Ambition's End/Return to Wretched Spire |future
+'Use _Portal to Wretched Spire_ |q Ambition's End/Return to Wretched Spire
 |tip Manually skip to the next step.
 step
 goto u32deadlandszone_base 70.65,45.39
@@ -43380,7 +43380,7 @@ turnin Ambition's End
 accept Hope Springs Eternal
 step
 'Open _Fargrave_ Map
-'Travel to _Fargrave_ |q Hope Springs Eternal/Go to Fargrave |future
+'Travel to _Fargrave_ |q Hope Springs Eternal/Go to Fargrave
 |tip Manually skip to the next step.
 step
 goto u32_fargrave_base 46.98,32.19
@@ -43400,14 +43400,14 @@ step
 goto 34.57,24.50 |q Hope Springs Eternal/Look for Lyranth
 step
 goto 33.00,19.83
-talk Lyranth |q Hope Springs Eternal/Talk to Lyranth |future
+talk Lyranth |q Hope Springs Eternal/Talk to Lyranth
 step
 goto 34.59,28.36 |q Hope Springs Eternal/Meet Eveli at the Plaza of Portals
 step
 goto 49.47,28.42 |q Hope Springs Eternal/Meet Eveli at the Plaza of Portals
 step
 goto 66.21,44.29
-talk Eveli Sharp-Arrow |q Hope Springs Eternal/Talk to Eveli Sharp-Arrow |future
+talk Eveli Sharp-Arrow |q Hope Springs Eternal/Talk to Eveli Sharp-Arrow
 step
 goto 65.38,44.54
 'Use _Portal to Leyawiin_ |q Hope Springs Eternal/Go to Leyawiin Castle
@@ -43425,7 +43425,7 @@ goto 85.24,65.55
 |tip Manually skip to the next step.
 step
 goto 81.52,66.25
-talk The Anchorite |q Hope Springs Eternal/Talk to the Anchorite |future
+talk The Anchorite |q Hope Springs Eternal/Talk to the Anchorite
 step
 goto 81.59,66.30
 talk Eveli Sharp-Arrow
@@ -43433,12 +43433,12 @@ turnin Hope Springs Eternal |next Extras\\Extras\\Main Quests Only\\DLC\\High Is
 step
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\High Isle",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\High Isle",[[
 loadingimage loadscreen_hi_systres_zone_01.dds
 description Explore High Isle and Amenos, a land never-before-seen in The Elder Scrolls. Traverse stunning white cliffs, majestic castles, and perilous jungles as you encounter a chivalrous Breton society.
 step
 'Open _High Isle and Amenos_ Map
-'Travel to _Westbay_ |q Of Knights and Knaves |future
+'Travel to _Westbay_ |q Of Knights and Knaves
 |tip Manually skip to the next step.
 step
 goto u34_gonfalonbaycity_base 7.45,46.84
@@ -43456,7 +43456,7 @@ goto 47.08,50.66
 talk Lord Bacaro |q Of Knights and Knaves/Talk to Lord Bacaro
 step
 goto 47.08,50.66
-talk Dockmaster Arnauld |q Of Knights and Knaves/Talk to Dockmaster |future
+talk Dockmaster Arnauld |q Of Knights and Knaves/Talk to Dockmaster
 |tip Manually skip to the next step.
 step
 goto 46.87,42.84
@@ -43547,16 +43547,16 @@ goto 45.67,82.01 |q Of Knights and Knaves/Go to the Druid's Hut
 step
 goto 45.60,79.33
 |tip Go inside the hut.
-talk Druid Ryvana |q Of Knights and Knaves/Talk to Druid Ryvana |future
+talk Druid Ryvana |q Of Knights and Knaves/Talk to Druid Ryvana
 step
 goto 40.44,84.83
-talk Guild Magister Valessea |q Of Knights and Knaves/Talk to Guild Magister Valessea |future
+talk Guild Magister Valessea |q Of Knights and Knaves/Talk to Guild Magister Valessea
 step
 goto 45.81,80.07
 'Return to _Druid Ryvana's Hut_ |q Of Knights and Knaves/Return to Druid Ryvana's Hut
 step
 goto 45.81,80.07
-talk Guild Magister Valessea |q Of Knights and Knaves/Talk to Guild Magister Valessea |future
+talk Guild Magister Valessea |q Of Knights and Knaves/Talk to Guild Magister Valessea
 step
 goto 43.24,78.17 |q Of Knights and Knaves/Talk to Lady Arabelle Davaux
 step
@@ -43566,7 +43566,7 @@ step
 goto 62.91,26.41 |q Of Knights and Knaves/Enter the Abhain Chapel Crypts
 step
 goto u34_systreszone_base 64.11,77.71
-'Open _Abhain Chapel Crypts_ |q Of Knights and Knaves/Enter the Abhain Chapel Crypts |future
+'Open _Abhain Chapel Crypts_ |q Of Knights and Knaves/Enter the Abhain Chapel Crypts
 |tip Manually skip to the next step.
 step
 goto u34_dufortcrypt_base 33.32,24.80
@@ -43604,10 +43604,10 @@ step
 goto 62.25,63.40 |q Of Knights and Knaves/Reach Guild General Quentyn
 step
 goto 70.56,65.96
-kill Guild General Quentyn |q Of Knights and Knaves/Defeat Guild General Quentyn |future
+kill Guild General Quentyn |q Of Knights and Knaves/Defeat Guild General Quentyn
 step
 goto 74.18,66.25
-'Open _High Isle_ |q Of Knights and Knaves/Leave the Abhain Crypts |future
+'Open _High Isle_ |q Of Knights and Knaves/Leave the Abhain Crypts
 |tip Manually skip to the next step.
 step
 goto u34_systreszone_base 62.52,77.88
@@ -43619,14 +43619,14 @@ goto 57.11,70.99
 |tip Manually skip to the next step.
 step
 goto u34_gonfalonbaycity_base 72.65,45.36
-'Open _Mandrake Manor_ |q Of Knights and Knaves/Talk to Captain Kaleen |future
+'Open _Mandrake Manor_ |q Of Knights and Knaves/Talk to Captain Kaleen
 |tip Manually skip to the next step.
 step
 goto 73.87,43.53
 talk Captain Za'ji |q Of Knights and Knaves/Talk to Captain Za'ji
 step
 goto 73.87,43.53
-talk Captain Tsuzo |q Of Knights and Knaves/Talk to Captain Tsuzo |future
+talk Captain Tsuzo |q Of Knights and Knaves/Talk to Captain Tsuzo
 |tip Manually skip to the next step.
 step
 goto 73.87,43.53
@@ -43671,7 +43671,7 @@ goto 37.46,77.07
 wayshrine Steadfast Manor
 step
 goto 37.11,74.94
-talk Lord Bacaro Volorus |q People of Import/Talk to Lord Bacaro Volorus |future
+talk Lord Bacaro Volorus |q People of Import/Talk to Lord Bacaro Volorus
 step
 goto 35.57,78.59 |q People of Import/Find the Missing Retainers
 step
@@ -43679,7 +43679,7 @@ goto 29.41,80.51
 wayshrine Coral Road
 step
 goto 32.59,85.78
-'Examine _Courier Grenier's Note_ |q People of Import/.*Search the Area.* |count 1 |future
+'Examine _Courier Grenier's Note_ |q People of Import/.*Search the Area.* |count 1
 step
 goto 32.56,86.00
 'Examine _Torn Cloth_ |q People of Import/.*Search the Area.* |count 2
@@ -43687,13 +43687,13 @@ step
 goto 30.66,91.15 |q People of Import/Follow the Tracks
 step
 goto 33.00,91.27
-'Open _Breakwater Cave_ |q People of Import/Search Breakwater Cave |future
+'Open _Breakwater Cave_ |q People of Import/Search Breakwater Cave
 |tip Manually skip to the next step.
 step
 goto u34_breakwatercave_base 56.87,76.47 |q People of Import/Search Breakwater Cave
 step
 goto 67.45,85.48
-'Examine _Knight Richel's Orders_ |q People of Import/Search the Area |future
+'Examine _Knight Richel's Orders_ |q People of Import/Search the Area
 step
 'Open _High Isle and Amenos_ Map
 'Travel to _Steadfast Manor_ |q People of Import/Talk to Lord Bacaro Volorus
@@ -43715,7 +43715,7 @@ goto 20.02,76.13
 wayshrine Castle Navire
 step
 goto 16.45,74.76
-'Open _Castle Navire Courtyard_ |q People of Import/Go to Castle Navire |future
+'Open _Castle Navire Courtyard_ |q People of Import/Go to Castle Navire
 |tip Manually skip to the next step.
 step
 goto u34_CastleNaviresExt_base 39.39,63.16
@@ -43741,7 +43741,7 @@ goto 32.92,54.75
 'Open _Lower Castle Navire_ |q People of Import/Enter Lower Castle Navire
 |tip Manually skip to the next step.
 step
-goto u34_CastleNavireInt_base 28.72,29.03 |q People of Import/.*Find Duchess Elea's Notes.* |future
+goto u34_CastleNavireInt_base 28.72,29.03 |q People of Import/.*Find Duchess Elea's Notes.*
 step
 goto 44.98,29.03 |q People of Import/.*Find Duchess Elea's Notes.*
 step
@@ -43781,7 +43781,7 @@ step
 |tip Manually skip to the next step.
 step
 goto u34_gonfalonbaycity_base 73.37,46.79
-talk Captain Tsuzo |q People of Import/Talk to Captain Tsuzo |future
+talk Captain Tsuzo |q People of Import/Talk to Captain Tsuzo
 step
 goto 72.81,45.32
 'Open _Mandrake Manor_ |q People of Import/Talk to Lady Arabelle
@@ -43922,7 +43922,7 @@ step
 goto 48.39,48.90 |q Deadly Investigations/Enter Shipwreck Shoals
 step
 goto 48.04,48.56
-'Travel _Shipwreck Shoals_ |q Deadly Investigations/Enter Shipwreck Shoals |future
+'Travel _Shipwreck Shoals_ |q Deadly Investigations/Enter Shipwreck Shoals
 |tip Manually skip to the next step.
 step
 goto u34_shipwreckshoalsext_base 62.32,80.88 |q Deadly Investigations/Find Captain Tsuzo
@@ -43932,17 +43932,17 @@ step
 goto 54.27,34.60 |q Deadly Investigations/Find Captain Tsuzo
 step
 goto 55.94,27.36
-talk Captain Tsuzo |q Deadly Investigations/Talk to Captain Tsuzo |future
+talk Captain Tsuzo |q Deadly Investigations/Talk to Captain Tsuzo
 step
 goto 53.92,13.86
-talk Boatswain Islinne |q Deadly Investigations/Talk to the Boatswain Islinne |future
+talk Boatswain Islinne |q Deadly Investigations/Talk to the Boatswain Islinne
 step
 'Open _High Isle and Amenos_ Map
 'Travel to _Gonfalon Square_ |q Deadly Investigations/Return to Mandrake Manor
 |tip Manually skip to the next step.
 step
 goto u34_gonfalonbaycity_base 72.81,45.32
-'Open _Mandrake Manor_ |q Deadly Investigations/Talk to Lady Arabelle |future
+'Open _Mandrake Manor_ |q Deadly Investigations/Talk to Lady Arabelle
 |tip Manually skip to the next step.
 step
 goto 73.77,44.63
@@ -43957,13 +43957,13 @@ goto 47.37,42.97
 |tip Manually skip to the next step.
 step
 goto u34_systreszone_base 57.24,55.12
-talk Captain Basrush |q Escape from Amenos/Talk to Captain Basrush |future
+talk Captain Basrush |q Escape from Amenos/Talk to Captain Basrush
 step
 goto 57.03,55.16
 'Use _Prisoner Disguise_ |q Escape from Amenos/Use Prisoner Disguise
 step
 goto 58.27,54.31
-'Travel _The Shackled Guar_ |q Escape from Amenos/Board the Shackeled Guar |future
+'Travel _The Shackled Guar_ |q Escape from Amenos/Board the Shackeled Guar
 |tip Manually skip to the next step.
 step
 goto u34_amenosstation_city_base 59.55,71.88
@@ -43975,7 +43975,7 @@ goto 51.08,54.56
 wayshrine Amenos Station
 step
 goto 64.89,57.35
-talk Jakarn |q Escape from Amenos/Talk to Jakarn |future
+talk Jakarn |q Escape from Amenos/Talk to Jakarn
 step
 goto 71.33,50.32
 'Open _Amenos Station_ |q Escape from Amenos/Find the Camp Northeast of the Gate
@@ -43999,27 +43999,27 @@ step
 goto 73.52,34.63
 wayshrine Serpents Hollow
 step
-goto 72.28,36.86 |q Escape from Amenos/Talk to Caska |future
+goto 72.28,36.86 |q Escape from Amenos/Talk to Caska
 step
-goto 67.69,36.87 |q Escape from Amenos/Talk to Caska |future
+goto 67.69,36.87 |q Escape from Amenos/Talk to Caska
 step
-goto 61.22,36.43 |q Escape from Amenos/Talk to Caska |future |tip Pass through the tunnel to the other side.
+goto 61.22,36.43 |q Escape from Amenos/Talk to Caska |tip Pass through the tunnel to the other side.
 step
 goto 62.95,31.52
 wayshrine Trappers Peak
 step
 goto 62.95,31.52
 'Use _Trappers Peak_ Wayshrine
-'Travel to _Serpents Hollow_ |q Escape from Amenos/Talk to Caska |future
+'Travel to _Serpents Hollow_ |q Escape from Amenos/Talk to Caska
 |tip Manually skip to the next step.
 step
-goto 80.62,36.67 |q Escape from Amenos/Talk to Caska |future
+goto 80.62,36.67 |q Escape from Amenos/Talk to Caska
 step
 goto 88.25,35.62
 wayshrine Brokerock
 step
 goto 92.95,31.91
-talk Caska |q Escape from Amenos/Talk to Caska |future
+talk Caska |q Escape from Amenos/Talk to Caska
 step
 goto 91.71,31.56
 'Search _Crude Shelter_
@@ -44037,7 +44037,7 @@ goto 90.28,31.17
 |tip Manually skip to the next step.
 step
 goto 87.63,30.37
-talk Queen Ayrenn |q Escape from Amenos/Talk to Queen Ayrenn |future
+talk Queen Ayrenn |q Escape from Amenos/Talk to Queen Ayrenn
 step
 goto 84.00,30.57
 'Take _Vulk'esh Claw_ |q Escape from Amenos/.*Gather Ritual Items.* |count 1
@@ -44061,7 +44061,7 @@ goto 83.38,22.01
 talk Queen Ayrenn |q Escape from Amenos/Talk to Queen Ayrenn
 step
 goto 81.60,20.27
-'Open _Coral Cliffs_ |q Escape from Amenos/Search the Nearby Cave |future
+'Open _Coral Cliffs_ |q Escape from Amenos/Search the Nearby Cave
 |tip Manually skip to the next step.
 step
 goto u34_coralcliffsext_base 66.75,30.11 |q Escape from Amenos/Search the Nearby Cave
@@ -44083,7 +44083,7 @@ step
 goto 60.65,64.94 |q Escape from Amenos/Search the Nearby Cave
 step
 goto 72.48,54.38
-talk High King Emeric |q Escape from Amenos/Talk to High King Emeric |future
+talk High King Emeric |q Escape from Amenos/Talk to High King Emeric
 step
 goto 74.11,54.98
 'Examine _Letter from Deesh-Jee_ |lorebook Letter from Deesh-Jee/3/45/32
@@ -44097,44 +44097,44 @@ step
 step
 goto u34_systreszone_base 83.31,21.90
 |tip Watch the dialogue.
-talk High King Emeric |q Escape from Amenos/Talk to High King Emeric |future
+talk High King Emeric |q Escape from Amenos/Talk to High King Emeric
 step
 goto 84.01,24.37
 'Use _Flooded Coast_ Wayshrine
-'Travel to _Serpents Hollow_ |q Escape from Amenos/Talk to Caska |future
+'Travel to _Serpents Hollow_ |q Escape from Amenos/Talk to Caska
 |tip Manually skip to the next step.
 step
-goto 70.85,30.77 |q Escape from Amenos/Talk to Caska |future
+goto 70.85,30.77 |q Escape from Amenos/Talk to Caska
 step
-goto 74.29,28.40 |q Escape from Amenos/Talk to Caska |future
+goto 74.29,28.40 |q Escape from Amenos/Talk to Caska
 step
 goto 74.15,24.83
-talk Caska |q Escape from Amenos/Talk to Caska |future
+talk Caska |q Escape from Amenos/Talk to Caska
 step
 goto 73.26,23.70
-'Open _Old Coin Fort_ |q Escape from Amenos/Enter the Coin Fort |future
+'Open _Old Coin Fort_ |q Escape from Amenos/Enter the Coin Fort
 |tip Manually skip to the next step.
 step
 goto u34_GrnSrpntLr_Ext1_base 45.07,36.02
 |tip Watch the dialogue.
-kill Serpents |q Escape from Amenos/Defeat the Serpents |future
+kill Serpents |q Escape from Amenos/Defeat the Serpents
 step
 goto 42.13,23.62
 'Open _Coin Fort Inner Keep_ |q Escape from Amenos/Find Prince Irnskar
 |tip Manually skip to the next step.
 step
 goto u34_GrnSrpntLrInt_base 32.96,46.48
-talk Prince Irnskar |q Escape from Amenos/Talk to Prince Irnskar |future
+talk Prince Irnskar |q Escape from Amenos/Talk to Prince Irnskar
 step
 goto 74.09,43.65 |q Escape from Amenos/Find the Ascendant Lord and Magus
 step
 goto 75.43,26.49 |q Escape from Amenos/Find the Ascendant Lord and Magus
 step
 goto 57.29,22.02
-'Listen to the _Ascendant Lord_ |q Escape from Amenos/Listen to the Ascendant Lord |future
+'Listen to the _Ascendant Lord_ |q Escape from Amenos/Listen to the Ascendant Lord
 step
 goto 52.04,22.93
-'Defend _Prince Irnskar_ |q Escape from Amenos/Defend Prince Irnskar |future
+'Defend _Prince Irnskar_ |q Escape from Amenos/Defend Prince Irnskar
 step
 goto 32.53,17.71
 'Open _Coin Fort Docks_ |q Escape from Amenos/Signal the Ship
@@ -44148,7 +44148,7 @@ step
 goto 53.94,84.67 |q Escape from Amenos/Escape the Fort
 step
 goto 48.34,75.47
-'Defend _Queen Ayrenn_ |q Escape from Amenos/Defend Queen Ayrenn |future
+'Defend _Queen Ayrenn_ |q Escape from Amenos/Defend Queen Ayrenn
 step
 goto 52.00,62.48
 'Travel _Skiff to the Perfect Pounce II_ |q Escape from Amenos/Escape Amenos
@@ -44187,7 +44187,7 @@ step
 goto 34.86,37.75 |q To Catch a Magus/Meet Lady Arabelle at Mistmouth Cave
 step
 goto 34.12,35.53
-talk Lady Arabelle Davaux |q To Catch a Magus/Talk to Lady Arabelle Davaux |future
+talk Lady Arabelle Davaux |q To Catch a Magus/Talk to Lady Arabelle Davaux
 step
 goto 32.20,34.95
 'Open _Mistmouth Cave_ |q To Catch a Magus/Search Mistmouth Cave
@@ -44206,14 +44206,14 @@ goto 66.77,72.96
 'Examine _Banneret Jenine's Orders_ |lorebook Banneret Jenine's Orders/3/45/34
 step
 goto 67.81,72.22
-talk Lady Arabelle Davaux |q To Catch a Magus/Talk to Lady Arabelle Davaux |future
+talk Lady Arabelle Davaux |q To Catch a Magus/Talk to Lady Arabelle Davaux
 step
 'Open _High Isle and Amenos_ Map
 'Travel to _Castle Navire_ |q To Catch a Magus/Go to the Navire Dungeons
 |tip Manually skip to the next step.
 step
 goto u34_systreszone_base 20.40,78.62
-talk Lady Arabelle Davaux |q To Catch a Magus/Talk to Lady Arabelle Davaux |future
+talk Lady Arabelle Davaux |q To Catch a Magus/Talk to Lady Arabelle Davaux
 step
 goto 20.34,78.67
 'Use _Ascendant Order Disguise_ |q To Catch a Magus/Equip Ascendant Order Disguise
@@ -44223,14 +44223,14 @@ goto 21.05,79.70
 |tip Manually skip to the next step.
 step
 goto u34_ZQ5Crypt_base 35.71,13.27
-talk Ascendant Sentry |q To Catch a Magus/Talk to the Ascendant Order Sentry |future
+talk Ascendant Sentry |q To Catch a Magus/Talk to the Ascendant Order Sentry
 step
 goto 35.71,13.27
 'Open _Hall of the Order_ |q To Catch a Magus/Enter the Hall of the Order
 |tip Manually skip to the next step.
 step
 goto 45.24,26.26
-'Observe _Meeting_ |q To Catch a Magus/Observe Meeting |future
+'Observe _Meeting_ |q To Catch a Magus/Observe Meeting
 step
 goto 37.35,23.13
 'Open _Lower Catacombs_ |q To Catch a Magus/Find the Ascendant Magus
@@ -44241,7 +44241,7 @@ step
 goto 48.71,72.52 |q To Catch a Magus/Find the Ascendant Magus
 step
 goto 61.36,69.25
-'Examine _Sailing Order_ |q To Catch a Magus/Search the Underground Dock |future
+'Examine _Sailing Order_ |q To Catch a Magus/Search the Underground Dock
 step
 goto 62.04,65.24
 talk The Ascendant Magus |q To Catch a Magus/Talk to the Ascendant Magus
@@ -44254,14 +44254,14 @@ step
 goto 68.30,28.23 |q To Catch a Magus/Find Lady Arabelle Davaux
 step
 goto 60.61,28.10
-talk Lady Arabelle Davaux |q To Catch a Magus/Talk to Lady Arabelle Davaux |future
+talk Lady Arabelle Davaux |q To Catch a Magus/Talk to Lady Arabelle Davaux
 step
 'Open _High Isle and Amenos_ Map
 'Travel to _Castle Navire_ |q To Catch a Magus/Go to the Navire Docks
 |tip Manually skip to the next step.
 step
 goto u34_systreszone_base 13.30,79.13
-talk Steward Hercian Stalo |q To Catch a Magus/Talk to Steward Hercian Stalo |future
+talk Steward Hercian Stalo |q To Catch a Magus/Talk to Steward Hercian Stalo
 step
 goto 10.70,78.16
 |tip Go across ship in front of you and follow the dock to this point.
@@ -44300,7 +44300,7 @@ goto 48.73,50.42 |q The Ascendant Storm/Find Captain Kaleen
 step
 goto 61.70,70.99
 |tip Cross Bridge.
-talk Captain Kaleen |q The Ascendant Storm/Talk to Captain Kaleen |future
+talk Captain Kaleen |q The Ascendant Storm/Talk to Captain Kaleen
 step
 goto 47.37,42.97
 'Use _Gonfalon Square_ Wayshrine
@@ -44314,7 +44314,7 @@ goto 15.12,56.40
 step
 goto 15.12,56.40
 |tip Follow the Docks around.
-talk Captain Kaleen |q The Ascendant Storm/Talk to Captain Kaleen |future
+talk Captain Kaleen |q The Ascendant Storm/Talk to Captain Kaleen
 step
 goto 13.86,55.91
 'Destroy _Mooring Line_ |q The Ascendant Storm/Line 3
@@ -44326,7 +44326,7 @@ goto 14.38,55.65
 'Destroy _Mooring Line_ |q The Ascendant Storm/Line 2
 step
 goto 14.17,55.80
-'Travel _Ship to All Flags Islet_ |q The Ascendant Storm/Travel to All Flags Islet |future
+'Travel _Ship to All Flags Islet_ |q The Ascendant Storm/Travel to All Flags Islet
 |tip Manually skip to the next step.
 step
 goto U34_AllFlags_ext_base 55.45,56.86
@@ -44338,7 +44338,7 @@ step
 goto 33.35,64.06 |q The Ascendant Storm/Find the Alliance Leaders |tip Go down the stairs.
 step
 goto 66.31,58.30
-kill the Vulk'esh |q The Ascendant Storm/Stop the Vulk'esh Assault |future
+kill the Vulk'esh |q The Ascendant Storm/Stop the Vulk'esh Assault
 step
 goto 70.95,53.91
 talk Queen Ayrenn |q The Ascendant Storm/Talk to Queen Ayrenn
@@ -44350,7 +44350,7 @@ goto 41.80,12.06
 |tip Manually skip to the next step.
 step
 goto U34_AllFlags_ext_base 49.13,31.17
-'Clear the _Battlements_ |q The Ascendant Storm/Clear the Battlements |future
+'Clear the _Battlements_ |q The Ascendant Storm/Clear the Battlements
 step
 goto 46.73,31.43
 talk Prince Irnskar |q The Ascendant Storm/Talk to Prince Irnskar
@@ -44371,7 +44371,7 @@ goto 46.01,35.28
 step
 goto 59.44,33.76
 |tip Do not go in the middle of the circle just kill the 3 on the outside.
-'Disrupt the _Storm Ritual_ |q The Ascendant Storm/Disrupt the Storm Ritual |future
+'Disrupt the _Storm Ritual_ |q The Ascendant Storm/Disrupt the Storm Ritual
 step
 goto 57.42,36.86
 talk High King Emeric |q The Ascendant Storm/Talk to High King Emeric
@@ -44385,7 +44385,7 @@ goto 55.00,45.48
 step
 goto U34_AllFlags_int2_base 41.54,61.95
 |tip Watch the dialogue after killing the forces.
-'Defend _Memorial Hall_ |q The Ascendant Storm/Defend Memorial Hall |future
+'Defend _Memorial Hall_ |q The Ascendant Storm/Defend Memorial Hall
 step
 goto 17.99,65.44
 'Open _West Courtyard_ |q The Ascendant Storm/Defeat the Ascendant Magus
@@ -44398,7 +44398,7 @@ goto U34_AllFlags_ext_base 40.49,54.93
 kill Ascendant Magus |q The Ascendant Storm/Defeat the Ascendant Magus
 step
 goto 44.36,62.85
-'Open _All Flags Islet_ |q The Ascendant Storm/Exit All Flags Castle |future
+'Open _All Flags Islet_ |q The Ascendant Storm/Exit All Flags Castle
 |tip Manually skip to the next step.
 step
 goto u34_systreszone_base 31.11,65.63
@@ -44413,7 +44413,7 @@ goto 30.42,66.11
 step
 goto 38.23,72.49
 |tip Behind the Manor.
-talk Lord Bacaro Volorus |q A Chance for Peace/Talk to Lord Bacaro Volorus |future
+talk Lord Bacaro Volorus |q A Chance for Peace/Talk to Lord Bacaro Volorus
 step
 goto 37.43,77.05
 'Use _Steadfast Manor_
@@ -44463,12 +44463,12 @@ talk Lady Arabelle Davaux
 turnin A Chance for Peace |next Extras\\Extras\\Main Quests Only\\DLC\\Firesong
 ]])
 
-ZGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Firesong",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Firesong",[[
 loadingimage loadscreen_galen_zone.dds
 description The DLC will take place in a new zone, Galen and Y'ffelon, two of the smaller islands in the Systres archipelago.
 step
 'Open _Galen and Y'ffelon_ Map
-'Travel to _Vastyr Outskirts_ |q A Sea of Troubles |future
+'Travel to _Vastyr Outskirts_ |q A Sea of Troubles
 |tip Manually skip to the next step.
 step
 goto u36_galenisland_base 29.11,62.37
@@ -44504,7 +44504,7 @@ step
 goto 50.24,67.19 |q A Sea of Troubles/.*Repel Sea Elf Ships.* |count 3
 step
 goto 51.32,65.10
-'Use _Ballista_ |q A Sea of Troubles/.*Repel Sea Elf Ships.* |count 3 |future
+'Use _Ballista_ |q A Sea of Troubles/.*Repel Sea Elf Ships.* |count 3
 |tip Manually skip to the next step.
 step
 goto 48.33,63.74 |q A Sea of Troubles/Investigate Windwrack Fort
@@ -44526,7 +44526,7 @@ goto 54.20,55.12
 'Examine _Burnt Emberblooms_ |q A Sea of Troubles/.*Search the Village.* |count 2
 step
 goto 55.60,57.40
-'Examine _Eldertide Altar_ |q A Sea of Troubles/.*Search the Village.* |future
+'Examine _Eldertide Altar_ |q A Sea of Troubles/.*Search the Village.*
 |tip Manually skip to the next step.
 step
 goto 53.17,56.33
@@ -44553,7 +44553,7 @@ goto 48.60,50.95
 step
 goto u36_suncleftgrotto_base 18.06,64.30 |q A Sea of Troubles/Search Suncleft Grotto
 step
-goto 44.12,51.23 |q A Sea of Troubles/Find the Captives |future
+goto 44.12,51.23 |q A Sea of Troubles/Find the Captives
 step
 goto 47.95,67.51 |q A Sea of Troubles/Find the Captives
 step
@@ -44605,7 +44605,7 @@ step
 goto u36_VastyrCity_base 59.51,43.47 |q A Sea of Troubles/Find Druid Laurel
 step
 goto 78.72,56.03
-talk Druid Laurel |q A Sea of Troubles/Talk to Druid Laurel |future
+talk Druid Laurel |q A Sea of Troubles/Talk to Druid Laurel
 step
 goto 63.86,46.02
 'Use _Vastyr_ Wayshrine
@@ -44622,12 +44622,12 @@ goto 30.90,39.46
 'Meet _Druid Laurel at the Telling Stone_ |q A Sea of Troubles/Meet Druid Laurel at the Telling Stone
 step
 goto 30.90,39.46
-talk Druid Laurel |q A Sea of Troubles/Talk to Druid Laurel |future
+talk Druid Laurel |q A Sea of Troubles/Talk to Druid Laurel
 step
 goto 29.26,40.24 |q A Sea of Troubles/Go to Draoife Dell
 step
 goto 34.39,45.77
-'Enter _Draoife Dell_ |q A Sea of Troubles/Go to Draoife Dell |future
+'Enter _Draoife Dell_ |q A Sea of Troubles/Go to Draoife Dell
 |tip Manually skip to the next step.
 step
 goto u36_GN1Grove_base 46.30,23.82
@@ -44637,10 +44637,10 @@ goto 46.30,23.82
 'Protect the _Archdruids_ |q A Sea of Troubles/Protect the Archdruids
 step
 goto 48.60,77.30
-kill Druid Branagh |q A Sea of Troubles/Kill Druid Branagh |future
+kill Druid Branagh |q A Sea of Troubles/Kill Druid Branagh
 step
 goto 62.89,79.76
-'Enter _Galen_ |q A Sea of Troubles/Leave the Dell |future
+'Enter _Galen_ |q A Sea of Troubles/Leave the Dell
 step
 goto u36_galenisland_base 32.16,51.02 |q A Sea of Troubles/Return to Castle Mornard
 step
@@ -44685,14 +44685,14 @@ goto 17.50,37.29
 wayshrine Y'free's Path
 step
 goto 14.45,36.18
-talk Captain Siravaen |q Tides of Ruin/Talk to Captain Siravaen |future
+talk Captain Siravaen |q Tides of Ruin/Talk to Captain Siravaen
 step
 goto 07.34,36.47 |q Tides of Ruin/Find the Cave Passage
 step
 goto 07.62,34.55 |q Tides of Ruin/Find the Cave Passage
 step
 goto 09.55,33.63
-'Enter _Castle Tonnere Dungeons_ |q Tides of Ruin/Enter Castle Tonnere |future
+'Enter _Castle Tonnere Dungeons_ |q Tides of Ruin/Enter Castle Tonnere
 |tip Manually skip to the next step.
 step
 goto u36_gn2_dungeon_base 15.16,74.91 |q Tides of Ruin/Search for Sir Stefan Mornard
@@ -44700,7 +44700,7 @@ step
 goto 54.43,63.21 |q Tides of Ruin/Search for Sir Stefan Mornard
 step
 goto 50.52,51.59
-talk Sir Stefan Mornard |q Tides of Ruin/Talk to Sir Stefan Mornard |future
+talk Sir Stefan Mornard |q Tides of Ruin/Talk to Sir Stefan Mornard
 step
 goto 67.24,67.16 |q Tides of Ruin/Retrieve the Cell Key
 step
@@ -44736,7 +44736,7 @@ step
 goto u36_gn2_keep_base 74.49,50.61 |q Tides of Ruin/Find the Ancient Tree
 step
 goto 58.34,16.73
-'Enter _Eldertide Hollow_ |q Tides of Ruin/Enter the Hidden Shrine |future
+'Enter _Eldertide Hollow_ |q Tides of Ruin/Enter the Hidden Shrine
 step
 goto u36_gn2_eldertide_base 13.78,23.51 |q Tides of Ruin/Find the Eldertide Seed
 step
@@ -44747,7 +44747,7 @@ goto 37.62,51.53
 |tip Manually skip to the next step.
 step
 goto 57.61,72.63
-kill Captain Uldiss |q Tides of Ruin/Kill Captain Uldiss |future
+kill Captain Uldiss |q Tides of Ruin/Kill Captain Uldiss
 step
 goto 65.97,80.86
 'Take _Eldertide Seed_ |q Tides of Ruin/Take the Eldertide Seed
@@ -44806,13 +44806,13 @@ goto 29.09,22.04
 wayshrine Glimmertarn
 step
 goto 27.95,22.32
-talk Druid Laurel |q Seeds of Destruction/Talk to Druid Laurel |future
+talk Druid Laurel |q Seeds of Destruction/Talk to Druid Laurel
 step
 goto 35.48,21.06 |q Seeds of Destruction/Find Path to Broken Oar Cove
 step
 goto 37.67,15.80 |q Seeds of Destruction/Find Path to Broken Oar Cove
 step
-goto 35.65,15.36 |q Seeds of Destruction/Go to Broken Oar Cove |future
+goto 35.65,15.36 |q Seeds of Destruction/Go to Broken Oar Cove
 step
 goto 34.89,16.16
 'Take _Everflame Torch_ |q Seeds of Destruction/Retrieve the Everflame Torch
@@ -44825,7 +44825,7 @@ step
 goto 17.57,16.61 |q Seeds of Destruction/Meet Druid Laurel at Veil's Bluff
 step
 goto 17.23,20.37
-talk Druid Laurel |q Seeds of Destruction/Talk to Druid Laurel |future
+talk Druid Laurel |q Seeds of Destruction/Talk to Druid Laurel
 step
 goto 17.09,20.58
 'Ignite _Stonelore Circle Beacon_ |q Seeds of Destruction/Ignite the Beacon
@@ -44837,15 +44837,15 @@ step
 goto 28.80,22.69 |q Seeds of Destruction/Go to Glimmertarn
 step
 goto 25.20,24.05
-talk Archdruid Rahval |q Seeds of Destruction/Talk to Archdruid Rahval |future
+talk Archdruid Rahval |q Seeds of Destruction/Talk to Archdruid Rahval
 step
 goto 30.53,22.69 |q Seeds of Destruction/Go to Clohaigh
 step
 goto 38.77,24.99
-talk Druid Laurel |q Seeds of Destruction/Talk to Druid Laurel |future
+talk Druid Laurel |q Seeds of Destruction/Talk to Druid Laurel
 step
 goto 38.81,25.14
-'Enter _Clohaigh_ |q Seeds of Destruction/Enter Clohaigh |future
+'Enter _Clohaigh_ |q Seeds of Destruction/Enter Clohaigh
 |tip Manually skip to the next step.
 step
 goto u36_GN3Cave_base 35.14,35.67
@@ -44860,12 +44860,12 @@ goto 46.48,26.18
 'Examine _Wall Marking_ |q Seeds of Destruction/Search for Clues in the Cave
 |tip Manually skip to the next step.
 step
-goto 72.60,22.55 |q Seeds of Destruction/.*Unlock the Warded Door.* |count 1 |future
+goto 72.60,22.55 |q Seeds of Destruction/.*Unlock the Warded Door.* |count 1
 step
-goto 79.74,37.64 |q Seeds of Destruction/.*Unlock the Warded Door.* |count 1 |future
+goto 79.74,37.64 |q Seeds of Destruction/.*Unlock the Warded Door.* |count 1
 step
 goto 71.81,44.00
-'Rotate _Druid Stone_ |q Seeds of Destruction/.*Unlock the Warded Door.* |count 1 |future
+'Rotate _Druid Stone_ |q Seeds of Destruction/.*Unlock the Warded Door.* |count 1
 step
 goto 87.44,38.40
 'Rotate _Druid Stone_ |q Seeds of Destruction/.*Unlock the Warded Door.* |count 2
@@ -44876,7 +44876,7 @@ step
 goto 77.45,69.97 |q Seeds of Destruction/Search the Inner Chamber
 step
 goto 51.02,70.00
-talk Frii |q Seeds of Destruction/Talk to Frii |future
+talk Frii |q Seeds of Destruction/Talk to Frii
 step
 goto 49.80,69.68
 'Take _Stonelore Sacred Seed_ |q Seeds of Destruction/Take the Stonelore Seed
@@ -44886,7 +44886,7 @@ step
 |tip Manually skip to the next step.
 step
 goto u36_galenisland_base 27.79,23.52
-talk Archdruid Rahval |q Seeds of Destruction/Talk to Archdruid Rahval |future
+talk Archdruid Rahval |q Seeds of Destruction/Talk to Archdruid Rahval
 step
 goto 27.62,23.69
 talk Sir Stefan Mornard
@@ -44898,7 +44898,7 @@ goto 28.99,22.06
 'Travel to _Y'free's Path_ |q City Under Siege/Go to the Western Shore
 |tip Manually skip to the next step.
 step
-goto 13.76,29.77 |q City Under Siege/Talk to Captain Siravaen |future
+goto 13.76,29.77 |q City Under Siege/Talk to Captain Siravaen
 step
 goto 13.35,29.45
 talk Captain Siravaen |q City Under Siege/Talk to Captain Siravaen
@@ -44910,7 +44910,7 @@ step
 goto 13.89,20.45 |q City Under Siege/Find a Way Down to the Docks
 step
 goto 14.69,22.14
-'Destroy _Mooring_ |q City Under Siege/.*Release the Mad Maiden's Moorings.* |count 1 |future
+'Destroy _Mooring_ |q City Under Siege/.*Release the Mad Maiden's Moorings.* |count 1
 step
 goto 13.07,24.20
 'Destroy _Mooring_ |q City Under Siege/.*Release the Mad Maiden's Moorings.* |count 2
@@ -44931,7 +44931,7 @@ step
 goto 15.08,24.12 |q City Under Siege/Board the Mad Maiden
 step
 goto 14.73,23.28
-talk Captain Siravaen |q City Under Siege/Talk to Captain Siravaen |future
+talk Captain Siravaen |q City Under Siege/Talk to Captain Siravaen
 step
 goto 14.79,23.11
 'Open _Mad Maiden_ |q City Under Siege/Go to Vastyr
@@ -44942,7 +44942,7 @@ step
 goto 30.87,34.62 |q City Under Siege/Find Count Leonard Mornard
 step
 goto 44.09,32.39
-talk Count Mornard |q City Under Siege/Talk to Count Mornard |future
+talk Count Mornard |q City Under Siege/Talk to Count Mornard
 step
 goto u36_VastyrCityCathedral_base 58.39,21.68
 'Open _Vastyr Old Druid Tunnels_ |q City Under Siege/Find Archdruid Ellic
@@ -44981,14 +44981,14 @@ goto 74.94,56.89
 step
 goto u36_VastyrCity_base 50.21,54.51
 |tip Watch the dialogue.
-talk Sir Stefan Mornard |q City Under Siege/Talk to Sir Stefan Mornard |future
+talk Sir Stefan Mornard |q City Under Siege/Talk to Sir Stefan Mornard
 step
 goto 49.25,50.47
 'Open _Cathredral District_ |q City Under Siege/Find Captain Siravaen
 |tip Manually skip to the next step.
 step
 goto 45.80,47.42
-talk Captain Siravaen |q City Under Siege/Talk to Captain Siravaen |future
+talk Captain Siravaen |q City Under Siege/Talk to Captain Siravaen
 step
 goto 51.84,46.43
 'Open _Noble District_ |q City Under Siege/Go to Castle Mornard
@@ -45015,7 +45015,7 @@ goto u36_VastyrCity_base 63.72,45.73
 |tip Manually skip to the next step.
 step
 goto u36_galenisland_base 26.50,22.93
-talk Druid Laurel |q The Dream of Kasorayn/Talk to Druid Laurel |future
+talk Druid Laurel |q The Dream of Kasorayn/Talk to Druid Laurel
 step
 goto 26.42,22.86
 talk Frii |q The Dream of Kasorayn/Talk to Frii
@@ -45026,7 +45026,7 @@ goto 28.99,22.06
 |tip Manually skip to the next step.
 step
 goto 53.28,37.39
-talk Druid Laurel |q The Dream of Kasorayn/Talk to Druid Laurel |future
+talk Druid Laurel |q The Dream of Kasorayn/Talk to Druid Laurel
 step
 goto 57.41,37.02 |q The Dream of Kasorayn/Find the Door to Ivyhame
 step
@@ -45038,7 +45038,7 @@ goto 62.09,36.61
 talk Frii |q The Dream of Kasorayn/Talk to Frii
 step
 goto 61.16,37.41
-talk Frii |q The Dream of Kasorayn/.*Activate the Druid Stones.* |count 1 |future
+talk Frii |q The Dream of Kasorayn/.*Activate the Druid Stones.* |count 1
 |tip Manually skip to the next step.
 step
 goto 57.30,37.23
@@ -45061,7 +45061,7 @@ goto 63.17,35.41 |q The Dream of Kasorayn/Return to the Sealed Door |tip Drop do
 step
 goto 61.10,38.09
 |tip Wait for Frii to Open the Door.
-'Open _Ivyhame_ |q The Dream of Kasorayn/Enter the Ivy Thronehall |future
+'Open _Ivyhame_ |q The Dream of Kasorayn/Enter the Ivy Thronehall
 |tip Manually skip to the next step.
 step
 goto u36_ivyhame_base 33.84,18.81
@@ -45074,19 +45074,19 @@ step
 goto 44.61,84.33 |q The Dream of Kasorayn/Explore the Ivy Thronehall
 step
 goto 70.34,64.41
-kill Sika Redhorn |q The Dream of Kasorayn/Defeat the Throne Guardian |future
+kill Sika Redhorn |q The Dream of Kasorayn/Defeat the Throne Guardian
 |tip Manually skip to the next step.
 step
 goto 80.63,64.30
-'Touch _Dancing Mote_ |q The Dream of Kasorayn/Follow Frii |future
+'Touch _Dancing Mote_ |q The Dream of Kasorayn/Follow Frii
 |tip Manually skip to the next step.
 step
 goto 84.97,59.06
-'Open _Druid King's Garden_ |q The Dream of Kasorayn/Follow Frii |future
+'Open _Druid King's Garden_ |q The Dream of Kasorayn/Follow Frii
 |tip Manually skip to the next step.
 step
 goto u36_ivyhame_hiddenroom_base 86.16,51.79
-'Touch _Dancing Mote_ |q The Dream of Kasorayn/Touch the Mote |future
+'Touch _Dancing Mote_ |q The Dream of Kasorayn/Touch the Mote
 |tip Manually skip to the next step.
 step
 goto 85.91,51.63
@@ -45107,7 +45107,7 @@ goto 86.74,49.27
 'Place _Cauldron_ |q The Dream of Kasorayn/Place the Herbs in the Cauldron
 step
 goto 86.74,49.27
-'Drink _Cauldron_ |q The Dream of Kasorayn/Drink from the Cauldron |future
+'Drink _Cauldron_ |q The Dream of Kasorayn/Drink from the Cauldron
 |tip Manually skip to the next step.
 step
 goto u36_gn6_stronghold_base 45.75,20.81
@@ -45147,7 +45147,7 @@ goto 54.89,89.04
 step
 goto 51.83,80.34
 |tip Watch the dialogue.
-'Touch _Summoning Mote_ |q The Dream of Kasorayn/Touch the Summoning Mote |future
+'Touch _Summoning Mote_ |q The Dream of Kasorayn/Touch the Summoning Mote
 |tip Manually skip to the next step.
 step
 goto u36_ivyhame_hiddenroom_base 86.37,42.02
@@ -45162,7 +45162,7 @@ step
 goto 67.43,36.43 |q The Dream of Kasorayn/Find Druid Laurel
 step
 goto 68.08,31.59
-'Take _Druid Laurel's Staff_ |q The Dream of Kasorayn/Take Druid Laurel's Staff |future
+'Take _Druid Laurel's Staff_ |q The Dream of Kasorayn/Take Druid Laurel's Staff
 step
 goto 68.08,31.58
 talk Frii |q The Dream of Kasorayn/Talk to Frii
@@ -45200,7 +45200,7 @@ goto 66.37,68.86
 talk Captain Siravaen |q Guardian of Y'ffelon/Talk to Captain Siravaen
 step
 goto 66.07,68.87
-'Travel _Skiff to the Mad Maiden_ |q Guardian of Y'ffelon/Board the Mad Maiden |future
+'Travel _Skiff to the Mad Maiden_ |q Guardian of Y'ffelon/Board the Mad Maiden
 |tip Manually skip to the next step.
 step
 goto u36_gn6_madmaiden_base 43.00,45.22
@@ -45208,7 +45208,7 @@ goto u36_gn6_madmaiden_base 43.00,45.22
 'Defend the _Mad Maiden_ |q Guardian of Y'ffelon/Defend the Mad Maiden
 step
 goto 36.56,61.33
-'Use _Ship's Bell_ |q Guardian of Y'ffelon/Signal the Crew |future
+'Use _Ship's Bell_ |q Guardian of Y'ffelon/Signal the Crew
 step
 goto 55.56,21.56
 'Use _Ballista_ |q Guardian of Y'ffelon/Fire Forward Ballista
@@ -45235,7 +45235,7 @@ goto u36_capper2_volcano_base 36.21,43.02
 talk Sir Stefan Mornard |q Guardian of Y'ffelon/Talk to Sir Stefan Mornard
 step
 goto 54.61,45.27
-'Open _Cage_ |q Guardian of Y'ffelon/Free the Captives |future
+'Open _Cage_ |q Guardian of Y'ffelon/Free the Captives
 step
 goto 72.39,45.63 |q Guardian of Y'ffelon/Free More Captives
 step
@@ -45254,7 +45254,7 @@ step
 goto 60.23,55.67 |q Guardian of Y'ffelon/Go to the Temple of Y'ffelon
 step
 goto 56.15,60.29
-'Open _Temple of Y'ffelon_ |q Guardian of Y'ffelon/Enter the  Temple of Y'ffelon |future
+'Open _Temple of Y'ffelon_ |q Guardian of Y'ffelon/Enter the  Temple of Y'ffelon
 |tip Manually skip to the next step.
 step
 goto u36_gn6_stronghold_base 43.67,23.90
@@ -45267,10 +45267,10 @@ step
 goto 24.38,59.35 |q Guardian of Y'ffelon/Reach Druid King Kasorayn's Tomb
 step
 goto 24.43,56.44
-'Open _Cage_ |q Guardian of Y'ffelon/Free Druid Laurel |future
+'Open _Cage_ |q Guardian of Y'ffelon/Free Druid Laurel
 step
 goto 24.51,56.68
-talk Druid Laurel |q Guardian of Y'ffelon/Talk to Druid Laurel |future
+talk Druid Laurel |q Guardian of Y'ffelon/Talk to Druid Laurel
 |tip Manually skip to the next step.
 step
 goto 29.45,66.84 |q Guardian of Y'ffelon/Enter Druid King Kasorayn's Tomb
@@ -45280,7 +45280,7 @@ goto 43.98,66.29
 |tip Manually skip to the next step.
 step
 goto 48.17,73.26
-'Wait for _Frii to Awaken Urdiir the Guardian_ |q Guardian of Y'ffelon/Wait for Frii to Awaken Urdiir the Guardian |future
+'Wait for _Frii to Awaken Urdiir the Guardian_ |q Guardian of Y'ffelon/Wait for Frii to Awaken Urdiir the Guardian
 step
 goto 
 |tip Kill Blazing Lion, Blazing Wamasu, and Blazing Gryphon during shield phase. Dodge the fireballs in the final shield phase since there is no animals to fights.
@@ -45290,7 +45290,7 @@ goto 52.62,87.37
 talk Frii |q Guardian of Y'ffelon/Talk to Frii
 step
 'Open _Galen and Y'ffelon_ Map
-'Travel to _Vastyr_ |q Guardian of Y'ffelon/Return to Vastyr |future
+'Travel to _Vastyr_ |q Guardian of Y'ffelon/Return to Vastyr
 |tip Manually skip to the next step.
 step
 goto u36_VastyrCity_base 52.24,37.43
@@ -45338,7 +45338,7 @@ goto u36_VastyrCity_base 54.24,37.42
 |tip Manually skip to the next step.
 step
 goto u36_VastyrCityCastle_base 29.50,61.81
-talk Count Stefan Mornard |q The Hidden Lord/Talk to Count Stefan Mornard |future
+talk Count Stefan Mornard |q The Hidden Lord/Talk to Count Stefan Mornard
 step
 goto 55.58,72.87
 'Open _Vastyr_ |q The Hidden Lord/Talk to Lady Arabelle
@@ -45398,7 +45398,7 @@ step
 goto 9.45,59.24 |q The Hidden Lord/Find Lord Bacaro at the Docks
 step
 goto 13.29,80.23
-talk Lord Bacaro Volorus |q The Hidden Lord/Talk to Lord Bacaro Volorus |future
+talk Lord Bacaro Volorus |q The Hidden Lord/Talk to Lord Bacaro Volorus
 step
 goto 4.80,48.77
 'Use _Westbay_
@@ -45471,7 +45471,7 @@ goto u34_navirecommander_base 78.92,50.74
 |tip Manually skip to the next step.
 step
 goto 78.01,60.48
-talk Duchess Elea |q The Hidden Lord/Talk to Duchess Elea |future
+talk Duchess Elea |q The Hidden Lord/Talk to Duchess Elea
 step
 goto 80.30,72.39
 'Open _Knight Commander's Private Chamber_ |q The Hidden Lord/Search Knight Commander's Private Chamber
@@ -45499,7 +45499,7 @@ goto 78.47,29.44
 |tip Manually skip to the next step.
 step
 goto u34_systreszone_base 17.83,77.14
-talk Courier Finnoa |q The Hidden Lord/Talk to Courier Finnoa |future
+talk Courier Finnoa |q The Hidden Lord/Talk to Courier Finnoa
 step
 goto 17.92,77.03
 talk Captain Za'ji |q The Hidden Lord/Talk to Za'ji
@@ -45513,7 +45513,7 @@ goto 50.09,79.42 |q The Hidden Lord/Go to Druid Ryvana's Workshop
 step
 goto 45.60,79.31
 |tip Inside Workshop.
-talk Druid Ryvana |q The Hidden Lord/Talk to Druid Ryvana |future
+talk Druid Ryvana |q The Hidden Lord/Talk to Druid Ryvana
 step
 'Open _High Isle and Amenos_ Map
 'Travel to _Dufort Shipyards_ |q The Hidden Lord/Investigate Garick's Rest
@@ -45528,7 +45528,7 @@ step
 goto 41.93,44.22 |q The Hidden Lord/Investigate Garick's Rest
 step
 goto 40.38,44.41
-'Open _Garrick's Rest Dungeons_ |q The Hidden Lord/Investigate Garick's Rest |future
+'Open _Garrick's Rest Dungeons_ |q The Hidden Lord/Investigate Garick's Rest
 |tip Manually skip to the next step.
 step
 goto u36_capper1_dungeon1_base 24.10,62.85 |q The Hidden Lord/Explore Garick's Rest Dungeons
@@ -45562,7 +45562,7 @@ step
 goto 64.01,64.11 |q The Hidden Lord/Find the Alchemical Garden
 step
 goto 75.58,51.33
-'Open _Alchemical Garden_ |q The Hidden Lord/Find the Alchemical Garden |future
+'Open _Alchemical Garden_ |q The Hidden Lord/Find the Alchemical Garden
 step
 goto 92.04,53.13
 'Open _Druid Ritual Box_ |q The Hidden Lord/Explore the Alchemical Garden
@@ -45579,7 +45579,7 @@ goto u34_systreszone_base 37.29,74.34
 |tip Manually skip to the next step.
 step
 goto 37.41,74.13
-talk Captain Marguerite |q The Hidden Lord/Talk to Captain Marguerite |future
+talk Captain Marguerite |q The Hidden Lord/Talk to Captain Marguerite
 step
 goto 37.58,74.03
 'Open _High Isle_ |q The Hidden Lord/Enter the Steadfast Manor Cellars
@@ -45590,7 +45590,7 @@ goto 38.09,72.83
 |tip Manually skip to the next step.
 step
 goto u36_gnc1_steadfastcellar_base 26.21,62.14
-'Place _Druidic Sconce_ |q The Hidden Lord/Investigate Sconce |future
+'Place _Druidic Sconce_ |q The Hidden Lord/Investigate Sconce
 step
 goto 24.76,59.71
 'Open _Ancient Druid Circle_ |q The Hidden Lord/Enter the Door
@@ -45642,7 +45642,7 @@ goto u36_VastyrCity_base 52.23,37.44
 |tip Manually skip to the next step.
 step
 goto u36_VastyrCityCastle_base 44.07,69.01
-talk Count Stefan Mornard |q The Ivy Throne/Talk to Count Stefan Mornard |future
+talk Count Stefan Mornard |q The Ivy Throne/Talk to Count Stefan Mornard
 step
 goto u36_VastyrCityCastle2ndFl_base 60.49,40.04
 |tip Go upstairs.
@@ -45651,35 +45651,35 @@ step
 goto u36_VastyrCityCastleLib_base 64.46,12.20 |q The Ivy Throne/Find the Druid King's Crown |tip Map Messed up at begining just go foward until map corrects itself.
 step
 goto 54.64,26.53
-talk Count Stefan Mornard |q The Ivy Throne/Talk to Count Stefan Mornard |future
+talk Count Stefan Mornard |q The Ivy Throne/Talk to Count Stefan Mornard
 step
 'Open _Galen and Y'ffelon_ Map
 'Travel to _Glimmertarn_ |q The Ivy Throne/Go to Glimmertarn
 |tip Manually skip to the next step.
 step
 goto u36_galenisland_base 28.19,22.42
-talk Druid Laurel |q The Ivy Throne/Talk to Druid Laurel |future
+talk Druid Laurel |q The Ivy Throne/Talk to Druid Laurel
 step
 goto 29.85,23.53 |q The Ivy Throne/Follow Lady Arabelle to Y'ffre's Path
 step
 goto 28.31,29.68
-talk Captain Za'ji |q The Ivy Throne/Talk to Captain Za'ji |future
+talk Captain Za'ji |q The Ivy Throne/Talk to Captain Za'ji
 |tip Manually skip to the next step.
 step
 goto 28.63,33.73
-talk Caska |q The Ivy Throne/Talk to Caska |future
+talk Caska |q The Ivy Throne/Talk to Caska
 |tip Manually skip to the next step.
 step
 goto 25.03,34.55
-talk Ryvana |q The Ivy Throne/Talk to Ryvana |future
+talk Ryvana |q The Ivy Throne/Talk to Ryvana
 |tip Manually skip to the next step.
 step
 goto 24.51,36.19
-'Open _Y'ffre's Path Ruins_ |q The Ivy Throne/Talk to Lady Arabelle |future
+'Open _Y'ffre's Path Ruins_ |q The Ivy Throne/Talk to Lady Arabelle
 |tip Manually skip to the next step.
 step
 goto u36_c2_yfreespath_base 47.75,25.20
-talk Lady Arabelle Davaux |q The Ivy Throne/Talk to Lady Arabelle |future
+talk Lady Arabelle Davaux |q The Ivy Throne/Talk to Lady Arabelle
 step
 goto 47.51,29.52
 'Enter _Y'ffre's Path Ruins_ |q The Ivy Throne/Find Lord Bacaro and Frii
@@ -45693,10 +45693,10 @@ goto 62.84,72.85
 'Enter _Y'ffre's Path Ruins_ |q The Ivy Throne/Find Lord Bacaro and Frii
 |tip Manually skip to the next step.
 step
-goto 49.06,82.62 |q The Ivy Throne/Defeat the Summoned Creature |future
+goto 49.06,82.62 |q The Ivy Throne/Defeat the Summoned Creature
 step
 goto 54.75,83.58
-kill Summoned Spirit |q The Ivy Throne/Defeat the Summoned Creature |future
+kill Summoned Spirit |q The Ivy Throne/Defeat the Summoned Creature
 step
 goto 54.99,83.72
 talk Lady Arabelle Davaux |q The Ivy Throne/Talk to Lady Arabelle
@@ -45724,7 +45724,7 @@ goto u36_VastyrCity_base 52.23,37.44
 |tip Manually skip to the next step.
 step
 goto u36_VastyrCityCastle_base 54.17,45.22
-talk Count Stefan Mornard |q The Ivy Throne/Talk to Count Stefan Mornard |future
+talk Count Stefan Mornard |q The Ivy Throne/Talk to Count Stefan Mornard
 step
 goto 52.77,42.67
 talk Captain Siravaen |q The Ivy Throne/Talk to Captain Siravaen
@@ -45753,7 +45753,7 @@ step
 goto 87.03,64.57 |q The Ivy Throne/Search Around Mount Firesong
 step
 goto 75.23,77.63
-'Enter _Mount Firesong_ |q The Ivy Throne/Enter Mount Firesong |future
+'Enter _Mount Firesong_ |q The Ivy Throne/Enter Mount Firesong
 |tip Manually skip to the next step.
 step
 goto u36_c2_mtfiresongint_base 49.81,18.31 |q The Ivy Throne/Explore Mount Firesong
@@ -45849,7 +45849,7 @@ goto u36_VastyrCity_base 63.71,45.78
 |tip Manually skip to the next step.
 step
 goto u36_galenisland_base 28.42,18.41
-'Place _Tree Bed_ |q And Now, Perhaps, Peace/Honor Frii's Request |future
+'Place _Tree Bed_ |q And Now, Perhaps, Peace/Honor Frii's Request
 step
 goto 28.43,18.36
 talk Druid Laurel |q And Now, Perhaps, Peace/Talk to Druid Laurel
@@ -45906,7 +45906,7 @@ talk Druid Laurel |q And Now, Perhaps, Peace/.*Gather Your Allies.* |count 4
 step
 goto 64.25,45.34
 'Use _Vastyr_ Wayshrine
-'Travel to _All Flags in High Isle and Amenos_ |q And Now, Perhaps, Peace/Go to All Flags Islet |future
+'Travel to _All Flags in High Isle and Amenos_ |q And Now, Perhaps, Peace/Go to All Flags Islet
 |tip Manually skip to the next step.
 step
 goto u34_systreszone_base 31.12,65.14

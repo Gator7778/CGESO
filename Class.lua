@@ -2,7 +2,7 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local ZGV = _G.ZGV
+local CGV = _G.CGV
 local Class = {}
 local STRICT_CLASSES = false
 local allowed_nils
@@ -12,7 +12,7 @@ local zginherits, type = table.zginherits, type
 -- SAVED REFERENCES
 -----------------------------------------
 
-ZGV.Class = Class
+CGV.Class = Class
 
 -----------------------------------------
 -- LOAD TIME SETUP
