@@ -2,9 +2,9 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local CGV = _G.CGV
+local ZGV = _G.ZGV
 
-CGV._ObjectDataAD = [[
+ZGV._ObjectDataAD = [[
 
 Shrine to Stendarr=-21474836481001
 Corrupted Guardian Senche=-21474836481001

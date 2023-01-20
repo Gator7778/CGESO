@@ -2,7 +2,7 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local CGV = _G.CGV
+local ZGV = _G.ZGV
 
-CGV._ItemData = [[
+ZGV._ItemData = [[
 ]]

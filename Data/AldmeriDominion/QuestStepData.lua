@@ -2,9 +2,9 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local CGV = _G.CGV
+local ZGV = _G.ZGV
 
-CGV._QuestStepDataAD = {
+ZGV._QuestStepDataAD = {
   [0041001] = {
     [1]={
       [[Q1 I stopped some thugs from robbing an ___ items on them.]],

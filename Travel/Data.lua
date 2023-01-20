@@ -2,7 +2,7 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local CGV = _G.CGV
+local ZGV = _G.ZGV
 local Data = {}
 local Travel
 
@@ -10,7 +10,7 @@ local Travel
 -- SAVED REFERENCES
 -----------------------------------------
 
-Travel = CGV.Travel
+Travel = ZGV.Travel
 Travel.Data = Data
 
 -----------------------------------------
@@ -632,7 +632,7 @@ Data.MapIdsByName = {
 -----------------------------------------
 
 function Data:CollectMapIds()
-	local sv = CGV.sv.profile
+	local sv = ZGV.sv.profile
 	sv.mapids = {}
 
 	for i = 0,1000 do

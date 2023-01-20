@@ -2,19 +2,19 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local CGV = _G.CGV
+local ZGV = _G.ZGV
 local GuideProto = {}
-local Guide = CGV.Class:New("Guide")
+local Guide = ZGV.Class:New("Guide")
 local Guide_mt = { __index=Guide }
 local tinsert,_,_,min,max,floor,type,_,ipairs,_ = table.insert,table.remove,table.sort,math.min,math.max,math.floor,type,pairs,ipairs,_G.class
-local L = CGV.L
-local Utils = CGV.Utils
+local L = ZGV.L
+local Utils = ZGV.Utils
 
 -----------------------------------------
 -- SAVED REFERENCES
 -----------------------------------------
 
-CGV.GuideProto = GuideProto
+ZGV.GuideProto = GuideProto
 
 GuideProto.Types 	= {
 						LEVELING = 1,
@@ -45,17 +45,17 @@ function GuideProto:New(title,data,extra)
 		title_short = tit or title,
 		rawdata = data,
 		extra = extra,
-		num = #CGV.registeredguides+1,
+		num = #ZGV.registeredguides+1,
 		parsed = nil,
 		fully_parsed = nil,
 		type = guidetype,
-		subtype = 0 or CGV.GuideMenuTier
+		subtype = 0 or ZGV.GuideMenuTier
 	}
 
 	guide.completionmode = guide.completionmode or (guide.type == "LEVELING" and "level") or "steps"
 
-	if CGV:NeedsAnimatedPopup(guide) then
-		CGV.AnimatePopup = true
+	if ZGV:NeedsAnimatedPopup(guide) then
+		ZGV.AnimatePopup = true
 		return nil
 	end
 
@@ -76,18 +76,18 @@ function Guide:Parse(fully)
 	end
 
 	local lastparsed = { linenum =- 2,linedata = "-?-" }
-	local success,parsed,err,linenum,stepnum,linedata = pcall(CGV.Parser.ParseEntry,CGV.Parser,self,fully,lastparsed)
+	local success,parsed,err,linenum,stepnum,linedata = pcall(ZGV.Parser.ParseEntry,ZGV.Parser,self,fully,lastparsed)
 
 	if not success then
 		linenum,stepnum,linedata = lastparsed.linenum or -1, -1, lastparsed.linedata or "--"
 	end
 
-	if CGV.sv and CGV.sv.profile and CGV.sv.profile.ignoreErrors then -- Allow loading still, but make sure the message gets spat out.
+	if ZGV.sv and ZGV.sv.profile and ZGV.sv.profile.ignoreErrors then -- Allow loading still, but make sure the message gets spat out.
 		if not parsed then
 			if err then
-				CGV:Error(L["message_errorloading_full"],self.title,linenum or 0,stepnum or "?",linedata or "???",err)
+				ZGV:Error(L["message_errorloading_full"],self.title,linenum or 0,stepnum or "?",linedata or "???",err)
 			else
-				CGV:Error(L["message_errorloading_brief"],self.title)
+				ZGV:Error(L["message_errorloading_brief"],self.title)
 			end
 		end
 		parsed = true
@@ -97,7 +97,7 @@ function Guide:Parse(fully)
 		local err = parsed
 
 		local errortext = L["message_errorloading_critical"]:format(self.title or "no title?",err or "no err?",linenum or -1,linedata or -1)
-		CGV:Error(("%s"):format(errortext))
+		ZGV:Error(("%s"):format(errortext))
 		self.parse_failed = true
 		self.parse_error = errortext
 		return nil
@@ -110,7 +110,7 @@ function Guide:Parse(fully)
 		else
 			errortext = L["message_errorloading_brief"]:format(self.title)
 		end
-		CGV:Error(("%s"):format(errortext))
+		ZGV:Error(("%s"):format(errortext))
 		self.parse_failed = true
 		self.parse_error = errortext
 		return nil
@@ -122,9 +122,9 @@ function Guide:Parse(fully)
 			self.fully_parsed = true
 
 			-- cap it with a finisher step
-			local step = CGV.StepProto:New()
+			local step = ZGV.StepProto:New()
 			step.finish = true
-			local goal = CGV.GoalProto:New()
+			local goal = ZGV.GoalProto:New()
 			goal.action = "text"
 			goal.text = "This guide is now complete."
 
@@ -169,7 +169,7 @@ function Guide:DoCond(which,...)
 		if isOK then
 			return err,self['condition_'..which..'_msg']
 		else
-			CGV:Print("ERROR parsing condition for guide:\n"..self.title.."\n"..self['condition_'..which.."_raw"].."\nError: "..err)
+			ZGV:Print("ERROR parsing condition for guide:\n"..self.title.."\n"..self['condition_'..which.."_raw"].."\nError: "..err)
 			return false,"ERROR: "..(self['condition_'..which..'_msg'] or "")
 		end
 	end
@@ -205,7 +205,7 @@ function Guide:GetStatus()
 end
 
 function Guide:Load(step)
-  CGV:SetGuide(self,step)
+  ZGV:SetGuide(self,step)
 end
 
 -- TODO allow unloading of guides. It so few guides atm don't need to save on memory
@@ -216,17 +216,17 @@ function Guide:Unload()
 end
 
 function Guide:SetAsCurrent()
-  CGV.CurrentGuide = self
-  CGV.CurrentGuideName = self.title
-  CGV.sv.char.guidename = self.title
+  ZGV.CurrentGuide = self
+  ZGV.CurrentGuideName = self.title
+  ZGV.sv.char.guidename = self.title
 
   -- Clear this stuff because it gets set after
-  CGV.CurrentStep = nil
-  CGV.CurrentStepNum = nil
+  ZGV.CurrentStep = nil
+  ZGV.CurrentStepNum = nil
 end
 
 function Guide:GetCurStep()
-  return self:GetStep(CGV.CurrentStepNum)
+  return self:GetStep(ZGV.CurrentStepNum)
 end
 
 function Guide:GetStep(num)
@@ -281,7 +281,7 @@ function Guide:GetCompletion(mode)
 	if mode == "steps" then
 		-- request full parsing for those
 		if not self.fully_parsed then
-			CGV:Debug("Guide:GetCompletion : '"..self.title.."' needs parsing for completion type '"..mode.."'")
+			ZGV:Debug("Guide:GetCompletion : '"..self.title.."' needs parsing for completion type '"..mode.."'")
 			return "loading"
 		end
 	end
@@ -360,44 +360,44 @@ function Guide:GetCompletionText(mode)
 end
 
 function Guide:AdvertiseWithPopup(nodelay)
-	if not (CGV.Frame and CGV.Frame:IsShown()) then return end -- If CGV is hidden then we don't need to be suggesting guides.
+	if not (ZGV.Frame and ZGV.Frame:IsShown()) then return end -- If ZGV is hidden then we don't need to be suggesting guides.
 
 	local delay = not nodelay
 
 	-- Don't suggest a guide while in combat. Wait until combat is done.
 	if delay and Utils.IsPlayerInCombat() then
-		CGV.call_after_combat = function()
+		ZGV.call_after_combat = function()
 			self:AdvertiseWithPopup(true)
 		end
-		CGV:Print(L['guide_next_ready'])
+		ZGV:Print(L['guide_next_ready'])
 
 		return
 	end
 
-	local popup = CGV.AdvertisePopup
+	local popup = ZGV.AdvertisePopup
 	if not popup then
 		-- This text hides unless needed
-		popup = CGV.Popup:New("Zygor_AdvertiseGuide_Popup","sis")
+		popup = ZGV.Popup:New("Zygor_AdvertiseGuide_Popup","sis")
 
 		popup.OnAccept = function(me)
-			CGV:SetGuide(me.guide,me.guide.CurrentStepNum)
+			ZGV:SetGuide(me.guide,me.guide.CurrentStepNum)
 		end
 
 		popup.OnDecline = function(me)
-			CGV.db.char.ignoredguides[me.guide.title] = true
+			ZGV.db.char.ignoredguides[me.guide.title] = true
 		end
 
-		CGV.AdvertisePopup = popup
+		ZGV.AdvertisePopup = popup
 	end
 
 	popup:SetText(L['static_nextguide'],self.title_short,L['static_nextguide_anyzone'])
 	popup:SetDimensionConstraints(225,nil,625,nil)
 	popup.guide = self
 
-	CGV.pause = true -- to avoid a loop of "step complete" clicks.
+	ZGV.pause = true -- to avoid a loop of "step complete" clicks.
 
-	if not CGV.AdvertisePopup:IsShown() then
-		CGV.AdvertisePopup:Show()
+	if not ZGV.AdvertisePopup:IsShown() then
+		ZGV.AdvertisePopup:Show()
 	end
 end
 
@@ -411,5 +411,5 @@ end
 
 function GuideProto:Debug(...)
   local str = ...
-  CGV:Debug("&guide "..str, select(2,...) )
+  ZGV:Debug("&guide "..str, select(2,...) )
 end

@@ -2,7 +2,7 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local CGV = _G.CGV
+local ZGV = _G.ZGV
 local tinsert = table.insert
 local ZO_CallbackObject = _G.ZO_CallbackObject
 
@@ -16,7 +16,7 @@ local Callback =  ZO_CallbackObject:New()
 -- SAVED REFERENCES
 -----------------------------------------
 
-CGV.Callback = Callback
+ZGV.Callback = Callback
 
 -----------------------------------------
 -- DEBUG
@@ -24,7 +24,7 @@ CGV.Callback = Callback
 
 function Callback:Debug(...)
 	local str = ...
-	CGV:Debug("&callback "..str, select(2,...) )
+	ZGV:Debug("&callback "..str, select(2,...) )
 end
 
 
@@ -32,5 +32,5 @@ end
 -- STARTUP
 -----------------------------------------
 
-tinsert(CGV.startups,function(self)
+tinsert(ZGV.startups,function(self)
 	end)

@@ -2,8 +2,8 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local CGV = _G.CGV
-local L = CGV.L
+local ZGV = _G.ZGV
+local L = ZGV.L
 local getGameTimeMS, ZO_CreateStringId = _G.GetGameTimeMilliseconds, _G.ZO_CreateStringId
 
 -----------------------------------------
@@ -11,7 +11,7 @@ local getGameTimeMS, ZO_CreateStringId = _G.GetGameTimeMilliseconds, _G.ZO_Creat
 -----------------------------------------
 
 -- What appears in the ESO > CONTROLS > Keybindings window
-function CGV:RegisterKeyBindings()
+function ZGV:RegisterKeyBindings()
     ZO_CreateStringId("SI_BINDING_NAME_ZYGOR_TOGGLE_GUIDE_VIEWER", L["bind_tog"])
     ZO_CreateStringId("SI_BINDING_NAME_ZYGOR_NEXT_STEP", L["bind_next"])
     ZO_CreateStringId("SI_BINDING_NAME_ZYGOR_PREV_STEP", L["bind_prev"])
@@ -23,10 +23,10 @@ end
 -- STARTUP
 -----------------------------------------
 
--- Since this is the final file that loads... I'm very sorry for this being crammed here. It ties off the memory/timing of file loading, started in CGESO.lua startup area.
+-- Since this is the final file that loads... I'm very sorry for this being crammed here. It ties off the memory/timing of file loading, started in ZGESO.lua startup area.
 collectgarbage("collect")
-CGV.startup_log.load_memory_final = collectgarbage("count")
-CGV.startup_log.load_memory_total = CGV.startup_log.load_memory_final - CGV.startup_log.load_memory_initial
+ZGV.startup_log.load_memory_final = collectgarbage("count")
+ZGV.startup_log.load_memory_total = ZGV.startup_log.load_memory_final - ZGV.startup_log.load_memory_initial
 
-CGV.startup_log.load_time_final = getGameTimeMS() / 1000
-CGV.startup_log.load_time_total = CGV.startup_log.load_time_final - CGV.startup_log.load_time_initial
+ZGV.startup_log.load_time_final = getGameTimeMS() / 1000
+ZGV.startup_log.load_time_total = ZGV.startup_log.load_time_final - ZGV.startup_log.load_time_initial

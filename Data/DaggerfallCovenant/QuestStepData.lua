@@ -2,11 +2,11 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local CGV = _G.CGV
+local ZGV = _G.ZGV
 
-if CGV.Utils.GetFaction() ~= "DC" and not CGV.CFG_LOAD_ALL_FACTIONS then return end
+if ZGV.Utils.GetFaction() ~= "DC" and not ZGV.CFG_LOAD_ALL_FACTIONS then return end
 
-CGV._QuestStepDataDC = {
+ZGV._QuestStepDataDC = {
 	[0022001] = {
 		[1]={
 			[[Q1 The bustling city of Daggerfall holds ma___ht into one of them.]],
@@ -14378,17 +14378,17 @@ CGV._QuestStepDataDC = {
 	},
 	[0172198] = {
 		[1]={
-			[[Q1 Shiri, the scholar's apprentice, has dis___ri ï¿½ and the text.]],
+			[[Q1 Shiri, the scholar's apprentice, has dis___ri … and the text.]],
 			[[S1 I need to find the home of Shiri's cousin, Nahirah, in Satakalaam.]],
 			[[C1 == Find Nahirah's House]],
 		},
 		[2]={
-			[[Q1 Shiri, the scholar's apprentice, has ___ ï¿½ and the text.]],
+			[[Q1 Shiri, the scholar's apprentice, has ___ … and the text.]],
 			[[S1 It seems Shiri's cousin, Nahirah, has ___ mention of Shiri.]],
 			[[S1C1 == Read Nahirah's Journal]],
 		},
 		[3]={
-			[[Q1 Shiri, the scholar's apprentice, has ___ ï¿½ and the text.]],
+			[[Q1 Shiri, the scholar's apprentice, has ___ … and the text.]],
 			[[S1 Nahirah's journal indicates that Shiri ___ her what I learned.]],
 			[[S1C0 == Talk to Zohreh]],
 		},

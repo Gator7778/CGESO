@@ -2,11 +2,11 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local CGV = _G.CGV
+local ZGV = _G.ZGV
 
-if CGV.Utils.GetFaction() ~= "DC" and not CGV.CFG_LOAD_ALL_FACTIONS then return end
+if ZGV.Utils.GetFaction() ~= "DC" and not ZGV.CFG_LOAD_ALL_FACTIONS then return end
 
-CGV._NpcDataDC = [[
+ZGV._NpcDataDC = [[
 
 Essence=-21474836482385
 Korthor=-21474836482367

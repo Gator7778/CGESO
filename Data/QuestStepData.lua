@@ -2,10 +2,10 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local CGV = _G.CGV
+local ZGV = _G.ZGV
 
 -- ??
-CGV._QuestStepDataCommon = {
+ZGV._QuestStepDataCommon = {
 	[3360001] = {
 		[1]={
 			[[Q1 I died, but___eternity.]],

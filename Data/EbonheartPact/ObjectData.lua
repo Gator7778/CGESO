@@ -2,11 +2,11 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local CGV = _G.CGV
+local ZGV = _G.ZGV
 
-if CGV.Utils.GetFaction() ~= "EP" and not CGV.CFG_LOAD_ALL_FACTIONS then return end
+if ZGV.Utils.GetFaction() ~= "EP" and not ZGV.CFG_LOAD_ALL_FACTIONS then return end
 
-CGV._ObjectDataEP = [[
+ZGV._ObjectDataEP = [[
 
 Daedric Vase=-21474836483009
 A Gift of Sanctuary=-21474836483006
@@ -913,7 +913,7 @@ The Book of Daedra=0193066
 Argonian Egg=0193067
 Zaht Stone=0193068
 Enchanted Container=0193069
-Dominion Soldier's Journal ï¿½ Zuuk=0193070
+Dominion Soldier's Journal — Zuuk=0193070
 Drillk's House=0193071
 Drillk's Journal=0193072
 Scroll of Release=0193073

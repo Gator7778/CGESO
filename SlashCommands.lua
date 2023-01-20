@@ -2,10 +2,10 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local CGV = _G.CGV
+local ZGV = _G.ZGV
 local tinsert,tremove,sort,min,max,floor,type,pairs,ipairs = table.insert,table.remove,table.sort,math.min,math.max,math.floor,type,pairs,ipairs
-local print = CGV.print
-local L = CGV.L
+local print = ZGV.print
+local L = ZGV.L
 local help_string = [[	Options:
 	reset - Reset Guide Viewer to original position, and settings.
 	show - Show the Guide Viewer.
@@ -13,7 +13,7 @@ local help_string = [[	Options:
 	config - Show configuration.
 ]]
 
-if CGV.DEV then
+if ZGV.DEV then
 	help_string = help_string..[[
 	debug - Toggle debug on and off.
 	error - Toggle ignore errors. Requires a reload
@@ -24,39 +24,39 @@ end
 -- FUNCTIONS
 -----------------------------------------
 
-function CGV.SlashCommandHandler(text)		--TODO
-	local self = CGV
+function ZGV.SlashCommandHandler(text)		--TODO
+	local self = ZGV
 
 	if text == "debug" then
 		self.sv.profile.debug = not self.sv.profile.debug
-		CGV:Print(("Debug is %s"):format(self.sv.profile.debug and "on" or "off"))
+		ZGV:Print(("Debug is %s"):format(self.sv.profile.debug and "on" or "off"))
 	elseif text == "error" then
 		self.sv.profile.ignoreErrors = not self.sv.profile.ignoreErrors
-		CGV:Print("Please reload for errors to get handled properly.")
+		ZGV:Print("Please reload for errors to get handled properly.")
 	elseif text == "report" or text=="bug" then
-		if not CGV.BugReport then
-			CGV:Print("BugReport feature not loaded. Sorry!")
+		if not ZGV.BugReport then
+			ZGV:Print("BugReport feature not loaded. Sorry!")
 			return
 		end
-		CGV.BugReport:ShowReport()
+		ZGV.BugReport:ShowReport()
 	elseif text == "reset" then
-		CGV.Viewer:ResetAllViewerSettings()
+		ZGV.Viewer:ResetAllViewerSettings()
 	elseif text == "show" then
-		CGV.Viewer:Show_GuideViewer()
+		ZGV.Viewer:Show_GuideViewer()
 	elseif text == "hide" then
-		CGV.Viewer:Hide_GuideViewer()
+		ZGV.Viewer:Hide_GuideViewer()
 	elseif text == "config" then
-		CGV.Settings:OpenSettings()
+		ZGV.Settings:OpenSettings()
 	elseif text == "creator" then
-		CGV.Creator = not CGV.Creator
+		ZGV.Creator = not ZGV.Creator
 		self.sv.char.creator = not self.sv.char.creator
-		CGV:Print(("Creator Mode is now %s"):format(self.sv.char.creator and "on" or "off"))
+		ZGV:Print(("Creator Mode is now %s"):format(self.sv.char.creator and "on" or "off"))
 	elseif text == "dev" or text=="developer" then
-		CGV.DEV = not CGV.DEV
+		ZGV.DEV = not ZGV.DEV
 		self.sv.char.developer = not self.sv.char.developer
-		CGV:Print(("Developer Mode is now %s"):format(self.sv.char.developer and "on" or "off"))
+		ZGV:Print(("Developer Mode is now %s"):format(self.sv.char.developer and "on" or "off"))
 	else
-		CGV:Print(help_string)
+		ZGV:Print(help_string)
 	end
 
 end
@@ -67,8 +67,8 @@ end
 
 local function registerSlashCommands()
 	local SLASH_COMMANDS, zo_loadstring = _G.SLASH_COMMANDS, _G.zo_loadstring
-	SLASH_COMMANDS["/cgv"] = CGV.SlashCommandHandler
-	SLASH_COMMANDS["/community"] = SLASH_COMMANDS["/cgv"]
+	SLASH_COMMANDS["/zgv"] = ZGV.SlashCommandHandler
+	SLASH_COMMANDS["/zygor"] = SLASH_COMMANDS["/zgv"]
 	SLASH_COMMANDS["/run"] = SLASH_COMMANDS["/script"]
 	SLASH_COMMANDS["/re"] = SLASH_COMMANDS["/reloadui"]
 	SLASH_COMMANDS["/dump"] = function(text)
@@ -86,6 +86,6 @@ end
 -- STARTUP
 -----------------------------------------
 
-tinsert(CGV.startups,function(self)
+tinsert(ZGV.startups,function(self)
 		registerSlashCommands()
 	end)

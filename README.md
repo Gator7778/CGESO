@@ -1,4 +1,4 @@
-# CGESO
+# ZGESO
 
 <img src="https://i.imgur.com/ipdf8ei.jpg">
 
@@ -103,7 +103,7 @@ Blackwood
 * 6/1/21 Blackwood, Dragonhold (Southern Elsweyr), and Craglorn guides now available (Thank you, snichols7778)! 
 * 3/27/21 Skyrim Guides Now Available (Thanks to snichols7778)!
 * 3/13/21 merge: Sharlikran: Misc changes and updates
-* 3/13/21 merge: Sharlikran: Removed embedded libraries. Fixed /cgpos output
+* 3/13/21 merge: Sharlikran: Removed embedded libraries. Fixed /zgpos output
 * 3/13/21 merge: Krandor1: Fix for the two glumbra bugs reported by AegonVI
 * 3/13/21 merge: Krandor1: Reorder bleakrock quests so hero of bleakrock achivement can be earned. Bug request from Cavanoskus on forums.
 * 11/2/20: API version now supports Dragonhold
@@ -112,7 +112,7 @@ Blackwood
 
 # Development Guide
 
-### CGESO Version Breakdown
+### ZGESO Version Breakdown
 
 For example, 1.4.96
 
@@ -146,20 +146,20 @@ For example, 1.4.96
 `'` = Adds general information.<br/>
 
 
-#### CGESO Functions of note
+#### ZGESO Functions of note
 
-`CGV.Utils.IsIntroTutorial()` = (functions.lua) Quickly indentifies the intro tutorial for new players. Currently configured for the Isle of Balfiera.
+`ZGV.Utils.IsIntroTutorial()` = (functions.lua) Quickly indentifies the intro tutorial for new players. Currently configured for the Isle of Balfiera.
 
 
 #### Goal Handlers - requires a pipe | in front to activate (e.g. |tip, |q, |count)
 
-`|q` = Creates a step in CGESO's progress bar. It also denotes the current step's quest.
+`|q` = Creates a step in ZGESO's progress bar. It also denotes the current step's quest.
 
 `/` = Placed on the same line after `|q`. The slash checks for a completed task in the Quest Journal for the current step's quest. Important: Must match the task word-for-word, space-for-space to register as completed.
 
 `|tip` = Handler for displaying tips in a small font. Note: placing a `|tip` in a `goto` step prevents the action from automatically going to the next step when meeting the condition.
 
-`|next Aldmeri Dominion Leveling Guides\\Khenarthi's Roost` = Instructs CGESO to go to another guide
+`|next Aldmeri Dominion Leveling Guides\\Khenarthi's Roost` = Instructs ZGESO to go to another guide
 * `next` = Handler that tells the guide to load another guide
 * `Aldmeri Dominion Leveling Guides\\Khenarthi's Roost` = the RegisterGuide to load
 
@@ -175,28 +175,28 @@ For Example:
 `|only if` and `|only if not` = Conditional handlers
 
 For example<br>
-`|only if CGV.Utils.GetPlayerPreciseLevel() < 6 and _G.GetCurrentMapZoneIndex() == 712`<br>
+`|only if ZGV.Utils.GetPlayerPreciseLevel() < 6 and _G.GetCurrentMapZoneIndex() == 712`<br>
 Only allow this step if the player's precise level is less than 6 and the current map zone ID equals 712 (Northern Elsweyr)
 
-`|only if not CGV.QuestTracker:IsQuestComplete("A City in Black")`<br>
+`|only if not ZGV.QuestTracker:IsQuestComplete("A City in Black")`<br>
 Only allow this step if the player hasn't completed the quest.
 
-`|only if not CGV.Quests:HasQuest("A City in Black") or CGV.Quests:IsQuestComplete("A City in Black")`<br>
+`|only if not ZGV.Quests:HasQuest("A City in Black") or ZGV.Quests:IsQuestComplete("A City in Black")`<br>
 Only allow this step if the player doesn't have the quest or hasn't completed the quest.
 
-`|only if CGV.Utils.GetFaction("player","notvet")=="EP"`<br>
+`|only if ZGV.Utils.GetFaction("player","notvet")=="EP"`<br>
 Only allow this step if the player's faction is Ebonheart Pact.
 
-`|only if CGV.Utils.GetFaction("player","notvet")=="AD"`<br>
+`|only if ZGV.Utils.GetFaction("player","notvet")=="AD"`<br>
 Only allow this step if the player's faction is Aldmeri Dominion.
 
-`|only if CGV.Utils.GetFaction("player","notvet")=="DC"`<br>
+`|only if ZGV.Utils.GetFaction("player","notvet")=="DC"`<br>
 Only allow this step if the player's faction is Daggerfall Covenant.
 
-`|only not CGV.Quests:HasQuest("A City in Black")`<br>
+`|only not ZGV.Quests:HasQuest("A City in Black")`<br>
 It appears to be the best method for accepting quests. `|only if not` causes the step to stick after accepting the quest.
 
-`|only CGV.Quests:HasQuest("A City in Black")`<br>
+`|only ZGV.Quests:HasQuest("A City in Black")`<br>
 It appears to be the best method for quest steps. `|only if` causes the step to stick after accepting the quest.
 
 `|or` = Handler for dialog choices. Important: You need to put the |or handler on each selection.
@@ -219,15 +219,15 @@ step
 ### Slash commands
 
 * `/re` = /reloadui
-* `/CGpos` - For city and delve data. Also displays the map's correct DDS filename.
-* `/CGpos gps` - For general map data. Works in any map.
-* `/dump CGFunctionName(arguments)` - A way to execute ESO's and CGESO's public functions<br> (e.g. `/dump CGV.Pointer:GetDistToCoords(alinor_base,48.80,54.64)`)
+* `/zgpos` - For city and delve data. Also displays the map's correct DDS filename.
+* `/zgpos gps` - For general map data. Works in any map.
+* `/dump ZGFunctionName(arguments)` - A way to execute ESO's and ZGESO's public functions<br> (e.g. `/dump ZGV.Pointer:GetDistToCoords(alinor_base,48.80,54.64)`)
 
 #### /dump functions of note:
 
-* `/dump CGV.Data:GetQuestIdByName("A City in Black")` - Returns the Quest ID
-* `/dump CGV.Quests:IsQuestComplete("A City in Black")` - Returns a boolean
-* `/dump CGV.Quests:HasQuest("A City in Black")` - Returns a boolean
+* `/dump ZGV.Data:GetQuestIdByName("A City in Black")` - Returns the Quest ID
+* `/dump ZGV.Quests:IsQuestComplete("A City in Black")` - Returns a boolean
+* `/dump ZGV.Quests:HasQuest("A City in Black")` - Returns a boolean
 * `/dump d(GetCurrentMapIndex())` - Returns the zone's ID. Tip: some functions require the `d()` command to display the output.
 
 

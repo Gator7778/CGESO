@@ -2,8 +2,8 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local CGV = _G.CGV
-local GPS = LibGPS3
+local ZGV = _G.ZGV
+local GPS = LibGPS2
 
 local GetAbilityProgressionXPInfoFromAbilityId = _G.GetAbilityProgressionXPInfoFromAbilityId
 local GetAddOnManager = _G.GetAddOnManager
@@ -58,7 +58,7 @@ local tinsert,max,type,pairs,ipairs = table.insert,math.max,type,pairs,ipairs
 -- SAVED REFERENCES
 -----------------------------------------
 
-CGV.Utils = Utils
+ZGV.Utils = Utils
 
 -----------------------------------------
 -- UTIL FUNCTIONS
@@ -86,14 +86,14 @@ function Utils.GetFaction(unitTag,novet,onlyvet)
 	unitTag = unitTag or "player"
 
 	if unitTag == "player" then
-		if CGV.FAKE_FACTION then
-			return CGV.FAKE_FACTION
+		if ZGV.FAKE_FACTION then
+			return ZGV.FAKE_FACTION
 		end
-		if CGV.VETERAN_FACTION and not novet then
-			return CGV.VETERAN_FACTION
+		if ZGV.VETERAN_FACTION and not novet then
+			return ZGV.VETERAN_FACTION
 		end
 		if onlyvet then return
-			CGV.VETERAN_FACTION or "NOTVET"
+			ZGV.VETERAN_FACTION or "NOTVET"
 		end
 	end
 
@@ -149,7 +149,7 @@ function Utils.RaceClassMatch(fit)
 		neg = true
 		fit = fit:sub(5)
 	end
-	local ret = (race == fit or class == fit or faction == fit or race.." "..class == fit or (fit == "VET" and CGV.VETERAN_FACTION))
+	local ret = (race == fit or class == fit or faction == fit or race.." "..class == fit or (fit == "VET" and ZGV.VETERAN_FACTION))
 	if neg then
 		return not ret
 	else
@@ -158,12 +158,12 @@ function Utils.RaceClassMatch(fit)
 end
 
 function Utils.FormatLevel(l,...)
-	if type(l) == "table" then l = ... end	-- dummy proof CGV.Utils:FormatLevel(5)
+	if type(l) == "table" then l = ... end	-- dummy proof ZGV.Utils:FormatLevel(5)
 	return tostring(l)		-- Nothing special atm
 end
 
 function Utils.MapIndex()
-	local gps = GPS:GetCurrentMapMeasurement()
+	local gps = GPS:GetCurrentMapMeasurements()
 	if gps ~= nil then
 		return gps.mapIndex
 	else
@@ -172,8 +172,8 @@ function Utils.MapIndex()
 end
 
 function Utils.GetPlayerPreciseLevel()
-	if CGV.db.char.fakelevel and CGV.db.char.fakelevel > 0 then
-		return CGV.db.char.fakelevel
+	if ZGV.db.char.fakelevel and ZGV.db.char.fakelevel > 0 then
+		return ZGV.db.char.fakelevel
 	else
 		return GetUnitLevel("player") + GetUnitXP("player") / max(GetUnitXPMax("player"),1)
 	end
@@ -185,7 +185,7 @@ function Utils.GetPlayerName()
 end
 
 function Utils.GetMapNameByDDSFile()
-	local texture = CGV.Pointer:GetMapTex()
+	local texture = ZGV.Pointer:GetMapTex()
 	if texture ~= nil then
 		return texture
 	else
@@ -194,7 +194,7 @@ function Utils.GetMapNameByDDSFile()
 end
 
 function Utils.IsIntroTutorial()
-	if CGV.Utils.GetPlayerPreciseLevel() < 6 and Utils.MapIndex() == 24 and Utils.GetMapNameByDDSFile() ~= "u29_ne_salas_vault_base" then
+	if ZGV.Utils.GetPlayerPreciseLevel() < 6 and Utils.MapIndex() == 24 and Utils.GetMapNameByDDSFile() ~= "u29_ne_salas_vault_base" then
 		return true
 	else
 		return false
@@ -207,7 +207,7 @@ function Utils.GetMapNameByTexture()
 	return name
 end
 
--- /dump d(CGV.Utils.CheckIfInSkillGuild(1))
+-- /dump d(ZGV.Utils.CheckIfInSkillGuild(1))
 -- 1: Dark Brotherhood
 -- 2: Fighters Guild
 -- 3: Mages Guild
@@ -220,7 +220,7 @@ function Utils.CheckIfInSkillGuild(guildSkillIndex)
    return isActive
 end
 
--- /dump d(CGV.Utils.SkillLines(false,true,false,true,true))
+-- /dump d(ZGV.Utils.SkillLines(false,true,false,true,true))
 function Utils.SkillLines(showType,showLineInfo,showLineXP,showSkillAbilities,showAbilityInfo)
     if showType then
         d("Number of Skill Types: "..GetNumSkillTypes().."\n-----------------------------")
@@ -263,15 +263,15 @@ function Utils.SkillLines(showType,showLineInfo,showLineXP,showSkillAbilities,sh
 end
 
 function Utils:IsPlayerInCombat()
-	return CGV.db.profile.fakecombat or IsUnitInCombat("player")
+	return ZGV.db.profile.fakecombat or IsUnitInCombat("player")
 end
 
 function Utils.ShowFloatingMessage(msg,event,font,sound,publicfloat,publictext)
-	if CGV.DEV or publicfloat then
+	if ZGV.DEV or publicfloat then
 		CENTER_SCREEN_ANNOUNCE:AddMessage(event or EVENT_OBJECTIVE_COMPLETED,font or CSA_EVENT_SMALL_TEXT,sound or SOUNDS_QUEST_OBJECTIVE_STARTED,"|cffaa00[|cf8fbffZ|cffaa00]|r "..msg)
 	end
-	if CGV.DEV or publictext then
-		local print = CGV.print
+	if ZGV.DEV or publictext then
+		local print = ZGV.print
 		print(msg)
 	end
 end
@@ -337,7 +337,7 @@ end
 -----------------------------------------
 
 -- Prototype inheritance for tables that will inherit all functions
-function table.cginherits(self,tbl)
+function table.zginherits(self,tbl)
 	self.__UNSTRICT_CLASS = 1
 	for f,fun in pairs(tbl) do
 		if type(fun) == "function" 								-- Functions are the only thing we want to copy
@@ -351,7 +351,7 @@ function table.cginherits(self,tbl)
 	self.__UNSTRICT_CLASS = nil
 end
 
-function table.cgclone(self)
+function table.zgclone(self)
 	local t = {}
 	if type(self) == "table" then
 		-- Note: Be very careful about convert ipairs or pairs into standard for loops
@@ -493,7 +493,7 @@ function Utils.MakeExcerpt(text)
 end
 local MakeExcerpt = Utils.MakeExcerpt
 
--- /cgoo {CGV.Utils.MatchExcerpt(shortem,lorem)}
+-- /zgoo {ZGV.Utils.MatchExcerpt(shortem,lorem)}
 
 function Utils.MatchExcerpt(exc,text)
 	if exc == text then return true end
@@ -539,7 +539,7 @@ function Utils.GetMyAddonInfo()
 	local AM = GetAddOnManager()
 	for i = 1, AM:GetNumAddOns() do
 		local dir,title,_,_1,_2,_3,_4 = AM:GetAddOnInfo(i)
-		if dir == CGV.DIR then
+		if dir == ZGV.DIR then
 			return dir,title,_1,_2,_3,_4
 		end
 	end
@@ -570,21 +570,21 @@ function Utils.IsPOIComplete(map,poi)
 end
 
 function Utils.GetPOIForQuest(questid)
-	if not CGV._QuestPOIData then return "" end
+	if not ZGV._QuestPOIData then return "" end
 	if questid <= 999999 then
 		questid = ("%07d"):format(questid)
 	end
-	local poi = CGV._QuestPOIData:match("(%d+):[^\n]*"..questid)
+	local poi = ZGV._QuestPOIData:match("(%d+):[^\n]*"..questid)
 	return poi
 end
 
 
-CGV.VETERAN_FACTION = "UNCHECKED"
+ZGV.VETERAN_FACTION = "UNCHECKED"
 local function SetVeteran(faction)
-	local prev_check = CGV.VETERAN_FACTION
-	CGV.VETERAN_FACTION = faction
-	if prev_check ~= "UNCHECKED" and prev_check ~= CGV.VETERAN_FACTION then
-		CGV.VETERAN_FACTION_CHANGED = faction
+	local prev_check = ZGV.VETERAN_FACTION
+	ZGV.VETERAN_FACTION = faction
+	if prev_check ~= "UNCHECKED" and prev_check ~= ZGV.VETERAN_FACTION then
+		ZGV.VETERAN_FACTION_CHANGED = faction
 	end
 end
 
@@ -594,11 +594,11 @@ Utils.VETERAN_PROGRESSION={ ['AD'] = {'AD','EP','DC'},
 
 function Utils.GetVeteranFaction()
 	local natural_faction = Utils.GetFaction("player","novet")
-	table.insert(CGV.PRELOG,"natural faction is "..tostring(natural_faction))
+	table.insert(ZGV.PRELOG,"natural faction is "..tostring(natural_faction))
 	local progression = Utils.VETERAN_PROGRESSION[natural_faction]
-	local silver_complete = CGV.QuestTracker:IsQuestComplete("Cadwell's Silver")
-	local gold_complete = silver_complete and CGV.QuestTracker:IsQuestComplete("Cadwell's Gold")
-	table.insert(CGV.PRELOG,"silver "..tostring(silver_complete)..", gold "..tostring(gold_complete))
+	local silver_complete = ZGV.QuestTracker:IsQuestComplete("Cadwell's Silver")
+	local gold_complete = silver_complete and ZGV.QuestTracker:IsQuestComplete("Cadwell's Gold")
+	table.insert(ZGV.PRELOG,"silver "..tostring(silver_complete)..", gold "..tostring(gold_complete))
 
 	if gold_complete then
 		return progression[3],4
@@ -650,9 +650,9 @@ function Utils.GetVeteranStage() -- 0:original, 1:first vet, 2:second vet, 3:ori
 end
 
 function Utils.CheckVeteranFaction()
-	table.insert(CGV.PRELOG,"Checking quests for Cadwell")
+	table.insert(ZGV.PRELOG,"Checking quests for Cadwell")
 	SetVeteran(Utils.GetVeteranFaction())
-	table.insert(CGV.PRELOG,"Checked. Veteran faction is "..(CGV.VETERAN_FACTION or "none"))
+	table.insert(ZGV.PRELOG,"Checked. Veteran faction is "..(ZGV.VETERAN_FACTION or "none"))
 end
 
 -- remove "^Ng,adv" and similar language tags

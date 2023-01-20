@@ -7,7 +7,7 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local CGV = _G.CGV
+local ZGV = _G.ZGV
 local GetCurrentMapIndex = _G.GetCurrentMapIndex
 local GuideViewer = _G.GuideViewer
 local GetNumPOIs = _G.GetNumPOIs
@@ -22,19 +22,19 @@ local GetAchievementCriterion = _G.GetAchievementCriterion
 local zo_loadstring = _G.zo_loadstring
 local zo_max = _G.zo_max
 local GoalProto = {}
-local Goal = CGV.Class:New("Goal")
+local Goal = ZGV.Class:New("Goal")
 local GoalProto_mt = { __index=Goal }
 local GOALTYPES = {}
 local empty_table = {}
 local tinsert, min, type, ipairs = table.insert, math.min, type, ipairs
-local L = CGV.L
+local L = ZGV.L
 local split = _G.zo_strsplit
 
 -- Parser functions
-local ParseMapXYDist = CGV.Parser.ParseMapXYDist
-local MakeCondition = CGV.Parser.MakeCondition
-local ParseQuest = CGV.Parser.ParseQuest
-local ParseId = CGV.Parser.ParseId
+local ParseMapXYDist = ZGV.Parser.ParseMapXYDist
+local MakeCondition = ZGV.Parser.MakeCondition
+local ParseQuest = ZGV.Parser.ParseQuest
+local ParseId = ZGV.Parser.ParseId
 
 local INDENT = ""
 
@@ -42,8 +42,8 @@ local INDENT = ""
 -- SAVED REFERENCES
 -----------------------------------------
 
-CGV.GoalProto = GoalProto
-CGV.GOALTYPES = GOALTYPES
+ZGV.GoalProto = GoalProto
+ZGV.GOALTYPES = GOALTYPES
 
 -----------------------------------------
 -- LOAD TIME SETUP
@@ -104,7 +104,7 @@ GOALTYPES['complete'] = {
 			subject.condition_complete_raw = cond
 			subject.condition_complete = fun
 		else
-			CGV:Error("||complete needs 'if'. because.")
+			ZGV:Error("||complete needs 'if'. because.")
 			self.action = nil -- rip in peace goal. wipe out because this is a command for steps.
 		end
 	end,
@@ -284,7 +284,7 @@ GOALTYPES['goto'] = {
 		self.y = y or self.y
 
 		-- Adjusting the speed between zone maps and non-zone maps
-		self.dist = CGV.Utils.DistanceOffsetForGoto(dist,self.dist)
+		self.dist = ZGV.Utils.DistanceOffsetForGoto(dist,self.dist)
 
 		self.waytitle = title
 	end,
@@ -306,9 +306,9 @@ GOALTYPES['goto'] = {
 	iscomplete = function(self) -- Called repeatedly
 
 		-- if the player isn't in the zone map then adjust the distance -- GetGameTimeMilliseconds
-		self.dist = CGV.Utils.DistanceOffsetForIsComplete()
+		self.dist = ZGV.Utils.DistanceOffsetForIsComplete()
 
-		local dist = CGV.Pointer:GetDistToCoords(self.map,self.x,self.y)
+		local dist = ZGV.Pointer:GetDistToCoords(self.map,self.x,self.y)
 
 		if self.dist and (
 			( self.dist > 0 and dist < self.dist ) or
@@ -333,7 +333,7 @@ GOALTYPES['wayshrine'] = 	{ parse = function(self,params,_,_)
 									self.wayshrine_zoneid = tonumber(mapid)
 									self.wayshrine = map
 								elseif mapid then -- string
-									self.wayshrine_zoneid = CGV.Pointer.Zones[mapid] and CGV.Pointer.Zones[mapid].id
+									self.wayshrine_zoneid = ZGV.Pointer.Zones[mapid] and ZGV.Pointer.Zones[mapid].id
 									self.wayshrine = map
 								else
 									self.wayshrine = params
@@ -355,8 +355,8 @@ GOALTYPES['wayshrine'] = 	{ parse = function(self,params,_,_)
 											if fb and fi == 1 then
 												self.wayshrine_zoneid = zid
 												self.wayshrine_POIIndex = i
-												if CGV.db.profile.debug_wayshrines then
-													CGV:Debug("Found wayshrine '%s' on map id %d. POI %d.", self.wayshrine, self.wayshrine_zoneid, self.wayshrine_POIIndex)
+												if ZGV.db.profile.debug_wayshrines then
+													ZGV:Debug("Found wayshrine '%s' on map id %d. POI %d.", self.wayshrine, self.wayshrine_zoneid, self.wayshrine_POIIndex)
 												end
 												break -- out of 2 loops
 											end
@@ -367,10 +367,10 @@ GOALTYPES['wayshrine'] = 	{ parse = function(self,params,_,_)
 
 								-- Index wasn't found... okay well we don't want to spam looking through POI's because it isn't efficient. Assign the index to 0 which returns an empty POI (no match) then reset it every 10s to try to match again.
 								if not self.wayshrine_POIIndex then
-									--CGV:Debug("Wayshrine '%s' not found, will retry in 10s.", self.wayshrine)
-									CGV:Debug("Wayshrine '%s' not found.", self.wayshrine)
+									--ZGV:Debug("Wayshrine '%s' not found, will retry in 10s.", self.wayshrine)
+									ZGV:Debug("Wayshrine '%s' not found.", self.wayshrine)
 									self.wayshrine_POIIndex = 0
-									-- CGV:ScheduleTimer(function() self.wayshrine_POIIndex = nil end, 10)
+									-- ZGV:ScheduleTimer(function() self.wayshrine_POIIndex = nil end, 10)
 								end
 							end
 
@@ -390,11 +390,7 @@ GOALTYPES['learnskill'] = {
 	end,
 }
 
-GOALTYPES['Use'] = {
-	parse = GOALTYPES['_item'].parse,
-}
-
-GOALTYPES['Examine'] = {
+GOALTYPES['click'] = {
 	parse = GOALTYPES['_item'].parse,
 }
 
@@ -410,15 +406,15 @@ GOALTYPES['accept'] = {
 		end
 	end,
 	iscomplete = function(self)
-		return (CGV.Quests:HasQuest(self.quest) or CGV.Quests:IsQuestComplete(self.quest)) , true
+		return (ZGV.Quests:HasQuest(self.quest) or ZGV.Quests:IsQuestComplete(self.quest)) , true
 	end,
 }
 
 GOALTYPES['turnin'] = {
 	parse = GOALTYPES['accept'].parse,
 	iscomplete = function(self)
-		local completed = CGV.Quests:IsQuestComplete(self.quest)
-		local hasQuest = CGV.Quests:HasQuest(self.quest)
+		local completed = ZGV.Quests:IsQuestComplete(self.quest)
+		local hasQuest = ZGV.Quests:HasQuest(self.quest)
 		return completed,hasQuest
 	end,
 }
@@ -449,8 +445,8 @@ GOALTYPES['confirm'] = {
 		-- damn, special functionality HERE of all places...
 		self.clicked = true
 		if self.nextreload then
-			CGV.sv.char.guidename = self.nextreload
-			CGV.sv.char.step = 1
+			ZGV.sv.char.guidename = self.nextreload
+			ZGV.sv.char.step = 1
 			_G.ReloadUI()
 			return true -- oh wait...
 		end
@@ -521,7 +517,7 @@ GOALTYPES['ding'] = {
 		self.dinglevel = tonumber(params)
 	end,
 	iscomplete = function(self)
-		return CGV.Utils.GetPlayerPreciseLevel()>=self.dinglevel,true
+		return ZGV.Utils.GetPlayerPreciseLevel()>=self.dinglevel,true
 	end,
 }
 
@@ -551,14 +547,14 @@ end
 
 function Goal:GetQuest()
 	if not self.quest then return end
-	return CGV.Quests:GetQuest(self.quest)
+	return ZGV.Quests:GetQuest(self.quest)
 end
 
 function Goal:GetQuestGoalStatus()
 	if not self.quest then
 		return false,"no quest"
 	end
-	return CGV.Quests:GetCompletionStatus(self.quest,self.questcondtxt)
+	return ZGV.Quests:GetCompletionStatus(self.quest,self.questcondtxt)
 end
 
 function Goal:GetQuestGoalCounts()
@@ -616,7 +612,7 @@ function Goal:GetText()
 				end
 				nsub = nsub + 1
 				if type(f)=="function" then
-					CGV.Parser.ConditionEnv._SetLocal(self.parentStep.parentGuide,self.parentStep,self)
+					ZGV.Parser.ConditionEnv._SetLocal(self.parentStep.parentGuide,self.parentStep,self)
 					return tostring(f())
 				else
 					return tostring(f)
@@ -627,7 +623,7 @@ function Goal:GetText()
 		local function parser_simple(s)
 			local fun,err = zo_loadstring(s:find("return") and s or "return "..s)
 			if fun then
-				setfenv(fun,CGV.Parser.ConditionEnv)
+				setfenv(fun,ZGV.Parser.ConditionEnv)
 				return fun
 			else
 				return "("..err..")"
@@ -642,7 +638,7 @@ function Goal:GetText()
 					local fun = function() -- Generating a real worker function
 						return condfun() and a or b
 					end
-					setfenv(fun,CGV.Parser.ConditionEnv)
+					setfenv(fun,ZGV.Parser.ConditionEnv)
 					return fun
 				else
 					return "("..err..")"
@@ -710,19 +706,19 @@ function Goal:GetText()
 
 	elseif self.action == "goto" then
 		local curZone = _G.GetMapName()
-		local mapname = CGV.Pointer.Zones[self.map] and CGV.Pointer.Zones[self.map].name or self.map or curZone.."(?)"
+		local mapname = ZGV.Pointer.Zones[self.map] and ZGV.Pointer.Zones[self.map].name or self.map or curZone.."(?)"
 
 		if mapname ~= curZone then
 			if self.x and self.y then -- different map
-				text = COLOR_LOC(L['map_coords']:format(CGV.Utils.Delocalize(mapname),self.x * 100,self.y * 100)) -- and coords
+				text = COLOR_LOC(L['map_coords']:format(ZGV.Utils.Delocalize(mapname),self.x * 100,self.y * 100)) -- and coords
 			else
-				text = COLOR_LOC(CGV.Utils.Delocalize(mapname))	-- just the map
+				text = COLOR_LOC(ZGV.Utils.Delocalize(mapname))	-- just the map
 			end
 		else
 			if self.x and self.y then
 				text = COLOR_LOC(L['coords']:format(self.x*100,self.y * 100)) -- same map
 			else
-				text = COLOR_LOC(CGV.Utils.Delocalize(mapname))	-- just the map
+				text = COLOR_LOC(ZGV.Utils.Delocalize(mapname))	-- just the map
 			end
 		end
 		if self.waytitle then
@@ -795,17 +791,17 @@ function Goal:IsVisible()
 			end
 			return true
 		else
-			CGV.Parser.ConditionEnv._SetLocal(self.parentStep.parentGuide,self.parentStep,self)
+			ZGV.Parser.ConditionEnv._SetLocal(self.parentStep.parentGuide,self.parentStep,self)
 			local ok,ret = pcall(self.condition_visible)
 			if ok then
 				return ret
 			else
-				CGV:Error("Error in step %s, goal %s, only if %s: %s", self.parentStep.num, self.num, self.condition_visible_raw or "", ret:gsub("\n.*",""))
+				ZGV:Error("Error in step %s, goal %s, only if %s: %s", self.parentStep.num, self.num, self.condition_visible_raw or "", ret:gsub("\n.*",""))
 			end
 		end
 	end
 	if self.requirement then
-		return CGV.Utils.RaceClassMatch(self.requirement)
+		return ZGV.Utils.RaceClassMatch(self.requirement)
 	end
 	return true
 end
@@ -839,7 +835,7 @@ end
 
 function Goal:OnComplete()
 	if self.parentStep.current_waypoint_goal == self.num then
-		CGV.Pointer:CycleWaypoint(1,"no cycle")
+		ZGV.Pointer:CycleWaypoint(1,"no cycle")
 	end
 end
 
@@ -861,7 +857,7 @@ end
 
 function Goal:OnVisited()
 	self.parentStep.current_waypoint_goal = self.num
-	CGV.Pointer:CycleWaypoint(1,"no cycle")
+	ZGV.Pointer:CycleWaypoint(1,"no cycle")
 end
 
 function Goal:OnDevisited()
@@ -872,7 +868,7 @@ function Goal:IsCompleteCheck()
 	local iscomplete,ispossible,explanation,curv,maxv,debugs
 
 	if self.condition_complete then
-		CGV.Parser.ConditionEnv._SetLocal(self.parentStep.parentGuide, self.parentStep, self)
+		ZGV.Parser.ConditionEnv._SetLocal(self.parentStep.parentGuide, self.parentStep, self)
 		local ok,iscomplete = pcall(self.condition_complete)
 		if ok then
 			if iscomplete then
@@ -881,17 +877,17 @@ function Goal:IsCompleteCheck()
 				-- fall through!
 			end
 		else
-			CGV:Error("Error in step %s, goal %s, complete if %s: %s", self.parentStep.num, self.num, self.condition_complete_raw or "", iscomplete:gsub("\n.*",""))
+			ZGV:Error("Error in step %s, goal %s, complete if %s: %s", self.parentStep.num, self.num, self.condition_complete_raw or "", iscomplete:gsub("\n.*",""))
 		end
 	end
 
 	if self.quest and self.action~="accept" and self.action~="turnin" then  -- let accept goals complete on their own
 		repeat
-			CGV:Debug("&goal completing..............")
-			iscomplete,ispossible,explanation,curv,maxv,debugs = CGV.Quests:GetCompletionStatus(self.quest, self.questcondtxt)
-			CGV:Debug("&goal completion: complete:|cffffff%s|r, possible:|cffffff%s|r, why:|cffffff%s|r ... match: |cffaaee%s|r",tostring(iscomplete),tostring(ispossible),tostring(explanation),tostring(debugs))
+			ZGV:Debug("&goal completing..............")
+			iscomplete,ispossible,explanation,curv,maxv,debugs = ZGV.Quests:GetCompletionStatus(self.quest, self.questcondtxt)
+			ZGV:Debug("&goal completion: complete:|cffffff%s|r, possible:|cffffff%s|r, why:|cffffff%s|r ... match: |cffaaee%s|r",tostring(iscomplete),tostring(ispossible),tostring(explanation),tostring(debugs))
 
-			local _ = CGV.Quests:GetQuest(self.quest)
+			local _ = ZGV.Quests:GetQuest(self.quest)
 
 			if iscomplete then
 
@@ -1010,7 +1006,7 @@ end
 
 function Goal:GetQuest()
 	if self.quest then
-		return CGV.Quests:GetQuest(self.quest)
+		return ZGV.Quests:GetQuest(self.quest)
 	end
 end
 
@@ -1018,15 +1014,15 @@ function Goal:GetStatus()
 
 	-- a good place to check for quest coordinates as any...
 	if self.action == "goto" and self.quest and self.questcondtxt then
-		local quest = CGV.Quests:GetQuest(self.quest)
+		local quest = ZGV.Quests:GetQuest(self.quest)
 		if quest and quest.steps then
 			local snum,cnum = quest:FindStepCond(self.questcondtxt)
 			if snum then
 				local cond = quest.steps[snum] and quest.steps[snum].conditions and quest.steps[snum].conditions[cnum]
 				if cond and cond.x and cond.x ~= self.x then
 					self.x,self.y = cond.x,cond.y
-					self.m = CGV.Pointer:GetMapTex()
-					CGV:SetWaypoint() -- update, really
+					self.m = ZGV.Pointer:GetMapTex()
+					ZGV:SetWaypoint() -- update, really
 				end
 			end
 		end
@@ -1058,5 +1054,5 @@ end
 
 function GoalProto:Debug(...)
 	local str = ...
-	CGV:Debug("&goal "..str, select(2,...) )
+	ZGV:Debug("&goal "..str, select(2,...) )
 end

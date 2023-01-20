@@ -2,9 +2,9 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local CGV = _G.CGV
+local ZGV = _G.ZGV
 
-CGV._QuestDataAD = [[
+ZGV._QuestDataAD = [[
 
 A Gang of Thugs=0041001
 The Star-Gazers=0041002

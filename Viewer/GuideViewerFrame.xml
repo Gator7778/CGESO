@@ -1,11 +1,11 @@
  <GuiXml>
 	<Controls>
-		<TopLevelControl name="CGViewerOnUpdate">
+		<TopLevelControl name="ZGViewerOnUpdate">
 			<OnUpdate>
-				if not (CGV and CGV.Frame) then return end
-				local update = CGV.Frame:GetHandler("OnUpdate")
+				if not (ZGV and ZGV.Frame) then return end
+				local update = ZGV.Frame:GetHandler("OnUpdate")
 				if update then
-					update(CGV.Frame,time)
+					update(ZGV.Frame,time)
 				end
 			</OnUpdate>
 		</TopLevelControl>

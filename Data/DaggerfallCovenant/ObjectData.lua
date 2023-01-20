@@ -2,11 +2,11 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local CGV = _G.CGV
+local ZGV = _G.ZGV
 
-if CGV.Utils.GetFaction() ~= "DC" and not CGV.CFG_LOAD_ALL_FACTIONS then return end
+if ZGV.Utils.GetFaction() ~= "DC" and not ZGV.CFG_LOAD_ALL_FACTIONS then return end
 
-CGV._ObjectDataDC = [[
+ZGV._ObjectDataDC = [[
 
 Key Ritual Orb=-21474836482083
 Asakala=-21474836482055
@@ -726,7 +726,7 @@ Bucket=0142016
 Fortifications=0142017
 Medya Zurric's Home=0142018
 Murcien's Hamlet=0142019
-Vital Records, 2E 540ï¿½2E 542=0142020
+Vital Records, 2E 540—2E 542=0142020
 Dining Area=0142021
 Wash Basin=0142022
 The Reachmen Are Coming!=0142023

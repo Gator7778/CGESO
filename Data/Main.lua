@@ -2,12 +2,12 @@
 -- LOCALIZED GLOBAL VARIABLES
 -----------------------------------------
 
-local CGV = _G.CGV
-local npcDataCom = CGV._NpcDataCommon
-local questDataCom = CGV._QuestDataCommon
-local questStepDataCom = CGV._QuestStepDataCommon
-local objectDataCom = CGV._ObjectDataCommon
-local itemData = CGV._ItemData
+local ZGV = _G.ZGV
+local npcDataCom = ZGV._NpcDataCommon
+local questDataCom = ZGV._QuestDataCommon
+local questStepDataCom = ZGV._QuestStepDataCommon
+local objectDataCom = ZGV._ObjectDataCommon
+local itemData = ZGV._ItemData
 local npcData, questData, questStepData, objectData
 local NPC_STR = "npc"
 local QUEST_STR = "quest"
@@ -30,7 +30,7 @@ local allLastUsedIds = {
 -----------------------------------------
 
 local Data = {}
-CGV.Data = Data
+ZGV.Data = Data
 Data.allLastUsedIds = allLastUsedIds
 Data.bloackSavedVars = false
 
@@ -48,7 +48,7 @@ local function getCorrectVarsByType(targetID)
 		comdata, data, saveddata, lastIds = questDataCom, questData, svdata.questIds, allLastUsedIds.quest
 	elseif targetID == QUEST_STEP_STR then
 		-- Not string based so not treated exactly the same. Maintenance of data is up to Quest.lua
-		comdata, data, saveddata, lastIds = questStepDataCom, questStepData, CGV.sv.char.savedquests
+		comdata, data, saveddata, lastIds = questStepDataCom, questStepData, ZGV.sv.char.savedquests
 	elseif targetID == OBJECT_STR then
 		comdata, data, saveddata, lastIds = objectDataCom, objectData, svdata.objectIds, allLastUsedIds.object
 	elseif targetID == ITEM_STR then
@@ -65,12 +65,12 @@ local function getCorrectVarsByType(targetID)
 end
 
 local function appendSavedVarsByType(targetID,entry)
-	if not CGV.DEV then return end
+	if not ZGV.DEV then return end
 	local appendPat = "%s%s\n"
 	if targetID == NPC_STR then
 		svdata.npcIds = (appendPat):format(svdata.npcIds or "",entry)
 	elseif targetID == QUEST_STR then
-		CGV.Utils.ShowFloatingMessage(("New Quest Id! %s"):format(entry))
+		ZGV.Utils.ShowFloatingMessage(("New Quest Id! %s"):format(entry))
 		svdata.questIds = (appendPat):format(svdata.questIds or "",entry)
 	elseif targetID == OBJECT_STR then
 		svdata.objectIds = (appendPat):format(svdata.objectIds or "",entry)
@@ -103,7 +103,7 @@ end
 
 local function faction_to_num(faction)
 	if not faction then
-		faction = CGV.Utils.GetFaction()
+		faction = ZGV.Utils.GetFaction()
 	end
 	if faction == "AD" then return 1
 	elseif faction == "DC" then return 2
@@ -127,7 +127,7 @@ function Data:GetIdByNameAndType(targetID, name)
 	local SetMapToPlayerLocation, ZO_WorldMap_UpdateMap, GetCurrentMapZoneIndex = _G.SetMapToPlayerLocation, _G.ZO_WorldMap_UpdateMap, _G.GetCurrentMapZoneIndex
 
 	if not ID then
-		if not CGV.DEV then
+		if not ZGV.DEV then
 			ID = 6660000 + lamehash(name) -- Create a fake hashy ID
 		else
 			-- Create a new ID for it. and stow it in SV
@@ -271,38 +271,38 @@ end
 
 function Data:Debug(...)
 	local str = ...
-	CGV:Debug("&data "..str, select(2,...) )
+	ZGV:Debug("&data "..str, select(2,...) )
 end
 
 -----------------------------------------
 -- STARTUP
 -----------------------------------------
 
-tinsert(CGV.startups,function(self)
-		svdata = CGV.sv.profile.data
+tinsert(ZGV.startups,function(self)
+		svdata = ZGV.sv.profile.data
 
 		-- common: store directly
-		npcDataCom = CGV._NpcDataCommon					CGV._NpcDataCommon = nil
-		questDataCom = CGV._QuestDataCommon				CGV._QuestDataCommon = nil
-		questStepDataCom = CGV._QuestStepDataCommon  	CGV._QuestStepDataCommon = nil
-		objectDataCom = CGV._ObjectDataCommon  			CGV._ObjectDataCommon = nil
+		npcDataCom = ZGV._NpcDataCommon					ZGV._NpcDataCommon = nil
+		questDataCom = ZGV._QuestDataCommon				ZGV._QuestDataCommon = nil
+		questStepDataCom = ZGV._QuestStepDataCommon  	ZGV._QuestStepDataCommon = nil
+		objectDataCom = ZGV._ObjectDataCommon  			ZGV._ObjectDataCommon = nil
 
-		local faction = CGV.Utils.GetFaction()
+		local faction = ZGV.Utils.GetFaction()
 		local datatypes = {"_QuestStepData","_QuestData","_NpcData","_ObjectData","_ItemData"}
 
 		-- old style, temporary
 		for v in pairs(datatypes) do
-			if CGV[v] then
-				CGV[v..faction] = CGV[v] CGV[v] = nil
+			if ZGV[v] then
+				ZGV[v..faction] = ZGV[v] ZGV[v] = nil
 			end
 		end
 
 		-- faction data: store directly
-		questStepData = CGV['_QuestStepData'..faction] or ""  CGV['_QuestStepData'..faction] = nil
-		npcData = CGV['_NpcData'..faction] or ""  CGV['_NpcData'..faction] = nil
-		objectData = CGV['_ObjectData'..faction] or ""  CGV['_ObjectData'..faction] = nil
-		questData = CGV['_QuestData'..faction] or ""  CGV['_QuestData'..faction] = nil
-		itemData = CGV['_ItemData'..faction] or ""  CGV['_ItemData'..faction] = nil
+		questStepData = ZGV['_QuestStepData'..faction] or ""  ZGV['_QuestStepData'..faction] = nil
+		npcData = ZGV['_NpcData'..faction] or ""  ZGV['_NpcData'..faction] = nil
+		objectData = ZGV['_ObjectData'..faction] or ""  ZGV['_ObjectData'..faction] = nil
+		questData = ZGV['_QuestData'..faction] or ""  ZGV['_QuestData'..faction] = nil
+		itemData = ZGV['_ItemData'..faction] or ""  ZGV['_ItemData'..faction] = nil
 
 		assert(questData,"WHOA! We have NO quests for faction "..faction.."!!")
 
@@ -312,7 +312,7 @@ tinsert(CGV.startups,function(self)
 			-- surely no veteran content, trash all factions now
 			for k in pairs(datatypes) do
 				for fa in ipairs{'AD','DC','EP'} do
-					CGV[k..fa] = nil
+					ZGV[k..fa] = nil
 				end
 			end
 		end
@@ -320,11 +320,11 @@ tinsert(CGV.startups,function(self)
 		-- add other factions to this one (if there are any left, after the massacre above.)
 		for fa in ipairs{'AD','DC','EP'} do
 			if fa ~= faction then
-				npcData = npcData .. 		(CGV['_NpcData'..fa] or "")  		CGV['_NpcData'..fa] = nil
-				objectData = objectData .. 	(CGV['_ObjectData'..fa] or "")  	CGV['_ObjectData'..fa] = nil
-				questData = questData .. 	(CGV['_QuestData'..fa] or "")  		CGV['_QuestData'..fa] = nil
-				itemData = itemData .. 		(CGV['_ItemDataAD'..fa] or "")  	CGV['_ItemDataAD'..fa] = nil
-				CGV.Utils.table_join(questStepData,CGV['_QuestStepData'..fa])  	CGV['_QuestStepData'..fa] = nil
+				npcData = npcData .. 		(ZGV['_NpcData'..fa] or "")  		ZGV['_NpcData'..fa] = nil
+				objectData = objectData .. 	(ZGV['_ObjectData'..fa] or "")  	ZGV['_ObjectData'..fa] = nil
+				questData = questData .. 	(ZGV['_QuestData'..fa] or "")  		ZGV['_QuestData'..fa] = nil
+				itemData = itemData .. 		(ZGV['_ItemDataAD'..fa] or "")  	ZGV['_ItemDataAD'..fa] = nil
+				ZGV.Utils.table_join(questStepData,ZGV['_QuestStepData'..fa])  	ZGV['_QuestStepData'..fa] = nil
 			end
 		end
 
