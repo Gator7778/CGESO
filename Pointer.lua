@@ -1225,6 +1225,7 @@ SLASH_COMMANDS["/cgpos"] = function(checker)
 	local gps = GPS:GetCurrentMapMeasurement()
     local tex = gps.id
 	if checker == "gps" then
+		local tex = Pointer:GetMapTex()
 		d(("|cffffff%s|r"):format(tex))
 		d(("xoffset = |c88ff88%.19f|r"):format(gps.offsetX))
 		d(("yoffset = |c88ff88%.19f|r"):format(gps.offsetY))

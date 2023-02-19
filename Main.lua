@@ -3,13 +3,6 @@
 -----------------------------------------
 
 local CGV = _G.CGV
-local npcDataCom = CGV._NpcDataCommon
-local questDataCom = CGV._QuestDataCommon
-local questStepDataCom = CGV._QuestStepDataCommon
-local objectDataCom = CGV._ObjectDataCommon
-local itemData = CGV._ItemData
-local npcData, questData, questStepData, objectData
-local NPC_STR = "npc"
 local QUEST_STR = "quest"
 local QUEST_STEP_STR = "queststep"
 local OBJECT_STR = "object"

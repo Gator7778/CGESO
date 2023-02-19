@@ -378,7 +378,7 @@ function CGV:SanitizeGuideTitle(title)
 	title = title:gsub("//","/")
 	title = title :gsub("CGV's ","")
 	title = title
-	:gsub("^Common ","")
+	:gsub("^Legacy ","")
 	:gsub("^Aldmeri Dominion ","")
 	:gsub("^Ebonheart Pact ","")
 	:gsub("^Daggerfall Covenant ","")
@@ -392,7 +392,7 @@ end
 
 function CGV:GetGuideByTitle(title)
 	if not title then return end
-	title = CGV:SanitizeGuideTitle(title)  -- code-side fix for "common" guides.
+	title = CGV:SanitizeGuideTitle(title)  -- code-side fix for "legacy" guides.
 	for _,v in ipairs(self.registeredguides) do
 		if v.title == title then
 			return v
@@ -551,7 +551,7 @@ function CGV:SetGuide(name,step)
 			guide:SetAsCurrent()
 
 			self.sv.char.stephistory = {}
-			self:Print(L["message_loadedguide"]:format(guide.title))
+			--self:Print(L["message_loadedguide"]:format(guide.title))
 			self:Debug("Guide loaded: "..name)
 			self:FocusStep(step)
 		else

@@ -2176,6 +2176,7 @@ CGV:RegisterGuide("LEVELING\\Craglorn",[[
 loadingimage loadscreen_craglorn_01.dds
 description The constellations have disappeared. Ancient Yokudan warriors and deadly atronachs menace the rocky expanse of Craglorn.
 step
+'_***TIP ALTERNATIVELY YOU CAN CHOOSE TO DO IMPERIAL SEWERS GUIDE THE END OF IT WILL BRING YOU BACK TO CRAGLORN IT IS A PVP ZONE.***_
 'Open _Grahtwood_ Map
 'Travel _Elden Root_ |q The Star-Gazers
 |tip Manually skip to the next step.

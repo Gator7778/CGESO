@@ -6,52 +6,52 @@ loadingimage loadscreen_u30_tutorial_01.dds
 description Straddling the great Niben River and extending east into the bogs of the Argonian homeland, Blackwood serves as the maritime gate to Cyrodiil—a valuable, if perilous, stretch of territory greatly prized by Khajiit, Argonians, and Imperials alike.
 step
 goto u30_balfiera_int1_base 43.40,72.51
-'Look Around |q The Gates of Adamant/Look Around
+'Look _Around_ |q The Gates of Adamant/Look Around
 step
 goto 43.40,72.51
 talk Norianwe |q The Gates of Adamant/Talk to Norianwe
 step
 goto 43.52,72.84
-'Open Cell Door |q The Gates of Adamant/Exit Cell
+'Open _Cell Door_ |q The Gates of Adamant/Exit Cell |future
 step
 goto 45.70,62.13
-'Follow Norianwe |q The Gates of Adamant/Follow Norianwe
+'Follow _Norianwe_ |q The Gates of Adamant/Follow Norianwe
 step
 goto 45.70,62.13
 talk Norianwe |q The Gates of Adamant/Talk to Norianwe
 step
 goto 50.82,58.86
-'Take a Weapon |q The Gates of Adamant/Take a Weapon
+'Take _Weapon_ |q The Gates of Adamant/Take a Weapon
 step
 goto 50.82,58.86
-'Equip a Weapon |q The Gates of Adamant/Equip a Weapon
+'Equip _Weapon_ |q The Gates of Adamant/Equip a Weapon
 step
 goto 50.40,49.72
-'Open Balfiera Ruins |q The Gates of Adamant/Follow Norianwe
+'Open _Balfiera Ruins_ |q The Gates of Adamant/Follow Norianwe
 |tip Manually skip to the next step.
 step
 goto u30_balfiera_int2_base 51.29,34.79
-'Follow Norianwe |q The Gates of Adamant/Follow Norianwe
+'Follow _Norianwe_ |q The Gates of Adamant/Follow Norianwe
 step
 goto 51.29,34.79
-'Practice Combat |q The Gates of Adamant/Practice Combat
+'Practice _Combat_ |q The Gates of Adamant/Practice Combat
 step
 goto 52.36,32.29
 talk Norianwe |q The Gates of Adamant/Talk to Norianwe
 step
 goto 50.75,27.47
-'Open Balfiera Ruins |q The Gates of Adamant/Lead Norianwe Outside
+'Open _Balfiera Ruins_ |q The Gates of Adamant/Lead Norianwe Outside
 |tip Manually skip to the next step.
 step
 goto u30_balfiera_int3_base 35.07,41.44 |q The Gates of Adamant/Lead Norianwe Outside
 step
 goto u30_balfiera_int3_base 49.81,45.45
-'Open Balfiera Ruins |q The Gates of Adamant/Lead Norianwe Outside
+'Open _Balfiera Ruins_ |q The Gates of Adamant/Lead Norianwe Outside
 |tip Go upstairs
 |tip Manually skip to the next step.
 step
 goto u30_balfiera_int5_base 75.95,45.42
-'Open Balfiera Island |q The Gates of Adamant/Lead Norianwe Outside
+'Open _Balfiera Island_ |q The Gates of Adamant/Lead Norianwe Outside
 step
 goto u30_balfiera_ext 70.51,51.10
 'Open _Gallery Foyer_ |q The Gates of Adamant/Find the Keywright's Gallery
@@ -61,60 +61,73 @@ talk Norianwe |q The Gates of Adamant/Talk to Norianwe
 |tip Go Upstairs
 step
 goto 28.78,74.04
-click Balfiera Island |q The Gates of Adamant/Acquire the _Skyshard_
+'Open _Balfiera Island_ |q The Gates of Adamant/Acquire the Skyshard
 |tip Manually skip to the next step.
 step
 goto u30_balfiera_ext 66.87,71.27
-'Use _Skyshard_ Vault |q The Gates of Adamant/Acquire the _Skyshard_
+'Open _Skyshard Vault_ |q The Gates of Adamant/Acquire the Skyshard
 |tip Manually skip to the next step.
 step
-'Use _Skyshard_ |q The Gates of Adamant/Acquire the _Skyshard_
-|tip Straight ahead. Kill the Gargoyle and then acquire the _Skyshard_.
+'Use _Skyshard_ |q The Gates of Adamant/Acquire the Skyshard
+|tip Straight ahead. Kill the Gargoyle and then acquire the Skyshard.
 step
-click Balfiera Island |q The Gates of Adamant/Return to the Gate
+'Open _Balfiera Island_ |q The Gates of Adamant/Return to the Gate
 |tip Manually skip to the next step.
 step
 goto 70.55,51.17
-click Gallery Balfiera |q The Gates of Adamant/Return to the Gate
+'Open _Gallery Balfiera_ |q The Gates of Adamant/Return to the Gate
 |tip Manually skip to the next step.
 step
 goto u30_balfiera_int7_base 49.05,53.61
-'Return to the Gate |q The Gates of Adamant/Return to the Gate
+'Return to _Gate_ |q The Gates of Adamant/Return to the Gate
 step
 goto 49.05,53.61
-'Activate _Skyshard_ Aperture |q The Gates of Adamant/Repair the Gate
+'Activate _Skyshard Aperture_ |q The Gates of Adamant/Repair the Gate
 |tip Upstairs
 step
 goto 48.62,53.02
 talk Norianwe |q The Gates of Adamant/Talk to Norianwe
 step
 goto 51.45,51.13
-click Gallery Antechamber |q The Gates of Adamant/Enter Gate
+'Open _Gallery Antechamber_ |q The Gates of Adamant/Enter Gate
 step
 goto 61.23,41.34
 kill Shyazzel the Traveler |q The Gates of Adamant/Defeat Shyazzel the Traveler
 step
 goto 68.22,34.39
-click the Keywright's Gallery |q The Gates of Adamant/Enter the Keywright's Gallery
+'Open _Keywright's Gallery_ |q The Gates of Adamant/Enter the Keywright's Gallery
 |tip Manually skip to the next step.
 step
 goto u30_balfiera_int8_base 64.79,72.48
-click Keywright's Gallery |q The Gates of Adamant/Enter the Keywright's Gallery
+'Open _Keywright's Gallery_ |q The Gates of Adamant/Enter the Keywright's Gallery
 |tip Follow path to the right.
 |tip Manually skip to the next step.
 step
 goto 62.06,61.65
-click the Keywright's Gallery |q The Gates of Adamant/Enter the Keywright's Gallery
+'Enter _Keywright's Gallery_ |q The Gates of Adamant/Enter the Keywright's Gallery
 step
 goto 47.01,55.19
 talk Norianwe
-turnin The Gates of Adamant |next Common Leveling Guides\\The Wailing Prison
+turnin The Gates of Adamant
+step
+'Use _Khenarthi's Roost_ |next Leveling Guides\\The Wailing Prison
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+'Use _Stros M'kai_ |next Leveling Guides\\The Wailing Prison
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+'Use _Bleakrock Isle_ |next Leveling Guides\\The Wailing Prison
+|tip Manually skip to the next step.
+|only Ebonheart Pact
 ]])
 
 CGV:RegisterGuide("LEVELING\\The Wailing Prison",[[
 loadingimage loadscreen_chapter1_01.dds
 description Brave The Wailing Prison, a prisoner stronghold in Coldharbour.
 step
+|tip If you are new i recommend picking a companion and doing their questline under the Extra's Folder
 'Open _Auridon_ Map
 'Travel to _Vulkhel Guard_ |q Soul Shriven in Coldharbour |future
 |tip Manually skip to the next step
@@ -15091,7 +15104,7 @@ goto stonefalls_base 77.45,36.57
 step
 goto the_ebonheart_harborage_base 70.90,32.79
 talk Cadwell
-turnin Cadwell's Gold |next DLC\\Craglorn
+turnin Cadwell's Gold |next LEVELING\\Craglorn
 '_Congratulations, you've explored all of the factions!_
 |only Ebonheart Pact
 ]])
@@ -45073,7 +45086,7 @@ goto 80.56,57.89
 |tip Manually skip to the next step.
 step
 goto 79.83,58.31
-|tip You will lose health when you are not near a fire. Make sure you click Campfires to start fires and stay close to them when possible.
+|tip You will lose health when you are not near a fire. Make sure you use Campfires to start fires and stay close to them when possible.
 'Find the _Cult Leader_ |q A Walk Above the Clouds/Find the Cult Cell Leader
 step
 goto 79.83,58.31
@@ -45530,7 +45543,7 @@ goto glenumbra_base 35.49,79.27
 step
 goto the_daggerfall_harborage 54.79,69.80
 talk Cadwell
-turnin Cadwell's Gold |next LEVELING\\Imperial Sewers
+turnin Cadwell's Gold |next LEVELING\\Craglorn
 'Congratulations, you've explored all of the factions!
 |only Daggerfall Covenant
 ]])

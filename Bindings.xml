@@ -1,6 +1,6 @@
 <Bindings>
   <Layer name="SI_KEYBINDINGS_LAYER_GENERAL">
-    <Category name="Community Leveling Guides">
+    <Category name="|cFC6000Community Leveling Guides">
       <Action name="COMMUNITY_TOGGLE_GUIDE_VIEWER">
         <Down>
           CGV.Viewer:Toggle_GuideViewer()

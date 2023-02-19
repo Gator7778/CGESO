@@ -677,32 +677,8 @@ function Goal:GetText()
 		base = L["stepgoal_kill".._done]
 		data = COLOR_NPC(self.target)
 
-	elseif self.action == "equip" then
-		base = L["stepgoal_equip".._done]
-		data = COLOR_NPC(self.target)
-
-	elseif self.action == "collect" then
-		base = L["stepgoal_collect".._done]
-		data = COLOR_NPC(self.target)
-
-	elseif self.action == "buy" then
-		base = L["stepgoal_buy".._done]
-		data = COLOR_NPC(self.target)
-
-	elseif self.action == "gather" then
-		base = L["stepgoal_gather".._done]
-		data = COLOR_NPC(self.target)
-
-	elseif self.action == "learnskill" then
-		base = L["stepgoal_learnskill".._done]
-		data = COLOR_NPC(self.target)
-
 	elseif self.action == "confirm" then
 		text = L["stepgoal_confirm"]
-
-	elseif self.action == "click" then
-		base = L["stepgoal_click".._done]
-		data = COLOR_ITEM(self.target)
 
 	elseif self.action == "wayshrine" then
 		base = L["stepgoal_wayshrine".._done]

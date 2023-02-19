@@ -160,7 +160,7 @@ function CGV.EVENT_ACHIEVEMENT_UPDATED(_,_,id)
 				end
 					local progress = _G.GetAchievementProgress(id)
 				if (isSkyshardAchievement) then
-					CGV:Print("click Skyshard ||achieve %d/#",id)
+					CGV:Print("Use Skyshard ||achieve %d/#",id)
 					CGV:Print("|cffff99- Chose a number below for # above:|r")
 					for i = 1, numCriteria do
 						local criterionDesc,numCompleted,numRequired = _G.GetAchievementCriterion(id,i)
@@ -189,7 +189,7 @@ end
 function CGV.EVENT_LORE_BOOK_LEARNED(_,_,cat,col,book,guild,isMaxRank)
 	if (CGV.Creator) then
 		local title,_,_,_ = _G.GetLoreBookInfo(cat,col,book)
-		CGV:Print("click %s", title)
+		--CGV:Print("click %s", title)
 		CGV:Print("lorebook %s/%d/%d/%d",title,cat,col,book)
 	end
 end

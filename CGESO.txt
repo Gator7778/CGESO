@@ -113,7 +113,7 @@ Guides/Expansions.lua
 Guides/Companions.lua
 Guides/Legacy.lua
 Guides/Skyshards and Delves.lua
-Guides/Lorebooks.lua
+Guides/LSD.lua
 
 -- Bindings
 Bindings.xml
