@@ -11024,7 +11024,6 @@ goto 31.73,38.62
 |only Aldmeri Dominion
 step
 goto 37.12,39.97
-|tip Random Door.
 'Listen _Door_ |q Chateau of the Ravenous Rodent/Evict the Guest That Doesn't Belong
 |only Aldmeri Dominion
 step
@@ -25529,8 +25528,7 @@ goto 31.73,38.62
 'Open _Chateau Guesthouse_ |q Chateau of the Ravenous Rodent/Enter the Chateau Guesthouse
 |only Daggerfall Covenant
 step
-goto 37.12,39.97
-|tip Random Door.
+goto 36.97,45.96
 'Listen _Door_ |q Chateau of the Ravenous Rodent/Evict the Guest That Doesn't Belong
 |only Daggerfall Covenant
 step
@@ -39677,8 +39675,7 @@ goto 31.73,38.62
 'Open _Chateau Guesthouse_ |q Chateau of the Ravenous Rodent/Enter the Chateau Guesthouse
 |only Ebonheart Pact
 step
-goto 37.12,39.97
-|tip Random Door.
+goto 31.45,44.15
 'Listen _Door_ |q Chateau of the Ravenous Rodent/Evict the Guest That Doesn't Belong
 |only Ebonheart Pact
 step
