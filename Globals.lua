@@ -9,6 +9,7 @@ MIDDLE_MOUSE_BUTTON = 3
 
 Enums = {
 	AlikrMap = 5,
+	ApocryphaMap = 50,
 	ArtaeumMap = 33,
 	AuridonMap = 15,
 	AzkthzandCavernMap = 41,
@@ -47,6 +48,7 @@ Enums = {
 	StormhaveMap = 4,
 	StrosMKaiMap = 19,
 	SummersetMap = 32,
+	TelvanniPeninsulaMap = 49,
 	TheDeadlandsMap = 45,
 	TheReachMap = 42,
 	TheRiftMap = 12,

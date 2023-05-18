@@ -11,6 +11,8 @@ local help_string = [[	Options:
 	show - Show the Guide Viewer.
 	hide - Hide the Guide Viewer.
 	config - Show configuration.
+	creator - Activates Creator Mode.
+	dev - Activates Development Mode.
 ]]
 
 if CGV.DEV then
