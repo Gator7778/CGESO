@@ -46705,5 +46705,2617 @@ CGV:RegisterGuide("LEVELING\\Telvanni Peninsula",[[
 loadingimage loadscreen_telvanni_peninsula_01.dds
 description The Telvanni Peninsula is a region between the Inner Sea and Padomaic Ocean in mainland Morrowind.
 step
-goto u38_telvannipeninsula_base 48.85,60.25
+
+-- START: PROLOGUE GUIDE
+'Open _Grahtwood_ Map
+'Travel to _Elden Root_ |q Eye of Fate |future
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto eldenrootservices_base 38.08,40.00
+talk Leramil the Wise
+accept Eye of Fate
+|only Aldmeri Dominion
+step
+goto 37.37,35.34
+'Use _Portal to Ondil Outskirts_ |q Eye of Fate/Go to Ondil Outskirts |future
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+'Open _Stormhaven_ Map
+'Travel to _Wayrest_ |q Eye of Fate |future
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto wayrest_base 45.75,44.86 |q Eye of Fate |future
+|only Daggerfall Covenant
+step
+goto 47.11,32.55 |q Eye of Fate |future
+|only Daggerfall Covenant
+step
+goto 49.67,18.74
+talk Leramil the Wise
+accept Eye of Fate
+|only Daggerfall Covenant
+step
+'Open _Deshaan_ Map
+'Travel to _Mournhold_ |q Eye of Fate |future
+|only Ebonheart Pact
+|tip Manually skip to the next step.
+step
+goto mournhold_base 60.95,59.78 |q Eye of Fate |future
+|only Ebonheart Pact
+step
+goto 47.24,59.93
+talk Leramil the Wise
+accept Eye of Fate
+|only Ebonheart Pact
+step
+goto 46.47,59.48
+'Enter _Portal to Ondil Outskirts_ |q Eye of Fate/Go to Ondil Outskirts |future
+|only Ebonheart Pact
+step
+goto auridon_base 56.49,74.67
+'Use _Book of Forbidden Secrets_ |q Eye of Fate/Read Book of Forbidden Secrets |future
+|tip Manually skip to the next step.
+step
+goto 54.71,71.19 |q Eye of Fate/Follow the Revealed Runes
+step
+goto 53.05,69.07
+'Enter _Portal to Emerald Glyphic Vault_ |q Eye of Fate/Enter Emerald Glyphic Vault Portal |future
+|tip Manually skip to the next step.
+step
+goto u37_emeraldvault_low_base 20.55,40.70 |q Eye of Fate/Find the Emerald Glyphic |future
+step
+goto 50.14,59.97 |q Eye of Fate/Find the Emerald Glyphic
+step
+goto u37_emeraldvault_up_base 60.08,43.51 |q Eye of Fate/Find the Emerald Glyphic
+step
+goto 90.45,30.25 |q Eye of Fate/Find the Emerald Glyphic
+step
+goto 64.56,13.93 |q Eye of Fate/Find the Emerald Glyphic
+step
+goto 40.45,20.37 |q Eye of Fate/Find the Emerald Glyphic
+step
+goto 20.43,86.20 |q Eye of Fate/Find the Emerald Glyphic
+step
+goto 20.48,59.36
+talk Dralys Athren |q Eye of Fate/Talk to Dralys Athren |future
+step
+goto 20.48,59.36
+'Take _Emerald Glyphic_ |q Eye of Fate/Take the Emerald Glyphic
+step
+goto 20.31,55.68
+'Use _Petrified Tentacle Talisman_ |q Eye of Fate/Use the Petrified Tentacle Talisman
+step
+goto 20.31,55.68
+'Use _Portal to Leramil the Wise_ |q Eye of Fate/Talk to Leramil the Wise
+|tip Manually skip to the next step.
+step
+goto dune_base 12.33,46.77
+talk Leramil the Wise |q Eye of Fate/Talk to Leramil the Wise
+step
+goto 12.67,50.57 |q Eye of Fate/Discover the Shrine's Location
+step
+goto reapersmarch_base 62.32,34.37
+'Open _Mildandor's Cellar_ |q Eye of Fate/Discover the Shrine's Location
+|tip Manually skip to the next step.
+step
+goto 62.24,34.18
+'Examine _Scorched Ruins_ |q Eye of Fate/Discover the Shrine's Location
+|tip Manually skip to the next step.
+step
+goto 62.18,34.25
+'Examine _Mildanor's Ripped Note_ |lorebook Mildanor's Ripped Note/3/3/103
+step
+goto 62.18,34.25
+talk Leramil the Wise_ |q Eye of Fate/Discover the Shrine's Location
+|tip Manually skip to the next step.
+step
+'Open _Reapers March_ Map
+'Travel to _S'ren-ja_ |q Eye of Fate/Discover the Shrine's Location
+|tip Manually skip to the next step.
+step
+goto 59.59,53.41 |q Eye of Fate/Discover the Shrine's Location
+step
+goto 62.94,57.34
+|tip Go upstairs.
+talk to Bassian Caudex |q Eye of Fate/Discover the Shrine's Location
+step
+'Open _Reapers March_ Map
+'Travel to _Rawl'kha_ |q Eye of Fate/Go to Naraheida's Camp
+|tip Manually skip to the next step.
+step
+goto 39.56,53.59 |q Eye of Fate/Go to Naraheida's Camp
+step
+goto 42.41,47.16
+talk Dralys Athren |q Eye of Fate/Talk to Dralyns Athren |future
+|tip Manually skip to the next step.
+step
+goto 42.41,47.16
+|tip Watch the dialogue.
+talk Leramil the Wise |q Eye of Fate/Talk to Leramil the Wise
+step
+goto rawlkha_base 01.05,39.51 |q Eye of Fate/Enter the Shrine Using Leramil's Entrance
+step
+goto 52.37,57.70 |q Eye of Fate/Enter the Shrine Using Leramil's Entrance
+step
+goto reapersmarch_base 43.96,59.96 |q Eye of Fate/Enter the Shrine Using Leramil's Entrance
+step
+goto 32.00,64.28 |q Eye of Fate/Enter the Shrine Using Leramil's Entrance
+step
+goto 23.84,60.63
+'Open _Claw's Strike_ |q Eye of Fate/Enter the Shrine Using Leramil's Entrance
+|tip Manually skip to the next step.
+step
+goto clawsstrike_base 41.74,70.46 |q Eye of Fate/Enter the Shrine Using Leramil's Entrance
+step
+goto 91.57,78.62
+'Open _Shrine of the Golden Eye_ |q Eye of Fate/Enter the Shrine Using Leramil's Entrance |future
+|tip Manually skip to the next step.
+step
+goto u37_shrineofgoldeneye_base 64.53,34.06 |q Eye of Fate/Find Leramil the Wise
+step
+goto 62.82,63.27 |q Eye of Fate/Find Leramil the Wise
+step
+goto 48.39,60.37 |q Eye of Fate/Find Leramil the Wise
+step
+goto 47.61,67.12
+'Open _Shrine of the Golden Eye_ |q Eye of Fate/Find Leramil the Wise
+|tip Manually skip to the next step.
+step
+goto 75.40,76.62 |q Eye of Fate/Find Leramil the Wise
+step
+goto 73.77,87.76 |q Eye of Fate/Find Leramil the Wise
+step
+goto 38.92,87.35 |q Eye of Fate/Find Leramil the Wise
+step
+goto 39.00,61.00
+kill Dralys Athren |q Eye of Fate/kill Dralys Athren |future
+step
+goto 35.55,60.56
+'Search _Dralys's Pack_ |q Eye of Fate/Gather the Onyx and Umber Glyphics
+step
+goto 36.47,58.29
+|tip Watch the dialogue.
+talk Leramil the Wise |q Eye of Fate/Talk to Leramil the Wise
+step
+goto 38.63,56.29
+talk Hermaeus Mora |q Eye of Fate/Talk to Hermaeus Mora
+step
+goto 38.63,56.29
+'Use _Emerald, Umber, and Onyx Glyphics_
+'Sign _Contract with Hermaeus Mora_ |q Eye of Fate/Use the Glyphics
+step
+goto 36.10,59.07
+'Use _Portal to Dune Outskirts_ |q Eye of Fate/Exit the Shrine
+|tip Manually skip to the next step.
+step
+goto dune_base 12.02,46.18
+talk Leramil the Wise
+turnin Eye of Fate
+step
+-- END: PROLOGUE GUIDE
+
+-- BEGIN Telvanni Peninsula GUIDE
+'Open _Telvanni Peninsula_ Map
+'Travel to _Necrom Outskirts_ |q Fate's Proxy |future
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 77.26,50.41 |q Underwritten |future
+step
+goto 78.62,50.39
+talk Cindieth
+accept Underwritten
+step
+goto 78.63,49.94
+'Open _Anchre Egg Mine_ |q Underwritten/Enter the Anchre Egg Mine |future
+|tip Manually skip to the next step.
+step
+goto u38_eggmine_base 51.79,69.35 |q Underwritten/.*Search the Egg Mine.* |count 1 |future
+step
+goto 38.55,61.15
+'Search _Egg Hand Gine_ |q Underwritten/.*Search the Egg Mine.* |count 1
+step 
+goto 25.80,70.30
+'Examine _Foreman Fomesa_ |q Underwritten/.*Search the Egg Mine.* |count 2
+step
+goto 18.61,55.97
+talk Overseer Ulfengar |q Underwritten/.*Search the Egg Mine.* |count 3
+step
+goto 39.82,38.99 |q Underwritten/Inspect the Kwama Queen
+step
+goto 38.50,54.52 |q Underwritten/Inspect the Kwama Queen
+step
+goto 28.66,53.60
+'Use _Skyshard_ |q Underwritten/Inspect the Kwama Queen
+|tip Manually skip to the next step.
+step
+goto 21.56,52.16 |q Underwritten/Inspect the Kwama Queen |tip Drop down.
+step
+goto 41.78,14.25 |q Underwritten/Inspect the Kwama Queen
+step
+goto 51.56,21.28 |q Underwritten/Inspect the Kwama Queen
+step
+goto 51.38,44.66
+kill Zaedare the Afflicted |q Underwritten/Inspect the Kwama Queen
+|tip Manually skip to the next step.
+step
+goto 50.90,54.92
+'Examine _Kwama Queen_ |q Underwritten/Inspect the Kwama Queen
+step
+goto 51.63,65.40 |q Underwritten/Inspect the Kwama Pen
+step
+goto 78.66,50.57
+'Examine _Attention All Egg Hands_ |q Underwritten/Inspect the Kwama Pen
+step
+goto 52.01,73.00 |q Underwritten/Exit the Anchre Egg Mine
+step
+goto 51.61,87.82
+'Open _Telvanni Peninsula_ |q Underwritten/Exit the Anchre Egg Mine |future
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 78.66,50.39
+|tip Watch the dialogue.
+talk Overseer Ulfengar |q Underwritten/Talk to Ulfengar
+step
+goto 78.61,50.30
+talk Cindieth
+turnin Underwritten
+step
+goto 77.11,50.31 |q Fate's Proxy |future
+step
+goto 76.57,43.83
+talk Leramil the Wise
+accept Fate's Proxy
+step
+goto 72.33,45.24
+talk Retainer Balver
+accept Llaro's Headache
+step
+goto 67.51,42.63 |q Fate's Proxy/Go to Ulvano Cistern
+step
+goto 69.86,36.31
+'Use _Skyshard_ |q Fate's Proxy/Go to Ulvano Cistern
+|tip Manually skip to the next step.
+step
+goto 67.51,42.63 |q Fate's Proxy/Go to Ulvano Cistern
+step
+goto 62.52,42.79 |q Fate's Proxy/Go to Ulvano Cistern
+step
+goto 63.86,39.01
+wayshrine Great Arm
+step
+goto 62.52,42.79 |q Fate's Proxy/Go to Ulvano Cistern
+step
+goto 60.16,48.03 |q Fate's Proxy/Go to Ulvano Cistern
+step
+goto 57.01,49.43
+'Pour _Ulvano Cistern_ |q Fate's Proxy/Pour the Ink into the Water |future
+step
+goto 57.01,49.43
+talk Hermaeus Mora |q Fate's Proxy/Talk to Hermaeus Mora
+step
+goto 66.03,53.40
+talk Dacia Caro
+accept Lovesick
+step
+goto 66.28,58.29 |q Fate's Proxy/Meet Leramil the Wise in Necrom
+step
+goto 66.99,60.87
+'Use _Skyshard_ |q Fate's Proxy/Meet Leramil the Wise in Necrom
+|tip Manually skip to the next step.
+step
+'Open _Telvanni Peninsula_ Map
+'Travel to _Necrom Outskirts_ |q Fate's Proxy/Meet Leramil the Wise in Necrom
+|tip Manually skip to the next step.
+step
+goto 74.14,38.37
+talk Elouan Genin
+accept Personal Effects
+step
+goto 77.33,43.94 |q Fate's Proxy/Meet Leramil the Wise in Necrom
+step
+goto 81.53,37.97 |q Fate's Proxy/Meet Leramil the Wise in Necrom
+step
+goto u38_Necrom_base 47.93,58.67
+'Open _Necrom_ |q Fate's Proxy/Meet Leramil the Wise in Necrom
+|tip Manually skip to the next step.
+step
+goto 51.99,58.53
+'Examine _Adventures, Take Heed!_
+accept Call of the High Ordinator
+step
+goto 51.30,57.82
+talk High Ordinator Boryn
+turnin Call of the High Ordinator
+step
+goto 48.13,60.37 |q Fate's Proxy/Meet Leramil the Wise in Necrom
+step
+goto 48.65,49.58
+wayshrine Necrom
+step
+goto 55.82,52.48 |q Fate's Proxy/Meet Leramil the Wise in Necrom
+step
+goto 60.30,52.39
+'Open _Necrom Bindery_ |q Fate's Proxy/Meet Leramil the Wise in Necrom
+|tip Manually skip to the next step.
+step
+goto 58.15,51.56
+talk Leramil the Wise |q Fate's Proxy/Talk to Leramil the Wise |future
+step
+goto 58.05,51.51
+|tip Watch the dialogue.
+'Use _Portal to Necrom Necropolis_ |q Fate's Proxy/Investigate the Necrom Necropolis
+|tip Manually skip to the next step.
+step
+goto 47.38,35.28
+|tip Watch the dialouge
+talk Curate Gadayn
+accept Keeper of the Fate
+step
+goto 56.70,39.06 |q Keeper of the Fate/Talk to the Port Master
+step
+goto 75.03,27.97
+talk Port Master Ulene |q Keeper of the Fate/Talk to the Port Master
+|tip Persuade her.
+step
+goto 76.60,18.44 |q Keeper of the Fate/Board the Stormwing |future
+step
+goto 86.13,18.25 |q Keeper of the Fate/Board the Stormwing
+step
+goto 86.87,21.26
+'Open _Lower Deck_ |q Keeper of the Fate/Board the Stormwing
+|tip Manually skip to the next step.
+step
+goto 428.46,331.87
+'Examine _Hidden Kindred Instructions_ |q Keeper of the Fate/.*Search the Stormwing.* |count 1 |future
+step
+goto 422.54,331.28
+'Take _Stormwing Hold Key_ |q Keeper of the Fate/.*Search the Stormwing.* |count 2
+step
+goto 424.34,332.90
+'Open _Ship's Hold_ |q Keeper of the Fate/.*Search the Stormwing.* |count 3
+|tip Manually skip to the next step.
+step
+goto 422.69,333.03
+'Search _Crate_ |q Keeper of the Fate/.*Search the Stormwing.* |count 3
+step
+goto 429.08,332.08
+'Examine _First Mate Dalmir's Log_ |q Keeper of the Fate/.*Search the Stormwing.* |count 4
+step
+goto 424.55,332.68
+'Climb _Ship's Lower Deck_ |q Keeper of the Fate/Return to Curate Gadayn
+|tip Manually skip to the next step.
+step
+goto 426.56,333.02
+'Open _Necrom_ |q Keeper of the Fate/Return to Curate Gadayn
+|tip Manually skip to the next step.
+step
+goto 85.84,18.03 |q Keeper of the Fate/Return to Curate Gadayn
+step
+goto 75.50,18.45 |q Keeper of the Fate/Return to Curate Gadayn
+step
+goto 73.58,28.69 |q Keeper of the Fate/Return to Curate Gadayn
+step
+goto 60.16,36.60 |q Keeper of the Fate/Return to Curate Gadayn
+step
+goto 48.05,35.77
+talk Curate Gadayn |q Keeper of the Fate/Talk to Curate Gadayn |future
+step
+goto 39.69,40.69 |q Keeper of the Fate/Meet Curate Gadayn in the Underways
+step
+goto 37.98,34.47
+talk Solni Nrayn
+turnin Personal Effects
+step
+goto 46.59,26.16
+'Open _Necrom Underways_ |q Keeper of the Fate/Meet Curate Gadayn in the Underways
+|tip Manually skip to the next step.
+step
+goto u38_NecromTunnel_base 29.21,60.90 |q Keeper of the Fate/Enter the Necropolis |future
+step
+goto 37.12,69.04
+'Open _Necrom Necropolis_ |q Keeper of the Fate/Enter the Necropolis |future
+|tip Manually skip to the next step.
+step
+goto U38_TP2_Abby_Int_base 21.80,68.58 |q Keeper of the Fate/Go to the Necropolis Chapel |future
+step
+goto 21.65,54.61
+'Open _Keepers Hall_ |q Keeper of the Fate/Go to the Necropolis Chapel
+|tip Manually skip to the next step.
+step
+goto 24.74,41.62 |q Keeper of the Fate/Go to the Necropolis Chapel
+step
+goto 35.28,51.19 |q Keeper of the Fate/Gain Entry to the Necropolis Chapel |future
+step
+goto 16.18,38.80
+'Take _Necropolis Chapel Key_ |q Keeper of the Fate/Gain Entry to the Necropolis Chapel |future
+step
+goto 35.40,51.36
+'Open _Necropolis Chapel_ |q Keeper of the Fate/Search for Abbot Ilvel
+|tip Manually skip to the next step.
+step
+goto 52.32,56.37
+'Destroy _Censer of Contagion_ |q Keeper of the Fate/.*Destroy the Censers.* |count 1 |future
+step
+goto 54.50,57.59
+'Destroy _Censer of Contagion_ |q Keeper of the Fate/.*Destroy the Censers.* |count 2
+step
+goto 52.41,45.69
+'Destroy _Censer of Contagion_ |q Keeper of the Fate/.*Destroy the Censers.* |count 3
+step
+goto 54.94,46.74
+'Destroy _Censer of Contagion_ |q Keeper of the Fate/.*Destroy the Censers.* |count 4
+step
+goto 53.81,38.88
+'Examine _Blightcrown's Orders_ |q Keeper of the Fate/Examine Evidence
+step
+goto 53.29,32.34
+'Open _Abbot Ilvel's Chambers_ |q Keeper of the Fate/Go to Abbot Ilvel's Chambers
+step
+goto 49.57,24.57
+'Destroy _Censer of Corruption_ |q Keeper of the Fate/Destroy the Censer
+step
+goto 50.33,24.28
+talk Curate Gadayn |q Keeper of the Fate/Talk to Curate Gadayn
+step
+goto 52.57,20.14
+'Take _Necropolis Catacombs Key_ |q Keeper of the Fate/Take the Catacombs Key
+step
+goto 61.07,28.37
+'Open _Necropolis Chapel_ |q Keeper of the Fate/Enter the Necropolis Catacombs
+|tip Manually skip to the next step.
+step
+goto 75.38,28.46
+'Open _Necropolis Catacombs_ |q Keeper of the Fate/Enter the Necropolis Catacombs
+step
+goto U38_TP2_Catacombs_Int_base 17.37,67.35 |q Keeper of the Fate/Search the Catacombs
+step
+goto 18.85,80.53 |q Keeper of the Fate/Search the Catacombs
+step
+goto 37.56,78.83 |q Keeper of the Fate/Search the Catacombs
+step
+goto 37.16,66.97 |q Keeper of the Fate/Search the Catacombs
+step
+goto 82.35,71.21 |q Keeper of the Fate/Search the Catacombs
+step
+goto 83.48,27.77 |q Keeper of the Fate/Search the Catacombs
+step
+goto 43.72,40.04 |q Keeper of the Fate/Search the Catacombs
+step
+goto 54.03,40.04 |q Keeper of the Fate/Search the Catacombs
+step
+goto 52.42,50.91 |q Keeper of the Fate/Search the Catacombs
+step
+goto 39.79,50.87
+'Open _Prior Durdryn's Tomb_ |q Keeper of the Fate/Search the Catacombs
+|tip Manually skip to the next step.
+step
+goto 24.51,48.90
+|tip Watch the dialogue.
+kill the Plague-Gusher |q Keeper of the Fate/Kill the Plague-Gusher |future
+step
+goto 20.47,49.40
+'Take _Fulcrum Obscura_ |q Keeper of the Fate/Search Prior Durdryn's Tomb
+step
+goto 17.37,59.01
+'Open _Necropolis Catacombs_ |q Keeper of the Fate/Return to Abbot Ilvel's Chambers
+|tip Manually skip to the next step.
+step
+goto 07.58,65.68
+'Open _Necrom Necropolis_ |q Keeper of the Fate/Return to Abbot Ilvel's Chambers
+|tip Manually skip to the next step.
+step
+goto U38_TP2_Abby_Int_base 65.59,28.86
+'Open _Abbot Ilvel's Chambers_ |q Keeper of the Fate/Return to Abbot Ilvel's Chambers
+step
+goto 52.84,20.95
+talk Abbot Ilvel |q Keeper of the Fate/Talk to Abbot Ilvel
+step
+goto 53.41,21.79
+talk Curate Gadayn
+turnin Keeper of the Fate
+step
+goto 55.97,28.15
+'Use _Portal to Tel Rendys_ |q Fate's Proxy/Investigate Tel Rendys
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 36.86,48.70
+talk Leramil the Wise
+accept Spirit of Fate
+step
+goto 33.61,47.91 |q Spirit of Fate/Search the Tower Grounds
+step
+goto 33.51,45.16 |q Spirit of Fate/Search the Tower Grounds
+step
+goto 35.00,46.40
+talk Master Shelreni |q Spirit of Fate/Talk to Master Shelreni |future
+|tip Lie to her.
+step
+goto 33.18,51.11 |q Spirit of Fate/Go to Tel Rendys Hall
+step
+goto 31.90,50.28
+'Open _Tel Rendys Hall_ |q Spirit of Fate/Go to Tel Rendys Hall |future
+|tip Manually skip to the next step.
+step
+goto u38_telrendys_tower_ext_base 37.25,40.52
+|tip Watch the dialogue.
+talk Dusksaber Uleni |q Spirit of Fate/Talk to Dusksaber Uleni |future
+step
+goto 37.25,40.52
+'Use _Strange Lens_ |q Spirit of Fate/Use the Strange Lens
+step
+goto 39.42,40.50
+'Use _Ancient Sword_ |q Spirit of Fate/Dispel the Magical Ward
+step
+goto 34.71,43.82
+'Open _Tel Rendys Hall Portal Room_ |q Spirit of Fate/Search Tel Rendys Hall
+|tip Manually skip to the next step.
+step
+goto 37.06,39.94
+|tip Go upstairs.
+'Use _Portal to Tel Rendys Tower Lower Floor_ |q Spirit of Fate/Search Tel Rendys Hall
+step
+goto 73.27,79.07 |q Spirit of Fate/Ascend the Tel Rendys Tower
+step
+goto 69.30,76.51
+|tip Go upstairs.
+'Use _Portal to Tel Rendys Tower Middle Floor_ |q Spirit of Fate/Ascend the Tel Rendys Tower
+|tip Manually skip to the next step.
+step
+goto 64.88,77.78
+|tip Go upstairs.
+'Use _Portal to Tel Rendys Sanctum_ |q Spirit of Fate/Ascend the Tel Rendys Tower
+step
+goto 64.59,73.70
+talk Meln the Mouthless |q Spirit of Fate/Talk to Meln the Mouthless
+step
+goto 65.49,73.09
+|tip Watch the dialogue.
+talk Leramil the Wise |q Spirit of Fate/Talk to Leramil the Wise
+step
+goto 64.17,70.48
+'Examine _Letter to Magister Meln Rendys_ |q Spirit of Fate/.*Investigate the Tel Rendys Sanctum.* |count 1
+step
+goto 65.64,78.64
+'Examine _Meln the Mouthless_ |q Spirit of Fate/.*Investigate the Tel Rendys Sanctum.* |count 2
+step
+goto 65.49,73.09
+talk Leramil the Wise |q Spirit of Fate/Talk to Leramil the Wise
+step
+goto 64.63,73.51
+'Use _Portal to Telvanni Peninsula_ |q Spirit of Fate/Go to Tel Vara in Ald Isra
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 33.11,55.32
+talk Folsi Othrili
+accept Tracing Shadows
+step
+goto 33.16,56.00 |q Spirit of Fate/Go to Tel Vara in Ald Isra
+wayshrine Ald Isra
+step
+goto 33.15,63.49 |q The Traitor's Trade |future
+step
+goto 27.10,65.18 |q The Traitor's Trade |future
+step
+goto 25.19,67.94
+talk Ashur
+accept The Traitor's Trade
+step
+goto 24.33,69.04
+'Open _Camonnaruhn_ |q The Traitor's Trade/Enter Camonnaruhn |future
+|tip Manually skip to the next step.
+step
+goto u38_camonnaruhn_base 83.47,42.68 |q The Traitor's Trade/.*Free the Captive Argonians.* |count 1 |future
+step
+goto 80.13,47.69 |q The Traitor's Trade/.*Free the Captive Argonians.* |count 1
+step
+goto 75.05,54.93
+'Untie _Corporal Voice-of-Thunder_ |q The Traitor's Trade/.*Free the Captive Argonians.* |count 1
+step
+goto 78.37,74.57
+'Untie _Corporal Ghetul_ |q The Traitor's Trade/.*Free the Captive Argonians.* |count 2
+step
+goto 35.89,87.95 |q The Traitor's Trade/.*Free the Captive Argonians.* |count 3
+step
+goto 24.81,68.77
+'Untie _Sergeant Gah-Malz_ |q The Traitor's Trade/.*Free the Captive Argonians.* |count 3
+step
+goto 07.01,52.80
+'Use _Intruder Alarm_ |q The Traitor's Trade/Draw Out Luaffyn Romavel
+step
+goto 30.43,56.42 |q The Traitor's Trade/Meet Ashur Outside Camonnaruhn
+step
+goto 37.77,42.88 |q The Traitor's Trade/Meet Ashur Outside Camonnaruhn
+step
+goto 54.15,51.09
+'Use _Skyshard_ |q The Traitor's Trade/Meet Ashur Outside Camonnaruhn
+|tip Manually skip to the next step.
+step
+goto 30.89,23.09 |q The Traitor's Trade/Meet Ashur Outside Camonnaruhn |tip Drop down carefully.
+step
+goto 58.86,19.14
+kill Matron Chruchak |q The Traitor's Trade/Meet Ashur Outside Camonnaruhn
+|tip Manually skip to the next step.
+step
+goto 81.51,26.61
+'Open _Telvanni Peninsula_ |q The Traitor's Trade/Meet Ashur Outside Camonnaruhn
+step
+goto u38_telvannipeninsula_base 24.41,68.46
+talk Ashur
+turnin The Traitor's Trade
+step
+goto 27.10,65.18 |q Tracing Shadows/Find Folsi's Contact
+step
+goto 33.15,63.49 |q Tracing Shadows/Find Folsi's Contact
+step
+goto 33.67,55.70 |q Tracing Shadows/Find Folsi's Contact
+step
+goto tlv_aldisra_base 61.03,48.76 |q Tracing Shadows/Find Folsi's Contact
+step
+goto 71.53,57.11
+'Open _Tel Huulen_ |q Tracing Shadows/Find Folsi's Contact
+|tip Manually skip to the next step.
+step
+goto 78.89,59.25
+talk Naryu Virian |q Tracing Shadows/Talk to Naryu Virian |future
+step
+goto 50.16,48.86 |q Tracing Shadows/Talk to the Servants
+step
+goto 35.31,43.08
+talk Servant Aki-Go |q Tracing Shadows/Talk to the Servants
+|tip Intimidate him.
+|tip Manually skip to the next step.
+step
+goto 32.68,39.54
+'Open _Servants Quarters_ |q Tracing Shadows/Talk to the Servants
+|tip Manually skip to the next step.
+step
+goto 29.96,36.93
+|tip Go upstairs.
+'Search _Drawers_ |q Tracing Shadows/Talk to the Servants
+|tip Manually skip to the next step.
+step
+goto 32.11,35.85
+'Search _Beat-Up Footlocker_ |q Tracing Shadows/Talk to the Servants
+|tip Manually skip to the next step.
+step
+goto 30.18,38.37
+|tip Go downstairs.
+talk Servant Norus |q Tracing Shadows/Talk to the Servants
+|tip Manually skip to the next step.
+step
+goto 33.37,40.29
+talk Naryu Virian |q Tracing Shadows/Talk to the Servants
+step
+goto 28.43,65.98
+'Open _Tel Vara_ |q Spirit of Fate/Go to Tel Vara in Ald Isra
+step
+goto 24.12,69.65
+talk Mouth Vabdru |q Spirit of Fate/Talk to Mouth Vabdru
+|tip Persuade him.
+step
+goto 20.54,65.63
+'Open _Mouth Vabdru's Office_ |q Spirit of Fate/.*Search Mouth Vabdru's Office.* |count 1
+|tip Manually skip to the next step.
+step
+goto 19.40,63.06
+'Examine _Mouth Vabdru's Journal_ |q Spirit of Fate/.*Search Mouth Vabdru's Office.* |count 1
+step
+goto 17.05,62.12
+'Examine _Letter to Mouth Vabdru_ |q Spirit of Fate/.*Search Mouth Vabdru's Office.* |count 2
+step
+goto 16.30,61.28
+'Take _Tel Baro Insignia_ |q Spirit of Fate/.*Search Mouth Vabdru's Office.* |count 3
+step
+'Open _Telvanni Peninsula_ Map
+'Travel to _Ald Isra_ |q Spirit of Fate/Go to Tel Baro Cavern
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 33.10,63.34 |q Spirit of Fate/Go to Tel Baro Cavern
+step
+goto 27.02,63.41
+'Examine _Report on Operation Siphon_ |lorebook Report on Operation Siphon/3/48/24
+step
+goto 26.18,62.57
+|tip Inside Tent.
+'Examine _Letter Concerning Tredecim_ |lorebook Letter Concerning Tredecim/3/48/25
+step
+goto 27.07,59.73
+talk Naryu Virian |q Tracing Shadows/Investigate the House Dres Camp
+|tip Manually skip to the next step.
+step
+goto 39.45,70.27 |q Spirit of Fate/Go to Tel Baro Cavern
+step
+goto 40.81,73.65
+wayshrine Alavelis
+step
+goto 49.25,76.73 |q Spirit of Fate/Go to Tel Baro Cavern
+step
+goto 51.73,78.13
+'Use _Skyshard_ |q Spirit of Fate/Go to Tel Baro Cavern
+|tip Manually skip to the next step.
+step
+goto 40.81,73.65 |q Spirit of Fate/Go to Tel Baro Cavern
+step
+goto 37.91,66.44 |q Spirit of Fate/Go to Tel Baro Cavern
+step
+goto 45.72,66.58
+'Take _Volcanic Stinkhorn_ |q Llaro's Headache/Gather Volcanic Stinkhorn
+step
+goto 52.54,59.67
+wayshrine Padomaic Crest
+step
+goto 55.14,67.27
+'Search _Shroom Beetle Corpse_ |q Llaro's Headache/Gather Fungal Blooms
+step
+goto 57.31,67.84 |q Lovesick/Enter Tel Dreloth
+step
+goto 58.78,68.66
+'Open _Tel Dreloth Main Towers_ |q Lovesick/Enter Tel Dreloth |future
+|tip Manually skip to the next step.
+step
+goto u38_teldreloth_ext_base 41.44,72.25
+'Open _Tel Dreloth Antechamber_ |q Lovesick/Find the Laboratory Key |future
+|tip Manually skip to the next step.
+step
+goto 37.91,70.31
+|tip Go upstairs.
+'Open _Mistress Dreloth's Chambers_ |q Lovesick/Find the Laboratory Key
+|tip Manually skip to the next step.
+step
+goto 34.95,67.20
+'Search _Trinket Chest_ |q Lovesick/Find the Laboratory Key
+step
+goto 35.47,68.04
+talk Dacia Caro |q Lovesick/Talk to Dacia
+step
+goto 39.32,67.43
+'Use _Tel Dreloth Cellar_ |q Lovesick/Enter Tel Dreloth Caverns
+|tip Manually skip to the next step.
+step
+goto 40.15,66.95
+'Open _Tel Dreloth Caverns_ |q Lovesick/Enter Tel Dreloth Caverns
+step
+goto u38_teldrelothcave_base 17.24,80.72 |q Lovesick/Search the Caverns
+step
+goto 30.13,79.60 |q Lovesick/Search the Caverns
+step
+goto 37.15,58.79 |q Lovesick/Search the Caverns
+step
+goto 24.72,56.84 |q Lovesick/Search the Caverns
+step
+goto 15.49,42.94 |q Lovesick/Search the Caverns
+step
+goto 16.21,23.93
+'Examine _Sathile's Research Notes_ |q Lovesick/Examine the Research Notes |future
+step
+goto 18.33,26.05
+'Examine _Note to Nathyn_ |q Lovesick/Examine the Letter
+step
+goto 17.95,25.79
+talk Dacia Caro |q Lovesick/Talk to Dacia About Notes
+step
+goto 45.80,37.34 |q Lovesick/Search the Caverns
+step
+goto 51.06,21.60 |q Lovesick/Search the Caverns
+step
+goto 55.59,26.22 |q Lovesick/Search the Caverns
+step
+goto 65.80,29.32 |q Lovesick/Search the Caverns
+step
+goto 69.10,25.34 |q Lovesick/Search the Caverns
+step
+goto 87.26,11.30
+talk Tun Shei |q Lovesick/Talk to Tun Shei |future
+|tip Manually skip to the next step.
+step
+goto 86.82,11.04
+talk Dacia Caro |q Lovesick/Talk to Dacia About Tun-Shei
+step
+goto 84.73,39.69 |q Lovesick/Search the Caverns
+step
+goto 75.48,40.33 |q Lovesick/Search the Caverns
+step
+goto 69.20,57.87
+talk Sathile Dreloth |q Lovesick/Talk to Sathile |future
+step
+goto 69.24,57.39
+talk Dacia Caro |q Lovesick/Talk to Dacia
+step
+goto 60.74,64.18 |q Lovesick/Enter the Isolation Tower
+step
+goto 69.36,78.40
+'Enter the _Isolation Cellar_ |q Lovesick/Enter the Isolation Tower
+step
+goto u38_teldreloth_ext_base 54.05,20.29
+|tip Go upstairs.
+'Open _Isolation Tower Main Hall_ |q Lovesick/Find Nathyn |future
+|tip Manually skip to the next step.
+step
+goto 54.07,23.01
+|tip Go downstairs.
+|tip Watch the dialogue.
+talk Nathyn Dreloth |q Lovesick/Talk to Nathyn |future
+step
+goto 54.07,23.01
+talk Sathile Dreloth |q Lovesick/Talk to Sathile
+step
+goto 54.07,23.01
+talk Dacia Caro
+turnin Lovesick
+step
+'Open _Telvanni Peninsula_ Map
+'Travel to _Padomaic Crest_ |q A Thief to Catch a Thief |future
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 56.58,58.60
+talk Nireli Redoran
+accept A Thief to Catch a Thief
+step
+goto 46.17,58.17
+talk Armiger Rilasi |q A Thief to Catch a Thief/Talk to Rilasi |future
+step
+goto 44.32,55.32
+talk High Priest Trilam |q A Thief to Catch a Thief/Talk to High Priest Trilam |future
+step
+goto 44.24,55.13
+'Inspect _Talisman of Saint Vorys_ |q A Thief to Catch a Thief/Inspect the Talisman
+step
+goto 44.08,55.00
+'Examine _Note to Rilasi_ |q A Thief to Catch a Thief/Investigate the Temple
+step
+goto 49.88,57.39
+|tip Watch the dialogue.
+talk Shadeya |q A Thief to Catch a Thief/Talk to Shadeya |future
+step
+goto 50.89,57.84
+'Examine _The Eye of Baan Dar_ |lorebook The Eye of Baan Dar/3/48/73
+step
+goto 50.38,58.21
+talk Eilirsu-dro |q A Thief to Catch a Thief/Investigate the Baandari Camp
+step
+goto 45.89,57.27
+talk Armiger Rilasi |q A Thief to Catch a Thief/Talk to Rilasi |future
+|tip Manually skip to the next step.
+step
+goto 43.61,56.07
+'Open _Sailenmora Crypts_ |q A Thief to Catch a Thief/Enter the Crypt |future
+|tip Manually skip to the next step.
+step
+goto u38_sailenmoracryptt_base 15.48,67.30 |q A Thief to Catch a Thief/Pursue the Lark of Rosgard
+step
+goto 08.72,66.08 |q A Thief to Catch a Thief/Pursue the Lark of Rosgard
+step
+goto 34.51,46.64 |q A Thief to Catch a Thief/Pursue the Lark of Rosgard
+step
+goto 19.84,35.67 |q A Thief to Catch a Thief/Pursue the Lark of Rosgard
+step
+goto 86.78,31.57 |q A Thief to Catch a Thief/Pursue the Lark of Rosgard
+step
+goto 79.22,48.17
+'Search _Viewpoint_ |q A Thief to Catch a Thief/Search for the Lark of Rosgard |future
+step
+goto 79.22,48.17
+talk Armiger Rilasi |q A Thief to Catch a Thief/Talk to Rilasi
+step
+goto 66.90,62.26 |q A Thief to Catch a Thief/Return to the Baandari Camp
+step
+goto 87.02,77.89 |q A Thief to Catch a Thief/Return to the Baandari Camp
+step
+goto 93.93,77.75
+'Open _Telvanni Peninsula_ |q A Thief to Catch a Thief/Return to the Baandari Camp
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 49.77,57.41
+'Examine _Bloody Cloth_ |q A Thief to Catch a Thief/Inspect the Bloody Evidence |future
+step
+goto 50.67,57.74
+talk Urishabi |q A Thief to Catch a Thief/Speak with Urishabi
+step
+goto 50.27,58.00
+'Examine _Ransom Note from Shadeya_ |q A Thief to Catch a Thief/Investigate the Ransacked Camp
+step
+goto 50.25,57.69
+talk Lark of Rosgard |q A Thief to Catch a Thief/Talk to the Lark of Rosgard
+step
+goto 54.10,55.94
+'Open _Sailenmora Outpost_ |q A Thief to Catch a Thief/Go to the Outpost Ruins |future
+|tip Manually skip to the next step.
+step
+goto u38_OBJCave_base 58.96,62.43
+talk Shadeya |q A Thief to Catch a Thief/Talk to Shadeya |future
+step
+goto 50.86,65.78
+'Open _Outpost Tunnel_ |q A Thief to Catch a Thief/.*Rescue the Hostages.* |count 1
+|tip Manually skip to the next step.
+step
+goto 61.90,78.03 |q A Thief to Catch a Thief/.*Rescue the Hostages.* |count 1
+step
+goto 73.65,59.01
+'Open _Sailenmora Outpost Annex_ |q A Thief to Catch a Thief/.*Rescue the Hostages.* |count 1
+|tip Manually skip to the next step.
+step
+goto 83.25,58.89
+'Unlock _Chain Post_ |q A Thief to Catch a Thief/.*Rescue the Hostages.* |count 1
+step
+goto 87.51,61.06
+'Untie _Chain Post_ |q A Thief to Catch a Thief/.*Rescue the Hostages.* |count 2
+step
+goto 84.40,66.50
+'Unlock _Chain Post_ |q A Thief to Catch a Thief/.*Rescue the Hostages.* |count 3
+step
+goto 87.97,69.33
+'Open _Telvanni Peninsula_ |q A Thief to Catch a Thief/Leave the Outpost Ruins |future
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 57.95,58.58
+talk Lark of Rosgard |q A Thief to Catch a Thief/Talk to the Lark of Rosgard
+step
+goto 50.38,58.19
+talk Eilirsu-dro |q A Thief to Catch a Thief/Give the Real Talisman to Eilirsu-dro
+step
+goto 46.06,58.07
+talk Armiger Rilasi
+turnin A Thief to Catch a Thief
+step
+goto 52.54,59.67
+'Open _Telvanni Peninsula_ Map
+'Travel to _Great Arm_ |q Spirit of Fate/Go to Tel Baro Cavern
+|tip Manually skip to the next step.
+step
+goto 58.35,37.78 |q Spirit of Fate/Go to Tel Baro Cavern
+step
+goto 57.38,34.36
+'Open _Tel Baro Cavern_ |q Spirit of Fate/Go to Tel Baro Cavern |future
+|tip Manually skip to the next step.
+step
+goto u38_telbaro_base 45.71,83.22 |q Spirit of Fate/Find the Entrance to Tel Baro |future
+step
+goto 68.48,78.67 |q Spirit of Fate/Find the Entrance to Tel Baro
+step
+goto 70.36,45.94 |q Spirit of Fate/Find the Entrance to Tel Baro
+step
+goto 47.74,53.14 |q Spirit of Fate/Find the Entrance to Tel Baro
+step
+goto 52.14,25.21
+'Examine _Dusk Captain Zenfis's Orders_ |q Spirit of Fate/Find a Way to Open the Tower |future
+step
+goto 30.64,63.76 |q Spirit of Fate/.*Unlock the Tower Wards.* |count 1
+step
+goto 27.17,51.46
+'Unlock _Ward Lock_ |q Spirit of Fate/.*Unlock the Tower Wards.* |count 1
+step
+goto 57.37,68.08 |q Spirit of Fate/.*Unlock the Tower Wards.* |count 2
+step
+goto 48.62,71.51
+'Unlock _Ward Lock_ |q Spirit of Fate/.*Unlock the Tower Wards.* |count 2
+step
+goto 75.59,64.60
+'Unlock _Ward Lock_ |q Spirit of Fate/.*Unlock the Tower Wards.* |count 3
+step
+goto 73.11,46.58
+'Unlock _Ward Lock_ |q Spirit of Fate/.*Unlock the Tower Wards.* |count 4
+step
+goto 48.90,45.11 |q Spirit of Fate/Enter Tel Baro Tower
+step
+goto 51.38,21.93
+'Use _Portal to Tel Baro Lower Floor_ |q Spirit of Fate/Enter Tel Baro Tower
+step
+|tip Go upstairs.
+'Use _Portal to Tel Baro Middle Floor_ |q Spirit of Fate/Find Meln the Mouthless
+|tip Manually skip to the next step.
+step
+|tip Go upstairs.
+'Use _Portal to Tel Baro Sanctum_ |q Spirit of Fate/Find Meln the Mouthless
+step
+'_Straight ahead of you_
+talk Meln the Mouthless |q Spirit of Fate/Talk to Meln the Mouthless
+step
+'_Next to the Portal_
+'Take _Meln's Soul Gem_ |q Spirit of Fate/Take the Soul Gem
+step
+'Use _Portal to Telvanni Peninsula_ |q Spirit of Fate/Leave Tel Baro
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 56.44,35.65
+talk Meln the Mouthless
+turnin Spirit of Fate
+step
+goto 53.70,43.70
+wayshrine Fungal Lowlands
+step
+goto 46.53,37.33 |q Llaro's Headache/Gather Musk Gland
+step
+goto 40.83,35.34
+'Search _Bull Netch Corpse_ |q Llaro's Headache/Gather Musk Gland
+step
+goto 38.00,37.45 |q A Memory of Mystery |future
+step
+goto 35.65,34.04
+talk Thoryn Armas
+accept A Memory of Mystery
+step
+goto 34.76,32.78 |q A Memory of Mystery/Enter Kemel-Ze
+step
+goto 31.46,34.14 |q A Memory of Mystery/Enter Kemel-Ze
+step
+goto 31.73,36.43
+'Use _Skyshard_ |q A Memory of Mystery/Enter Kemel-Ze
+|tip Manually skip to the next step.
+step
+goto 34.63,30.72 |q A Memory of Mystery/Enter Kemel-Ze
+step
+goto 34.50,29.47 |q A Memory of Mystery/Enter Kemel-Ze
+step
+goto 32.25,25.80 |q A Memory of Mystery/Enter Kemel-Ze
+step
+goto 34.86,27.89
+'Open _Kemel-Ze_ |q A Memory of Mystery/Enter Kemel-Ze |future
+|tip Manually skip to the next step.
+step
+goto u38_kemel-ze_int1 33.35,63.69
+'Open _Antechamber_ |q A Memory of Mystery/Explore Kemel-Ze
+step
+goto 37.55,54.59
+|tip Watch the dialogue.
+talk Nilphas Drethan |q A Memory of Mystery/Talk to Nilphas Drethan
+step
+goto 37.70,54.33
+talk Protus |q A Memory of Mystery/Investigate the Construct
+step
+goto 23.14,52.77
+'Open _West Wing_|q A Memory of Mystery/Retrieve Percipience Cortex
+|tip Manually skip to the next step.
+step
+goto 12.72,59.08
+'Take _Percipience Cortex_ |q A Memory of Mystery/Retrieve Percipience Cortex
+step
+goto 12.69,46.15 
+'Take _Cognition Cluster_ |q A Memory of Mystery/Retrieve Cognition Cluster
+step
+goto 36.86,53.67
+talk Protus |q A Memory of Mystery/Talk to Protus
+step
+goto 33.72,52.98
+'Open _Outer Laboratory_ |q A Memory of Mystery/.*Retrieve Mnemonic Fragment.* |count 1
+|tip Manually skip to the next step.
+step
+goto u38_kemel-ze_int2 84.23,52.26 |q A Memory of Mystery/.*Retrieve Mnemonic Fragments.* |count 1
+step
+goto 69.88,31.54
+'Open _Floral Atelier_ |q A Memory of Mystery/.*Retrieve Mnemonic Fragments.* |count 1
+|tip Manually skip to the next step.
+step
+goto 82.48,08.82
+'Take _Major Mnemonic Fragment: The Flora_ |q A Memory of Mystery/.*Retrieve Mnemonic Fragments.* |count 1
+step
+goto 77.02,18.94
+'Open _Outer Laboratory_ |q A Memory of Mystery/.*Retrieve Mnemonic Fragments.* |count 2
+|tip Manually skip to the next step.
+step
+goto 44.83,30.22 |q A Memory of Mystery/.*Retrieve Mnemonic Fragments.* |count 
+step
+goto 33.78,52.07
+'Open _Fauna Study_ |q A Memory of Mystery/.*Retrieve Mnemonic Fragments.* |count 2
+|tip Manually skip to the next step.
+step
+goto 08.82,52.13
+'Take _Major Mnemonic Fragment: The Fauna_ |q A Memory of Mystery/.*Retrieve Mnemonic Fragments.* |count 2
+step
+goto 20.39,51.81
+'Open _Outer Laboratory_ |q A Memory of Mystery/.*Retrieve Mnemonic Fragments.* |count 3
+|tip Manually skip to the next step.
+step
+goto 45.38,74.69 |q A Memory of Mystery/.*Retrieve Mnemonic Fragments.* |count 3
+step
+goto 70.14,72.53
+'Open _Laboratory of Sparks_ |q A Memory of Mystery/.*Retrieve Mnemonic Fragments.* |count 3
+|tip Manually skip to the next step.
+step
+goto 85.20,91.21
+'Take _Major Mnemonic Fragment: The Spark_ |q A Memory of Mystery/.*Retrieve Mnemonic Fragments.* |count 3
+step
+goto 78.93,81.29
+'Open _Outer Laboratory_ |q A Memory of Mystery/Return to the Antechamber
+|tip Manually skip to the next step.
+step
+goto 84.13,52.10 |q A Memory of Mystery/Return to the Antechamber
+step
+goto 56.69,52.17
+'Oepn _Antechamber_ |q A Memory of Mystery/Return to the Antechamber
+step
+goto u38_kemel-ze_int1 34.12,52.61
+talk Protus |q A Memory of Mystery/Talk to Protus
+step
+goto 43.59,52.56
+'Open _Inner Laboratory_ |q A Memory of Mystery/Reach the Clockwork Probabilis
+|tip Manually skip to the next step.
+step
+goto 84.43,45.88 |q A Memory of Mystery/Reach the Clockwork Probabilis
+step
+goto 85.12,37.73 |q A Memory of Mystery/Reach the Clockwork Probabilis
+step
+goto 50.74,31.72 |q A Memory of Mystery/Reach the Clockwork Probabilis
+step
+goto 37.89,37.99
+'Open _Clockwork Probabilis_ |q A Memory of Mystery/Reach the Clockwork Probabilis
+step
+goto 33.38,21.00
+kill Nilphas Drethan |q A Memory of Mystery/Kill Nilphas Drethan
+step
+goto 33.25,16.02
+'Take _Probabilis Mnemonic Fragment_ |q A Memory of Mystery/Examine the Clockwork Probabilis
+step
+goto 33.35,15.96
+|tip Watch the dialogue.
+talk Sotha Sil |q A Memory of Mystery/Talk to Sotha Sil
+step
+goto 33.54,16.94
+talk Protus
+turnin A Memory of Mystery
+step
+'Open _Telvanni Peninsula_ Map
+'Travel to _Alavelis_ |q Fate's Lost Dream |future
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 40.69,78.96
+talk Scruut
+accept Fate's Lost Dream
+step
+goto 42.77,76.74
+talk Miner Sadalas |q Fate's Lost Dream/Talk to Miner Sadalas |future
+step
+goto 43.27,77.09 |q Fate's Lost Dream/Go to the Green Glass Inn
+step
+goto 41.51,78.23 |q Fate's Lost Dream/Go to the Green Glass Inn
+step
+goto 43.51,80.73
+'Open _The Green Glass Inn_ |q Fate's Lost Dream/Go to the Green Glass Inn |future
+|tip Manually skip to the next step.
+step
+goto 43.66,81.45
+'Examine _On the Work at Alavelis_ |q Fate's Lost Dream/.*Search the Green Glass Inn.* |count 1 |future
+step
+goto 44.05,80.97
+|tip Go upstairs.
+'Examine _On the Purchase of the Alavelis Mine_ |q Fate's Lost Dream/.*Search the Green Glass Inn.* |count 2
+step
+goto 44.07,81.04
+talk Scruut |q Fate's Lost Dream/Talk to Scruut
+step
+goto 43.48,80.77
+|tip Go downstairs.
+'Open _Alavelis_ |q Fate's Lost Dream/Go to the Alavelis Glass Mine
+|tip Manually skip to the next step.
+step
+goto 43.28,79.01 |q Fate's Lost Dream/Go to the Alavelis Glass Mine
+step
+goto 45.65,76.48 |q Fate's Lost Dream/Go to the Alavelis Glass Mine
+step
+goto 46.82,78.02
+'Open _Alavelis Glass Mine_ |q Fate's Lost Dream/Go to the Alavelis Glass Mine |future
+|tip Manually skip to the next step.
+step
+goto u38_alavelisglassmine_base 56.66,44.50 |q Fate's Lost Dream/Search the Glass Mine |future
+step
+goto 40.44,31.27 |q Fate's Lost Dream/Search the Glass Mine
+step
+goto 38.92,57.06
+'Open _Chamber of the Gate_ |q Fate's Lost Dream/Search the Glass Mine
+|tip Manually skip to the next step.
+step
+goto 56.04,76.73
+|tip Watch the dialogue.
+'Examine _Oblivion Gate Instructions_ |q Fate's Lost Dream/.*Investigate the Chamber of the Gate.* |count 1 |future
+step
+goto 36.27,84.17
+'Examine _Artisian Tools_ |q Fate's Lost Dream/.*Investigate the Chamber of the Gate.* |count 2
+step
+goto 44.85,79.83
+talk Scruut |q Fate's Lost Dream/Talk to Scruut
+step
+goto 46.63,81.91
+'Use _Portal to Apocrypha_ |q Fate's Lost Dream/Enter the Portal to Apocrypha |future
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 85.83,79.44
+wayshrine Soundless Bight
+step
+goto 85.16,78.93
+talk Hezehk
+accept Piteous Envoys
+step
+goto 72.82,82.75
+'Meet _Hezehk by the Southern Stairs_ |q Piteous Envoys/Meet Hezehk by the Southern Stairs
+step
+goto 72.91,83.52 |q Piteous Envoys/.*Gather Items for Hezehk.* |count 1
+step
+goto 71.46,85.37
+'Take _Shred of Fabric_ |q Piteous Envoys/.*Gather Items for Hezehk.* |count 1
+step
+goto 72.22,82.23
+'Take _Empty Leather Satchel_ |q Piteous Envoys/.*Gather Items for Hezehk.* |count 2
+step
+goto 70.79,83.85 |q Piteous Envoys/.*Gather Items for Hezehk.* |count 3
+step
+goto 70.63,82.54
+'Examine _Hezehk's Magical Mirror_ |q Piteous Envoys/.*Gather Items for Hezehk.* |count 3
+step
+goto 70.18,82.04 |q Piteous Envoys/.*Gather Items for Hezehk.* |count 4
+step
+goto 71.04,80.60
+'Examine _Voidprowler Journal_ |q Piteous Envoys/.*Gather Items for Hezehk.* |count 4
+step
+goto 70.99,80.64
+talk Hezehk |q Piteous Envoys/Talk to Hezehk
+step
+goto 68.47,84.42
+talk Voidprowler Dys |q Piteous Envoys/Talk to Voidprowler Dys |future
+step
+goto 68.35,84.57
+'Open _Obscured Forum_ |q Piteous Envoys/Enter the Obscured Forum
+step
+goto u38_LibraryofSecrets_base 74.15,43.89 |q Piteous Envoys/Search for Voidprowler Zavaal
+step
+goto 48.86,43.87
+talk Hezehk |q Piteous Envoys/Talk to Hezehk |future
+step
+goto 60.97,27.13 |q Piteous Envoys/Search for Voidprowler Zavaal
+step
+goto 34.47,37.22 |q Piteous Envoys/Search for Voidprowler Zavaal
+step
+goto 19.08,27.69 |q Piteous Envoys/Search for Voidprowler Zavaal
+step
+goto 21.74,45.14
+'Examine _Your New Target_ |q Piteous Envoys/Examine Voidprowler Zavaal
+step
+goto 21.74,45.14
+talk Hezehk |q Piteous Envoys/Talk to Hezehk
+step
+goto 07.68,42.28
+'Take _Tomeshell Feather_ |q Piteous Envoys/Gather Tomeshell Feathero
+step
+goto 08.36,59.74
+'Take _Ink Quill_ |q Piteous Envoys/Gather Ink Quill
+step
+goto 18.94,59.59
+'Take _Red Mold_ |q Piteous Envoys/Gather Red Mold
+step
+goto 17.46,72.57 |q Piteous Envoys/Find Space Suitable for Hezehk's Spell
+step
+goto 46.95,72.33
+'Open _The Great Hall of Secrets_ |q Piteous Envoys/Find Space Suitable for Hezehk's Spell
+|tip Manually skip to the next step.
+step
+goto 55.80,72.06
+talk Hezehk |q Piteous Envoys/Talk to Hezehk
+step
+goto 70.11,61.34
+'Examine _Leaden Scroll_ |q Piteous Envoys/Located the Missing Secret
+|tip Manually skip to the next step.
+step
+goto 73.78,82.26 |q Piteous Envoys/Located the Missing Secret
+step
+goto 85.63,70.05
+'Examine _Vibrating Scroll |q Piteous Envoys/Located the Missing Secret
+|tip Manually skip to the next step.
+step
+goto 50.88,77.29 |q Piteous Envoys/Located the Missing Secret
+step
+goto 65.21,71.96
+'Examine _Crying Scroll_ |q Piteous Envoys/Located the Missing Secret
+step
+goto 81.18,71.75
+'Take _Madam Whim's Secret |q Piteous Envoys/Pick Up Madam Whim's Secret
+step
+goto 81.31,72.06
+talk Hezehk |q Piteous Envoys/Talk to Hezehk
+step
+goto 75.85,63.03 |q Piteous Envoys/Return to the Intake Room
+step
+goto 74.97,43.69
+|tip Watch the dialogue.
+|tip Drop down.
+'Place _Intake Maw_ |q Piteous Envoys/Deposit the Secret into the Intake Maw_
+step
+goto 74.97,43.69
+'Take _Boon of Mora_ |q Piteous Envoys/Collect the Boom of Mora
+step
+goto 75.89,18.58
+'Open _Apocrypha_ |q Piteous Envoys/Meet Hezehk Outside
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 68.80,80.41 |q Piteous Envoys/Meet Hezehk Outside
+step
+goto 71.20,79.34
+talk Hezehk
+accept Piteous Envoys
+step
+goto 71.38,78.89 |q Fate's Lost Dream/Follow the Invaders' Trail
+step
+goto 68.65,75.33 |q Fate's Lost Dream/Follow the Invaders' Trail
+step
+goto 67.61,76.08
+talk Cipher Mukheesh |q Fate's Lost Dream/Talk to Cipher Mukheesh |future
+step
+goto 67.42,76.19
+'Open _Tranquil Catalog_ |q Fate's Lost Dream/Enter the Tranquil Catalog |future
+|tip Manually skip to the next step.
+step
+goto UI_Maps_U38_TP4_Catalog_01_bas 78.13,48.08 |q Fate's Lost Dream/Search the Tranquil Catalog |future
+step
+goto 49.09,44.88
+'Examine _Orders to Kindred Reactor Nyleth_ |lorebook Orders to Kindred Rector Nyleth/3/48/20
+step
+goto 12.22,50.52
+'Take _Portal Seal Shard_ |q Fate's Lost Dream/Search the Tranquil Catalog
+step
+goto 12.22,50.52
+'Use _Portal to Pool of Inquiry_ |q Fate's Lost Dream/Go to the Pool of Inquiry
+step
+goto UI_Maps_U38_TP4_Catalog_06_bas 24.36,72.51
+'Examine _Chamber Instructions_ |q Fate's Lost Dream/Search the Area
+step
+goto 23.79,26.92
+'Use _Portal to Shrine of Herma-Mora_ |q Fate's Lost Dream/.*Gather Hermaeus Mora's Sacred Tears.* |count 1
+|tip Manually skip to the next step.
+step
+goto UI_Maps_U38_TP4_Catalog_03_bas 57.84,29.29 |q Fate's Lost Dream/.*Gather Hermaeus Mora's Sacred Tears.* |count 1
+step
+goto 64.80,75.06 |q Fate's Lost Dream/.*Gather Hermaeus Mora's Sacred Tears.* |count 1
+step
+goto 49.23,75.33
+'Take _Sacred Tear of Herma-Mora_ |q Fate's Lost Dream/.*Gather Hermaeus Mora's Sacred Tears.* |count 1
+step
+goto 36.66,73.41
+'Use _Portal to Pools of Inquiry_ |q Fate's Lost Dream/.*Gather Hermaeus Mora's Sacred Tears.* |count 2
+|tip Manually skip to the next step.
+step
+goto UI_Maps_U38_TP4_Catalog_06_bas 69.94,29.34
+'Use _Portal to Shrine of Hermorah_ |q Fate's Lost Dream/.*Gather Hermaeus Mora's Sacred Tears.* |count 2
+|tip Manually skip to the next step.
+step
+goto UI_Maps_U38_TP4_Catalog_04_bas 68.14,33.49 |q Fate's Lost Dream/.*Gather Hermaeus Mora's Sacred Tears.* |count 2
+step
+goto 89.80,53.18 |q Fate's Lost Dream/.*Gather Hermaeus Mora's Sacred Tears.* |count 2
+step
+goto 71.70,64.63
+'Take _Sacred Tear of Hermorah_ |q Fate's Lost Dream/.*Gather Hermaeus Mora's Sacred Tears.* |count 2
+step
+goto 73.66,73.91
+'Use _Portal to Pools of Inquiry_ |q Fate's Lost Dream/.*Gather Hermaeus Mora's Sacred Tears.* |count 3
+|tip Manually skip to the next step.
+step
+goto UI_Maps_U38_TP4_Catalog_06_bas 73.50,79.06
+'Use _Portal to Shrine of Hyrma Mora_ |q Fate's Lost Dream/.*Gather Hermaeus Mora's Sacred Tears.* |count 3
+|tip Manually skip to the next step.
+step
+goto UI_Maps_U38_TP4_Catalog_02_bas 37.58,59.36 |q Fate's Lost Dream/.*Gather Hermaeus Mora's Sacred Tears.* |count 3
+step
+goto 40.98,20.10
+'Take _Sacred Tear of Hyrma Mora_ |q Fate's Lost Dream/.*Gather Hermaeus Mora's Sacred Tears.* |count 3
+step
+goto 41.88,12.57
+'Use _Portal to Pools of Inquiry_ |q Fate's Lost Dream/Place Sacred Tears in the Pool
+|tip Manually skip to the next step.
+step
+goto UI_Maps_U38_TP4_Catalog_06_bas 51.57,57.41
+'Place _Pool of Inquiry_ |q Fate's Lost Dream/Place Sacred Tears in the Pool
+step
+goto 51.57,57.41
+'Use _Portal to Tranquil Archives_ |q Fate's Lost Dream/Enter the Pool Portal
+step
+goto UI_Maps_U38_TP4_Catalog_05_bas 53.03,40.83
+|tip Watch the dialogue.
+kill Kynreeve Ryl |q Fate's Lost Dream/Kill Kynreeve Ryl |future
+step
+goto 50.81,82.30
+|tip Watch the dialogue.
+'Activate _Archived Glyphic_ |q Fate's Lost Dream/Activate the Glyphic
+step
+goto 53.20,80.20
+.'Examine _On the Pact Primordial_ |q Fate's Lost Dream/.*Examine the Archived Tomes.* |count 1
+.'Examine _Dreams of the Forgotten_ |q Fate's Lost Dream/.*Examine the Archived Tomes.* |count 2
+.'Examine _Secret of the Tormenting Eye_ |q Fate's Lost Dream/.*Examine the Archived Tomes.* |count 3
+step
+goto 50.13,78.33
+talk Scruut |q Fate's Lost Dream/Talk to Scruut
+step
+goto 45.82,79.05
+'Use _Portal to Apocrypha_ |q Fate's Lost Dream/Leave the Tranquil Catalog |future
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 67.91,76.13
+talk Scruut
+turnin Fate's Lost Dream
+step
+goto 67.73,71.45
+wayshrine Tranquil Catalog
+step
+goto 57.45,69.22
+talk Archivist Bartalus
+accept Turning a Page
+step
+goto 67.73,71.45
+'Use _Tranquil Catalog_
+'Travel to _Ald Isra_ in Telvanni Peninsula |q Llaro's Headache/Talk to Balver
+|tip Manually skip to the next step.
+step
+goto tlv_aldisra_base 91.33,68.65 |q Llaro's Headache/Talk to Balver
+step
+goto 72.03,78.05
+talk Retainer Balver |q Llaro's Headache/Talk to Balver
+step
+goto 22.63,37.71
+talk Oahman Llaro or Retainer Balver
+turnin |q Llaro's Headache
+step
+goto 71.54,57.12
+'Open _Tel Huulen_ |q Tracing Shadows/Return to Tel Huulen
+step
+goto 75.25,60.02
+talk Master Sulis |q Tracing Shadows/Talk to Master Sulis
+step
+goto 78.65,59.69
+talk Master Foves |q Tracing Shadows/Talk to Master Foves
+step
+goto 63.24,45.69 |q Tracing Shadows/Find the Kagouti Nests
+step
+goto u38_telvannipeninsula_base 31.78,42.15 |q Tracing Shadows/Find the Kagouti Nests
+step
+goto 30.04,42.32 |q Tracing Shadows/Find the Kagouti Nests
+step
+goto 28.95,38.53
+'Examine _Mud-Covered Letter_ |lorebook Mud-Covered Letter/3/48/28
+step
+goto 29.55,37.83
+'Examine _Dres Message_ |lorebook Dres Message/3/48/27
+step
+goto 29.77,37.38
+talk Naryu Virian |q Tracing Shadows/Talk to Naryu Virian
+step
+goto tlv_aldisra_base 89.06,45.03 |q Tracing Shadows/Meet Naryu inside Tel Huulen
+step
+goto 61.38,48.84 |q Tracing Shadows/Meet Naryu inside Tel Huulen
+step
+goto 71.54,57.12
+'Open _Tel Huulen_ |q Tracing Shadows/Meet Naryu inside Tel Huulen
+step
+goto 79.70,54.47
+talk Naryu Virian
+turnin Tracing Shadows
+step
+'Use _Ald Isra_ Wayshrine
+'Travel to _Necrom_ |q Fate's Proxy/Meet Leramil the Wise in Necrom
+|tip Manually skip to the next step.
+step
+goto u38_Necrom_base 55.82,52.48 |q Fate's Proxy/Meet Leramil the Wise in Necrom
+step
+goto 60.30,52.39
+'Open _Necrom Bindery_ |q Fate's Proxy/Meet Leramil the Wise in Necrom
+|tip Manually skip to the next step.
+step 
+goto 58.21,51.48 |q Fate's Proxy/Meet Leramil the Wise in Necrom
+step
+goto 57.74,52.26
+|tip Go upstairs.
+'Open _Necrom Bindery Balcony_ |q Fate's Proxy/Meet Leramil the Wise in Necrom
+step
+goto 57.98,52.86
+talk Leramil the Wise
+turnin Fate's Proxy
+accept A Hidden Fate
+step
+'Open _Apocrypha_ Map
+'Travel to _Tranquil Catalog_ |q A Hidden Fate/Meet Leramil at Cipher's Midden
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 67.63,66.43 |q A Hidden Fate/Meet Leramil at Cipher's Midden
+step
+goto 63.68,60.70 |q A Hidden Fate/Meet Leramil at Cipher's Midden
+step
+goto u38_ciphersmidden_city_base 73.26,55.19
+wayshrine Cipher's Midden
+step
+goto 44.94,50.22
+talk Leramil the Wise |q A Hidden Fate/Talk to Leramil the Wise |future
+step
+goto 16.20,51.34 |q A Hidden Fate/Search the Stacks
+step
+goto 28.35,65.83 |q A Hidden Fate/Search the Stacks
+step
+goto 22.90,72.07
+|tip Go upstairs.
+'Open _Ciphers Repository_ |q A Hidden Fate/Search the Stacks
+|tip Manually skip to the next step.
+step
+goto 23.51,74.50
+'Search _Book Stacks_
+'Examine _Memories Lost_ |lorebook Memories Lost/3/49/3
+step
+goto 20.91,80.66
+'Search _Book Stacks_
+'Examine _On the Fulcrum Obscura_ |lorebook On the Fulcrum Obscura/3/49/6
+step
+goto 13.87,72.69
+'Search _Book Stacks_
+'Examine _On the Infinite Panopticon_ |lorebook On the Infinite Panopticon/3/49/7
+step
+goto 21.63,73.05
+talk Scruut |q A Hidden Fate/Talk to Scruut
+step
+goto 27.52,58.75 |q A Hidden Fate/Return to Leramil the Wise
+step
+goto 19.11,49.50 |q A Hidden Fate/Return to Leramil the Wise
+step
+goto 43.44,53.62 |q A Hidden Fate/Return to Leramil the Wise
+step
+goto 43.00,47.05
+'Open _Leramil's Study_ |q A Hidden Fate/Return to Leramil the Wise
+step
+goto 42.08,43.90
+talk Leramil the Wise |q A Hidden Fate/Talk to Leramil the Wise
+step
+goto 44.36,48.00
+'Open _Cipher's Midden_ |q A Hidden Fate/.*Prepare the Cairns.* |count 1
+|tip Manually skip to the next step.
+step
+goto 50.65,35.16 |q A Hidden Fate/.*Prepare the Cairns.* |count 1
+step
+goto u38_apocrypha_base 54.60,52.35
+'Open _Central Orphic Tunnels_ |q A Hidden Fate/.*Prepare the Cairns.* |count 1
+|tip Manually skip to the next step.
+step
+goto u38_Tunnel2_base 59.04,33.23 |q A Hidden Fate/.*Prepare the Cairns.* |count 1
+step
+goto 41.02,37.74
+'Open _Apocrypha: Chroma Incognito_ |q A Hidden Fate/.*Prepare the Cairns.* |count 1
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 47.15,45.74
+'Activate _Apocrypha Cairn_ |q A Hidden Fate/.*Prepare the Cairns.* |count 1
+step
+goto 42.34,42.35 |q A Hidden Fate/.*Prepare the Cairns.* |count 1
+step
+goto 37.48,42.16
+wayshrine Apogee Nadir
+step
+goto 33.14,38.98
+talk Zirokh
+accept Hungry for Knowledge
+step
+goto 39.01,44.36
+'Activate _Apocrypha Cairn_ |q A Hidden Fate/.*Prepare the Cairns.* |count 2
+step
+goto 42.85,42.31 |q A Hidden Fate/.*Prepare the Cairns.* |count 3
+step
+goto 44.47,36.35 |q A Hidden Fate/.*Prepare the Cairns.* |count 3
+step
+goto 44.17,38.56
+talk Zenkif
+accept Forgotten Glories
+step
+goto 49.88,39.12
+talk Tyss |q Forgotten Glories/Talk to Tyss
+step
+goto 52.44,37.24
+'Open _Northern Orphic Tunnel_ |q Forgotten Glories/Enter the Cenotaph
+|tip Manually skip to the next step.
+step
+goto u38_Tunnel3_base 41.84,33.59
+'Open _Cenotaph Foundations_ |q Forgotten Glories/Enter the Cenotaph
+step
+goto u38_cenotaph_sewer 56.39,83.18
+talk Tyss |q Forgotten Glories/Talk to Tyss
+step
+goto 25.89,64.56
+'Activate _Remnant Ward_ |q Forgotten Glories/.*Arm the Remnant Wards.* |count 1
+step
+goto 36.65,47.66 |q Forgotten Glories/.*Arm the Remnant Wards.* |count 2
+step
+goto 62.37,55.87
+'Activate _Remnant Ward_ |q Forgotten Glories/.*Arm the Remnant Wards.* |count 2
+step
+goto 66.06,21.68 |q Forgotten Glories/.*Arm the Remnant Wards.* |count 3
+step
+goto 33.20,18.19
+'Activate _Remnant Ward_ |q Forgotten Glories/.*Arm the Remnant Wards.* |count 3
+step
+goto 35.31,16.43
+talk Tyss |q Forgotten Glories/Talk to Tyss
+step
+goto 65.89,09.98
+'Open _Courtyard_ |q Forgotten Glories/Go to the Courtyard
+step
+goto u38_cenotaph_courtyard 56.33,63.42
+'Destroy _Ritual Focus_ |q Forgotten Glories/Stop the Ritual
+step
+goto 55.64,62.44
+talk Urzif |q Forgotten Glories/.*Investigate the Ritual Site.* |count 1
+step
+goto 56.13,62.14
+'Examine _Note from Uxunath_ |q Forgotten Glories/.*Investigate the Ritual Site.* |count 2
+step
+goto 56.52,61.88
+talk Uxunath |q Forgotten Glories/.*Investigate the Ritual Site.* |count 3
+step
+goto 55.64,62.80
+'Investigate _Ritual Focus_ |q Forgotten Glories/.*Investigate the Ritual Site.* |count 4
+step
+goto 56.19,63.29
+talk Tyss |q Forgotten Glories/Talk to Tyss
+step
+goto 53.71,66.20 |q Forgotten Glories/.*Stop the Rituals.* |count 1
+step
+goto 47.14,61.82 |q Forgotten Glories/.*Stop the Rituals.* |count 1
+step
+goto 51.26,48.25 |q Forgotten Glories/.*Stop the Rituals.* |count 1
+step
+goto 37.79,53.61
+'Destroy _Ritual Focus_ |q Forgotten Glories/.*Stop the Rituals.* |count 1
+step
+goto 40.31,41.03 |q Forgotten Glories/.*Stop the Rituals.* |count 2
+step
+goto 46.85,43.18
+'Destroy _Ritual Focus_ |q Forgotten Glories/.*Stop the Rituals.* |count 2
+step
+goto 43.48,35.99
+'Open _Tower_ |q Forgotten Glories/Find Uxunath
+|tip Manually skip to the next step.
+step
+goto u38_cenotaph_tower 67.07,31.90 |q Forgotten Glories/Find Uxunath
+step
+goto 28.13,41.34
+'Open _Balcony_ |q Forgotten Glories/Find Uxunath
+step
+goto u38_cenotaph_courtyard 44.59,32.30
+|tip Watch the dialogue.
+talk Tyss |q Forgotten Glories/Talk to Tyss |future
+step
+goto 55.84,26.97
+'Open _Cathedral of Hermaeus Mora_ |q Forgotten Glories/Find Journal of the First Remnant
+step
+goto u38_cenotaph_mainhall 35.11,58.22
+'Examine _Journal of the First Remnant_ |q Forgotten Glories/Find Journal of the First Remnant
+step
+goto 56.93,37.06 |q Forgotten Glories/.*Gather the Relics.* |count 1
+step
+goto 52.25,45.19
+'Use _Spyglass_ |q Forgotten Glories/.*Gather the Relics.* |count 1
+step
+goto 66.70,32.91
+'Use _Ancient Key_ |q Forgotten Glories/.*Gather the Relics.* |count 2
+step
+goto 74.03,60.82
+'Open _Balcony_ |q Forgotten Glories/Go to the Ritual Dais
+|tip Manually skip to the next step.
+step
+goto u38_cenotaph_courtyard 59.66,38.97
+talk Tyss |q Forgotten Glories/Talk to Tyss
+step
+goto 62.67,39.78
+'Use _Ritual Pedestal |q Forgotten Glories/.*Place the Relics.* |count 1
+step
+goto 58.74,36.71
+'Use _Ritual Pedestal |q Forgotten Glories/.*Place the Relics.* |count 2
+step
+goto 59.59,39.69
+'Use _Ritual Pedestal |q Forgotten Glories/Place the Book
+step
+goto 56.62,43.38
+'Enter _The Crux_ |q Forgotten Glories/Enter the Crux
+step
+goto u38_cenotaph_pact 49.26,56.52
+kill Uxunath
+step
+goto 47.97,58.43
+'Examine _Pact of the Remnants_ |q Forgotten Glories/Inspect the Book
+step
+goto 55.12,55.67
+'Use _Portal to Apocrypha_ |q Forgotten Glories/Meet Tyss Outside
+step
+goto u38_apocrypha_base 49.82,39.03
+talk Tyss
+turnin Forgotten Glories
+step
+goto 58.18,32.00
+'Examine _Cipher Tlaxalt's Note_
+accept Numinous Grimoire, Volume 1
+step
+goto 58.13,31.96
+'Search _Cipher Tlaxalt's Pack_ |q Numinous Grimoire, Volume 1/Retrieve the Numinous Grimoire Volume
+step
+goto 46.23,36.68
+'Activate _Apocrypha Cairn_ |q A Hidden Fate/.*Prepare the Cairns.* |count 3
+step
+goto 45.41,32.34 |q A Hidden Fate/Return to Leramil's Study
+step
+goto 40.92,25.21 |q A Hidden Fate/Return to Leramil's Study
+step
+goto 41.17,24.01
+wayshrine Forlorn Palisades
+step
+goto 34.17,19.05 |q A Hidden Fate/Return to Leramil's Study
+step
+goto 28.85,22.02
+talk Cipher Huzmargo
+accept Lost in Thought
+step
+goto 19.84,18.30 |q A Hidden Fate/Return to Leramil's Study
+step
+goto 19.44,17.25
+wayshrine Still Shallows
+step
+goto 19.38,21.11
+'Examine _Cipher Nelfynn's Note_
+accept Numinous Grimoire, Volume 3
+step
+goto 19.44,17.25
+'Use _Still Shallows_
+'Travel to _Forlorn Palisades_
+|tip Manually skip to the next step.
+step
+goto 39.19,20.15
+talk Landolvel
+accept Destiny's Tide
+step
+goto 39.05,19.07
+'Open _Fathoms Drift_ |q Destiny's Tide/Enter Fathoms Drift
+step
+goto U38_CorpuscleBight_01_Base 34.29,75.70 |q Destiny's Tide/.*Find Naanurrel's Belongings.* |count 1
+step
+goto 19.33,72.78
+'Examine _Naanurrel's Locket_ |q Destiny's Tide/.*Find Naanurrel's Belongings.* |count 1
+step
+goto 25.60,30.38 |q Numinous Grimoire, Volume 3/Retrieve the Numinous Grimoire Volume
+step
+goto 37.96,31.62
+'Search _Nelfynn's Pack_ |q Numinous Grimoire, Volume 3/Retrieve the Numinous Grimoire Volume
+step
+goto 33.03,29.73 |q Destiny's Tide/.*Find Naanurrel's Belongings.* |count 2
+step
+goto 42.13,12.46
+'Use _Skyshard_ |q Destiny's Tide/.*Find Naanurrel's Belongings.* |count 2
+|tip Manually skip to the next step.
+step
+goto 33.03,29.73 |q Destiny's Tide/.*Find Naanurrel's Belongings.* |count 2
+step
+goto 24.88,23.83
+'Examine _Naanurrel's Belongings_ |q Destiny's Tide/.*Find Naanurrel's Belongings.* |count 2
+step
+goto 36.63,16.65 |q Destiny's Tide/Find the Opulent Gale
+step
+goto 49.28,14.86
+kill The Light Keeper |q Destiny's Tide/Find the Opulent Gale
+|tip Manually skip to the next step.
+step
+goto 54.44,17.77
+talk Naanurrel |q Destiny's Tide/Find the Opulent Gale
+step
+goto 52.51,24.70 |q Destiny's Tide/.*Find Naanurrel's Belongings.* |count 3
+step
+goto 63.22,27.75 |q Destiny's Tide/.*Find Naanurrel's Belongings.* |count 3
+step
+goto 64.90,41.33 |q Destiny's Tide/.*Find Naanurrel's Belongings.* |count 3
+step
+goto U38_CorpuscleBight_02_Base 56.15,37.03
+|tip Go upstairs.
+'Examine _Naanurrel's Logbook_ |q Destiny's Tide/.*Find Naanurrel's Belongings.* |count 3
+step
+goto 43.83,50.11 |q Destiny's Tide/Meet Landolvel Outside
+step
+goto 50.97,75.35 |q Destiny's Tide/Meet Landolvel Outside
+step
+goto 34.11,75.47 |q Destiny's Tide/Meet Landolvel Outside
+step
+goto 27.62,94.30
+'Enter _Apocrypha_ |q Destiny's Tide/Meet Landolvel Outside
+step
+goto 39.13,19.99
+talk Naanurrel |q Destiny's Tide/Talk to Naanurrel
+step
+goto 39.12,20.04
+'Burn _Unquenchable Brazier_ |q Destiny's Tide/Perform the Ritual
+step
+goto 39.04,20.05
+talk Landolvel |q Destiny's Tide/Talk to Landolvel
+step
+goto 39.12,20.05
+'Examine _Altered Naanurrel's Logbook |q Destiny's Tide/Take the Book
+step
+talk Landolvel or Naanurrel
+turnin Destiny's Tide
+step
+goto 41.17,24.01
+'Use _Forlorn Palisades_ Wayshrine
+'Travel to _Cipher's Midden_ |q A Hidden Fate/Return to Leramil's Study
+|tip Manually skip to the next step.
+step
+goto u38_ciphersmidden_city_base 63.85,48.12
+talk Cipher Plautis
+turnin Numinous Grimoire, Volume 1
+turnin Numinous Grimoire, Volume 3
+step
+goto 42.08,43.90
+|tip Watch the dialogue.
+talk Leramil the Wise |q A Hidden Fate/Talk to Leramil the Wise |future
+step
+goto 72.71,54.06
+'Use _Cipher's Midden_ Wayshrine
+'Travel to _Apogee Nadir_ |q A Hidden Fate/Find the Entrance to the Infinite Panopticon
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 30.13,43.72 |q A Hidden Fate/Find the Entrance to the Infinite Panopticon
+step
+goto 12.68,40.13 |q A Hidden Fate/Find the Entrance to the Infinite Panopticon
+step
+goto 13.33,37.75
+wayshrine Feral Gallery
+step
+goto 11.32,39.38
+talk Morian Zenas
+accept Escape of the Sane
+step
+goto 08.65,35.59
+talk Leramil the Wise |q A Hidden Fate/Talk to Leramil the Wise |future
+step
+goto 08.46,35.55
+'Enter _Portal to the Infinite Panopticon_ |q A Hidden Fate/Enter the Infinite Panopticon |future
+|tip Manually skip to the next step.
+step
+goto u38_infinitepanopticon1_base 48.98,13.27
+'Sneak around _Gelkhai the Hunger_
+'Open _The Infinite Panopticon_ |q A Hidden Fate/Explore the Infinite Panopticon |future
+|tip Manually skip to the next step.
+step
+goto u38_infinitepanopticon2a_base 52.04,59.18
+'Use _Meln's Ghost Sight_
+'Destroy _Censer of Corruption_ |q A Hidden Fate/.*Clear the Corruption.* |count 1 |future
+step
+goto 65.31,33.67 |q A Hidden Fate/.*Clear the Corruption.* |count 2
+step
+goto 82.65,53.06 |q A Hidden Fate/.*Clear the Corruption.* |count 2
+step
+goto 53.06,59.18 |q A Hidden Fate/.*Clear the Corruption.* |count 2
+step
+goto u38_infinitepanopticon2b_base 53.06,29.59 |q A Hidden Fate/.*Clear the Corruption.* |count 2
+step
+goto 86.73,44.90 |q A Hidden Fate/.*Clear the Corruption.* |count 2
+step
+goto 52.04,53.06
+'Examine _Blightcrown's Note_ |lorebook Blightcrown's Notes/3/49/4
+step
+goto 52.04,53.06
+'Use _Meln's Ghost Sight_
+'Destroy _Censer of Corruption_ |q A Hidden Fate/.*Clear the Corruption.* |count 2
+step
+goto 51.02,80.61 |q A Hidden Fate/.*Clear the Corruption.* |count 3
+step
+goto 15.31,43.88 |q A Hidden Fate/.*Clear the Corruption.* |count 3
+step
+goto u38_infinitepanopticon2c_base 41.84,36.73 |q A Hidden Fate/.*Clear the Corruption.* |count 3
+step
+goto 52.04,80.61 |q A Hidden Fate/.*Clear the Corruption.* |count 3
+step
+goto 53.06,41.84
+'Use _Meln's Ghost Sight_
+'Destroy _Censer of Corruption_ |q A Hidden Fate/.*Clear the Corruption.* |count 3
+step
+goto 52.04,43.88
+talk Leramil the Wise |q A Hidden Fate/Talk to Leramil the Wise
+step
+goto 71.43,43.88 |q A Hidden Fate/Locate the Fulcrum Obscura
+step
+goto 52.04,06.12
+'Open _The Infinite Panopticon_ |q A Hidden Fate/Locate the Fulcrum Obscura
+|tip Manually skip to the next step.
+step
+goto u38_infinitepanopticon3_base 32.23,43.80
+'Activate _Peryite Affliction Rune_ |q A Hidden Fate/Distract the Guardian Gaze |future
+|tip Manually skip to the next step.
+step
+goto 33.88,50.41
+|tip Drop down.
+'Activate _Peryite Affliction Rune_ |q A Hidden Fate/Distract the Guardian Gaze
+|tip Manually skip to the next step.
+step
+goto 56.20,25.62 |q A Hidden Fate/Distract the Guardian Gaze
+step
+goto 65.29,42.15
+'Activate _Peryite Affliction Rune_ |q A Hidden Fate/Distract the Guardian Gaze
+|tip Manually skip to the next step.
+step
+goto 64.46,50.41
+|tip Drop down.
+'Activate _Peryite Affliction Rune_ |q A Hidden Fate/Distract the Guardian Gaze
+step
+goto 48.76,11.57
+'Use _Portal to the Infinite Panopticon_ |q A Hidden Fate/Locate the Fulcrum Obscura
+step
+goto u38_infinitepanopticon4_base 49.37,65.19
+|tip Watch the dialogue.
+'Use _Portal to the Eye of Mora_ |q A Hidden Fate/Follow Torvesard and Blightcrown |future
+|tip Manually skip to the next step.
+step
+goto u38_infinitepanopticon7_base 77.27,45.45
+'Use _Portal to the Infinite Panopticon_ |q A Hidden Fate/Reach the Eye of Mora |future
+|tip Manually skip to the next step.
+step
+goto u38_infinitepanopticon4_base 62.03,53.80
+'Use _Portal to the Infinite Panopticon_ |q A Hidden Fate/Reach the Eye of Mora
+|tip Manually skip to the next step.
+step
+goto u38_infinitepanopticon5_base 33.33,53.59 |q A Hidden Fate/Reach the Eye of Mora
+step
+goto 77.12,9.80
+'Use _Portal to the Infinite Panopticon_ |q A Hidden Fate/Reach the Eye of Mora
+|tip Manually skip to the next step.
+step
+goto u38_infinitepanopticon8_base 48.55,63.77 |q A Hidden Fate/Reach the Eye of Mora
+step
+goto 31.88,50.00
+'Use _Portal to the Infinite Panopticon_ |q A Hidden Fate/Reach the Eye of Mora
+|tip Manually skip to the next step.
+step
+goto u38_infinitepanopticon4_base 50.00,17.09 |q A Hidden Fate/Reach the Eye of Mora
+step
+goto 49.37,55.70
+'Enter _Eye of Mora_ |q A Hidden Fate/Enter the Eye of Mora |future
+|tip Manually skip to the next step.
+step
+goto u38_infinitepanopticon9_base 15.83,63.33
+|tip Watch the dialogue.
+talk Torvesard |q A Hidden Fate/Talk to Torvesard |future
+step
+goto 24.58,47.92 |q A Hidden Fate/Explore the Memory |tip Drop down.
+step
+goto 41.25,54.17 |q A Hidden Fate/Explore the Memory
+step
+goto 46.25,73.75 |q A Hidden Fate/Explore the Memory
+step
+goto 68.33,61.67 |q A Hidden Fate/Explore the Memory
+step
+goto 88.33,51.67 |q A Hidden Fate/Find Torvesard |future
+step
+goto 86.25,41.25 |q A Hidden Fate/Find Torvesard |future
+step
+goto 69.17,41.67
+'Defend _Yourself_ |q A Hidden Fate/Defend Yourself |future
+step
+goto 67.92,44.17
+|tip Watch the dialogue.
+talk Hermaeus Mora |q A Hidden Fate/Talk to Hermaeus Mora
+step
+goto 67.50,44.58
+'Use _Portal to Leramil's Study_ |q A Hidden Fate/Return to Leramil's Study |future
+|tip Manually skip to the next step.
+step
+goto u38_ciphersmidden_city_base 41.23,43.22
+talk Leramil the Wise
+turnin A Hidden Fate
+accept Conclave of Fate
+step
+goto 42.47,43.90
+'Use _Portal to the Necrom Bindery_ |q Conclave of Fate/Return to the Necrom Bindery |future
+|tip Manually skip to the next step.
+step
+goto u38_Necrom_base 58.15,52.38
+|tip Watch the dialogue.
+talk Curate Gadayn |q Conclave of Fate/Talk to Curate Gadayn
+step
+goto 58.19,52.42
+talk Meln the Mouthless |q Conclave of Fate/Talk to Meln the Mouthless
+step
+'Open _Telvanni Peninsula_ Map
+'Travel to _Ald Isra_ |q Conclave of Fate/Go to Tel Rendys
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 36.41,52.93 |q Conclave of Fate/Go to Tel Rendys
+step
+goto 36.42,49.20
+'Go to _Tel Rendys_ |q Conclave of Fate/Go to Tel Rendys
+step
+goto 36.42,49.20
+talk Meln the Mouthless |q Conclave of Fate/Talk to Meln the Mouthless
+step
+goto 34.18,49.94
+'Use _Meln's Ghost Sight_
+'Dig _Meln's Sigil_ |q Conclave of Fate/.*Find the Components.* |count 1
+step
+goto 31.61,48.10
+'Use _Meln's Ghost Sight_
+'Dig _Meln's Sigil_ |q Conclave of Fate/.*Find the Components.* |count 2
+step
+goto 31.34,48.40
+'Dig _Meln's Sigil_ |q Conclave of Fate/.*Find the Components.* |count 3
+step
+goto 32.86,48.31 |q Conclave of Fate/Find Meln's Workbench
+step
+goto 32.72,51.12 |q Conclave of Fate/Find Meln's Workbench
+step
+goto 30.83,52.89 |q Conclave of Fate/Find Meln's Workbench
+step
+goto 32.50,54.76 |q Conclave of Fate/Find Meln's Workbench
+step
+goto 32.71,53.49
+.'Place _Dried Hoax-Wort_ |q Conclave of Fate/Place Dried Hoax-Wort |future
+.'Place _Lamia-Scale Shawl_ |q Conclave of Fate/Place Lamia-Scale Shawl |future
+.'Place _Place Illusion Tincture_ |q Conclave of Fate/Place Illusion Tincture |future
+step
+goto 32.71,53.49
+'Take _Cloak of Omission_ |q Conclave of Fate/Take the Cloak of Omission
+step
+goto 32.71,53.49
+'Use _Cloak of Omission_ |q Conclave of Fate/Don the Cloak of Omission
+step
+goto 32.70,53.48
+talk Meln the Mouthless |q Conclave of Fate/Talk to Meln the Mouthless
+step
+goto 32.26,54.74 |q Conclave of Fate/Enter Tel Huulen
+step
+goto tlv_aldisra_base 80.82,40.99 |q Conclave of Fate/Enter Tel Huulen
+step
+goto 62.45,62.25 |q Conclave of Fate/Enter Tel Huulen
+step
+goto 71.58,57.19
+'Use _Cloak of Omission_
+'Open _Tel Huulen_ |q Conclave of Fate/Enter Tel Huulen
+|tip Manually skip to the next step.
+step
+goto 82.14,56.35
+|tip Watch dialogue.
+talk Sentry Valyne |q Conclave of Fate/Talk to the Sentry |future
+step
+goto 83.18,56.73
+'Open _Tel Huulen Assembly Antechamber_ |q Conclave of Fate/Enter the Assembly Antechamber |future
+|tip Manually skip to the next step.
+step
+goto u38_TP6Trial_base 28.30,85.43
+|tip Watch the dialogue.
+talk Mouth Elar |q Conclave of Fate/Distract Mouth Elar |future
+step
+goto 40.05,81.47
+'Open _Tel Huulen Assembly Study_ |q Conclave of Fate/Follow Curate Gadayn
+step
+goto 46.18,81.74
+talk Curate Gadayn |q Conclave of Fate/Talk to Curate Gadayn
+step
+goto 31.34,78.52
+'Use _Meln's Ghost Sight_
+'Disable _Magister's Ward Anchor_ |q Conclave of Fate/.*Disable the Ward.* |count 1
+step
+goto 32.89,79.14
+'Disable _Magister's Ward Anchor_ |q Conclave of Fate/.*Disable the Ward.* |count 2
+step
+goto 32.48,75.76
+'Open _Tel Huulen Assembly Hall_ |q Conclave of Fate/Enter Assembly Hall
+step
+goto 33.73,60.12
+talk Magister Gothren |q Conclave of Fate/Talk to Magister Gothren
+step
+goto 39.94,58.05
+'Open _Tel Huulen East Hall_ |q Conclave of Fate/Find Master Shelreni
+|tip Manually skip to the next step.
+step
+goto 55.41,64.16
+'Open _Tel Huulen Meeting Room_ |q Conclave of Fate/Find Master Shelreni
+|tip Manually skip to the next step.
+step
+goto 55.65,71.38
+|tip Watch the dialogue.
+'Examine _Suspicious Vial_ |q Conclave of Fate/Examine the Vial |future
+step
+goto 56.47,25.06
+'Attend the _Masters Conclave_ |q Conclave of Fate/Attend the Masters Conclave
+step
+goto 62.23,22.57
+'Use _Meln's Ghost Sight_
+'Disable _Magister's Ward Anchor_ |q Conclave of Fate/.*Disable the Ward.* |count 1
+step
+goto 63.33,23.75
+'Disable _Magister's Ward Anchor_ |q Conclave of Fate/.*Disable the Ward.* |count 2
+step
+goto 65.38,21.78
+'Open _Master's Private Hall Access Corridor_ |q Conclave of Fate/Stop Master Shelreni
+|tip Manually skip to the next step.
+step
+goto 67.91,28.37
+|tip Follow Corridor down.
+'Open _Masters Private Hall_ |q Conclave of Fate/Stop Master Shelreni
+|tip Manually skip to the next step.
+step
+goto u38_TP6Trial2_base 54.41,19.22
+talk Magister Gothren |q Conclave of Fate/Talk to Magister Gothren |future
+step
+goto 52.07,16.61
+'Use _Portal to Vaermina Shrine_ |q Conclave of Fate/Enter Shelreni's Portal |future
+step
+goto u38_infinitepanopticon9_base 18.43,70.37 |q Conclave of Fate/Explore the Area
+step
+goto 22.24,47.61 |q Conclave of Fate/Explore the Area
+step
+goto 41.64,54.40 |q Conclave of Fate/Explore the Area
+step
+goto 44.33,72.09
+'Examine _Master Shelroni's Notes: Torvesard_ |lorebook Master Shelreni's Notes: Torvesard/3/48/2
+step
+goto 44.33,75.15
+'Examine _Master Shelreni's Notes: The Restoration_ |lorebook Master Shelreni's Notes: The Restoration/3/48/3
+step
+goto 44.33,75.15
+|tip Watch the dialogue.
+talk Curate Gadayn |q Conclave of Fate/Talk to Curate Gadayn
+|tip Manually skip to the next step.
+step
+goto 69.85,64.93
+'Open _Vaermina Shrine_ |q Conclave of Fate/Find Master Shelreni |future
+|tip Manually skip to the next step.
+step
+goto 71.79,50.97 |q Conclave of Fate/Stop Master Shelreni's Rite |future
+step
+goto 89.55,41.42 |q Conclave of Fate/Stop Master Shelreni's Rite |future
+step
+goto 71.12,42.09
+kill Aspect of Vermina |q Conclave of Fate/Stop Master Shelreni's Rite
+step
+goto 71.12,42.09
+'Destroy _Binding_ |q Conclave of Fate/Free Master Marena
+step
+goto 69.78,42.01
+|tip Watch the dialogue.
+'Take _Black Book: The Tormenting Eye_ |q Conclave of Fate/Recover the Black Book
+step
+goto 69.78,42.01
+'Observe _Master Shelreni and Blightcrown_ |q Conclave of Fate/Observe Master Shelreni and Blightcrown
+step
+goto 70.00,43.36
+'Use _Portal to Necrom Bindery_ |q Conclave of Fate/Return to Necrom Bindery |future
+|tip Manually skip to the next step.
+step
+goto u38_Necrom_base 58.23,51.93
+talk Leramil the Wise
+turnin Conclave of Fate
+accept A Calamity of Fate
+step
+goto 58.21,51.81
+talk Meln the Mouthless |q A Calamity of Fate/Talk to Meln the Mouthless
+step
+'Open _Telvanni Peninsula_ Map
+'Travel to _Great Arm_ |q A Calamity of Fate/Go to Tel Baro
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 60.97,41.03 |q A Calamity of Fate/Go to Tel Baro
+step
+goto 56.47,35.89 |q A Calamity of Fate/Go to Tel Baro
+step
+goto 57.34,35.18 |q A Calamity of Fate/Enter Master Shelreni's Study
+step
+goto 54.34,32.87
+'Open _Master Shelreni's Study_ |q A Calamity of Fate/Enter Master Shelreni's Study |future
+step
+goto 54.02,33.35
+|tip Watch the dialogue.
+'Examine _Master Shelreni's Presence_ |q A Calamity of Fate/Contact Master Shelreni's Spirit
+step
+goto 54.03,33.36
+talk Master Shelreni |q A Calamity of Fate/Talk to Master Shelreni
+step
+goto 54.40,32.86
+'Open _Telvanni Peninsula_ Map
+'Travel to _Necrom_ in Telvanni Peninsula |q A Calamity of Fate/Return to the Necrom Bindery
+|tip Manually skip to the next step.
+step
+goto u38_Necrom_base 55.82,52.48 |q A Calamity of Fate/Return to the Necrom Bindery
+step
+goto 60.30,52.39
+'Open _Necrom Bindery_ |q A Calamity of Fate/Return to the Necrom Bindery
+|tip Manually skip to the next step.
+step
+goto 58.68,51.45 |q A Calamity of Fate/Find the Infinite Panopticon |future
+step
+goto 58.21,51.92
+|tip Go upstairs.
+talk Leramil the Wise |q A Calamity of Fate/Find the Infinite Panopticon |future
+|tip Manually skip to the next step.
+step
+'Open _Apocrypha_
+'Travel to _Feral Gallery_ |q A Calamity of Fate/Find the Infinite Panopticon
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 08.47,35.57
+|tip Watch the dialogue.
+'Enter _The Infinite Panopticon_ |q A Calamity of Fate/Enter the Infinite Panopticon |future
+step
+goto u38_tp7_panopticon1_int 48.73,79.41 |q A Calamity of Fate/Explore the Infinite Panopticon
+step
+goto 48.71,66.40 |q A Calamity of Fate/Explore the Infinite Panopticon
+step
+goto 37.36,72.51 |q A Calamity of Fate/Explore the Infinite Panopticon
+step
+goto 37.96,88.04 |q A Calamity of Fate/Explore the Infinite Panopticon
+step
+goto 48.83,91.42 |q A Calamity of Fate/Explore the Infinite Panopticon
+step
+goto 55.49,83.96 |q A Calamity of Fate/Explore the Infinite Panopticon
+step
+goto 47.33,85.26 |q A Calamity of Fate/Explore the Infinite Panopticon
+step
+goto 47.53,92.59 |q A Calamity of Fate/Explore the Infinite Panopticon
+step
+goto 36.62,81.41 |q A Calamity of Fate/Explore the Infinite Panopticon
+step
+goto 44.04,70.93 |q A Calamity of Fate/Explore the Infinite Panopticon
+step
+goto 52.49,70.21 |q A Calamity of Fate/Explore the Infinite Panopticon
+step
+goto 65.47,41.70 |q A Calamity of Fate/Explore the Infinite Panopticon
+step
+goto 65.48,34.28 |q A Calamity of Fate/Explore the Infinite Panopticon
+step
+goto 50.72,19.97 |q A Calamity of Fate/Explore the Infinite Panopticon
+step
+goto 59.29,16.91 |q A Calamity of Fate/Explore the Infinite Panopticon
+step
+goto 50.77,05.73
+'Use _Portal to the Infinite Panopticon_ |q A Calamity of Fate/Enter the Portal |future
+|tip Manually skip to the next step.
+step
+goto u38_tp7_panopticon2_int 53.13,69.10 |q A Calamity of Fate/Investigate the Chamber |future
+step
+goto 32.40,51.64 |q A Calamity of Fate/Investigate the Chamber
+step
+goto 16.68,57.98 |q A Calamity of Fate/Investigate the Chamber
+step
+goto 15.55,70.73 |q A Calamity of Fate/Investigate the Chamber
+step
+goto 22.37,79.64 |q A Calamity of Fate/Investigate the Chamber
+step
+goto 22.80,89.15 |q A Calamity of Fate/Investigate the Chamber
+step
+goto 40.42,73.13
+'Use  _The Infinite Panopticon_ |q A Calamity of Fate/Investigate the Chamber
+|tip Manually skip to the next step.
+step
+goto 51.08,52.15
+kill Hidden Kindred |q A Calamity of Fate/Defeat the Hidden Kindred |future
+step
+goto 54.09,51.39
+talk Scruut |q A Calamity of Fate/Talk to Scruut
+step
+goto 51.84,51.90
+'Enter _Eye of Mora_ |q A Calamity of Fate/Enter the Eye of Mora
+step
+goto u38_tp7_panopticon3_int 50.72,76.54
+|tip Watch the dialogue.
+talk Scruut |q A Calamity of Fate/Talk to Scruut |future
+step
+goto 39.22,77.17 |q A Calamity of Fate/.*Break the Flaws in the Dream.* |count 1
+step
+goto 37.18,45.69
+'Use _Meln's Ghost Sight_
+'Identify _Flawed Illusion_ |q A Calamity of Fate/.*Break the Flaws in the Dream.* |count 1
+step
+goto 49.88,46.61
+'Identify _Flawed Illusion_ |q A Calamity of Fate/.*Break the Flaws in the Dream.* |count 2
+step
+goto 64.12,46.29
+'Identify _Flawed Illusion_ |q A Calamity of Fate/.*Break the Flaws in the Dream.* |count 3
+step
+goto 51.64,24.38 |q A Calamity of Fate/.*Break the Flaws in the Dream.* |count 4 |tip Drop down to the platform.
+step
+goto 68.91,25.43 |q A Calamity of Fate/.*Break the Flaws in the Dream.* |count 4
+step
+goto 64.79,46.99
+'Identify _Flawed Illusion_ |q A Calamity of Fate/.*Break the Flaws in the Dream.* |count 4
+step
+goto 49.45,62.68 |q A Calamity of Fate/.*Break the Flaws in the Dream.* |count 5
+step
+goto 37.32,45.55
+'Identify _Flawed Illusion_ |q A Calamity of Fate/.*Break the Flaws in the Dream.* |count 5
+step
+goto 45.90,50.97 |q A Calamity of Fate/Enter the Mythos |tip Drop down to the platform.
+step
+goto 39.18,34.22 |q A Calamity of Fate/Enter the Mythos
+step
+goto 50.47,22.37
+'Open _The Mythos_ |q A Calamity of Fate/Enter the Mythos
+step
+goto u38_tp7_mythos_int2_reslice 62.58,53.29 |q A Calamity of Fate/Explore the Mythos
+step
+goto u38_tp7_mythos_int1 24.06,78.21 |q A Calamity of Fate/Explore the Mythos
+step
+goto 37.10,84.54 |q A Calamity of Fate/Explore the Mythos
+step
+goto 44.41,71.22 |q A Calamity of Fate/Explore the Mythos
+step
+goto 55.23,59.45 |q A Calamity of Fate/Explore the Mythos
+step
+goto 55.06,12.76 |q A Calamity of Fate/Explore the Mythos |future
+step
+goto 60.98,06.33
+'Open _The Mythos Vault_ |q A Calamity of Fate/Find Vaermina
+|tip Manually skip to the next step.
+step
+goto u38_tp7_vault_base 41.87,51.19
+|tip Watch the dialogue.
+kill Mezzamma the Lurker |q A Calamity of Fate/Defeat Vaermina's Champion |future
+step
+goto 57.82,45.56
+talk Hermaeus Mora |q A Calamity of Fate/Talk to Hermaeus Mora
+step
+goto 56.27,42.88
+'Enter _Portal to the Glyphic of Hidden Paths_ |q A Calamity of Fate/Enter the Vault |future
+|tip Manually skip to the next step.
+step
+goto 88.34,24.19
+|tip Watch the dialogue.
+'Examine _Glyphic of Hidden Paths_ |q A Calamity of Fate/Examine the Glyphic
+step
+goto 90.93,21.36
+talk Hermaeus Mora |q A Calamity of Fate/Talk to Hermaeus Mora
+step
+goto 92.21,22.82
+'Use _Portal to Cipher's Midden_ |q A Calamity of Fate/Meet Allies at Cipher's Midden
+step
+goto u38_ciphersmidden_city_base 43.26,47.41
+'Open _Leramil's Study_ |q A Calamity of Fate/Meet Allies at Cipher's Midden
+|tip Manually skip to the next step.
+step
+goto 45.65,40.06
+talk Leramil the Wise
+turnin A Calamity of Fate
+accept An Unhealthy Fate
+step
+goto 41.58,50.79
+'Examine _Cipher Hulnan_ |q An Unhealthy Fate/.*Investigate Cipher's Midden.* |count 1
+step
+goto 49.61,62.20
+'Examine _Corrupted Seeker_ |q An Unhealthy Fate/.*Investigate Cipher's Midden.* |count 2
+step
+goto 59.45,61.33 |q An Unhealthy Fate/.*Investigate Cipher's Midden.* |count 3
+step
+goto 51.28,28.60
+'Destroy _Censer of Corruption_ |q An Unhealthy Fate/.*Investigate Cipher's Midden.* |count 3
+step
+goto 58.01,61.93 |q An Unhealthy Fate/Return to Leramil's Study
+step
+goto 41.95,56.84 |q An Unhealthy Fate/Return to Leramil's Study
+step
+goto 42.53,43.17
+talk Scruut |q An Unhealthy Fate/Talk to Scruut |future
+step
+goto 43.67,42.96
+talk Torvesard |q An Unhealthy Fate/Talk to Torvesard
+step
+'Open _Apocrypha_ Map
+'Travel to _Soundless Bight_ |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 85.14,68.85 |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
+step
+goto 79.61,62.22
+wayshrine Writhing Wastes
+step
+goto 83.81,64.79
+'Examine _Cipher Dreyla's Note_
+accept Numinous Grimoire, Volume 2
+step
+goto 83.81,64.82
+'Search _Dreyla's Pack_ |q Numinous Grimoire, Volume 2/Retrieve the Numinous Grimoire Volume
+step
+goto 76.98,57.10
+'Examine _Call to the Cloisters_
+accept Under Malign Stars
+step
+goto 80.88,49.96 |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
+step
+goto 77.72,44.93 |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
+step
+goto 73.02,43.68
+wayshrine Speiran Tarn
+step
+goto 73.02,43.68
+'Use _Speiran Tarn_ Wayshrine
+'Travel to _Writhing Wastes_ |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
+step
+goto 84.80,62.78 |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
+step
+goto 86.73,63.13
+'Rendezvous with _Leramil and Torvesard_ |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
+step
+goto 86.06,62.61
+'Align _Thread of Fate_ |q An Unhealthy Fate/.*Align the Threads of Fate.* |count 1
+step
+goto 86.34,61.16
+'Align _Thread of Fate_ |q An Unhealthy Fate/.*Align the Threads of Fate.* |count 2
+step
+goto 87.17,61.87
+'Align _Thread of Fate_ |q An Unhealthy Fate/.*Align the Threads of Fate.* |count 3
+step
+goto 86.70,63.07
+'Align _The Mythos_ |q An Unhealthy Fate/Bring the Portal Into Alignment |future
+step
+goto 86.52,62.96
+talk Hermaeus Mora |q An Unhealthy Fate/Talk to Hermaeus Mora
+step
+goto 86.70,63.03
+'Use _Portal to the Mythos_ |q An Unhealthy Fate/Enter the Mythos |future
+|tip Manually skip to the next step.
+step
+goto u38_tp8mythos01_base 52.54,09.59
+'Listen to _Conversation_ |q An Unhealthy Fate/Find Blightcrown |future
+step
+goto 54.17,09.06
+'Use _Portal to the Eastern Mythos_ |q An Unhealthy Fate/Disable the Eastern Manufactory
+|tip Manually skip to the next step.
+step
+goto 76.51,69.40 |q An Unhealthy Fate/Disable the Eastern Manufactory
+step
+goto 72.13,35.35
+'Destroy _Corrupted Manufactory Dream Crystal_ |q An Unhealthy Fate/Disable the Eastern Manufactory
+step
+goto 67.93,42.14 |q An Unhealthy Fate/Find the Western Manufactory
+step
+goto u38_tp8mythos01_base 67.54,63.56 |q An Unhealthy Fate/Find the Western Manufactory
+step
+goto 71.41,83.63
+kill Mind Terror |q An Unhealthy Fate/Defend Your Allies |future
+step
+goto 69.30,85.05
+|tip Watch the dialogue.
+'Use _Portal to the Western Mythos_ |q An Unhealthy Fate/Disable the Western Manufactory
+|tip Manually skip to the next step.
+step
+goto 47.70,67.33
+'Use _Portal to the Western Mythos_ |q An Unhealthy Fate/Disable the Western Manufactory
+|tip Manually skip to the next step.
+step
+goto 34.54,60.10 |q An Unhealthy Fate/Disable the Western Manufactory
+step
+goto 33.06,68.29 |q An Unhealthy Fate/Disable the Western Manufactory
+step
+goto u38_tp8mythos01_base 29.23,51.83 |q An Unhealthy Fate/Disable the Western Manufactory
+step
+goto 36.93,58.29 |q An Unhealthy Fate/Disable the Western Manufactory
+step
+goto 27.33,60.22 |q An Unhealthy Fate/Disable the Western Manufactory
+step
+goto 29.74,52.35 |q An Unhealthy Fate/Disable the Western Manufactory
+step
+goto 33.77,35.99
+'Destroy _Corrupted Manufactory Dream Crystal_ |q An Unhealthy Fate/Disable the Western Manufactory
+step
+goto 29.43,31.77 |q An Unhealthy Fate/Find the Next Manufactory
+step
+goto 36.79,15.53
+'Use _Portal to the Mythos_ |q An Unhealthy Fate/Find the Next Manufactory
+step
+goto 52.66,20.67
+kill Blightcrown |q An Unhealthy Fate/Kill Blightcrown |future
+step
+goto 50.28,23.26
+'Use _Portal to the Mythos Vaults_ |q An Unhealthy Fate/Enter the Portal
+step
+goto u38_tp8_bossroom_base 58.56,51.25
+kill Vaermina |q An Unhealthy Fate/Defeat Vaermina |future
+step
+goto 58.56,51.25
+kill Vaermina |q An Unhealthy Fate/Defeat Vaermina's Nightmare
+step
+goto 51.00,45.39
+|tip Watch the dialogue.
+'Use _Black Book: The Tormenting Eye_
+'Use _Meln's Black Book_
+'Use _Black Book: The Tormenting Eye_ |q An Unhealthy Fate/Secure the Glyphic |future
+|tip Manually skip to the next step.
+step
+goto 45.59,44.54
+'Use _Portal to the Glyphic of Lost Memories_ |q An Unhealthy Fate/Secure the Glyphic
+|tip Manually skip to the next step.
+step
+goto 13.06,20.08
+|tip Watch the dialogue.
+'Use _Portal to Apocrypha_ |q An Unhealthy Fate/Leave the Mythos |future
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 86.58,62.93
+talk Hermaeus Mora |q An Unhealthy Fate/Talk to Hermaeus Mora
+step
+goto 79.58,62.18
+'Use _Writhing Waste_ Wayshrine
+'Travel to _Cipher's Midden_ |q An Unhealthy Fate/Go to Cipher's Midden
+|tip Manually skip to the next step.
+step
+goto 63.63,48.26
+talk Cipher Plautis
+turnin Numinous Grimoire, Volume 2
+accept Akacirn the Deathless
+step
+goto u38_ciphersmidden_city_base 40.32,44.43
+talk Leramil the Wise
+turnin An Unhealthy Fate
+accept Chronicle of Fate
+step
+goto 41.11,42.75
+talk Scruut |q Chronicle of Fate/Talk to Scruut
+step
+goto 44.37,48.14
+'Open _Cipher's Midden_ |q Chronicle of Fate/Go to the Prismatic Iris Shore
+|tip Manually skip to the next step.
+step
+goto 59.00,23.41 |q Chronicle of Fate/Go to the Prismatic Iris Shore
+step
+goto u38_apocrypha_base 62.49,46.77 |q Chronicle of Fate/Go to the Prismatic Iris Shore
+step
+goto 59.76,45.17
+'Use _Meln's Ghost Sight_ |q Chronicle of Fate/Use Meln's Ghost Sight |future
+|tip Manually skip to the next step.
+step
+goto 58.26,44.91 |q Chronicle of Fate/Search for the Fate Annomaly |future
+step
+goto 57.31,46.19
+talk Torvesard |q Chronicle of Fate/Talk to Torvesard |future
+step
+goto 57.37,46.25
+|tip Watch the dialogue.
+'Examine _Glyphic of Lost Memories_ |q Chronicle of Fate/Examine the Glyphic
+step
+goto 57.46,46.43
+talk Hermaeus Mora |q Chronicle of Fate/Talk to Hermaeus Mora
+step
+goto 58.26,44.91 |q Chronicle of Fate/Go to Ciphers Hall
+step
+goto 59.76,45.17 |q Chronicle of Fate/Go to Ciphers Hall
+step
+goto 62.49,46.77 |q Chronicle of Fate/Go to Ciphers Hall
+step
+goto u38_ciphersmidden_city_base 59.00,23.41 |q Chronicle of Fate/Go to Ciphers Hall
+step
+goto 59.19,61.64 |q Chronicle of Fate/Go to Ciphers Hall
+step
+goto 68.63,58.83
+'Open _Ciphers Hall_ |q Chronicle of Fate/Go to Ciphers Hall 
+|tip Manually skip to the next step.
+step
+goto 69.77,49.55
+talk Meln the Mouthless |q Chronicle of Fate/Talk to Meln the Mouthless |future
+step
+goto 68.81,50.54
+talk Scruut |q Chronicle of Fate/Talk to Scruut
+step
+goto 68.60,52.23
+talk Curate Gadayn |q Chronicle of Fate/Talk to Gadayn |future
+|tip Manually skip to the next step.
+step
+goto 63.19,63.68 |q Chronicle of Fate/Go to Necrom
+step
+goto 41.38,56.89 |q Chronicle of Fate/Go to Necrom
+step
+goto 48.79,46.36 |q Chronicle of Fate/Go to Necrom
+step
+goto 72.70,54.57
+'Use _Cipher's Midden_ Wayshrine
+'Travel to _Necrom_ in Telvanni Peninsula |q Chronicle of Fate/Go to Necrom |future
+|tip Manually skip to the next step.
+step
+goto u38_Necrom_base 39.17,44.95 |q Chronicle of Fate/Meet Curate Gadayn in the Necropolis |future
+step
+goto 44.85,37.48 |q Chronicle of Fate/Meet Curate Gadayn in the Necropolis
+step
+goto 47.66,31.84
+'Open _Necropolis_ |q Chronicle of Fate/Meet Curate Gadayn in the Necropolis
+|tip Manually skip to the next step.
+step
+goto U38_TP2_Abby_Int_base 66.07,73.82
+'Open _Ceremony Room_ |q Chronicle of Fate/Meet Curate Gadayn in the Necropolis
+step
+goto 82.66,73.97
+|tip Watch the dialogue.
+talk Curate Gadayn |q Chronicle of Fate/Talk to Curate Gadayn
+step
+goto 81.30,74.53
+talk Leramil the Wise
+turnin Chronicle of Fate
 ]])

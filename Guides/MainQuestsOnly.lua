@@ -46120,7 +46120,7 @@ step
 talk Meln the Mouthless |q Spirit of Fate/Talk to Meln the Mouthless
 step
 '_Next to the Portal_
-'Take _Meln's Soul Gem |q Spirit of Fate/Take the Soul Gem
+'Take _Meln's Soul Gem_ |q Spirit of Fate/Take the Soul Gem
 step
 'Use _Portal to Telvanni Peninsula_ |q Spirit of Fate/Leave Tel Baro
 |tip Manually skip to the next step.
@@ -46420,10 +46420,10 @@ step
 goto 19.84,18.30 |q A Hidden Fate/Return to Leramil's Study
 step
 goto 19.44,17.25
-wayshrine Stilled Shallows
+wayshrine Still Shallows
 step
 goto 41.17,24.01
-'Use _Stilled Shallows_ Wayshrine
+'Use _Still Shallows_ Wayshrine
 'Travel to _Cipher's Midden_ |q A Hidden Fate/Return to Leramil's Study
 |tip Manually skip to the next step.
 step
@@ -46978,12 +46978,12 @@ step
 'Travel to _Soundless Bight_ |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
 |tip Manually skip to the next step.
 step
-goto 85.14,68.85 |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
+goto u38_apocrypha_base  85.14,68.85 |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
 step
 goto 79.61,62.22
 wayshrine Writhing Wastes
 step
-goto u38_apocrypha_base 80.88,49.96 |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
+goto 80.88,49.96 |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
 step
 goto 77.72,44.93 |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
 step
