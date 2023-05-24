@@ -2664,9 +2664,16 @@ CGV.MapData = {
     ["u38_cenotaph_tower"] =                { name = "Cenotaph Rise",                            id = 912, xoffset = 0.152653, yoffset = -0.039497, scale = 0.001033, },
     ["u38_cenotaph_mainhall"] =             { name = "Cathedral of Hermaeus Mora",               id = 913, xoffset = 0.153769, yoffset = -0.041674, scale = 0.004505, },
     ["u38_cenotaph_pact"] =                 { name = "The Crux",                                 id = 914, xoffset = 0.146810, yoffset = -0.045087, scale = 0.014120, },
-    ["U38_CorpuscleBight_01_Base"] =        { name = "Fathoms Drift",                            id = 915, xoffset = 0.127904, yoffset = -0.062827, scale = 0.006300, },
-    ["U38_CorpuscleBight_02_Base"] =        { name = "Fathoms Drift",                            id = 915, xoffset = 0.127904, yoffset = -0.062827, scale = 0.006300, },
+    ["U38_CorpuscleBight_01_Base"] =        { name = "Fathoms Drift",                            id = 915, xoffset = 0.127904, yoffset = -0.062827, scale = 0.012600, },
+    ["U38_CorpuscleBight_02_Base"] =        { name = "Fathoms Drift",                            id = 915, xoffset = 0.126154, yoffset = -0.068727, scale = 0.012600, },
     ["u38_quires_wind_base"] =              { name = "Quires Wind",                              id = 916, xoffset = 0.208972, yoffset = 0.005613, scale = 0.018057, },
+    ["u38_disquiet_study_base"] =           { name = "The Disquiet Study",                       id = 917, xoffset = 0.155917, yoffset = 0.022970, scale = 0.009043, },
+    ["u38_apogee_wind_base"] =              { name = "Apogee of the Tormenting Eye",             id = 918, xoffset = 0.112546, yoffset = -0.045376, scale = 0.023338, },
+    ["u38_RNInterior_base"] =               { name = "Rectory Network",                          id = 919, xoffset = 0.116283, yoffset = -0.052370, scale = 0.011291, },
+    ["u38_feralgallery_secret_base"] =      { name = "The Forbidden Exhibit",                    id = 920, xoffset = 0.091870, yoffset = -0.019154, scale = 0.010961, },
+    ["u38_SCloisterINT01_base"] =           { name = "The Sidereal Cloisters",                   id = 921, xoffset = 0.187851, yoffset = -0.005488, scale = 0.012418, },
+    ["u38_SCloisterINT02_base"] =           { name = "The Sidereal Cloisters",                   id = 921, xoffset = 0.192356, yoffset = -0.004607, scale = 0.011201, },
+    ["u38_apogee_wind_ic_base"] =           { name = "Apogee of the Tormenting Eye",             id = 922, xoffset = 0.121993, yoffset = -0.039010, scale = 0.008118, },
 
     -- Tutorial
     ["u30_balfiera_int1_base"] =            { name = "Balfiera Ruins",                           id = 997, xoffset = 0.132430, yoffset = 0.366616, scale = 0.008370, },

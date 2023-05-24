@@ -47927,6 +47927,10 @@ goto 85.16,78.93
 talk Hezehk
 accept Piteous Envoys
 step
+goto 84.62,79.98 |q Piteous Envoys/Meet Hezehk by the Southern Stairs
+step
+goto 75.52,78.80 |q Piteous Envoys/Meet Hezehk by the Southern Stairs
+step
 goto 72.82,82.75
 'Meet _Hezehk by the Southern Stairs_ |q Piteous Envoys/Meet Hezehk by the Southern Stairs
 step
@@ -47955,7 +47959,8 @@ goto 68.47,84.42
 talk Voidprowler Dys |q Piteous Envoys/Talk to Voidprowler Dys |future
 step
 goto 68.35,84.57
-'Open _Obscured Forum_ |q Piteous Envoys/Enter the Obscured Forum
+'Open _Obscured Forum_ |q Piteous Envoys/Enter the Obscured Forum |future
+|tip Manually skip to the next step.
 step
 goto u38_LibraryofSecrets_base 74.15,43.89 |q Piteous Envoys/Search for Voidprowler Zavaal
 step
@@ -47969,13 +47974,13 @@ step
 goto 19.08,27.69 |q Piteous Envoys/Search for Voidprowler Zavaal
 step
 goto 21.74,45.14
-'Examine _Your New Target_ |q Piteous Envoys/Examine Voidprowler Zavaal
+'Examine _Your New Target_ |q Piteous Envoys/Examine Voidprowler Zavaal |future
 step
 goto 21.74,45.14
 talk Hezehk |q Piteous Envoys/Talk to Hezehk
 step
 goto 07.68,42.28
-'Take _Tomeshell Feather_ |q Piteous Envoys/Gather Tomeshell Feathero
+'Take _Tomeshell Feather_ |q Piteous Envoys/Gather Tomeshell Feather
 step
 goto 08.36,59.74
 'Take _Ink Quill_ |q Piteous Envoys/Gather Ink Quill
@@ -47993,22 +47998,23 @@ goto 55.80,72.06
 talk Hezehk |q Piteous Envoys/Talk to Hezehk
 step
 goto 70.11,61.34
-'Examine _Leaden Scroll_ |q Piteous Envoys/Located the Missing Secret
+'Examine _Leaden Scroll_ |q Piteous Envoys/Locate the Missing Secret
 |tip Manually skip to the next step.
 step
-goto 73.78,82.26 |q Piteous Envoys/Located the Missing Secret
+goto 73.78,82.26 |q Piteous Envoys/Locate the Missing Secret
 step
 goto 85.63,70.05
-'Examine _Vibrating Scroll |q Piteous Envoys/Located the Missing Secret
+'Examine _Vibrating Scroll_ |q Piteous Envoys/Locate the Missing Secret
 |tip Manually skip to the next step.
 step
-goto 50.88,77.29 |q Piteous Envoys/Located the Missing Secret
+goto 50.88,77.29 |q Piteous Envoys/Locate the Missing Secret
 step
 goto 65.21,71.96
-'Examine _Crying Scroll_ |q Piteous Envoys/Located the Missing Secret
+'Examine _Crying Scroll_ |q Piteous Envoys/Locate the Missing Secret
+|tip Manually skip to the next step.
 step
 goto 81.18,71.75
-'Take _Madam Whim's Secret |q Piteous Envoys/Pick Up Madam Whim's Secret
+'Take _Madam Whim's Secret_ |q Piteous Envoys/Pick Up Madam Whim's Secret
 step
 goto 81.31,72.06
 talk Hezehk |q Piteous Envoys/Talk to Hezehk
@@ -48018,7 +48024,7 @@ step
 goto 74.97,43.69
 |tip Watch the dialogue.
 |tip Drop down.
-'Place _Intake Maw_ |q Piteous Envoys/Deposit the Secret into the Intake Maw_
+'Place _Intake Maw_ |q Piteous Envoys/Deposit the Secret into the Intake Maw
 step
 goto 74.97,43.69
 'Take _Boon of Mora_ |q Piteous Envoys/Collect the Boom of Mora
@@ -48031,9 +48037,7 @@ goto u38_apocrypha_base 68.80,80.41 |q Piteous Envoys/Meet Hezehk Outside
 step
 goto 71.20,79.34
 talk Hezehk
-accept Piteous Envoys
-step
-goto 71.38,78.89 |q Fate's Lost Dream/Follow the Invaders' Trail
+turnin Piteous Envoys
 step
 goto 68.65,75.33 |q Fate's Lost Dream/Follow the Invaders' Trail
 step
@@ -48138,8 +48142,73 @@ goto 57.45,69.22
 talk Archivist Bartalus
 accept Turning a Page
 step
+goto 57.86,73.23
+talk Ysgild |q Turning a Page/Talk to Ysgild
+step
+goto 57.92,73.21
+'Take _Vorm's Map_ |q Turning a Page/Take Vorm's Map
+step
+goto 57.89,73.43
+'Open _The Disquiet Study_ |q Turning a Page/Enter the Disquiet Study |future
+|tip Manually skip to the next step.
+step
+goto u38_disquiet_study_base 26.64,72.31 |q Turning a Page/Find Ysgild's Favorite Book |future
+step
+goto 27.78,58.01 |q Turning a Page/Find Ysgild's Favorite Book
+step
+goto 30.81,47.63
+'Examine _The Curse of Blackscale Island |q Turning a Page/Find Ysgild's Favorite Book
+step
+goto 25.31,34.80 |q Turning a Page/Find the Mother's Favorite Book
+step
+goto 40.93,27.09 |q Turning a Page/Find the Mother's Favorite Book
+step
+goto 43.56,33.95
+'Take _Page of Obscure Formulas_ |q Turning a Page/.*Find the Missing Pages.* |count 1
+step
+goto 43.10,54.33
+'Examine _Tamrielic Twins of Myth_ |q Turning a Page/Find the Mother's Favorite Book
+step
+goto 44.19,51.61 |q Turning a Page/.*Find the Missing Pages.* |count 2
+step
+goto 56.78,52.94 |q Turning a Page/.*Find the Missing Pages.* |count 2
+step
+goto 56.95,45.38 |q Turning a Page/.*Find the Missing Pages.* |count 2
+step
+goto 48.83,37.55 |q Turning a Page/.*Find the Missing Pages.* |count 2
+step
+goto 45.55,30.01
+'Use _Skyshard_ |q Turning a Page/.*Find the Missing Pages.* |count 2
+|tip Manually skip to the next step.
+step
+goto 48.39,29.93
+|tip Drop down.
+'Take _Convoluted Appendices_ |q Turning a Page/.*Find the Missing Pages.* |count 2
+step
+goto 50.27,29.01
+'Take _Page of Conplex Graphs_ |q Turning a Page/Find Vorm's Favorite Book
+|tip Manually skip to the next step.
+step
+goto 48.56,35.38
+'Repair _Damaged Reference Book_
+'Take _Planar Formulae of the First Age_ |q Turning a Page/Find Vorm's Favorite Book
+step
+goto 43.75,61.24
+kill Uzur the All-Seeing |q Turning a Page/Exit the Disquiet Study
+|tip Manually skip to the next step.
+step
+goto 43.66,79.76
+'Open _Apocrypha_ |q Turning a Page/Exit the Disquiet Study
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 57.92,72.86
+talk Ysgild
+turnin Turning a Page
+step
+goto 58.50,69.80 |q Llaro's Headache/Talk to Balver
+step
 goto 67.73,71.45
-'Use _Tranquil Catalog_
+'Use _Tranquil Catalog_ Wayshrine
 'Travel to _Ald Isra_ in Telvanni Peninsula |q Llaro's Headache/Talk to Balver
 |tip Manually skip to the next step.
 step
@@ -48152,20 +48221,7 @@ goto 22.63,37.71
 talk Oahman Llaro or Retainer Balver
 turnin |q Llaro's Headache
 step
-goto 71.54,57.12
-'Open _Tel Huulen_ |q Tracing Shadows/Return to Tel Huulen
-step
-goto 75.25,60.02
-talk Master Sulis |q Tracing Shadows/Talk to Master Sulis
-step
-goto 78.65,59.69
-talk Master Foves |q Tracing Shadows/Talk to Master Foves
-step
-goto 63.24,45.69 |q Tracing Shadows/Find the Kagouti Nests
-step
-goto u38_telvannipeninsula_base 31.78,42.15 |q Tracing Shadows/Find the Kagouti Nests
-step
-goto 30.04,42.32 |q Tracing Shadows/Find the Kagouti Nests
+goto u38_telvannipeninsula_base 30.04,42.32 |q Tracing Shadows/Find the Kagouti Nests
 step
 goto 28.95,38.53
 'Examine _Mud-Covered Letter_ |lorebook Mud-Covered Letter/3/48/28
@@ -48187,7 +48243,7 @@ goto 79.70,54.47
 talk Naryu Virian
 turnin Tracing Shadows
 step
-'Use _Ald Isra_ Wayshrine
+'Open _Telvanni Peninsula_ Map
 'Travel to _Necrom_ |q Fate's Proxy/Meet Leramil the Wise in Necrom
 |tip Manually skip to the next step.
 step
@@ -48196,8 +48252,6 @@ step
 goto 60.30,52.39
 'Open _Necrom Bindery_ |q Fate's Proxy/Meet Leramil the Wise in Necrom
 |tip Manually skip to the next step.
-step 
-goto 58.21,51.48 |q Fate's Proxy/Meet Leramil the Wise in Necrom
 step
 goto 57.74,52.26
 |tip Go upstairs.
@@ -48268,7 +48322,13 @@ goto u38_apocrypha_base 54.60,52.35
 'Open _Central Orphic Tunnels_ |q A Hidden Fate/.*Prepare the Cairns.* |count 1
 |tip Manually skip to the next step.
 step
-goto u38_Tunnel2_base 59.04,33.23 |q A Hidden Fate/.*Prepare the Cairns.* |count 1
+goto u38_Tunnel2_base 63.48,13.97 |q A Hidden Fate/.*Prepare the Cairns.* |count 1
+step
+goto 59.33,11.91
+'Use _Skyshard_ |q A Hidden Fate/.*Prepare the Cairns.* |count 1
+|tip Manually skip to the next step. 
+step
+goto 59.04,33.23 |q A Hidden Fate/.*Prepare the Cairns.* |count 1
 step
 goto 41.02,37.74
 'Open _Apocrypha: Chroma Incognito_ |q A Hidden Fate/.*Prepare the Cairns.* |count 1
@@ -48277,21 +48337,19 @@ step
 goto u38_apocrypha_base 47.15,45.74
 'Activate _Apocrypha Cairn_ |q A Hidden Fate/.*Prepare the Cairns.* |count 1
 step
-goto 42.34,42.35 |q A Hidden Fate/.*Prepare the Cairns.* |count 1
+goto 41.48,44.31
+'Use _Skyshard_ |q A Hidden Fate/.*Prepare the Cairns.* |count 1
+|tip Manually skip to the next step.
 step
 goto 37.48,42.16
 wayshrine Apogee Nadir
 step
-goto 33.14,38.98
-talk Zirokh
-accept Hungry for Knowledge
+goto 33.65,42.15 |q A Hidden Fate/.*Prepare the Cairns.* |count 2
 step
 goto 39.01,44.36
 'Activate _Apocrypha Cairn_ |q A Hidden Fate/.*Prepare the Cairns.* |count 2
 step
 goto 42.85,42.31 |q A Hidden Fate/.*Prepare the Cairns.* |count 3
-step
-goto 44.47,36.35 |q A Hidden Fate/.*Prepare the Cairns.* |count 3
 step
 goto 44.17,38.56
 talk Zenkif
@@ -48305,10 +48363,11 @@ goto 52.44,37.24
 |tip Manually skip to the next step.
 step
 goto u38_Tunnel3_base 41.84,33.59
-'Open _Cenotaph Foundations_ |q Forgotten Glories/Enter the Cenotaph
+'Open _Cenotaph Foundations_ |q Forgotten Glories/Enter the Cenotaph |future
+|tip Manually skip to the next step.
 step
 goto u38_cenotaph_sewer 56.39,83.18
-talk Tyss |q Forgotten Glories/Talk to Tyss
+talk Tyss |q Forgotten Glories/Talk to Tyss |future
 step
 goto 25.89,64.56
 'Activate _Remnant Ward_ |q Forgotten Glories/.*Arm the Remnant Wards.* |count 1
@@ -48327,7 +48386,8 @@ goto 35.31,16.43
 talk Tyss |q Forgotten Glories/Talk to Tyss
 step
 goto 65.89,09.98
-'Open _Courtyard_ |q Forgotten Glories/Go to the Courtyard
+'Open _Courtyard_ |q Forgotten Glories/Go to the Courtyard |future
+|tip Manually skip to the next step.
 step
 goto u38_cenotaph_courtyard 56.33,63.42
 'Destroy _Ritual Focus_ |q Forgotten Glories/Stop the Ritual
@@ -48342,7 +48402,7 @@ goto 56.52,61.88
 talk Uxunath |q Forgotten Glories/.*Investigate the Ritual Site.* |count 3
 step
 goto 55.64,62.80
-'Investigate _Ritual Focus_ |q Forgotten Glories/.*Investigate the Ritual Site.* |count 4
+'Investigate _Ritual Remains_ |q Forgotten Glories/.*Investigate the Ritual Site.* |count 4
 step
 goto 56.19,63.29
 talk Tyss |q Forgotten Glories/Talk to Tyss
@@ -48369,6 +48429,7 @@ goto u38_cenotaph_tower 67.07,31.90 |q Forgotten Glories/Find Uxunath
 step
 goto 28.13,41.34
 'Open _Balcony_ |q Forgotten Glories/Find Uxunath
+|tip Manually skip to the next step.
 step
 goto u38_cenotaph_courtyard 44.59,32.30
 |tip Watch the dialogue.
@@ -48376,6 +48437,7 @@ talk Tyss |q Forgotten Glories/Talk to Tyss |future
 step
 goto 55.84,26.97
 'Open _Cathedral of Hermaeus Mora_ |q Forgotten Glories/Find Journal of the First Remnant
+|tip Manually skip to the next step.
 step
 goto u38_cenotaph_mainhall 35.11,58.22
 'Examine _Journal of the First Remnant_ |q Forgotten Glories/Find Journal of the First Remnant
@@ -48390,16 +48452,15 @@ goto 66.70,32.91
 step
 goto 74.03,60.82
 'Open _Balcony_ |q Forgotten Glories/Go to the Ritual Dais
-|tip Manually skip to the next step.
 step
 goto u38_cenotaph_courtyard 59.66,38.97
 talk Tyss |q Forgotten Glories/Talk to Tyss
 step
 goto 62.67,39.78
-'Use _Ritual Pedestal |q Forgotten Glories/.*Place the Relics.* |count 1
+'Use _Ritual Pedestal_ |q Forgotten Glories/.*Place the Relics.* |count 1
 step
 goto 58.74,36.71
-'Use _Ritual Pedestal |q Forgotten Glories/.*Place the Relics.* |count 2
+'Use _Ritual Pedestal_ |q Forgotten Glories/.*Place the Relics.* |count 2
 step
 goto 59.59,39.69
 'Use _Ritual Pedestal |q Forgotten Glories/Place the Book
@@ -48408,17 +48469,20 @@ goto 56.62,43.38
 'Enter _The Crux_ |q Forgotten Glories/Enter the Crux
 step
 goto u38_cenotaph_pact 49.26,56.52
-kill Uxunath
+kill Uxunath |q Forgotten Glories/Kill Uxunath
 step
 goto 47.97,58.43
 'Examine _Pact of the Remnants_ |q Forgotten Glories/Inspect the Book
 step
 goto 55.12,55.67
-'Use _Portal to Apocrypha_ |q Forgotten Glories/Meet Tyss Outside
+'Use _Portal to Apocrypha_ |q Forgotten Glories/Meet Tyss Outside |future
+|tip Manually skip to the next step.
 step
 goto u38_apocrypha_base 49.82,39.03
 talk Tyss
 turnin Forgotten Glories
+step
+goto 51.96,36.51 |q Numinous Grimoire, Volume 1 |future
 step
 goto 58.18,32.00
 'Examine _Cipher Tlaxalt's Note_
@@ -48426,6 +48490,16 @@ accept Numinous Grimoire, Volume 1
 step
 goto 58.13,31.96
 'Search _Cipher Tlaxalt's Pack_ |q Numinous Grimoire, Volume 1/Retrieve the Numinous Grimoire Volume
+step
+goto 57.95,32.93 |q A Hidden Fate/.*Prepare the Cairns.* |count 3
+step
+goto 51.42,34.79 |q A Hidden Fate/.*Prepare the Cairns.* |count 3
+step
+goto 51.21,31.55
+'Use _Skyshard_ |q A Hidden Fate/.*Prepare the Cairns.* |count 3
+|Tip Manually skip to the next step.
+step
+goto 45.40,32.25 |q A Hidden Fate/.*Prepare the Cairns.* |count 3
 step
 goto 46.23,36.68
 'Activate _Apocrypha Cairn_ |q A Hidden Fate/.*Prepare the Cairns.* |count 3
@@ -48437,13 +48511,155 @@ step
 goto 41.17,24.01
 wayshrine Forlorn Palisades
 step
-goto 34.17,19.05 |q A Hidden Fate/Return to Leramil's Study
+step
+goto 37.67,20.42 |q Lost in Thought |future
+step
+goto 32.86,24.64 |q Lost in Thought |future
+step
+goto 28.00,34.55 |q Lost in Thought |future
+step
+goto 21.97,33.03
+'Use _Skyshard_ |q Lost in Thought/Go to the Corporea Secretus
+|tip Manually skip to the next step.
+step
+'Open _Apocrypha_
+'Travel to _Forlorn Palisades_ |q Lost in Thought |future
+|tip Manually skip to the next step.
+step
+goto 34.17,19.05 |q Lost in Thought |future
 step
 goto 28.85,22.02
 talk Cipher Huzmargo
 accept Lost in Thought
 step
-goto 19.84,18.30 |q A Hidden Fate/Return to Leramil's Study
+goto 25.21,26.92
+'Open _Corporea Secretus_ |q Lost in Thought/Go to the Corporea Secretus
+step
+goto 23.78,27.90 |q Lost in Thought/Find the Magicka Focus
+step
+goto 25.17,27.91
+'Open _Corporea Secretus Crystal Room_ |q Lost in Thought/Find the Magicka Focus
+|tip Manually skip to the next step.
+step
+goto 26.44,27.93
+'Activate _Magicka Focus_ |q Lost in Thought/Restart the Magicka Focus |future
+|tip Manually skip to the next step.
+step
+goto 26.50,27.98
+talk Cipher Huzmargo |q Lost in Thought/Talk to Cipher Huzmargo
+step
+goto 25.18,26.69
+'Open _Apocrypha_ |q Lost in Thought/Go to the Rectory Archive
+|tip Manually skip to the next step.
+step
+goto 27.38,26.66
+'Open _Rectory Archive_ |q Lost in Thought/Go to the Rectory Archive
+step
+goto 27.97,26.36 |q Lost in Thought/Examine the Rectory Archives |future
+step
+goto 29.10,28.43 |q Lost in Thought/Examine the Rectory Archives
+step
+goto 28.17,27.61
+'Examine _Conversations with Sleeps-Fitfully_ |lorebook Conversations with Sleeps-Fitfully/3/49/57
+step
+goto 28.23,27.52
+'Examine _Administrative Ledger, Entry 3,412_ |lorebook Administrative Ledger, Entry 3,412/3/49/58
+step
+goto 28.22,27.56
+talk Cipher Huzmargo |q Lost in Thought/Talk to Cipher Huzmargo
+step
+goto 29.27,27.68 |q Lost in Thought/Go to Esoterica Corporea
+step
+goto 26.99,26.34
+'Open _Apocrypha_ |q Lost in Thought/Go to Esoterica Corporea
+|tip Manually skip to the next step.
+step
+goto 28.18,24.97
+'Open _Esoterica Corporea_ |q Lost in Thought/Go to Esoterica Corporea
+step
+goto 29.69,24.96
+'Activate _Magicka Focus_ |q Lost in Thought/Reset Magicka Focus
+step
+goto 29.69,24.96
+talk Cipher Huzmargo |q Lost in Thought/Talk to Cipher Huzmargo
+step
+goto 30.47,24.98
+'Open _Choral Mind Registry_ |q Lost in Thought/Enter the Rectory's Chorus |future
+|tip Manually skip to the next step.
+step
+goto 31.64,24.96
+'Enter _Rectory Network_ |q Lost in Thought/Enter the Rectory's Chorus |future
+|tip Manually skip to the next step.
+step
+goto u38_RNInterior_base 16.60,44.90
+talk Cipher Huzmargo |q Lost in Thought/Talk to Cipher Huzmargo
+step
+goto 24.78,50.51 |q Lost in Thought/Find the Rogue Mind's Pact
+step
+goto 29.70,71.39 |q Lost in Thought/Find the Rogue Mind's Pact
+step
+goto 32.20,78.94 |q Lost in Thought/Find the Rogue Mind's Pact
+step
+goto 39.90,83.43
+'Examine _Pact of the Daggerfall Devil_ |q Lost in Thought/Examine the Rogue Mind's Pact |future
+step
+goto 39.10,82.20
+talk Cipher Huzmargo |q Lost in Thought/Talk to Cipher Huzmargo
+step
+goto 49.01,82.80 |q Lost in Thought/.*Find the Rogue Mind's Memories.* |count 1 |future
+step
+goto 62.52,78.82 |q Lost in Thought/.*Find the Rogue Mind's Memories.* |count 1
+step
+goto 64.91,70.69
+'Examine _Chompy's Bone_ |q Lost in Thought/.*Find the Rogue Mind's Memories.* |count 1
+step
+goto 81.95,61.51
+'Examine _Moldering Cot_ |q Lost in Thought/.*Find the Rogue Mind's Memories.* |count 2
+step
+goto 57.12,46.97
+'Examine _Bloody Knife_ |q Lost in Thought/.*Find the Rogue Mind's Memories.* |count 3
+step
+goto 73.38,36.17 |q Lost in Thought/Find the Daggerfall Devil
+step
+goto 59.17,19.01
+'Open _Rectory Network Memory Vault_ |q Lost in Thought/Enter the Vault |future
+step
+goto 51.37,15.34
+kill Daggerfall Devil |q Lost in Thought/Destroy the Fragmented Rogue Mind
+|tip Manually skip to the next step.
+step
+goto 33.27,17.13 |q Lost in Thought/Destroy the Fragmented Rogue Mind
+step
+goto 33.76,21.65
+'Destroy _Fragmented Rogue Mind_ |q Lost in Thought/Destroy the Fragmented Rogue Mind
+step
+goto 25.27,33.64
+'Open _Rectory Network Entrance_ |q Lost in Thought/Leave the Chorus
+step
+goto 24.22,45.14 |q Lost in Thought/Leave the Chorus
+step
+goto 14.89,45.16
+'Enter _Your Body_ |q Lost in Thought/Leave the Chorus
+step
+goto u38_apocrypha_base30.58,25.00
+'Open _Esoterica Corporea_ |q Lost in Thought/Talk to Cipher Huzmargo
+|tip Manually skip to the next step.
+step
+goto 28.35,25.00
+'Open _Apocrypha_ |q Lost in Thought/Talk to Cipher Huzmargo
+|tip Manually skip to the next step.
+step
+goto 28.02,24.08
+talk Cipher Huzmargo
+turnin Lost in Thought
+step
+goto 26.74,25.90 |q Numinous Grimoire, Volume 3 |future
+step
+goto 26.11,24.87 |q Numinous Grimoire, Volume 3 |future
+step
+goto 28.49,20.63 |q Numinous Grimoire, Volume 3 |future
+step
+goto 19.84,18.30 |q Numinous Grimoire, Volume 3 |future
 step
 goto 19.44,17.25
 wayshrine Still Shallows
@@ -48454,7 +48670,7 @@ accept Numinous Grimoire, Volume 3
 step
 goto 19.44,17.25
 'Use _Still Shallows_
-'Travel to _Forlorn Palisades_
+'Travel to _Forlorn Palisades_ |q Destiny's Tide |future
 |tip Manually skip to the next step.
 step
 goto 39.19,20.15
@@ -48462,7 +48678,8 @@ talk Landolvel
 accept Destiny's Tide
 step
 goto 39.05,19.07
-'Open _Fathoms Drift_ |q Destiny's Tide/Enter Fathoms Drift
+'Open _Fathoms Drift_ |q Destiny's Tide/Enter Fathoms Drift |future
+|tip Manually skip to the next step.
 step
 goto U38_CorpuscleBight_01_Base 34.29,75.70 |q Destiny's Tide/.*Find Naanurrel's Belongings.* |count 1
 step
@@ -48480,14 +48697,13 @@ goto 42.13,12.46
 'Use _Skyshard_ |q Destiny's Tide/.*Find Naanurrel's Belongings.* |count 2
 |tip Manually skip to the next step.
 step
-goto 33.03,29.73 |q Destiny's Tide/.*Find Naanurrel's Belongings.* |count 2
+goto 30.48,32.30 |q Destiny's Tide/.*Find Naanurrel's Belongings.* |count 2
 step
 goto 24.88,23.83
 'Examine _Naanurrel's Belongings_ |q Destiny's Tide/.*Find Naanurrel's Belongings.* |count 2
 step
-goto 36.63,16.65 |q Destiny's Tide/Find the Opulent Gale
-step
 goto 49.28,14.86
+|tip Drop down.
 kill The Light Keeper |q Destiny's Tide/Find the Opulent Gale
 |tip Manually skip to the next step.
 step
@@ -48512,9 +48728,10 @@ goto 34.11,75.47 |q Destiny's Tide/Meet Landolvel Outside
 step
 goto 27.62,94.30
 'Enter _Apocrypha_ |q Destiny's Tide/Meet Landolvel Outside
+|tip Manually skip to the next step.
 step
-goto 39.13,19.99
-talk Naanurrel |q Destiny's Tide/Talk to Naanurrel
+goto u38_apocrypha_base 39.13,19.99
+talk Naanurrel |q Destiny's Tide/Talk to Naanurrel |future
 step
 goto 39.12,20.04
 'Burn _Unquenchable Brazier_ |q Destiny's Tide/Perform the Ritual
@@ -48523,20 +48740,35 @@ goto 39.04,20.05
 talk Landolvel |q Destiny's Tide/Talk to Landolvel
 step
 goto 39.12,20.05
-'Examine _Altered Naanurrel's Logbook |q Destiny's Tide/Take the Book
+'Examine _Altered Naanurrel's Logbook_ |q Destiny's Tide/Take the Book
 step
 talk Landolvel or Naanurrel
 turnin Destiny's Tide
 step
 goto 41.17,24.01
 'Use _Forlorn Palisades_ Wayshrine
-'Travel to _Cipher's Midden_ |q A Hidden Fate/Return to Leramil's Study
+'Travel to _Soundless Bight_ |q A Hidden Fate/Return to Leramil's Study
+|tip Manually skip to the next step.
+step
+goto 83.81,64.79
+'Examine _Cipher Dreyla's Note_
+accept Numinous Grimoire, Volume 2
+step
+goto 83.81,64.82
+'Search _Dreyla's Pack_ |q Numinous Grimoire, Volume 2/Retrieve the Numinous Grimoire Volume
+step
+'Open _Apocrypha_ Map
+'Travel to _Cipher's Midden_ |q Numinous Grimoire, Volume 1/Find Cipher Plautis
 |tip Manually skip to the next step.
 step
 goto u38_ciphersmidden_city_base 63.85,48.12
 talk Cipher Plautis
 turnin Numinous Grimoire, Volume 1
+turnin Numinous Grimoire, Volume 2
 turnin Numinous Grimoire, Volume 3
+accept Akacirn the Deathless
+step
+goto 56.62,62.30 |q A Hidden Fate/Talk to Leramil the Wise |future
 step
 goto 42.08,43.90
 |tip Watch the dialogue.
@@ -48549,14 +48781,118 @@ goto 72.71,54.06
 step
 goto u38_apocrypha_base 30.13,43.72 |q A Hidden Fate/Find the Entrance to the Infinite Panopticon
 step
+goto 15.73,41.35
+'Examine _A Plea for Aid_
+accept Escape of the Sane
+step
 goto 12.68,40.13 |q A Hidden Fate/Find the Entrance to the Infinite Panopticon
 step
 goto 13.33,37.75
 wayshrine Feral Gallery
 step
-goto 11.32,39.38
+goto 11.34,39.38
+talk Morian Zenas |q Escape of the Sane/Talk to Morian |future
+step
+goto 10.43,39.66 |q Escape of the Sane/Find the Sleep Potions
+step
+goto 13.33,46.31 |q Escape of the Sane/Find the Sleep Potions
+step
+goto 14.22,44.75 |q Escape of the Sane/Find the Sleep Potions
+step
+goto 13.56,44.69
+'Take _Sleep Potions_ |q Escape of the Sane/Gather the Sleep Potions |future
+step
+goto 13.92,44.73
+talk Morian Zenas |q Escape of the Sane/Talk to Morian
+step
+goto 13.11,43.06
+'Throw _Gallery Skyway_ |q Escape of the Sane/.*Drop Sleep Potions from the Skyway.* |count 1
+step
+goto 12.93,42.85
+'Throw _Gallery Skyway_ |q Escape of the Sane/.*Drop Sleep Potions from the Skyway.* |count 2
+step
+goto 12.50,42.75
+'Throw _Gallery Skyway_ |q Escape of the Sane/.*Drop Sleep Potions from the Skyway.* |count 3
+step
+goto 13.86,44.36 |q Escape of the Sane/Find Morian
+step
+goto 13.26,43.86
+'Open _Bristleback Enclosure_ |q Escape of the Sane/Talk to Morian |future
+|tip Manually skip to the next step.
+step
+goto 12.98,43.20
+talk Morian Zenas |q Escape of the Sane/Talk to Morian
+step
+goto 12.52,42.20
+'Open _Mercurial Creatures_ |q Escape of the Sane/Go to Cipher Frielvi's Study
+|tip Manually skip to the next step.
+step
+goto 14.59,42.11 |q Escape of the Sane/Go to Cipher Frielvi's Study
+step
+goto 15.27,43.77 |q Escape of the Sane/Go to Cipher Frielvi's Study
+step
+goto 15.14,45.97
+'Examine _Beasts of the Gallery_ |q Escape of the Sane/Read the Book |future
+step
+goto 15.40,45.94
+'Examine _Firepot Spider_ |q Escape of the Sane/Take the Firepot
+step
+goto 15.58,43.76
+'Place _Firepot_ |q Escape of the Sane/Place the Firepot Near the Rubble
+step
+goto 15.58,43.76
+'Ignite _Firepot_ |q Escape of the Sane/Light the Firepot
+step
+goto 15.81,43.70
+'Open _Ciphers Dormitory_ |q Escape of the Sane/Find Cipher Frielvi
+|tip Manually skip to the next step.
+step
+goto 16.68,43.83
+'Open _Cipher Frielvi's Study_ |q Escape of the Sane/Find Cipher Frielvi 
+step
+goto 16.59,43.81
+talk Cipher Frielvi |q Escape of the Sane/Talk to Cipher Frielvi
+step
+goto 12.98,43.20
+talk Morian Zenas |q Escape of the Sane/Talk to Morian
+step
+goto 16.59,43.81
+'Open _Immortal Exhibits_ |q Escape of the Sane/Enter the Forbidden Exhibit
+|tip Manually skip to the next step.
+step
+goto 16.09,43.93 |q Escape of the Sane/Enter the Forbidden Exhibit
+step
+goto 16.10,44.03
+'Open _Forbidden Exhibit Entrance_ |q Escape of the Sane/Enter the Forbidden Exhibit
+|tip Manually skip to the next step.
+step
+goto 16.13,44.14
+'Use _Portal to the Forbidden Exhibit_ |q Escape of the Sane/Enter the Forbidden Exhibit |future
+|tip Manually skip to the next step.
+step
+goto u38_feralgallery_secret_base 41.05,24.35
+talk Morian Zenas |q Escape of the Sane/Talk to Morian |future
+step
+goto 30.18,23.44 |q Escape of the Sane/Open the Known Thing
+step
+goto 16.28,53.79 |q Escape of the Sane/Open the Known Thing
+step
+goto 35.43,76.27 |q Escape of the Sane/Open the Known Thing
+step
+goto 50.08,64.90
+'Open _Dais of the Known Thing_ |q Escape of the Sane/Open the Known Thing
+|tip Manually skip to the next step.
+step
+goto 60.53,26.02
+'Open _Known Thing_ |q Escape of the Sane/Open the Known Thing
+step
+goto 50.08,18.36
+'Open _Portal to Apocrypha_ |q Escape of the Sane/Escape via the Portal
+step
+goto u38_apocrypha_base 14.42,40.15
+|tip Drop down carefully.
 talk Morian Zenas
-accept Escape of the Sane
+turnin Escape of the Sane
 step
 goto 08.65,35.59
 talk Leramil the Wise |q A Hidden Fate/Talk to Leramil the Wise |future
@@ -48566,7 +48902,6 @@ goto 08.46,35.55
 |tip Manually skip to the next step.
 step
 goto u38_infinitepanopticon1_base 48.98,13.27
-'Sneak around _Gelkhai the Hunger_
 'Open _The Infinite Panopticon_ |q A Hidden Fate/Explore the Infinite Panopticon |future
 |tip Manually skip to the next step.
 step
@@ -48703,7 +49038,7 @@ goto 42.47,43.90
 step
 goto u38_Necrom_base 58.15,52.38
 |tip Watch the dialogue.
-talk Curate Gadayn |q Conclave of Fate/Talk to Curate Gadayn
+talk Curate Gadayn |q Conclave of Fate/Talk to Curate Gadayn |future
 step
 goto 58.19,52.42
 talk Meln the Mouthless |q Conclave of Fate/Talk to Meln the Mouthless
@@ -48793,6 +49128,7 @@ goto 32.48,75.76
 'Open _Tel Huulen Assembly Hall_ |q Conclave of Fate/Enter Assembly Hall
 step
 goto 33.73,60.12
+|tip Watch the dialogue.
 talk Magister Gothren |q Conclave of Fate/Talk to Magister Gothren
 step
 goto 39.94,58.05
@@ -48831,6 +49167,7 @@ talk Magister Gothren |q Conclave of Fate/Talk to Magister Gothren |future
 step
 goto 52.07,16.61
 'Use _Portal to Vaermina Shrine_ |q Conclave of Fate/Enter Shelreni's Portal |future
+|tip Manually skip to the next step.
 step
 goto u38_infinitepanopticon9_base 18.43,70.37 |q Conclave of Fate/Explore the Area
 step
@@ -48890,16 +49227,16 @@ goto u38_telvannipeninsula_base 60.97,41.03 |q A Calamity of Fate/Go to Tel Baro
 step
 goto 56.47,35.89 |q A Calamity of Fate/Go to Tel Baro
 step
-goto 57.34,35.18 |q A Calamity of Fate/Enter Master Shelreni's Study
+goto 57.34,35.18 |q A Calamity of Fate/Enter Master Shelreni's Study |future
 step
 goto 54.34,32.87
 'Open _Master Shelreni's Study_ |q A Calamity of Fate/Enter Master Shelreni's Study |future
 step
 goto 54.02,33.35
-|tip Watch the dialogue.
 'Examine _Master Shelreni's Presence_ |q A Calamity of Fate/Contact Master Shelreni's Spirit
 step
 goto 54.03,33.36
+|tip Watch the dialogue.
 talk Master Shelreni |q A Calamity of Fate/Talk to Master Shelreni
 step
 goto 54.40,32.86
@@ -48920,7 +49257,7 @@ goto 58.21,51.92
 talk Leramil the Wise |q A Calamity of Fate/Find the Infinite Panopticon |future
 |tip Manually skip to the next step.
 step
-'Open _Apocrypha_
+'Open _Apocrypha_ Map
 'Travel to _Feral Gallery_ |q A Calamity of Fate/Find the Infinite Panopticon
 |tip Manually skip to the next step.
 step
@@ -48928,7 +49265,7 @@ goto u38_apocrypha_base 08.47,35.57
 |tip Watch the dialogue.
 'Enter _The Infinite Panopticon_ |q A Calamity of Fate/Enter the Infinite Panopticon |future
 step
-goto u38_tp7_panopticon1_int 48.73,79.41 |q A Calamity of Fate/Explore the Infinite Panopticon
+goto u38_tp7_panopticon1_int 48.73,79.41 |q A Calamity of Fate/Explore the Infinite Panopticon |future
 step
 goto 48.71,66.40 |q A Calamity of Fate/Explore the Infinite Panopticon
 step
@@ -49015,7 +49352,7 @@ step
 goto 37.32,45.55
 'Identify _Flawed Illusion_ |q A Calamity of Fate/.*Break the Flaws in the Dream.* |count 5
 step
-goto 45.90,50.97 |q A Calamity of Fate/Enter the Mythos |tip Drop down to the platform.
+goto 45.90,50.97 |q A Calamity of Fate/Enter the Mythos |future |tip Drop down to the platform.
 step
 goto 39.18,34.22 |q A Calamity of Fate/Enter the Mythos
 step
@@ -49035,7 +49372,7 @@ step
 goto 55.06,12.76 |q A Calamity of Fate/Explore the Mythos |future
 step
 goto 60.98,06.33
-'Open _The Mythos Vault_ |q A Calamity of Fate/Find Vaermina
+'Open _The Mythos Vault_ |q A Calamity of Fate/Find Vaermina |future
 |tip Manually skip to the next step.
 step
 goto u38_tp7_vault_base 41.87,51.19
@@ -49058,6 +49395,7 @@ talk Hermaeus Mora |q A Calamity of Fate/Talk to Hermaeus Mora
 step
 goto 92.21,22.82
 'Use _Portal to Cipher's Midden_ |q A Calamity of Fate/Meet Allies at Cipher's Midden
+|tip Manually skip to the next step.
 step
 goto u38_ciphersmidden_city_base 43.26,47.41
 'Open _Leramil's Study_ |q A Calamity of Fate/Meet Allies at Cipher's Midden
@@ -49093,32 +49431,392 @@ step
 'Travel to _Soundless Bight_ |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
 |tip Manually skip to the next step.
 step
-goto u38_apocrypha_base 85.14,68.85 |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
+goto u38_apocrypha_base 86.93,74.59
+talk Cipher Huljorn
+accept Madness in the Wind
+step
+goto 85.86,70.51 |q Madness in the Wind/Talk to Cipher Agrushna
+step
+goto 91.00,68.48 |q Madness in the Wind/Talk to Cipher Agrushna
+step
+goto 89.45,67.16 |q Madness in the Wind/Talk to Cipher Agrushna
+step
+goto 90.34,66.68
+talk Cipher Agrushna |q Madness in the Wind/Talk to Cipher Agrushna
+step
+goto 90.38,66.53
+'Open _Quires Wind_ |q Madness in the Wind/Enter Quires Wind |future
+|tip Manually skip to the next step.
+step
+goto u38_quires_wind_base 39.38,76.43 |q Madness in the Wind/.*Burn the Corrupted Scrolls.* |count 1
+step
+goto 40.85,65.65 |q Madness in the Wind/.*Burn the Corrupted Scrolls.* |count 1
+step
+goto 53.43,62.60
+'Burn _Corrupted Scrolls_ |q Madness in the Wind/.*Burn the Corrupted Scrolls.* |count 1
+step
+goto 59.95,74.35 |q Madness in the Wind/.*Burn the Corrupted Scrolls.* |count 2
+step
+goto 71.69,73.49 |q Madness in the Wind/.*Burn the Corrupted Scrolls.* |count 2
+step
+goto 82.22,79.40 |q Madness in the Wind/.*Burn the Corrupted Scrolls.* |count 2
+step
+goto 90.22,74.05 |q Madness in the Wind/.*Burn the Corrupted Scrolls.* |count 2
+step
+goto 88.78,67.55
+'Burn _Corrupted Scrolls_ |q Madness in the Wind/.*Burn the Corrupted Scrolls.* |count 2
+step
+goto 83.40,57.67 |q Akacirn the Deathless/Find Akacirn's Dwelling in Quires Wind
+step
+goto 73.25,57.54 |q Akacirn the Deathless/Find Akacirn's Dwelling in Quires Wind
+step
+goto 60.02,57.04 |q Akacirn the Deathless/Find Akacirn's Dwelling in Quires Wind
+step
+goto 58.38,35.97 |q Akacirn the Deathless/Find Akacirn's Dwelling in Quires Wind
+step
+goto 66.02,37.32
+'Touch _Akacirn's Mark_ |q Akacirn the Deathless/Find Akacirn's Dwelling in Quires Wind
+step
+goto 66.08,37.43
+'Enter _Portal to Akacirn's Dwelling_ |q Akacirn the Deathless/Find Akacirn's Dwelling in Quires Wind
+step
+goto u38_apocrypha_base 90.40,64.76
+'Examine _Uldazaan's Letter_ |lorebook Uldazaan's Letter/3/49/52
+step
+goto 91.22,64.28
+'Enter _Portal to Quires Wind_ |q Madness in the Wind/.*Burn the Corrupted Scrolls.* |count 3
+|tip Manually skip to the next step.
+step
+goto u38_quires_wind_base 64.87,25.04 |q Madness in the Wind/.*Burn the Corrupted Scrolls.* |count 3
+step
+goto 75.18,24.84 |q Madness in the Wind/.*Burn the Corrupted Scrolls.* |count 3
+step
+goto 71.32,65.91 |q Madness in the Wind/.*Burn the Corrupted Scrolls.* |count 3
+step
+goto 55.97,66.09
+'Use _Skyshard_ |q Madness in the Wind/.*Burn the Corrupted Scrolls.* |count 3
+step
+goto 60.07,74.25 |q Madness in the Wind/.*Burn the Corrupted Scrolls.* |count 3
+step
+goto 60.72,65.58 |q Madness in the Wind/.*Burn the Corrupted Scrolls.* |count 3
+step
+goto 72.22,65.76 |q Madness in the Wind/.*Burn the Corrupted Scrolls.* |count 3
+step
+goto 74.79,25.03 |q Madness in the Wind/.*Burn the Corrupted Scrolls.* |count 3
+step
+goto 14.15,23.55
+'Burn _Corrupted Scroll_ |q Madness in the Wind/.*Burn the Corrupted Scrolls.* |count 3
+step
+goto 22.01,40.63
+'Burn _Corrupted Scroll_ |q Madness in the Wind/.*Burn the Corrupted Scrolls.* |count 4
+step
+goto 25.24,73.50
+kill Cipher Gelon |q Madness in the Wind/Take Scroll from Cipher Sabinius
+|tip Manually skip to the next step.
+step 
+goto 25.24,73.50
+'Take _Blank Scroll_ |q Madness in the Wind/Take Scroll from Cipher Sabinius
+step
+goto 20.53,76.90 |q Madness in the Wind/Exit Quires Wind |tip Drop down.
+step
+goto 16.28,76.42
+'Open _Apocrypha_ |q Madness in the Wind/Exit Quires Wind
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 90.31,66.73
+talk Cipher Agrushna
+turnin Madness in the Wind
+step
+goto 91.05,68.53 |q Under Malign Stars |future
+step
+goto 85.68,70.72 |q Under Malign Stars |future
 step
 goto 79.61,62.22
 wayshrine Writhing Wastes
 step
-goto 83.81,64.79
-'Examine _Cipher Dreyla's Note_
-accept Numinous Grimoire, Volume 2
+goto 79.61,62.22
+'Use _Writhing Wastes_ Wayshrine
+'Travel to _Apogee Nadir_ |q Akacirn the Deathless/Find Uldazaan the Heresy-Keeper
+|tip Manually skip to the next step.
 step
-goto 83.81,64.82
-'Search _Dreyla's Pack_ |q Numinous Grimoire, Volume 2/Retrieve the Numinous Grimoire Volume
+goto 32.62,42.86
+talk Uldazaan the Heresy-Keeper |q Akacirn the Deathless/Talk to Uldazaan the Heresy-Keeper
+step
+goto 33.14,38.98
+talk Zirokh
+accept Hungry for Knowledge
+step
+goto 33.35,38.66
+'Open _Apogee of the Tormenting Eye_ |q Hungry for Knowledge/Enter the Apogee of the Tormenting Eye |future
+|tip Manually skip to the next step.
+step
+goto u38_apogee_wind_base 35.25,78.59
+'Use _Breach Portal_ |q Hungry for Knowledge/.*Close Breach Portals.* |count 1
+step
+goto 46.97,73.04 |q Hungry for Knowledge/.*Close Breach Portals.* |count 2
+step
+goto 45.84,55.73 |q Hungry for Knowledge/.*Close Breach Portals.* |count 2
+step
+goto 48.09,47.23
+'Mark _Akacirn's Ritual Site_ |q Akacirn the Deathless/Find Akacirn's Ritual Site
+step
+goto 48.09,47.23
+'Enter _Portal to Ritual Site_ |q Akacirn the Deathless/Enter Akacirn's Ritual Site
+step
+goto u38_apogee_wind_ic_base 58.30,50.76 |q Akacirn the Deathless/.*Stop Akacirn's Ritual.* |count 1
+step
+goto 60.21,39.37
+'Extinguish _Ritual Flame_ |q Akacirn the Deathless/.*Stop Akacirn's Ritual.* |count 1
+step
+goto 77.75,42.92
+'Extinguish _Ritual Flame_ |q Akacirn the Deathless/.*Stop Akacirn's Ritual.* |count 2
+step
+goto 62.29,57.23
+'Extinguish _Ritual Flame_ |q Akacirn the Deathless/.*Stop Akacirn's Ritual.* |count 3
+step
+goto 77.94,54.35
+'Extinguish _Ritual Flame_ |q Akacirn the Deathless/.*Stop Akacirn's Ritual.* |count 4
+step
+goto 76.49,49.67
+'Destroy _Cipher Akacirn's Body_ |q Akacirn the Deathless/Destroy Cipher Akacirn's Body
+step
+'Enter _Portal to Apogee of the Tormenting Eye_ |q Hungry for Knowledge/.*Close Breach Portals.* |count 2
+step
+goto u38_apogee_wind_base 37.65,54.26
+'Use _Breack Portal_ |q Hungry for Knowledge/.*Close Breach Portals.* |count 2
+step
+goto 31.33,61.24
+'Take _Polysynchronic Tome_ |q Hungry for Knowledge/.*Gather Relics.* |count 1
+step
+goto 22.65,50.44 |q Hungry for Knowledge/.*Gather Relics.* |count 2
+step
+goto 28.12,30.50
+'Take _Cryptocist_ |q Hungry for Knowledge/.*Gather Relics.* |count 2
+step
+goto 26.86,21.81 |q Hungry for Knowledge/.*Gather Relics.* |count 3
+step
+goto 47.72,25.77 |q Hungry for Knowledge/.*Gather Relics.* |count 3
+step
+goto 48.21,46.79
+'Use _Skyshard_ |q Hungry for Knowledge/.*Gather Relics.* |count 3
+step
+goto 47.72,25.77 |q Hungry for Knowledge/.*Gather Relics.* |count 3
+step
+goto 64.64,24.89 |q Hungry for Knowledge/.*Gather Relics.* |count 3
+step
+goto 67.96,18.09 |q Hungry for Knowledge/.*Gather Relics.* |count 3
+goto 74.84,19.14
+'Take _Ancient Recollection_ |q Hungry for Knowledge/.*Gather Relics.* |count 3
+step
+goto 78.81,25.35 |q Hungry for Knowledge/.*Close Breach Portals.* |count 3
+step
+goto 72.50,31.82 |q Hungry for Knowledge/.*Close Breach Portals.* |count 3
+step
+goto 68.80,57.42 |q Hungry for Knowledge/.*Close Breach Portals.* |count 3
+step
+goto 74.57,76.73 |q Hungry for Knowledge/.*Close Breach Portals.* |count 3
+step
+goto 79.04,84.17
+'Activate _Wards_ |q Hungry for Knowledge/Activate Shrine's Wards
+step
+goto 58.83,80.76
+kill The Supernal Trespasser |q Hungry for Knowledge/.*Close Breach Portals.* |count 3
+|tip Manually skip to the next step.
+step
+goto 52.10,79.75
+'Use _Breach Portal_ |q Hungry for Knowledge/.*Close Breach Portals.* |count 3
+step
+goto 36.39,79.29 |q Hungry for Knowledge/Meet Zirokh at the Entance
+step
+goto 34.51,85.57
+'Open _Apocrypha_ |q Hungry for Knowledge/Meet Zirokh at the Entance
+step
+goto u38_apocrypha_base 33.62,39.15
+talk Zirokh
+turnin Hungry for Knowledge
+step
+step
+goto 37.23,42.16
+'Use _Apogee Nadir_ Wayshrine
+'Travel to _Writhing Wastes_ |q Under Malign Stars |future
+|tip Manually skip to the next step.
+step
+goto 80.12,57.27 |q Under Malign Stars |future
+step
+goto 76.10,59.65 |q Under Malign Stars |future
+step
+goto 78.18,57.92 |q Under Malign Stars |future
 step
 goto 76.98,57.10
 'Examine _Call to the Cloisters_
 accept Under Malign Stars
 step
-goto 80.88,49.96 |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
+goto 75.05,53.91 |q Under Malign Stars/Go to the Sidereal Cloisters
+step
+goto 68.10,49.85
+'Use _Skyshard_ |q Under Malign Stars/Talk to Meenai-Shai
+|tip Manually skip to the next step.
+step
+goto 75.05,53.91 |q Under Malign Stars/Go to the Sidereal Cloisters
+step
+goto 76.09,54.21
+talk Meenai-Shai |q Under Malign Stars/Talk to Meenai-Shai
+step
+goto 76.75,54.17
+'Open _Sidereal Cloisters_ |q Under Malign Stars/Meet Meenai-Shai in the Main Hall
+|tip Manually skip to the next step.
+step
+goto u38_SCloisterINT01_base 26.72,39.87
+'Open _Sidereal Cloisters_ |q Under Malign Stars/Meet Meenai-Shai in the Main Hall
+|tip Manually skip to the next step.
+step
+goto 34.63,45.98
+'Meet _Meenai-Shai in the Main Hall_ |q Under Malign Stars/Meet Meenai-Shai in the Main Hall
+step
+goto 37.14,36.37
+talk Morbid Observer |q Under Malign Stars/Talk to Morbid Ovserver
+step
+goto 38.88,31.98
+'Open _Sidereal Cloisters_ |q Under Malign Stars/Guide Meenai-Shai
+|tip Manually skip to the next step.
+step
+goto 38.43,09.86 |q Under Malign Stars/Guide Meenai-Shai
+step
+goto 47.14,12.46
+'Open _Sidereal Cloisters Calamitous Gallery_ |q Under Malign Stars/Guide Meenai-Shai
+|tip Manually skip to the next step.
+step
+goto 53.38,11.93
+talk Morbid Observer |q Under Malign Stars/Talk to Morbid Observer |future
+step
+goto 56.02,12.39
+'Place _Pedestal_ |q Under Malign Stars/Return Portents of Celestial Bodies to the Shelf
+step
+goto 57.66,10.57
+'Take _Strange Pendant_ |q Under Malign Stars/Inspect the Pendant
+step
+'Examine _Scrap of Cloth_
+step
+goto 59.07,12.54
+talk Meenai-Shai |q Under Malign Stars/Talk to Meena-Shai
+step
+goto 60.14,12.36
+'Examine _Projected Footprints_ |q Under Malign Stars/Explore the Scene
+step
+goto 54.86,12.56
+'Open _Portal_ |q Under Malign Stars/Return to the Main Hall
+step
+goto 39.23,48.01
+'Open _Sidereal Cloisters_ |q Under Malign Stars/Guide Meenai-Shai
+|tip Manually skip to the next step.
+step
+goto 30.39,68.45 |q Under Malign Stars/Guide Meenai-Shai
+step
+goto 38.88,80.63 |q Under Malign Stars/Guide Meenai-Shai
+step
+goto 38.96,87.54
+'Open _Sidereal Cloisters Loggia Infinitum_ |q Under Malign Stars/Guide Meenai-Shai
+|tip Manually skip to the next step.
+step
+goto 38.98,91.03
+'Place _Pedestal_ |q Under Malign Stars/Guide Meenai-Shai
+step
+goto 38.32,91.36
+talk Morbid Observer |q Under Malign Stars/Explore Scene
+step
+goto 41.55,91.56
+'Take _Strange Idol_ |q Under Malign Stars/Inspect the Idol
+step
+goto 36.47,93.89
+'Examine _Coded Missive_ |q Under Malign Stars/Read the Note
+step
+goto 39.20,93.03
+talk Meenai-Shai |q Under Malign Stars/Explore the Scene
+step
+goto 36.68,90.34
+'Open _Portal to the Sidereal Cloisters_ |q Under Malign Stars/Return to the Main Hall
+step
+goto 43.68,39.87
+'Open _Sidereal Cloisters_ |q Under Malign Stars/Guide Meenai-Shai
+|tip Manually skip to the next step.
+step
+goto u38_SCloisterINT02_base 53.58,09.76 |q Under Malign Stars/Guide Meenai-Shai
+step
+goto 53.48,60.44
+'Open _Sidereal Cloisters Empyrean Ascent_ |q Under Malign Stars/Guide Meenai-Shai
+|tip Manually skip to the next step.
+step
+goto 53.28,75.39
+'Place _Pedestal_ |q Under Malign Stars/Return Fathomless Gaze to the Shelf
+step
+goto 53.51,78.39
+talk Morbid Observer |q Under Malign Stars/Explore the Scene
+|tip Manually skip to the next step.
+step
+goto 50.58,83.32
+'Examine _List of Books_ |q Under Malign Stars/Read the Missive
+step
+goto 51.55,82.72
+talk Meenai-Shai |q Under Malign Stars/Explore the Scene
+|tip Manually skip to the next step.
+step
+goto 53.28,84.02
+talk Clagius Lampronius |q Under Malign Stars/Explore the Scene
+step
+goto 54.35,82.12
+talk Morbid the Observer |q Under Malign Stars/Talk to the Morbid Observer
+step
+goto 53.45,84.48
+'Mark _Sigil of the Great Eye_ |q Under Malign Stars/Trace the Sigil of the Great Eye
+step
+goto 53.45,84.48
+'Open _Sidereal Cloister Divinatory Forums_ |q Under Malign Stars/Enter the Divinatory Forums
+step
+goto 76.75,64.28
+'Take _Atlas Obscurum_ |q Under Malign Stars/Explore the Divinatory Forums
+step
+goto 63.00,65.01 |q Under Malign Stars/Place the Atlas Obscurum on the Pedestal
+step
+goto 62.82,74.69
+'Place _Pedestal_ |q Under Malign Stars/Place the Atlas Obscurum on the Pedestal
+step
+goto 61.61,78.69
+talk Morbid Observer |q Under Malign Stars/Explore the Scene
+step
+goto 62.76,79.38
+talk Meenai-Shai |q Under Malign Stars/Explore the Scene
+step
+goto 62.82,80.61
+talk Clagius Lampronius |q Under Malign Stars/Explore the Scene
+step
+'Witness the _Outcome_ |q Under Malign Stars/Explore the Scene/Witness the Outcome
+step
+goto 57.76,78.51
+'Open _Sidereal Cloister Divinatory Forums_ |q Under Malign Stars/Meet Meenai-Shai in the Main Hall
+|tip Manually skip to the next step.
+step
+goto 55.82,55.54
+'Open _Sidereal Cloister Main Hall_ |q Under Malign Stars/Meet Meenai-Shai in the Main Hall
+step
+goto 45.58,40.44
+talk Meenai-Shai
+turnin Under Malign Stars
+step
+'Open _Apocrypha_ Map
+'Travel to _Writhing Wastes_ |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 80.88,49.96 |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
 step
 goto 77.72,44.93 |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
 step
 goto 73.02,43.68
 wayshrine Speiran Tarn
 step
-goto 73.02,43.68
+goto 37.22,42.15
 'Use _Speiran Tarn_ Wayshrine
 'Travel to _Writhing Wastes_ |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
+|tip Manually skip to the next step.
 step
 goto 84.80,62.78 |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
 step
@@ -49130,6 +49828,10 @@ goto 86.06,62.61
 step
 goto 86.34,61.16
 'Align _Thread of Fate_ |q An Unhealthy Fate/.*Align the Threads of Fate.* |count 2
+step
+goto 89.33,56.67
+'Use _Skyshard_ |q An Unhealthy Fate/.*Align the Threads of Fate.* |count 3
+|tip Manually skip to the next step.
 step
 goto 87.17,61.87
 'Align _Thread of Fate_ |q An Unhealthy Fate/.*Align the Threads of Fate.* |count 3
@@ -49148,7 +49850,7 @@ goto u38_tp8mythos01_base 52.54,09.59
 'Listen to _Conversation_ |q An Unhealthy Fate/Find Blightcrown |future
 step
 goto 54.17,09.06
-'Use _Portal to the Eastern Mythos_ |q An Unhealthy Fate/Disable the Eastern Manufactory
+'Use _Portal to the Eastern Manufactory_ |q An Unhealthy Fate/Disable the Eastern Manufactory
 |tip Manually skip to the next step.
 step
 goto 76.51,69.40 |q An Unhealthy Fate/Disable the Eastern Manufactory
@@ -49165,11 +49867,11 @@ kill Mind Terror |q An Unhealthy Fate/Defend Your Allies |future
 step
 goto 69.30,85.05
 |tip Watch the dialogue.
-'Use _Portal to the Western Mythos_ |q An Unhealthy Fate/Disable the Western Manufactory
+'Use _Portal to the Western Manufactory_ |q An Unhealthy Fate/Disable the Western Manufactory
 |tip Manually skip to the next step.
 step
 goto 47.70,67.33
-'Use _Portal to the Western Mythos_ |q An Unhealthy Fate/Disable the Western Manufactory
+'Use _Portal to the Western Manufactory_ |q An Unhealthy Fate/Disable the Western Manufactory
 |tip Manually skip to the next step.
 step
 goto 34.54,60.10 |q An Unhealthy Fate/Disable the Western Manufactory
@@ -49191,6 +49893,7 @@ goto 29.43,31.77 |q An Unhealthy Fate/Find the Next Manufactory
 step
 goto 36.79,15.53
 'Use _Portal to the Mythos_ |q An Unhealthy Fate/Find the Next Manufactory
+|tip Manually skip to the next step.
 step
 goto 52.66,20.67
 kill Blightcrown |q An Unhealthy Fate/Kill Blightcrown |future
@@ -49202,7 +49905,7 @@ goto u38_tp8_bossroom_base 58.56,51.25
 kill Vaermina |q An Unhealthy Fate/Defeat Vaermina |future
 step
 goto 58.56,51.25
-kill Vaermina |q An Unhealthy Fate/Defeat Vaermina's Nightmare
+kill Vaermina's Nightmare |q An Unhealthy Fate/Defeat Vaermina's Nightmare
 step
 goto 51.00,45.39
 |tip Watch the dialogue.
@@ -49221,19 +49924,20 @@ goto 13.06,20.08
 |tip Manually skip to the next step.
 step
 goto u38_apocrypha_base 86.58,62.93
-talk Hermaeus Mora |q An Unhealthy Fate/Talk to Hermaeus Mora
+talk Hermaeus Mora |q An Unhealthy Fate/Talk to Hermaeus Mora |future
 step
 goto 79.58,62.18
 'Use _Writhing Waste_ Wayshrine
 'Travel to _Cipher's Midden_ |q An Unhealthy Fate/Go to Cipher's Midden
 |tip Manually skip to the next step.
 step
-goto 63.63,48.26
+goto u38_ciphersmidden_city_base 63.69,48.01
 talk Cipher Plautis
-turnin Numinous Grimoire, Volume 2
-accept Akacirn the Deathless
+turnin Akacirn the Deathless
 step
-goto u38_ciphersmidden_city_base 40.32,44.43
+goto 56.97,61.70 |q An Unhealthy Fate/Go to Cipher's Midden
+step
+goto 40.32,44.43
 talk Leramil the Wise
 turnin An Unhealthy Fate
 accept Chronicle of Fate
