@@ -46,8 +46,8 @@ step
 goto u30_balfiera_int3_base 35.07,41.44 |q The Gates of Adamant/Lead Norianwe Outside
 step
 goto u30_balfiera_int3_base 49.81,45.45
-'Open _Balfiera Ruins_ |q The Gates of Adamant/Lead Norianwe Outside
 |tip Go upstairs
+'Open _Balfiera Ruins_ |q The Gates of Adamant/Lead Norianwe Outside
 |tip Manually skip to the next step.
 step
 goto u30_balfiera_int5_base 75.95,45.42
@@ -57,8 +57,8 @@ goto u30_balfiera_ext 70.51,51.10
 'Open _Gallery Foyer_ |q The Gates of Adamant/Find the Keywright's Gallery
 step
 goto u30_balfiera_int7_base 49.57,54.09
+|tip Go upstairs.
 talk Norianwe |q The Gates of Adamant/Talk to Norianwe
-|tip Go Upstairs
 step
 goto 28.78,74.04
 'Open _Balfiera Island_ |q The Gates of Adamant/Acquire the Skyshard
@@ -68,8 +68,8 @@ goto u30_balfiera_ext 66.87,71.27
 'Open _Skyshard Vault_ |q The Gates of Adamant/Acquire the Skyshard
 |tip Manually skip to the next step.
 step
-'Use _Skyshard_ |q The Gates of Adamant/Acquire the Skyshard
 |tip Straight ahead. Kill the Gargoyle and then acquire the Skyshard.
+'Use _Skyshard_ |q The Gates of Adamant/Acquire the Skyshard
 step
 'Open _Balfiera Island_ |q The Gates of Adamant/Return to the Gate
 |tip Manually skip to the next step.
@@ -82,8 +82,8 @@ goto u30_balfiera_int7_base 49.05,53.61
 'Return to _Gate_ |q The Gates of Adamant/Return to the Gate
 step
 goto 49.05,53.61
-'Activate _Skyshard Aperture_ |q The Gates of Adamant/Repair the Gate
 |tip Upstairs
+'Activate _Skyshard Aperture_ |q The Gates of Adamant/Repair the Gate
 step
 goto 48.62,53.02
 talk Norianwe |q The Gates of Adamant/Talk to Norianwe
@@ -100,7 +100,6 @@ goto 68.22,34.39
 step
 goto u30_balfiera_int8_base 64.79,72.48
 'Open _Keywright's Gallery_ |q The Gates of Adamant/Enter the Keywright's Gallery
-|tip Follow path to the right.
 |tip Manually skip to the next step.
 step
 goto 62.06,61.65

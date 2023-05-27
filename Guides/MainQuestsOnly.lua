@@ -45754,6 +45754,8 @@ step
 'Travel to _Necrom Outskirts_ |q Fate's Proxy/Meet Leramil the Wise in Necrom
 |tip Manually skip to the next step.
 step
+goto 79.97,41.83 |q Fate's Proxy/Meet Leramil the Wise in Necrom
+step
 goto 81.53,37.97 |q Fate's Proxy/Meet Leramil the Wise in Necrom
 step
 goto u38_Necrom_base 47.93,58.67

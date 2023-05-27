@@ -47292,7 +47292,7 @@ goto u38_telvannipeninsula_base 33.11,55.32
 talk Folsi Othrili
 accept Tracing Shadows
 step
-goto 33.16,56.00 |q Spirit of Fate/Go to Tel Vara in Ald Isra
+goto 33.16,56.00
 wayshrine Ald Isra
 step
 goto 33.15,63.49 |q The Traitor's Trade |future
@@ -47342,7 +47342,7 @@ step
 goto 81.51,26.61
 'Open _Telvanni Peninsula_ |q The Traitor's Trade/Meet Ashur Outside Camonnaruhn
 step
-goto u38_telvannipeninsula_base 24.41,68.46
+goto 24.41,68.46
 talk Ashur
 turnin The Traitor's Trade
 step
@@ -47860,7 +47860,7 @@ step
 'Travel to _Alavelis_ |q Fate's Lost Dream |future
 |tip Manually skip to the next step.
 step
-goto u38_telvannipeninsula_base 40.69,78.96
+goto 40.69,78.96
 talk Scruut
 accept Fate's Lost Dream
 step
@@ -48131,7 +48131,7 @@ goto 45.82,79.05
 'Use _Portal to Apocrypha_ |q Fate's Lost Dream/Leave the Tranquil Catalog |future
 |tip Manually skip to the next step.
 step
-goto u38_apocrypha_base 67.91,76.13
+goto 67.91,76.13
 talk Scruut
 turnin Fate's Lost Dream
 step

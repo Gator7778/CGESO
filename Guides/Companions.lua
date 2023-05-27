@@ -1670,3 +1670,407 @@ goto 79.37,59.11
 talk Mirri Elendis
 turnin Dead Weight
 ]])
+
+CGV:RegisterGuide("Extras\\Extras\\Companions\\Sharp-as-Night",[[
+loadingimage loadscreen_u30_blackwood_zone_01.dds
+description Sharp-as-Night Unlock quest and Rapport Quests.
+step
+'Open _Telvanni Peninsula_ Map
+'Travel to _Necrom Outskirts_ |q The Double Edge |future
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 79.95,41.84 |q The Double Edge |future
+step
+goto u38_Necrom_base 47.76,63.06 |q The Double Edge |future
+step
+goto u38_telvannipeninsula_base 79.55,37.22
+talk Sharp-as-Night
+accept The Double Edge
+step
+goto 78.86,36.54
+'Open _Necrom Outaws Refuge_ |q The Double Edge/Talk to Harn Orenvi
+|tip Manually skip to the next step.
+step
+goto u38_NecromOutlawsRefuge02_base 56.19,77.52 |q The Double Edge/Talk to Harn Orenvi
+step
+goto 62.55,66.57
+talk Harn Orenvi |q The Double Edge/Talk to Harn Orenvi
+|tip Persuade him.
+step
+goto 48.13,42.39
+'Open _Necrom_ |q The Double Edge/Go to Deredrien's Place
+|tip Manually skip to the next step.
+step
+goto u38_Necrom_base 38.91,43.52 |q The Double Edge/Go to Deredrien's Place
+step
+goto 48.48,35.15 |q The Double Edge/Go to Deredrien's Place
+step
+goto 52.83,41.98
+'Open _Palace View Apartments_ |q The Double Edge/Go to Deredrien's Place
+|tip Manually skip to the next step.
+step
+goto 50.98,40.69
+'Examine _Scattered Papers_ |q The Double Edge/Examine Mess |future
+step
+goto 51.11,40.64
+'Examine _Letter to Deredrien_ |q The Double Edge/Fence's Notes
+step
+goto 51.07,40.54
+'Examine _Rotmeth_ |q The Double Edge/Examine Bottle
+step
+goto 51.07,40.67
+talk Sharp-as-Night |q The Double Edge/Talk to Sharp-as-Night
+step
+'Open _Telvanni Peninsula_ Map
+'Travel to _Necrom Outskirts_ |q The Double Edge/Meet Sharp-as-Night near Reynila's Campsite
+|tip Manualy skip to the next step.
+step
+goto u38_telvannipeninsula_base 53.70,43.70
+wayshrine Fungal Lowlands
+step
+goto 53.70,43.70 |q The Double Edge/Meet Sharp-as-Night near Reynila's Campsite
+step
+goto 50.98,46.52
+talk Sharp-as-Night |q The Double Edge/Meet Sharp-as-Night near Reynila's Campsite
+step
+goto 50.98,46.52
+talk Sharp-as-Night |q The Double Edge/Talk to Sharp-as-Night
+step
+goto 51.04,42.09
+'Examine _Organized Notes_ |lorebook Organization Notes/3/48/77
+step
+goto 50.57,42.03
+'Examine _Lanterns_ |q The Double Edge/Examine Lanterns
+step
+goto 48.15,43.62
+'Examine _Letter from the Reformer_ |q The Double Edge/Investigate Deredrien's Note |future
+step
+goto 48.26,43.50
+talk Sharp-as-Night |q The Double Edge/Talk to Sharp
+step
+goto 35.91,50.49 |q The Double Edge/Find Mevei Andros in Ald Isra
+step
+goto 33.16,56.00
+wayshrine Ald Isra
+step
+goto 33.16,56.00 |q The Double Edge/Find Mevei Andros in Ald Isra
+step
+goto tlv_aldisra_base 90.64,69.69 |q The Double Edge/Find Mevei Andros in Ald Isra
+step
+goto 42.82,34.70
+talk Mevei Andros |q The Double Edge/Talk to Mevei Andros |future
+step
+goto 90.53,44.25 |q The Double Edge/Meet Sharp on Gorne
+step
+goto u38_telvannipeninsula_base 33.16,55.88
+'Use _Ald Isra_ Wayshrine
+'Travel to _Fungal Lowlands_ |q The Double Edge/Meet Sharp on Gorne
+|tip Manually skip to the next step.
+step
+goto 67.40,42.54 |q The Double Edge/Meet Sharp on Gorne
+step
+goto 70.85,35.36 |q The Double Edge/Meet Sharp on Gorne
+step
+goto 69.17,32.81 |q The Double Edge/Meet Sharp on Gorne
+step
+goto 71.92,31.74
+|tip Recommended to get a group. This is a public dungeon.
+'Travel to _Gorne_ |q The Double Edge/Meet Sharp on Gorne
+|tip Manually skip to the next step.
+step
+goto u38_gorne_main 77.18,31.66
+talk Sharp-as-Night |q The Double Edge/Talk to Sharp-as-Night |future
+step
+goto 65.60,28.54 |q The Double Edge/Find Reynila
+step
+goto 47.49,22.61 |q The Double Edge/Find Reynila
+step
+goto 37.18,15.62 |q The Double Edge/Find Reynila
+step
+goto 21.24,30.87 |q The Double Edge/Find Reynila
+step
+goto 19.86,38.30 |q The Double Edge/Find Reynila
+step
+goto 25.52,37.97 |q The Double Edge/Find Reynila
+step
+goto 33.02,49.94 |q The Double Edge/Find Reynila
+step
+goto 23.24,54.58 |q The Double Edge/Find Reynila
+step
+goto 29.96,68.97
+|tip Go downstairs.
+'Open _Smuggler's Hideout_ |q The Double Edge/Find Reynila
+|tip Manually skip to the next step.
+step
+goto 25.23,81.55
+kill Mercenaries |q The Double Edge/Defeat the Mercenaries |future
+step
+goto 21.51,81.00
+'Open _Smuggler's Cove_ |q The Double Edge/Follow Reynila
+step
+goto 17.65,79.18
+talk Reynila Treviri |q The Double Edge/Talk to Reynila
+step
+goto 17.65,79.18
+talk Dimik-ei |q The Double Edge/Talk to Dimik-Ei
+step
+goto 17.65,79.18
+talk Sharp-as-Night
+turnin The Double Edge
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Companions\\Azandar Al-Cybiades",[[
+loadingimage loadscreen_u30_blackwood_zone_01.dds
+description Azandar Al-Cybiades Unlock quest and Rapport Quests.
+step
+'Open _Telvanni Peninsula_ Map
+'Travel to _Necrom Outskirts_ |q The Fateweaver Key |future
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 79.97,41.83 |q The Fateweaver Key |future
+step
+goto 81.53,37.97 |q The Fateweaver Key |future
+step
+goto u38_Necrom_base 47.93,58.67
+'Open _Necrom_ |q The Fateweaver Key |future
+|tip Manually skip to the next step.
+step
+goto 48.65,49.58
+wayshrine Necrom
+step
+goto 48.65,49.58 |q The Fateweaver Key |future
+step
+goto 55.82,52.48 |q The Fateweaver Key |future
+step
+goto 60.30,52.39
+'Open _Necrom Bindery_ |q The Fateweaver Key |future
+|tip Manually skip to the next step.
+step
+goto 58.06,52.94
+'Use _Portal to Apocrypha: The Endless Library_ |q The Fateweaver Key |future
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 71.43,78.87 |q The Fateweaver Key |future
+step
+goto 67.73,71.45
+wayshrine Tranquil Catalog
+step
+goto 62.00,57.86
+talk Azandar
+accept The Fateweaver Key
+step
+goto u38_ciphersmidden_city_base 73.26,55.19
+wayshrine Cipher's Midden
+step
+goto 52.64,37.16
+talk Azandar |q The Fateweaver Key/Talk to Azandar |future
+step
+goto 42.45,32.75
+|tip Follow Green Orb.
+'Examine _Book Pile_ |q The Fateweaver Key/Find the Book with Azandar
+step
+goto u38_apocrypha_base 57.50,52.53
+'Chase _Tomeshell_ |q The Fateweaver Key/Chase the Tomeshell
+step
+goto 57.50,52.53
+'Examine _Predestination and Paradox: A Treatise_ |q The Fateweaver Key/Take the Book
+step
+goto u38_ciphersmidden_city_base 41.01,11.45
+talk Azandar |q The Fateweaver Key/Talk to Azandar
+step
+goto 22.76,71.82
+|tip Go upstairs.
+'Open _Ciphers Repository_ |q The Fateweaver Key/Search for Tomedust from a Daedric Spell
+|tip Manually skip to the next step.
+step
+goto 10.17,77.73
+'Examine _Expunged Daedric Tomedust_ |q The Fateweaver Key/Search for Tomedust from a Daedric Spell
+step
+goto 22.15,69.47 |q The Fateweaver Key/Find a Seeker Talon |future
+step
+goto 36.21,72.40 |q The Fateweaver Key/Find a Seeker Talon
+step
+goto 29.94,92.44 |q The Fateweaver Key/Find a Seeker Talon
+step
+goto u38_apocrypha_base 52.25,66.71 |q The Fateweaver Key/Find a Seeker Talon
+step
+goto 50.39,65.45
+'Take _Embedded Seeker Talon_ |q The Fateweaver Key/Find a Seeker Talon
+step
+goto 51.61,67.11 |q The Fateweaver Key/Meet Azandar at the Ritual Altar
+step
+goto 44.86,68.50 |q The Fateweaver Key/Meet Azandar at the Ritual Altar
+step
+goto 41.71,59.79
+talk Azandar |q The Fateweaver Key/Talk to Azandar |future
+step
+goto 41.14,60.28
+|tip Watch the dialogue.
+'Place _Summoning Font_ |q The Fateweaver Key/Present Expunged Tomedust |future
+step
+goto 40.83,60.03
+|tip Watch the dialogue.
+'Place _Summoning Font_ |q The Fateweaver Key/Offer Seeker's Talon
+step
+goto 41.13,59.73
+|tip Watch the dialogue.
+'Pour _Summoning Font_ |q The Fateweaver Key/Pour Ichor in the Font
+step
+goto 41.10,59.93
+talk Tem |q The Fateweaver Key/Talk to Tem, the Omen of Destiny
+step
+goto 41.30,59.96
+talk Azandar |q The Fateweaver Key/Talk to Azandar |future
+|tip Manually skip to the next step.
+step
+goto 39.47,52.73 |q The Fateweaver Key/Meet Azandar in the Underweave
+step
+goto 41.88,51.42 |q The Fateweaver Key/Meet Azandar in the Underweave
+step
+goto 40.36,49.96
+|tip Recommended to get a group. This is a public dungeon.
+'Enter _The Underweave_ |q The Fateweaver Key/Meet Azandar in the Underweave |future
+|tip Manually skip to the next step.
+step
+goto U38_underweave_central_base 26.93,79.58
+talk Azandar |q The Fateweaver Key/Talk to Azandar
+step
+goto 28.12,34.23 |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
+step
+goto 49.69,35.03
+'Open _Underweave Nullifactory_ |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
+|tip Manually skip to the next step.
+step
+goto U38_underweave_process01_base 73.69,55.92 |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
+step
+goto 73.93,43.54 |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
+step
+goto 81.26,43.66 |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
+step
+goto 89.61,90.57
+'Open _Underweave Courtyard_ |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
+|tip Manually skip to the next step.
+step
+goto U38_underweave_central_base 90.02,50.14 |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
+step
+goto 86.37,62.24
+'Open _Underweave Heart_ |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
+|tip Manually skip to the next step.
+step
+goto U38_underweave_heart_base 67.46,73.49 |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
+step
+goto 18.46,49.82
+'Open _Martina's Sanctum_ |q The Fateweaver Key/Search Martina's Sanctum |future
+|tip Manually skip to the next step.
+step
+goto U38_underweave_secretlab_base 56.51,66.41
+'Examine _Mysterious Experiment_ |q The Fateweaver Key/Unknown Experiment
+step
+goto 29.95,83.85
+'Examine _The Never-Woven_ |q The Fateweaver Key/Floating Journal
+step
+goto 47.14,58.59
+'Examine _Martina Abor_ |q The Fateweaver Key/Examine Corpse
+step
+goto 43.49,56.51
+talk Azandar |q The Fateweaver Key/Talk to Azandar
+step
+'Open _Apocrypha_ Map
+'Travel to _Cipher's Midden_ |q The Fateweaver Key/Meet Azandar in His Cipher's Midden Chambers
+|tip Manually skip to the next step.
+step
+goto u38_ciphersmidden_city_base 81.85,63.62
+'Open _Azandar's Lodgings_ |q The Fateweaver Key/Meet Azandar in His Cipher's Midden Chambers
+step
+goto 80.84,64.23
+talk Azandar |q The Fateweaver Key/Talk to Azandar
+step
+goto 81.86,64.40
+'Activate _Scrying Beacon_ |q The Fateweaver Key/Light Scry Beacon 4 |future
+step
+goto 83.20,65.38
+'Activate _Scrying Beacon_ |q The Fateweaver Key/Light Scry Beacon 1
+step
+goto 82.27,67.55
+'Activate _Scrying Beacon_ |q The Fateweaver Key/Light Scry Beacon 2
+step
+goto 80.66,67.02
+'Activate _Scrying Beacon_ |q The Fateweaver Key/Help Azandar With A Fate Scrying Ritual
+step
+goto 50.65,35.16 |q The Fateweaver Key/Meet Azandar Near Fathoms Drift
+step
+goto u38_apocrypha_base 54.60,52.35
+'Open _Central Orphic Tunnels_ |q The Fateweaver Key/Meet Azandar Near Fathoms Drift
+|tip Manually skip to the next step.
+step
+goto u38_Tunnel2_base 59.04,33.23 |q The Fateweaver Key/Meet Azandar Near Fathoms Drift
+step
+goto 41.02,37.74
+'Open _Apocrypha: Chroma Incognito_ |q The Fateweaver Key/Meet Azandar Near Fathoms Drift
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 42.50,42.35 |q The Fateweaver Key/Meet Azandar Near Fathoms Drift
+step
+goto 45.35,32.22 |q The Fateweaver Key/Meet Azandar Near Fathoms Drift
+step
+goto 41.17,24.01
+wayshrine Forlorn Palisades
+step
+goto 37.63,20.52
+talk Azandar |q The Fateweaver Key/Talk to Azandar |future
+step
+goto 39.05,19.07
+'Enter _Fathoms Drift_ |q The Fateweaver Key/Enter Fathom's Drift
+|tip Manually skip to the next step.
+step
+goto U38_CorpuscleBight_01_Base 33.35,74.61
+'Untie _Fate Thread_ |q The Fateweaver Key/Seek Threads of Fate
+|tip Manually skip to the next step.
+step
+goto 18.84,67.14
+'Untie _Fate Thread_ |q The Fateweaver Key/Seek Threads of Fate
+|tip Manually skip to the next step.
+step
+goto 25.70,58.11
+'Untie _Fate Thread_ |q The Fateweaver Key/Seek Threads of Fate
+|tip Manually skip to the next step.
+step
+goto U38_CorpuscleBight_02_Base 25.73,49.68
+|tip Go upstairs.
+'Untie _Fate Thread_ |q The Fateweaver Key/Seek Threads of Fate
+|tip Manually skip to the next step.
+step
+goto 28.69,40.25
+'Untie _Fate Thread_ |q The Fateweaver Key/Seek Threads of Fate
+|tip Manually skip to the next step.
+step
+goto 31.26,36.80
+'Open _Fathom Drift Wreckage_ |q The Fateweaver Key/Seek Threads of Fate
+|tip Manually skip to the next step.
+step
+goto 41.41,29.70
+'Observe _Azandar's Frayed Fate_ |q The Fateweaver Key/Observe Azandar's Frayed Fate |future
+step
+goto 41.83,28.88
+'Activate _Fatebinding Rune Alpha_ |q The Fateweaver Key/Hit Fate Button
+step
+goto 42.57,29.09
+'Activate _Fatebinding Rune Zeta_ |q The Fateweaver Key/Fate Button B
+step
+goto 41.64,29.26
+talk Azandar |q The Fateweaver Key/Talk to Azandar
+step
+'Open _Apocrypha_ Map
+'Travel to _Cipher's Midden_ |q The Fateweaver Key/Meet Azandar in His Cipher's Midden Chambers
+|tip Manually skip to the next step.
+step
+goto u38_ciphersmidden_city_base 81.27,63.12
+'Open _Azandar's Lodgings_ |q The Fateweaver Key/Meet Azandar in His Cipher's Midden Chambers
+step
+goto 82.61,66.54
+talk Azandar
+turnin The Fateweaver Key
+step
+'_Next to you_
+|tip Reach Friendly rapport with 
+]])
