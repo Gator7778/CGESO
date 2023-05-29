@@ -21,11 +21,8 @@ goto 37.38,71.47
 talk Zeechis
 accept Competition and Contracts
 step
-goto 39.76,74.80
-'Go to _Deepscorn Hollow_ |q Competition and Contracts/Go to Deepscorn Hollow
-step
 goto 39.77,74.78
-talk Bastian Hallix |q Competition and Contracts/Talk to Bastian Hallix
+talk Bastian Hallix |q Competition and Contracts/Talk to Bastian Hallix |future
 step
 goto 39.25,75.43
 'Examine _Tenarei's Contract_ |q Competition and Contracts/Search the Area
@@ -64,10 +61,7 @@ step
 goto 61.45,25.98 |q Competition and Contracts/Continue Exploring Deepscorn Hollow
 step
 goto 48.70,35.31
-'Continue _Exploring Deepscorn Hollow_ |q Competition and Contracts/Continue Exploring Deepscorn Hollow
-step
-goto 48.70,35.31
-'Open _Abandoned Excavation_ |q Competition and Contracts/Follow the Cultist
+'Open _Abandoned Excavation_ |q Competition and Contracts/Follow the Cultist |future
 step
 goto 48.40,39.66
 talk Fluvius Salva |q Competition and Contracts/Talk to the Cultist
@@ -117,10 +111,7 @@ goto 21.42,65.71
 |tip Manually skip to the next step.
 step
 goto 28.92,85.24
-'Go to _Inner Sanctum_ |q Competition and Contracts/Go to the Inner Sanctum
-step
-goto 28.92,85.24
-talk Tenarei Vels |q Competition and Contracts/Talk to Tenarei Vels
+talk Tenarei Vels |q Competition and Contracts/Talk to Tenarei Vels |future
 step
 goto 28.88,85.15
 talk Bastian Hallix |q Competition and Contracts/Talk to Bastian Hallix
@@ -159,12 +150,12 @@ step
 talk Bastian Hallix
 accept Things Lost, Things Found
 step
-'Open Glenumbra Map
-'Travel to _Daggerfall_ in Glenumbra |q Things Lost, Things Found/Meet Quistley Silvelle in Daggerfall
+'Open _Glenumbra_ Map
+'Travel to _Daggerfall_ |q Things Lost, Things Found/Meet Quistley Silvelle in Daggerfall
 |tip Manually skip to the next step.
 step
 goto daggerfall_base 51.76,26.03
-'Open Rosy Lion Inn |q Things Lost, Things Found/Meet Quistley Silvelle in Daggerfall
+'Open _Rosy Lion Inn_ |q Things Lost, Things Found/Meet Quistley Silvelle in Daggerfall
 |tip Manually skip to the next step.
 step
 goto 48.61,26.23
@@ -177,7 +168,7 @@ goto glenumbra_base 34.81,72.59
 talk Bastian Hallix |q Things Lost, Things Found/Talk to Bastian Hallix |future
 step
 goto 34.81,72.59
-'Open Illessan Tower |q Things Lost, Things Found/Find the Silvelle Ring |future
+'Open _Illessan Tower_ |q Things Lost, Things Found/Find the Silvelle Ring |future
 |tip Manually skip to the next step.
 step
 goto ilessantower_base 11.64,80.04 |q Things Lost, Things Found/Find the Silvelle Ring |future
@@ -185,10 +176,10 @@ step
 goto 67.75,80.09 |q Things Lost, Things Found/Find the Silvelle Ring |future
 step
 goto 60.38,33.31
-'Search Coffer |q Things Lost, Things Found/Find the Silvelle Ring |future
+'Search _Coffer_ |q Things Lost, Things Found/Find the Silvelle Ring |future
 |tip Manually skip to the next step.
 step
-'Open Glenumbra Map
+'Open _Glenumbra_ Map
 'Travel to _Baelborne Rock_ |q Things Lost, Things Found/Talk to Quistley Silvelle |future
 |tip Manually skip to the next step.
 step
@@ -196,13 +187,13 @@ goto glenumbra_base 35.33,74.21
 talk Quistley Silvelle |q Things Lost, Things Found/Talk to Quistley Silvelle |future
 step
 goto 35.35,74.24
-'Examine Letter from Inalieth |q Things Lost, Things Found/Read the Undelivered Letter
+'Examine _Letter from Inalieth_ |q Things Lost, Things Found/Read the Undelivered Letter
 step
 goto 35.37,74.11
 talk Bastian Hallix |q Things Lost, Things Found/Talk to Bastian Hallix
 step
 goto 37.40,73.03
-'Use Baelbourne Rock
+'Use _Baelbourne Rock_ Wayshrine
 'Travel to _Redfur Trading Post_ in Grahtwood |q Things Lost, Things Found/Go to the Hearty Hoarvor Inn in Grahtwood |future
 |tip Manually skip to the next step.
 step
@@ -221,14 +212,14 @@ step
 talk Bastian Hallix
 accept Family Secrets
 step
-'Open Stormhaven Map
+'Open _Stormhaven_ Map
 'Travel to _Wayrest_ |q Family Secrets/Find Count Elmonde Auzin in Wayrest
 |tip Manually skip to the next step.
 step
 goto wayrest_base 27.61,38.25 |q Family Secrets/Find Count Elmonde Auzin in Wayrest
 step
 goto 45.57,17.22
-'Open Cloudy Dregs Inn |q Family Secrets/Find Count Elmonde Auzin in Wayrest
+'Open _Cloudy Dregs Inn_ |q Family Secrets/Find Count Elmonde Auzin in Wayrest
 |tip Manually skip to the next step.
 step
 goto 45.96,15.12
@@ -241,13 +232,12 @@ step
 goto 27.61,38.25 |q Family Secrets/Find the Slaver Hideout
 step
 goto 39.90,51.08
-|tip Leave the Inn.
-'Use Wayrest Wayshrine
+'Use _Wayrest_ Wayshrine
 'Travel to _Bonesnap Ruins_ |q Family Secrets/Find the Slaver Hideout
 |tip Manually skip to the next step.
 step
 goto stormhaven_base 23.64,49.43
-'Open Koeglin Mine |q Family Secrets/Rescue Countess Clairene Auzin |future
+'Open _Koeglin Mine_ |q Family Secrets/Rescue Countess Clairene Auzin |future
 |tip Manually skip to the next step.
 step
 goto koeglinmine_base 69.89,61.85 |q Family Secrets/Rescue Countess Clairene Auzin |future
@@ -255,24 +245,21 @@ step
 goto 75.03,32.92 |q Family Secrets/Rescue Countess Clairene Auzin |future
 step
 goto 55.15,21.39
-'Untie Bonds on Countess Clairene Auzin |q Family Secrets/Rescue Countess Clairene Auzin |future
+'Untie _Bonds_ |q Family Secrets/Rescue Countess Clairene Auzin |future
 step
 goto 48.46,44.31
-'Open Koeglin Mine |q Family Secrets/Escort Countess Clairene Auzin out of the Mines
+'Open _Koeglin Mine_ |q Family Secrets/Escort Countess Clairene Auzin out of the Mines
 |tip Manually skip to the next step.
 step
 goto 46.16,67.66 |q Family Secrets/Escort Countess Clairene Auzin out of the Mines
 step
 goto 22.47,89.96
-'Open Stormhaven |q Family Secrets/Escort Countess Clairene Auzin out of the Mines |future
+'Open _Stormhaven_ |q Family Secrets/Escort Countess Clairene Auzin out of the Mines |future
 |tip Manually skip to the next step.
 step
 goto stormhaven_base 23.04,50.20
 talk Countess Clairene Auzin |q Family Secrets/Talk to Countess Clairene Auzin |future
 |tip Manually skip to the next step.
-step
-goto 23.04,50.24
-'Listen to Bastian Hallix and Clairene Auzin |q Family Secrets/Listen to Bastian Hallix and Clairene Auzin
 step
 goto 23.04,50.24
 talk Bastian Hallix
@@ -356,7 +343,6 @@ goto 55.03,69.25
 talk Ember |q Tower Full of Trouble/Talk to Ember
 step
 goto 55.02,67.99
-|tip Run through the two Enchanted Cows.
 'Use _Spoon of Undo on Enchanted Cow_ |q Tower Full of Trouble/.*Restore the Livestock.* |count 1
 step
 goto 54.61,68.95
@@ -435,12 +421,12 @@ step
 talk Ember
 accept Cold Trail
 step
-'Open Auridon Map
+'Open _Auridon_ Map
 'Travel to _Skywatch_ |q Cold Trail/Find Brisha In Skywatch
 |tip Manually skip to the next step. 
 step
 goto skywatch_base 41.22,47.67
-'Find Brisha In Skywatch |q Cold Trail/Find Brisha In Skywatch
+'Find _Brisha In Skywatch_ |q Cold Trail/Find Brisha In Skywatch
 step
 goto 41.22,47.67
 talk Brisha |q Cold Trail/Talk to Brisha
@@ -449,25 +435,21 @@ goto 41.22,47.67
 talk Ember |q Cold Trail/Talk to Ember
 step
 goto 18.26,42.13
-'Use Skywatch Wayshrine
+'Use _Skywatch_ Wayshrine
 'Travel to _Sadrith Mora_ in Vvardenfell |q Cold Trail/Go to Sadrith Mora's Gateway Inn
 |tip Manually skip to the next step.
 step
 goto sadrithmora_base 67.43,50.00
-'Open Gateway Inn |q Cold Trail/Go to Sadrith Mora's Gateway Inn
+'Open _Gateway Inn_ |q Cold Trail/Go to Sadrith Mora's Gateway Inn
 step
 goto 70.09,50.84
 talk Osithos Morelo |q Cold Trail/Ask About Jhaka at the Gateway Inn
 step
 goto 31.77,54.84
-|tip Leave Gateway Inn.
-'Go to Tel Naga |q Cold Trail/Go to Tel Naga
-step
-goto 31.77,54.84
-talk Ember |q Cold Trail/Talk to Ember
+talk Ember |q Cold Trail/Talk to Ember |future
 step
 goto 37.01,52.97
-'Search Varvisi's Jewelry Pack |q Cold Trail/Distract Varvisi Uleni
+'Search _Varvisi's Jewelry Pack_ |q Cold Trail/Distract Varvisi Uleni
 step
 goto 27.28,57.70
 talk Ember |q Cold Trail/Talk to Ember
@@ -475,26 +457,26 @@ step
 goto 39.68,66.03 |q Cold Trail/Talk to Osithos Morelo
 step
 goto 67.28,50.20
-'Open Gateway Inn |q Cold Trail/Talk to Osithos Morelo
+'Open _Gateway Inn_ |q Cold Trail/Talk to Osithos Morelo
 |tip Manually skip to the next step.
 step
 goto 70.10,50.83
 talk Osithos Morelo |q Cold Trail/Talk to Osithos Morelo
 step
 goto 29.37,57.66
-|tip Leave Gateway Inn.
-'Use Sadrith Mora Wayshrine
+'Use _Sadrith Mora_ Wayshrine
 'Travel to _Tel Mora_ |q Cold Trail/Go to Pulk
 |tip Manually skip to the next step.
 step
 goto vvardenfell_base 67.14,42.01
-'Go to Pulk |q Cold Trail/Go to Pulk
+'Go to _Pulk_ |q Cold Trail/Go to Pulk
 step
 goto 67.14,42.01
 talk Ember |q Cold Trail/Talk to Ember |future
+|tip Manually skip to the next step.
 step
 goto 67.14,42.01
-'Open Pulk |q Cold Trail/Find Jhaka |future
+'Open _Pulk_ |q Cold Trail/Find Jhaka |future
 |tip Manually skip to the next step.
 step
 goto pulkupper_base 49.61,47.18 |q Cold Trail/Find Jhaka |future
@@ -508,14 +490,14 @@ step
 goto 53.99,80.25 |q Cold Trail/Find Jhaka |future
 step
 goto 73.74,44.84
-'Unlock Cage |q Cold Trail/Free Jhaka |future
+'Unlock _Cage_ |q Cold Trail/Free Jhaka |future
 step
 goto 73.74,44.84
 talk Jhaka |q Cold Trail/Talk to Jhaka
 step
 goto 53.11,81.23 |q Cold Trail/Escort Jhaka to Safety
 step
-goto 29.96,75.97 |q Cold Trail/Escort Jhaka to Safety
+goto 19.16,74.81 |q Cold Trail/Escort Jhaka to Safety
 step
 goto 56.23,69.94 |q Cold Trail/Escort Jhaka to Safety
 step
@@ -526,10 +508,10 @@ step
 goto 39.59,18.77 |q Cold Trail/Escort Jhaka to Safety
 step
 goto 24.12,14.01
-'Open Vvardenfell |q Cold Trail/Escort Jhaka to Safety |future
+'Open _Vvardenfell_ |q Cold Trail/Escort Jhaka to Safety |future
 |tip Manually skip to the next step
 step
-goto Vvardenfell 66.74,41.69
+goto vvardenfell_base 66.74,41.69
 talk Jhaka |q Cold Trail/Talk to Jhaka |future
 step
 goto 66.79,41.73
@@ -541,61 +523,54 @@ step
 talk Ember
 accept Cold Blood, Old Pain
 step
-'Open Greenshade Map
+'Open _Greenshade_ Map
 'Travel to _Marbruk_ |q Cold Blood, Old Pain/Find Jhaka in Marbruk
 |tip Manually skip to the next step.
 step
 goto marbruk_base 62.42,39.33 |q Cold Blood, Old Pain/Find Jhaka in Marbruk
 step
 goto 58.58,28.80
-'Find Jhaka in Marbruk |q Cold Blood, Old Pain/Find Jhaka in Marbruk
-step
-goto 58.58,28.80
-talk Jhaka |q Cold Blood, Old Pain/Talk to Jhaka
+talk Jhaka |q Cold Blood, Old Pain/Talk to Jhaka |future
 step
 goto 33.92,60.49
-'Use Marbruk Wayshrine
+'Use _Marbruk_ Wayshrine
 'Travel to _Stonetooth_ in Betnikh |q Cold Blood, Old Pain/Find Guruz in Betnikh
 |tip Manually skip to the next step.
 step
 goto stonetoothfortress_base 25.02,58.64
-'Find Guruz in Betnikh |q Cold Blood, Old Pain/Find Guruz in Betnikh
-step
-goto 25.02,58.64
-talk Guruz |q Cold Blood, Old Pain/Talk to Guruz
+talk Guruz |q Cold Blood, Old Pain/Talk to Guruz |future
 step
 goto 25.02,58.64
 talk Ember |q Cold Blood, Old Pain/Talk to Ember
 step
 goto betnihk_base 28.11,28.39
-'Find the Sour Algae |q Cold Blood, Old Pain/.*Find the Sour Algae.* |count 1
+'Take _Sour Algae_ |q Cold Blood, Old Pain/.*Find the Sour Algae.* |count 1
 step
 goto 26.27,29.32
-'Find the Sour Algae |q Cold Blood, Old Pain/.*Find the Sour Algae.* |count 2
+'Take _Sour Algae_ |q Cold Blood, Old Pain/.*Find the Sour Algae.* |count 2
 step
 goto 28.25,29.27
 talk Ember |q Cold Blood, Old Pain/Talk to Ember
 step
 goto 28.02,30.01
 |tip Watch the dialogue.
-'Take Sour Algae Tonic |q Cold Blood, Old Pain/Take the Tonic When Ember Is Finished
+'Take _Sour Algae Tonic_ |q Cold Blood, Old Pain/Take the Tonic When Ember Is Finished
 step
 goto stonetoothfortress_base 25.06,58.61
-talk Guruz
-'Tell him _I have a drink for you._ |q Cold Blood, Old Pain/Give the Sour Algae Tonic to Guruz
+talk Guruz |q Cold Blood, Old Pain/Give the Sour Algae Tonic to Guruz
 step
 goto 25.06,58.61
 talk Guruz |q Cold Blood, Old Pain/Talk to Guruz
 step
 goto 48.03,58.72
-'Use Stonetooth Wayshrinbe
+'Use _Stonetooth_ Wayshrinbe
 'Travel _Stillrise_ in Shadowfen  |q Cold Blood, Old Pain/Go to the Shrine of the Black Maw |future
 |tip Manually skip to the next step.
 step
 goto shadowfen_base 35.86,20.86 |q Cold Blood, Old Pain/Go to the Shrine of the Black Maw |future
 step
 goto 28.99,16.95
-'Oepn Shrine of the Black Maw |q Cold Blood, Old Pain/Search the Shrine for Silverslip |future
+'Oepn _Shrine of the Black Maw_ |q Cold Blood, Old Pain/Search the Shrine for Silverslip |future
 |tip Manually skip to the next step.
 step
 goto shrineofblackworm_base 15.08,35.01 |q Cold Blood, Old Pain/Search the Shrine for Silverslip |future
@@ -604,16 +579,16 @@ goto 16.13,80.12 |q Cold Blood, Old Pain/Search the Shrine for Silverslip |futur
 step
 goto 52.51,80.35
 |tip Watch the dialogue.
-'Examine Silverslip's Journal |q Cold Blood, Old Pain/Read Silverslip's Journal |future
+'Examine _Silverslip's Journal_ |lorebook Silverslip's Journal/3/45/105
 step
-goto 77.51,42.00 |q Cold Blood, Old Pain/Meet Silverslip Outside
+goto 79.20,65.90 |q Cold Blood, Old Pain/Meet Silverslip Outside
 step
 goto 63.48,40.68
-'Use Shrine of the Black Maw |q Cold Blood, Old Pain/Meet Silverslip Outside
+'Use _Shrine of the Black Maw_ |q Cold Blood, Old Pain/Meet Silverslip Outside
 |tip Manually skip to the next step.
 step
 goto 88.99,10.28
-'Open Shadowfen |q Cold Blood, Old Pain/Meet Silverslip Outside
+'Open _Shadowfen_ |q Cold Blood, Old Pain/Meet Silverslip Outside
 |tip Manually skip to the next step.
 step
 goto shadowfen_base 28.09,17.24
@@ -628,23 +603,20 @@ step
 talk Ember
 accept Green with Envy
 step
-'Open Bangkorai Map
+'Open _Bangkorai_ Map
 'Travel to _Eastern Evermore_ |q Green with Envy/Go to Evermore to Meet Izbadd
 |tip Manually skip to the next step.
 step
 goto evermore_base 50.46,46.00 |q Green with Envy/Go to Evermore to Meet Izbadd
 step
 goto 46.69,38.88
-'Go to Evermore to Meet Izbadd |q Green with Envy/Go to Evermore to Meet Izbadd
-step
-goto 46.69,38.88
-talk Izbadd |q Green with Envy/Talk to Izbadd
+talk Izbadd |q Green with Envy/Talk to Izbadd |future
 step
 goto 46.69,38.88
 talk Ember |q Green with Envy/Talk to Ember
 step
 goto bangkorai_base 46.62,37.15
-'Use Eastern Evermore Wayshrine
+'Use _Eastern Evermore_ Wayshrine
 'Travel to _Sentinel_ in Alik'r Desert |q Green with Envy/Search Sentinel for Azamel
 |tip Manually skip to the next step.
 step
@@ -654,10 +626,10 @@ goto 40.80,56.91
 talk Azamel |q Green with Envy/Talk to Azamel |future
 step
 goto alikr_base 25.05,51.74
-'Follow Azamel |q Green with Envy/Follow Azamel
+'Follow _Azamel_ |q Green with Envy/Follow Azamel
 step
 goto 25.05,51.74
-'Open Sentinel Outlaws Refuge |q Green with Envy/Talk to Azamel |future
+'Open _Sentinel Outlaws Refuge_ |q Green with Envy/Talk to Azamel |future
 |tip Manually skip to the next step.
 step
 goto alkiroutlawrefuge_base 54.59,55.94
@@ -671,34 +643,28 @@ goto 51.77,55.43
 talk Silverslip |q Green with Envy/Talk to Silverslip |future
 |tip Manually skip to the next step.
 step
-'Open Alik'r Desert Map
+'Open _Alik'r Desert_ Map
 'Travel to _Kulati Mines_ |q Green with Envy/Find the Emerald Eye Camp
 |tip Manually skip to the next step.
 step
 goto alikr_base 43.82,46.56
-'Find the Emerald Eye Camp |q Green with Envy/Find the Emerald Eye Camp
-step
-goto 43.82,46.56
-'Examine Emerald Eye Mage's Journal |q Green with Envy/Search for Information About Song
+'Examine _Emerald Eye Mage's Journal_ |q Green with Envy/Search for Information About Song |future
 step
 goto 43.82,46.56
 talk Ember |q Green with Envy/Talk to Ember
 step
-'Open Alik'r Desert Map
+'Open _Alik'r Desert_ Map
 'Travel to _Satakaleem_ |q Green with Envy/Go to Motalion Necropolis
 |tip Manually skip to the next step.
 step
 goto 81.89,35.53 |q Green with Envy/Go to Motalion Necropolis
 step
 goto 80.24,35.48
-'Go to Motalion Necropolis |q Green with Envy/Go to Motalion Necropolis
-step
-goto 80.24,35.48
-'Open Motalion Necropolis |q Green with Envy/Find the Emerald Eye's Tomb
+'Open _Motalion Necropolis_ |q Green with Envy/Find the Emerald Eye's Tomb |future
 |tip Manually skip to the next step.
 step
 goto 76.88,32.15
-'Open Tomb of the Emerald |q Green with Envy/Find the Emerald Eye's Tomb
+'Open _Tomb of the Emerald Eye_ |q Green with Envy/Find the Emerald Eye's Tomb
 |tip Manually skip to the next step.
 step
 goto 75.15,33.46
@@ -706,20 +672,20 @@ kill Lord Nabayir |q Green with Envy/Kill Lord Nabayir |future
 |tip Manually skip to the next step.
 step
 goto 74.93,32.98
-'Destroy the Confinement Wards |q Green with Envy/.*Destroy the Wards.* |count 1
+'Destroy the _Confinement Wards_ |q Green with Envy/.*Destroy the Wards.* |count 1
 step
 goto 73.97,33.83
-'Destroy the Confinement Wards |q Green with Envy/.*Destroy the Wards.* |count 2
+'Destroy the _Confinement Wards_ |q Green with Envy/.*Destroy the Wards.* |count 2
 step
 goto 75.62,33.82
-'Destroy the Confinement Wards |q Green with Envy/.*Destroy the Wards.* |count 3
+'Destroy the _Confinement Wards_ |q Green with Envy/.*Destroy the Wards.* |count 3
 step
 goto 75.24,34.35
-'Open Chamber of the Emerald Eye |q Green with Envy/Rescue Song
+'Open _Chamber of the Emerald Eye_ |q Green with Envy/Rescue Song
 |tip Manually skip to the next step.
 step
 goto 75.83,35.10
-'Destroy The Emerald Eye Relic |q Green with Envy/Rescue Song
+'Destroy _The Emerald Eye Relic_ |q Green with Envy/Rescue Song
 step
 goto 75.71,34.89
 talk Song |q Green with Envy/Talk to Song
@@ -874,7 +840,6 @@ goto u34_navirecommander_base 78.47,50.74
 step
 goto 86.48,63.23
 talk Dame Hendra Trieve |q Tournament of the Heart/Get a Key to the Catacombs
-'Tell her _I'm a peasant with a surprisingly full coin purse. [18]_
 step
 goto 79.73,52.23
 'Open _Castle Navire_ |q Tournament of the Heart/Meet Isobel in the Chapel
@@ -968,7 +933,7 @@ step
 talk Isobel Veloise
 accept The Lost Symbol
 step
-'Open Stros M'Kai Map
+'Open _Stros M'Kai_ Map
 'Travel to _Port Hunding_ |q The Lost Symbol/Talk to Aurelia Jourvel |future
 |tip Manually skip to the next step.
 step
@@ -982,19 +947,18 @@ talk Captain Marso |q The Lost Symbol/Talk to Captain Marso |future
 |tip Manually skip to the next step.
 step
 goto 60.80,68.11
-'Pick Up Betty Netch Ambergris Pomade |q The Lost Symbol/Track Kiv Lindres
+'Pick Up _Betty Netch Ambergris Pomade_ |q The Lost Symbol/Track Kiv Lindres
 |tip Manually skip to the next step.
 step
 goto 51.57,69.70
-'Pick Up Engraved Arm Band |q The Lost Symbol/Track Kiv Lindres
+'Pick Up _Engraved Arm Band_ |q The Lost Symbol/Track Kiv Lindres
 |tip Manually skip to the next step.
 step
 goto 44.85,63.90
-'Examine Kiv's Journal |q The Lost Symbol/Track Kiv Lindres
-|tip Manually skip to the next step.
+'Examine _Kiv's Journal_ |lorebook Kiv's Journal/3/45/108
 step
 goto 28.04,70.57
-'Pick Up Crumbly Sweetroll |q The Lost Symbol/Track Kiv Lindres
+'Pick Up _Crumbly Sweetroll_ |q The Lost Symbol/Track Kiv Lindres
 step
 goto 26.92,77.81
 talk Aydrah |q The Lost Symbol/Find a Witness to Kiv's Departure
@@ -1004,24 +968,17 @@ talk Isobel Veloise |q The Lost Symbol/Talk to Isobel
 step
 goto 25.38,78.49
 talk Davak Hlaren |q The Lost Symbol/Search for Kiv Lindres in Seyda Neen |future
-'Tell him _I'd like to travel to Vvardenfell._
-'Tell him _Take me to Seyda Need, then._
 |tip Manually skip to the next step.
 step 
 goto vvardenfell_base 40.98,81.68
 talk Galedra Athram |q The Lost Symbol/Search for Kiv Lindres in Seyda Neen |future
 |tip Manually skip to the next step.
 step
-goto 40.92,81.50
-'Open The Saucy Nix |q The Lost Symbol/Search Kiv's Belongings
-|tip Manually skip to the next step.
-step
 goto 41.01,81.27
-'Search Kiv's Bag |q The Lost Symbol/Search Kiv's Belongings
+'Search _Kiv's Bag_ |q The Lost Symbol/Search Kiv's Belongings
 step
 goto 39.95,80.24
-|tip Leave The Saucy Nix
-'Use Seyda Neen Wayshrine
+'Use _Seyda Neen_ Wayshrine
 'Travel to _Wayrest_ in Stormhaven |q The Lost Symbol/Search for Kiv Lindres in Wayrest
 |tip Manually skip to the next step.
 step
@@ -1032,12 +989,12 @@ goto 25.26,35.06
 talk Isobel Veloise |q The Lost Symbol/Talk to Isobel
 step
 goto 39.62,50.20
-'Use Wayrest Wayshrine
+'Use _Wayrest_ Wayshrine
 'Travel to _Belkarth_ in Craglorn |q The Lost Symbol/Search for Kiv Lindres in Belkarth |future
 |tip Manually skip to the next step.
 step
 goto belkarth_base 73.61,51.90
-'Open Crossroads Tavern |q The Lost Symbol/Search for Kiv Lindres in Belkarth |future
+'Open _Crossroads Tavern_ |q The Lost Symbol/Search for Kiv Lindres in Belkarth |future
 |tip Manually skip to the next step.
 step
 goto 76.34,48.96
@@ -1047,33 +1004,32 @@ talk Engelreth Goldleaf |q The Lost Symbol/Talk to Goldleaf |future
 step
 goto 67.91,56.50
 |tip Leave Crossroads Tavern.
-'Open Inn Basement |q The Lost Symbol/Confront Kiv Lindres Beneath the Tavern
+'Open _Inn Basement_ |q The Lost Symbol/Confront Kiv Lindres Beneath the Tavern
 |tip Manually skip to the next step.
 step
 goto 71.76,55.62
-'Defeat Kiv Lindres Beneath the Tavern |q The Lost Symbol/Confront Kiv Lindres Beneath the Tavern
+'Defeat _Kiv Lindres_ |q The Lost Symbol/Confront Kiv Lindres Beneath the Tavern
 step
 goto 71.76,55.62
 talk Kiv Lindres |q The Lost Symbol/Talk to Kiv Lindres
 step
 goto 71.90,56.35
 talk Julles Laurdon |q The Lost Symbol/Choose a Punishment for Kiv
-'Tell him _That seems like a fitting punishment._
 step
 goto craglorn_base 63.24,64.50 |q The Lost Symbol/Find the Stolen Ring |tip Leave the Basement.
 step
 goto 64.90,59.53
-'Dig Dirt Mound |q The Lost Symbol/Find the Stolen Ring
+'Dig _Dirt Mound_ |q The Lost Symbol/Find the Stolen Ring
 step
 goto 64.90,59.53
 talk Isobel Veloise |q The Lost Symbol/Talk to Isobel |future
 step
-'Open High Isle and Amenos Map
+'Open _High Isle and Amenos_ Map
 'Travel to _Gonfalon Square_ |q The Lost Symbol/Go to Isobel's Home in Gonfalon Bay |future
 |tip Manually skip to the next step.
 step
 goto u34_gonfalonbaycity_base 25.71,58.85
-'Open Veloise Townhouse |q The Lost Symbol/Go to Isobel's Home in Gonfalon Bay |future
+'Open _Veloise Townhouse_ |q The Lost Symbol/Go to Isobel's Home in Gonfalon Bay |future
 step
 goto 24.92,58.61
 |tip Watch the dialogue.
@@ -1085,60 +1041,60 @@ step
 talk Isobel Veloise
 accept A Mother's Request
 step
-'Open High Isle and Amenos Map
+'Open _High Isle and Amenos_ Map
 'Travel to _Castle Navire_ |q A Mother's Request/Go to Castle Navire |future
 |tip Manually skip to the next step.
 step
 goto u34_systreszone_base 16.48,75.02
-'Open Castle Navire Knight's Wing |q A Mother's Request/Talk to Knight Commander Jourvel |future
+'Open _Castle Navire Knight's Wing_ |q A Mother's Request/Talk to Knight Commander Jourvel |future
 |tip Manually skip to the next step.
 step
 goto u34_navirecommander_base 78.69,51.09
-'Open Office of the Knight Commander |q A Mother's Request/Talk to Knight Commander Jourvel
+'Open _Office of the Knight Commander_ |q A Mother's Request/Talk to Knight Commander Jourvel
 |tip Manually skip to the next step.
 step
 goto 79.61,71.71
-'Open Knight Commander's Private Chambers |q A Mother's Request/Talk to Knight Commander Jourvel
+'Open _Knight Commander's Private Chambers_ |q A Mother's Request/Talk to Knight Commander Jourvel
 |tip Manually skip to the next step.
 step
 goto 70.33,83.73
 talk Knight Commander Jourvel |q A Mother's Request/Talk to Knight Commander Jourvel
 step
 goto 78.58,72.85
-'Open Office of the Knight Commander |q A Mother's Request/Search Nilsmon's Bunk in the Barracks
+'Open _Office of the Knight Commander_ |q A Mother's Request/Search Nilsmon's Bunk in the Barracks
 |tip Manually skip to the next step.
 step
 goto 79.61,52.23
-'Open Castle Navire |q A Mother's Request/Search Nilsmon's Bunk in the Barracks
+'Open _Castle Navire_ |q A Mother's Request/Search Nilsmon's Bunk in the Barracks
 |tip Manually skip to the next step.
 step
 goto 34.25,45.93
-'Open Knights' Barracks |q A Mother's Request/Search Nilsmon's Bunk in the Barracks
+'Open _Knights' Barracks_ |q A Mother's Request/Search Nilsmon's Bunk in the Barracks
 |tip Manually skip to the next step.
 step
 goto 46.51,58.99
-'Examine The Rose of Navire, Part the First |lorebook The Rose of Navire, Part the First/3/6/80
+'Examine _The Rose of Navire, Part the First_ |lorebook The Rose of Navire, Part the First/3/6/80
 step
 goto 46.51,58.99
-'Examine Empty Bottle of "All Flags Rum" |q A Mother's Request/Search Nilsmon's Bunk in the Barracks
+'Examine _Empty Bottle of "All Flags Rum"_ |q A Mother's Request/Search Nilsmon's Bunk in the Barracks
 step
 goto 44.90,62.77
 talk Isobel Veloise |q A Mother's Request/Talk to Isobel
 step
-'Open High Isle and Amenos Map
+'Open _High Isle and Amenos_ Map
 'Travel to _Gonfalon Square_ |q A Mother's Request/Look for Nilsmon at the Ancient Anchor Inn
 |tip Manually skip to the next step.
 step
 goto u34_gonfalonbaycity_base 43.87,37.21
-'Open Ancient Anchor Inn |q A Mother's Request/Look for Nilsmon at the Ancient Anchor Inn
+'Open _The Ancient Anchor Inn_ |q A Mother's Request/Look for Nilsmon at the Ancient Anchor Inn
 |tip Manually skip to the next step.
 step
 goto 41.92,34.03
-'Examine The Rose of Navire, Part the Second |lorebook The Rose of Navire, Part the Second/3/6/81
+'Examine _The Rose of Navire, Part the Second_ |lorebook The Rose of Navire, Part the Second/3/6/81
 step
 goto 50.33,55.77
 |tip Leave the Inn
-'Examine lorebook The Rose of Navire, Part the Third |lorebook The Rose of Navire, Part the Third/3/6/82
+'Examine _lorebook The Rose of Navire, Part the Third_ |lorebook The Rose of Navire, Part the Third/3/6/82
 step
 goto 47.94,65.86
 talk Nilsmon Booklover |q A Mother's Request/Talk to Nilsmon |future
@@ -1149,28 +1105,28 @@ goto 61.02,52.40
 talk Elzugoth |q A Mother's Request/Talk to a Shipping Clerk
 step
 goto 63.61,31.26
-'Open High Isle |q A Mother's Request/Get the Wine for the Shipping Clerk
+'Open _High Isle_ |q A Mother's Request/Get the Wine for the Shipping Clerk
 |tip Manually skip to the next step.
 step
 goto u34_gonfalonbaycity_base 68.31,20.63 |q A Mother's Request/Get the Wine for the Shipping Clerk
 step
 goto 79.89,21.66
-'Gather Seathorn |q A Mother's Request/.*Find Seathorn for Halz.* |count 1
+'Gather _Seathorn_ |q A Mother's Request/.*Find Seathorn for Halz.* |count 1
 step
 goto 82.50,25.41
-'Gather Seathorn |q A Mother's Request/.*Find Seathorn for Halz.* |count 2
+'Gather _Seathorn_ |q A Mother's Request/.*Find Seathorn for Halz.* |count 2
 step
 goto 82.50,25.41
-'Gather Seathorn |q A Mother's Request/.*Find Seathorn for Halz.* |count 3 |future
+'Gather _Seathorn_ |q A Mother's Request/.*Find Seathorn for Halz.* |count 3 |future
 |tip Manually skip to the next step.
 step
 goto 63.55,30.89
-'Open Gonfalon Bay |q A Mother's Request/Get the Wine for the Shipping Clerk
+'Open _Gonfalon Bay_ |q A Mother's Request/Get the Wine for the Shipping Clerk
 |tip Manually skip to the next step.
 step
 goto 54.04,53.66
-|tip Go across the docks.
-'Open Gonfalon Bay Outlaws Refuge |q A Mother's Request/Get the Wine for the Shipping Clerk |future
+|tip Go under the docks.
+'Open _Gonfalon Bay Outlaws Refuge_ |q A Mother's Request/Get the Wine for the Shipping Clerk |future
 |tip Manually skip to the next step.
 step
 goto u34_gonfalonoutlaw_base 64.39,46.08
@@ -1178,31 +1134,30 @@ talk Halz |q A Mother's Request/Talk to Halz in the Outlaws Refuge |future
 |tip Manually skip to the next step.
 step
 goto 69.01,88.73
-'Open Gonfalon Bay |q A Mother's Request/Talk to Elzugoth
+'Open _Gonfalon Bay_ |q A Mother's Request/Talk to Elzugoth
 |tip Manually skip to the next step.
 step
 goto u34_gonfalonbaycity_base 61.08,52.08
 talk Elzugoth |q A Mother's Request/Talk to Elzugoth
 step
 goto 47.71,42.85
-|tip Go up the stairs.
-'Use Gonfalon Square Wayshrine
+'Use _Gonfalon Square_ Wayshrine
 'Travel to _Northpoint_ in Rivenspire |q A Mother's Request/Go to Northsalt Village |future
 |tip Manually skip to the next step.
 step
 goto northpoint_base 22.21,14.33
-'Go to Northsalt Village |q A Mother's Request/Go to Northsalt Village |future
+'Go to _Northsalt Village_ |q A Mother's Request/Go to Northsalt Village |future
 step
 goto 31.09,15.20
 talk Captain Marso |q A Mother's Request/Talk to Captain Marso
 step
 goto rivenspire_base 73.64,19.67
-'Use Northpoint Wayshrine
+'Use _Northpoint_ Wayshrine
 'Travel to _Boralis_ |q A Mother's Request/Find Aurelia Jourvel
 |tip Manually skip to the next step.
 step
 goto 79.83,30.23
-'Untie Aurelia Jourvel |q A Mother's Request/Untie Aurelia |future
+'Untie _Aurelia Jourvel_ |q A Mother's Request/Untie Aurelia |future
 step
 goto 80.04,30.29
 talk Aurelia Jourvel |q A Mother's Request/Talk to Aurelia Jourvel
@@ -1216,12 +1171,12 @@ step
 talk Isobel Veloise
 accept The Princess Detective
 step
-'Open High Isle and Amenos Map
+'Open _High Isle and Amenos_ Map
 'Travel to _Gonfalon Square_  |q The Princess Detective/Go to the Ancient Anchor Inn |future
 |tip Manually skip to the next step.
 step
 goto u34_gonfalonbaycity_base 43.87,37.36
-'Open Ancient Anchor Inn |q The Princess Detective/Go to the Ancient Anchor Inn |future
+'Open _Ancient Anchor Inn_ |q The Princess Detective/Go to the Ancient Anchor Inn |future
 |tip Manually skip to the next step.
 step
 goto 43.40,36.42
@@ -1229,49 +1184,48 @@ goto 43.40,36.42
 talk Knight Commander Jourvel |q The Princess Detective/Talk to Knight Commander Jourvel |future
 step
 goto 44.08,35.26
-'Examine Aurelia's Letter |q The Princess Detective/Read Aurelia's Letter
+'Examine _Aurelia's Letter_ |q The Princess Detective/Read Aurelia's Letter
 step
 goto 44.08,35.26
 talk Isobel Veloise |q The Princess Detective/Talk to Isobel
 step
 goto 47.02,42.81
 |tip Leave Ancient Anchor Inn.
-'Use Gonfalon Square Wayshrine
+'Use _Gonfalon Square_ Wayshrine
 'Travel to _Fell's Run_ in Rivenspire |q The Princess Detective/Look for Aurelia in Fell's Run |future
 |tip Manually skip to the next step.
 step
 goto rivenspire_base 71.26,41.86
-'Open The Run Inn |q The Princess Detective/Look for Aurelia in Fell's Run |future
+'Open _The Run Inn_ |q The Princess Detective/Look for Aurelia in Fell's Run |future
 step
 goto 71.70,41.70
 talk Aurelia Jourvel |q The Princess Detective/Talk to Aurelia Jourvel
 step
-goto 59.10,49.91 |q The Princess Detective/Go to Obisidian Scar |tip Leave the Inn.
+goto 59.10,49.91 |q The Princess Detective/Go to Obsidian Scar |tip Leave the Inn.
 step
 goto 55.72,46.63
-'Go to Obisidian Scar |q The Princess Detective/Go to Obisidian Scar
+'Go to _Obisidian Scar_ |q The Princess Detective/Go to Obsidian Scar
 step
 goto 55.63,45.60
-|tip You can solo this part of the quest if you have decent AOE. (No boss kills).
-'Queue for Obisidian Scar in Dungeon Finder |q The Princess Detective/Find Captain Marso in Obisidian Scar |future
+|tip Recommended to get a group. This is a public dungeon.
+'Open _Obsidian Scar_ |q The Princess Detective/Find Captain Marso in Obsidian Scar |future
 |tip Manually skip to the next step.
 step
-goto obsidianscar_base 33.70,71.42 |q The Princess Detective/Find Captain Marso in Obisidian Scar |future
+goto obsidianscar_base 33.70,71.42 |q The Princess Detective/Find Captain Marso in Obsidian Scar |future
 step
-goto 77.92,71.17 |q The Princess Detective/Find Captain Marso in Obisidian Scar |future
+goto 77.92,71.17 |q The Princess Detective/Find Captain Marso in Obsidian Scar |future
 step
-goto 78.72,42.43 |q The Princess Detective/Find Captain Marso in Obisidian Scar |future
+goto 78.72,42.43 |q The Princess Detective/Find Captain Marso in Obsidian Scar |future
 step
 goto 89.38,38.32
-|tip Stay on the left side of the cage to avoid boss if go through without group.
-'Open Cage |q The Princess Detective/Free Marso
+'Open _Cage_ |q The Princess Detective/Free Marso |future
 step
 goto 77.92,71.17 |q The Princess Detective/Escort Marso Out of Obsidian Scar
 step
 goto 33.70,71.42 |q The Princess Detective/Escort Marso Out of Obsidian Scar
 step
 goto 33.31,89.52
-'Open Rivenspire |q The Princess Detective/Escort Marso Out of Obsidian Scar |future
+'Open _Rivenspire_ |q The Princess Detective/Escort Marso Out of Obsidian Scar |future
 |tip Manually skip to the next step.
 step
 goto rivenspire_base 55.61,46.03
@@ -1284,14 +1238,14 @@ goto 70.87,41.90
 talk Ennic Fenvale |q The Princess Detective/Talk to Ennic Fenvale |future
 step
 goto 67.11,44.67
-'Use Fell's Run Wayshrine
+'Use _Fell's Run_ Wayshrine
 'Travel to _Boralis_ |q The Princess Detective/Find Aurelia
 |tip Manually skip to the next step.
 step
 goto 75.64,29.93 |q The Princess Detective/Find Aurelia
 step
 goto 78.92,34.45
-'Untie Aurelia Jourvel |q The Princess Detective/Free Aurelia |future
+'Untie _Ropes_ |q The Princess Detective/Free Aurelia |future
 step
 goto 78.85,34.30
 talk Isobel Veloise |q The Princess Detective/Talk to Isobel
@@ -1299,12 +1253,12 @@ step
 goto 77.34,29.51 |q The Princess Detective/Visit the Couple at the Ancient Anchor Inn
 step
 goto 73.22,31.12
-'Use Boralis Wayshrine
+'Use _Boralis_ Wayshrine
 'Travel to _Gonfalon Square_ in High Isle |q The Princess Detective/Visit the Couple at the Ancient Anchor Inn |future
 |tip Manually skip to the next step.
 step
 goto u34_gonfalonbaycity_base 43.95,37.42
-'Open The Ancient Anchor Inn |q The Princess Detective/Visit the Couple at the Ancient Anchor Inn |future
+'Open _The Ancient Anchor Inn_ |q The Princess Detective/Visit the Couple at the Ancient Anchor Inn |future
 |tip Manually skip to the next step.
 step
 goto 44.14,35.47
@@ -1510,8 +1464,9 @@ goto stormhold_base 58.41,24.13
 |tip Manually skip to the next step.
 step
 goto 59.02,20.34
+|tip Go upstairs.
 talk Seviel Andril |q A Mother's Obsession/Find the Antique Inkwell
-'Tell him _I hear gold makes a pleasant distraction. Maybe you could count yours somewhere else? [69]_
+|tip Manually skip to the next step.
 step
 goto 59.32,20.22
 'Take _Antique Inkwell_ |q A Mother's Obsession/Find the Antique Inkwell
@@ -1536,10 +1491,11 @@ step
 goto stonefalls_base 76.43,40.25 |q A Mother's Obsession/Go to Edvilda's Camp |future
 step
 goto 75.94,40.90
-'Examine Homemade Scarf |q A Mother's Obsession/.*TRACKER GOAL TEXT.* |count 1 |future
+'Examine _Homemade Scarf_ |q A Mother's Obsession/.*TRACKER GOAL TEXT.* |count 1 |future
+|tip Manually skip to the next step.
 step
 goto 75.99,41.17
-'Examine Edvilda's Log |lorebook Edvilda's Log Book/3/42/51
+'Examine _Edvilda's Log_ |lorebook Edvilda's Log Book/3/42/51
 step
 goto 76.03,41.13
 talk Mirri Elendis |q A Mother's Obsession/Talk to Mirri Elendis |future
@@ -1549,7 +1505,7 @@ step
 goto 72.08,37.69 |q A Mother's Obsession/Go to the Inner Sea Armature
 step
 goto 71.79,39.67
-'Open Inner Sea Armature |q A Mother's Obsession/Go to the Inner Sea Armature |future
+'Open _Inner Sea Armature_ |q A Mother's Obsession/Go to the Inner Sea Armature |future
 |tip Manually skip to the next step.
 step
 goto innerseaarmature_base 83.04,37.58 |q A Mother's Obsession/Free Irenni Elendis |future
@@ -1557,7 +1513,7 @@ step
 goto 71.39,52.80 |q A Mother's Obsession/Free Irenni Elendis |future
 step
 goto 50.66,42.67
-'Unlock Chain Post Irenni Elendis |q A Mother's Obsession/Free Irenni Elendis |future
+'Unlock _Chain Post_ |q A Mother's Obsession/Free Irenni Elendis |future
 step
 goto 50.66,42.67
 talk Irenni Elendis |q A Mother's Obsession/Talk to Irenni Elendis |future
@@ -1567,13 +1523,11 @@ step
 goto 83.09,37.55 |q A Mother's Obsession/Escort Irenni Elendis to Safety |future
 step
 goto 78.43,27.20
-'Open Stonefalls |q A Mother's Obsession/Escort Irenni Elendis to Safety |future
+'Open _Stonefalls_ |q A Mother's Obsession/Escort Irenni Elendis to Safety |future
 |tip Manually skip to the next step.
 step
-goto stonefalls_base 71.74,39.14
-'Wait for Mirri and Irenni to Talk |q A Mother's Obsession/Wait for Mirri and Irenni to Talk |future
-step
-goto 71.40,38.79
+goto stonefalls_base 71.40,38.79
+|tip Watch the dialogue.
 talk Irenni Elendis |q A Mother's Obsession/Talk to Irenni Elendis |future
 |tip Manually skip to the next step.
 step
@@ -1586,24 +1540,22 @@ step
 talk Mirri Elendis
 accept Dead Weight
 step
-'Open Stonefalls Map
+'Open _Stonefalls_ Map
 'Travel to _Othrenis_ |q Dead Weight/Find the Elendis Family Plot in Othrenis |future
 |tip Manually skip to the next step.
 step
 goto 79.38,59.10
-'Light Votive Candles |q Dead Weight/Light the Votive Candles |future
+'Light _Votive Candles_ |q Dead Weight/Light the Votive Candles |future
 step
 goto 79.38,59.10
-'Watch Mirri Summon Her Ancestor |q Dead Weight/Watch Mirri Summon Her Ancestor
-step
-goto 79.38,59.10
-talk Bralen Elendis |q Dead Weight/Talk to Bralen Elendis
+|tip Watch the dialogue.
+talk Bralen Elendis |q Dead Weight/Talk to Bralen Elendis |future
 step
 goto 79.38,59.10
 talk Mirri Elendis |q Dead Weight/Talk to Mirri Elendis
 step
 goto 72.15,59.12
-'Use Othrenis Wayshrine
+'Use _Othrenis_ Wayshrine
 'Travel to _Vulkhel Guard_ in Auridon |q Dead Weight/Go to the Vulkhel Guard Mages Guild |future
 |tip Manually skip to the next step.
 step
@@ -1612,28 +1564,27 @@ talk Takaano |q Dead Weight/Ask About Onimiril |future
 step
 goto 42.09,66.46
 |tip Follow the Chicken to this spot.
-'Grab Chicken |q Dead Weight/Find Arelette the Chicken
+'Grab _Chicken_ |q Dead Weight/Find Arelette the Chicken
 step
 goto 21.97,54.32
 talk Takaano |q Dead Weight/Talk to Takaano
 step
 goto 54.74,41.05
-'Use Vulkhel Guard Wayshrine
+'Use _Vulkhel Guard_ Wayshrine
 'Travel to _Skywatch_ |q Dead Weight/Find Onimiril's Retreat
 |tip Manually skip to the next step.
 step
 goto auridon_base 49.07,41.43 |q Dead Weight/Find Onimiril's Retreat
 step
 goto 49.34,43.38
-kill Onimiril
-'Examine Onimiril's Writings |q Dead Weight/Search Onimiril's Retreat |future
+'Examine _Onimiril's Writings_ |q Dead Weight/Search Onimiril's Retreat |future
 step
-'Open The Rift Map
+'Open _The Rift_ Map
 'Travel to _Honrich Tower_ |q Dead Weight/Go to Avanchnzel |future
 |tip Manually skip to the next step.
 step
 goto therift_base 38.33,57.37
-'Open Avanchnzel |q Dead Weight/Go to Avanchnzel |future
+'Open _Avanchnzel_ |q Dead Weight/Go to Avanchnzel |future
 |tip Manually skip to the next step.
 step
 goto avancheznel_base 9.82,26.41 |q Dead Weight/Find the Dwarven Puzzle Box |future
@@ -1641,27 +1592,27 @@ step
 goto 25.27,71.08 |q Dead Weight/Find the Dwarven Puzzle Box |future
 step
 goto 41.82,81.89
-'Take Dwarven Puzzle Box |q Dead Weight/Find the Dwarven Puzzle Box |future
+'Take _Dwarven Puzzle Box_ |q Dead Weight/Find the Dwarven Puzzle Box |future
 step
 goto 25.27,71.08 |q Dead Weight/Talk to Mirri Elendis Outside Avanchnzel
 step
 goto 9.82,26.41 |q Dead Weight/Talk to Mirri Elendis Outside Avanchnzel
 step
 goto 23.19,37.51
-'Open The Rift |q Dead Weight/Talk to Mirri Elendis Outside Avanchnzel |future
+'Open _The Rift_ |q Dead Weight/Talk to Mirri Elendis Outside Avanchnzel |future
 |tip Manually skip to the next step.
 step
 goto therift_base 38.33,57.38
 talk Mirri Elendis |q Dead Weight/Talk to Mirri Elendis Outside Avanchnzel |future
 step
 goto 42.06,51.83
-'Use Honrich Tower
+'Use _Honrich Tower_ Wayshrine
 'Travel to _Othrenis_ in Stonefalls |q Dead Weight/Return the Puzzle Box to Mirri's Ancestor |future
 |tip Manually skip to the next step.
 step
 goto stonefalls_base 79.37,59.11
 |tip Watch the dialogue.
-'Place Bralen Elendis's Shrine |q Dead Weight/Return the Puzzle Box to Mirri's Ancestor |future
+'Place _Bralen Elendis's Shrine_ |q Dead Weight/Return the Puzzle Box to Mirri's Ancestor |future
 step
 goto 79.37,59.11
 talk Bralen Elendis |q Dead Weight/Talk to Bralen Elendis
@@ -1672,7 +1623,7 @@ turnin Dead Weight
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Companions\\Sharp-as-Night",[[
-loadingimage loadscreen_u30_blackwood_zone_01.dds
+loadingimage loadscreen_gorne_01.dds
 description Sharp-as-Night Unlock quest and Rapport Quests.
 step
 'Open _Telvanni Peninsula_ Map
@@ -1817,10 +1768,288 @@ step
 goto 17.65,79.18
 talk Sharp-as-Night
 turnin The Double Edge
+step
+'_Next to you_
+|tip Reach Friendly rapport with Sharp-as-Night
+talk Sharp-as-Night
+accept Between a Rock and a Whetstone
+step
+'Open _Vvardenfell_ Map
+'Travel to _Sadrith Mora_ |q Between a Rock and a Whetstone/Find Federo in Sadrith Mora
+|tip Manually skip to the next step.
+step
+goto sadrithmora_base 46.59,72.99
+|tip Inside Federo's Place.
+'Examine _Clothing_ |q Between a Rock and a Whetstone/Examine Clothing |future
+step
+goto 46.87,72.03
+|tip Watch the dialogue.
+'Examine _Wine Bottle_ |q Between a Rock and a Whetstone/Search Federo's Place
+step
+goto 46.36,71.82
+talk Ganthelen |q Between a Rock and a Whetstone/Talk to Ganthelen
+step
+goto 46.36,71.82
+talk Sharp-as-Night |q Between a Rock and a Whetstone/Talk to Sharp
+step
+goto 29.58,57.70
+'Use _Sadrith Mora_ Wayshrine
+'Travel to _Kynesgrove_ in Eastmarch |q Between a Rock and a Whetstone/Go to Tinkerer Tobin's Workshop in Eastmarch
+|tip Manually skip to the next step.
+step
+goto eastmarch_base 48.38,46.75 |q Between a Rock and a Whetstone/Go to Tinkerer Tobin's Workshop in Eastmarch
+step
+goto 47.82,48.64
+talk Federo Endril |q Between a Rock and a Whetstone/Talk to Federo Endril |future
+step
+goto 47.82,48.64
+talk Sharp-as-Night |q Between a Rock and a Whetstone/Talk to Sharp |future
+|tip Manually skip to the next step.
+step
+goto 47.63,39.95
+'Use _Kynesgrove_ Wayshrine
+'Travel to _Windhelm_ |q Between a Rock and a Whetstone/Go to the Adepts Retreat
+|tip Manually skip to the next step.
+step
+goto windhelm_base 72.00,23.97 |q Between a Rock and a Whetstone/Go to the Adepts Retreat
+step
+goto 69.17,21.22
+'Open _The Adept's Retreat_ |q Between a Rock and a Whetstone/Go to the Adepts Retreat
+step
+goto 67.64,19.92
+talk Mevei Andros |q Between a Rock and a Whetstone/Talk to Mevei Andros
+step
+goto 67.24,20.09
+'Examine _Courier's Permit_ |q Between a Rock and a Whetstone/Get Forged Papers
+step
+goto 44.73,46.13 |q Between a Rock and a Whetstone/Acquire Clothing for Federo
+step
+goto 23.43,42.10
+'Open _Clothing Chest_ |q Between a Rock and a Whetstone/Acquire Clothing for Federo
+step
+goto 65.95,44.70
+'Open _Windhelm Outlaws Refuge_ |q Between a Rock and a Whetstone/Talk to Federo |future
+|tip Manually skip to the next step.
+step
+goto eastmarchrefuge_base 36.13,51.67
+talk Federo Endril |q Between a Rock and a Whetstone/Talk to Federo |future
+step
+goto 35.25,51.16
+talk Sharp-at-Night |q Between a Rock and a Whetstone/Talk to Sharp |future
+|tip Manually skip to the next step.
+step
+'Open _Eastmarch_ Map
+'Travel to _Kynesgrove_ |q Between a Rock and a Whetstone/Find Buried Information Cache
+|tip Manually skip to the next step.
+step
+goto eastmarch_base 42.11,36.38
+'Reveal _Hidden Cache_ |q Between a Rock and a Whetstone/Find Buried Information Cache |future
+step
+goto 42.09,36.41
+'Examine _Another Letter from the Reformer_ |q Between a Rock and a Whetstone/.*Investigate Information Cache.* |count 1
+'Examine _Mysterious Letter Federo_ |q Between a Rock and a Whetstone/.*Investigate Information Cache.* |count 2
+'Examine _Note from Gadri to Federo_ |q Between a Rock and a Whetstone/.*Investigate Information Cache.* |count 3
+step
+goto 42.09,36.40
+talk Sharp-at-Night |q Between a Rock and a Whetstone/Talk to Sharp |future
+step
+'Open _Vvardenfell_ Map
+'Travel to _Gnisis_ |q Between a Rock and a Whetstone/Go to the Bridge at Arkngthunch-Sturdumz |future
+|tip Manually skip to the next step.
+step
+goto vvardenfell_base 19.26,35.83 |q Between a Rock and a Whetstone/Go to the Bridge at Arkngthunch-Sturdumz |future
+step
+goto 17.00,35.14 |q Between a Rock and a Whetstone/Go to the Bridge at Arkngthunch-Sturdumz |future
+step
+goto 18.17,29.68 |q Between a Rock and a Whetstone/Go to the Bridge at Arkngthunch-Sturdumz |future
+step
+goto 16.97,29.63
+talk Sharp-at-Night |q Between a Rock and a Whetstone/Talk to Sharp |future
+step
+goto 11.02,29.66
+|tip Drop down carefully.
+'Open _Coffer_ |q Between a Rock and a Whetstone/Find the Hidden Key |future
+step
+goto 11.08,29.67
+'Open _Reformer's Laboratory_ |q Between a Rock and a Whetstone/Enter the Reformer's Labatory |future
+|tip Manually skip to the next step.
+step
+goto 10.76,28.90 |q Between a Rock and a Whetstone/Investigate the Reformer's Laboratory
+step
+goto 10.93,29.31
+'Open _Procedure Room_ |q Between a Rock and a Whetstone/Investigate the Reformer's Laboratory |future
+|tip Manually skip to the next step.
+step
+goto 11.05,29.23
+'Examine _Sondivel's Journal_ |q Between a Rock and a Whetstone/Journal |future
+step
+goto 11.05,29.30
+|tip Watch the dialogue.
+'Destroy _Tyranite Calx_ |q Between a Rock and a Whetstone/Smash the Strange Metal |future
+step
+goto 10.76,28.90 |q Between a Rock and a Whetstone/Leave the Reformer's Lab |future
+step
+goto 11.18,28.89 |q Between a Rock and a Whetstone/Leave the Reformer's Lab |future
+step
+goto 11.11,29.81
+talk Sharp-as-Night
+turnin Between a Rock and a Whetstone
+step
+'_Next to you_
+|tip Reach Close rapport with Sharp-as-Night
+talk Sharp-as-Night
+accept Dim and Distant Pasts
+step
+'Open _Shadowfen_ Map
+'Travel to _Forsaken Hamlet_ |q Dim and Distant Pasts/Find Dimik-Ei
+|tip Manually skip to the next step.
+step
+goto shadowfen_base 71.28,43.50
+talk Dimik-ei |q Dim and Distant Pasts/Talk to Dimik-Ei |future
+step
+goto 77.62,45.26 |q Dim and Distant Pasts/Go to Broken Tusk |future
+step
+goto 80.82,41.98 |q Dim and Distant Pasts/Go to Broken Tusk |future
+step
+goto 82.53,38.36
+talk Sharp-at-Night |q Dim and Distant Pasts/Enter Broken Tusk |future
+|tip Manually skip to the next step.
+step
+goto 82.63,37.71
+'Open _Broken Tusk_ |q Dim and Distant Pasts/Enter Broken Tusk |future
+|tip Manually skip to the next step.
+step
+goto brokentuskcave_base 11.91,53.00 |q Dim and Distant Pasts/Search for Tyranite Calx |future
+step
+goto 22.15,21.02
+'Take _Tyranite Calx_ |q Dim and Distant Pasts/Search for Tyranite Calx
+step
+'Open _Shadowfen_ Map
+'Travel to _Forsaken Hamlet_ |q Dim and Distant Pasts/Return to Dimik-Ei |future
+|tip Manually skip to the next step.
+step
+goto shadowfen_base 71.28,43.50
+talk Dimik-ei |q Dim and Distant Pasts/Talk to Dimik-Ei |future
+step
+goto 71.301,43.29
+|tip Watch the dialogue.
+'Touch _Tyranite Calx_ |q Dim and Distant Pasts/Touch the Tyranite Calx |future
+step
+goto 71.29,43.31
+|tip Watch the dialogue.
+'Take _Bucket_ |q Dim and Distant Pasts/Take the Bucket |future
+|tip Manually skip to the next step.
+step
+goto 71.32,43.37
+talk Sondivel Ulres |q Dim and Distant Pasts/Talk to Sondivel Ulres |future
+step
+goto 71.32,43.37
+'Throw _Bucket_ |q Dim and Distant Pasts/Defy Sondivel Ulres |future
+step
+goto 71.56,43.73
+|tip Watch the dialogue.
+'Examine _Dimik-ei's Amulet_ |q Dim and Distant Pasts/Pick up the Amulet |future
+step
+goto 71.56,43.72
+|tip Watch the dialogue.
+talk Sharp-as-Night
+turnin Dim and Distant Pasts
+step
+'_Next to you_
+|tip Reach Allied rapport with Sharp-as-Nigh
+talk Sharp-as-Nigh
+accept Light the Way to Freedom
+step
+'Open _Reaper's March_
+'Travel to _Rawl'kha_ |q Light the Way to Freedom/Meet Mevei in Rawl'kha |future
+|tip Manually skip to the next step.
+step
+goto rawlkha_base 59.49,33.11
+talk Mevei Andros |q Light the Way to Freedom/Talk to Mevei |future
+step
+goto 58.94,32.42
+talk Sharp-as-Night |q Light the Way to Freedom/Talk to Sharp |future
+step
+goto 38.04,53.70
+'Use _Rawl'kha_
+'Travel to _Fort Grimwatch_ |q Light the Way to Freedom/Look for Starflower in Senalana |future
+|tip Manually skip to the next step.
+step
+goto reapersmarch_base 44.30,15.00
+'Open _Senalana Ruins_ |q Light the Way to Freedom/Enter Elistrenne Starflower's Hideout |future
+step
+goto 43.96,17.09
+kill Elistrenne Starflower |q Light the Way to Freedom/Kill Elistrenne Starflower |future
+|tip Manually skip to the next step.
+step
+goto 43.97,17.43
+'Take _Elistrenne's Pack_ |q Light the Way to Freedom/.*Search Elistrenne Starflower's Hideout.* |count 1 |future
+step
+goto 44.52,17.26
+'Examine _Letter to Elistrenne Starflower_ |q Light the Way to Freedom/.*Search Elistrenne Starflower's Hideout.* |count 2 |future
+step
+'Open _Reaper's March_ Map
+'Travel to _Arenthia_ |q Light the Way to Freedom/Meet Mevei Near Arenthia |future
+|tip Manually skip to the next step.
+step
+goto 50.56,15.60
+talk Mevei Andros |q Light the Way to Freedom/Talk to Mevei |future
+step
+goto arenthia_base 34.84,52.01
+'Use _Arenthia_ Wayshrine
+'Travel to _Obsidian Gorge_ in Deshaan |q Light the Way to Freedom/Go to the Forgotten Crypts |future
+|tip Manually skip to the next step.
+step
+goto deshaan_base 22.70,51.46 |q Light the Way to Freedom/Go to the Forgotten Crypts |future
+step
+goto 20.11,44.83
+|tip Recommended to get a group. This is a public dungeon.
+'Open _Forgotten Crypts_ |q Light the Way to Freedom/Go to the Forgotten Crypts |future
+|tip Manually skip to the next step.
+step
+goto forgottencrypts_base 29.13,79.22
+talk Sharp-as-Night |q Light the Way to Freedom/Talk to Sharp |future
+|tip Manually skip to the next step.
+step
+goto 28.75,75.71
+'Place _Tyranite Calx_ |q Light the Way to Freedom/Help Sharp with the Spell |future
+step
+goto 59.86,49.17 |q Light the Way to Freedom/Search the Forgotten Crypts |future
+step
+goto 72.24,22.62
+'Open _Sondivel's Lair_ |q Light the Way to Freedom/Find Sondivel Ulres |future
+|tip Manually skip to the next step.
+step
+goto U38_compfc_sondivellair_base48.91,20.51
+'Open _Sondivel's Private Chamber_ |q Light the Way to Freedom/Find Sondivel Ulres |future
+step
+goto 59.30,58.59
+kill Sondivel Ulres |q Light the Way to Freedom/Defeat Sondivel Ulres |future
+step
+goto 66.09,68.21
+'Open _Cage_ |q Light the Way to Freedom/Unlock Second Cage |future
+step
+goto 65.19,69.09
+'Open _Cage_ |q Light the Way to Freedom/Free Dimik-Ei and Other Captives |future
+step
+goto 57.03,69.77
+'Use _Research Notes_ |q Light the Way to Freedom/Burn the Research Notes |future
+step
+goto 58.88,72.61
+'Destroy _Tyranite Calx_ |q Light the Way to Freedom/Destroy Tyranite Calx |future
+step
+'Open _Deshaan_ Map
+'Travel to _West Narsis_ |q Light the Way to Freedom/Meet Mimik-Ei in Narsis |future
+|tip Manually skip to the next step.
+step
+goto narsis_base 60.12,72.58
+talk Sharp-at-Night
+turnin Light the Way to Freedom
+step
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Companions\\Azandar Al-Cybiades",[[
-loadingimage loadscreen_u30_blackwood_zone_01.dds
+loadingimage loadscreen_underweave_01.dds
 description Azandar Al-Cybiades Unlock quest and Rapport Quests.
 step
 'Open _Telvanni Peninsula_ Map
@@ -2072,5 +2301,445 @@ talk Azandar
 turnin The Fateweaver Key
 step
 '_Next to you_
-|tip Reach Friendly rapport with 
+|tip Reach Friendly rapport with Azandar Al-Cybiades
+talk Azandar
+accept Paths Unwalked
+step
+'Open _Auridon_ Map
+'Travel to _Skywatch_ |q Paths Unwalked/Reach Azandar's Sanctum
+|tip Manually skip to the next step.
+step
+goto skywatch_base 50.83,47.13
+'Open _Sanctum Sanctorum_ |q Paths Unwalked/Reach Azandar's Sanctum
+|tip Manually skip to the next step.
+step
+goto u38_compskywatchsanct_base 80.40,35.42
+talk Azandar |q Paths Unwalked/Talk to Azandar |future
+step
+goto 89.12,24.79
+'Open _Rummage Bin_ |q Paths Unwalked/Collect the Arcane Stencil
+step
+goto 89.40,41.89
+'Use _Magicka Font_ |q Paths Unwalked/Charge Azandar's Stencil
+step
+goto 84.81,30.20
+'Use _Gubbins_ |q Paths Unwalked/Use the Stencil on Gubbins
+step
+goto 84.81,30.20
+'Take _Gubbins Goop_ |q Paths Unwalked/Collect the Arcane Bobbin
+step
+goto 84.96,30.23
+talk Azandar |q Paths Unwalked/Talk to Azandar
+step
+goto 80.59,49.77
+'Open _Inner Sanctum_ |q Paths Unwalked/Scry for Frayed Fates
+|tip Manually skip to the next step.
+step
+goto 64.80,67.18
+'Activate _Scrying Beacon_ |q Paths Unwalked/Scry for Frayed Fates
+|tip Manually skip to the next step.
+step
+goto 68.90,71.24
+'Activate _Scrying Beacon_ |q Paths Unwalked/Scry for Frayed Fates
+|tip Manually skip to the next step.
+step
+goto 64.74,76.77
+'Activate _Scrying Beacon_ |q Paths Unwalked/Scry for Frayed Fates
+|tip Manually skip to the next step.
+step
+goto 58.96,73.12
+'Activate _Scrying Beacon_ |q Paths Unwalked/Scry for Frayed Fates
+step
+goto 58.96,73.12
+talk Azandar |q Paths Unwalked/Talk to Azandar
+step
+'Open _Alik'r Desert_ Map
+'Travel to _HoonDing's Watch_ |q Paths Unwalked/Go to Kozanset
+|tip Manually skip to the next step.
+step
+goto kozanset_base 58.97,40.68
+'Untie _Fate Thread_ |q Paths Unwalked/.*Find and Untie the Frayed Fates.* |future
+|tip Manually skip to the next step.
+step
+goto 57.54,28.90 
+'Untie _Fate Thread_ |q Paths Unwalked/.*Find and Untie the Frayed Fates.*
+|tip Manually skip to the next step.
+step
+goto 46.92,41.97
+|tip Watch the dialogue.
+'Untie _Frayed Fate_ |q Paths Unwalked/.*Find and Untie the Frayed Fates.* |count 1
+step
+goto 51.20,46.69
+'Untie _Fate Thread_ |q Paths Unwalked/.*Find and Untie the Frayed Fates.*
+|tip Manually skip to the next step.
+step
+goto 39.63,50.42
+'Untie _Fate Thread_ |q Paths Unwalked/.*Find and Untie the Frayed Fates.*
+|tip Manually skip to the next step.
+step
+goto 39.66,38.57
+|tip Watch the dialogue.
+'Untie _Frayed Fate_ |q Paths Unwalked/.*Find and Untie the Frayed Fates.* |count 2f
+step
+goto 39.54,38.39
+talk Azandar |q Paths Unwalked/Follow Threads Out of Kozanset |future
+|tip Manually skip to the next step.
+step
+goto 34.20,24.79
+'Untie _Fate Thread_ |q Paths Unwalked/Follow Threads Out of Kozanset
+|tip Manually skip to the next step.
+step
+goto alikr_base 72.96,40.64
+'Untie _Fate Thread_ |q Paths Unwalked/Follow Threads Out of Kozanset
+|tip Manually skip to the next step.
+step
+goto 72.09,39.82
+'Untie _Fate Thread_ |q Paths Unwalked/Follow Threads Out of Kozanset
+|tip Manually skip to the next step.
+step
+goto 70.52,38.91
+|tip Recommended to get a group. This is a public dungeon.
+'Open _Lost City of Na-Totambu_ |q Paths Unwalked/Enter the Lost City of Na-Totambu |future
+|tip Manually skip to the next step.
+step
+goto lostcity_base 46.86,90.74
+'Untie _Fate Thread_ |q Paths Unwalked/Find the Adversary
+|tip Manually skip to the next step.
+step
+goto 48.13,71.47
+'Untie _Fate Thread_ |q Paths Unwalked/Find the Adversary
+|tip Manually skip to the next step.
+step
+goto 61.11,68.96
+'Untie _Fate Thread_ |q Paths Unwalked/Find the Adversary
+|tip Manually skip to the next step.
+step
+goto 68.19,67.99 |q Paths Unwalked/Find the Adversary
+step
+goto 66.26,57.37
+'Untie _Fate Thread_ |q Paths Unwalked/Find the Adversary
+|tip Manually skip to the next step.
+step
+goto 68.44,43.66
+|tip Watch the dialogue.
+'Untie _Frayed Fate_ |q Paths Unwalked/Stop the Adversary |future
+|tip Manually skip to the next step.
+step
+goto 69.32,45.72
+'Open _Alik'r Desert_ |q Paths Unwalked/Leave the Lost City of Na-Totambu |future
+step
+talk Azandar
+turnin Paths Unwalked
+step
+'_Next to you_
+|tip Reach Close rapport with Azandar Al-Cybiades
+talk Azandar
+accept Adversarial Adventures
+step
+'Open _Auridon_ Map
+'Travel to _Skywatch_ |q Adversarial Adventures/Go to Azandar's Sanctum
+|tip Manually skip to the next step.
+step
+goto skywatch_base 50.83,47.13
+'Open _Sanctum Sanctorum_ |q Adversarial Adventures/Go to Azandar's Sanctum
+|tip Manually skip to the next step.
+step
+goto u38_compskywatchsanct_base 80.40,35.42
+talk Azandar |q Adversarial Adventures/Talk to Azandar |future
+step 
+goto 80.59,49.77
+'Open _Inner Sanctum_ |q Adversarial Adventures/Locate a Frayed Fate
+|tip Manually skip to the next step.
+step
+goto 64.80,67.18
+'Activate _Scrying Beacon_ |q Adversarial Adventures/Locate a Frayed Fate
+|tip Manually skip to the next step.
+step
+goto 68.90,71.24
+'Activate _Scrying Beacon_ |q Adversarial Adventures/Locate a Frayed Fate
+|tip Manually skip to the next step.
+step
+goto 64.74,76.77
+'Activate _Scrying Beacon_ |q Adversarial Adventures/Locate a Frayed Fate
+|tip Manually skip to the next step.
+step
+goto 58.96,73.12
+|tip Watch the dialogue.
+'Activate _Scrying Beacon_ |q Adversarial Adventures/Locate a Frayed Fate
+step
+goto 58.96,73.12
+talk Azandar |q Adversarial Adventures/Talk to Azandar
+step
+'Open _Stonefalls_ Map
+'Travel to _Ebonheart_ |q Adversarial Adventures/Go to Ebonheart
+|tip Manually skip to the next step.
+step
+goto ebonheart_base 52.07,64.96 |q Adversarial Adventures/Track the Frayed Fate |future
+step
+goto 51.91,79.56
+'Untie _Fate of Thread_ |q Adversarial Adventures/Track the Frayed Fate |future
+|tip Manually skip to the next step.
+step
+goto 34.56,81.49
+'Untie _Fate of Thread_ |q Adversarial Adventures/Track the Frayed Fate
+|tip Manually skip to the next step.
+step
+goto stonefalls_base 48.49,54.68
+'Untie _Fate of Thread_ |q Adversarial Adventures/Track the Frayed Fate
+|tip Manually skip to the next step.
+step
+goto 47.20,52.66
+'Untie _Fate of Thread_ |q Adversarial Adventures/Track the Frayed Fate
+|tip Manually skip to the next step.
+step
+goto 44.49,51.43
+'Untie _Fate of Thread_ |q Adversarial Adventures/Track the Frayed Fate
+|tip Manually skip to the next step.
+step
+goto 43.31,54.45 |q Adversarial Adventures/Track the Frayed Fate
+step
+goto 43.40,53.29
+'Untie _Frayed Fate_ |q Adversarial Adventures/Examine the Frayed Fate |future
+step
+goto 43.41,53.28
+talk Azandar |q Adversarial Adventures/Talk to Azandar
+step
+'Open _Malabal Tor_ Map
+'Travel to _Ilayas_ |q Adversarial Adventures/Go to Ilayas
+|tip Manually skip to the next step.
+step
+goto malabaltor_base 22.54,52.09
+'Untie _Fate of Thread_ |q Adversarial Adventures/Search the Area |future
+|tip Manually skip to the next step.
+step
+goto 22.64,49.17
+'Untie _Fate of Thread_ |q Adversarial Adventures/Search the Area
+|tip Manually skip to the next step.
+step
+goto 22.55,47.89 |q Adversarial Adventures/Search the Area
+step
+goto 21.98,47.91
+|tip Watch the dialogue.
+'Untie _Frayed Fate_ |q Adversarial Adventures/Examine the Frayed Fate |future
+step
+goto 21.93,47.98
+'Use _Portal_ |q Adversarial Adventures/Enter the Portal |future
+|tip Manually skip to the next step.
+step
+goto vvardenfell_base 67.10,65.72
+talk Azandar |q Adversarial Adventures/Talk to Azandar |future
+step
+goto 67.31,65.93
+|tip Recommended to get a group. This is a public dungeon.
+'Open _Nchuleftingth_ |q Adversarial Adventures/Enter Nchuleftingth |future
+|tip Manually skip to the next step.
+step
+goto nchuleftingth1_base 46.45,63.42 |q Adversarial Adventures/Reach the Ametric Interval Chamber |future
+step
+goto 67.14,49.15 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto 55.30,35.01 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto nchuleftingth3_base 32.40,28.68 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto 45.20,29.23 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto 42.95,48.01 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto 49.65,54.38 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto nchuleftingth2_base 44.63,66.20 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto 83.41,36.96 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto nchuleftingth3_base 86.40,67.46 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto 90.11,44.43
+'Open _Nchuleftingth Bailey_ |q Adversarial Adventures/Reach the Ametric Interval Chamber
+|tip Manually skip to the next step.
+step
+goto nchuleftingth4_base 31.78,53.95
+'Open _Nchuleftingth Ruins_ |q Adversarial Adventures/Reach the Ametric Interval Chamber
+|tip Manually skip to the next step.
+step
+goto 53.57,53.57 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto 59.53,73.25
+'Open _Ametric Interval Chamber_ |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+'_Northwest_
+'Untie _Frayed Fate_ |q Adversarial Adventures/Dispel the Frayed Fates
+|tip Manually skip to the next step.
+step
+'_Northeast_
+'Untie _Frayed Fate_ |q Adversarial Adventures/Dispel the Frayed Fates
+step
+'_West and Upstairs_
+'Open _Vvardenfell_ |q Adversarial Adventures/Leave Nchuleftingth
+step
+goto vvardenfell_base 66.49,66.80
+talk Azandar
+turnin Adversarial Adventures
+step
+'_Next to you_
+|tip Reach Allied rapport with Azandar Al-Cybiades
+talk Azandar
+accept Tempting Fates
+step
+'Open _Apocrypha_ Map
+'Travel to _Soundless Bight_ |q Tempting Fates/Go to Quires Wind
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 85.77,70.58 |q Tempting Fates/Go to Quires Wind
+step
+goto 90.99,68.30 |q Tempting Fates/Go to Quires Wind
+step
+goto 89.56,67.16 |q Tempting Fates/Go to Quires Wind
+step
+goto 90.37,66.55
+'Open _Quires Wind_ |q Tempting Fates/Go to Quires Wind |future
+|tip Manually skip to the next step.
+step
+goto u38_quires_wind_base 39.82,76.43 |q Tempting Fates/Find the Unraveling Palimpsest |future
+step
+goto 40.53,44.01 |q Tempting Fates/Find the Unraveling Palimpsest |future
+step
+goto 70.35,44.05 |q Tempting Fates/Find the Unraveling Palimpsest |future
+step
+goto 69.07,38.26
+'Examine _Unraveling Palimpsest_ |q Tempting Fates/Find the Unraveling Palimpsest |future
+step
+goto 68.98,37.88
+talk Azandar |q Tempting Fates/Talk to Azandar |future
+step
+'Open _Vvardenfell_
+'Travel to _Balmora_ |q Tempting Fates/Obtain a Bloodstone from Balmora |future
+|tip Manually skip to the next step.
+step
+goto balmora_base 55.62,57.07 |q Tempting Fates/Obtain a Bloodstone from Balmora |future
+step
+goto 40.77,46.90
+'Open _The Randy Netch Inn_ |q Tempting Fates/Obtain a Bloodstone from Balmora |future
+|tip Manually skip to the next step.
+step
+goto 35.24,53.20
+|tip Go upstairs.
+talk Spellwright Nilvon |q Tempting Fates/Obtain a Bloodstone from Balmora |future
+|tip Manually skip to the next step.
+step
+goto 35.24,53.20
+'Take _Bloodstone_ |q Tempting Fates/Obtain a Bloodstone from Balmora |future
+step
+goto 35.19,53.21
+'Open _Craglorn_ Map
+'Travel to _Belkarth_ |q Tempting Fates/Obtain Rubric Near Belkarth |future
+|tip Manually skip to the next step.
+step
+goto belkarth_base 25.10,68.97 |q Tempting Fates/Obtain Rubric Near Belkarth |future
+step
+goto 24.97,57.11
+'Open _Star-Gazers' Observatory_ |q Tempting Fates/Obtain Rubric Near Belkarth |future
+|tip Manually skip to the next step.
+step
+goto 20.68,46.42
+|tip Go upstairs.
+'Search _Star-Gazer Coffer_ |q Tempting Fates/Obtain Rubric Near Belkarth |future
+step
+'Open _Deshaan_ Map
+'Travel to _Shad Astula_ |q Tempting Fates/Obtain Nathriin's Commentaries at Shad Astula |future
+|tip Manually skip to the next step.
+step
+goto deshaan_base 59.69,33.05
+'Open _Arch-Mage's Office_ |q Tempting Fates/Obtain Nathriin's Commentaries at Shad Astula |future
+|tip Manually skip to the next step.
+step
+goto 59.24,32.77
+talk Elydrina Nathriin |q Tempting Fates/Obtain Nathriin's Commentaries at Shad Astula |future
+|tip Manually skip to the next step.
+step
+goto 59.24,32.77
+talk Azandar |q Tempting Fates/Talk to Azandar |future
+|tip Manually skip to the next step.
+step
+goto 59.28,32.93
+|tip Watch the dialogue.
+'Examine _Commentary on Fate Dialectics_ |q Tempting Fates/Obtain Nathriin's Commentaries at Shad Astula |future
+step
+goto 59.28,32.93
+talk Azandar |q Tempting Fates/Talk to Azandar |future
+step
+'Open _The Rift_ Map
+'Travel to _Riften_ |q Tempting Fates/Reach the Riften Guild Hall Ritual |future
+|tip Manually skip to the next step.
+step
+goto riften_base74.04,59.31
+'Open _Mage Guild_ |q Tempting Fates/Reach the Riften Guild Hall Ritual |future
+|tip Manually skip to the next step.
+step
+goto 78.89,61.81
+'Open _Ritual Room_ |q Tempting Fates/Reach the Riften Guild Hall Ritual |future
+|tip Manually skip to the next step.
+step
+goto 80.85,60.43
+|tip Watch the dialogue.
+'Use _Warded Ritual Room_ |q Tempting Fates/Wait for Azandar to Summon Tem |future
+|tip Manually skip to the next step.
+step
+goto 78.53,61.90
+|tip Watch the dialogue.
+'Place _Ritual Flames_ |q Tempting Fates/Place the Anchors in the Ritual Flames |future
+step
+'Open _Auridon_ Map
+'Travel to _Skywatch_ |q Tempting Fates/Go to Azandar's Sanctum |future
+|tip Manually skip to the next step.
+step
+goto skywatch_base 50.01,47.12
+'Go to _Azandar's Sanctum_ |q Tempting Fates/Go to Azandar's Sanctum |future
+step
+goto 50.01,47.12
+talk Azandar |q Tempting Fates/Talk to Azandar |future
+step
+goto 18.35,42.01
+'Use _Skywatch_ Wayshrine
+'Travel to _Mathiisen_ |q Tempting Fates/Go to Entila's Folly |future
+|tip Manually skip to the next step.
+step
+goto auridon_base 55.75,58.91 |q Tempting Fates/Go to Entila's Folly |future
+step
+goto 56.05,55.80
+'Open _Entila's Folly_ |q Tempting Fates/Go to Entila's Folly |future
+|tip Manually skip to the next step.
+step
+goto entilasfolly_base 61.79,54.14 |q Tempting Fates/Find the Sanctum Sanctorum Passage |future
+step
+goto 62.14,74.16 |q Tempting Fates/Find the Sanctum Sanctorum Passage |future
+step
+goto 79.29,78.71 |q Tempting Fates/Find the Sanctum Sanctorum Passage |future
+step
+goto 87.22,66.87
+'Open _Sanctum Santorum Passage_ |q Tempting Fates/Find the Sanctum Sanctorum Passage |future
+step
+goto u38_compskywatchsanct_base 47.80,49.58
+'Open _Inner Sanctum_ |q Tempting Fates/Get to Azandar's Inner Sanctum |future
+|tip Manually skip to the next step.
+step
+goto 68.33,77.09
+|tip Watch the dialogue.
+kill The Adversary |q Tempting Fates/Defeat the Adversary |future
+step
+goto 68.33,77.09
+'Use _Rune of Unmaking_ |q Tempting Fates/Trigger the Rune of Unmaking |future
+step
+goto 67.55,82.12
+'Open _Magicka Font_ |q Tempting Fates/Burn Out the Fateweaver Key |future
+step
+goto 66.36,74.49
+'Use _Portal_ |q Tempting Fates/Use Azandar's Portal |future
+step
+goto skywatch_base 73.72,19.09
+'Throw _Cliff Edge_ |q Tempting Fates/Throw the Fateweaver Key from the Cliff |future
+step
+goto 73.19,19.75
+talk Azandar
+turnin Tempting Fates
 ]])
