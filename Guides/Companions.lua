@@ -41,7 +41,7 @@ step
 goto 31.52,48.57 |q Competition and Contracts/Explore Deepscorn Hollow
 step
 goto 26.76,46.31
-'Open _Deepscorn Cavern_ |q Competition and Contracts/Explore Deepscorn Hollow
+'Enter _Deepscorn Cavern_ |q Competition and Contracts/Explore Deepscorn Hollow
 |tip Manually skip to the next step.
 step
 goto 25.05,12.90
@@ -114,6 +114,7 @@ goto 28.92,85.24
 talk Tenarei Vels |q Competition and Contracts/Talk to Tenarei Vels |future
 step
 goto 28.88,85.15
+|tip Watch the dialogue.
 talk Bastian Hallix |q Competition and Contracts/Talk to Bastian Hallix
 step
 goto 29.92,85.34
@@ -356,8 +357,7 @@ goto 53.76,70.92
 step
 goto 52.33,67.79 |q Tower Full of Trouble/Find and Restore Huldressa
 step
-goto 52.96,68.29
-|tip Find Huldressa hes a guar in a pond in front of you in the pond follow her around the pond.
+goto 53.56,67.94
 'Use _Spoon of Undo on Huldressa_ |q Tower Full of Trouble/Find and Restore Huldressa
 step
 goto 53.04,69.74
@@ -716,6 +716,7 @@ talk Lord Remard DeFulley
 accept Tournament of the Heart
 step
 goto 16.09,77.72
+|tip This determines the orders of the quests.
 talk Isobel Veloise |q Tournament of the Heart/Choose a Trial |future
 'Tell her _What do you know about the Order of the Iron Knot?_
 'Tell her _Where was the sword lost?_
@@ -854,7 +855,7 @@ goto u34_systreszone_base 19.12,75.28
 |tip Manually skip to the next step.
 step
 goto u34_NavireCryptInt_base 10.46,9.03
-'Unlock _Castle Navire Catacombs_ |q Tournament of the Heart/Unlock the Catacombs
+'Unlock _Castle Navire Catacombs_ |q Tournament of the Heart/Unlock the Catacombs |future
 step
 goto 10.46,9.03
 'Open _Castle Navire Catacombs_ |q Tournament of the Heart/Find the Gilded Lute
@@ -893,18 +894,21 @@ goto 80.69,89.27
 |tip Manually skip to the next step.
 step
 goto u34_systreszone_base 21.34,78.55
-talk Isobel Veloise |q Tournament of the Heart/Talk to Isobel
+talk Isobel Veloise |q Tournament of the Heart/Talk to Isobel |future
 step
 goto 13.51,76.32
 talk Isobel Veloise |q Tournament of the Heart/Talk to Isobel at the Tourney Pavilion
 step
 goto 13.95,75.70
+|tip Watch the dialogue.
 'Present _Redheart's Hilt_ |q Tournament of the Heart/Present Redheart's Hilt
 step
 goto 13.87,75.78
+|tip Watch the dialogue.
 'Present the _Gilded Lute_ |q Tournament of the Heart/Present the Gilded Lute
 step
 goto 13.92,75.74
+|tip Watch the dialogue.
 'Present _Staff of the Wild Woods_ |q Tournament of the Heart/Present the Staff
 step
 goto 13.92,75.74
@@ -1289,16 +1293,13 @@ goto 34.48,17.46
 accept Shattered and Scattered
 step
 goto 36.93,14.60
-'Find _Ruin_ |q Shattered and Scattered/Find the Ruin
-step
-goto 36.93,14.60
-talk Mirri Elendis |q Shattered and Scattered/Talk to Mirri Elendis
+talk Mirri Elendis |q Shattered and Scattered/Talk to Mirri Elendis |future
 step
 goto 37.45,14.26
 'Open _Doomvault Vulpinaz_ |q Shattered and Scattered/Enter the Ruin |future
 |tip Manually skip to the next step.
 step
-goto u30_shattered_vault_1_base 39.11,75.73 |q Shattered and Scattered/Reach the Expedition Base Camp
+goto u30_shattered_vault_1_base 39.11,75.73 |q Shattered and Scattered/Reach the Expedition Base Camp |future
 step
 goto 50.93,50.31
 'Reach the _Expedition Base Camp_ |q Shattered and Scattered/Reach the Expedition Base Camp
@@ -1408,24 +1409,19 @@ goto 50.22,48.46
 'Use _Daedric Switch_ |q Shattered and Scattered/Use Central Lever
 step
 goto 55.16,42.45
-|tip Jump up the rocks or use Grappling Point.
+|tip Use Grappling Point.
 'Use _Daedric Switch_ |q Shattered and Scattered/Use Leftmost Lever
 step
 goto 53.75,54.02
-|tip Jump up the rocks or use Grappling Point.
+|tip Jump up the rocks.
 'Use _Daedric Switch_ |q Shattered and Scattered/Use Rightmost Lever
 step
 goto 59.14,48.90
 'Open _Doomvault Vulpinaz Anchor Chamber_ |q Shattered and Scattered/Find Liam Elendis
 step
-goto 79.61,54.99
-|tip Use Grappling Point
-kill Xigira |q Shattered and Scattered/Destroy the Anchor Stone Array
-|tip Manually skip to the next step.
-step
 goto 91.26,63.28
 |tip Skip the two Anchor Stones on the ground and just hit the one up top.
-|tip Use Grappling Point
+'Use _Top Grappling Point_
 'Destroy the _Anchor Stone Array_ |q Shattered and Scattered/Destroy the Anchor Stone Array
 step
 goto 95.41,64.34
@@ -1839,7 +1835,7 @@ talk Sharp-at-Night |q Between a Rock and a Whetstone/Talk to Sharp |future
 |tip Manually skip to the next step.
 step
 'Open _Eastmarch_ Map
-'Travel to _Kynesgrove_ |q Between a Rock and a Whetstone/Find Buried Information Cache
+'Travel to _Kynesgrove_ |q Between a Rock and a Whetstone/Find Buried Information Cache |future
 |tip Manually skip to the next step.
 step
 goto eastmarch_base 42.11,36.38
@@ -1881,7 +1877,7 @@ goto 10.93,29.31
 |tip Manually skip to the next step.
 step
 goto 11.05,29.23
-'Examine _Sondivel's Journal_ |q Between a Rock and a Whetstone/Journal |future
+'Examine _Sondivel's Journal_ |lorebook Sondivel's Journal/3/48/80
 step
 goto 11.05,29.30
 |tip Watch the dialogue.
@@ -1930,6 +1926,7 @@ step
 step
 goto shadowfen_base 71.28,43.50
 talk Dimik-ei |q Dim and Distant Pasts/Talk to Dimik-Ei |future
+|tip Manually skip to the next step.
 step
 goto 71.301,43.29
 |tip Watch the dialogue.
@@ -2031,6 +2028,7 @@ goto 66.09,68.21
 step
 goto 65.19,69.09
 'Open _Cage_ |q Light the Way to Freedom/Free Dimik-Ei and Other Captives |future
+|tip Manually skip to the next step.
 step
 goto 57.03,69.77
 'Use _Research Notes_ |q Light the Way to Freedom/Burn the Research Notes |future
@@ -2045,7 +2043,6 @@ step
 goto narsis_base 60.12,72.58
 talk Sharp-at-Night
 turnin Light the Way to Freedom
-step
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Companions\\Azandar Al-Cybiades",[[
@@ -2156,6 +2153,8 @@ goto 39.47,52.73 |q The Fateweaver Key/Meet Azandar in the Underweave
 step
 goto 41.88,51.42 |q The Fateweaver Key/Meet Azandar in the Underweave
 step
+goto 41.40,49.74 |q The Fateweaver Key/Meet Azandar in the Underweave |future
+step
 goto 40.36,49.96
 |tip Recommended to get a group. This is a public dungeon.
 'Enter _The Underweave_ |q The Fateweaver Key/Meet Azandar in the Underweave |future
@@ -2193,10 +2192,10 @@ goto 18.46,49.82
 |tip Manually skip to the next step.
 step
 goto U38_underweave_secretlab_base 56.51,66.41
-'Examine _Mysterious Experiment_ |q The Fateweaver Key/Unknown Experiment
+'Examine _Mysterious Experiment_ |q The Fateweaver Key/Unknown Experiment |future.
 step
 goto 29.95,83.85
-'Examine _The Never-Woven_ |q The Fateweaver Key/Floating Journal
+'Examine _The Never-Woven_ |lorebook The Never-Woven/3/48/81
 step
 goto 47.14,58.59
 'Examine _Martina Abor_ |q The Fateweaver Key/Examine Corpse
@@ -2224,6 +2223,7 @@ goto 82.27,67.55
 'Activate _Scrying Beacon_ |q The Fateweaver Key/Light Scry Beacon 2
 step
 goto 80.66,67.02
+|tiip Watch the dialogue.
 'Activate _Scrying Beacon_ |q The Fateweaver Key/Help Azandar With A Fate Scrying Ritual
 step
 goto 50.65,35.16 |q The Fateweaver Key/Meet Azandar Near Fathoms Drift
@@ -2250,7 +2250,6 @@ talk Azandar |q The Fateweaver Key/Talk to Azandar |future
 step
 goto 39.05,19.07
 'Enter _Fathoms Drift_ |q The Fateweaver Key/Enter Fathom's Drift
-|tip Manually skip to the next step.
 step
 goto U38_CorpuscleBight_01_Base 33.35,74.61
 'Untie _Fate Thread_ |q The Fateweaver Key/Seek Threads of Fate
@@ -2528,6 +2527,7 @@ goto 21.93,47.98
 step
 goto vvardenfell_base 67.10,65.72
 talk Azandar |q Adversarial Adventures/Talk to Azandar |future
+|tip Manually skip to the next step.
 step
 goto 67.31,65.93
 |tip Recommended to get a group. This is a public dungeon.
@@ -2565,7 +2565,7 @@ step
 goto 53.57,53.57 |q Adversarial Adventures/Reach the Ametric Interval Chamber
 step
 goto 59.53,73.25
-'Open _Ametric Interval Chamber_ |q Adversarial Adventures/Reach the Ametric Interval Chamber
+'Open _Ametric Interval Chamber_ |q Adversarial Adventures/Reach the Ametric Interval Chamber |future
 step
 '_Northwest_
 'Untie _Frayed Fate_ |q Adversarial Adventures/Dispel the Frayed Fates

@@ -398,6 +398,10 @@ GOALTYPES['Examine'] = {
 	parse = GOALTYPES['_item'].parse,
 }
 
+GOALTYPES['click'] = {
+	parse = GOALTYPES['_item'].parse,
+}
+
 GOALTYPES['accept'] = {
 	parse = function(self,params)
 		if not params then
@@ -679,6 +683,10 @@ function Goal:GetText()
 
 	elseif self.action == "confirm" then
 		text = L["stepgoal_confirm"]
+
+	elseif self.action == "click" then
+		base = L["stepgoal_click".._done]
+		data = COLOR_ITEM(self.target)
 
 	elseif self.action == "wayshrine" then
 		base = L["stepgoal_wayshrine".._done]

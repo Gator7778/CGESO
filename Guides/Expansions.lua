@@ -47920,10 +47920,7 @@ goto 46.63,81.91
 'Use _Portal to Apocrypha_ |q Fate's Lost Dream/Enter the Portal to Apocrypha |future
 |tip Manually skip to the next step.
 step
-goto u38_apocrypha_base 85.83,79.44
-wayshrine Soundless Bight
-step
-goto 85.16,78.93
+goto u38_apocrypha_base 85.16,78.93
 talk Hezehk
 accept Piteous Envoys
 step
@@ -48893,6 +48890,9 @@ goto u38_apocrypha_base 14.42,40.15
 |tip Drop down carefully.
 talk Morian Zenas
 turnin Escape of the Sane
+step
+goto 08.65,35.59
+talk Leramil the Wise |q A Hidden Fate/Find the Entrance to the Infinite Panopticon
 step
 goto 08.65,35.59
 talk Leramil the Wise |q A Hidden Fate/Talk to Leramil the Wise |future

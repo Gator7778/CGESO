@@ -48154,7 +48154,7 @@ goto 87.70,39.05
 |only Ebonheart Pact
 ]])
 
-CGV:RegisterGuide("LEVELING\\Cyrodiil Tutorial",[[\
+CGV:RegisterGuide("LEVELING\\Cyrodiil Tutorial",[[
 loadingimage loadscreen_cyrodiil_01.dds
 description Tutorial into the Cyrodil Zone to unlock a healing spell or 30% Gallop for your character at level 10.
 step

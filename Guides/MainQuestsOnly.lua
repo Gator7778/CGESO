@@ -21980,8 +21980,8 @@ goto 71.99,74.27
 talk Captain Hrosta |q Shattered Hopes/Trick a Reachman Prisoner
 step
 goto 73.14,38.15
-|tip Lie to him.
 talk Lesuin |q Shattered Hopes/Find a Reachman Prisoner
+|tip Lie to him.
 step
 goto 72.18,75.74
 'Lead the _Reachman to the Ritual Circle_ |q Shattered Hopes/Lead Reachman to Ritual Circle
@@ -24361,7 +24361,7 @@ goto 87.70,39.05
 |only Ebonheart Pact
 ]])
 
-CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Cyrodiil Tutorial",[[\
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Cyrodiil Tutorial",[[
 loadingimage loadscreen_cyrodiil_01.dds
 description Tutorial into the Cyrodil Zone to unlock a healing spell or 30% Gallop for your character at level 10.
 step
@@ -29829,8 +29829,8 @@ goto 76.01,72.61
 'Unlock _The Anemone_ |q Prison Break/Find Zeira on the Prison Ship
 step
 goto 76.13,73.30
-|tip Lie to him.
 talk Chief Inspector Rhanbiq |q Prison Break/Free Zeira
+|tip Lie to him.
 |tip Manually skip to the next step.
 step
 goto 76.01,73.32
@@ -45955,7 +45955,7 @@ accept Spirit of Fate
 step
 goto 33.61,47.91 |q Spirit of Fate/Search the Tower Grounds
 step
-goto 33.51,45.16 |q Spirit of Fate/Search the Tower Grounds
+goto 33.41,45.44 |q Spirit of Fate/Search the Tower Grounds
 step
 goto 35.00,46.40
 talk Master Shelreni |q Spirit of Fate/Talk to Master Shelreni |future
@@ -46147,7 +46147,7 @@ step
 goto 41.51,78.23 |q Fate's Lost Dream/Go to the Green Glass Inn
 step
 goto 43.51,80.73
-'Open _Green Glass Inn_ |q Fate's Lost Dream/Go to the Green Glass Inn |future
+'Open _The Green Glass Inn_ |q Fate's Lost Dream/Go to the Green Glass Inn |future
 |tip Manually skip to the next step.
 step
 goto 43.66,81.45
@@ -46182,6 +46182,7 @@ goto 38.92,57.06
 |tip Manually skip to the next step.
 step
 goto 56.04,76.73
+|tip Watch the dialogue.
 'Examine _Oblivion Gate Instructions_ |q Fate's Lost Dream/.*Investigate the Chamber of the Gate.* |count 1 |future
 step
 goto 36.27,84.17
@@ -46194,14 +46195,15 @@ goto 46.63,81.91
 'Use _Portal to Apocrypha_ |q Fate's Lost Dream/Enter the Portal to Apocrypha |future
 |tip Manually skip to the next step.
 step
-goto u38_apocrypha_base 85.83,79.44
-wayshrine Soundless Bight
-step
-goto 84.59,80.13 |q Fate's Lost Dream/Follow the Invaders' Trail
+goto u38_apocrypha_base 84.59,80.13
+'Follow the _Invaders' Trail_ |q Fate's Lost Dream/Follow the Invaders' Trail
+|tip Manually skip to the next step.
 step
 goto 78.97,81.37 |q Fate's Lost Dream/Follow the Invaders' Trail
 step
-goto 75.53,78.94 |q Fate's Lost Dream/Follow the Invaders' Trail
+goto 75.53,78.94
+'Follow the _Invaders' Trail_ |q Fate's Lost Dream/Follow the Invaders' Trail
+|tip Manually skip to the next step.
 step
 goto 71.38,78.89 |q Fate's Lost Dream/Follow the Invaders' Trail
 step
@@ -46395,7 +46397,7 @@ step
 goto u38_apocrypha_base 47.15,45.74
 'Activate _Apocrypha Cairn_ |q A Hidden Fate/.*Prepare the Cairns.* |count 1
 step
-goto 42.34,42.35 |q A Hidden Fate/.*Prepare the Cairns.* |count 1
+goto 42.34,42.35 |q A Hidden Fate/.*Prepare the Cairns.* |count 2
 step
 goto 37.48,42.16
 wayshrine Apogee Nadir
@@ -46446,6 +46448,9 @@ goto 13.33,37.75
 wayshrine Feral Gallery
 step
 goto 08.65,35.59
+talk Leramil the Wise |q A Hidden Fate/Find the Entrance to the Infinite Panopticon
+step
+goto 08.65,35.59
 talk Leramil the Wise |q A Hidden Fate/Talk to Leramil the Wise |future
 step
 goto 08.46,35.55
@@ -46453,7 +46458,6 @@ goto 08.46,35.55
 |tip Manually skip to the next step.
 step
 goto u38_infinitepanopticon1_base 48.98,13.27
-'Sneak around _Gelkhai the Hunger_
 'Open _The Infinite Panopticon_ |q A Hidden Fate/Explore the Infinite Panopticon |future
 |tip Manually skip to the next step.
 step
@@ -46651,7 +46655,7 @@ goto 71.58,57.19
 'Open _Tel Huulen_ |q Conclave of Fate/Enter Tel Huulen
 |tip Manually skip to the next step.
 step
-goto 82.14,56.35,49.91
+goto 82.14,56.35
 |tip Watch dialogue.
 talk Sentry Valyne |q Conclave of Fate/Talk to the Sentry |future
 step
@@ -46718,6 +46722,7 @@ talk Magister Gothren |q Conclave of Fate/Talk to Magister Gothren |future
 step
 goto 52.07,16.61
 'Use _Portal to Vaermina Shrine_ |q Conclave of Fate/Enter Shelreni's Portal |future
+|tip Manually skip to the next step.
 step
 goto u38_infinitepanopticon9_base 18.43,70.37 |q Conclave of Fate/Explore the Area
 step
@@ -46730,11 +46735,6 @@ goto 44.33,72.09
 step
 goto 44.33,75.15
 'Examine _Master Shelreni's Notes: The Restoration_ |lorebook Master Shelreni's Notes: The Restoration/3/48/3
-step
-goto 44.33,75.15
-|tip Watch the dialogue.
-talk Curate Gadayn |q Conclave of Fate/Talk to Curate Gadayn
-|tip Manually skip to the next step.
 step
 goto 69.85,64.93
 'Open _Vaermina Shrine_ |q Conclave of Fate/Find Master Shelreni |future
@@ -46777,7 +46777,7 @@ goto u38_telvannipeninsula_base 60.97,41.03 |q A Calamity of Fate/Go to Tel Baro
 step
 goto 56.47,35.89 |q A Calamity of Fate/Go to Tel Baro
 step
-goto 57.34,35.18 |q A Calamity of Fate/Enter Master Shelreni's Study
+goto 57.34,35.18 |q A Calamity of Fate/Enter Master Shelreni's Study |future
 step
 goto 54.34,32.87
 'Open _Master Shelreni's Study_ |q A Calamity of Fate/Enter Master Shelreni's Study |future
@@ -46814,6 +46814,7 @@ step
 goto u38_apocrypha_base 08.47,35.57
 |tip Watch the dialogue.
 'Enter _The Infinite Panopticon_ |q A Calamity of Fate/Enter the Infinite Panopticon |future
+|tip Manually skip to the next step.
 step
 goto u38_tp7_panopticon1_int 48.73,79.41 |q A Calamity of Fate/Explore the Infinite Panopticon
 step
@@ -46902,7 +46903,7 @@ step
 goto 37.32,45.55
 'Identify _Flawed Illusion_ |q A Calamity of Fate/.*Break the Flaws in the Dream.* |count 5
 step
-goto 45.90,50.97 |q A Calamity of Fate/Enter the Mythos |tip Drop down to the platform.
+goto 45.90,50.97 |q A Calamity of Fate/Enter the Mythos |future |tip Drop down to the platform.
 step
 goto 39.18,34.22 |q A Calamity of Fate/Enter the Mythos
 step
@@ -46922,7 +46923,7 @@ step
 goto 55.06,12.76 |q A Calamity of Fate/Explore the Mythos |future
 step
 goto 60.98,06.33
-'Open _The Mythos Vault_ |q A Calamity of Fate/Find Vaermina
+'Open _The Mythos Vault_ |q A Calamity of Fate/Find Vaermina |future
 |tip Manually skip to the next step.
 step
 goto u38_tp7_vault_base 41.87,51.19
@@ -46938,13 +46939,14 @@ goto 56.27,42.88
 step
 goto 88.34,24.19
 |tip Watch the dialogue.
-'Examine _Glyphic of Hidden Paths_ |q A Calamity of Fate/Examine the Glyphic
+'Examine _Glyphic of Hidden Paths_ |q A Calamity of Fate/Examine the Glyphic |future
 step
 goto 90.93,21.36
 talk Hermaeus Mora |q A Calamity of Fate/Talk to Hermaeus Mora
 step
 goto 92.21,22.82
 'Use _Portal to Cipher's Midden_ |q A Calamity of Fate/Meet Allies at Cipher's Midden
+|tip Manually skip to the next step.
 step
 goto u38_ciphersmidden_city_base 43.26,47.41
 'Open _Leramil's Study_ |q A Calamity of Fate/Meet Allies at Cipher's Midden
@@ -46956,6 +46958,7 @@ turnin A Calamity of Fate
 accept An Unhealthy Fate
 step
 goto 41.58,50.79
+|tip Outside.
 'Examine _Cipher Hulnan_ |q An Unhealthy Fate/.*Investigate Cipher's Midden.* |count 1
 step
 goto 49.61,62.20
@@ -46980,7 +46983,7 @@ step
 'Travel to _Soundless Bight_ |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
 |tip Manually skip to the next step.
 step
-goto u38_apocrypha_base  85.14,68.85 |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
+goto u38_apocrypha_base 85.14,68.85 |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
 step
 goto 79.61,62.22
 wayshrine Writhing Wastes
@@ -46995,6 +46998,7 @@ step
 goto 73.02,43.68
 'Use _Speiran Tarn_ Wayshrine
 'Travel to _Writhing Wastes_ |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
+|tip Manually skip to the next step.
 step
 goto 84.80,62.78 |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
 step
