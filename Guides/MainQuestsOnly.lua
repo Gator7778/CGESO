@@ -46085,7 +46085,7 @@ goto 68.48,78.67 |q Spirit of Fate/Find the Entrance to Tel Baro
 step
 goto 70.36,45.94 |q Spirit of Fate/Find the Entrance to Tel Baro
 step
-goto 47.74,53.14 |q Spirit of Fate/Find the Entrance to Tel Baro
+goto 49.34,45.83 |q Spirit of Fate/Find the Entrance to Tel Baro
 step
 goto 52.14,25.21
 'Examine _Dusk Captain Zenfis's Orders_ |q Spirit of Fate/Find a Way to Open the Tower |future
@@ -46138,6 +46138,8 @@ step
 goto 40.69,78.96
 talk Scruut
 accept Fate's Lost Dream
+step
+goto 42.26,78.20 |q Fate's Lost Dream/Talk to Miner Sadalas |future
 step
 goto 42.77,76.74
 talk Miner Sadalas |q Fate's Lost Dream/Talk to Miner Sadalas |future
@@ -46320,10 +46322,11 @@ step
 goto 58.21,51.48 |q Fate's Proxy/Meet Leramil the Wise in Necrom
 step
 goto 57.74,52.26
-|tip Go upstairs.
 'Open _Necrom Bindery Balcony_ |q Fate's Proxy/Meet Leramil the Wise in Necrom
+|tip Manually skip to the next step.
 step
 goto 57.98,52.86
+|tip Go upstairs out on the balcony.
 talk Leramil the Wise
 turnin Fate's Proxy
 accept A Hidden Fate
@@ -46775,9 +46778,9 @@ step
 step
 goto u38_telvannipeninsula_base 60.97,41.03 |q A Calamity of Fate/Go to Tel Baro
 step
-goto 56.47,35.89 |q A Calamity of Fate/Go to Tel Baro
-step
 goto 57.34,35.18 |q A Calamity of Fate/Enter Master Shelreni's Study |future
+step
+goto 56.54,36.06 |q A Calamity of Fate/Enter Master Shelreni's Study |future
 step
 goto 54.34,32.87
 'Open _Master Shelreni's Study_ |q A Calamity of Fate/Enter Master Shelreni's Study |future
@@ -46789,7 +46792,6 @@ step
 goto 54.03,33.36
 talk Master Shelreni |q A Calamity of Fate/Talk to Master Shelreni
 step
-goto 54.40,32.86
 'Open _Telvanni Peninsula_ Map
 'Travel to _Necrom_ in Telvanni Peninsula |q A Calamity of Fate/Return to the Necrom Bindery
 |tip Manually skip to the next step.
@@ -46799,8 +46801,6 @@ step
 goto 60.30,52.39
 'Open _Necrom Bindery_ |q A Calamity of Fate/Return to the Necrom Bindery
 |tip Manually skip to the next step.
-step
-goto 58.68,51.45 |q A Calamity of Fate/Find the Infinite Panopticon |future
 step
 goto 58.21,51.92
 |tip Go upstairs.
@@ -46905,7 +46905,7 @@ goto 37.32,45.55
 step
 goto 45.90,50.97 |q A Calamity of Fate/Enter the Mythos |future |tip Drop down to the platform.
 step
-goto 39.18,34.22 |q A Calamity of Fate/Enter the Mythos
+goto 39.18,34.22 |q A Calamity of Fate/Enter the Mythos |future
 step
 goto 50.47,22.37
 'Open _The Mythos_ |q A Calamity of Fate/Enter the Mythos
