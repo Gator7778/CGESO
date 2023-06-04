@@ -45733,7 +45733,7 @@ step
 goto 63.86,39.01
 wayshrine Great Arm
 step
-goto 62.52,42.79 |q Fate's Proxy/Go to Ulvano Cistern
+goto 61.75,43.10 |q Fate's Proxy/Go to Ulvano Cistern
 step
 goto 60.16,48.03 |q Fate's Proxy/Go to Ulvano Cistern
 step
@@ -45765,6 +45765,8 @@ step
 goto 48.65,49.58
 wayshrine Necrom
 step
+goto 48.65,49.58 |q Fate's Proxy/Meet Leramil the Wise in Necrom
+step
 goto 55.82,52.48 |q Fate's Proxy/Meet Leramil the Wise in Necrom
 step
 goto 60.30,52.39
@@ -45790,9 +45792,9 @@ goto 75.03,27.97
 talk Port Master Ulene |q Keeper of the Fate/Talk to the Port Master
 |tip Persuade her.
 step
-goto 75.33,18.51 |q Keeper of the Fate/Board the Stormwing |future
+goto 76.60,18.44 |q Keeper of the Fate/Board the Stormwing |future
 step
-goto 86.13,18.25 |q Keeper of the Fate/Board the Stormwing
+goto 86.12,19.32 |q Keeper of the Fate/Board the Stormwing
 step
 goto 86.87,21.26
 'Open _Lower Deck_ |q Keeper of the Fate/Board the Stormwing
@@ -45959,7 +45961,6 @@ goto 33.41,45.44 |q Spirit of Fate/Search the Tower Grounds
 step
 goto 35.00,46.40
 talk Master Shelreni |q Spirit of Fate/Talk to Master Shelreni |future
-|tip Lie to her.
 step
 goto 33.18,51.11 |q Spirit of Fate/Go to Tel Rendys Hall
 step
@@ -46197,15 +46198,11 @@ goto 46.63,81.91
 'Use _Portal to Apocrypha_ |q Fate's Lost Dream/Enter the Portal to Apocrypha |future
 |tip Manually skip to the next step.
 step
-goto u38_apocrypha_base 84.59,80.13
-'Follow the _Invaders' Trail_ |q Fate's Lost Dream/Follow the Invaders' Trail
-|tip Manually skip to the next step.
+goto u38_apocrypha_base 84.59,80.13 |q Fate's Lost Dream/Follow the Invaders' Trail |future
 step
 goto 78.97,81.37 |q Fate's Lost Dream/Follow the Invaders' Trail
 step
-goto 75.53,78.94
-'Follow the _Invaders' Trail_ |q Fate's Lost Dream/Follow the Invaders' Trail
-|tip Manually skip to the next step.
+goto 75.53,78.94 |q Fate's Lost Dream/Follow the Invaders' Trail
 step
 goto 71.38,78.89 |q Fate's Lost Dream/Follow the Invaders' Trail
 step
@@ -46317,12 +46314,6 @@ goto u38_Necrom_base 55.82,52.48 |q Fate's Proxy/Meet Leramil the Wise in Necrom
 step
 goto 60.30,52.39
 'Open _Necrom Bindery_ |q Fate's Proxy/Meet Leramil the Wise in Necrom
-|tip Manually skip to the next step.
-step 
-goto 58.21,51.48 |q Fate's Proxy/Meet Leramil the Wise in Necrom
-step
-goto 57.74,52.26
-'Open _Necrom Bindery Balcony_ |q Fate's Proxy/Meet Leramil the Wise in Necrom
 |tip Manually skip to the next step.
 step
 goto 57.98,52.86
@@ -46597,7 +46588,7 @@ goto 42.47,43.90
 step
 goto u38_Necrom_base 58.15,52.38
 |tip Watch the dialogue.
-talk Curate Gadayn |q Conclave of Fate/Talk to Curate Gadayn
+talk Curate Gadayn |q Conclave of Fate/Talk to Curate Gadayn |future
 step
 goto 58.19,52.42
 talk Meln the Mouthless |q Conclave of Fate/Talk to Meln the Mouthless
@@ -46649,12 +46640,13 @@ talk Meln the Mouthless |q Conclave of Fate/Talk to Meln the Mouthless
 step
 goto 32.26,54.74 |q Conclave of Fate/Enter Tel Huulen
 step
-goto tlv_aldisra_base 80.82,40.99 |q Conclave of Fate/Enter Tel Huulen
+goto tlv_aldisra_base 87.54,70.07 |q Conclave of Fate/Enter Tel Huulen
 step
-goto 62.45,62.25 |q Conclave of Fate/Enter Tel Huulen
+goto 66.85,72.30 |q Conclave of Fate/Enter Tel Huulen
+step
+goto 60.87,56.12 |q Conclave of Fate/Enter Tel Huulen
 step
 goto 71.58,57.19
-'Use _Cloak of Omission_
 'Open _Tel Huulen_ |q Conclave of Fate/Enter Tel Huulen
 |tip Manually skip to the next step.
 step
@@ -46816,7 +46808,7 @@ goto u38_apocrypha_base 08.47,35.57
 'Enter _The Infinite Panopticon_ |q A Calamity of Fate/Enter the Infinite Panopticon |future
 |tip Manually skip to the next step.
 step
-goto u38_tp7_panopticon1_int 48.73,79.41 |q A Calamity of Fate/Explore the Infinite Panopticon
+goto u38_tp7_panopticon1_int 48.73,79.41 |q A Calamity of Fate/Explore the Infinite Panopticon |future
 step
 goto 48.71,66.40 |q A Calamity of Fate/Explore the Infinite Panopticon
 step
@@ -46903,27 +46895,29 @@ step
 goto 37.32,45.55
 'Identify _Flawed Illusion_ |q A Calamity of Fate/.*Break the Flaws in the Dream.* |count 5
 step
-goto 45.90,50.97 |q A Calamity of Fate/Enter the Mythos |future |tip Drop down to the platform.
+goto 45.90,50.97 |q A Calamity of Fate |future |tip Drop down to the platform.
 step
-goto 39.18,34.22 |q A Calamity of Fate/Enter the Mythos |future
+goto 39.18,34.22 |q A Calamity of Fate |future
 step
 goto 50.47,22.37
-'Open _The Mythos_ |q A Calamity of Fate/Enter the Mythos
+|tip Watch the dialogue.
+'Open _The Mythos_ |q A Calamity of Fate/Enter the Mythos |future
+|tip Manually skip to the next step.
 step
-goto u38_tp7_mythos_int2_reslice 62.58,53.29 |q A Calamity of Fate/Explore the Mythos
+goto u38_tp7_mythos_int2_reslice 62.58,53.29 |q A Calamity of Fate |future
 step
-goto u38_tp7_mythos_int1 24.06,78.21 |q A Calamity of Fate/Explore the Mythos
+goto u38_tp7_mythos_int1 24.06,78.21 |q A Calamity of Fate |future
 step
-goto 37.10,84.54 |q A Calamity of Fate/Explore the Mythos
+goto 37.10,84.54 |q A Calamity of Fate |future
 step
-goto 44.41,71.22 |q A Calamity of Fate/Explore the Mythos
+goto 44.41,71.22 |q A Calamity of Fate |future
 step
-goto 55.23,59.45 |q A Calamity of Fate/Explore the Mythos
+goto 55.23,59.45 |q A Calamity of Fate |future
 step
-goto 55.06,12.76 |q A Calamity of Fate/Explore the Mythos |future
+goto 55.06,12.76 |q A Calamity of Fate |future
 step
 goto 60.98,06.33
-'Open _The Mythos Vault_ |q A Calamity of Fate/Find Vaermina |future
+'Open _The Mythos Vault_ |q A Calamity of Fate |future
 |tip Manually skip to the next step.
 step
 goto u38_tp7_vault_base 41.87,51.19
@@ -46969,7 +46963,7 @@ step
 goto 51.28,28.60
 'Destroy _Censer of Corruption_ |q An Unhealthy Fate/.*Investigate Cipher's Midden.* |count 3
 step
-goto 58.01,61.93
+goto 58.01,61.93 |q An Unhealthy Fate/Return to Leramil's Study
 step
 goto 41.95,56.84 |q An Unhealthy Fate/Return to Leramil's Study
 step
@@ -46979,7 +46973,8 @@ step
 goto 43.67,42.96
 talk Torvesard |q An Unhealthy Fate/Talk to Torvesard
 step
-'Open _Apocrypha_ Map
+goto 71.97,55.16
+'Use _Cipher's Midden_ Wayshrine
 'Travel to _Soundless Bight_ |q An Unhealthy Fate/Rendezvous with Leramil and Torvesard
 |tip Manually skip to the next step.
 step
@@ -47045,11 +47040,11 @@ kill Mind Terror |q An Unhealthy Fate/Defend Your Allies |future
 step
 goto 69.30,85.05
 |tip Watch the dialogue.
-'Use _Portal to the Western Mythos_ |q An Unhealthy Fate/Disable the Western Manufactory
+'Use _Portal to the Western Manufactory_ |q An Unhealthy Fate/Disable the Western Manufactory
 |tip Manually skip to the next step.
 step
 goto 47.70,67.33
-'Use _Portal to the Western Mythos_ |q An Unhealthy Fate/Disable the Western Manufactory
+'Use _Portal to the Western Manufactory_ |q An Unhealthy Fate/Disable the Western Manufactory
 |tip Manually skip to the next step.
 step
 goto 34.54,60.10 |q An Unhealthy Fate/Disable the Western Manufactory
@@ -47074,6 +47069,7 @@ goto 36.79,15.53
 step
 goto 52.66,20.67
 kill Blightcrown |q An Unhealthy Fate/Kill Blightcrown |future
+|tip Manually skip to the next step.
 step
 goto 50.28,23.26
 'Use _Portal to the Mythos Vaults_ |q An Unhealthy Fate/Enter the Portal
