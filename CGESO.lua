@@ -134,10 +134,9 @@ self.registeredguides = newreg
 
   if not self.startup_log['99_end'] then
     self.pause = true
-    self.loading = nil -- disable startup steps
-    self.guidesloaded = true -- completely disable the startup thread
+    self.loading = nil 
+    self.guidesloaded = true
 
-    --self:Print(L['welcome_guides']:format(#self.registeredguides))
     self:GuideLoadStartup()
 
     --if CGV.ERROR_GETDISPLAYNAME_FAIL then

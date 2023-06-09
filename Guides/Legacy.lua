@@ -1103,7 +1103,7 @@ goto 39.40,49.77
 'Open _Temple of Auri-El_ |q A Hostile Situation/Enter the Temple |future
 |tip Manually skip to the next step.
 step
-'_Go to middle of room_
+goto 39.36,55.30
 |tip Watch the dialogue.
 kill Watch Captain Astanya |q A Hostile Situation/Defeat the Assassins |future
 step
@@ -6817,7 +6817,6 @@ goto 37.63,24.31
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
-|tip Merric will tell you how hot he wants the fire.
 'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Medium-Sized Fire
 |tip The Forge Valve to the left, the coals in the middle, and then the Bellows on the right three times.
 |only Aldmeri Dominion
@@ -6827,7 +6826,6 @@ goto 37.63,24.31
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
-|tip Merric will tell you how hot he wants the fire.
 'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Large Fire
 |tip The Forge Valve to the left three times, the coals in the middle, and then the Bellows on the right three times.
 |only Aldmeri Dominion
@@ -10834,14 +10832,14 @@ talk Tabil
 accept Enemy of My Enemy
 step
 goto 63.35,49.92
-wayshrine Baandari Post
+wayshrine Baandari Market
 step
 goto 66.06,46.30
 talk Fuldir
 turnin A Nord in Need
 step
 goto 63.47,49.21
-'Use _Baandari Trading Post_ Wayshrine
+'Use _Baandari Market_ Wayshrine
 'Travel to _The Harborage_ in Auridon |q Halls of Torment/Enter the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -10856,8 +10854,7 @@ talk Varen Aquilarios |q Halls of Torment/Talk to Varen Aquilarios |future
 |only Aldmeri Dominion
 step
 goto 65.41,33.77
-talk Lyris Titanborn
-'_OR_
+talk Lyris Titanborn |q Halls of Torment/Choose Your Companion
 talk Abnur Tharn |q Halls of Torment/Choose Your Companion
 |only Aldmeri Dominion
 step
@@ -10963,7 +10960,7 @@ turnin Halls of Torment
 |only Aldmeri Dominion
 step
 'Open _Malabal Tor_ Map
-'Travel to _Baandari Tradepost_ |q Chateau of the Ravenous Rodent/Talk to Valaste
+'Travel to _Baandari Market_ |q Chateau of the Ravenous Rodent/Talk to Valaste
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -11100,7 +11097,7 @@ goto malabaltor_base 85.99,25.04
 |only Aldmeri Dominion
 step
 goto 86.15,23.29
-talk Aelif |q Proving the Deed/Talk to Aelif
+talk Aelif |q Proving the Deed/Talk to Aelif |future
 |only Aldmeri Dominion
 step
 goto 86.50,23.30
@@ -11173,7 +11170,7 @@ goto 85.12,26.54 |q Proving the Deed/Talk to Merric at-Aswala
 |only Aldmeri Dominion
 step
 goto baandaritradingpost_base 63.11,49.68
-'Use _Baandari Tradepost_ Wayshrine
+'Use _Baandari Market_ Wayshrine
 'Travel to _Vulkwasten_ |q Proving the Deed/Talk to Merric at-Aswala
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -11300,7 +11297,7 @@ turnin Valley of Blades
 |only Aldmeri Dominion
 step
 'Open _Malabal Tor_ Map
-'Travel to _Baandari Tradepost_ |q Enemy of My Enemy/Talk to Eraral-dro
+'Travel to _Baandari Market_ |q Enemy of My Enemy/Talk to Eraral-dro
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -11572,7 +11569,7 @@ talk Finoriell
 turnin The Dark Night of the Soul
 step
 'Open _Malabal Tor_ Map
-'Travel to _Baandari Tradepost_ |q Brothers and Bandits |future
+'Travel to _Baandari Market_ |q Brothers and Bandits |future
 |tip Manually skip to the next step.
 step
 goto baandaritradingpost_base 59.34,37.67 |q Brothers and Bandits |future
@@ -11870,7 +11867,7 @@ talk Laen the Doorwalker
 turnin The Misfortunate Minstrels
 step
 'Open _Malabal Tor_ Map
-'Travel to _Baandari Trading Post_ |q Oath of Excision |future
+'Travel to _Baandari Market_ |q Oath of Excision |future
 |tip Manually skip to the next step.
 step
 goto baandaritradingpost_base 78.59,50.27
@@ -15050,7 +15047,8 @@ accept Cadwell's Gold
 |only Daggerfall Covenant
 step
 goto 53.70,72.08
-'Use _Light of Meridia_ |q Cadwell's Gold/Use the Light of Meridia |next Ebonheart Pact Leveling Guides\\Bleakrock Isle
+'Use _Light of Meridia_ |q Cadwell's Gold/Use the Light of Meridia |future
+'_Click Here to Reload_ |confirm |nextreload Ebonheart Pact Leveling Guides\\Bleakrock Isle
 |only Daggerfall Covenant
 step
 goto dune_base 33.13,25.82
@@ -15934,7 +15932,7 @@ goto 60.15,46.49
 |tip Manually skip to the next step.
 step
 goto 34.48,46.97
-talk Jakarn |q Carzog's Demise/Reach the Inner Sanctuary
+'Listen _Jakarn_ |q Carzog's Demise/Reach the Inner Sanctuary
 |tip Manually skip to the next step.
 step
 goto 25.52,41.45
@@ -17407,8 +17405,7 @@ goto 66.70,51.08
 step
 goto 66.76,51.08
 |tip Watch the dialogue
-talk Gloria Fausta
-'Perform the _Ritual with Gloria Fausta_ |q Lineage of Tooth and Claw/Perform the Ritual with Gloria Fausta
+talk Gloria Fausta |q Lineage of Tooth and Claw/Perform the Ritual with Gloria Fausta
 step
 goto 66.81,51.07
 talk Gloria Fausta |q Lineage of Tooth and Claw/Talk to Gloria Fausta
@@ -17732,8 +17729,8 @@ goto 56.19,39.74
 |tip Manually skip to the next step.
 step
 goto 55.87,39.42
-talk Shaza gra-Dasik
 |tip Follow her and help her kill werewolves. Let them attack her first.
+talk Shaza gra-Dasik
 'Help _Shaza Reclaim the Siege Camp_ |q Rally Cry/Help Shaza Reclaim the Siege Camp
 step
 goto 52.70,40.59
@@ -18159,7 +18156,7 @@ goto 54.93,19.05
 talk Gabrielle Benele |q Mastering the Talisman/Talk to Gabrielle Benele
 step
 goto 54.93,19.05
-|tip Watch the ritual
+|tip Watch the Ritual.
 talk Gabrielle Benele |q Mastering the Talisman/Destroy the Daedric Entity |future
 |tip Manually skip to the next step.
 step
@@ -18257,7 +18254,7 @@ talk Darien Gautier |q Mists of Corruption/Find Knights in Cath Bedraud
 step
 goto 65.81,17.31
 |tip All around this area.
-kill Bloodthorn Necromancers and Bloodthron Arcanist
+kill Bloodthorn Enemies
 'Collect _Bloodthorn Amulets_ |q Mists of Corruption/.*Collect Bloodthorn Amulets.*
 step
 goto 65.06,18.08
@@ -20812,6 +20809,8 @@ goto 68.64,43.01
 talk Mathias Raiment
 accept A Look in the Mirror
 step
+goto 37.57,56.64 |q A Look in the Mirror/Talk to Countess Ilise Manteau
+step
 goto 65.26,43.29
 |tip Upstairs inside the building.
 talk Countess Ilise Manteau |q A Look in the Mirror/Talk to Countess Ilise Manteau
@@ -21591,7 +21590,6 @@ goto 37.63,24.31
 |only Daggerfall Covenant
 step
 goto 37.63,24.31
-|tip Merric will tell you how hot he wants the fire.
 'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Medium-Sized Fire
 |tip The Forge Valve to the left, the coals in the middle, and then the Bellows on the right three times.
 |only Daggerfall Covenant
@@ -21601,7 +21599,6 @@ goto 37.63,24.31
 |only Daggerfall Covenant
 step
 goto 37.63,24.31
-|tip Merric will tell you how hot he wants the fire.
 'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Large Fire
 |tip The Forge Valve to the left three times, the coals in the middle, and then the Bellows on the right three times.
 |only Daggerfall Covenant
@@ -24083,7 +24080,6 @@ talk Varen Aquilarios |q Halls of Torment/Talk to Varen Aquilarios
 |only Daggerfall Covenant
 step
 goto 66.05,63.10
-|tip Lyris is a melee warrior, Abnur is a ranged mage. It doesn't matter who you choose.
 talk Lyris Titanborn |q Halls of Torment/Choose Your Companion
 talk Abnur Tharn |q Halls of Torment/Choose Your Companion
 |only Daggerfall Covenant
@@ -30256,7 +30252,8 @@ accept Cadwell's Gold
 |only Ebonheart Pact
 step
 goto 87.70,39.03
-'Use _Light of Meridia_ |q Cadwell's Gold/Use the Light of Meridia |next Aldmeri Dominion Leveling Guides\\Khenarthi's Roost
+'Use _Light of Meridia_ |q Cadwell's Gold/Use the Light of Meridia |future
+'_Click Here to Reload_ |confirm |nextreload Aldmeri Dominion Leveling Guides\\Khenarthi's Roost
 |only Ebonheart Pact
 step
 goto bangkorai_base 67.90,19.30
@@ -34175,8 +34172,8 @@ goto 26.89,60.78
 talk Slips-Through-Fingers |q Fighting Back/Talk to Slips-Through-Fingers
 step
 goto 29.05,60.80
-'Tell him _I'll help you._
 talk Madras Tedas |q Fighting Back/Talk to Madras
+'Tell him _I'll help you._
 step
 goto 29.39,60.39
 talk Madras Tedas
@@ -34187,7 +34184,7 @@ talk Madras Tedas
 accept A Timely Matter
 step
 goto 69.15,53.54
-|tip Leave the building.
+|tip Outside.
 talk Seron Denelu |q A Timely Matter/Talk to Seron Denelu
 step
 goto 57.92,51.74
@@ -39417,9 +39414,8 @@ talk Varen Aquilarios |q Halls of Torment/Talk to Varen Aquilarios
 |only Ebonheart Pact
 step
 goto 63.23,37.87
-talk Lyris Titanborn
+talk Lyris Titanborn |q Halls of Torment/Choose Your Companion
 talk Abnur Tharn |q Halls of Torment/Choose Your Companion
-|tip Lyris is a melee warrior, Abnur is a ranged mage. It doesn't matter who you choose.
 |only Ebonheart Pact
 step
 goto 64.88,37.82
@@ -41046,8 +41042,8 @@ talk Tunus |q The Better of Two Evils/Find the Hunters' Camp
 step
 goto 46.97,53.84
 |tip Inside the building.
-|tip Side with Majorn.
 talk Majorn the Ancient |q The Better of Two Evils/Talk to Majorn or Ignore Him and Find the Hunters
+'Tell him _Very well. Valeric could do more harm than he realizes._
 step
 goto 48.06,53.32
 |tip Around this area.
@@ -41424,7 +41420,7 @@ goto 71.54,57.03
 kill Stormfist enemies
 'Use the _Viper's Strike on their corpses_ |q Making Amends/.*Charge Viper's Strike.*
 step
-goto 72.69,57.27
+goto 72.81,57.58
 kill Hald Bitterblade
 'Collect _Bitterblade's Head_ |q Making Amends/Get Bitterblade's Head
 step
@@ -42925,9 +42921,8 @@ goto 48.48,87.02
 |tip Manually skip to the next step.
 step
 goto 49.07,57.93
-kill Morgane |q Concealed Weapons/Kill Worm Cultist and Leave the Crypt |future |or
-'_OR_
-kill Aera Earth-Turner |q Concealed Weapons/Kill Aera Earth-Turner |future |or
+kill Morgane or Aera Earth-Turner |q Concealed Weapons/Kill Worm Cultist and Leave the Crypt |future
+|tip Manually skip to the next step.
 step
 goto 48.94,72.08
 'Open _Nimalten Barrow_ |q Concealed Weapons/Talk to Thane in Throne Room
@@ -45415,7 +45410,8 @@ accept Cadwell's Gold
 |only Aldmeri Dominion
 step
 goto 71.98,22.09
-'Use _Light of Meridia_ |q Cadwell's Gold/Use the Light of Meridia |next Daggerfall Covenant Leveling Guides\\Stros M'Kai |future
+'Use _Light of Meridia_ |q Cadwell's Gold/Use the Light of Meridia |future
+'_Click Here to Reload_ |confirm |nextreload Daggerfall Covenant Leveling Guides\\Stros M'Kai
 |only Aldmeri Dominion
 step
 goto therift_base 81.28,65.07
@@ -47808,7 +47804,7 @@ kill Valkynaz Seris |q The Citadel Must Fall/Defeat Enemies in the Stronghold |f
 step
 goto 70.03,49.58
 |tip watching dialogue.
-'Open _Valkynaz Seris' Chest_ |q The Citadel Must Fall/Find the Labyrinth Key
+'Open _Valkynaz Seris's Chest_ |q The Citadel Must Fall/Find the Labyrinth Key
 step
 goto 20.18,49.53
 'Open _Reaver Citadel_ |q The Citadel Must Fall/Find Vanus Galerion
@@ -48114,7 +48110,8 @@ accept Cadwell's Silver
 |only Aldmeri Dominion
 step
 goto 72.80,22.40
-'Use _Light of Meridia_ |q Cadwell's Silver/Use the Light of Meridia |future |next Ebonheart Pact Leveling Guides\\Bleakrock Isle |future
+'Use _Light of Meridia_ |q Cadwell's Silver/Use the Light of Meridia |future
+'_Click Here to Reload_ |confirm |nextreload Ebonheart Pact Leveling Guides\\Bleakrock Isle
 |only Aldmeri Dominion
 step
 goto the_daggerfall_harborage 67.21,62.27
@@ -48132,7 +48129,8 @@ accept Cadwell's Silver
 |only Daggerfall Covenant
 step
 goto 53.76,72.17
-'Use _Light of Meridia_ |q Cadwell's Silver/Use the Light of Meridia |future |next Aldmeri Dominion Leveling Guides\\Khenarthi's Roost |future
+'Use _Light of Meridia_ |q Cadwell's Silver/Use the Light of Meridia |future
+'_Click Here to Reload_ |confirm |nextreload Aldmeri Dominion Leveling Guides\\Khenarthi's Roost
 |only Daggerfall Covenant
 step
 goto the_ebonheart_harborage_base 65.57,35.55
@@ -48150,7 +48148,8 @@ accept Cadwell's Silver
 |only Ebonheart Pact
 step
 goto 87.70,39.05
-'Use _Light of Meridia_ |q Cadwell's Silver/Use the Light of Meridia |future |next Daggerfall Covenant Leveling Guides\\Stros M'Kai |future
+'Use _Light of Meridia_ |q Cadwell's Silver/Use the Light of Meridia |future
+'_Click Here to Reload_ |confirm |nextreload Daggerfall Covenant Leveling Guides\\Stros M'Kai
 |only Ebonheart Pact
 ]])
 

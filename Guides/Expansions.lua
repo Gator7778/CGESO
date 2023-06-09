@@ -46698,7 +46698,7 @@ talk Count Stefan Mornard |q And Now, Perhaps, Peace/Talk to Count Stefan Mornar
 step
 goto 48.56,53.52
 talk Lady Arabelle
-turnin And Now, Perhaps, Peace
+turnin And Now, Perhaps, Peace |next LEVELING\\Telvanni Peninsula
 ]])
 
 CGV:RegisterGuide("LEVELING\\Telvanni Peninsula",[[

@@ -2192,7 +2192,7 @@ goto 18.46,49.82
 |tip Manually skip to the next step.
 step
 goto U38_underweave_secretlab_base 56.51,66.41
-'Examine _Mysterious Experiment_ |q The Fateweaver Key/Unknown Experiment |future.
+'Examine _Mysterious Experiment_ |q The Fateweaver Key/Unknown Experiment |future
 step
 goto 29.95,83.85
 'Examine _The Never-Woven_ |lorebook The Never-Woven/3/48/81
@@ -2223,7 +2223,7 @@ goto 82.27,67.55
 'Activate _Scrying Beacon_ |q The Fateweaver Key/Light Scry Beacon 2
 step
 goto 80.66,67.02
-|tiip Watch the dialogue.
+|tip Watch the dialogue.
 'Activate _Scrying Beacon_ |q The Fateweaver Key/Help Azandar With A Fate Scrying Ritual
 step
 goto 50.65,35.16 |q The Fateweaver Key/Meet Azandar Near Fathoms Drift

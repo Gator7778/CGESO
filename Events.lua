@@ -189,7 +189,6 @@ end
 function CGV.EVENT_LORE_BOOK_LEARNED(_,_,cat,col,book,guild,isMaxRank)
 	if (CGV.Creator) then
 		local title,_,_,_ = _G.GetLoreBookInfo(cat,col,book)
-		--CGV:Print("Examine %s", title)
 		CGV:Print("lorebook %s/%d/%d/%d",title,cat,col,book)
 	end
 end
