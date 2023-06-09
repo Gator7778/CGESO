@@ -11708,7 +11708,7 @@ goto 18.90,35.09
 'Open _Rivenspire_ |q The Blood-Splattered Shield/Return to Darien Gautier
 |tip Manually skip to the next step.
 step
-goto rivenspire_base 20.40,65.27
+goto rivenspire_base 21.52,64.70
 'Return to _Darien Gautier_ |q The Blood-Splattered Shield/Return to Darien Gautier
 step
 goto 21.52,64.70
@@ -11949,7 +11949,7 @@ goto 59.06,56.80
 talk Lady Lleraya Montclair |q The Liberation of Northpoint/Find Lleraya Upstairs
 step
 goto 58.37,60.58
-|tip Go downstairs. in the basement.
+|tip Go downstairs in the basement.
 'Examine _Tear in the Veil_ |q The Liberation of Northpoint/Break Lleraya's Spell
 step
 goto 57.35,61.31
@@ -12087,7 +12087,7 @@ goto rivenspire_base 31.94,40.76
 talk Count Verandis Ravenwatch |q The Lightless Remnant/Cross the Bridge and Talk to Verandis
 step
 goto 31.97,41.02
-'Open Doomcrag Lower Tier_ |q The Lightless Remnant/Enter the Doomcrag |future
+'Open _Doomcrag Lower Tier_ |q The Lightless Remnant/Enter the Doomcrag |future
 |tip Manually skip to the next step.
 step
 goto doomcragground_base 48.53,36.13
@@ -12521,7 +12521,7 @@ goto 48.65,46.14
 |tip At the top of the tower.
 talk Gabrielle Benele |q The Impervious Vault/Talk to Gabrielle at the Mages Guild
 step
-goto 41.16,59.63 |q The Impervious Vault/Collect Worm's Head Cap
+goto 41.16,59.63 |q The Impervious Vault/Collect Worm's Head Cap |tip Outside.
 step
 goto 46.87,62.40
 talk Lucienne Mavine |q The Impervious Vault/Collect Worm's Head Cap
@@ -14417,7 +14417,6 @@ goto 37.59,45.91
 |tip Manually skip to the next step.
 step
 goto 37.90,45.91
-|tip Kill the bubbles that spawn before they reach or she will heal.
 kill Preinrha |q The Waking Darkness/Destroy Preinrha
 step
 goto 39.22,46.37
@@ -14795,7 +14794,7 @@ goto 81.38,44.70
 |tip Manually skip to the next step.
 step
 goto bangkorai_base 52.58,56.73
-'Use' _Main Gate Switch_ |q Storming the Garrison/Activate the Main Gate Switch |future
+'Use _Main Gate Switch_ |q Storming the Garrison/Activate the Main Gate Switch |future
 step
 goto 52.78,56.53
 'Open _Garrison Courtyard_ |q Storming the Garrison/Meet High King Emeric Outside
@@ -14913,7 +14912,6 @@ talk Ayma
 accept Hallin's Burden
 step
 goto 53.30,43.59
-|tip Kill Imperial enemies for a Hallin's Stand Seventh Legion Disguise (Optional).
 'Open _Septima Tharn's Office_ |q Striking Back/Search for Septima in Hallin's Stand
 step
 goto 52.44,45.24
@@ -14952,7 +14950,8 @@ goto 45.82,46.64
 |tip They spawn around this area.
 talk Peasant |q Hallin's Burden/Pass the Weapons to a Supporter in the Town Square
 step
-|tip Follow Beggar, his spawn position is random around the square.
+goto 44.55,42.54
+|tip He will run to this spot.
 talk Beggar |q Hallin's Burden/Talk to the Beggar near the Town Square
 step
 goto 52.84,38.68

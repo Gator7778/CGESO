@@ -22276,7 +22276,7 @@ step
 goto rivenspire_base 18.44,66.49
 'Examine _The Barrows of Westmark Moor_ |lorebook The Barrows of Westmark Moor/1/3/1
 step
-goto 20.40,65.27
+goto 21.52,64.70
 'Return to _Darien Gautier_ |q The Blood-Splattered Shield/Return to Darien Gautier
 step
 goto 21.52,64.70
@@ -28082,9 +28082,10 @@ talk Strange Crow |q A City in Black/Investigate the East Gate
 step
 goto 44.30,41.65 |q A City in Black/Talk to Sir Jarnot
 step
-goto 41.69,43.43
+goto 41.76,43.58
+|tip Inside this building.
+|tip Crow appears on table behind you.
 talk Sir Jarnot
-|tip At the table across from the bar.
 talk Strange Crow |q A City in Black/Talk to Sir Jarnot
 step
 goto 39.23,51.67
@@ -29544,7 +29545,6 @@ talk Ayma
 accept Hallin's Burden
 step
 goto 53.30,43.59
-|tip Kill Imperial enemies for a Hallin's Stand Seventh Legion Disguise, if you need one.
 'Open _Septima Tharn's Office_ |q Striking Back/Search for Septima in Hallin's Stand
 step
 goto 52.44,45.24
