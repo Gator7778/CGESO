@@ -790,6 +790,29 @@ Data.MapIdsByName = {
    ["Jode's Core"]                         = 693,
                     
    -- SOUTHERN ELSWEYR
+   ["Wind Scour Temple"]                   = 694,
+   ["Storm Talon Temple"]                  = 695,
+   ["Dark Water Temple"]                   = 696,
+   ["Vahlokzin's Domain"]                  = 697,
+   ["Vahlokzin's Lair"]                    = 698,
+   ["Senchal"]                             = 699,
+   ["Senchal Palace"]                      = 700,
+   ["Southern Elsweyr"]                    = 701,
+   ["Tideholm"]                            = 702,
+   ["Dragonguard Sanctum"]                 = 703,
+   ["Moonlit Cove"]                        = 704,
+   ["Passage of Dad'na Ghaten"]            = 705,
+   ["Zazaradi's Quarry and Mine"]          = 706,
+   ["Senchal Outlaws Refuge"]              = 707,
+   ["Black Kiergo Arena"]                  = 708,
+   ["Forsaken Citadel"]                    = 709,
+   ["New Moon Fortress"]                   = 710,
+   ["Halls of the Highmane"]               = 711,
+   ["Path of Pride"]                       = 712,
+   ["Doomstone Keep"]                      = 713,
+   ["The Spilled Sand"]                    = 714,
+   ["Dragonhold"]                          = 715,
+   ["Jonelight Path"]                      = 716,
     
    -- Western Skyrim
     
