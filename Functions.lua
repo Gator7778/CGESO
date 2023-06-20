@@ -666,7 +666,6 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 				GetCurrentMapIndex() == Enums.ClockworkCityMap or
 				GetCurrentMapIndex() == Enums.CraglornMap or
 				GetCurrentMapIndex() == Enums.GalenMap or
-				GetCurrentMapIndex() == Enums.GreymoorCaverns or
 			    GetCurrentMapIndex() == Enums.HighIsleMap or
 				GetCurrentMapIndex() == Enums.ImperialCityMap or
 			    GetCurrentMapIndex() == Enums.KhenarthisRoostMap then return 2
@@ -696,6 +695,7 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 				GetCurrentMapIndex() == Enums.GlenumbraMap or
 			    GetCurrentMapIndex() == Enums.GrahtwoodMap or
 			    GetCurrentMapIndex() == Enums.GreenshadeMap or
+				GetCurrentMapIndex() == Enums.GreymoorCaverns or
 			    GetCurrentMapIndex() == Enums.ReapersMarchMap or
 				GetCurrentMapIndex() == Enums.RivenspireMap or
 				GetCurrentMapIndex() == Enums.ShadowfenMap or
@@ -728,7 +728,6 @@ function Utils.DistanceOffsetForIsComplete()
 			    GetCurrentMapIndex() == Enums.BleakrockIsleMap or
 				GetCurrentMapIndex() == Enums.CraglornMap or
 				GetCurrentMapIndex() == Enums.GalenMap or
-				GetCurrentMapIndex() == Enums.GreymoorCaverns or
 			    GetCurrentMapIndex() == Enums.HighIsleMap or
 				GetCurrentMapIndex() == Enums.ImperialCityMap or
 			    GetCurrentMapIndex() == Enums.KhenarthisRoostMap then return 2
@@ -758,6 +757,7 @@ function Utils.DistanceOffsetForIsComplete()
 				GetCurrentMapIndex() == Enums.GlenumbraMap or
 			    GetCurrentMapIndex() == Enums.GrahtwoodMap or
 			    GetCurrentMapIndex() == Enums.GreenshadeMap or
+				GetCurrentMapIndex() == Enums.GreymoorCaverns or
 			    GetCurrentMapIndex() == Enums.ReapersMarchMap or
 				GetCurrentMapIndex() == Enums.RivenspireMap or
 				GetCurrentMapIndex() == Enums.ShadowfenMap or

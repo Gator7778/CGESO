@@ -815,6 +815,33 @@ Data.MapIdsByName = {
    ["Jonelight Path"]                      = 716,
     
    -- Western Skyrim
+   ["Riften Ratway"]                       = 717,
+   ["Blackreach: Mzark Cavern"]            = 718,
+   ["Palace Of Kings"]                     = 719,
+   ["Western Skyrim"]                      = 720,
+   ["Solitude"]                            = 721,
+   ["Kilkreath Temple"]                    = 722,
+   ["Shadowgreen"]                         = 723,
+   ["Dragon Bridge Smuggler Caves"]        = 724,
+   ["Dragonhome"]                          = 725,
+   ["Mor Khazgur Mine"]                    = 726,
+   ["Chillwind Depths"]                    = 727,
+   ["Bleakridge Barrow"]                   = 728,
+   ["Red Eagle Ridge"]                     = 729,
+   ["Blackreach: Greymoor Caverns"]        = 730,
+   ["Kagnthamz"]                           = 731,
+   ["Verglas Hollow"]                      = 732,
+   ["Frozen Coast"]                        = 733,
+   ["Morthal Barrow"]                      = 734,
+   ["Tzinghalis's Tower"]                  = 735,
+   ["Lightless Hollow Mine"]               = 736,
+   ["Blackreach: Dark Moon Grotto"]        = 737,
+   ["The Scraps"]                          = 738,
+   ["Midnight Barrow"]                     = 739,
+   ["The Undergrove"]                      = 740,
+   ["Greymoor Keep: West Wing"]            = 741,
+   ["Greymoor Keep"]                       = 742,
+   ["Gray Host Tunnels"]                   = 743,
     
    -- THE REACH
             
