@@ -1,6 +1,6 @@
 # CGESO
 
-<img src="https://i.imgur.com/ipdf8ei.jpg">
+<img src="https://i.imgur.com/ESqsvse.png">
 
 A Public Domain leveling guide produced by Zygor Guides, updated and maintained by Hydra9268. The purpose of this project is to add leveling guides for new content and extend the life for as long as ESO is available.
 
@@ -9,7 +9,7 @@ A Public Domain leveling guide produced by Zygor Guides, updated and maintained 
 <br/>
 
 ----
-[img]https://i.imgur.com/ESqsvse.png[/img]
+<img src="https://i.imgur.com/27kT29T.png">
 
 Install through the excellent add-on manager <a href="https://minion.mmoui.com/" target="blank">Minion</a>
 
@@ -24,32 +24,33 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 
 ### Recent Updates
 ### 06/09/2023
-*Fix Typo in Azandar Al-Cybiades Guide
-*Fixed Wayshrine name change made by Zenimax from Baandari Trading Post Wayshrine to Baandari Market Wayshrine.
+* Fix Typo in Azandar Al-Cybiades Guide
+* Fixed Wayshrine name change made by Zenimax from Baandari Trading Post Wayshrine to Baandari Market Wayshrine.
 
 ### 06/04/2023 Necrom: Shadows Over Morrowind
-*Change ZGESO > CGESO
-*Removed Old Un-used Coding
-*Necrom: Shadows Over Morrowind
-*Full Guide with Skyshards and Delves
-*Main Quest Only
-*Companion: Azandar Al-Cybiades
-*Companion: Sharp-as-Night
-*Map Revamp
-*Legacy Guides
-*Full Guide and Main Quest Only.
-*Hightlight Objective, More dialogue Options, and Minor Fixes.
-*Fix All Skyshards and Delves For Account-Wide Achievements.
+<img src="https://i.imgur.com/ESqsvse.png">
+
+* Change ZGESO > CGESO
+* Removed Old Un-used Coding
+* Necrom: Shadows Over Morrowind
+* Full Guide with Skyshards and Delves
+* Main Quest Only
+* Companion: Azandar Al-Cybiades
+* Companion: Sharp-as-Night
+* Map Revamp
+* Legacy Guides
+* Full Guide and Main Quest Only.
+* Hightlight Objective, More dialogue Options, and Minor Fixes.
+* Fix All Skyshards and Delves For Account-Wide Achievements.
 
 ### 02/17/23
-*Cadwell's Gold Error for DC
+* Cadwell's Gold Error for DC
 
 ### 11/7/2022
-*Fixed Map Issue in Grahtwood
-*Fixed Map Issue in Reapers March
-### 11/01/2022 Firesong Guide.
-<img src="https://i.imgur.com/UpbeItJ.png">
-<i>artwork &copy; ZeniMax Media</i>
+* Fixed Map Issue in Grahtwood
+* Fixed Map Issue in Reapers March
+  
+### 11/01/2022 Firesong Guide
 
 ### 11/01/2022
 * Rewrite Aldmeri Dominion Legacy Guide For Accountwide Achievements
