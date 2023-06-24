@@ -844,6 +844,32 @@ Data.MapIdsByName = {
    ["Gray Host Tunnels"]                   = 743,
     
    -- THE REACH
+   ["Gray Host Sanctuary"]                 = 744,
+   ["Grayhome"]                            = 745,
+   ["Castle Grayhome"]                     = 746,
+   ["Grayhome Ritual Chamber"]             = 747,
+   ["The Reach"]                           = 748,
+   ["Markarth"]                            = 749,
+   ["Understone Keep"]                     = 750,
+   ["Valthume"]                            = 751,
+   ["Reachwind Depths"]                    = 752,
+   ["Briar Rock Ruins"]                    = 753,
+   ["Briar Rock Crypts"]                   = 754,
+   ["Dead Crone Tower"]                    = 755,
+   ["Sanuarach Mine"]                      = 756,
+   ["Bthar-Zel"]                           = 757,
+   ["Bthar-zel Vaults"]                    = 758,
+   ["Blackreach: Arkthzand Cavern"]        = 759,
+   ["Halls of Arkthzand"]                  = 760,
+   ["Arkthzand Orrery"]                    = 761,
+   ["Lost Valley Redoubt"]                 = 762,
+   ["The Dark Descent"]                    = 763,
+   ["Gloomreach"]                          = 764,
+   ["Nighthollow Keep"]                    = 765,
+   ["Chamber of the Dark Heart"]           = 766,
+   ["Nchuand-Zel"]                         = 767,
+   ["Nchuand-Zel Map"]                     = 768,
+   ["Grayhaven"]                           = 769,
             
    -- Blackwood
 
