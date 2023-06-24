@@ -9,8 +9,7 @@ A Public Domain leveling guide produced by Zygor Guides, updated and maintained 
 <br/>
 
 ----
-
-<img src="https://i.imgur.com/27kT29T.png">
+[img]https://i.imgur.com/ESqsvse.png[/img]
 
 Install through the excellent add-on manager <a href="https://minion.mmoui.com/" target="blank">Minion</a>
 
@@ -23,83 +22,106 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 <br/>
 
 
+### Recent Updates
+### 06/09/2023
+*Fix Typo in Azandar Al-Cybiades Guide
+*Fixed Wayshrine name change made by Zenimax from Baandari Trading Post Wayshrine to Baandari Market Wayshrine.
+
+### 06/04/2023 Necrom: Shadows Over Morrowind
+*Change ZGESO > CGESO
+*Removed Old Un-used Coding
+*Necrom: Shadows Over Morrowind
+*Full Guide with Skyshards and Delves
+*Main Quest Only
+*Companion: Azandar Al-Cybiades
+*Companion: Sharp-as-Night
+*Map Revamp
+*Legacy Guides
+*Full Guide and Main Quest Only.
+*Hightlight Objective, More dialogue Options, and Minor Fixes.
+*Fix All Skyshards and Delves For Account-Wide Achievements.
+
+### 02/17/23
+*Cadwell's Gold Error for DC
+
+### 11/7/2022
+*Fixed Map Issue in Grahtwood
+*Fixed Map Issue in Reapers March
 ### 11/01/2022 Firesong Guide.
 <img src="https://i.imgur.com/UpbeItJ.png">
 <i>artwork &copy; ZeniMax Media</i>
 
-### Recent Updates
-11/01/2022
+### 11/01/2022
 * Rewrite Aldmeri Dominion Legacy Guide For Accountwide Achievements
 * Reimplement and complete re-write of Imperial City Guide and Maps
 * Rewrite Daggerfall Covenant Legacy Guide For Accountwide Achievements
 * Rewrite Ebonheart Pact Legacy Guide For Accountwide Achievements
 * Firesong DLC (Main Quest Only & Full Guide with Delves & Skyshards)
 
-06/06/2022
+### 06/06/2022
 * Edited Vvardenfel step to Examine Bothamul's Orders because the syntax looked incorrect
 * Edited the Readme to add some things from the manifext file
 * Removed superfluous stuff like Lua comments from the manifest file because that's not a valid comment.
 * However, only adding needed lines is always best.
 * Used 7zip to make the .zip file using its Zip format rather then the 7z format
 
-06/06/2022
+### 06/06/2022
 * Completed All DLC Main Quest Only Guides.
 * Added Ember and Isobel Veloise Companion Guides.
 * Added All Rapport Guide for all 4 Companions.
 * Added Main Guide Only for High Isle and Amenos
 * Complete High Isle and Amenos Leveling Guide.
 
-05/29/2022
+### 05/29/2022
 *Fixes Isle of Balfiera bug due to API change
 
-04/16/2022
+### 04/16/2022
 *Fixed Map name bug in Northern Elsweyr
 
-04/16/2022
+### 04/16/2022
 *Created Legacy Main Quest Only Guides
 *Fixed Various Issues
 
-11/2/2021
+### 11/2/2021
 * Fixed Typo in Southern Elsweyr
 
-11/2/2021
+### 11/2/2021
 * Fixed Vulkhel Guard Map issues in Blackwood Prologue guide.
 
-10/31/2021
-Deadlands DLC
+### 10/31/2021
+### Deadlands DLC
 * Include Skyshards, Delves and all quests.
 
-Wrothgar
+### Wrothgar
 * Added Skyshards, Delves, and Missing Quests
 * Reorganized quest order to have sidequests done along side storyline to speed up guide.
 
-Thieves Guild
+### Thieves Guild
 * Added Skyshards, Delves, and Faction commands for certain quests that require it.
 
-Dark Brotherhood
+### Dark Brotherhood
 * Added Skyshards ,Delves, and Added missing quests.
 
-Vvardenfell
+### Vvardenfell
 * Added Prologue, Skyshards, Delves, Missing Quests, and Clarification steps.
 
-Clockwork City
+### Clockwork City
 * Added Prologue, Skyshards, Delves, Missing Quests, and Clarification steps.
 
-Summerset
+### Summerset
 * Added Prologue, Missing Quests, Skyshards, Delves, and Commands to steps to alieviate alot of Manual skips
 
-Murkmire
+### Murkmire
 * Added Prologue, Missing Quests, Skyshards, Delves
 * Commands to steps to alieviate alot of Manual --skips
 
-Northern Elsweyr
+### Northern Elsweyr
 * Added Prologue, Missing Quest, Skyshards, Delves, Commands to steps to alieviate alot of Manual skips
 * Reordered Quest for faster guide
 
-Blackwood
+### Blackwood
 * Removed Companion quests from main guide and moved them into miscellanous
 * Each Companion has its own guide now.
-
 * 6/1/21 Blackwood, Dragonhold (Southern Elsweyr), and Craglorn guides now available (Thank you, snichols7778)! 
 * 3/27/21 Skyrim Guides Now Available (Thanks to snichols7778)!
 * 3/13/21 merge: Sharlikran: Misc changes and updates
