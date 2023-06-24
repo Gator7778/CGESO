@@ -133,16 +133,6 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 
 # Development Guide
 
-### CGESO Version Breakdown
-
-For example, 1.4.96
-
-* `1` = Major version and authored by Zygor
-* `4` = Minor version authored by Zygor, or with substantial improvements
-* `96` = Community version based on the total number of Github commits (This is the version number on the ESOUI website)
-
-----
-
 ### Development HOW-TO
 
 
@@ -162,14 +152,8 @@ For example, 1.4.96
 
 #### These actions are purely visual and do not auto-advance to the next step
 
-`talk` = Talk to NPCs.<br/>
-`click` = Clicking objects and doors.<br/>
+`talk` = Talk to NPCs.<br/>>
 `'` = Adds general information.<br/>
-
-
-#### CGESO Functions of note
-
-`CGV.Utils.IsIntroTutorial()` = (functions.lua) Quickly indentifies the intro tutorial for new players. Currently configured for the Isle of Balfiera.
 
 
 #### Goal Handlers - requires a pipe | in front to activate (e.g. |tip, |q, |count)
@@ -192,33 +176,6 @@ For Example:
 * `The Waking Darkness` Name of quest
 * `/.*Cleanse the Mausoleums.*` Quest objective (Formatting required `/.*Name of Objectve.*`)
 * `|count 2` Current objective number
-
-`|only if` and `|only if not` = Conditional handlers
-
-For example<br>
-`|only if CGV.Utils.GetPlayerPreciseLevel() < 6 and _G.GetCurrentMapZoneIndex() == 712`<br>
-Only allow this step if the player's precise level is less than 6 and the current map zone ID equals 712 (Northern Elsweyr)
-
-`|only if not CGV.QuestTracker:IsQuestComplete("A City in Black")`<br>
-Only allow this step if the player hasn't completed the quest.
-
-`|only if not CGV.Quests:HasQuest("A City in Black") or CGV.Quests:IsQuestComplete("A City in Black")`<br>
-Only allow this step if the player doesn't have the quest or hasn't completed the quest.
-
-`|only if CGV.Utils.GetFaction("player","notvet")=="EP"`<br>
-Only allow this step if the player's faction is Ebonheart Pact.
-
-`|only if CGV.Utils.GetFaction("player","notvet")=="AD"`<br>
-Only allow this step if the player's faction is Aldmeri Dominion.
-
-`|only if CGV.Utils.GetFaction("player","notvet")=="DC"`<br>
-Only allow this step if the player's faction is Daggerfall Covenant.
-
-`|only not CGV.Quests:HasQuest("A City in Black")`<br>
-It appears to be the best method for accepting quests. `|only if not` causes the step to stick after accepting the quest.
-
-`|only CGV.Quests:HasQuest("A City in Black")`<br>
-It appears to be the best method for quest steps. `|only if` causes the step to stick after accepting the quest.
 
 `|or` = Handler for dialog choices. Important: You need to put the |or handler on each selection.
 
