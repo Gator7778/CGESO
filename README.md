@@ -72,14 +72,14 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 * Complete High Isle and Amenos Leveling Guide.
 
 ### 05/29/2022
-*Fixes Isle of Balfiera bug due to API change
+* Fixes Isle of Balfiera bug due to API change
 
 ### 04/16/2022
-*Fixed Map name bug in Northern Elsweyr
+* Fixed Map name bug in Northern Elsweyr
 
 ### 04/16/2022
-*Created Legacy Main Quest Only Guides
-*Fixed Various Issues
+* Created Legacy Main Quest Only Guides
+* Fixed Various Issues
 
 ### 11/2/2021
 * Fixed Typo in Southern Elsweyr
