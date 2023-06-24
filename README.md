@@ -51,8 +51,6 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 * Fixed Map Issue in Reapers March
   
 ### 11/01/2022 Firesong Guide
-
-### 11/01/2022
 * Rewrite Aldmeri Dominion Legacy Guide For Accountwide Achievements
 * Reimplement and complete re-write of Imperial City Guide and Maps
 * Rewrite Daggerfall Covenant Legacy Guide For Accountwide Achievements
