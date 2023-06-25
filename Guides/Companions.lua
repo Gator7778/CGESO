@@ -44,11 +44,8 @@ goto 26.76,46.31
 'Enter _Deepscorn Cavern_ |q Competition and Contracts/Explore Deepscorn Hollow
 |tip Manually skip to the next step.
 step
-goto 25.05,12.90
-'Explore _Deepscorn Hollow_ |q Competition and Contracts/Explore Deepscorn Hollow
-step
 goto 25.05,12.90 
-'Unlock _Cell Door_ |q Competition and Contracts/Free Captives
+'Unlock _Cell Door_ |q Competition and Contracts/Free Captives |future
 step
 goto 25.72,13.42
 talk Thadarond |q Competition and Contracts/Talk to Thadarond
@@ -64,7 +61,7 @@ goto 48.70,35.31
 'Open _Abandoned Excavation_ |q Competition and Contracts/Follow the Cultist |future
 step
 goto 48.40,39.66
-talk Fluvius Salva |q Competition and Contracts/Talk to the Cultist
+talk Fluvius Salva |q Competition and Contracts/Talk to the Cultist |future
 step
 goto 48.09,39.79
 talk Bastian Hallix |q Competition and Contracts/Talk to Bastian Hallix
@@ -73,11 +70,8 @@ goto 53.95,44.33
 'Open _Deepscorn Hollow_ |q Competition and Contracts/Find Tenarei Vels
 |tip Manually skip to the next step.
 step
-goto 63.56,56.44
-'Find _Tenarei Vels_ |q Competition and Contracts/Find Tenarei Vels
-step
 goto 63.36,56.44
-'Break _Crystal Fang_ |q Competition and Contracts/Ritual Orb 1
+'Break _Crystal Fang_ |q Competition and Contracts/Ritual Orb 1 |future
 step
 goto 60.29,57.56
 'Break _Crystal Fang_ |q Competition and Contracts/Ritual Orb 2
@@ -94,8 +88,7 @@ talk Tenarei Vels |q Competition and Contracts/Talk to Tenarei Vels
 step
 goto 46.81,70.35 |q Competition and Contracts/Continue to Explore Deepscorn Hollow
 step
-goto 19.20,62.12
-'Continue to _Explore Deepscorn Hollow_ |q Competition and Contracts/Continue to Explore Deepscorn Hollow
+goto 19.20,62.12 |q Competition and Contracts/Continue to Explore Deepscorn Hollow
 step
 goto 15.20,62.04
 talk Greywyn Blenwyth |q Competition and Contracts/Talk to the Imprisoned Vampire
@@ -125,10 +118,7 @@ goto 48.47,85.41
 |tip Manually skip to the next step.
 step
 goto 65.11,80.17
-'Reach _Fane of Scorn_ |q Competition and Contracts/Reach the Fane of Scorn
-step
-goto 65.11,80.17
-kill the Daughter of Sithis |q Competition and Contracts/Kill the Daughter of Sithis
+kill the Daughter of Sithis |q Competition and Contracts/Kill the Daughter of Sithis |future
 step
 goto 70.91,80.47
 'Open _Private Chamber_ |q Competition and Contracts/Talk to Quistley Silvelle
@@ -1301,17 +1291,13 @@ goto 37.45,14.26
 step
 goto u30_shattered_vault_1_base 39.11,75.73 |q Shattered and Scattered/Reach the Expedition Base Camp |future
 step
-goto 50.93,50.31
-'Reach the _Expedition Base Camp_ |q Shattered and Scattered/Reach the Expedition Base Camp
+goto 50.93,50.31 |q Shattered and Scattered/Reach the Expedition Base Camp
 step
 goto 51.11,49.69
 'Use _Grappling Point_ |q Shattered and Scattered/Use Grapple Bow
 step
 goto 48.80,36.27
-'Investigate _Base Camp_ |q Shattered and Scattered/Investigate the Base Camp
-step
-goto 48.80,36.27
-talk Mirri Elendis |q Shattered and Scattered/Talk to Mirri Elendis
+talk Mirri Elendis |q Shattered and Scattered/Talk to Mirri Elendis |future
 step
 goto 53.16,22.84
 'Destroy the _Soul Siphon Array_ |q Shattered and Scattered/Destroy the Soul Siphon Array
@@ -1331,10 +1317,7 @@ step
 goto 51.96,68.94 |q Shattered and Scattered/Find the Remaining Expedition Members
 step
 goto 46.84,63.05
-'Find the _Remaining Expedition Members_ |q Shattered and Scattered/Find the Remaining Expedition Members
-step
-goto 46.84,63.05
-'Examine _Ardia's Journal_ |q Shattered and Scattered/Examine the Notebook
+'Examine _Ardia's Journal_ |q Shattered and Scattered/Examine the Notebook |future
 step
 goto 47.27,62.71
 talk Mirri Elendis |q Shattered and Scattered/Talk to Mirri Elendis
@@ -1348,10 +1331,7 @@ goto 43.26,55.29
 |tip Manually skip to the next step.
 step
 goto 52.82,23.81
-'Find the _Remaining Expedition Members_ |q Shattered and Scattered/Find the Remaining Expedition Members
-step
-goto 52.82,23.81
-'Destroy the _Soul Siphon Array_ |q Shattered and Scattered/Destroy the Soul Siphon Array
+'Destroy the _Soul Siphon Array_ |q Shattered and Scattered/Destroy the Soul Siphon Array |future
 step
 goto 46.25,16.64
 'Open _Doomvault Vulpinaz Interstitial Corridor_ |q Shattered and Scattered/Follow Mirri Elendis
@@ -1367,11 +1347,8 @@ goto u30_shattered_vault_3_base 45.86,85.86
 'Open _Doomvault Vulpinaz Core Layer_ |q Shattered and Scattered/Find the Remaining Expedition Members
 |tip Manually skip to the next step.
 step
-goto 44.14,72.67 
-'Find the _Remaining Expedition Members_ |q Shattered and Scattered/Find the Remaining Expedition Members
-step
 goto 44.14,72.67
-talk Ghalor |q Shattered and Scattered/Examine Ghalor
+talk Ghalor |q Shattered and Scattered/Examine Ghalor |future
 step
 goto 44.14,72.67
 talk Mirri Elendis |q Shattered and Scattered/Talk to Mirri Elendis
@@ -1386,11 +1363,8 @@ goto 44.31,36.81
 'Use _Grappling Point_ |q Shattered and Scattered/Find the Remaining Expedition Members
 |tip Manually skip to the next step.
 step
-goto 66.29,21.38 
-'Find the _Remaining Expedition Members_ |q Shattered and Scattered/Find the Remaining Expedition Members
-step
 goto 66.29,21.38
-'Destroy the _Soul Siphon Array_ |q Shattered and Scattered/Destroy the Soul Siphon Array
+'Destroy the _Soul Siphon Array_ |q Shattered and Scattered/Destroy the Soul Siphon Array |future
 step
 goto 81.90,32.41
 'Open _Deadlands Foothold_ |q Shattered and Scattered/Follow Mirri Elendis
@@ -1403,12 +1377,9 @@ goto 33.01,46.43
 |tip Manually skip to the next step.
 step
 goto 50.22,48.46
-'Find _Liam Elendis_ |q Shattered and Scattered/Find Liam Elendis
+'Use _Daedric Switch_ |q Shattered and Scattered/Use Central Lever |future
 step
-goto 50.22,48.46
-'Use _Daedric Switch_ |q Shattered and Scattered/Use Central Lever
-step
-goto 55.16,42.45
+goto 52.60,39.54
 |tip Use Grappling Point.
 'Use _Daedric Switch_ |q Shattered and Scattered/Use Leftmost Lever
 step
