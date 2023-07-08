@@ -1638,4 +1638,5 @@ CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves",[[
 loadingimage loadscreen_eldentreeplatform_01.dds
 description All Skyshards and Delves.
 step
+'Coming Soon.
 ]])

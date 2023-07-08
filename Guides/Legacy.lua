@@ -1037,7 +1037,7 @@ goto 24.88,60.92
 |tip Manually skip to the next step.
 step
 goto 14.98,62.63
-|tip She's up the stairs and outside near the building.
+|tip She's upstairs. and outside near the building.
 talk Anala |q Unaccounted Crew/.*Find Captain Erronfaire's Crew.* |count 3
 step
 goto 14.51,59.05
@@ -4690,7 +4690,7 @@ goto 38.62,74.99
 'Open _Southpoint Inn_ |q The Grip of Madness/Southpoint Inn
 step
 goto 38.48,75.13
-|tip Open the Inn go back down the stairs.
+|tip Open the Inn go back downstairs.
 'Examine _Note to Barkeep_ |q The Wandering Minstrel/Find Sorion in Southpoint
 step
 goto 40.16,77.77
@@ -5279,7 +5279,7 @@ goto 54.79,29.11
 |tip Manually skip to the next step.
 step
 goto 55.40,29.73
-|tip Up the stairs.
+|tip Go Upstairs.
 'Examine _Culanwe_ |q Eyes of Azura/Close Portal to Coldharbour
 step
 goto 55.41,29.61
@@ -5992,7 +5992,7 @@ talk Aranecarne |q Rare Imports/Talk to Enthoras
 |tip Manually skip to the next step.
 step
 goto 27.79,42.28
-|tip Up the stairs and behind the building.
+|tip Go Upstairs. and behind the building.
 'Examine _Ebony Blade History_ |lorebook Ebony Blade History/1/16/3
 step
 goto 67.10,40.61
@@ -8960,7 +8960,7 @@ goto 52.17,59.62
 talk Hazazi |q Moonhenge's Tear/Find the Soldier
 step
 goto 52.98,56.56
-|tip Go up the stairs.
+|tip Go upstairs.
 kill Overseer Atris
 'Collect the _Key of Strife_ |q Moonhenge's Tear/Collect the Key of Strife
 step
@@ -9272,7 +9272,7 @@ goto 22.19,48.82
 talk Mariel the Ironhand |q The Storm's Call/Talk to Mariel the Ironhand at the Ruins' Entry
 step
 goto 21.36,45.10
-|tip Go up the stairs.
+|tip Go upstairs.
 'Use _Skyshard_ |q The Storm's Call/Enter the Stormwarden Undercroft in Ilayas Ruins
 |tip Manually skip to the next step.
 step
@@ -12862,7 +12862,7 @@ talk Duzal-ja |q A Night to Forget/Talk to Duzal-ja
 step
 goto 69.53,38.89
 |tip Leave this building.
-|tip Go up the stairs.
+|tip Go upstairs.
 'Find _Darius_ |q A Night to Forget/Find Darius
 step
 goto 69.53,38.89
@@ -12872,7 +12872,7 @@ goto 62.77,38.43
 'Use _Crystal Trap on Wisps_ |q A Night to Forget/.*Capture Wisps with the Crystal.*
 step
 goto 69.53,38.89
-|tip Go up the stairs.
+|tip Go upstairs.
 talk Darius Cornelius |q A Night to Forget/Talk to Darius
 step
 goto 69.31,38.27
@@ -16150,7 +16150,7 @@ accept Anchors from the Harbour
 |only Daggerfall Covenant
 step
 goto 45.87,32.97
-|tip Outside this building.
+|tip Go outside.
 |tip He walks around.
 talk Swineherd Wickton
 accept Swine Thief
@@ -20836,7 +20836,7 @@ turnin A Look in the Mirror
 accept Gift from a Suitor
 step
 goto 64.81,43.09
-|tip Outside the Manor.
+|tip Go outside.
 talk Mathias Raiment |q Gift from a Suitor/Talk to Mathias Raiment
 step
 goto 64.77,43.03
@@ -21984,7 +21984,7 @@ step
 goto 24.59,52.79 |q The Blood-Cursed Town/.*Find the Spirits' Focus Items.* |count 1
 step
 goto 24.66,51.02
-|tip Up the stairs inside the building.
+|tip Go Upstairs. inside the building.
 talk Jonne Surille |q The Blood-Cursed Town/.*Find the Spirits' Focus Items.* |count 1
 |tip Manually skip to the next step.
 step
@@ -22790,7 +22790,7 @@ step
 goto 62.51,42.68 |q The Concealing Veil/Find a Way to Unlock the Trap Door
 step
 goto 60.77,41.82
-|tip Up the stairs and inside the crumbled tower.
+|tip Go Upstairs. and inside the crumbled tower.
 'Search _Backpack_ |q The Concealing Veil/Find a Way to Unlock the Trap Door
 step
 goto 60.23,43.03 |q The Concealing Veil/Enter the Chambers Beneath the Ruins |future
@@ -29182,7 +29182,7 @@ goto 48.92,65.22
 'Extinguish _Fire_ |q The Returned/Extinguish Fires in the Third House
 step
 goto 48.73,65.74
-|tip Outside next to the building.
+|tip Go outside.
 talk Shalan |q The Returned/Talk to Shalan
 step
 goto 53.12,67.44 |q The Returned/Find Visetus's Camp
@@ -34057,15 +34057,15 @@ turnin Oath Breaker
 accept Challenge the Tide
 step
 goto 10.81,61.25
-|tip Run up the stairs.
+|tip Go upstairs.
 'Burn _Covenant Banner_ |q Challenge the Tide/Burn the Central Banner
 step
 goto 11.23,61.98
-|tip Run up the stairs.
+|tip Go upstairs.
 'Burn _Covenant Banner_ |q Challenge the Tide/Burn the South Banner
 step
 goto 10.66,60.11
-|tip Run up the stairs.
+|tip Go upstairs.
 'Burn _Covenant Banner_ |q Challenge the Tide/Burn the North Banner
 step
 goto 9.62,60.31
@@ -34184,7 +34184,7 @@ talk Madras Tedas
 accept A Timely Matter
 step
 goto 69.15,53.54
-|tip Outside.
+|tip Go outside.
 talk Seron Denelu |q A Timely Matter/Talk to Seron Denelu
 step
 goto 57.92,51.74
@@ -34717,7 +34717,7 @@ step
 goto 50.67,49.53 |q A Favor Returned/Go to the Tribunal Temple
 step
 goto 54.01,49.22
-|tip Outside near the building.
+|tip Go outside.
 talk Rigurt the Brash
 accept Cultural Exchange
 step
@@ -35893,7 +35893,7 @@ goto 68.96,48.81
 talk Forlorn One |q Rescue and Revenge/Talk to the Forlorn One
 step
 goto 68.96,47.04
-|tip Outside in the center of town.
+|tip Go outside.
 talk Tidyn Arthalen |q Rescue and Revenge/Talk to Tidyn at the Crater
 step
 goto 68.96,47.04
@@ -38127,7 +38127,7 @@ goto 83.80,82.12
 'Board the _Pirate Ship_ |q Pull the Last Fang/Board the Pirate Ship
 step
 goto 83.93,83.02
-|tip Inside the ship, up the stairs.
+|tip Inside the ship, Go upstairs.
 'Open _Lockbox_ |q Pull the Last Fang/Find the Key to the Hold
 step
 goto 83.90,82.60
@@ -39842,7 +39842,7 @@ talk Skorvild Frostwind |q Giant Problems/Talk to Skorvild
 'Choose _<Eat some of the meat.>_
 step
 goto 55.18,35.45
-|tip Outside the building.
+|tip Go outside.
 'Examine _The Cleansing of the Fane_ |lorebook The Cleansing of the Fane/1/13/4
 step
 goto 58.35,34.58
@@ -43181,7 +43181,7 @@ goto 9.21,29.56
 'Examine _Crow and Raven: Three Short Fables_ |lorebook Crow and Raven: Three Short Fables/1/14/9
 step
 goto 12.10,29.19
-|tip Outside all around this area.
+|tip Go outside.
 'Use _Piles of Hay_
 'Catch _Glowflies_ |q Problems Into Profit/.*Catch Glowflies.*
 step
@@ -44594,7 +44594,7 @@ step
 goto 51.31,48.11 |q Returning Winter's Bite/Recover Winter's Bite at Faldar's Tooth
 step
 goto 51.86,47.01
-|tip It is up the stairs inside the tower.
+|tip Go upstairs. inside the tower.
 'Examine _Song of the Askelde Men_ |lorebook Song of the Askelde Men/1/18/8
 step
 goto 49.98,47.39

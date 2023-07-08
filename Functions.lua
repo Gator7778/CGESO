@@ -663,7 +663,6 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 			    GetCurrentMapIndex() == Enums.BetnikhMap or
 			    GetCurrentMapIndex() == Enums.BleakrockIsleMap or
 				GetCurrentMapIndex() == Enums.ClockworkCityMap or
-				GetCurrentMapIndex() == Enums.CraglornMap or
 				GetCurrentMapIndex() == Enums.GalenMap or
 			    GetCurrentMapIndex() == Enums.HighIsleMap or
 				GetCurrentMapIndex() == Enums.ImperialCityMap or
@@ -688,10 +687,10 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 				GetCurrentMapIndex() == Enums.StonefallsMap or
 				GetCurrentMapIndex() == Enums.StrosMKaiMap or
 				GetCurrentMapIndex() == Enums.TheReachMap or
-				GetCurrentMapIndex() == Enums.VvardenfellMap or
 				GetCurrentMapIndex() == Enums.WrothgarMap then return 4
 				
-		elseif  GetCurrentMapIndex() == Enums.FargraveMap or
+		elseif  GetCurrentMapIndex() == Enums.CraglornMap or
+		        GetCurrentMapIndex() == Enums.FargraveMap or
 				GetCurrentMapIndex() == Enums.GlenumbraMap or
 			    GetCurrentMapIndex() == Enums.GrahtwoodMap or
 			    GetCurrentMapIndex() == Enums.GreenshadeMap or
@@ -699,7 +698,8 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 			    GetCurrentMapIndex() == Enums.ReapersMarchMap or
 				GetCurrentMapIndex() == Enums.RivenspireMap or
 				GetCurrentMapIndex() == Enums.ShadowfenMap or
-				GetCurrentMapIndex() == Enums.TheRiftMap then return 5
+				GetCurrentMapIndex() == Enums.TheRiftMap or
+				GetCurrentMapIndex() == Enums.VvardenfellMap then return 6
 				
 		elseif 	GetCurrentMapIndex() == Enums.AlikrMap or
 				GetCurrentMapIndex() == Enums.ArtaeumMap or
@@ -725,7 +725,6 @@ function Utils.DistanceOffsetForIsComplete()
 		    if  GetCurrentMapIndex() == Enums.BalfieraMap or
 			    GetCurrentMapIndex() == Enums.BetnikhMap or
 			    GetCurrentMapIndex() == Enums.BleakrockIsleMap or
-				GetCurrentMapIndex() == Enums.CraglornMap or
 				GetCurrentMapIndex() == Enums.GalenMap or
 			    GetCurrentMapIndex() == Enums.HighIsleMap or
 				GetCurrentMapIndex() == Enums.ImperialCityMap or
@@ -750,10 +749,10 @@ function Utils.DistanceOffsetForIsComplete()
 				GetCurrentMapIndex() == Enums.StonefallsMap or
 				GetCurrentMapIndex() == Enums.StrosMKaiMap or
 				GetCurrentMapIndex() == Enums.TheReachMap or
-				GetCurrentMapIndex() == Enums.VvardenfellMap or
 				GetCurrentMapIndex() == Enums.WrothgarMap then return 4
 				
-		elseif  GetCurrentMapIndex() == Enums.FargraveMap or
+		elseif  GetCurrentMapIndex() == Enums.CraglornMap or
+		        GetCurrentMapIndex() == Enums.FargraveMap or
 				GetCurrentMapIndex() == Enums.GlenumbraMap or
 			    GetCurrentMapIndex() == Enums.GrahtwoodMap or
 			    GetCurrentMapIndex() == Enums.GreenshadeMap or
@@ -761,7 +760,7 @@ function Utils.DistanceOffsetForIsComplete()
 			    GetCurrentMapIndex() == Enums.ReapersMarchMap or
 				GetCurrentMapIndex() == Enums.RivenspireMap or
 				GetCurrentMapIndex() == Enums.ShadowfenMap or
-				GetCurrentMapIndex() == Enums.TheRiftMap then return 5
+				GetCurrentMapIndex() == Enums.VvardenfellMap then return 6
 				
 		elseif 	GetCurrentMapIndex() == Enums.AlikrMap or
 				GetCurrentMapIndex() == Enums.ArtaeumMap or

@@ -328,10 +328,7 @@ goto 52.76,68.71
 'Place _Mote Trap_ |q Tower Full of Trouble/.*Set the Mote Traps.* |count 4
 step
 goto 55.03,69.25
-'Meet _Ember at the Livestock Shed_ |q Tower Full of Trouble/Meet Ember at the Livestock Shed
-step
-goto 55.03,69.25
-talk Ember |q Tower Full of Trouble/Talk to Ember
+talk Ember |q Tower Full of Trouble/Talk to Ember |future
 step
 goto 55.02,67.99
 'Use _Spoon of Undo on Enchanted Cow_ |q Tower Full of Trouble/.*Restore the Livestock.* |count 1
@@ -357,7 +354,7 @@ goto 52.86,69.66
 talk Ember |q Tower Full of Trouble/Talk to Ember
 step
 goto 52.76,69.95
-|tip Follow Ember downstairs or she will stop at the bottom of the staircase downstairs.
+|tip Go downstairs.
 'Open _Arcane Library_ |q Tower Full of Trouble/Find The Mirrored Way
 |tip Manually skip to the next step.
 step
@@ -378,11 +375,8 @@ goto 52.99,69.77
 step
 goto 50.93,70.63 |q Tower Full of Trouble/Go to the Ritual Circle
 step
-goto 50.43,71.63
-'Go to the _Ritual Circle_ |q Tower Full of Trouble/Go to the Ritual Circle
-step
 goto 50.40,71.84
-'Ignite _Ritual Sconce_ |q Tower Full of Trouble/Help Ember at the Ritual Circle
+'Ignite _Ritual Sconce_ |q Tower Full of Trouble/Help Ember at the Ritual Circle |future
 |tip Manually skip to the next step.
 step
 goto 50.72,71.47
@@ -393,14 +387,8 @@ goto 51.16,71.36
 |tip Watch dialogue.
 'Ignite _Ritual Sconce_ |q Tower Full of Trouble/Help Ember at the Ritual Circle
 step
-goto 52.49,71.44
-'Follow _Ember_ |q Tower Full of Trouble/Follow Ember
-step
 goto 53.24,69.77
-'Return to _Tower_ |q Tower Full of Trouble/Return to the Tower
-step
-goto 53.24,69.77
-talk Magister Irin |q Tower Full of Trouble/Talk to Magister Irin
+talk Magister Irin |q Tower Full of Trouble/Talk to Magister Irin |future
 step
 goto 53.21,69.86
 talk Ember
@@ -749,10 +737,7 @@ goto 35.75,83.04
 'Take _Redheart's Hilt_ |q Tournament of the Heart/Search for the Sword Hilt |future
 step
 goto 35.71,81.63
-'Follow _Isobel Veloise_ |q Tournament of the Heart/Follow Isobel
-step
-goto 35.71,81.63
-talk Isobel Veloise |q Tournament of the Heart/Talk to Isobel
+talk Isobel Veloise |q Tournament of the Heart/Talk to Isobel |future
 'Tell her _Tell me about the Oaken Order._
 'Tell her _Do we talk to the mage, or fight them?_
 'Tell her_ Let's get that staff for the Oaken Order._
