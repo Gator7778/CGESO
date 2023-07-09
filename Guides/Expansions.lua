@@ -13132,9 +13132,7 @@ goto 55.34,70.79
 'Open _Ald'ruhn_ |q Divine Delusions/Follow Seryn
 |tip Manually skip to the next step.
 step
-goto vvardenfell_base 39.05,46.63 |q Divine Delusions/Follow Seryn
-step
-goto 39.01,46.68
+goto vvardenfell_base 39.01,46.68
 talk Azura |q Divine Delusions/Talk to Azura |future
 step
 goto 36.41,48.20
@@ -13575,7 +13573,7 @@ goto vivecthroneroom02_base 49.86,31.29
 talk Vivec |q Divine Restoration/Talk to Vivec
 step
 goto 49.89,36.53
-'Use _Sunna'rah to Restore Vivec_ |q Divine Restoration/Use Sunna'rah to Restore Vivec
+'Use _Sunna'rah_ |q Divine Restoration/Use Sunna'rah to Restore Vivec
 step
 goto 50.00,31.27
 talk Vivec
@@ -13589,7 +13587,7 @@ goto viviccity_base 51.70,55.40
 |tip Manually skip to the next step.
 step
 goto vivechow02_base 23.14,66.64
-'Use _Archcanon's Lockbox_ |q Divine Blessings/Retrieve the Archcanon's Signet
+'Search _Archcanon's Lockbox_ |q Divine Blessings/Retrieve the Archcanon's Signet
 step
 goto viviccity_base 48.06,54.43
 talk Vivec |q Divine Blessings/Talk to Vivec |future
@@ -14003,11 +14001,8 @@ goto 49.13,94.81
 'Open _The Clockwork City_ |q In Search of a Sponsor/Find Neramo |future
 |tip Manually skip to the next step.
 step
-goto brassfortress_base 53.48,48.24
-'Find _Neramo_ |q In Search of a Sponsor/Find Neramo
-step
-goto 53.80,48.10
-talk Neramo |q In Search of a Sponsor/Talk to Neramo
+goto brassfortress_base 53.80,48.10
+talk Neramo |q In Search of a Sponsor/Talk to Neramo |future
 step
 goto 45.16,52.79
 talk Kireth Vanos |q In Search of a Sponsor/Talk to Kireth
@@ -14024,11 +14019,8 @@ goto 44.17,46.02
 'Open _The Clockwork City_ |q In Search of a Sponsor/Look for Kireth
 |tip Manually skip to the next step.
 step
-goto 42.38,50.29
-'Look for _Kireth_ |q In Search of a Sponsor/Look for Kireth
-step
 goto 42.17,50.61
-talk Raynor Vanos |q In Search of a Sponsor/Talk to Raynor
+talk Raynor Vanos |q In Search of a Sponsor/Talk to Raynor |future
 step
 goto 58.93,46.58
 talk Zaiba |q In Search of a Sponsor/Investigate Kireth's Abduction
@@ -14502,9 +14494,9 @@ goto 36.94,46.91
 talk Knave of Rooks |q Lost in the Gloam/Talk to the Crows
 step
 goto 49.45,61.37
-talk Constable Drados |q Lost in the Gloam/Talk to Drados
 |tip Go downstairs.
 |tip Persuade him.
+talk Constable Drados |q Lost in the Gloam/Talk to Drados
 step
 goto 41.66,53.20 |q Lost in the Gloam/Talk to the Knave of Rooks |tip Go upstairs.
 step
@@ -14644,7 +14636,7 @@ goto 43.72,57.25
 |tip Manually skip to the next step.
 step
 goto 44.55,54.87
-'Use _Strange Lever_ |q Lost in the Gloam/Pull a Third Lever
+'Use _Strange Lever_ |q Lost in the Gloam/Pull a Third Lever |future
 step
 goto 44.55,56.18
 'Use _Strange Lever_ |q Lost in the Gloam/Pull the Final Lever
@@ -14720,7 +14712,7 @@ talk Chancellor Gascone Dusant |q Unto the Dark/Talk to Chancellor Gascone
 |tip Persuade him.
 step
 goto 81.75,53.37
-'Open _Clockwork Nave_ |q Unto the Dark/Talk to Luciana
+'Open _Clockwork Nave_ |q Unto the Dark/Talk to Luciana |future
 |tip Manually skip to the next step.
 step
 goto 30.73,45.06
@@ -15225,9 +15217,9 @@ step
 goto 59.85,36.48
 'Use _Right Core Pump_ |q Where Shadows Lie/Activate the Right Core Pump
 step
-goto 91.19,29.28 |q Where Shadows Lie/Follow Luciana
+goto 76.71,36.28 |q Where Shadows Lie/Follow Luciana
 step
-goto 90.01,64.25 |q Where Shadows Lie/Follow Luciana
+goto 75.76,51.20 |q Where Shadows Lie/Follow Luciana
 step
 goto 65.82,50.70 |q Where Shadows Lie/Follow Luciana
 step
@@ -15235,9 +15227,7 @@ goto 50.16,20.19
 'Open _Halls of Convention_ |q Where Shadows Lie/Follow Luciana
 |tip Manually skip to the next step.
 step
-goto ccq7_map2_base 32.89,80.62
-'_Double Map Size_
-'Follow _Luciana_ |q Where Shadows Lie/Follow Luciana
+goto ccq7_map2_base 32.89,80.62 |q Where Shadows Lie/Follow Luciana
 step
 goto 36.63,80.50
 'Activate _Switch_ |q Where Shadows Lie/Find a Path Through the Shadows
@@ -15274,13 +15264,13 @@ goto 48.14,18.22
 'Open _The All-Axle_ |q Where Shadows Lie/Find Sotha Sil
 |tip Manually skip to the next step.
 step
-goto ccq7_map3_base 63.50,48.09 |q Where Shadows Lie/Find Sotha Sil |tip Go down the ramp.
+goto ccq7_map3_base 63.50,48.09 |q Where Shadows Lie/Find Sotha Sil
 step
-goto 46.47,39.05 |q Where Shadows Lie/Find Sotha Sil |tip Go down the ramp.
+goto 46.47,39.05 |q Where Shadows Lie/Find Sotha Sil
 step
-goto 39.13,55.07 |q Where Shadows Lie/Find Sotha Sil |tip Go down the ramp.
+goto 39.13,55.07 |q Where Shadows Lie/Find Sotha Sil
 step
-goto 51.31,63.05 |q Where Shadows Lie/Find Sotha Sil |tip Go down the ramp.
+goto 51.31,63.05 |q Where Shadows Lie/Find Sotha Sil
 step
 goto 51.32,39.63
 talk Aios |q Where Shadows Lie/Find Sotha Sil
@@ -15288,18 +15278,15 @@ talk Aios |q Where Shadows Lie/Find Sotha Sil
 step
 goto 55.12,63.01 |q Where Shadows Lie/Find Sotha Sil |tip Go down the ramp.
 step
-goto ccq7_map5_base 71.23,45.84 |q Where Shadows Lie/Find Sotha Sil |tip Go down the ramp.
+goto ccq7_map5_base 71.23,45.84 |q Where Shadows Lie/Find Sotha Sil
 step
-goto 54.69,37.16 |q Where Shadows Lie/Find Sotha Sil |tip Go down the ramp.
+goto 54.69,37.16 |q Where Shadows Lie/Find Sotha Sil 
 step
 goto 12.87,49.77
 'Open _The Throne Aligned_ |q Where Shadows Lie/Find Sotha Sil
 step
-goto ccq7_map4_base 66.11,52.16
-'Confront the _Shadow of Sotha Sil_ |q Where Shadows Lie/Confront the Shadow of Sotha Sil |future
-step
-goto 42.26,52.13
-kill Shadow of Sotha Sil |q Where Shadows Lie/Defeat the Shadow of Sotha Sil
+goto ccq7_map4_base 42.26,52.13
+kill Shadow of Sotha Sil |q Where Shadows Lie/Defeat the Shadow of Sotha Sil |future
 step
 goto 28.28,52.09
 |tip Watch the dialogue.
@@ -17082,20 +17069,18 @@ goto 36.45,60.59 |q A Pearl of Great Price/Explore the Sinkhole Caverns
 step
 goto 46.13,60.47 |q A Pearl of Great Price/Explore the Sinkhole Caverns
 step
-goto 48.09,67.21
-'Explore the _Sinkhole Caverns_ |q A Pearl of Great Price/Explore the Sinkhole Caverns
+goto 48.09,67.21 |q A Pearl of Great Price/Explore the Sinkhole Caverns
 step
 goto 51.47,68.59
-talk Eldhon |q A Pearl of Great Price/Talk to Eldhon
+talk Eldhon |q A Pearl of Great Price/Talk to Eldhon |future
 step
 goto 58.30,62.40 |q A Pearl of Great Price/Continue Exploring the Sinkhole Caverns
 step
-goto 56.39,50.67
-'Continue _Exploring the Sinkhole Caverns_ |q A Pearl of Great Price/Continue Exploring the Sinkhole Caverns
+goto 56.39,50.67 |q A Pearl of Great Price/Continue Exploring the Sinkhole Caverns
 step
 goto 56.39,50.67
 |tip Watch the dialogue
-talk Valsirenn |q A Pearl of Great Price/Talk to Valsirenn
+talk Valsirenn |q A Pearl of Great Price/Talk to Valsirenn |future
 step
 goto 64.90,51.11
 'Open _Rellenthil Sinkhole_ |q A Pearl of Great Price/Destroy Abyssal Pearls
@@ -17121,12 +17106,10 @@ goto 42.90,45.95
 talk Valsirenn |q A Pearl of Great Price/Talk to Valsirenn |future
 |tip Manually skip to the next step.
 step
-goto 36.07,36.57
-'Continue _Exploring the Sinkhole Caverns_ |q A Pearl of Great Price/Continue Exploring the Sinkhole Caverns
+goto 36.07,36.57 |q A Pearl of Great Price/Continue Exploring the Sinkhole Caverns
 step
 goto 36.07,36.57
-kill Yaghra Monstrosity |q A Pearl of Great Price/Destroy the Yaghra Monstrosity
-|tip A simple boss fight. The Monstrosity summons a small hatchling. Ignore them and focus on the Monstrosity. The best tactic is to attack the Monstrosity while moving around it. It has a slow turn radius. When it summons a large telegraph at its location move away.
+kill Yaghra Monstrosity |q A Pearl of Great Price/Destroy the Yaghra Monstrosity |future
 step
 goto 35.60,30.79
 'Enter _Summerset_ |q A Pearl of Great Price/Exit the Sinkhole
@@ -17658,10 +17641,10 @@ step
 goto 58.43,69.67 |q Buried Memories/Reveal the Third Memory
 step
 goto 57.41,44.74
-|tip 'Watch the dialogue.
+|tip Watch the dialogue.
 kill Dissonance |q Buried Memories/Reveal the Third Memory
 step
-goto 45.56,43.14 |q Buried Memories/Reveal the Third Memory
+goto 45.56,43.14 |q Buried Memories/Defeat K'Tora
 step
 goto 45.61,57.35
 kill K'Tora |q Buried Memories/Defeat K'Tora
@@ -17673,11 +17656,11 @@ goto psijicrelicvaults01_base 53.06,56.85
 talk Sotha Sil |q Buried Memories/Talk to Sotha Sil
 step
 'Open _Artaeum_ Map
-'Travel to _Artaeum_ |q Buried Memories/Exit the Vaults
+'Travel to _Artaeum_ |q Buried Memories/Exit the Vaults |future
 |tip Manually skip to the next step.
 step
 goto artaeum_base 64.96,26.72
-'Use _Portal to Ceporah Tower_ |q Buried Memories/Talk to Ritemaster Iachesis
+'Use _Portal to Ceporah Tower_ |q Buried Memories/Talk to Ritemaster Iachesis |future
 |tip Manually skip to the next step.
 step
 goto dreamingcave02_base 56.25,64.66
@@ -17698,11 +17681,11 @@ step
 goto 56.67,85.58 |q The Tower Sentinels/Go to Alinor's Royal Palace
 step
 goto 64.50,46.25
-'Open _Alinor's Royal Palace_ |q The Tower Sentinels/Go to Alinor's Royal Palace
+'Open _Alinor's Royal Palace_ |q The Tower Sentinels/Go to Alinor's Royal Palace |future
 |tip Manually skip to the next step.
 step
 goto alinorroyalpalace1_base 40.24,30.89
-talk Proxy Queen Alwinarwe |q The Tower Sentinels/Talk to Proxy Queen Alwinarwe
+talk Proxy Queen Alwinarwe |q The Tower Sentinels/Talk to Proxy Queen Alwinarwe |future
 step
 'Open _Summerset_ Map
 'Travel to _Cey-Tarn Keep_ |q The Psijics' Calling/Find the Augur of the Obscure
@@ -20347,7 +20330,7 @@ talk Earl Leythen |q The Crystal Tower/Talk to Earl Leythen
 step
 goto 56.62,19.66
 |tip Watch the dialogue.
-'Get _Through the Opened Gate_ |q The Crystal Tower/Get Through the Opened Gate
+'Go _Through the Opened Gate_ |q The Crystal Tower/Get Through the Opened Gate
 step
 goto 56.62,19.66
 talk Earl Leythen |q The Crystal Tower/Talk to Earl Leythen
@@ -20385,6 +20368,9 @@ goto 86.02,51.28
 talk Darien Gautier |q The Crystal Tower/Talk to Darien Gautier
 step
 goto 86.02,51.28
+'Cleanse _Dawnbreaker_ |q The Crystal Tower/Cleanse the Dawnbreaker
+step
+goto 86.02,51.28
 |tip Watch the dialogue
 'Take _Restored Dawnbreaker_ |q The Crystal Tower/Take the Restored Dawnbreaker |future
 step
@@ -20405,7 +20391,7 @@ step
 goto 30.58,37.15 |q The Crystal Tower/Use the Dawnbreaker to Confront Nocturnal
 step
 goto 48.56,49.76
-'Use _The Dawnbreaker to Confront Nocturnal_ |q The Crystal Tower/Use the Dawnbreaker to Confront Nocturnal
+'Use _Dawnbreaker_ |q The Crystal Tower/Use the Dawnbreaker to Confront Nocturnal
 step
 goto 48.56,49.76
 kill waves of mobs |q The Crystal Tower/Stop Nocturnal
@@ -20461,14 +20447,11 @@ goto alinor_base 42.27,76.34 |q A New Alliance/Go to the Royal Palace in Alinor
 step
 goto 56.67,85.58 |q A New Alliance/Go to the Royal Palace in Alinor
 step
-goto 64.50,46.25
-'Go to _Royal Palace in Alinor_ |q A New Alliance/Go to the Royal Palace in Alinor
-step
 goto 64.35,46.95
-talk Oriandra |q A New Alliance/Talk to Oriandra
+talk Oriandra |q A New Alliance/Talk to Oriandra |future
 step
 goto 64.50,46.25
-'Open _Alinor's Royal Palace_ |q A New Alliance/Attend the Palace Meeting
+'Open _Alinor Royal Palace_ |q A New Alliance/Attend the Palace Meeting
 |tip Manually skip to the next step.
 step
 goto alinorroyalpalace1_base 63.12,64.13
@@ -43319,7 +43302,7 @@ step
 
 -- START: ALDMERI DOMINION FACTION PROLOGUE GUIDE
 'Open _Auridon_ Map
-'Travel to _Vulkhel Guard_ |q Sojourn of the Druid King
+'Travel to _Vulkhel Guard_ |q Sojourn of the Druid King |future
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -43330,7 +43313,7 @@ accept Sojourn of the Druid King
 step
 goto 54.98,40.88
 'Use _Vulkhel Guard_ Wayshrine
-'Travel to _Aldcroft_ in Auridon |q Sojourn of the Druid King/Meet Druid Laurel at the Mines of Khuras
+'Travel to _Aldcroft_ in Glenumbra |q Sojourn of the Druid King/Meet Druid Laurel at the Mines of Khuras
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -43346,12 +43329,8 @@ step
 goto 68.97,53.46 |q Sojourn of the Druid King/Meet Druid Laurel at the Mines of Khuras
 |only Aldmeri Dominion
 step
-goto 69.83,53.39
-'Meet _Druid Laurel at the Mines of Khuras_ |q Sojourn of the Druid King/Meet Druid Laurel at the Mines of Khuras
-|only Aldmeri Dominion
-step
 goto 69.78,53.00
-'Open Mines of Khuras |q Sojourn of the Druid King/Find Dhulef
+'Open _Mines of Khuras_ |q Sojourn of the Druid King/Find Dhulef |future
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -43365,21 +43344,21 @@ goto 30.40,30.77 |q Sojourn of the Druid King/Find Dhulef
 |only Aldmeri Dominion
 step
 goto 23.91,34.49
-talk Dhulef |q Sojourn of the Druid King/Talk to Dhulef
+talk Dhulef |q Sojourn of the Druid King/Talk to Dhulef |future
 |only Aldmeri Dominion
 -- END: ALDMERI DOMINION FACTION PROLOGUE GUIDE
 
 -- START: DAGGERFALL COVENANT FACTION
 step
 'Open _Glenumbra_ Map
-'Travel to _Daggerfall_ |q Sojourn of the Druid King
+'Travel to _Daggerfall_ |q Sojourn of the Druid King |future
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto daggerfall_base 46.27,30.72 |q Sojourn of the Druid King
+goto daggerfall_base 46.27,30.72 |q Sojourn of the Druid King |future
 |only Daggerfall Covenant
 step
-goto 52.67,42.48 |q Sojourn of the Druid King
+goto 52.67,42.48 |q Sojourn of the Druid King |future
 |only Daggerfall Covenant
 step
 goto 48.84,43.78
@@ -43396,12 +43375,8 @@ goto 49.01,20.71
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto glenumbra_base 34.97,72.78
-'Meet _Druid Laurel at Illessan Tower_ |q Sojourn of the Druid King/Meet Druid Laurel at Ilessan Tower
-|only Daggerfall Covenant
-step
-goto 34.80,72.60
-'Open _Ilessan Tower_ |q Sojourn of the Druid King/Find Dhulef
+goto glenumbra_base 34.80,72.60
+'Open _Ilessan Tower_ |q Sojourn of the Druid King/Find Dhulef |future
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -43415,18 +43390,18 @@ goto 64.43,33.38 |q Sojourn of the Druid King/Find Dhulef
 |only Daggerfall Covenant
 step
 goto 68.42,24.56
-talk Dhulef |q Sojourn of the Druid King/Talk to Dhulef
+talk Dhulef |q Sojourn of the Druid King/Talk to Dhulef |future
 |only Daggerfall Covenant
 -- END: DAGGERFALL COVENANT FACTION
 
 -- START: EBONHEART PACT FACTION
 step
 'Open _Stonefalls_ Map
-'Travel to _Davon's Watch_ |q Sojourn of the Druid King
+'Travel to _Davon's Watch_ |q Sojourn of the Druid King |future
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
-goto davonswatch_base 70.51,70.12 |q Sojourn of the Druid King
+goto davonswatch_base 70.51,70.12 |q Sojourn of the Druid King |future
 |only Ebonheart Pact
 step
 goto 53.95,52.45
@@ -43442,12 +43417,8 @@ goto 58.53,78.03
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
-goto glenumbra_base 60.53,18.42
-'Meet _Druid Laurel_ |q Sojourn of the Druid King/Meet Druid Laurel at Ebon Crypt
-|only Ebonheart Pact
-step
-goto 60.687,18.48
-'Open _Ebon Crypt_ |q Sojourn of the Druid King/Find Dhulef
+goto glenumbra_base 60.687,18.48
+'Open _Ebon Crypt_ |q Sojourn of the Druid King/Find Dhulef |future
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -43461,7 +43432,7 @@ goto 82.75,53.36 |q Sojourn of the Druid King/Find Dhulef
 |only Ebonheart Pact
 step
 goto 66.56,59.62
-talk Dhulef |q Sojourn of the Druid King/Talk to Dhulef
+talk Dhulef |q Sojourn of the Druid King/Talk to Dhulef |future
 |only Ebonheart Pact
 -- END: EBONHEART PACT FACTION
 
@@ -43472,7 +43443,7 @@ step
 |tip Manually skip to the next step.
 step
 goto glenumbra_base 26.07,53.85
-talk Wyress Joslin |q Sojourn of the Druid King/Talk to Wyress Joslin
+talk Wyress Joslin |q Sojourn of the Druid King/Talk to Wyress Joslin |future
 step
 'Open _Glenumbra_ Map
 'Travel to _Wyrd Tree_ |q Sojourn of the Druid King/.*Search the Firesong Camps.*
@@ -43510,7 +43481,7 @@ goto 48.02,37.01
 |tip Manually skip to the next step.
 step
 goto 25.89,53.95
-talk Druid Laurel |q Sojourn of the Druid King/Talk to Druid Laurel
+talk Druid Laurel |q Sojourn of the Druid King/Talk to Druid Laurel |future
 step
 'Open _Glenumbra_ Map
 'Travel to _Burial Tombs_ |q Sojourn of the Druid King/Go to the Spot Marked on the Map
@@ -43519,7 +43490,7 @@ step
 goto 80.04,30.36 |q Sojourn of the Druid King/Go to the Spot Marked on the Map
 step
 goto 82.03,29.20
-'Enter _Eimhir's Cavern_ |q Sojourn of the Druid King/Enter Eimhir's Cavern
+'Enter _Eimhir's Cavern_ |q Sojourn of the Druid King/Enter Eimhir's Cavern |future
 |tip Manually skip to the next step.
 step
 goto U35_Prologue_Glenumbra_Cave 59.53,51.05 |q Sojourn of the Druid King/Find Wyress Tola
@@ -43535,19 +43506,19 @@ goto 54.04,23.30
 |tip Manually skip to the next step.
 step
 goto 57.74,37.83
-talk Wyress Tola |q Sojourn of the Druid King/Talk to Wyress Tola
+talk Wyress Tola |q Sojourn of the Druid King/Talk to Wyress Tola |future
 step
 goto 56.28,38.66
 talk Druid Laurel |q Sojourn of the Druid King/Talk to Druid Laurel
 step
 goto 56.96,37.17
-'Use _Portal to Bangkorai_ |q Sojourn of the Druid King/Go to the Glenmoril Wyrd Camp
+'Use _Portal to Bangkorai_ |q Sojourn of the Druid King/Go to the Glenmoril Wyrd Camp 
 |tip Manually skip to the next step.
 step
-goto bangkorai_base 47.00,38.95 |q Sojourn of the Druid King/Talk to Wyress Matilde
+goto bangkorai_base 47.00,38.95 |q Sojourn of the Druid King/Talk to Wyress Matilde |future
 step
 goto 50.70,39.41
-talk Wyress Matilde |q Sojourn of the Druid King/Talk to Wyress Matilde
+talk Wyress Matilde |q Sojourn of the Druid King/Talk to Wyress Matilde |future
 step
 goto 46.63,37.16
 'Use _Eastern Evermore_ Wayshrine
@@ -43560,8 +43531,8 @@ goto 31.67,53.89
 step
 goto sunkenroad_base 46.34,57.22 |q Sojourn of the Druid King/Find Entrance to the Ancient Ritual Site |tip Drop down and Climb the stairs.
 step
-goto 38.73,71.34
-'Enter _Glenmoril Ritual Site_ |q Sojourn of the Druid King/Enter the Ancient Ritual Site
+goto 35.27,72.37
+'Enter _Glenmoril Ritual Site_ |q Sojourn of the Druid King/Enter the Ancient Ritual Site |future
 |tip Manually skip to the next step.
 step
 goto U35_Prologue_Cursed_Cave 63.77,54.99 |q Sojourn of the Druid King/Find Archdruid Michiel
@@ -43581,7 +43552,7 @@ goto 31.73,35.19
 |tip Manually skip to the next step.
 step
 goto 30.19,49.24
-kill Archdruid Michiel |q Sojourn of the Druid King/Kill Archdruid Michiel
+kill Archdruid Michiel |q Sojourn of the Druid King/Kill Archdruid Michiel |future
 step
 goto 29.37,52.84
 'Open _Ancient Spirit Bindings_ |q Sojourn of the Druid King/Release the Ancient Nature Spirit
@@ -43604,7 +43575,7 @@ turnin Sojourn of the Druid King
 -- BEGIN Galen GUIDE
 step
 'Open _Galen and Y'ffelonn_ Map
-'Travel to _Vastyr Outskirts_ |q A Sea of Troubles
+'Travel to _Vastyr Outskirts_ |q A Sea of Troubles |future
 |tip Manually skip to the next step.
 step
 goto u36_galenisland_base 29.11,62.37
@@ -43618,7 +43589,7 @@ goto 22.36,60.99
 talk Sir Stefan Mornard |q A Sea of Troubles/Talk to Sir Stefan Mornard
 step
 goto 19.40,59.58
-'Examine _Frog Stealing Plan_
+'Examine _Frog Stealing Plans_
 accept Dragon Frog Dilemma
 step
 goto 14.20,52.33
@@ -43676,7 +43647,7 @@ step
 goto 50.24,67.19 |q A Sea of Troubles/.*Repel Sea Elf Ships.* |count 3
 step
 goto 51.32,65.10
-'Use _Ballista_ |q A Sea of Troubles/.*Repel Sea Elf Ships.* |count 3
+'Use _Ballista_ |q A Sea of Troubles/.*Repel Sea Elf Ships.* |count 3 |future
 |tip Manually skip to the next step.
 step
 goto 48.33,63.74 |q A Sea of Troubles/Investigate Windwrack Fort
@@ -43698,19 +43669,16 @@ goto 54.20,55.12
 'Examine _Burnt Emberblooms_ |q A Sea of Troubles/.*Search the Village.* |count 2
 step
 goto 55.60,57.40
-'Examine _Eldertide Altar_ |q A Sea of Troubles/.*Search the Village.*
+'Examine _Eldertide Altar_ |q A Sea of Troubles/.*Search the Village.* |future
 |tip Manually skip to the next step.
 step
 goto 53.17,56.33
 'Open _Eldertide Lodge_ |q A Sea of Troubles/Search the Druid's Lodge
 |tip Manually skip to the next step.
 step
-goto 51.90,55.74
-'Watch the dialogue |q A Sea of Troubles/Search the Druid's Lodge
-|tip Manually skip to the next step.
-step
 goto 52.00,55.78
-talk Druid Laurel |q A Sea of Troubles/Investigate Tuinh Village
+|tip Watch the dialogue.
+talk Druid Laurel |q A Sea of Troubles/Investigate Tuinh Village |future
 step
 goto 53.15,56.27
 'Open _Galen_ |q A Sea of Troubles/Investigate Suncleft Cove
@@ -43736,7 +43704,7 @@ goto 48.60,50.95
 step
 goto u36_suncleftgrotto_base 18.06,64.30 |q A Sea of Troubles/Search Suncleft Grotto
 step
-goto 44.12,51.23 |q A Sea of Troubles/Find the Captives
+goto 44.12,51.23 |q A Sea of Troubles/Find the Captives |future
 step
 goto 47.95,67.51 |q A Sea of Troubles/Find the Captives
 step
@@ -43776,7 +43744,7 @@ goto 63.85,46.04
 wayshrine Vastyr
 step
 goto 68.45,44.06
-'Open _The Jade Ornaug Tavern_ |q An Eye for an Eye
+'Open _The Jade Ornaug Tavern_ |q An Eye for an Eye |future
 |tip Manually skip to the next step.
 step
 goto 69.46,43.84
@@ -43791,11 +43759,11 @@ goto 68.83,43.95
 |tip Manually skip to the next step.
 step
 goto 70.05,41.13
-talk Razum-dar |q An Eye for an Eye/Talk to Razum-dar
+talk Razum-dar |q An Eye for an Eye/Talk to Razum-dar |future
 step
-goto 66.59,44.64
+goto 75.18,52.50
 |tip Keep your Distance or they will stop.
-'Follow Thugs |q An Eye for an Eye/Follow the Thugs
+'Follow _Thugs_ |q An Eye for an Eye/Follow the Thugs
 step
 goto 75.18,52.50
 talk Razum-dar |q An Eye for an Eye/Talk to Razum-dar
@@ -43823,11 +43791,9 @@ step
 goto 69.80,38.51
 talk Florentino Scippius |q An Eye for an Eye/Win a Tribute Match in Grandvache's Casino
 step
-|tip If you win the match go in door up stairs behind you and skip next 5 steps.
-|tip Manually skip to the next step.
-step
 goto 69.97,38.93
-talk Razum-dar |q An Eye for an Eye/Talk to Razum-dar
+|tip Concede match.
+talk Razum-dar |q An Eye for an Eye/Talk to Razum-dar |future
 |tip Manually skip to the next step.
 step
 goto 72.25,40.82
@@ -43842,13 +43808,14 @@ goto 10.09,55.57
 step
 goto u36_VastyrCity_base 68.42,47.12
 |tip Go up the ramp.
-'Unlock (Simple) Patrician Suite |q An Eye for an Eye/Enter the Patrician Suite
+'Unlock (Simple) Patrician Suite |q An Eye for an Eye/Enter the Patrician Suite |future
+|tip Manually skip to the next step.
 step
 goto 68.80,46.31
-'Use _Hiding Spot_ |q An Eye for an Eye/Eavesdrop on the Conversation
+'Use _Hiding Spot_ |q An Eye for an Eye/Eavesdrop on the Conversation |future
 step
 goto 69.76,45.30
-'Open _Vastyr_ |q An Eye for an Eye/Escape the Gambling Parlor
+'Open _Vastyr_ |q An Eye for an Eye/Escape the Gambling Parlor |future
 step
 goto 67.00,50.69
 talk Razum-dar |q An Eye for an Eye/Talk to Razum-dar
@@ -43893,7 +43860,7 @@ goto 68.83,43.95
 |tip Manually skip to the next step.
 step
 goto 52.24,37.42
-'Open _Castle Mornard_ |q A Sea of Troubles/Go to Castle Mornard
+'Open _Castle Mornard_ |q A Sea of Troubles/Go to Castle Mornard |future
 step
 goto u36_VastyrCityCastle_base 22.65,55.93
 talk Sir Stefan Mornard |q A Sea of Troubles/Talk to Sir Stefan Mornard
@@ -43905,7 +43872,7 @@ step
 goto u36_VastyrCity_base 59.51,43.47 |q A Sea of Troubles/Find Druid Laurel
 step
 goto 78.72,56.03
-talk Druid Laurel |q A Sea of Troubles/Talk to Druid Laurel
+talk Druid Laurel |q A Sea of Troubles/Talk to Druid Laurel |future
 step
 goto 63.86,46.02
 'Use _Vastyr_ Wayshrine
@@ -43919,28 +43886,22 @@ step
 goto 29.27,39.77 |q A Sea of Troubles/Meet Druid Laurel at the Telling Stone
 step
 goto 30.90,39.46
-'Meet _Druid Laurel at the Telling Stone_ |q A Sea of Troubles/Meet Druid Laurel at the Telling Stone
-step
-goto 30.90,39.46
-talk Druid Laurel |q A Sea of Troubles/Talk to Druid Laurel
+talk Druid Laurel |q A Sea of Troubles/Talk to Druid Laurel |future
 step
 goto 29.26,40.24 |q A Sea of Troubles/Go to Draoife Dell
 step
 goto 34.39,45.77
-'Enter _Draoife Dell_ |q A Sea of Troubles/Go to Draoife Dell
+'Enter _Draoife Dell_ |q A Sea of Troubles/Go to Draoife Dell |future
 |tip Manually skip to the next step.
 step
 goto u36_GN1Grove_base 46.30,23.82
-'Witness the _Negotiation_ |q A Sea of Troubles/Witness the Negotiation
-step
-goto 46.30,23.82
-'Protect the _Archdruids_ |q A Sea of Troubles/Protect the Archdruids
+'Protect the _Archdruids_ |q A Sea of Troubles/Protect the Archdruids |future
 step
 goto 48.60,77.30
-kill Druid Branagh |q A Sea of Troubles/Kill Druid Branagh
+kill Druid Branagh |q A Sea of Troubles/Kill Druid Branagh |future
 step
 goto 62.89,79.76
-'Enter _Galen_ |q A Sea of Troubles/Leave the Dell
+'Enter _Galen_ |q A Sea of Troubles/Leave the Dell |future
 step
 goto u36_galenisland_base 26.19,47.11
 talk Joslin Coraver
@@ -43983,33 +43944,33 @@ goto 93.41,52.99
 talk to Archdruid Rahval |q Tides of Ruin/Talk to Archdruid Rahval
 step
 'Open _Galen and Y'ffelonn_ Map
-'Travel to _Embervine_ |q Tides of Ruin/Go to Castle Tonnere
+'Travel to _Embervine_ |q Tides of Ruin/Talk to Captain Siravaen |future
 |tip Manually skip to the next step.
 step
-goto u36_galenisland_base 36.55,43.37 |q Tides of Ruin/Go to Castle Tonnere
+goto u36_galenisland_base 36.55,43.37 |q Tides of Ruin/Talk to Captain Siravaen |future
 step
-goto 24.20,43.11 |q Tides of Ruin/Go to Castle Tonnere
+goto 24.20,43.11 |q Tides of Ruin/Talk to Captain Siravaen |future
 step
 goto 17.50,37.29
-wayshrine Y'free's Path
+wayshrine Y'ffre's Path
 step
 goto 14.45,36.18
-talk Captain Siravaen |q Tides of Ruin/Talk to Captain Siravaen
+talk Captain Siravaen |q Tides of Ruin/Talk to Captain Siravaen |future
 step
 goto 07.34,36.47 |q Tides of Ruin/Find the Cave Passage
 step
 goto 07.62,34.55 |q Tides of Ruin/Find the Cave Passage
 step
 goto 09.55,33.63
-'Enter _Castle Tonnere Dungeons_ |q Tides of Ruin/Enter Castle Tonnere
+'Enter _Castle Tonnere Dungeons_ |q Tides of Ruin/Enter Castle Tonnere |future
 |tip Manually skip to the next step.
 step
-goto u36_gn2_dungeon_base 15.16,74.91 |q Tides of Ruin/Search for Sir Stefan Mornard
+goto u36_gn2_dungeon_base 15.16,74.91 |q Tides of Ruin/Search for Sir Stefan Mornard |future
 step
 goto 54.43,63.21 |q Tides of Ruin/Search for Sir Stefan Mornard
 step
 goto 50.52,51.59
-talk Sir Stefan Mornard |q Tides of Ruin/Talk to Sir Stefan Mornard
+talk Sir Stefan Mornard |q Tides of Ruin/Talk to Sir Stefan Mornard |future
 step
 goto 67.24,67.16 |q Tides of Ruin/Retrieve the Cell Key
 step
