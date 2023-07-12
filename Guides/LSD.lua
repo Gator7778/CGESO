@@ -1476,7 +1476,7 @@ step
 goto 68.45,68.98
 'Examine _Dreamwalkers_ |lorebook Dreamwalkers/1/22/10
 step
-goto 67.21,71.28
+goto 67.21,71.28 |lorebook Clans of the Reach: A Guide/1/24/10
 step
 goto shorsstone_base 45.03,43.46
 |tip Upstairs in the building.
@@ -1632,11 +1632,1378 @@ step
 step
 goto 44.77,41.66
 'Examine _Oath of a Dishonored Clan_ |lorebook Oath of a Dishonored Clan/1/29/9
+step
+'Open _Wrothgar_ Map
+'Travel to _Great Bay_ |lorebook Return to Orsinium/1/19/9
+|tip Manually skip to the next step
+step
+goto wrothgar_base 28.72,69.43
+'Examine _Return to Orsinium_ |lorebook Return to Orsinium/1/19/9
+step
+goto 31.18,70.50
+'Use _Great Bay_ Wayshrine
+'Travel to _Two Rivers_ |lorebook Civility and Etiquette: Wood Orcs I/1/11/5
+|tip Manually skip to the next step.
+step
+goto 72.69,36.79 |lorebook Civility and Etiquette: Wood Orcs I/1/11/5
+step
+goto 67.37,33.39 |lorebook Civility and Etiquette: Wood Orcs I/1/11/5
+step
+goto 64.98,32.91
+'Examine _Civility and Etiquette: Wood Orcs I_ |lorebook Civility and Etiquette: Wood Orcs I/1/11/5
+step
+'Open _Hew's Bane_ Map
+'Travel to _Zeht's Displeasure_ |lorebook The Thief God's Treasures/1/11/3
+|tip Manually skip to the next step.
+step
+goto hewsbane_base 38.33,59.55
+'Examine _The Thief God's Treasures_ |lorebook The Thief God's Treasures/1/11/3
+step
+'Open _Gold Coast_ Map
+'Travel to _Kvatch_ |lorebook Eulogy for Emperor Varen/1/19/6
+|tip Manually skip to the next step.
+step
+goto goldcoast_base 85.83,50.68
+'Examine _Eulogy for Emperor Varen_ |lorebook Eulogy for Emperor Varen/1/19/6
+step
+'Open _Vvardenfell_ Map
+'Travel to _Urshilaku Camp_ |lorebook The Art of Kwama Egg Cooking/1/11/6
+|tip Manually skip to the next step.
+step
+goto vvardenfell_base 24.28,23.09
+'Examine _The Art of Kwama Egg Cooking_ |lorebook The Art of Kwama Egg Cooking/1/11/6
+step
+'Open _Summerset_
+'Travel to _The Crystal Tower_ |lorebook Ayrenn: The Unforeseen Queen/1/9/10
+|tip Manually skip to the next step.
+step
+goto summerset_base 29.90,25.92
+'Examine _Ayrenn: The Unforeseen Queen_ |lorebook Ayrenn: The Unforeseen Queen/1/9/10
+step
+'Open _Blackwood_ Map
+'Travel to _Borderwatch_ |lorebook House Tharn of Nibenay/1/19/7
+|tip Manually skip to the next step.
+step
+goto blackwood_base 16.01,37.66
+'Examine _House Tharn of Nibenay_ |lorebook House Tharn of Nibenay/1/19/7
+step
+'Open _Telvanni Peninsula_ Map
+'Travel to _Padomaic Crest_ |lorebook Where Magical Paths Meet/1/11/8
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 50.82,55.31 |lorebook Where Magical Paths Meet/1/11/8
+step
+goto 46.77,57.47 |lorebook Where Magical Paths Meet/1/11/8
+step
+goto 44.92,55.66
+'Examine _Where Magical Paths Meet_ |lorebook Where Magical Paths Meet/1/11/8
+step
+'Open _Apocrypha_ Map
+'Travel to _Cipher's Midden_ |lorebook Fragmentae Abyssum Hermaeus Morus/1/8/9
+|tip Manually skip to the next step.
+step
+goto u38_ciphersmidden_city_base 43.10,47.03
+'Open _Leramil's Study_ |lorebook Fragmentae Abyssum Hermaeus Morus/1/8/9
+|tip Manually skip to the next step.
+step
+goto 44.02,46.08
+'Examine _Fragmentae Abyssum Hermaeus Morus_ |lorebook Fragmentae Abyssum Hermaeus Morus/1/8/9
+step
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves",[[
 loadingimage loadscreen_eldentreeplatform_01.dds
 description All Skyshards and Delves.
 step
-'Coming Soon.
+'Open _Khenarthi's Roost_ Map
+'Travel to _Khenarthi's Roost_
+|tip Manually skip to the next step.
+step
+goto khenarthisroost_base 53.75,70.05
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 58.86,80.96
+|tip Drop down carefully.
+|tip At the top of the tower.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 54.80,75.03
+step
+goto 58.39,60.90
+step
+goto 68.26,57.76
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Khenarthi's Roost_ Map
+'Travel to _Mistral_
+|tip Manually skip to the next step.
+step
+goto mistral_base 15.10,34.53
+|tip Behind the embassy.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto khenarthisroost_base 27.57,33.13
+step
+goto 28.03,36.40
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 16.43,55.50
+|tip Swim to this island.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Auridon_ Map
+'Travel to _Vulkhel Guard_
+|tip Manually skip to the next step.
+step
+goto vulkhelguard_base 43.45,43.06
+step
+goto 39.67,40.29
+|tip Upstairs and out of the balcony of the manor.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 55.80,39.83
+step
+goto 57.79,24.98
+step
+goto auridon_base 59.59,84.95
+step
+goto 58.10,85.47
+'Open _Del's Claim_
+|tip Manually skip to the next step.
+step
+goto delsclaim_base 38.45,20.92
+step
+goto 31.45,21.81
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 39.75,11.04
+step
+goto 80.23,16.64
+kill Polinus
+|tip Manually skip to the next step.
+step
+goto 73.59,40.07
+step
+goto 16.85,89.26
+'Open _Auridon_
+|tip Manually skip to the next step.
+step
+goto auridon_base 62.39,81.25
+|tip Sidequest required to open manor to access Skyshard.
+talk Elenwen
+accept Silsailen Rescue
+step
+goto 65.10,80.00
+talk Teldur |q Silsailen Rescue/Talk to Teldur
+step
+goto 65.14,80.02
+'Use _Well_ |q Silsailen Rescue/.*Save Villagers.*
+|tip Manually skip to the next step.
+step
+goto 65.41,80.57
+kill Heritance enemies
+'Collect _Folded Note_
+accept Real Marines
+step
+goto 66.38,80.48
+'Save _Villagers_ |q Silsailen Rescue/.*Save Villagers.*
+step
+goto 65.33,78.69
+'Open _Cellar_ |q Real Marines/Enter the Cellar
+step
+goto 64.26,78.83
+talk Captain Tendil |q Real Marines/Talk to Captain Tendil
+step
+goto 63.96,78.68
+|tip Outside.
+'Search _Crate_ |q Real Marines/Recover Supplies
+step
+goto 62.89,78.30
+'Search _Crate_ |q Real Marines/Recover Armor
+step
+goto 62.76,79.11
+'Search _Crate_ |q Real Marines/Recover Weapons
+step
+goto 65.33,78.66
+'Open _Cellar_ |q Real Marines/Talk to Tendil
+|tip Manually skip to the next step.
+step
+goto 64.23,78.84
+talk Captain Tendil
+turnin Real Marines
+step
+goto 63.60,82.25 |q Silsailen Rescue/Talk to Elenwen |tip Outside.
+step
+goto 62.70,82.89
+talk Elenwen |tip She is inside the large storehouse.
+turnin Silsailen Rescue
+accept Teldur's End
+step
+goto 62.86,81.05 |q Teldur's End/Find a Way Into Valano Manor
+step
+goto 66.56,81.18 |q Teldur's End/Find a Way Into Valano Manor
+step
+goto 70.17,83.01
+|tip Collect Manor Key from Guards.
+'Open _Valano Manor_ |q Teldur's End/Find a Way Into Valano Manor
+step
+goto 70.80,82.81
+talk Teldur |q Teldur's End/Find Teldur
+step
+goto 70.15,83.14
+|tip He's upstairs.
+kill Canonreeve Valano |q Teldur's End/Stop Valano
+step
+goto 70.24,83.24
+|tip Use the door on your left.
+'Open _Silsailen_ |q Teldur's End/Talk to Elenwen
+|tip Manually skip to the next step.
+step
+goto 70.70,83.20
+'Use _Skyshard_ |q Teldur's End/Talk to Elenwen
+|tip Manually skip to the next step.
+step
+goto 70.61,83.00
+|tip Drop down to the ground.
+'Open _Valano Manor_ |q Teldur's End/Talk to Elenwen
+|tip Manually skip to the next step.
+step
+goto 70.14,83.14
+talk Elenwen
+turnin Teldur's End
+step
+'Open _Auridon_ Map
+'Travel to _Windy Glade_
+|tip Manually skip to the next step.
+step
+goto 47.74,76.54
+step
+goto 43.34,77.58
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Auridon_ Map
+'Travel to _Tanzelwil_
+|tip Manually skip to the next step.
+step
+goto 54.32,69.88
+'Open _Ondil_
+|tip Manually skip to the next step.
+step
+goto ondil_base 29.65,85.10
+step
+goto 14.33,73.67
+step
+goto 60.91,69.20
+step
+goto 61.56,54.26
+step
+goto 83.76,62.32
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 61.56,54.26
+step
+goto 50.48,26.90
+kill Aluvus
+|tip Manually skip to the next step.
+step
+'Open _Auridon_ Map
+'Travel to _Mathiisen_
+|tip Manually skip to the next step.
+step
+goto auridon_base 47.31,53.23
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 55.40,53.62
+step
+goto 56.03,55.79
+'Open _Entila's Folly_
+|tip Manually skip to the next step.
+step
+goto entilasfolly_base 61.79,54.14
+step
+goto 81.81,79.12
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 62.63,74.67
+step
+goto 57.22,64.13
+step
+goto 34.91,53.63
+step
+goto 33.33,41.97
+step
+goto 9.86,46.65
+kill Bakhig
+|tip Manually skip to the next step.
+step
+goto 61.31,34.71
+step
+goto 81.33,17.66
+'Open _Auridon_
+|tip Manually skip to the next step.
+step
+goto auridon_base 55.40,53.57
+step
+goto 51.04,56.57
+'Use _Mathiisen_ Wayshrine
+'Travel to _Skywatch_
+|tip Manually skip to the next step.
+step
+goto skywatch_base 26.51,47.14
+step
+goto 45.04,50.58
+step
+goto 54.60,55.62
+|tip At the top of the Fighters guild.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 18.39,42.28
+'Use _Skywatch_ Wayshrine
+'Travel to _Quendeluum_
+|tip Manually skip to the next step.
+step
+goto auridon_base 59.62,39.72
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 58.23,40.95
+step
+goto 58.54,37.71
+step
+goto 57.72,32.23
+'Open _Wansalen_
+|tip Manually skip to the next step.
+step
+goto wansalen_base 41.92,36.38
+step
+goto 28.02,54.46
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 37.81,87.90
+kill Nolonir
+|tip Manually skip to the next step.
+step
+'Open _Auridon_ Map
+'Travel to _College_ Wayshrine
+|tip Manually skip to the next step.
+step
+goto auridon_base 49.11,32.48
+step
+goto 48.29,36.74
+step
+goto 47.17,35.30
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 48.28,36.72
+step
+goto 42.99,39.99
+step
+goto 43.45,40.18
+'Open _Bewan_
+|tip Manually skip to the next step.
+step
+goto bewan_base 43.36,43.54
+step
+goto 50.48,69.86
+step
+goto 87.40,69.86
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 79.17,43.57
+step
+goto 56.27,21.54
+kill Camandar
+|tip Manually skip to the next step.
+step
+goto 52.67,12.63
+step
+goto 12.94,05.73
+'Open _Auridon_
+|tip Manually skip to the next step.
+step
+goto auridon_base 43.31,36.58
+step
+goto 40.72,34.09
+step
+goto 41.18,31.80 |tip Climb the rocks.
+step
+goto 41.82,31.77
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Auridon_ Map
+'Travel to _Greenwater_
+|tip Manually skip to the next step.
+step
+goto 23.59,23.75
+step
+goto 19.58,21.12
+|tip Drop down carefully.
+'Open _Mehrunes' Spite_
+|tip Manually skip to the next step.
+step
+goto mehrunesspite_base 53.86,70.04
+step
+goto 71.23,59.88
+step
+goto 69.39,25.62
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 58.84,20.18
+step
+goto 56.62,36.94
+step
+goto 29.61,39.43
+kill Mati
+|tip Manually skip to the next step.
+step
+'Open _Auridon_ Map
+'Travel to _Firsthold_
+|tip Manually skip to the next step.
+step
+goto auridon_base 40.83,20.73
+step
+goto 44.82,20.80
+step
+goto 43.32,12.39
+step
+goto 40.09,13.29
+step
+goto 43.52,16.91
+step
+goto 41.50,12.86
+|tip At the top of the lighthouse.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Grahtwood_ Map
+'Travel to _Haven_
+|tip Manually skip to the next step.
+step
+goto haven_base 56.86,37.30
+'Open _Haven City Gates_
+|tip Manually skip to the next step.
+step
+goto 38.42,25.12
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 56.82,36.93
+'Open _Haven City Gates_
+|tip Manually skip to the next step.
+step
+goto 58.26,39.15
+'Use _Haven_ Wayshrine
+'Travel to _Southpoint_
+|tip Manually skip to the next step.
+step
+goto grahtwood_base 44.72,72.37
+'Use _Skyshard_
+|tip Manually skip tot he next step
+step
+goto 44.65,75.79
+'Use _Southpoint_ Wayshrine
+'Travel to _Gray Mire_
+|tip Manually skip to the next step.
+step
+goto 53.57,66.23
+step
+goto 56.55,66.50
+'Open _Ne Salas_
+|tip Manually skip to the next step.
+step
+goto nesalas_base 15.74,33.98
+step
+goto 15.66,76.01
+step
+goto 57.43,57.64
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 64.11,72.37
+kill Lieutenant Khari
+|tip Manually skip to the next step.
+step
+goto 73.93,72.32
+step
+goto 83.58,9.27
+'Open _Grahtwood_
+|tip Manually skip to the next step.
+step
+goto grahtwood_base 52.53,66.50
+step
+goto 49.13,59.84
+step
+goto 52.45,59.84
+'Open _Mobar Mine_
+|tip Manually skip to the next step.
+step
+goto mobarmine_base 88.30,75.21
+step
+goto 61.44,34.72
+step
+goto 31.74,28.28
+step
+goto 39.13,47.71
+|tip Up on the wooden walkway.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 17.02,51.27
+step
+goto 10.07,61.68
+kill Sgolag
+|tip Manually skip to the next step.
+step
+goto 88.50,81.18
+'Open _Grahtwood_
+|tip Manually skip to the next step.
+step
+goto eldenrootgroundfloor_base 27.90,86.33
+step
+goto 35.02,68.16
+step
+goto 55.89,64.70
+step
+goto 65.74,47.06
+step
+goto 75.20,62.41
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto grahtwood_base 63.27,62.82
+step
+goto 64.92,66.68
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 60.39,68.03
+step
+goto 57.85,71.65
+'Use _Gray Mire_ Wayshrine
+'Travel to _Falinesti Winter_
+|tip Manually skip to the next step.
+step
+goto 37.40,57.91
+step
+goto 36.42,59.56 |tip Drop down carefully.
+step
+goto 32.44,60.03
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Grahtwood_ Map
+'Travel to _Falinesti Winter_
+|tip Manually skip to the next step.
+step
+goto 45.59,52.04
+step
+goto 47.41,53.63
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 44.25,49.12
+step
+goto 46.59,45.08
+step
+goto 48.42,44.49
+|tip Drop down carefully.
+'Open _Burroot Kwama Mine_
+|tip Manually skip to the next step.
+step
+goto burrootkwamamine_base 40.33,77.79
+step
+goto 75.75,51.95
+kill Stormhead the Ravenous
+|tip Manually skip to the next step.
+step
+goto 78.10,44.28
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Grahtwood_ Map
+'Travel to _Ossuary_
+|tip Manually skip to the next step.
+step
+goto grahtwood_base 80.62,50.88
+'Open _The Scuttle Pit_
+|tip Manually skip to the next step.
+step
+goto dessicatedcave_base 50.60,29.62
+step
+goto 61.87,46.43
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 57.61,69.11
+step
+goto 55.67,84.56
+step
+goto 32.86,71.85
+step
+goto 57.54,50.30
+step
+goto 52.17,28.89
+step
+goto 36.56,25.25
+kill Spider Queen
+|tip Manually skip to the next step.
+step
+'Open _Grahtwood_ Map
+'Travel to _Elden Root Temple_
+|tip Manually skip to the next step.
+step
+goto grahtwood_base 69.31,36.57
+step
+goto 72.19,36.19
+'Open _Vinedeath Cave_
+|tip Manually skip to the next step.
+step
+goto vindeathcave_base 73.72,74.56
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 32.24,76.68
+kill Madruin
+|tip Manually skip to the next step.
+step
+goto 15.64,26.00
+|tip Follow the path through the vine door.
+'Open _Grahtwood_
+|tip Manually skip to the next step.
+step
+goto grahtwood_base 66.63,35.53
+step
+goto 64.99,34.67
+step
+goto 64.83,36.28
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 61.88,33.95
+step
+goto 58.94,31.91
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 59.49,30.84
+step
+goto 55.08,27.06
+'Use _Cormount_ Wayshrine
+'Travel to _Redfur Trading Post_
+|tip Manually skip to the next step.
+step
+goto 28.79,22.44
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 26.47,17.56
+step
+goto 21.90,17.11
+step
+goto 18.38,14.62
+'Open _Wormroot Depths_
+|tip Manually skip to the next step.
+step
+goto wormrootdepths_base 18.62,70.50
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 34.45,77.66
+step
+goto 77.15,78.67
+step
+goto 68.77,34.66
+kill Raynia
+|tip Manually skip to the next step.
+step
+'Open _Greenshade_ Map
+'Travel to _Marbruk_
+|tip Manually skip to the next step.
+step
+goto marbruk_base 34.43,31.74
+'Open _Mages Guild_
+|tip Manually skip to the next step.
+step
+goto 31.64,21.54
+'Open _Marbruk_
+|tip Manually skip to the next step.
+step
+goto 28.42,25.62
+'Open _Mages Guild_
+|tip Manually skip to the next step.
+step
+goto 33.74,21.06
+'Open _Marbruk_
+|tip Manually skip to the next step.
+step
+goto 33.41,19.86
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 27.02,73.48
+step
+goto greenshade_base 70.68,66.41
+'Open _Passage to the Wood Orc Camp_
+|tip Manually skip to the next step.
+step
+goto 74.27,66.24
+step
+goto 73.90,60.88
+'Open _Gurzag's Mine_
+|tip Manually skip to the next step.
+step
+goto gurzagsmine_base 34.62,47.03
+step
+goto 36.17,76.66
+step
+goto 67.62,73.97
+step
+goto 73.03,56.86
+step
+goto 61.76,57.14
+|tip Up the Ramp
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 75.72,47.38
+kill Retribution
+|tip Manually skip to the next step.
+step
+'Open _Greenshade_ Map
+'Travel to _Labyrinth_
+|tip Manually skip to the next step. 
+step
+goto greenshade_base 64.96,78.60
+step
+goto 62.85,79.50
+|tip Climb the Spiral rock.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 59.03,89.44
+step
+goto 58.00,89.01
+'Open _Carac Dena_
+|tip Manually skip to the next step.
+step
+goto caracdena_base 15.03,30.23
+step
+goto 16.25,71.84
+step
+goto 58.39,63.10
+kill Urrumaz the Terrifying
+|tip Manually skip to the next step.
+step
+goto 54.21,49.61
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Greenshade_ Map
+'Travel to _Labyrinth_
+|tip Manually skip to the next step.
+step
+goto greenshade_base 59.29,67.65
+step
+goto 55.11,68.37
+step
+goto 52.79,65.71
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Marbruk_ Map
+'Travel to _Woodhearth_
+|tip Manually skip to the next step.
+step
+goto woodhearth_base 48.56,74.37
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 83.56,65.92
+step
+goto greenshade_base 34.59,73.35
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 37.14,68.40
+'Open _Naril Nagaia_
+|tip Manually skip to the next step.
+step
+goto narilnagaia_base 21.44,46.22
+step
+goto 26.56,73.08
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 75.19,62.64
+kill Archmage Camaano
+|tip Manually skip to the next step.
+step
+goto 82.89,61.58
+step
+goto 85.70,15.79
+|tip Follow the path through the metal gate.
+'Open _Greenshade_
+|tip Manually skip to the next step.
+step
+goto greenshade_base 30.92,64.28 |tip Drop down carefully.
+step
+goto 29.71,57.39
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 25.60,56.15
+step
+goto 28.83,50.44
+'Use _Serpent's Grotto_ Wayshrine
+'Travel to _Falinesti_
+|tip Manually skip to the next step.
+step
+goto 60.41,40.54
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 58.19,44.48
+step
+goto 63.16,45.17
+'Open _Harridan's Lair_
+|tip Manually skip to the next step.
+step
+goto harridanslair_base 73.55,74.56
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 22.90,77.22
+kill Razorclaw
+|tip Manually skip to the next step.
+step
+goto 15.40,25.93
+|tip Follow the path through the vine door.
+'Open _Greenshade_
+|tip Manually skip to the next step.
+step
+goto greenshade_base 52.75,45.48
+step
+goto 53.68,48.03
+step
+goto 55.82,47.29
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Greenshade_ Map
+'Travel to _Seaside Sanctuary_
+|tip Manually skip to the next step.
+step
+goto 31.07,40.56
+'Open _The Underroot_
+|tip Manually skip to the next step.
+step
+goto theunderroot_base 57.20,40.93
+step
+goto 58.35,75.43
+step
+goto 33.96,77.82
+step
+goto 57.43,44.64
+step
+goto 44.20,28.41
+step
+goto 33.17,27.49
+kill Domina Ssaranth
+|tip Manually skip to the next step.
+step
+goto 46.48,23.95
+|tip Carefully jump over to the rock.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Greenshade_ Map
+'Travel to _Moonhenge_
+|tip Manually skip to the next step.
+step
+goto greenshade_base 30.15,15.70
+|tip Drop down carefully.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 29.50,15.11
+'Open _Barrow Trench_
+|tip Manually skip to the next step.
+step
+goto barrowtrench_base 54.62,55.89
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 63.63,35.41
+step
+goto 33.90,24.83
+step
+goto 30.86,59.93
+kill Overseer Basri
+|tip Manually skip to the next step.
+step
+'Open _Malabal Tor_ Map
+'Travel to _Velyn Harbor_
+|tip Manually skip to the next step.
+step
+goto velynharbor_base 41.40,50.66
+step
+goto 79.60,49.81
+step
+goto 78.97,45.30
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto malabaltor_base 22.56,53.52
+step
+goto 21.54,48.63
+step
+goto 21.38,45.13
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 24.86,53.06
+step
+goto 31.79,45.81
+step
+goto 33.36,40.68
+step
+goto 35.06,41.56
+'Open _Dead Man's Drop_
+|tip Manually skip to the next step.
+step
+goto deadmansdrop_base 68.74,39.88
+step
+goto 62.40,15.66
+step
+goto 19.13,13.47
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 24.61,44.76
+step
+goto 37.96,71.53
+kill Captain Shammin
+|tip Manually skip to the next step.
+step
+'Open _Malabal Tor_ Map
+'Travel to _Dra'bul_
+|tip Manually skip to the next step.
+step
+goto malabaltor_base 34.23,59.36
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 37.93,62.43
+'Open _Tomb of the Apostates_
+|tip Manually skip to the next step.
+step
+goto tomboftheapostates_base 68.83,83.07
+step
+goto 62.34,58.82
+kill Gwaeregil
+|tip Manually skip to the next step.
+step
+goto 54.02,16.83
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 25.38,44.29
+'Open _Malabal Tor_
+|tip Manually skip to the next step.
+step
+goto malabaltor_base 46.41,59.39
+step
+goto 46.32,59.34
+step
+goto 48.59,61.91
+step
+goto 47.78,65.19
+step
+goto 49.16,66.86
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Malabal Tor_ Map
+'Travel to _Vulkwasten_
+|tip Manually skip to the next step.
+step
+goto 47.35,56.26
+'Open _Hoarvor Pit_
+|tip Manually skip to the next step.
+step
+goto hoarvorpit_base 70.04,14.07
+step
+goto 44.12,12.81
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 26.10,43.18
+step
+goto 66.50,44.27
+'Use _Daedric Bindings_
+kill Oghezai
+|tip Manually skip to the next step.
+step
+goto 60.71,45.41 |tip Drop down.
+step
+goto 46.64,53.25
+'Open _Malabal Tor_
+|tip Manually skip to the next step.
+step
+goto malabaltor_base 50.67,58.35
+|tip Drop down carefully.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Malabal Tor_ Map
+'Travel to _Vulkwasten_
+|tip Manually skip to the next step.
+step
+goto vulkwasten_base 46.24,25.29
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 46.31,78.98
+'Use _Vulkwasten_ Wayshrine
+'Travel to _Abamath_
+|tip Manually skip to the next step.
+step
+goto malabaltor_base 62.56,82.78
+'Open _Shael Ruins_
+|tip Manually skip to the next step.
+step
+goto shaelruins_base 34.19,40.85
+step
+goto 46.79,86.25
+step
+goto 31.52,89.90
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 75.39,71.09
+kill Arrai
+|tip Manually skip to the next step.
+step
+'Open _Malabal Tor_ Map
+'Travel to _Valeguard_
+|tip Manually skip to the next step.
+step
+goto malabaltor_base 77.96,56.93
+step
+goto 78.78,57.14
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 75.28,55.25
+step
+goto 76.13,51.10
+step
+goto 70.79,49.24
+'Open _Roots of Silvenar_
+|tip Manually skip to the next step.
+step
+goto rootsofsilvenar_base 57.15,40.29
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 86.49,47.66
+step
+goto 88.01,57.13
+kill Adavos Dren
+|tip Manually skip to the next step.
+step
+'Open _Malabal Tor_ Map
+'Travel to _Wilding Run_
+|tip Manually skip to the next step.
+step
+goto baandaritradingpost_base 18.46,25.70
+'Open _Black Vine Ruins_
+|tip Manually skip to the next step.
+step
+goto blackvineruins_base 27.49,7.73
+step
+goto 37.89,87.12
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 84.01,49.62
+step
+goto 54.97,25.97
+kill Blackvine Strangler
+|tip Manually skip to the next step.
+step
+goto 51.60,14.73
+step
+goto 35.65,13.71
+step
+goto 32.54,28.84
+step
+goto 9.22,7.33
+'Open _Malabal Tor_
+|tip Manually skip to the next step.
+step
+goto malabaltor_base 77.44,34.17
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 73.62,31.80
+step
+goto 75.07,25.19
+step
+goto 64.41,24.16
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Reaper's March_
+'Travel to _Fort Grimwatch_
+|tip Manually skip to the next step.
+step
+goto reapersmarch_base 37.84,19.89
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 35.23,13.47
+step
+goto 34.31,14.99
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 36.30,17.55
+step
+goto 43.00,24.63
+step
+goto 43.82,31.60
+step
+goto 42.97,33.38
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 36.44,37.89
+step
+goto 33.57,39.99
+step
+goto 36.08,40.88
+'Open _Thibaut's Cairn_
+|tip Manually skip to the next step.
+step
+goto thibautscairn_base 24.49,73.12
+step
+goto 61.54,83.08
+step
+goto 87.20,75.19
+step
+goto 86.53,66.26
+step
+goto 77.92,66.41
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 78.49,43.65
+step
+goto 66.33,43.62
+'Open _Upper Vault_
+|tip Manually skip to the next step.
+step
+goto 24.60,35.26
+step
+goto 21.65,20.55
+kill Worm Eremite
+|tip Manually skip to the next step.
+step
+'Open _Reaper's March_ Map 
+'Travel to _Rawl'kha_
+|tip Manually skip to the  next step.
+step
+goto reapersmarch_base 36.93,52.21
+step
+goto 34.45,54.68
+step
+goto 33.40,53.84
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 34.29,52.53
+step
+goto 39.51,62.17
+step
+goto 41.44,64.49
+step
+goto 41.09,65.50 |tip Climb the rocks.
+step
+goto 39.65,64.52
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 28.17,62.43
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 23.81,60.63
+'Open _Claw's Strike_
+|tip Manually skip to the next step.
+step
+goto clawsstrike_base 11.61,39.22
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 88.24,69.19
+kill Fishbreath
+|tip Manually skip to the next step.
+step
+'Open _Reaper's March_ Map
+'Travel to _Willowgrove_
+|tip Manually skip to the next step.
+step
+goto reapersmarch_base 50.44,75.43
+'Open _Weeping Wind Cave_
+|tip Manually skip to the next step.
+step
+goto weepingwindcave_base 61.67,59.08
+step
+goto 37.63,83.08
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 62.77,51.50
+step
+goto 53.42,11.67
+step
+goto 64.49,31.55
+kill Nimriian
+|tip Manually skip to the next step.
+step
+'Open _Reaper's March_ Map
+'Travel to _S'ren-ja_
+|tip Manually skip to the next step.
+step
+goto reapersmarch_base 50.85,36.50
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 54.17,30.06
+'Open _Kuna's Delve_
+|tip Manually skip to the next step.
+step
+goto kunasdelve_base 55.64,64.28
+step
+goto 74.40,43.49
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 18.85,30.44
+kill Limbrender
+|tip Manually skip to the next step.
+step
+goto 52.93,64.40
+step
+goto 30.20,85.63
+'Open _Reaper's March_
+|tip Manually skip to the next step.
+step
+goto reapersmarch_base 54.46,32.44
+step
+goto 59.13,33.69
+step
+goto 63.34,39.53
+'Open _Jode's Light_
+|tip Manually skip to the next step.
+step
+goto jodeslight_base 15.11,26.38
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 16.40,62.71
+step
+goto 51.97,58.77
+kill Yenadar
+|tip Manually skip to the next step.
+step
+goto 50.03,16.67
+'Open _Reaper's March_
+|tip Manually skip to the next step.
+step
+goto dune_base 41.67,52.69
+step
+goto 59.95,32.97
+|tip Climb the rock.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 48.05,38.05
+step
+goto 33.03,25.91
+'Use _Dune_ Wayshrine
+'Travel to _Fort Sphinxmoth_
+|tip Manually skip to the next step.
+step
+goto reapersmarch_base 76.81,16.77
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 75.33,12.79
+'Open _Fardir's Folly_
+|tip Manually skip to the next step.
+step
+goto fardirsfolly_base 40.96,10.40
+step
+goto 40.49,50.77
+step
+goto 24.13,57.16
+step
+goto 9.18,76.38
+step
+goto 20.99,89.37
+step
+goto 31.70,89.21
+step
+goto 32.76,40.17
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 52.73,74.03
+step
+goto 81.72,70.11
+step
+goto 76.07,15.93
+kill Ravo Peltrasius
+|tip Manually skip to the next step.
+step
+'Open _Betnikh_ Map
+'Travel to _Stonetooth_
+|tip Manually skip to the next step.
+step
+goto stonetoothfortress_base 43.25,78.92
+step
+goto betnihk_base 61.90,60.58
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 37.04,59.41
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 35.47,37.49
+step
+goto 40.67,27.27
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
 ]])

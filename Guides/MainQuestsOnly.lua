@@ -34363,7 +34363,7 @@ loadingimage loadscreen_murkmire_01.dds
 description Investigate Murkmire's long-forgotten past and help an Imperial scholar recover a mysterious and powerful relic that will take you deep into Black Marsh, its history, and its people.
 step
 'Open _Murkmire_ Map
-'Travel to the _Lilmoth_ |q Sunken Treasure
+'Travel to the _Lilmoth_ |q Sunken Treasure |future
 |tip Manually skip to the next step.
 step
 goto lilmothcity_base 46.67,45.69
@@ -34371,7 +34371,7 @@ talk Famia Mercius
 accept Sunken Treasure
 step
 goto 22.41,38.85
-talk Zadaza |q Sunken Treasure/Talk to Zadaza
+talk Zadaza |q Sunken Treasure/Talk to Zadaza |future
 step
 goto 23.20,39.41
 talk Famia Mercius |q Sunken Treasure/Talk to Famia
@@ -34385,7 +34385,7 @@ goto 63.44,67.12
 'Take _Dinia's Sword_ |q Sunken Treasure/.*Search for Famia's Explorers.* |count 2
 step
 goto 57.38,74.64
-'Examine _Eshraf's Journal_ |q Sunken Treasure/.*Search Hut for Clues.* |count 1
+'Examine _Eshraf's Journal_ |q Sunken Treasure/.*Search Hut for Clues.* |count 1 |future
 step
 goto 57.38,74.51
 'Search _Dinia's Bag_ |q Sunken Treasure/.*Search Hut for Clues.* |count 2
@@ -34400,30 +34400,33 @@ goto 57.39,75.46
 talk Famia Mercius |q Sunken Treasure/Talk to Famia
 step
 goto 64.43,76.71
-'Open _Ixtaxh Xanmeer_ |q Sunken Treasure/Enter the Xanmeer
+'Open _Ixtaxh Xanmeer_ |q Sunken Treasure/Enter the Xanmeer |future
 |tip Manually skip to the next step.
 step
 goto sunkenxanmeer01_base 27.98,85.19
-'Use _Hidden Lever_ |q Sunken Treasure/Explore the Xanmeer
+'Use _Hidden Lever_ |q Sunken Treasure/Explore the Xanmeer |future
 step
 goto sunkenxanmeer02_base 28.92,81.75
-|tip Watch dialogue then you may have to move your mouse around for it to let you open the door.
-'Open _Simple Xanmeer Depths_ |q Sunken Treasure/Pick the Lock on the Door
+'Open _Simple Xanmeer Depths_ |q Sunken Treasure/Pick the Lock on the Door |future
 step
 goto 22.18,66.73
 |tip On the left use the Pulley Levers to match the height:
 '1. _Highest height: Anchor_
 '2. _Lowest height: Hook_
-'3. _Medium height: Clouds_ |q Sunken Treasure/Lower the Ancient Drawbridge
+'3. _Medium height: Clouds_ |q Sunken Treasure/Lower the Ancient Drawbridge |future
 |tip Manually skip to the next step.
 step
 goto 22.18,66.73
 |tip On the right use the Pulley Levers to match the height:
 '1. _Highest height: Dagger Point_
 '2. _Medium height: Egg_
-'3. _Lowest height: Lizard Creature_ |q Sunken Treasure/Lower the Ancient Drawbridge
+'3. _Lowest height: Lizard Creature_ |q Sunken Treasure/Lower the Ancient Drawbridge |future
 step
-goto 40.20,52.20 |q Sunken Treasure/Find the Missing Explorers |tip |tip Watch the dialogue. scene
+goto 23.95,50.14 |q Sunken Treasure/Find the Missing Explorers
+step
+goto 40.20,52.20
+|tip Watch the dialogue.
+'Find _Missing Explorers_ |q Sunken Treasure/Find the Missing Explorers
 step
 goto 35.76,37.48 |q Sunken Treasure/.*Gather Flint Vine.* |count 1
 step
@@ -34455,26 +34458,31 @@ goto 39.26,58.00
 'Place _Stone Outcropping_ |q Sunken Treasure/Lower the Flint Vine Ladder
 step
 goto 45.25,37.40
-'Open _Skittering Cavern_ |q Sunken Treasure/Search for Varo
-|tip Wait for Famia to climb up rope.
+'Open _Skittering Cavern_ |q Sunken Treasure/Search for Varo |future
 |tip Manually skip to the next step.
 step
 goto 58.84,34.76
-kill 4 waves of low-level mobs, then
-kill Websnare Spider Matriarch |q Sunken Treasure/Defeat the Spiders
+kill Websnare Spider Matriarch |q Sunken Treasure/Defeat the Spiders |future
 step
 goto 61.87,34.63
 'Open _Stone Furnace_ |q Sunken Treasure/Explore the Xanmeer
 step
 goto 70.40,30.31
-|tip Dodge the traps until complete.
-'Open _Kajin-Jat Vault_ |q Sunken Treasure/Enter the Treasure Vault
+'Open _Kajin-Jat Vault_ |q Sunken Treasure/Enter the Treasure Vault |future
 step
 goto 70.17,15.91
 kill Ixtaxh Voriplasm |q Sunken Treasure/Kill the Ixtaxh Voriplasm
 step
+goto 71.19,07.21 |q Sunken Treasure/Return to the Surface |future
+step
+goto 82.69,08.43 |q Sunken Treasure/Return to the Surface |future
+step
+goto 82.02,30.58 |q Sunken Treasure/Return to the Surface |future
+step
+goto 78.15,39.36
+'Open Ixtaxh Egress |q Sunken Treasure/Return to the Surface |future
+step
 goto 77.93,45.39
-|tip Unlock chests is optional.
 'Climb _Murkmire_ |q Sunken Treasure/Return to the Surface
 |tip Manually skip to the next step.
 step
@@ -34498,176 +34506,175 @@ step
 goto 49.34,24.46
 talk Famia Mercius
 turnin Sunken Treasure
-accept Missing
+accept Missing in Murkmire
 step
 goto 45.29,43.43
 'Use _Lilmoth_ Wayshrine
-'Travel to _Bright-Throat_ |q Missing/Talk to Xukas
+'Travel to _Bright-Throat_ |q Missing in Murkmire/Talk to Xukas
 |tip Manually skip to the next step.
 step
 goto murkmire_base 49.74,68.23
-talk Xukas |q Missing/Talk to Xukas
+talk Xukas |q Missing in Murkmire/Talk to Xukas
 step
 goto 50.00,68.05
-talk Lozwug |q Missing/Talk to Lozwug
+talk Lozwug |q Missing in Murkmire/Talk to Lozwug |future
 step
 goto 49.75,68.97
-talk Xukas |q Missing/Talk to Xukas
+talk Xukas |q Missing in Murkmire/Talk to Xukas |future
 step
 goto 42.69,59.65
 wayshrine Blackrose Prison
 step
-goto 42.69,59.65
+goto 42.62,59.19
 'Use _Blackrose Prison_ Wayshrine
-'Travel to _Lilmoth_ |q Missing/Get Zadaza Dossier
+'Travel to _Lilmoth_ |q Missing in Murkmire/Get Zadaza Dossier
 |tip Manually skip to the next step.
 step
-goto lilmothcity_base 46.65,33.86 |q Missing/Get Zadaza Dossier
+goto lilmothcity_base 46.65,33.86 |q Missing in Murkmire/Get Zadaza Dossier
 step
 goto 60.26,32.70
-|tip Sneak around and watch for sentries.
-'Trespass _Dragonstar Stockade_ |q Missing/Get Zadaza Dossier
+'Trespass _Dragonstar Stockade_ |q Missing in Murkmire/Get Zadaza Dossier
 |tip Manually skip to the next step.
 step
 goto 64.01,34.88
-'Search _Dragonstar Chest_ |q Missing/Get Zadaza Dossier
+'Search _Dragonstar Chest_ |q Missing in Murkmire/Get Zadaza Dossier
 step
-goto 61.35,27.75 |q Missing/Gather Any Other Clues
+goto 61.35,27.75 |q Missing in Murkmire/Gather Any Other Clues
 step
 goto 67.70,24.92
-'Open _Sunken House_ |q Missing/Gather Any Other Clues
+'Open _Sunken House_ |q Missing in Murkmire/Gather Any Other Clues
 |tip Manually skip to the next step.
 step
 goto 65.82,24.81
-'Search _Dragonstar Chest_ |q Missing/Gather Any Other Clues
+'Search _Dragonstar Chest_ |q Missing in Murkmire/Gather Any Other Clues
 step
 goto 66.76,24.65
-'Open _Dragonstar Stockade_ |q Missing/Get Varo Dossier
+'Open _Dragonstar Stockade_ |q Missing in Murkmire/Get Varo Dossier
 |tip Manually skip to the next step.
 step
-goto 72.94,25.43 |q Missing/Get Varo Dossier
+goto 72.94,25.43 |q Missing in Murkmire/Get Varo Dossier
 step
-goto 73.88,34.00 |q Missing/Get Varo Dossier |tip Go up the ramp.
+goto 73.88,34.00 |q Missing in Murkmire/Get Varo Dossier |tip Go up the ramp.
 step
 goto 74.76,33.60
-'Search _Dragonstar Chest_ |q Missing/Get Varo Dossier
+'Search _Dragonstar Chest_ |q Missing in Murkmire/Get Varo Dossier
 step
-goto 74.28,37.03 |q Missing/Get Newcomer Dossier
+goto 74.28,37.03 |q Missing in Murkmire/Get Newcomer Dossier
 step
 goto 77.73,39.53
-'Open _Dragonstar Hut_ |q Missing/Get Newcomer Dossier
+'Open _Dragonstar Hut_ |q Missing in Murkmire/Get Newcomer Dossier
 |tip Manually skip to the next step.
 step
 goto 79.55,39.62
-'Search _Dragonstar Chest_ |q Missing/Get Newcomer Dossier
+'Search _Dragonstar Chest_ |q Missing in Murkmire/Get Newcomer Dossier
 step
 'Open _Murkmire_ Map
-'Travel to the _Lilmoth_ |q Missing/Talk to Xukas
+'Travel to the _Lilmoth_ |q Missing in Murkmire/Talk to Xukas
 |tip Manually skip to the next step.
 step
 goto 53.67,33.81
-talk Xukas |q Missing/Talk to Xukas
+talk Xukas |q Missing in Murkmire/Talk to Xukas
 step
 goto 48.77,26.41
-'Open _Cyrodilic Collections_ |q Missing/Talk to Famia
+'Open _Cyrodilic Collections_ |q Missing in Murkmire/Talk to Famia
 |tip Manually skip to the next step.
 step
 goto 49.34,24.46
-talk Famia Mercius |q Missing/Talk to Famia
+talk Famia Mercius |q Missing in Murkmire/Talk to Famia
 step
 goto 49.46,24.93
-talk Kassandra |q Missing/Talk to Kassandra
+talk Kassandra |q Missing in Murkmire/Talk to Kassandra
 step
 goto 45.29,43.43
 'Use _Lilmoth_ Wayshrine
-'Travel to _Bright-Throat_ |q Missing/Talk to Xukas
+'Travel to _Bright-Throat_ |q Missing in Murkmire/Talk to Xukas
 |tip Manually skip to the next step.
 step
 goto brightthroatvillage_base 22.38,92.70
-talk Xukas |q Missing/Talk to Xukas
+talk Xukas |q Missing in Murkmire/Talk to Xukas
 step
 goto murkmire_base 62.57,62.91
-'Go to the _Meeting Spot_ |q Missing/Go to the Meeting Spot
+'Go to the _Meeting Spot_ |q Missing in Murkmire/Go to the Meeting Spot
 step
 goto 62.57,62.91
-'Negotiate with _Jaxsik-Orrn_ |q Missing/Negotiate with Jaxsik-Orrn
+'Negotiate with _Jaxsik-Orrn_ |q Missing in Murkmire/Negotiate with Jaxsik-Orrn
 step
 goto 62.57,62.91
-talk Xukas |q Missing/Talk to Xukas
+talk Xukas |q Missing in Murkmire/Talk to Xukas
 step
-goto 59.94,58.18 |q Missing/Track Jaxsik-Orrn
+goto 59.94,58.18 |q Missing in Murkmire/Track Jaxsik-Orrn
 step
-goto 57.57,53.98 |q Missing/Continue Tracking Jaxsik-Orrn
+goto 57.57,53.98 |q Missing in Murkmire/Continue Tracking Jaxsik-Orrn
 step
-goto 54.03,51.24 |q Missing/Continue Tracking Jaxsik-Orrn
+goto 54.03,51.24 |q Missing in Murkmire/Continue Tracking Jaxsik-Orrn
 step
 goto 52.14,52.92
-talk Jaxsik-Orrn |q Missing/Talk to Jaxsik-Orrn
+talk Jaxsik-Orrn |q Missing in Murkmire/Talk to Jaxsik-Orrn
 step
 goto 50.32,53.23
-'Destroy _Supply Crate_ |q Missing/.*Smash Crates.* |count 1
+'Destroy _Supply Crate_ |q Missing in Murkmire/.*Smash Crates.* |count 1
 step
 goto 51.89,55.12
-'Destroy _Supply Crate_ |q Missing/.*Smash Crates.* |count 2
+'Destroy _Supply Crate_ |q Missing in Murkmire/.*Smash Crates.* |count 2
 step
 goto 51.92,56.07
-'Burn _Blackguard Supply Wagon_ |q Missing/.*Burn Wagons.* |count 1
+'Burn _Blackguard Supply Wagon_ |q Missing in Murkmire/.*Burn Wagons.* |count 1
 step
 goto 50.40,55.10
-'Burn _Blackguard Supply Wagon_ |q Missing/.*Burn Wagons.* |count 2
+'Burn _Blackguard Supply Wagon_ |q Missing in Murkmire/.*Burn Wagons.* |count 2
 step
 goto 49.98,54.78
-'Destroy _Supply Crate_ |q Missing/.*Smash Crates.* |count 3
+'Destroy _Supply Crate_ |q Missing in Murkmire/.*Smash Crates.* |count 3
 step
 goto 49.18,54.54
-'Burn _Blackguard Supply Wagon_ |q Missing/.*Burn Wagons.* |count 3
+'Burn _Blackguard Supply Wagon_ |q Missing in Murkmire/.*Burn Wagons.* |count 3
 step
 goto 47.42,53.84
-'Burn _Blackguard Supply Wagon_ |q Missing/.*Burn Wagons.* |count 4
+'Burn _Blackguard Supply Wagon_ |q Missing in Murkmire/.*Burn Wagons.* |count 4
 step
 goto 46.71,52.54
-'Destroy _Supply Crate_ |q Missing/.*Smash Crates.* |count 4
+'Destroy _Supply Crate_ |q Missing in Murkmire/.*Smash Crates.* |count 4
 step
 goto 46.90,57.43
-'Open _Paddock Gate_ |q Missing/Free the Prisoners
+'Open _Paddock Gate_ |q Missing in Murkmire/Free the Prisoners
 step
 goto 48.50,56.09
-'Destroy _Supply Crate_ |q Missing/.*Smash Crates.* |count 5
+'Destroy _Supply Crate_ |q Missing in Murkmire/.*Smash Crates.* |count 5
 step
 goto 48.83,57.19
-'Destroy _Supply Crate_ |q Missing/.*Smash Crates.* |count 6
+'Destroy _Supply Crate_ |q Missing in Murkmire/.*Smash Crates.* |count 6
 step
 goto 42.73,55.95
-talk Jaxsik-Orrn |q Missing/Talk to Jaxsik-Orrn
+talk Jaxsik-Orrn |q Missing in Murkmire/Talk to Jaxsik-Orrn
 step
 goto 42.73,55.95
-talk Xukas |q Missing/Talk to Xukas
+talk Xukas |q Missing in Murkmire/Talk to Xukas
 step
 goto 42.61,56.06
-talk Captain Hostia |q Missing/Talk to Hostia
+talk Captain Hostia |q Missing in Murkmire/Talk to Hostia
 step
 goto 42.61,56.06
-talk Jaxsik-Orrn |q Missing/Let Jaxsik-Orrn Execute Hostia
+talk Jaxsik-Orrn |q Missing in Murkmire/Let Jaxsik-Orrn Execute Hostia
 step
 goto 42.61,56.06
-talk Jaxsik-Orrn |q Missing/Talk to Jaxsik-Orrn
+talk Jaxsik-Orrn |q Missing in Murkmire/Talk to Jaxsik-Orrn
 step
 goto 42.62,59.18
 'Use _Blackrose Prison_ Wayshrine
-'Travel to _Lilmoth_ |q Missing/Talk to Famia
+'Travel to _Lilmoth_ |q Missing in Murkmire/Talk to Famia
 |tip Manually skip to the next step.
 step
 goto lilmothcity_base 48.70,26.31
-'Open _Cyrodilic Collections_ |q Missing/Talk to Famia
+'Open _Cyrodilic Collections_ |q Missing in Murkmire/Talk to Famia
 |tip Manually skip to the next step.
 step
 goto 49.66,24.70
 |tip Go up the steps.
-talk Famia Mercius |q Missing/Talk to Famia
+talk Famia Mercius |q Missing in Murkmire/Talk to Famia
 step
 goto 49.59,25.56
 talk Kassandra
-turnin Missing
+turnin Missing in Murkmire
 accept Whispers in the Wood
 step
 goto 45.44,43.19
@@ -42988,7 +42995,7 @@ loadingimage loadscreen_hi_systres_zone_01.dds
 description Explore High Isle and Amenos, a land never-before-seen in The Elder Scrolls. Traverse stunning white cliffs, majestic castles, and perilous jungles as you encounter a chivalrous Breton society.
 step
 'Open _High Isle and Amenos_ Map
-'Travel to _Westbay_ |q Of Knights and Knaves
+'Travel to _Westbay_ |q Of Knights and Knaves |future
 |tip Manually skip to the next step.
 step
 goto u34_gonfalonbaycity_base 7.45,46.84
@@ -43014,10 +43021,6 @@ wayshrine Gonfalon Square
 step
 goto 43.75,37.25
 'Open _The Ancient Anchor Inn_ |q Of Knights and Knaves/Investigate the Inn
-|tip Manually skip to the next step.
-step
-goto 43.96,36.05
-talk Yarzidh |q Of Knights and Knaves/Investigate the Inn
 |tip Manually skip to the next step.
 step
 goto 42.54,34.10

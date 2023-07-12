@@ -1262,8 +1262,7 @@ kill Heritance enemies
 accept Real Marines
 step
 goto 66.38,80.48
-'Use the _Bucket on Fires in building doorways_
-'Save 5 Villagers |q Silsailen Rescue/.*Save Villagers.*
+'Use the _Bucket on Fires in building doorways_ |q Silsailen Rescue/.*Save Villagers.*
 step
 goto 65.33,78.69
 'Open _Cellar_ |q Real Marines/Enter the Cellar
@@ -1272,7 +1271,7 @@ goto 64.26,78.83
 talk Captain Tendil |q Real Marines/Talk to Captain Tendil
 step
 goto 63.96,78.68
-|tip Leave the Cellar.
+|tip Outside.
 'Search _Crate_ |q Real Marines/Recover Supplies
 step
 goto 62.89,78.30
@@ -15253,7 +15252,7 @@ step
 goto 32.62,33.39
 kill Deathfang with Dugroth |q Moment of Truth/Kill Deathfang without Dugroth |future
 step
-goto  33.47,33.25
+goto 33.47,33.25
 'Take _Sword_ |q Moment of Truth/Talk to Dugroth
 |tip Manually skip to the next step.
 step

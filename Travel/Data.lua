@@ -1013,12 +1013,12 @@ Data.MapIdsByName = {
    ["Draoife Dell"]                        = 902,
    ["Castle Tonnere Dungeons"]             = 903,
    ["Castle Tonnere Courtyard"]            = 904,
-   ["Fauns' Thicket"]                      = 905,
-   ["Eldertide Hollow"]                    = 906,
-   ["Embervine"]                           = 907,
-   ["Sea Witch Sanctum"]                   = 908,
-   ["Yfrees Path"]                         = 909,
-   ["Clohaigh"]                            = 910,
+   ["Eldertide Hollow"]                    = 905,
+   ["Embervine"]                           = 906,
+   ["Sea Witch Sanctum"]                   = 907,
+   ["Yfrees Path"]                         = 908,
+   ["Clohaigh"]                            = 909,
+   ["Fauns' Thicket"]                      = 910,
    ["Vastyr Cathedral District"]           = 911,
    ["Vastyr Old Druid Tunnels"]            = 912,
    ["Ivyhame"]                             = 913,
@@ -1029,7 +1029,6 @@ Data.MapIdsByName = {
    ["Steadfast Manor Cellars"]             = 918,
    ["Ancient Druid Circle"]                = 919,
    ["Mount Firesong"]                      = 920,
-
 
    -- Telvanni Peninsula
    ["Emerald Glypic Vault"]                = 921,
