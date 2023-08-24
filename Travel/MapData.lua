@@ -1951,7 +1951,7 @@ CGV.MapData = {
     ["manorofrevelryint04_base"] =          { name = "The Manor of Revelry",                    id = 402, xoffset = -0.109656, yoffset = 0.215078, scale = 0.000967, },
     ["manorofrevelryint05_base"] =          { name = "The Manor of Revelry",                    id = 402, xoffset = -0.111940, yoffset = 0.212674, scale = 0.000566, },
     ["manorofrevelrycave_base"] =           { name = "The Manor of Revelry Cave",               id = 403, xoffset = -0.110632, yoffset = 0.214532, scale = 0.002168, },
-    ["wailingmaw_base"] =                   { name = "The Wailing Maw",                         id = 404, xoffset = -0.073575, yoffset = 0.207736, scale = 0.005328, },
+    ["wailingmaw_base"] =                   { name = "The Wailing Maw",                         id = 404, xoffset = -0.074782, yoffset = 0.206856, scale = 0.010628, },
     ["thelostfleet_base"] =                 { name = "The Lost Fleet",                          id = 405, xoffset = -0.074694, yoffset = 0.216570, scale = 0.005274, },
     ["reavercitadelpyramid_base"] =         { name = "Reaver Citadel Pyramid",                  id = 406, xoffset = -0.103160, yoffset = 0.199787, scale = 0.005274, },
     ["theendlessstair_base"] =              { name = "The Endless Stair",                       id = 407, xoffset = -0.106998, yoffset = 0.188952, scale = 0.005062, },

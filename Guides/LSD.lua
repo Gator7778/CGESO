@@ -5472,7 +5472,6 @@ goto therift_base 87.53,59.29
 step
 goto 84.87,60.94
 step
-step
 goto 82.73,58.73
 'Open _Broken Helm Hollow_
 |tip Manually skip to the next step.
@@ -5585,9 +5584,7 @@ goto 72.07,58.05
 kill Nerazakan
 |tip Manually skip to the next step.
 step
-goto 77.75,57.90
-step
-goto 53.78,45.18
+goto 53.78,45.18 |tip Drop down.
 step
 goto 82.25,27.97
 'Open _Coldharbour_
@@ -5644,7 +5641,7 @@ step
 'Travel to _Everfull Flagon_
 |tip Manually skip to the next step.
 step
-goto 68.39,72.44
+goto coldharbour_base 68.39,72.44
 'Open _Vault of Haman Forgefire_
 |tip Manually skip to the next step.
 step
@@ -5759,14 +5756,15 @@ goto 47.93,58.26
 'Use _Skyshard_
 |tip Manually skip to the next step.
 step
-'Open _Coldharbour_
+'Open _Coldharbour_ Map
 'Travel to _The Orchard_
 |tip Manually skip to the next step.
 step
 goto 50.89,49.59
 step
 goto 47.40,51.53
-step45.31,50.78
+step
+goto 45.31,50.78
 'Open _Mal Sorra's Tomb_
 |tip Manually skip to the next step.
 step
@@ -5790,7 +5788,7 @@ step
 'Travel to _Manor of Revelry_
 |tip Manually skip to the next step.
 step
-goto 44.53,41.47
+goto coldharbour_base 44.53,41.47
 'Use _Skyshard_
 |tip Manually skip to the next step.
 step
@@ -5856,11 +5854,11 @@ goto 76.72,70.18
 'Use _Skyshard_
 |tip Manually skip to the next step.
 step
+goto 67.38,71.99
+step
 goto 70.36,59.92
 step
 goto 61.05,56.84
-step
-goto 65.39,29.82
 step
 goto 61.33,34.67
 |tip Drop down.
@@ -5873,41 +5871,27 @@ goto 37.77,12.35
 'Open _The Wailing Maw_
 |tip Manually skip to the next step.
 step
-goto coldharbour_base 61.65,39.08
-step
-goto coldharbour_base 63.43,38.67 |q Between Blood and Bone/Enter the Golden Era's Hold
-step
-goto 62.86,42.26 |tip Drop down here. |q Between Blood and Bone/Enter the Golden Era's Hold
-step
-goto 61.62,44.45 |q Between Blood and Bone/Enter the Golden Era's Hold
-step
-goto 62.44,45.02 |q Between Blood and Bone/Enter the Golden Era's Hold
-step
-goto 62.95,44.32
-'Open _Golden Era_ |q Between Blood and Bone/Enter the Golden Era's Hold
-step
-goto 61.99,43.70
-'Examine _Journal of Tsona-Ei, Part Four_ |q Between Blood and Bone/Find the Journal
-step
-goto 62.37,44.02
-talk Captain One-Eye |q Between Blood and Bone/Talk to Captain One-Eye
-step
-goto 63.06,44.40
-|tip Go through the door.
-'Open _Coldharbour_ |q Between Blood and Bone/Enter the Tunnel
+goto 22.89,14.01
+'Open _Coldharbour_
 |tip Manually skip to the next step.
 step
-goto 65.04,44.60
-'Open _Coral Tower Tunnel_ |q Between Blood and Bone/Enter the Tunnel
+goto coldharbour_base 61.65,39.08
 step
-goto thelostfleet_base 77.97,47.28 |q Between Blood and Bone/Go to the Coral Tower
+goto coldharbour_base 63.43,38.67
+step
+goto 62.86,42.26 |tip Drop down here.
+step
+goto 65.04,44.60
+'Open _Coral Tower Tunnel_
+step
+goto thelostfleet_base 77.97,47.28
 step
 goto 33.64,25.46
-'Open _Coldharbour_ |q Between Blood and Bone/Go to the Coral Tower
+'Open _Coldharbour_
 |tip Manually skip to the next step.
 step
 goto coldharbour_base 67.58,40.35
-'Use _Skyshard_ |q Between Blood and Bone/Go to the Coral Tower
+|tip Drop quest Between Blood and Bone.
+'Use _Skyshard_
 |tip Manually skip to the next step.
-step
 ]])
