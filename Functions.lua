@@ -698,7 +698,6 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 			    GetCurrentMapIndex() == Enums.ReapersMarchMap or
 				GetCurrentMapIndex() == Enums.RivenspireMap or
 				GetCurrentMapIndex() == Enums.ShadowfenMap or
-				GetCurrentMapIndex() == Enums.TheRiftMap or
 				GetCurrentMapIndex() == Enums.VvardenfellMap then return 6
 				
 		elseif 	GetCurrentMapIndex() == Enums.AlikrMap or
@@ -709,6 +708,7 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 				GetCurrentMapIndex() == Enums.SummersetMap or
 				GetCurrentMapIndex() == Enums.TelvanniPeninsulaMap or
 				GetCurrentMapIndex() == Enums.TheDeadlandsMap or
+				GetCurrentMapIndex() == Enums.TheRiftMap or
 				GetCurrentMapIndex() == Enums.WesternSkyrimMap then return 8
 				
 		else return dist or selfdist or 1 -- default value
@@ -770,6 +770,7 @@ function Utils.DistanceOffsetForIsComplete()
 				GetCurrentMapIndex() == Enums.SummersetMap or
 				GetCurrentMapIndex() == Enums.TelvanniPeninsulaMap or
 				GetCurrentMapIndex() == Enums.TheDeadlandsMap or
+				GetCurrentMapIndex() == Enums.TheRiftMap or
 				GetCurrentMapIndex() == Enums.WesternSkyrimMap then return 8
 			
 		else return dist or selfdist or 1 -- default value

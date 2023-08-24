@@ -6364,7 +6364,7 @@ turnin The Orrery of Elden Root
 accept The Staff of Magnus
 step
 'Open _Auridon_ Map
-'Travel to _The Harborage_ in Auridon |q Castle of the Worm/Go to the Harborage
+'Travel to _The Harborage_ |q Castle of the Worm/Go to the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -8847,26 +8847,26 @@ goto 37.38,43.41
 'Open _Valenheart_ |q Striking at the Heart/Enter Valenheart |future
 |tip Manually skip to the next step.
 step
-goto hectahamegrottovalenheart_base 172.19,198.01
+goto hectahamegrottovalenheart_base 68.25,77.08
 kill Shade of Naemon
 'Obtain the _Staff of Magnus from the Shade_ |q Striking at the Heart/Obtain the Staff of Magnus from the Shade |future
 step
-goto 172.29,192.91
+goto 68.60,72.80
 talk Indaenir |q Striking at the Heart/Talk to Indaenir
 step
-goto 171.76,198.61
+goto 68.25,77.08
 'Wait for _Indaenir to Heal the Heart_ |q Striking at the Heart/Wait for Indaenir to Heal the Heart
 step
-goto 171.77,198.61
+goto 68.25,77.08
 talk Mane Akkhuz-ri |q Striking at the Heart/Talk to Mane Akkhuz-ri
 step
-goto 171.77,198.61
+goto 68.25,77.08
 'Witness the _Ritual_ |q Striking at the Heart/Witness the Ritual
 step
-goto 171.77,198.61
+goto 68.25,77.08
 talk Indaenir |q Striking at the Heart/Talk to Indaenir
 step
-goto 171.77,172.99
+goto 68.09,57.40
 'Open _Hectahame Grotto_ |q Striking at the Heart/Talk to Queen Ayrenn
 |tip Manually skip to the next step.
 step
@@ -18778,7 +18778,7 @@ accept The Slavers
 step
 goto 72.50,42.65
 'Use _Koeglin Village_ Wayshrine
-'Travel to _The Harborage_ in Auridon |q Chasing Shadows/Go to the Harborage
+'Travel to _The Harborage_ in Glenumbra |q Chasing Shadows/Go to the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -21180,7 +21180,7 @@ talk Captain Ernele |q The Road to Rivenspire/Talk to Captain Ernele
 step
 goto 40.07,50.16
 'Use _Wayrest_ Wayshrine
-'Travel _The Harborage_ in Glenumbra |q Castle of the Worm/Go to the Harborage
+'Travel to _The Harborage_ in Glenumbra |q Castle of the Worm/Go to the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -24046,7 +24046,7 @@ talk Abnur Tharn |q The Tharn Speaks/Talk to Abnur Tharn
 |only Daggerfall Covenant
 step
 'Open _Glenumbra_ Map
-'Travel _The Harborage_ in Glenumbra |q The Tharn Speaks/Enter the Harborage
+'Travel to _The Harborage_ |q The Tharn Speaks/Enter the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -27328,7 +27328,7 @@ turnin Will of the Council
 |only Daggerfall Covenant
 step
 'Open _Glenumbra_ Map
-'Travel to _The Harborage_ Wayshrine |q Council of the Five Companions/Go to the Harborage
+'Travel to _The Harborage_ |q Council of the Five Companions/Go to the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -30257,7 +30257,7 @@ goto 87.70,39.03
 step
 goto bangkorai_base 67.90,19.30
 'Open _Auridon_ Map
-'Travel to _The Harborage_ Wayshrine |q Cadwell's Gold/Talk to Cadwell at the Harborage
+'Travel to _The Harborage_ |q Cadwell's Gold/Talk to Cadwell at the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -35726,7 +35726,7 @@ step
 goto 62.96,60.94
 'Examine _Ebony Blade History_ |lorebook Ebony Blade History/1/16/3
 step
-goto 62.49,61.15
+goto goto 62.68,61.36
 'Open _Taleon's Crag_ |q The Trial of the Ghost Snake/Place the Offering at the Fang Spires
 |tip Manually skip to the next step.
 step
@@ -35748,9 +35748,9 @@ goto 50.77,88.26
 'Open _Deshaan_ |q The Trial of the Ghost Snake/Place the Offering at the Fang Spires
 |tip Manually skip to the next step.
 step
-goto deshaan_base 67.05,61.12
+goto deshaan_base 67.05,61.12 |q The Trial of the Ghost Snake/Place the Offering at the Fang Spires
 step
-goto 67.37,65.24
+goto 67.59,65.45
 'Use _Skyshard_ |q The Trial of the Ghost Snake/Place the Offering at the Fang Spires
 |tip Manually skip to the next step.
 step
@@ -36281,7 +36281,7 @@ step
 goto 67.40,42.47
 'Examine _Magic from the Sky_ |lorebook Magic from the Sky/1/15/3
 step
-goto 72.97,38.86
+goto 73.16,39.00
 'Open _The Corpse Garden_ |q Into the Mouth of Madness |future
 |tip Manually skip to the next step.
 step
@@ -36352,7 +36352,7 @@ goto 89.42,37.31
 kill Malbourn |q A Blow for Order/.*Kill Maulborn.*
 kill Daedra |q A Blow for Order/.*Kill Daedra.*
 step
-goto 91.28,43.85
+goto  91.46,44.02
 |tip Drop down carefully.
 'Open _Knife Ear Grotto_ |q A Fair Warning |future
 |tip Manually skip to the next step.
