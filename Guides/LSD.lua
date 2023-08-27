@@ -1,9 +1,9 @@
 local CGV = _G.CGV
 CGV.GuideMenuTier = "TAM"
 
-CGV:RegisterGuide("Extras\\Extras\\Lorebooks",[[
+CGV:RegisterGuide("Extras\\Extras\\Lorebooks\\Aldmeri Dominion",[[
 loadingimage loadscreen_eldentreeplatform_01.dds
-description All Zone Lorebooks.
+description Almeri Dominion Lorebooks.
 step
 '_Make sure to complete the Main Quest Only guide for the zone before completing this guide is recommended._
 'Open _Auridon_ Map
@@ -893,7 +893,12 @@ goto 32.74,52.65 |lorebook A Looter's Paradise/1/28/4
 step
 goto 31.20,55.36
 |tip Inside house.
-'Examine _A Looter's Paradise_ |lorebook A Looter's Paradise/1/28/4
+'Examine _A Looter's Paradise_ |lorebook A Looter's Paradise/1/28/4 |next Extras\\Extras\\Lorebooks\\Daggerfall Covenant
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Lorebooks\\Daggerfall Covenant",[[
+loadingimage loadscreen_daggerfallmanor_01.dds
+description Daggerfall Covenant Lorebooks.
 step
 'Open _Glenumbra_ Map
 'Travel to _Daggerfall_ in Glenumbria |lorebook A Warning to the Aldmeri Dominion/1/1/2
@@ -1234,7 +1239,12 @@ step
 |tip Manually skip to the next step.
 step
 goto 60.77,62.58
-'Examine _The Warrior's Charge_ |lorebook The Warrior's Charge/1/18/9
+'Examine _The Warrior's Charge_ |lorebook The Warrior's Charge/1/18/9 |next Extras\\Extras\\Lorebooks\\Ebonheart Pact
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Lorebooks\\Ebonheart Pact",[[
+loadingimage loadscreen_ebonheartpactmanor_01.dds
+description Ebonheart Pact Lorebooks.
 step
 'Open _Stonefalls_
 'Travel to _Senie_ |lorebook The Brothers of Strife/1/20/2
@@ -1552,8 +1562,12 @@ goto 72.34,54.20
 |tip Manually skip to the next step.
 step
 goto therift_base 83.57,57.08
-'Examine _Thenephan's Mysteries of Mead_ |lorebook Thenephan's Mysteries of Mead/1/24/4
-step
+'Examine _Thenephan's Mysteries of Mead_ |lorebook Thenephan's Mysteries of Mead/1/24/4 |next Extras\\Extras\\Lorebooks\\Expansion
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Lorebooks\\Expansion",[[
+loadingimage loadscreen_deadlandsvault_01.dds
+description Expansion Lorebooks.
 'Open _Coldharbour_ Map
 'Travel to _The Hollow City_ |lorebook I was Summoned by a Mortal/1/29/4
 |tip Manually skip to the next step.
@@ -1691,12 +1705,11 @@ goto u38_ciphersmidden_city_base 43.10,47.03
 step
 goto 44.02,46.08
 'Examine _Fragmentae Abyssum Hermaeus Morus_ |lorebook Fragmentae Abyssum Hermaeus Morus/1/8/9
-step
 ]])
 
-CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves",[[
-loadingimage loadscreen_eldentreeplatform_01.dds
-description All Skyshards and Delves.
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Aldmeri Dominion\\Khenarthi's Roost",[[
+loadingimage loadscreen_kenathis_roost_01.dds
+description Khenarthi's Roost Skyshards and Delves.
 step
 '_Make sure to complete the Main Quest Only guide for the zone before completing this guide is recommended._
 'Open _Khenarthi's Roost_ Map
@@ -1739,7 +1752,12 @@ step
 goto 16.43,55.50
 |tip Swim to this island.
 'Use _Skyshard_
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Aldmeri Dominion\\Auridon
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Aldmeri Dominion\\Auridon",[[
+loadingimage loadscreen_auridon_01.dds
+description Auridon Skyshards and Delves.
 step
 'Open _Auridon_ Map
 'Travel to _Vulkhel Guard_
@@ -2079,7 +2097,12 @@ step
 goto 41.50,12.86
 |tip At the top of the lighthouse.
 'Use _Skyshard_
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Aldmeri Dominion\\Grahtwood
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Aldmeri Dominion\\Grahtwood",[[
+loadingimage loadscreen_grahtwood_01.dds
+description Grahtwood Skyshards and Delves.
 step
 'Open _Grahtwood_ Map
 'Travel to _Haven_
@@ -2317,7 +2340,12 @@ goto 77.15,78.67
 step
 goto 68.77,34.66
 kill Raynia
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Aldmeri Dominion\\Greenshade
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Aldmeri Dominion\\Greenshade",[[
+loadingimage  loadscreen_greenshade_01.dds
+description Greenshade Skyshards and Delves.
 step
 'Open _Greenshade_ Map
 'Travel to _Marbruk_
@@ -2545,7 +2573,12 @@ goto 33.90,24.83
 step
 goto 30.86,59.93
 kill Overseer Basri
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Aldmeri Dominion\\Malabal Tor
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Aldmeri Dominion\\Malabal Tor",[[
+loadingimage  loadscreen_malabaltor_01.dds
+description Malabal Tor Skyshards and Delves.
 step
 'Open _Malabal Tor_ Map
 'Travel to _Velyn Harbor_
@@ -2762,7 +2795,12 @@ goto 71.21,24.98
 step
 goto 64.41,24.16
 'Use _Skyshard_
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Aldmeri Dominion\\Reapers March
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Aldmeri Dominion\\Reapers March",[[
+loadingimage loadscreen_reapersmarch_01.dds
+description Reapers March Skyshards and Delves.
 step
 'Open _Reaper's March_
 'Travel to _Fort Grimwatch_
@@ -2980,7 +3018,12 @@ goto 81.72,70.11
 step
 goto 76.07,15.93
 kill Ravo Peltrasius
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Daggerfall Covenant\\Stros M'Kai
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Daggerfall Covenant\\Stros M'Kai",[[
+loadingimage loadscreen_strosmkai_01.dds
+description Stros M'Kai Skyshards and Delves.
 step
 'Open _Stros M'Kai_ Map
 'Travel to _Saintsport_
@@ -3007,7 +3050,12 @@ goto 40.04,58.92
 step
 goto 46.62,45.09
 'Use _Skyshard_
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Daggerfall Covenant\\Betnikh
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Daggerfall Covenant\\Betnikh",[[
+loadingimage loadscreen_betnikh_01.dds
+description Betnikh Skyshards and Delves.
 step
 'Open _Betnikh_ Map
 'Travel to _Stonetooth_
@@ -3023,7 +3071,12 @@ goto 37.07,59.47
 step
 goto 40.74,27.18
 'Use _Skyshard_
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next "Extras\\Extras\\Skyshards and Delves\\Daggerfall Covenant\\Glenumbra
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Daggerfall Covenant\\Glenumbra",[[
+loadingimage loadscreen_glenumbra_01.dds
+description Glenumbra Skyshards and Delves.
 step
 'Open _Glumbra_ Map
 'Travel to _Baelborne Rock_
@@ -3308,7 +3361,12 @@ goto 44.33,33.91
 step
 goto 37.92,32.60
 'Use _Skyshard_
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Daggerfall Covenant\\Stormhaven
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Daggerfall Covenant\\Stormhaven",[[
+loadingimage loadscreen_stormhaven_01.dds
+description Stormhaven Skyshards and Delves.
 step
 'Open _Stormhaven_ Map
 'Travel to _Koeglin Village_
@@ -3580,7 +3638,12 @@ goto 17.79,47.89
 step
 goto 28.61,62.91
 kill Octavia
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Daggerfall Covenant\\Rivenspire
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Daggerfall Covenant\\Rivenspire",[[
+loadingimage loadscreen_rivenspire_01.dds
+description Rivenspire Skyshards and Delves.
 step
 'Open _Rivenspire_ Map
 'Travel to _Tamrith Camp_
@@ -3794,7 +3857,12 @@ goto 69.88,70.24
 kill Abal-jo
 kill Earelcar
 kill Miruin Woodwalker
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Daggerfall Covenant\\Alik'r Desert
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Daggerfall Covenant\\Alik'r Desert",[[
+loadingimage loadscreen_alikir_01.dds
+description Alik'r Desert Skyshards and Delves.
 step
 'Open _Alik'r Desert_ Map
 'Travel to _Sentinel_
@@ -4039,7 +4107,12 @@ goto 65.27,20.64
 step
 goto alikr_base 75.19,40.94
 'Use _Skyshard_
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Daggerfall Covenant\\Bangkorai
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Daggerfall Covenant\\Bangkorai",[[
+loadingimage loadscreen_bankorai_01.dds
+description Bangkorai Skyshards and Delves.
 step
 'Open _Bangkorai_
 'Travel to _Eastern Evermore_ 
@@ -4282,7 +4355,12 @@ goto 57.28,71.39
 step
 goto 46.44,82.88
 'Use _Skyshard_
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Ebonheart Pact\\Bleakrock Isle
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Ebonheart Pact\\Bleakrock Isle",[[
+loadingimage loadscreen_bleakrock_01.dds
+description Bleakrock Isle Skyshards and Delves.
 step
 'Open _Bleakrock_ Map
 'Travel to _Bleakrock_
@@ -4312,7 +4390,12 @@ goto 74.80,42.86
 step
 goto 77.38,43.85
 'Use _Skyshard_
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Ebonheart Pact\\Bal Foyen
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Ebonheart Pact\\Bal Foyen",[[
+loadingimage loadscreen_balfoyen_01.dds
+description Bal Foyen Skyshards and Delves.
 step
 'Open _Bal Foyen_ Map
 'Travel to _Foyen Docks_
@@ -4346,7 +4429,12 @@ goto 32.66,63.37
 step
 goto 32.35,45.92
 'Use _Skyshard_
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Ebonheart Pact\\Stonefalls
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Ebonheart Pact\\Stonefalls",[[
+loadingimage loadscreen_stonefalls_01.dds
+description Stonefalls Skyshards and Delves.
 step
 'Open _Stonefalls_
 'Travel to _Davon's Watch_
@@ -4596,7 +4684,12 @@ goto stonefalls_base 26.94,41.11
 step
 goto 25.58,41.05
 'Use _Skyshard_
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Ebonheart Pact\\Deshaan
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Ebonheart Pact\\Deshaan",[[
+loadingimage loadscreen_deshaan_01.dds
+description Deshaan Skyshards and Delves.
 step
 'Open _Deshaan_ Map
 'Travel to _Quarantine Serk_
@@ -4838,7 +4931,12 @@ goto 64.75,45.98
 step
 goto 50.07,64.18
 'Use _Skyshard_
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Ebonheart Pact\\Shadowfen
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Ebonheart Pact\\Shadowfen",[[
+loadingimage loadscreen_shadowfen_01.dds
+description Shadowfen Skyshards and Delves.
 step
 'Open _Shadowfen_ Map
 'Travel to _Stormhold_
@@ -5072,7 +5170,12 @@ kill Peers-Through-Glass
 step
 goto 85.97,69.01
 'Use _Skyshard_
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Ebonheart Pact\\Eastmarch
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Ebonheart Pact\\Eastmarch",[[
+loadingimage loadscreen_eastmarch_01.dds
+description Eastmarch Skyshards and Delves.
 step
 'Open _Eastmarch_ Map
 'Travel to _Fort Morvunskar_
@@ -5290,7 +5393,12 @@ goto 84.00,65.09
 step
 goto 66.04,41.86
 kill Nomeg Chal
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Ebonheart Pact\\The Rift
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Ebonheart Pact\\The Rift",[[
+loadingimageloadscreen_rift_01.dds
+description The Rift Skyshards and Delves.
 step
 'Open _The Rift_ Map
 'Travel to _Fallowstone Hall_
@@ -5551,7 +5659,12 @@ goto 45.19,67.53
 step
 goto 67.85,82.48
 kill Uggurek the Vile
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Coldharbour
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Coldharbour",[[
+loadingimage loadscreen_coldharbor_01.dds
+description Coldharbour Skyshards and Delves.
 step
 'Open _Coldharbour_ Map
 'Travel to _Haj Uxith_
@@ -5893,5 +6006,1076 @@ step
 goto coldharbour_base 67.58,40.35
 |tip Drop quest Between Blood and Bone.
 'Use _Skyshard_
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Expansion\\Craglorn
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Craglorn",[[
+loadingimage loadscreen_craglorn_01.dds
+description Craglorn Skyshards and Delves.
+step
+'Open _Craglorn_ Map
+'Travel to _Sandy Path_
 |tip Manually skip to the next step.
+step
+goto craglorn_base 31.65,60.37
+step
+goto 32.61,62.13
+step
+goto 32.16,65.50
+'Open _Tombs of the Na-Totambu_
+|tip Manually skip to the next step.
+step
+goto cryptoftarishzizone_base 64.56,36.32
+step
+goto 47.44,36.45
+step
+goto 49.19,55.45
+step
+goto 39.88,49.05
+step
+goto 28.84,49.02
+step
+goto 26.13,63.26
+step
+goto 56.47,65.77
+kill The Hungry Pillar
+|tip Manually skip to the next step.
+step
+goto cryptoftarishzi_base 37.91,55.12
+step
+goto cryptoftarishzizone_base 82.93,44.75
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Craglorn_ Map
+'Travel to _Shada's Tear_
+|tip Manually skip to the next step.
+step
+goto craglorn_base 14.35,46.28
+'Open _Buried Sands_
+|tip Manually skip to the next step.
+step
+goto burriedsands_base 40.61,63.69
+step
+goto 33.65,37.56
+step
+goto 73.69,26.26
+kill Den Mother
+|tip Manually skip to the next step.
+step
+goto 69.28,15.64
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Craglorn_ Map
+'Travel to _Dragonstar_
+|tip Manually skip to the next step.
+step
+goto craglorn_base 08.68,30.54
+'Open _Fearfangs Cavern_
+|tip Manually skip to the next step.
+step
+goto fearfang_base 81.51,56.32
+step
+goto 64.83,34.41
+step
+goto 57.11,51.46
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 28.38,25.48
+step
+goto 18.99,57.46
+kill Lakorrah The Matron
+|tip Manually skip to the next step.
+step
+'Open _Craglorn_ Map
+'Travel to _Dragonstar_
+|tip Manually skip to the next step.
+step
+goto craglorn_base 27.98,30.00
+step
+goto 28.26,26.35
+'Open _Serpent's Nest_
+|tip Manually skip to the next step.
+step
+goto serpentsnest_base 76.10,52.51
+step
+goto 75.13,27.41
+step
+goto 50.83,22.23
+kill Laurieae
+kill Aurieae
+kill Taurieae
+|tip Manually skip to the next step.
+step
+goto 33.40,30.65
+step
+goto 41.96,52.19
+step
+goto 63.67,50.92
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Craglorn_ Map
+'Travel to _Skyreach_
+|tip Manually skip to the next step.
+step
+goto craglorn_base 36.01,32.95
+step
+goto 40.02,30.91
+'Open _Loth'Na Caverns_
+|tip Manually skip to the next step.
+step
+goto lothna_base 40.10,41.08
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 64.41,56.39
+step
+goto 61.67,44.81
+step
+goto 61.72,33.82
+kill Visskar
+|tip Manually skip to the next step.
+step
+'Open _Craglorn_ Map
+'Travel to _Valley of Scars_
+|tip Manually skip to the next step.
+step
+goto craglorn_base 58.27,42.70
+'Open _Ilthag's Undertower_
+|tip Manually skip to the next step.
+step
+goto ilthagsundertower_base 56.05,66.13
+step
+goto ilthagsundertower02_base 56.89,72.26
+step
+goto 67.51,19.70
+step
+goto 26.63,11.11
+step
+goto ilthagsundertower_base 36.78,16.46
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 18.26,47.56
+kill Rahk and Vosh
+kill Ilthag Ironblood
+|tip Manually skip to the next step.
+step
+goto 38.21,61.98
+step
+goto 43.56,60.99
+'Open _Ilthag's Undertow_
+|tip Manually skip to the next step.
+step
+goto 55.53,88.09
+'Climb _Craglorn_
+|tip Manually skip to the next step.
+step
+goto craglorn_base 61.06,34.63
+step
+goto 60.22,33.25
+step
+goto 56.41,33.35
+step
+goto 55.54,28.50
+step
+goto 54.84,24.98
+'Open _Exarch's Stronghold_
+|tip Manually skip to the next step.
+step
+goto exarchsstronghold_base 59.99,73.56
+'Open _Exarch's Stronghold_
+|tip Manually skip to the next step.
+step
+goto 62.74,55.88
+|tip Jump off bridge.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 50.18,58.99
+step
+goto 51.89,46.68
+'Open _Exarch's Stronghold_
+|tip Manually skip to the next step.
+step
+goto 53.27,20.40
+step
+goto 68.46,19.30
+step
+goto 68.65,11.71
+step
+goto 49.20,07.99
+'Open _Exarch Braadoth's Abode_
+|tip Manually skip to the next step.
+step
+goto 37.87,15.86
+step
+goto 37.58,24.67
+step
+goto 41.43,33.59
+'Open _Exarch Stronghold_
+|tip Manually skip to the next step.
+step
+goto 40.90,70.82
+'Open _Exarch Stronghold_
+|tip Manually skip to the next step.
+step
+goto 41.74,85.07
+kill Ordooth the Corruptor
+|tip Manually skip to the next step.
+step
+'Open _Craglorn_ Map
+'Travel to _Valley of Scars_
+|tip Manually skip to the next step.
+step
+goto craglorn_base 66.26,33.09
+step
+goto 66.32,33.13
+'Open _The Howling Sepulchers_
+|tip Manually skip to the next step
+step
+goto howlingsepulchersoverland_base 47.40,51.90
+step
+goto 35.00,49.91
+step
+goto 27.41,38.67
+step
+goto howlingsepulcherscave_base 51.14,51.51
+step
+goto howlingsepulchersoverland_base 41.78,25.88
+step
+goto 60.83,34.09
+step
+goto 76.50,40.81
+step
+goto 83.16,46.60
+'Open _Dragon Priest's Burial Chamber_
+|tip Manually skip to the next step.
+step
+kill Akiirdal
+|tip Manually skip to the next step.
+step
+goto howlingsepulchersoverland_base 52.86,53.29
+|tip Outside Dragon Priest's Burial Chamber
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Craglorn_ Map
+'Travel to _Elinhir_
+|tip Manually skip to the next step.
+step
+goto craglorn_base 82.85,62.94
+step
+goto 81.16,57.64
+step
+goto 82.44,57.59
+'Open _Balamath_
+|tip Manually skip to the next step.
+step
+goto balamath_base 51.49,73.77
+step
+goto 56.58,53.26
+step
+goto 53.03,47.39
+step
+goto 63.80,56.98
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 77.84,25.98
+kill Storm Mage Iribia
+kill Frost Mage Prcia
+kill Fire Mage Linia
+|tip Manually skip to the next step.
+step
+'Open _Craglorn_ Map
+'Travel to _Belkarth_
+|tip Manually skip to the next step.
+step
+goto belkarth_base 83.80,26.43
+step
+goto craglorn_base 66.45,67.80
+'Open _Haddock's Market_
+|tip Manually skip to the next step.
+step
+goto haddock_base 38.75,75.92
+step
+goto 59.13,60.13
+step
+goto 45.56,38.11 |tip Upstairs, across the bridge and downstairs.
+step
+goto 71.74,32.02
+kill Ariana At-Faralan
+|tip Manually skip to the next step.
+step
+goto 66.28,24.11
+|tip Follow path and go upstairs.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Craglorn_ Map
+'Travel to _Elinhir_
+|tip Manually skip to the next step.
+step
+goto craglorn_base 74.34,70.12
+step
+goto 74.36,72.65
+'Open _Molavar_
+|tip Manually skip to the next step.
+step
+goto molavar_base 77.59,56.56
+step
+goto 19.73,65.26
+step
+goto 14.43,50.10
+step
+goto 32.58,49.55
+step
+goto 48.11,52.44
+step
+goto 48.11,29.07
+kill Thaliel the Voracious
+|tip Manually skip to the next step.
+step
+goto 41.00,52.85
+step
+goto 73.68,35.22
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'_****GROUP QUESTS ONLY FROM THIS POINT ON****_
+'_****HAVE RING OF THE PALE ORDER FOR SOLO****_
+'_****AND HAVE YOUR COMPANION UNLOCKED TO LEVEL 20****_
+step
+'Open _Craglorn_ Map
+'Travel to _Spellscar_
+|tip Manually skip to the next step.
+step
+goto craglorn_base 53.67,53.93
+'Open _Hircine's Haunt_
+|tip Manually skip to the next step.
+step
+goto hircineshaunt_base 52.18,78.62
+step
+goto 46.03,70.93
+step
+goto 73.85,40.46
+step
+goto 61.25,41.27
+step
+goto 42.07,13.44
+step
+goto 33.08,66.28
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 21.97,66.87
+step
+goto 22.68,77.73
+kill Packleader Sigmund
+|tip Manually skip to the next step.
+step
+'Open _Craglorn_ Map
+'Travel to _Seeker's Archive_ |q Invitation to Orsinium |future
+|tip Manually skip to the next step.
+step
+goto craglorn_base 44.09,46.06
+'Open _Rkhardahrk_
+|tip Manually skip to the next step.
+step
+goto rkhardahrk 84.34,42.88
+step
+goto 53.12,31.12
+step
+goto 46.15,37.71
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 21.07,49.66
+step
+goto 12.68,49.46
+kill The Last Sentinel
+|tip Manually skip to the next step.
+step
+'Open _Craglorn_ Map
+'Travel to _Seeker's Archive_
+|tip Manually skip to the next step.
+step
+goto craglorn_base 44.74,63.58
+step
+goto 47.43,66.40
+'Open _Zalgaz's Den_
+|tip Manually skip to the next step.
+step
+goto thaliasretreat_base 48.71,42.73
+step
+goto 46.63,28.94
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 29.63,15.22
+kill Zalgaz
+|tip Manually skip to the next step.
+step
+'Open _Craglorn_ Map
+'Travel to _Sandy Path_
+|tip Manually skip to the next step.
+step
+goto craglorn_base 23.41,55.42
+step
+goto 20.89,57.46
+step
+goto 20.05,56.36
+'Open _Mtharnaz_
+|tip Manually skip to the next step.
+step
+goto mtharnaz_base 88.04,62.32
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 62.56,34.44
+step
+goto 44.75,26.09
+step
+goto 31.82,67.91
+step
+goto 31.82,67.91
+step
+goto 30.50,60.21
+step
+goto 17.97,61.29
+kill Skillful Seamstress
+|tip Manually skip to the next step.
+step
+'Open _Craglorn_ Map
+'Travel to _Shada's Tear_
+|tip Manually skip to the next step.
+step
+goto craglorn_base 28.62,45.64
+'Open _Ruins of Kardala_
+|tip Manually skip to the next step.
+step
+goto kardala_base 78.24,77.32
+step
+goto 70.53,54.17
+step
+goto 61.56,46.25
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 62.81,35.35
+kill Satagna
+|tip Manually skip to the next step.
+step
+goto 49.79,32.26
+'Open _Craglorn_ Map
+'Travel to _Mountain Overlook_
+|tip Manually skip to the next step.
+step
+goto craglorn_base 72.16,43.78
+'Open _Chiselshriek Mine_
+|tip Manually skip to the next step.
+step
+goto chiselshriek_base 83.48,80.97
+step
+goto 85.90,22.90
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 71.17,22.71
+kill The Gracious Beacon
+|tip Manually skip to the next step.
+step
+goto 49.83,32.64
+'Open _Craglorn_ Map
+'Travel to _Elinhir_
+|tip Manually skip to the next step.
+step
+goto craglorn_base 68.80,60.19
+'Open _Rkundzelft_
+|tip Manually skip to the next step.
+step
+goto rkundzelft_base 39.27,50.63
+step
+goto 66.93,90.23
+step
+goto 81.30,56.30
+step
+goto 71.67,37.43
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 48.50,38.00
+kill Mzeklok
+|tip Manually skip to the next step |next Extras\\Extras\\Skyshards and Delves\\Expansion\\Wrothgar
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Wrothgar",[[
+loadingimage loadscreen_wrothgar_01.dds
+description Wrothgar Skyshards and Delves.
+step
+'Open _Wrothgar_ Map
+'Travel to _Siege Road_
+|tip Manually skip to the next step.
+step
+goto wrothgar_base 25.23,79.74
+step
+goto 23.17,86.72
+step
+goto 18.56,83.84
+step
+goto 19.46,82.99
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 19.65,85.32
+step
+goto 19.86,84.56
+|tip Inside tower.
+'Open _Watcher's Hold_
+|tip Manually skip to the next step.
+step
+goto watchershold_base 63.34,81.21
+step
+goto 72.13,74.80
+step
+goto 76.14,65.98
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 73.07,25.83
+step
+goto 63.74,25.38
+kill Sir Marq Tailas
+|tip Manually skip to the next step.
+step
+'Open _Wrothgar_ Map
+'Travel to _Siege Road_
+|tip Manually skip to the next step.
+step
+goto wrothgar_base 22.98,70.28
+step
+goto 22.24,67.40
+step
+goto 18.84,67.37
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 22.98,70.28
+step
+goto 17.31,76.81
+'Use _Siege Road_
+'Travel to _Great Bay_
+|tip Manually skip to the next step.
+step
+goto 33.41,75.27
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 32.24,74.60
+step
+goto 32.00,72.63
+step
+goto 29.58,73.92
+'Open _Thukhozod's Sanctum_
+|tip Manually skip to the next step.
+step
+goto thukozods_base 17.31,22.99
+step
+goto 17.57,56.43
+step
+goto 17.50,44.06
+step
+goto 28.93,45.88
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 77.87,38.66
+step
+goto 78.53,74.83
+kill Gorlar the Dark
+kill Gorlar's Sword
+kill Gorlar's Shield-Wife
+|tip Manually skip to the next step.
+step
+'Open _Wrothgar_ Map
+'Travel to _Morkul Plains_
+|tip Manually skip to the next step.
+step
+goto wrothgar_base 55.22,56.02
+step
+goto 54.12,58.52
+'Open _Argent Mine_
+|tip Manually skip to the next step.
+step
+goto argentmine2_base 30.42,59.61
+step
+goto 19.32,65.57
+step
+goto 19.02,84.26
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 56.65,83.41
+step
+goto 56.45,53.29
+step
+goto 78.73,51.74
+step
+goto 73.54,23.40
+kill Magnar Child-Eater
+|tip Manually skip to the next step.
+step
+'Open _Wrothgar_ Map
+'Travel to _Trader's Road_
+|tip Manually skip to the next step.
+step
+goto wrothgar_base 44.74,67.56
+step
+goto 45.83,64.41
+step
+goto 43.29,62.80
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 45.83,64.41
+step
+goto 44.74,67.56
+step
+goto 52.04,65.20
+'Use _Trader's Road_
+'Travel to _Merchant's Gate_
+|tip Manually skip to the next step.
+step
+goto 59.58,72.74
+step
+goto 61.70,66.63
+step
+goto 56.80,67.60
+step
+goto 56.89,69.80
+'Open _Nikolvara's Kennel_
+|tip Manually skip to the next step.
+step
+goto kennelrun_base 69.69,47.17
+step
+goto 89.75,70.82
+|tip Pass through the tunnel.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 77.19,67.00
+step
+goto 35.47,56.17
+step
+goto 27.98,53.84
+step
+goto 22.35,46.12
+step
+goto 22.18,32.38
+step
+goto 41.99,34.58
+kill Nikolvara the Durzog Trainer
+|tip Manually skip to the next step.
+step
+goto 59.82,44.09
+'Open _Wrothgar_ Map
+'Travel to _Icy Shore_
+|tip Manually skip to the next step.
+step
+goto morkul_base 71.31,43.61
+step
+goto 46.12,78.47
+step
+goto 36.78,79.17
+step
+goto 12.81,46.36
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 36.78,79.17
+step
+goto 46.12,78.47
+step
+goto 71.31,43.61
+step
+goto wrothgar_base 59.82,44.09
+step
+goto 53.07,35.33
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Wrothgar_ Map
+'Travel to _Shatul_
+|tip Manually skip to the next step.
+step
+goto 64.10,49.57
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 64.44,50.58
+step
+goto 66.04,50.55
+step
+goto 78.55,57.64
+step
+goto 82.16,57.59
+step
+goto 80.40,60.31
+'Open _Coldperch Cavern_
+|tip Manually skip to the next step.
+step
+goto coldperchcavern_base 50.85,20.2
+step
+goto 49.35,49.59
+step
+goto 61.16,76.18
+step
+goto 32.95,82.64
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 61.26,78.81
+step
+goto 74.96,48.89
+kill Kraala Birdsong
+|tip Manually skip to the next step.
+step
+'Open _Wrathgar_ Map
+'Travel to _Shatul_
+|tip Manually skip to the next step.
+step
+goto wrothgar_base 71.94,46.65
+step
+goto 74.36,43.03
+step
+goto 79.72,41.12
+step
+goto 84.39,43.00
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 79.72,41.12
+step
+goto 74.36,43.03
+step
+goto 73.33,38.28 
+step
+goto 71.09,37.81
+'Open _Zthenganaz_
+|tip Manually skip to the next step.
+step
+goto Zthenganaz_base 50.04,77.59
+step
+goto 56.26,56.51
+step
+goto 61.84,55.91
+step
+goto 63.60,33.73
+step
+goto 87.22,33.27
+kill Ztheng
+|tip Manually skip to the next step.
+step
+goto 36.11,30.12
+step
+goto 11.99,11.74
+'Use _Skyshard_
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Expansion\\Hew's Bane
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Hew's Bane",[[
+loadingimage loadscreen_outlaw_refuge_nedic_01.dds
+description Hew's Bane Skyshards and Delves.
+step
+'Open _Hew's Bane_ Map
+'Travel to _Abah's Landing_
+|tip Manually skip to the next step.
+step
+goto abahslanding_base 31.41,57.41
+step
+goto 42.26,39.52
+step
+goto 57.98,42.26
+|tip Keep to the left go upstairs. 
+'Open _Abah's Landing_
+|tip Manually skip to the next step.
+step
+goto 56.04,41.72
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 42.26,39.52 |tip Drop down.
+step
+goto 31.41,57.41
+step
+goto hewsbane_base 46.68,42.21
+'Open _Bahraha's Gloom_
+|tip Manually skip to the next step.
+step
+goto bahrahasgloom_base 22.03,49.97
+step
+goto 49.50,49.81
+step
+goto 49.88,42.09
+step
+goto 62.38,47.35
+step
+goto 65.06,67.99
+kill The First
+kill Magnifico Bahraha
+|tip Manually skip to the next step.
+step
+goto 69.47,74.31
+step
+goto 72.34,68.21
+step
+goto 72.95,60.74
+step
+goto 67.53,59.73
+step
+goto 67.71,55.85
+step
+goto bahrahasgloom_base 34.36,44.64
+step
+goto 25.69,52.50
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Hew's Bane_ Map
+'Travel to _Abah's Landing_
+|tip Manually skip to the next step.
+step
+goto hewsbane_base 43.95,46.93
+step
+goto 43.71,48.17
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 42.00,48.74
+step
+goto 47.47,65.73
+step
+goto 46.34,66.14
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 44.74,70.55
+step
+goto 38.18,77.11
+step
+goto 41.47,75.95
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 33.48,79.44
+step
+goto 32.07,78.18
+'Open _Shark's Teeth Grotto_
+|tip Manually skip to the next step.
+step
+goto sharktoothgrotto2_base 61.71,60.93
+step
+goto 47.55,32.06
+step
+goto 37.53,22.92
+step
+goto 26.00,21.70
+step
+goto 22.61,32.82
+step
+goto 16.85,62.25
+kill Leelo, Laylah
+kill First Mate Rodros
+kill Krona Keeba
+|tip Manually skip to the next step.
+step
+goto sharktoothgrotto1_base 56.94,59.52
+step
+goto sharktoothgrotto1_base 62.20,54.67
+step
+goto 70.36,53.14
+step
+goto sharktoothgrotto2_base 58.25,38.14 |tip Follow ramp to the top.
+step
+goto 66.03,38.08
+'Use _Skyshard_
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Expansion\\Gold Coast
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Gold Coast",[[
+loadingimage loadscreen_dbsanctuary_01.dds
+description Gold Coast Skyshards and Delves.
+step
+'Open _Gold Coast_ Map
+'Travel to _Anvil_
+|tip Manually skip to the next step.
+step
+goto goldcoast_base 25.54,58.12
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 29.16,52.18
+step
+goto 39.22,45.17
+'Open _Hrota Cave_
+|tip Manually skip to the next step.
+step
+goto hrotacave_base 24.54,48.40
+step
+goto 62.48,57.86
+step
+goto 65.42,78.45
+step
+goto 86.64,80.38
+kill Exulus
+|tip Manually skip to the next step.
+step
+goto 64.96,79.12
+step
+goto 64.12,52.98
+'Open _Secret Passage_
+|tip Manually skip to the next step.
+step
+goto 66.93,45.59
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Gold Coast_ Map
+'Travel to _Gold Coast_
+|tip Manually skip to the next step.
+step
+goto goldcoast_base 57.92,45.22
+'Open _Garlas Agea_
+|tip Manually skip to the next step.
+step
+goto garlasagea_base 53.54,89.44
+step
+goto 77.06,66.43
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 74.20,49.45
+step
+goto 67.93,28.64
+step
+goto 45.38,28.79
+step
+goto 34.56,35.17
+step
+goto 48.03,35.98
+step
+goto 58.72,41.97
+kill Ironfang
+|tip Manually skip to the next step.
+step
+'Oepn _Gold Coast_
+'Travel to _Kvatch_
+|tip Manually skip to the next step.
+step
+goto goldcoast_base 85.74,50.79
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 87.88,60.32
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 87.76,56.89
+step
+goto 78.77,55.09
+step
+goto 73.33,66.07
+'Use _Strid River_
+'Travel to _Gold Coast_
+|tip Manually skip to the next step.
+step
+goto 34.71,31.86
+step
+goto 31.12,19.21
+step
+goto goldcoast_base 29.91,19.21
+'Use _Skyshard_
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Expansion\\Vvardenfell
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Vvardenfell",[[
+loadingimage loadscreen_vvardenfel_01.dds
+description Vvardenfell Skyshards and Delves.
+step
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Clockwork City",[[
+loadingimage loadscreen_clockworkcity_zone_01.dds
+description Clockwork City Skyshards and Delves.
+step
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Summerset",[[
+loadingimage loadscreen_summerset_01.dds
+description Summerset Skyshards and Delves.
+step
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Murkmire",[[
+loadingimage loadscreen_murkmire_01.dds
+description Murkmire Skyshards and Delves.
+step
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Northern Elsweyr",[[
+loadingimage loadscreen_elsweyr_zone_01.dds
+description Northern Elsweyr Skyshards and Delves.
+step
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Southern Elsweyr",[[
+loadingimage loadscreen_southernelsweyr_01.dds
+description Southern Elsweyr Skyshards and Delves.
+step
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Western Skyrim",[[
+loadingimage loadscreen_westernskyrim_01.dds
+description Western Skyrim Skyshards and Delves.
+step
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\The Reach",[[
+loadingimage loadscreen_thereach_01.dds
+description The Reach Skyshards and Delves.
+step
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Blackwood",[[
+loadingimage loadscreen_u30_blackwood_zone_01.dds
+description Blackwood Skyshards and Delves.
+step
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\The Deadlands",[[
+loadingimage loadscreen_ardent_hope_01.dds
+description The Deadlands Skyshards and Delves.
+step
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\High Isle and Amenos",[[
+loadingimage loadscreen_hi_systres_zone_01.dds
+description High Isle and Amenos Skyshards and Delves.
+step
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Galen and Y'ffelon",[[
+loadingimage loadscreen_galen_zone.dds
+description Galen and Y'ffelon Skyshards and Delves.
+step
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Telvanni Peninsula",[[
+loadingimage loadscreen_telvanni_peninsula_01.dds
+description Telvanni Peninsula Skyshards and Delves.
+step
 ]])
