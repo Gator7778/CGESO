@@ -2284,8 +2284,8 @@ CGV.MapData = {
     ["oasis_map2_base"] =                   { name = "Everwound Wellspring",                    id = 620, xoffset = 0.242671, yoffset = 0.998992, scale = 0.032067, },
     ["oasis_map1_base"] =                   { name = "Everwound Wellspring",                    id = 620, xoffset = 0.242774, yoffset = 1.005519, scale = 0.015654, },
     ["oasis_map3_base"] =                   { name = "Everwound Wellspring",                    id = 620, xoffset = 0.260318, yoffset = 1.006854, scale = 0.013658, },
-    ["hallsofregulation_base"] =            { name = "Halls of Regulation",                     id = 621, xoffset = 0.240202, yoffset = 1.020104, scale = 0.010545, },
-    ["hallsofregulation_2_base"] =          { name = "Halls of Regulation",                     id = 621, xoffset = 0.240202, yoffset = 1.020104, scale = 0.010545, },
+    ["hallsofregulation_base"] =            { name = "Halls of Regulation",                     id = 621, xoffset = 0.238702, yoffset = 1.013430, scale = 0.025545, },
+    ["hallsofregulation_2_base"] =          { name = "Halls of Regulation",                     id = 621, xoffset = 0.238702, yoffset = 1.013430, scale = 0.025545, },
 
     -- SUMMERSET
     ["shimmerene_base"] =                   { name = "Shimmerene",                              id = 622, xoffset = 0.136510, yoffset = 0.703466, scale = 0.039067, },

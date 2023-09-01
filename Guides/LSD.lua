@@ -3187,31 +3187,31 @@ step
 goto 30.26,36.84
 step
 goto 34.30,33.29
-'Open _Enduum_ |q The Hidden Treasure |future
+'Open _Enduum_
 |tip Manually skip to the next step.
 step
-goto enduum_base 47.53,77.03 |q The Hidden Treasure |future
+goto enduum_base 47.53,77.03
 step
 goto 40.65,86.14
-'Use _Skyshard_ |q The Hidden Treasure |future
+'Use _Skyshard_
 |tip Manually skip to the next step.
 step
-goto 69.06,78.43 |q The Hidden Treasure |future
+goto 69.06,78.43
 step
-goto 65.62,49.80 |q The Hidden Treasure |future
+goto 65.62,49.80
 step
-goto 65.57,38.32 |q The Hidden Treasure |future
+goto 65.57,38.32
 step
-goto 57.44,34.14 |q The Hidden Treasure |future
+goto 57.44,34.14
 step
-goto 70.15,32.90 |q The Hidden Treasure |future
+goto 70.15,32.90
 step
 goto 70.06,8.42
-kill Odilon |q The Hidden Treasure |future
+kill Odilon
 |tip Manually skip to the next step.
 step
 'Open _Glenumbra_ Map
-'Travel to _Farwatch_ |q The Hidden Treasure |future
+'Travel to _Farwatch_
 |tip Manually skip to the next step.
 step
 goto glenumbra_base 27.92,42.62
@@ -4916,7 +4916,7 @@ step
 |tip Manually skip to the next step.
 step
 goto deshaan_base 91.46,44.02
-'Open _Knife Ear Grotto_ |q A Fair Warning |future
+'Open _Knife Ear Grotto_
 |tip Manually skip to the next step.
 step
 goto desolatecave_base 48.13,28.66
@@ -5397,7 +5397,7 @@ kill Nomeg Chal
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Ebonheart Pact\\The Rift",[[
-loadingimageloadscreen_rift_01.dds
+loadingimage loadscreen_rift_01.dds
 description The Rift Skyshards and Delves.
 step
 'Open _The Rift_ Map
@@ -5845,7 +5845,7 @@ step
 goto 44.03,35.21 |tip Drop down here
 step
 goto 69.99,9.67
-'Open _Coldharbour_ |q The Endless War |future
+'Open _Coldharbour_
 |tip Manually skip to the next step.
 step
 goto coldharbour_base 58.02,58.58
@@ -6379,7 +6379,7 @@ kill Packleader Sigmund
 |tip Manually skip to the next step.
 step
 'Open _Craglorn_ Map
-'Travel to _Seeker's Archive_ |q Invitation to Orsinium |future
+'Travel to _Seeker's Archive_
 |tip Manually skip to the next step.
 step
 goto craglorn_base 44.09,46.06
@@ -7006,17 +7006,772 @@ CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Vvardenfell"
 loadingimage loadscreen_vvardenfel_01.dds
 description Vvardenfell Skyshards and Delves.
 step
+'Open _Vvardenfell_ Map
+'Travel to _Seyda Neen_
+|tip Manually skip to the next step.
+step
+goto vvardenfell_base 40.92,82.44
+'Open _Govenor's Office_
+|tip Manually skip to the next step.
+step
+goto 40.66,82.67
+'Open _Census and Exercise Courtyard_
+|tip Manually skip to the next step.
+step
+goto 40.67,82.56
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Vvardenfell_ Map
+'Travel to _Seyda Neen_
+|tip Manually skip to the next step.
+step
+goto 35.83,75.14
+'Open _Zainsipilu_
+|tip Manually skip to the next step.
+step
+goto zainsipilu_base 93.49,69.05
+step
+goto 69.09,51.57
+step
+goto 77.39,25.24
+|tip Drop down.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 61.09,48.13
+step
+goto 40.87,39.59
+step
+goto 32.64,52.08
+step
+goto 40.40,69.39
+step
+goto 10.63,78.60
+kill Zvvius the Hive Lord
+|tip Manually skip to the next step.
+step
+'Open _Vvardenfell_ Map
+'Travel to _Balmora_
+|tip Manually skip to the next step.
+step
+goto vvardenfell_base 38.90,69.09
+step
+goto 36.31,67.26
+step
+goto 28.64,64.52
+step
+goto 26.51,63.72
+step
+goto 25.39,63.69
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Vvardenfell_
+'Travel to _Ald'ruhn_
+|tip Manually skip to the next step.
+step
+goto 35.94,53.24
+step
+goto 31.76,49.44
+step
+goto 24.53,49.92
+'Open _Khartag Point_
+|tip Manually skip to the next step.
+step
+goto khartagpoint_base 70.36,72.44
+step
+goto 82.87,58.19
+step
+goto 81.55,46.09
+step
+goto 61.46,45.99
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 81.55,45.70
+step
+goto 76.02,19.44
+kill Old Rust-Eye
+|tip Manually skip to the next step.
+step
+'Open _Vvardenfell_ Map
+'Travel to _Gnisis_
+|tip Manually skip to the next step.
+step
+goto vvardenfell_base 19.25,35.86
+step
+goto 17.14,35.30
+step
+goto 16.78,32.33
+step
+goto 16.14,29.79
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Vvardenfell_ Map
+'Travel to _Urshilaku Camp_
+|tip Manually skip to the next step.
+step
+goto 22.21,27.63
+step
+goto 22.09,26.89
+step
+goto 23.44,26.70
+step
+goto 23.23,27.15
+'Open _Ashalmawia_
+|tip Manually skip to the next step.
+step
+goto ashalmawia_base 60.88,52.55
+step
+goto 90.32,24.12
+'Open _Sunken Vaults_
+|tip Manually skip to the next step.
+step
+goto ashalmawia03_base 60.21,47.77
+step
+goto 73.12,38.66
+step
+goto ashalmawia02_base 61.51,21.58
+step
+goto 38.84,32.43
+kill Phobbiicus
+|tip Manually skip to the next step.
+step
+goto 59.73,49.28
+step
+goto 36.27,77.50
+step
+goto 33.60,92.84
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Vvardenfell_
+'Travel to _Valley of the Wind_
+|tip Manually skip to the next step.
+step
+goto vvardenfell_base 55.05,25.49
+step
+goto 51.80,24.80
+step
+goto 43.21,23.07
+step
+goto 42.32,25.57
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Vvardenfell_ Map
+'Travel to _Tel Mora_
+|tip Manually skip to the next step.
+step
+goto 68.77,32.54
+step
+goto 72.97,33.69
+step
+goto 75.32,34.26
+step
+goto 76.36,35.65
+step
+goto 77.25,36.21
+step
+goto 77.89,36.61
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 81.94,40.50
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Vvardenfell_ Map
+'Travel to _Tel Mora_
+|tip Manually skip to the next step.
+step
+goto vvardenfell_base 61.19,32.94
+'Open _Nchuleft_
+|tip Manually skip to the next step.
+step
+goto nchuleft_base 52.90,43.34
+step
+goto 19.26,43.56
+'Open _Nchuleft Depths_
+|tip Manually skip to the next step.
+step
+goto nchuleftdepths_base 51.80,41.49
+step
+goto 44.18,21.96
+step
+goto 24.64,21.03
+step
+goto 28.71,37.01
+step
+goto 48.45,41.80
+step
+goto 60.05,58.09
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 38.71,59.33
+step
+goto 33.35,41.70
+step
+goto 49.64,39.28
+kill Nchuthand Far-Hurler
+|tip Manually skip to the next step.
+step
+'Open _Vvardenfell_ Map
+'Travel to _Tel Mora_
+|tip Manually skip to the next step.
+step
+goto vvardenfell_base 67.20,42.01
+'Open _Pulk_
+|tip Manually skip to the next step.
+step
+goto pulkupper_base 40.37,41.25
+step
+goto pulklower_base 47.96,36.96
+|tip Drop down.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 56.91,46.98
+step
+goto 57.98,38.62
+step
+goto 78.70,50.19
+kill Bralsa Inlador
+|tip Manually skip to the next step.
+step
+'Open _Vvardenfell_
+'Travel to _Nchuleftingth_
+|tip Manually skip to the next step.
+step
+goto vvardenfell_base 64.25,57.21
+step
+goto 64.29,55.85
+step
+goto 65.23,55.60
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 64.29,55.85
+step
+goto 64.25,57.21
+step
+goto 66.01,62.06
+step
+goto 71.67,61.04
+step
+goto 72.10,65.61
+step
+goto 76.03,68.69
+'Use _Skyrim_
+|tip Manually skip to the next step.
+step
+'Open _Vvardenfell_ Map
+'Travel to _Molag Mar_
+|tip Manually skip to the next step.
+step
+goto 81.06,76.91
+step
+goto 81.58,70.78
+step
+goto 79.83,68.99
+'Open _Matus-Akin Egg Mine_
+|tip Manually skip to the next step.
+step
+goto matusakin_base 84.37,34.44
+step
+goto 70.42,29.05
+step
+goto 47.02,31.57
+step
+goto 52.98,61.50
+kill Tr'krak the Tunnel-King
+|tip Manually skip to the next step.
+step
+goto 53.02,73.38
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Vvardenfell_
+'Travel to _Tel Branora_
+|tip Manually skip to the next step.
+step
+goto vvardenfell_base 76.91,83.53
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 76.93,89.84
+'Use _Tel Branora_
+'Travel to _Suran_
+|tip Manually skip to the next step.
+step
+goto 49.30,70.86
+'Use _Skyshard_
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Expansion\\Clockwork City
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Clockwork City",[[
 loadingimage loadscreen_clockworkcity_zone_01.dds
 description Clockwork City Skyshards and Delves.
 step
+'Open _Clockwork City_ Map
+'Travel to _Brass Fortress_
+|tip Manually skip to the next step.
+step
+goto brassfortress_base 51.50,55.53
+'Open _Mechanical Fundament_
+|tip Manually skip to the next step.
+step
+goto ccunderground02_base 37.63,58.07
+step
+goto 55.78,58.36
+step
+goto 69.69,72.76
+step
+goto ccunderground_base 85.54,71.91
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Clockwork City_ Map
+'Travel to _Brass Fortress_
+|tip Manually skip to the next step.
+step
+goto brassfortress_base 49.44,49.47
+step
+goto 34.62,62.14
+'Open _Reactor Distract_
+|tip Manually skip to the next step.
+step
+goto 15.04,42.24
+'Open _Skybridge_
+|tip Manually skip to the next step.
+step
+goto 34.59,55.32
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Clockwork City_ Map
+'Travel to _Brass Fortress_
+|tip Manually skip to the next step.
+step
+goto 51.97,57.42
+step
+goto 48.50,73.23
+'Open _The Clockwork City_
+|tip Manually skip to the next step.
+step
+goto clockwork_base 44.64,46.06
+step
+goto 46.30,50.48
+|tip Follow path down.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Clockwork City_
+'Travel to _Clockwork Crossroads_
+|tip Manually skip to the next step.
+step
+goto 49.59,65.51
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 49.02,61.41
+'Use _Clockwork Crossroads_
+'Travel to _Sanctuary_
+|tip Manually skip to the next step.
+step
+goto 25.49,56.07
+step
+goto 26.46,58.20
+'Use _Portal to the Shadow Cleft_
+|tip Manually skip to the next step.
+step
+goto shadowcleft_base 35.11,85.58
+step
+goto 38.42,62.97
+step
+goto 57.20,64.56
+step
+goto 59.09,57.12
+step
+goto 83.08,56.91
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 71.66,84.40
+step
+goto 56.59,83.93
+step
+goto 57.71,64.07
+step
+goto 34.87,62.34
+step
+goto 35.20,21.37
+kill Night Sister Kamira
+|tip Manually skip to the next step.
+step
+goto 36.89,45.35
+step
+goto 37.83,67.03
+step
+goto 33.01,87.34
+step
+goto 13.91,83.34
+'Enter _Portal to the Clockwork City_
+|tip Manually skip to the next step.
+step
+goto clockwork_base 32.46,53.56
+'Use _Sanctuary_
+'Travel to _Mire Mechanica_
+|tip Manually skip to the next step.
+step
+goto clockwork_base 76.65,54.12
+step
+goto 82.89,64.11
+'Open _Halls of Regulation_
+|tip Manually skip to the next step.
+step
+goto hallsofregulation_base 19.81,44.64
+step
+goto 28.42,56.53
+step
+goto 36.91,56.37
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 48.81,53.82
+step
+goto 57.53,42.18
+'Open _Regulation Chamber_
+|tip Manually skip to the next step.
+step
+goto hallsofregulation_2_base 68.22,35.45
+step
+goto 72.57,39.98
+kill The Steadfast Regulator
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Expansion\\Summerset
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Summerset",[[
 loadingimage loadscreen_summerset_01.dds
 description Summerset Skyshards and Delves.
+step
+'Open _Summerset_ Map
+'Travel to _Eastern Pass_
+|tip Manually skip to the next step.
+step
+goto summerset_base 72.16,70.68
+step
+goto 74.02,71.45
+step
+goto 70.48,77.26
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Summerset_ Map
+'Travel to _Sil-Va-Woad_
+|tip Manually skip to the next step.
+step
+goto 63.02,60.00
+step
+goto 60.33,60.00
+step
+goto 59.46,59.05
+step
+goto 57.90,58.37
+'Open _Archon's Grove_
+|tip Manually skip to the next step.
+step
+goto archonsgrove_base 65.53,39.19
+step
+goto 54.43,69.99
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 63.39,35.02
+step
+goto 41.77,41.00
+step
+goto 37.33,53.07
+step
+goto 31.57,54.99
+step
+goto 19.54,49.19
+step
+goto 13.48,59.43
+kill Den Mother Toamna
+|tip Manually skip to the next step.
+step
+'Open _Summerset_ Map
+'Travel to _Shimmerene_
+|tip Manually skip to the next step.
+step
+goto summerset_base 59.13,52.48
+step
+goto 55.51,53.35
+step
+goto 55.43,52.54
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 55.94,53.32
+step
+goto 55.98,52.69
+step
+goto 49.64,54.45
+'Open _Tor-Hame-Khard_
+|tip Manually skip to the next step.
+step
+goto torhamekhard_01_base 39.41,35.90
+step
+goto 49.07,59.03
+step
+goto torhamekhard_02_base 39.46,61.10
+step
+goto 39.50,53.67
+step
+goto 58.38,54.13
+step
+goto 52.24,80.06
+step
+goto 46.79,71.57
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto torhamekhard_02_base 48.78,80.34
+step
+goto 59.07,71.62
+step
+goto 39.41,60.59
+step
+goto 39.87,44.49
+step
+goto 49.61,35.35
+step
+goto 58.93,41.02
+step
+goto 65.02,37.24
+step
+goto torhamekhard_01_base 65.67,18.04
+|tip Drop down
+kill The Kurgando
+|tip Manually skip to the next step.
+step
+'Open _Summerset_
+'Travel to _Russafeld Heights_
+|tip Manually skip to the next step.
+step
+goto summerset_base 47.03,49.62
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 44.61,47.30
+step
+goto 36.84,51.20
+step
+goto 36.60,55.20
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Summerset_ Map
+'Travel to _Cey-Tarn Keep_
+|tip Manually skip to the next step
+step
+goto 27.05,56.10 |q Divine Deputation |future
+step
+goto 28.60,56.92
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 27.05,56.10
+step
+goto 29.61,51.35
+step
+goto 26.72,52.14
+'Travel _Wasten Coraldale_
+|tip Manually skip to the next step.
+step
+goto wastencoraldale_base 51.41,55.79
+step
+goto 50.17,45.98
+step
+goto 38.55,45.04
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 52.89,51.16
+step
+goto 65.77,53.80
+step
+goto 61.20,34.94
+kill Stormsinger Farya
+|tip Manually skip to the next step.
+step
+'Open _Summerset Map_
+'Travel to _Shimmerene_
+|tip Manually skip to the next step.
+step
+goto summerset_base 54.39,42.05
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 55.44,37.10
+step
+goto 50.97,32.72
+'Open _Eton Nir Grotto_
+|tip Manually skip to the next step.
+step
+goto etonnir_01_base 43.24,36.97
+step
+goto 30.18,43.92
+step
+goto 14.68,59.97
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 13.46,78.26
+kill Kayliriax the Spinner
+|tip Manually skip to the next step.
+step
+'Open _Summerset_ Map
+'Travel to _King's Haven Pass_
+|tip Manually skip to the next step.
+step
+goto summerset_base 53.21,22.67
+step
+goto 51.04,21.74
+step
+goto 49.69,21.02
+step
+goto 48.86,15.87
+step
+goto 48.25,15.24
+step
+goto 48.14,16.99
+step
+goto 49.33,17.17
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Summerset_ Map
+'Travel to _King's Haven Pass_
+|tip Manually skip to the next step.
+step
+goto 52.81,25.36
+step
+goto 51.05,27.89
+step
+goto 48.95,27.52
+'Open _King's Haven Pass_
+|tip Manually skip to the next step.
+step
+goto kingshavenext_base 70.74,34.28
+'Open _Coral-Splitter Caves_
+|tip Manually skip to the next step.
+step
+goto kingshavenint1_base 40.55,29.95
+step
+goto 23.63,24.58
+step
+goto 21.19,30.24
+step
+goto 19.60,38.33
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 07.24,43.66
+'Open _King's Haven Pass_
+|tip Manually skip to the next step.
+step
+goto kingshavenext_base 34.34,46.71
+step
+goto 16.66,41.89
+kill Avuuma the Whirlwind
+|tip Manually skip to the next step.
+step
+'Open _Summerset_ Map
+'Travel to _Ebon Stadmont_
+|tip Manually skip to the next step.
+step
+goto summerset_base 29.96,35.63
+step
+goto 26.83,38.12
+step
+goto 25.08,41.46
+step
+goto 25.76,42.83
+step
+goto 23.38,42.08
+'Use _Skyshard_
+tip Manually skip to the next step.
+step
+goto 25.76,42.83
+step
+goto 25.08,41.46
+step
+goto 26.83,38.12
+step
+goto 20.54,31.35
+step
+goto 18.32,29.48
+step
+goto 17.91,29.36
+|tip Climb 1st rock Jump to 2nd rock then drop down.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Summerset_ Map
+'Travel to _The Crystal Tower_
+|tip Manually skip to the next step.
+step
+goto 28.22,21.66
+step
+goto 29.56,19.58
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 28.22,21.66
+step
+goto 29.41,22.22
+step
+goto 28.17,24.65
+'Use _The Crystal Tower_
+'Travel to _Artaeum_ in Artaeum
+|tip Manually skip to the next step.
+step
+goto artaeum_base 55.74,38.85
+step
+goto 39.88,44.68
+'Open _Traitor's Vault Delve_
+|tip Manually skip to the next step.
+step
+goto TraitorsVault04_base 65.74,19.08
+step
+goto 56.28,20.22
+step
+goto TraitorsVault02_base 56.43,40.20
+step
+goto 80.69,39.11
+step
+goto 83.11,31.48 |tip Go upstairs.
+step
+goto 72.03,31.38
+step
+goto 71.95,47.32
+step
+goto 58.57,47.54
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto TraitorsVault01_base 60.93,51.31 |tip Drop down to the ground floor.
+step
+goto 72.10,51.06
+step
+goto 71.42,75.38
+kill The First Flesh Colossus
+|tip Manually skip to the next step.
 step
 ]])
 

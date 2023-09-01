@@ -9858,7 +9858,12 @@ talk Synda Imyam |q A Late Delivery/Talk to Synda Imyam |future
 'Tell her _Take me to Sadrith Mora, then._
 |tip Manually skip to the next step.
 step
-goto sadrithmora_base 29.10,46.31
+goto sadrithmora_base 31.33,44.60
+step
+goto 29.45,57.12
+wayshrine Sadrith Mora
+step
+goto 29.10,46.31
 talk Eoki
 accept A Hireling of House Telvanni
 step
@@ -10662,6 +10667,7 @@ step
 'Open _Vvardenfell_ Map
 'Travel to _Tel Mora_ |q Rising to Retainer/Go to Esutanamus Shrine
 |tip Manually skip to the next step.
+step
 goto 76.37,34.67
 talk Seythen Rendo |q Rising to Retainer/Find Seythen Rendo |future
 step
@@ -15464,7 +15470,6 @@ talk Tilelle the Mender
 accept The Halls of Regulation
 step
 goto 82.89,64.11
-'_Double Map size_
 'Open _Halls of Regulation_ |q The Halls of Regulation/Collect Ventilation Gear
 |tip Manually skip to the next step.
 step
@@ -15693,7 +15698,7 @@ talk Brengolin
 turnin A Matter of Tenderness
 step
 goto 49.27,95.05
-'Open _The Brass Fortress_. |q Most Complicated Machine |future
+'Open _The Brass Fortress_ |q Most Complicated Machine |future
 |tip Manually skip to the next step.
 step
 goto brassfortress_base 58.35,55.18 |q Most Complicated Machine |future
@@ -16199,10 +16204,10 @@ step
 goto 22.11,35.30 |q A Tale of Two Mothers/Find the Marked Location
 step
 goto 08.09,25.08
-'Open _Summerset_ |q A Tale of Two Mothers/Find the Marked Location
+'Open _Summerset_ |q A Tale of Two Mothers/Find the Marked Location |future
 |tip Manually skip to the next step.
 step
-goto shimmerene_base 54.03,46.99 |q A Tale of Two Mothers/Find the Marked Location
+goto shimmerene_base 54.03,46.99 |q A Tale of Two Mothers/Find the Marked Location |future
 step
 goto 56.55,47.97 |q A Tale of Two Mothers/Find the Marked Location
 step
@@ -16364,7 +16369,7 @@ step
 goto 58.50,62.05
 talk Razum-dar |q The Queen's Decree/Talk to Razum-dar
 step
-goto 25.13,70.09 |q The Queen's Decree/Meet Valsirenn at the Coral Forest |tip Watch dialogue
+goto 25.13,70.09 |q The Queen's Decree/Meet Valsirenn at the Coral Forest
 step
 goto summerset_base 59.58,52.03 |q The Queen's Decree/Meet Valsirenn at the Coral Forest
 talk Celinar
@@ -16869,8 +16874,7 @@ goto 46.99,49.64
 'Use _Skyshard_ |q A Pearl of Great Price/Travel to Rellenthil
 |tip Manually skip to the next step.
 step
-goto 40.42,47.48
-'Travel to _Rellenthil_ |q A Pearl of Great Price/Travel to Rellenthil
+goto 40.42,47.48 |q A Pearl of Great Price/Travel to Rellenthil
 step
 goto 40.42,47.48
 talk Razum-dar |q A Pearl of Great Price/Talk to Razum-dar
@@ -17617,7 +17621,7 @@ goto 49.10,56.71
 'Use _Ul'vor Staff_ |q Buried Memories/Enter the Mindscape
 step
 goto sq3sloadmindscape_base 55.27,26.80
-|tip 'Watch the dialogue.
+|tip Watch the dialogue.
 kill Verdrangu |q Buried Memories/Reveal the First Memory
 step
 goto 30.91,37.25
