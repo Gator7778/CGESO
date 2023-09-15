@@ -38100,13 +38100,14 @@ step
 goto 49.16,25.43
 'Examine _Xynaa's Book of Contracts_ |q Weapons of Destruction/Examine Xynaa's Book
 step
-goto 50.61.23,28
+goto 50.61,23.35
 'Open _Xynaa's Sanctuary_ |q Weapons of Destruction/Enter Xynaa's Sanctuary
 step
 goto 50.86,10.29
 kill Xynaa |q Weapons of Destruction/Kill Xynaa
 step
 goto 50.68,10.62
+|tip Watch the dialogue.
 'Use _Portal to Gideon_ |q Weapons of Destruction/Return to Gideon |future
 |tip Manually skip to the next step.
 step

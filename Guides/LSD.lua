@@ -8791,6 +8791,328 @@ CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Blackwood",[
 loadingimage loadscreen_u30_blackwood_zone_01.dds
 description Blackwood Skyshards and Delves.
 step
+'Open _Blackwood_ Map
+'Travel to _Borderwatch_
+|tip Manually skip to the next step.
+step
+goto blackwood_base 16.35,44.79
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 20.71,50.11
+'Open _Undertow Cavern_
+|tip Manually skip to the next step.
+step
+goto u30_undertowcavern_base 48.62,86.85
+step
+goto 49.54,81.65
+step
+goto 33.18,70.80
+step
+goto 49.85,74.92
+step
+goto 60.86,62.84
+step
+goto 60.86,62.84
+step
+goto 52.60,70.49
+step
+goto 52.45,40.52
+|tip Stay on Top Ramp.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 50.31,16.06
+|tip Drop down.
+kill Druvaakh The Smasher
+|tip Manually skip to the next step.
+step
+goto 52.29,13.30
+step
+goto 57.19,14.98
+'Enter _Blackwood_
+step
+goto blackwood_base 50.25,06.64
+'Use _Leyawiin Outskirts_
+'Travel to _Blueblood_
+|tip Manually skip to the next step.
+step
+goto 29.37,64.18
+|tip Climb to the top of the tower.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 36.20,66.47
+'Use _Blueblood_
+'Travel to _Blackwood Crossroads_
+|tip Manually skip to the next step.
+step
+goto blackwood_base 46.73,56.32
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 53.71,45.69
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 74.33,51.57
+'Open _Doomvault Porcixid_
+|tip Manually skip to the next step.
+step
+goto VaultDelve_INT01_base 82.97,50.44
+'Open _Doomvault_
+|tip Manually skip to the next step.
+step
+goto VaultDelve_EXT01_base 41.25,76.73
+step
+goto 68.65,56.73
+'Use _Morgane's Sending Stone_
+step
+goto 64.04,43.56
+step
+goto 36.06,53.46
+step
+goto 26.15,37.60
+'Open _Doomvault Porcixid_
+|tip Manually skip to the next step.
+step
+goto VaultDelve_INT02B_base 14.69,56.12
+'Open _Doomvault Porcixid_
+|tip Manually skip to the next step.
+step
+goto VaultDelve_EXT02_base 87.32,34.70
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 87.62,25.13
+step
+goto 95.06,27.03
+'Open _Doomvault Porcixid_
+|tip Manually skip to the next step.
+step
+goto VaultDelve_INT02B_base 60.61,26.53
+'Open _Doomvault Porcixid_
+|tip Manually skip to the next step.
+step
+goto VaultDelve_EXT01_base 31.83,64.33
+'Open _Doomvault Porcixid_
+|tip Manually skip to the next step.
+step
+goto VaultDelve_INT02A_base 55.51,47.55
+step
+goto 13.47,47.14
+'Open _Doomvault Porcixid_
+|tip Manually skip to the next step.
+step
+goto VaultDelve_EXT02_base
+step
+goto 42.37,33.41
+step
+goto 21.03,49.28
+step
+goto 84.97,49.89
+'Open _Doomvault Porcixid_
+|tip Manually skip to the next step.
+step
+goto VaultDelve_INT03_base 33.93,65.62
+kill Karzikon the Razorsworm
+|tip Manually skip to the next step.
+step
+'Open _Blackwood_ Map
+'Travel to _Vunalk_
+|tip Manually skip to the next step.
+step
+goto blackwood_base 81.33,70.67
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 83.97,69.45
+'Open _Vunalk_
+|tip Manually skip to the next step.
+step
+goto vunalk2_base
+step
+goto 52.43,70.74
+step
+goto 76.06,73.82
+step
+goto 80.33,39.13
+step
+goto 75.77,21.15
+step
+goto 85.67,21.13
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 54.52,42.69
+step
+goto 54.61,42.58
+step
+goto 44.89,25.52
+step
+goto 20.71,31.13
+step
+goto 20.71,31.13
+step
+goto 20.18,30.86
+step
+goto 18.55,40.21
+step
+goto 27.92,43.53
+kill Choking Vine
+|tip Manually skip to the next step.
+step
+goto 21.98,67.00
+step
+goto vunalk1_base 04.57,71.47
+'Open _Blackwood_
+step
+goto blackwood_base 76.97,73.33
+'Use _Vunalk_
+'Travel to _Stonewastes_
+|tip Manually skip to the next step.
+step
+goto 58.84,76.49
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 54.82,77.21
+'Open _Xi-Tsei_
+|tip Manually skip to the next step.
+step
+goto u30_xanmeeroverlook_ext_base 54.59,68.15
+step
+goto 38.89,63.95
+step
+goto 40.64,36.63
+step
+goto 49.55,34.72
+'Open _Xi-Tsei_
+|tip Manually skip to the next step.
+step
+goto u30_xanmeeroverlook_int_base 35.52,37.25
+step
+goto 36.49,76.50
+step
+goto 35.52,37.25
+step
+goto 27.28,22.57
+step
+goto 56.98,28.16
+step
+goto 62.09,31.62
+step
+goto 67.66,19.04
+step
+goto 60.10,20.44
+'Open _Xi-Tsei_
+|tip Manually skip to the next step
+step
+goto u30_xanmeeroverlook_ext_base 51.79,45.95
+kill Raj-Kaal loraxeek
+|tip Manually skip to the next step.
+step
+goto 68.07,51.11
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 71.07,68.90
+'Open _Blackwood_
+|tip Manually skip to the next step.
+step
+goto blackwood_base 60.40,77.88
+'Use _Stonewastes_
+'Travel to _Hutan-Tzel_
+|tip Manually skip to the next step.
+step
+goto 68.90,41.59
+step
+goto 69.99,36.75
+step
+goto 75.32,36.31
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Blackwood_ Map
+'Travel to _Bloodrun_
+|tip Manually skip to the next step.
+step
+goto 62.19,25.26
+step
+goto 58.08,18.23
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 64.12,18.22
+'Enter _Bloodrun Cave_
+|tip Manually skip to the next step.
+step
+goto u30_bloodruncave_base 48.89,08.03
+step
+goto 51.73,14.33
+step
+goto 66.59,29.01
+step
+goto 53.91,29.62
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 53.01,38.12 |tip Drop down.
+step
+goto 64.90,48.86
+step
+goto 43.17,51.71
+step
+goto 43.17,51.71
+step
+goto 29.13,65.04
+kill Tumma-Maxath
+|tip Manually skip to the next step.
+step
+'Open _Blackwood_ Map
+'Travel to _Doomvault Vulpinaz_
+|tip Manually skip to the next step.
+step
+goto blackwood_base 30.24,22.60
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 36.93,26.98
+'Open _Arpenia_
+|tip Manually skip to the next step.
+step
+goto arpeniaL_base 43.34,19.97
+step
+goto 65.34,13.31
+step
+goto arpeniaH2_base 67.77,21.03
+step
+goto arpeniaL_base 64.37,22.53
+step
+goto 81.95,42.59
+step
+goto 64.18,56.95
+step
+goto arpeniaH_base 90.44,53.01
+step
+goto 85.85,45.05
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 87.37,55.35
+step
+goto 61.70,65.39
+step
+goto 45.43,60.89
+step
+goto 45.64,61.95
+step
+goto 40.81,56.08
+step
+goto 16.41,39.00
+kill Shadow Knight Nassuphae
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Expansion\\The Deadlands
+step 
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\The Deadlands",[[

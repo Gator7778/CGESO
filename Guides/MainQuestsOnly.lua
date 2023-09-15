@@ -40725,10 +40725,10 @@ goto 78.06,67.01
 talk Eveli Sharp-Arrow |q An Unexpected Adversary/Talk to Eveli Sharp-Arrow
 step
 goto 78.35,68.04
-'Open _Leyawiin Castle_ |q An Unexpected Adversary/Enter Leyawiin Castle
+'Open _Leyawiin Castle_ |q An Unexpected Adversary/Enter Leyawiin Castle |future
 |tip Manually skip to the next step.
 step
-goto u30_leyawiincastleint02_base 21.63,48.10 |q An Unexpected Adversary/Find the Councilors |tip Go upstairs.
+goto u30_leyawiincastleint02_base 21.63,48.10 |q An Unexpected Adversary/Find the Councilors |future |tip Go upstairs.
 step
 goto 62.50,61.33 
 'Find the _Councilors_ |q An Unexpected Adversary/Find the Councilors
@@ -40813,22 +40813,22 @@ goto 63.27,89.76
 talk Lyranth |q A Hidden Vault/Talk to Lyranth
 step
 goto 62.69,90.01
-'Turn _Ward Cube three times_ |q A Hidden Vault/Find a Way Into the Vault
+'Turn _Ward_ Three times |q A Hidden Vault/Find a Way Into the Vault
 |tip Manually skip to the next step.
 step
 goto 62.58,89.76
-'Turn _Ward Cube two times_ |q A Hidden Vault/Find a Way Into the Vault
+'Turn _Ward Cube_ Two times |q A Hidden Vault/Find a Way Into the Vault
 |tip Manually skip to the next step.
 step
 goto 62.69,89.53
-'Turn _Ward Cube three times_ |q A Hidden Vault/Find a Way Into the Vault
+'Turn _Ward Cube_ Three times |q A Hidden Vault/Find a Way Into the Vault
 step
 goto 62.35,89.75
-'Open _Doomvault Capraxus_ |q A Hidden Vault/Enter the Daedric Vault
+'Open _Doomvault Capraxus_ |q A Hidden Vault/Enter the Daedric Vault |future
 |tip Manually skip to the next step.
 step
 goto deadlands_vault_base 62.39,62.73
-talk Eveli Sharp-Arrow |q A Hidden Vault/Talk to Eveli Sharp-Arrow
+talk Eveli Sharp-Arrow |q A Hidden Vault/Talk to Eveli Sharp-Arrow |future
 step
 goto 69.71,49.88
 'Open _Deadlands_ |q A Hidden Vault/Explore the Daedric Vault
@@ -40849,15 +40849,15 @@ goto 63.37,42.18
 talk Eveli Sharp-Arrow |q A Hidden Vault/Talk to Eveli Sharp-Arrow
 step
 goto 58.02,42.93
-'Turn _Ward Cube three times._ |q A Hidden Vault/Disrupt the Inner Ward
+'Turn _Ward Cube_ Three times. |q A Hidden Vault/Disrupt the Inner Ward
 |tip Manually skip to the next step.
 step
 goto 57.48,42.28
-'Turn _Ward Cube two times_ |q A Hidden Vault/Disrupt the Inner Ward
+'Turn _Ward Cube_ Two times |q A Hidden Vault/Disrupt the Inner Ward
 |tip Manually skip to the next step.
 step
 goto 57.79,41.57
-'Turn _Ward Cube three times_ |q A Hidden Vault/Disrupt the Inner Ward
+'Turn _Ward Cube_ Three times |q A Hidden Vault/Disrupt the Inner Ward
 step
 goto 56.22,42.28
 'Open _Doomvault Corridor_ |q A Hidden Vault/Explore the Daedric Vault
@@ -40905,19 +40905,19 @@ goto 46.27,56.76
 'Explore the _Daedric Vault_ |q A Hidden Vault/Explore the Daedric Vault
 step
 goto 46.27,56.76
-'Turn _Ward Cube three times_ |q A Hidden Vault/Disrupt the Final Ward
+'Turn _Ward Cube_ Three times |q A Hidden Vault/Disrupt the Final Ward
 |tip Manually skip to the next step.
 step
 goto 45.32,56.73
-'Turn _Ward Cube two times_ |q A Hidden Vault/Disrupt the Final Ward
+'Turn _Ward Cube_ Two times |q A Hidden Vault/Disrupt the Final Ward
 |tip Manually skip to the next step.
 step
 goto 43.65,56.80
-'Turn _Ward Cube three times_ |q A Hidden Vault/Disrupt the Final Ward
+'Turn _Ward Cube_ Three times |q A Hidden Vault/Disrupt the Final Ward
 |tip Manually skip to the next step.
 step
 goto 42.56,56.80
-'Turn _Ward Cube three times_ |q A Hidden Vault/Disrupt the Final Ward
+'Turn _Ward Cube_ Three times |q A Hidden Vault/Disrupt the Final Ward
 step
 goto 44.50,58.67
 'Open _Doomvault Capraxus Inner Vault_ |q A Hidden Vault/Enter the Inner Vault
@@ -40969,11 +40969,11 @@ goto 54.24,67.36
 talk Lyranth |q A Hidden Vault/Talk to Lyranth
 step
 'Open _Blackwood_ Map
-'Travel to _Gideon_ |q A Hidden Vault/Return to Gideon
+'Travel to _Gideon_ |q A Hidden Vault/Return to Gideon |future
 |tip Manually skip to the next step.
 step
 goto u30_Gideoncity_base 63.69,40.04
-'Open _Govenor's Mansion_ |q A Hidden Vault/Talk to Keshu the Black Fin
+'Open _Govenor's Mansion_ |q A Hidden Vault/Talk to Keshu the Black Fin |future
 |tip Manually skip to the next step.
 step
 goto 63.73,39.73
@@ -41068,7 +41068,7 @@ talk Percius Loche |q A Mysterious Event/Talk to Percius Loche
 |tip Pay him.
 step
 goto 53.07,49.03
-'Choose _Formal Attire of your preference_ |q A Mysterious Event/Choose Formal Attire for the Event
+'Choose _Formal Attire of your preference_ |q A Mysterious Event/Choose Formal Attire for the Event |future
 step
 goto 53.07,49.03
 talk Eveli Sharp-Arrow |q A Mysterious Event/Talk to Eveli Sharp-Arrow
@@ -41088,11 +41088,11 @@ goto 64.36,85.83
 talk Eveli Sharp-Arrow |q A Mysterious Event/Board the Calamity and Talk to Eveli Sharp-Arrow
 step
 goto 65.96,90.72
-'Rest _Calamity Birth_ |q A Mysterious Event/Rest on the Calamity
+'Rest _Calamity Birth_ |q A Mysterious Event/Rest on the Calamity |future
 |tip Manually skip to the next step.
 step
 goto u30_deadlandskeep_ext_base 32.77,50.56
-talk Eveli Sharp-Arrow |q A Mysterious Event/Talk to Eveli Sharp-Arrow
+talk Eveli Sharp-Arrow |q A Mysterious Event/Talk to Eveli Sharp-Arrow |future
 step
 goto 75.39,37.11
 'Open _Vandacia's Keep_ |q A Mysterious Event/Enter Vandacia's Keep
@@ -41109,11 +41109,11 @@ step
 goto 57.20,56.68 |q A Mysterious Event/Search Vandacia's Keep
 step
 goto 66.81,67.19
-'Open _Keep Audience Hall_ |q A Mysterious Event/Search Vandacia's Keep
+'Open _Keep Audience Hall_ |q A Mysterious Event/Search Vandacia's Keep |future
 |tip Manually skip to the next step.
 step
 goto 79.07,67.16
-talk Sombren |q A Mysterious Event/Talk to Sombren
+talk Sombren |q A Mysterious Event/Talk to Sombren |future
 step
 goto 67.60,67.17
 'Open _Inner Keep Chambers_ |q A Mysterious Event/Find the Key
@@ -41169,11 +41169,11 @@ goto 10.84,67.20
 kill Valkynaz Orran |q A Mysterious Event/Defeat Valkynaz Orran
 step
 goto 15.63,65.21
-'Use _Portal to Gideon_ |q A Mysterious Event/Escape the Deadlands
+'Use _Portal to Gideon_ |q A Mysterious Event/Escape the Deadlands |future
 |tip Manually skip to the next step.
 step
 goto blackwood_base 51.96,52.15
-talk Sombren |q A Mysterious Event/Talk to Sombren
+talk Sombren |q A Mysterious Event/Talk to Sombren |future
 step
 goto u30_Gideoncity_base 43.37,49.61
 'Open _Temple of Dibella_ |q A Mysterious Event/Lead Sombren to the Temple of Dibella
@@ -41281,24 +41281,15 @@ step
 goto 25.69,71.65 |q Weapons of Destruction/Reach the Obelisk of Origin
 step
 goto 49.21,53.56
-'Reach _Obelisk of Origin_ |q Weapons of Destruction/Reach the Obelisk of Origin
-step
-goto 49.21,53.56
-'Activate _Obelisk of Origin_ |q Weapons of Destruction/Activate the Obelisk of Origin
+'Activate _Obelisk of Origin_ |q Weapons of Destruction/Activate the Obelisk of Origin |future
 step
 goto 78.76,47.93
-'Reach _Obelisk of Empowerment_ |q Weapons of Destruction/Reach the Obelisk of Empowerment
+'Activate _Obelisk of Empowerment_ |q Weapons of Destruction/Activate the Obelisk of Empowerment |future
 step
-goto 78.76,47.93
-'Activate _Obelisk of Empowerment_ |q Weapons of Destruction/Activate the Obelisk of Empowerment
-step
-goto 70.61,33.47 |q Weapons of Destruction/Reach the Obelisk of Inevitability
+goto 74.82,35.48 |q Weapons of Destruction/Reach the Obelisk of Inevitability
 step
 goto 45.09,36.01
-'Reach _Obelisk Inevitability_ |q Weapons of Destruction/Reach the Obelisk of Inevitability
-step
-goto 45.09,36.01
-'Use _Portal to the Inevitability_ |q Weapons of Destruction/Enter the Portal
+'Use _Portal to the Inevitability_ |q Weapons of Destruction/Enter the Portal |future
 step
 goto u30_ashenforest_wgt_base 72.21,50.22
 talk Emperor Vandacia |q Weapons of Destruction/Confront the Inevitable
@@ -41370,27 +41361,27 @@ goto 50.79,65.19
 'Open _Xynaa's Sanctuary: Cellar_ |q Weapons of Destruction/Find Sombren
 |tip Manually skip to the next step.
 step
-goto 50.76,25.74
-'Find _Sombren_ |q Weapons of Destruction/Find Sombren
+goto 42.37,29.74 |q Weapons of Destruction/Recharge Sombren's Power |future
 step
 goto 50.76,25.74
-'Use _Menthyx's Skull_ |q Weapons of Destruction/Recharge Sombren's Power
+'Use _Menthyx's Skull_ |q Weapons of Destruction/Recharge Sombren's Power |future
 step
 goto 49.16,25.43
 'Examine _Xynaa's Book of Contracts_ |q Weapons of Destruction/Examine Xynaa's Book
 step
-goto 50.61,23.28
+goto 50.61,23.35
 'Open _Xynaa's Sanctuary_ |q Weapons of Destruction/Enter Xynaa's Sanctuary
 step
 goto 50.86,10.29
 kill Xynaa |q Weapons of Destruction/Kill Xynaa
 step
 goto 50.68,10.62
-'Use _Portal to Gideon_ |q Weapons of Destruction/Return to Gideon
+|tip Watch the dialogue.
+'Use _Portal to Gideon_ |q Weapons of Destruction/Return to Gideon |future
 |tip Manually skip to the next step.
 step
 goto u30_Gideoncity_base 37.73,46.86
-talk Sombren |q Weapons of Destruction/Talk to Sombren
+talk Sombren |q Weapons of Destruction/Talk to Sombren |future
 step
 goto 63.69,40.02
 'Open _Govenor's Mansion_ |q Weapons of Destruction/Talk to Keshu the Black Fin
@@ -41444,10 +41435,10 @@ step
 goto 29.56,32.53
 wayshrine Fort Redmane
 step
-goto 34.18,20.66
+goto 34.30,20.41
 wayshrine Doomvault Vulpinaz
 step
-goto 34.18,20.66
+goto 34.30,20.41
 'Use _Doomvault Vulpinaz_
 'Travel to _Fort Redmane_ |q Pyre of Ambition/Talk to Eveli Sharp-Arrow
 |tip Manually skip to the next step.
@@ -41459,26 +41450,26 @@ goto 28.22,28.94
 talk Keshu the Black Fin |q Pyre of Ambition/Talk to Keshu the Black Fin
 step
 goto 28.48,28.36
-'Open _Fort Redmane_ |q Pyre of Ambition/Enter Fort Redmane
+'Open _Fort Redmane_ |q Pyre of Ambition/Enter Fort Redmane |future
 |tip Manually skip to the next step.
 step
 goto u30_redmayne_ext_base 49.90,62.18
-'Listen to _Captain Rian and Eveli_ |q Pyre of Ambition/Listen to Captain Rian and Eveli
+'Listen to _Captain Rian and Eveli_ |q Pyre of Ambition/Listen to Captain Rian and Eveli |future
 step
 goto 49.90,62.18
 kill Bruzzak Tor |q Pyre of Ambition/Defend the Fort Courtyard
 step
 goto 49.97,59.27
-'Open _Fort Redmane Guardhouse_ |q Pyre of Ambition/Find Eveli Sharp-Arrow
+'Open _Fort Redmane Guardhouse_ |q Pyre of Ambition/Find Eveli Sharp-Arrow |future
 step
 goto 33.60,54.45
-'Clear the _Guardhouse_ |q Pyre of Ambition/Clear the Guardhouse
+'Clear the _Guardhouse_ |q Pyre of Ambition/Clear the Guardhouse |future
 step
 goto 33.60,54.45
 'Listen to _Eveli Sharp-Arrow_ |q Pyre of Ambition/Listen to Eveli Sharp-Arrow
 step
 goto u30_redmayne_int_base 33.60,54.45
-'Open _Fort Redmane West Wing_ |q Pyre of Ambition/Find the Ambitions
+'Open _Fort Redmane West Wing_ |q Pyre of Ambition/Find the Ambitions |future
 |tip Manually skip to the next step.
 step
 goto 07.65,49.76
@@ -41498,7 +41489,7 @@ goto 53.33,40.55
 step
 goto 50.14,47.26
 |tip Watch the dialogue.
-'Open _Fort Redmane Keep_ |q Pyre of Ambition/Go to the Keep
+'Open _Fort Redmane Keep_ |q Pyre of Ambition/Go to the Keep |future
 step
 goto u30_redmayne_int_base 38.02,35.36
 'Secure the _Keep_ |q Pyre of Ambition/Secure the Keep
@@ -41517,17 +41508,18 @@ goto 86.42,65.01
 'Open _Fort Redmane Inner Courtyard_ |q Pyre of Ambition/Reach the Courtyard
 step
 goto u30_redmayne_ext_base 63.66,53.59
+'Use _Ambition's Wrath_
 kill Vandacia |q Pyre of Ambition/Kill Vandacia
 step
 goto 63.66,53.59
 'Listen to _Mehrunes Dagon_ |q Pyre of Ambition/Listen to Mehrunes Dagon
 step
 goto 71.33,44.03
-'Open _Blackwood_ |q Pyre of Ambition/Leave Fort Redmane
+'Open _Blackwood_ |q Pyre of Ambition/Leave Fort Redmane |future
 |tip Manually skip to the next step.
 step
 goto blackwood_base 28.20,28.85
-talk to Calia |q Pyre of Ambition/Talk to Calia
+talk to Calia |q Pyre of Ambition/Talk to Calia |future
 step
 goto 28.14,28.90
 talk Sombren |q Pyre of Ambition/Talk to Sombren
@@ -41583,7 +41575,7 @@ loadingimage loadscreen_ardent_hope_01.dds
 description The Deadlands is Mehrunes Dagon's realm of Oblivion.
 step
 'Open _Fargrave_ Map
-'Travel to _Fargrave Outskirts_ |q The Celestial Palanquin
+'Travel to _Fargrave Outskirts_ |q The Celestial Palanquin |future
 |tip Manually skip to the next step.
 step
 goto u32_fargrave_base 57.31,79.08
