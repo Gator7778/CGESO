@@ -7771,7 +7771,7 @@ goto 72.10,51.06
 step
 goto 71.42,75.38
 kill The First Flesh Colossus
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Expansion\\Murkmire
 step
 ]])
 
@@ -7779,30 +7779,1012 @@ CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Murkmire",[[
 loadingimage loadscreen_murkmire_01.dds
 description Murkmire Skyshards and Delves.
 step
+'Open _Murkmire_ Map
+'Travel to _Lilmoth_
+|tip Manually skip to the next step.
+step
+goto murkmire_base 77.41,69.91
+step
+goto 92.58,69.14
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Murkmire_ Map
+'Travel to _Lilmoth_
+|tip Manually skip to the next step.
+step
+goto 64.04,74.29
+step
+goto 63.68,76.07
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Murkmire_ Map
+'Travel to _Dead-Water_
+|tip Manually skip to the next step.
+step
+goto deadwatervillage_base 29.56,79.95
+step
+goto murkmire_base 20.30,51.57
+'Open _Tsofeer Cavern_
+|tip Manually skip to the next step.
+step
+goto UI_Map_tsofeercavern01 42.91,36.85
+step
+goto 34.75,43.20
+step
+goto 39.86,48.78
+step
+goto 38.47,72.41
+step
+goto 38.23,79.67
+step
+goto 26.49,82.86
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 38.19,67.26
+step
+goto 60.95,62.10
+step
+goto 61.72,72.79
+step
+goto 75.08,52.17
+step
+goto 72.32,52.65
+step
+goto 68.21,45.01
+step
+goto 76.52,36.75
+kill Wuju-Ka Guardian
+|tip Manually skip to the next step.
+step
+'Open _Murkmire_ Map
+'Travel to _Dead-Water_
+|tip Manually skip to the next step.
+step
+goto deadwatervillage_base 27.99,21.39
+step
+goto murkmire_base 19.16,27.90
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto deadwatervillage_base 27.99,21.39
+step
+goto 71.73,48.32
+step
+goto murkmire_base 54.14,46.15
+step
+goto 54.07,46.60
+|tip Drop down carefully not to overshoop the skyshard.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 56.90,48.57
+step
+goto 56.30,43.90
+step
+goto 56.44,37.99
+step
+goto 46.61,37.26
+step
+goto 49.61,34.51
+'Open _Teeth of Sithis_
+|tip Manually skip to the next step.
+step
+goto teethofsithis01_base 55.74,66.71
+'Open _Teeth of Sithis_
+|tip Manually skip to the next step.
+step
+goto teethofsithis02a_base 42.36,31.38
+step
+goto 7.59,47.69
+step
+goto 7.38,65.64
+step
+goto 38.15,64.92
+'Open _Teeth of Sithis_
+|tip Manually skip to the next step.
+step
+goto teethofsithis01_base 64.13,55.87
+|tip Follow bridge across.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 66.46,71.74
+'Open _Eastern Xanmeer_
+|tip Manually skip to the next step.
+step
+goto teethofsithis02a_base 91.90,65.44
+step
+goto teethofsithis02b_base 25.47,31.51
+step
+goto 53.49,67.09
+kill Shuxaltsei |next Extras\\Extras\\Skyshards and Delves\\Expansion\\Northern Elsweyr
+step
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Northern Elsweyr",[[
 loadingimage loadscreen_elsweyr_zone_01.dds
 description Northern Elsweyr Skyshards and Delves.
 step
+'Open _Northern Elsweyr_ Map
+'Travel to _Rimmen_
+|tip Manually skip to the next step.
+step
+goto rimmen_base 11.86,52.77
+step
+goto elsweyr_base 73.24,25.89
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 60.77,28.44
+step
+goto 61.40,23.03
+'Open _Tomb of the Serpents_
+|tip Manually skip to the next step.
+step
+goto tombofserpents_base 45.37,61.66
+step
+goto 30.94,44.65
+step
+goto 12.11,36.33
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 50.80,29.61
+step
+goto 50.08,45.33
+kill Gornikaus Oxtooth
+|tip Manually skip to the next step.
+step
+'Open _Northern Elsweyr_ Map
+'Travel to _Star Haven_
+|tip Manually skip to the next step.
+step
+goto elsweyr_base 42.77,25.13
+step
+goto 40.48,22.47
+'Enter _Abode of Ignominy_
+|tip Manually skip to the next step.
+step
+goto abodeofignominy_base 68.71,39.18
+step
+goto 74.85,78.63
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 17.94,75.20
+kill Zaorir and Sugarsnout
+|tip Manually skip to the next step.
+step
+'Open _Northern Elsweyr_
+'Travel to _Star Haven_
+|tip Manually skip to the next step.
+step
+goto elsweyr_base 44.90,16.98
+step
+goto 44.28,16.99
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 44.90,16.98 
+step
+goto 40.87,25.94
+'Use _Star Haven_
+'Travel to _Stitches_
+|tip Manually skip to the next step.
+step
+goto elsweyr_base 39.70,43.09
+'Enter _Desert Wind Caverns_
+|tip Manually skip to the next step.
+step
+goto DesertWind_Base 34.27,84.97
+step
+goto 32.03,54.92
+step
+goto 53.96,71.99
+step
+goto 42.26,86.19
+step
+goto 37.85,84.91
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 49.30,84.40
+step
+goto 61.38,63.55
+step
+goto 65.66,21.55
+step
+goto DesertWind2A_Base 55.75,17.58
+kill Augurius the Mad
+kill Tasam-ri
+|tip Manually skip to the next step.
+step
+'Open _Northern Elsweyr_ Map
+'Travel to _Stitches_
+|tip Manually skip to the next step.
+step
+goto elsweyr_base 28.12,44.56
+step
+goto predatorrise_base 33.01,68.64
+'Enter _Predator Mesa_
+|tip Manually skip to the next step.
+step
+goto 55.73,66.48
+step
+goto 61.69,55.36
+step
+goto 81.09,36.12
+step
+goto 51.84,22.85
+step
+goto 62.85,26.94
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 56.05,42.83
+kill Zahalar Oak-Eye
+|tip Manually skip to the next step.
+step
+goto 45.17,63.56
+step
+goto 33.10,68.58
+'Enter _Elsweyr_
+|tip Manually skip to the next step.
+step
+goto elsweyr_base 30.98,44.29
+step
+goto 35.01,35.48
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Northern Elsweyr_
+'Travel to _Scar's End_
+|tip Manually skip to the next step.
+step
+goto 14.39,67.89
+step
+goto 17.02,63.18
+step
+goto 15.14,60.86
+'Open _Darkpool Mine_
+|tip Manually skip to the next step.
+step
+goto thescab_base 35.51,90.12
+step
+goto 33.68,76.10
+step
+goto 46.91,80.21
+step
+goto 55.93,49.72
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 24.49,49.53
+step
+goto 24.12,33.02
+step
+goto 46.69,19.82
+kill Zadrahd the Iron Hearted and Iron Heart Atronach
+|tip Manually skip to the next step.
+step
+'Open _Northern Elsweyr_ Map
+'Travel to _Scar's End_
+|tip Manually skip to the next step.
+step
+goto elsweyr_base 14.54,74.58
+step
+goto 23.67,74.00
+step
+goto 23.51,72.07
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 24.01,74.12
+step
+goto 32.19,71.61
+step
+goto 36.79,69.01
+step
+goto 39.19,67.84
+step
+goto 39.02,68.68
+step
+goto 38.73,68.94
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 40.00,65.27 |tip Drop down carefully.
+step
+goto 35.71,56.55
+step
+goto stitches_base 49.26,75.28
+step
+goto elsweyr_base 40.23,54.43
+step
+goto stitches_base 62.32,48.88
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto elsweyr_base33.81,51.53
+step
+goto 29.62,54.14
+step
+goto 30.98,55.16
+step
+goto 29.30,60.59
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Northern Elsweyr_ Map
+'Travel to _Tenmar Temple_
+|tip Manually skip to the next step.
+step
+goto 62.36,58.69
+'Enter _The Tangle_
+|tip Manually skip to the next step.
+step
+goto thetangle_base 13.77,32.57
+step
+goto 10.37,61.17
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 44.94,62.94
+kill Zayreba Sharpclaw
+|tip Manually skip to the next step.
+step
+'Open _Northern Elsweyr_ Map
+'Travel to _Tenmar Temple_
+|tip Manually skip to the next step.
+step
+goto elsweyr_base 50.99,67.92
+step
+goto 50.00,60.16
+step
+goto 53.65,59.08
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Northern Elsweyr_ Map
+'Travel to _Hakoshae_
+|tip Manually skip to the next step.
+step
+goto 66.15,47.14
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 67.54,44.27
+step
+goto 60.76,43.74
+step
+goto 57.71,39.99
+step
+goto 59.72,36.70
+step
+goto 58.82,33.75
+step
+goto 56.59,35.60 |tip Stay on the rocks Skyshard is on the ledge.
+step
+goto 56.42,36.15
+'Use _Skyshard_
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Expansion\\Southern Elsweyr
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Southern Elsweyr",[[
 loadingimage loadscreen_southernelsweyr_01.dds
 description Southern Elsweyr Skyshards and Delves.
 step
+'Open _Southern Elsweyr_ Map
+'Travel to _Senchal_
+|tip Manually skip to the next step.
+step
+goto senchal_base 56.70,67.47
+step
+goto 46.19,65.10
+step
+goto 38.37,74.14
+step
+goto 25.32,68.95
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 26.39,83.10
+step
+goto southernelsweyr_base 35.33,55.00
+step
+goto 34.83,56.70
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 20.77,62.76
+step
+goto 16.52,61.96
+'Open _Moonlit Cove_
+|tip Manually skip to the next step.
+step
+goto moonlitcove05_base 56.66,54.39
+step
+goto moonlitcove01_base 74.15,37.09
+step
+goto 84.28,28.28
+step
+goto 76.38,22.49
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 62.34,24.37
+step
+goto 57.53,09.42
+step
+goto 48.80,09.66
+step
+goto 40.04,08.82
+step
+goto 26.04,25.77
+step
+goto 42.27,41.24
+kill The Tigershark
+|tip Manually skip to the next step.
+step
+'Open _Southern Elsweyr_ Map
+'Travel to _Black Heights_
+|tip Manually skip to the next step.
+step
+goto southernelsweyr_base 24.64,34.69
+step
+goto 26.32,33.54
+step
+goto 29.88,33.07
+step
+goto 30.79,30.77
+step
+goto 28.88,28.11
+step
+goto 26.06,31.98
+|tip Drop down carefully.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Southern Elsweyr_ Map
+'Travel to _Pridehome_
+|tip Manually skip to the next step.
+step
+goto 40.98,29.47
+step
+goto 47.18,26.59
+step
+goto 57.35,25.34
+step
+goto 58.81,24.39
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 57.35,25.34
+step
+goto 51.81,24.83
+step
+goto 46.95,26.71
+step
+goto 48.24,30.73
+'Enter _Forsaken Citadel_
+|tip Manually skip to the next step.
+step
+goto houseofembersinside_base 53.27,57.05
+step
+goto 39.86,38.49
+|tip Drop down.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 22.77,28.21
+step
+goto 63.84,31.15
+step
+goto 63.58,11.46
+'Open _Forsaken Citadel Courtyard_
+|tip Manually skip to the next step.
+step
+goto houseofembersoutside_base 68.91,47.85
+step
+goto 45.77,30.69
+'Open _Grand Lecture Hall_
+|tip Manually skip to the next step.
+step
+'_North_
+kill Commandant Weston
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Expansion\\Western Skyrim
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Western Skyrim",[[
 loadingimage loadscreen_westernskyrim_01.dds
 description Western Skyrim Skyshards and Delves.
 step
+'Open _Western Skyrim_
+'Travel to _Northern Watch_
+|tip Manually skip to the next step.
+step
+goto westernskryim_base 48.54,30.20
+'Enter _Shadowgreen_
+|tip Manually skip to the next step.
+step
+goto shadowgreen_upper_base 42.04,63.28
+step
+goto 45.05,33.97
+step
+goto 52.11,38.79
+step
+goto 50.46,59.33
+step
+goto 45.65,61.52
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 48.92,32.19
+step
+goto 45.14,37.53
+step
+goto 29.01,27.80
+step
+goto 23.37,33.45
+step
+goto shadowgreen_lower_base 35.56,48.24
+kill Ya'intha
+|tip Manually skip to the next step.
+step
+'Open _Western Skyrim_ Map
+'Travel to _Giant's Coast_
+|tip Manually skip to the next step.
+step
+goto westernskryim_base 11.81,43.71
+'Enter _Dragonhome_
+|tip Manually skip to the next step.
+step
+goto dragonhome_base 78.66,45.22
+step
+goto 70.30,76.72
+step
+goto 55.67,74.68
+step
+goto 46.37,81.19
+step
+goto 43.78,70.55
+step
+goto 58.06,61.39
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 38.36,81.69
+step
+goto 13.38,74.33
+step
+goto 08.51,56.22
+step
+goto 09.75,30.40
+step
+goto 34.58,29.50
+kill Aspirant Yolstagg
+|tip Manually skip to the next step.
+step
+'Open _Western Skyrim_
+'Travel to _Giant's Coast_
+|tip Manually skip to the next step.
+step
+goto westernskryim_base 24.34,44.15
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 26.21,45.62
+step
+goto 18.02,49.19
+step
+goto 19.30,53.00
+step
+goto 27.03,56.22
+step
+goto 26.91,55.70
+|tip Top of crumbling tower.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 36.59,50.80
+step
+goto 37.71,50.89
+step
+goto 36.87,61.13
+'Enter _Chillwind Depths_
+|tip Manually skip to the next step.
+step
+goto chillwinddepths_base 61.07,51.28
+step
+goto 88.32,46.17
+step
+goto 93.56,47.52
+step
+goto 87.25,55.03
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 93.56,47.52
+step
+goto 50.34,43.36
+step
+goto 44.30,62.15
+step
+goto 28.72,64.43
+step
+goto 32.35,30.87
+step
+goto 42.95,20.40
+kill Zrem-Zram & Mother Krkktkk
+|tip Manually skip to the next step.
+step
+'Open _Western Skyrim_
+'Travel to _Southern Watch_
+|tip Manually skip to the next step.
+step
+goto westernskryim_base 32.47,70.99
+step
+goto 31.57,70.57
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 45.61,76.79
+'Use _Southern Watch_
+'Travel to _Dragon Bridge_
+|tip Manually skip to the next step.
+step
+goto 37.71,50.89
+step
+goto 39.78,54.58
+step
+goto 45.12,53.48
+step
+goto 51.76,55.69
+step
+goto 50.62,57.84
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 51.76,55.69
+step
+goto 57.12,58.39
+step
+goto 59.25,61.31
+step
+goto 67.33,62.95
+step
+goto 68.83,65.50
+step
+goto 67.05,65.16
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 68.34,62.27
+step
+goto 66.09,57.44
+step
+goto 63.94,57.50
+'Use _Morthal_
+'Travel to _Frozen Coast_
+|tip Manually skip to the next step.
+step
+goto 62.11,43.91
+step
+goto solitudecity_base 91.38,83.36
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto westernskryim_base 74.50,32.31
+'Travel _Frozen Coast_
+|tip Manually skip to the next step.
+step
+goto frozencoast_base 42.68,63.91
+step
+goto 42.58,59.48
+step
+goto 45.11,56.93
+step
+goto 35.92,57.92
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 38.45,50.58
+step
+goto 48.74,47.54
+step
+goto 64.40,46.92
+step
+goto 65.06,39.58
+step
+goto 74.79,32.14
+step
+goto 71.83,19.47
+kill Chief Gruthar
+|tip Manually skip to the next step.
+step
+'Open _Blackreach: Greymoor Caverns_
+'Travel to _Dusktown_
+|tip Manually skip to the next step.
+step
+goto blackreach_base 36.65,74.91
+step
+goto 37.31,78.27
+step
+goto 41.62,78.78
+step
+goto 47.22,72.01
+step
+goto 53.52,75.31
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Blackreach: Greymoor Caverns_
+'Travel to _Lightless Hollow_
+|tip Manually skip to the next step.
+step
+goto 92.52,38.60
+step
+goto 91.34,46.41
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 88.87,37.03 |tip Drop down carefully.
+step
+goto 76.75,36.89
+|tip Climb steps and ramps.
+'Climb _Midnight Barrow_
+step
+goto midnightbarrow_base 50.41,70.61
+step
+goto 73.12,72.87
+step
+goto 81.00,49.18
+step
+goto 70.33,40.25
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 59.96,40.87
+step
+goto 67.56,27.49
+step
+goto 62.46,11.89
+kill Delida the Damned
+|tip Manually skip to the next step.
+step
+'Open _Blackreach: Greymoor Caverns_
+'Travel to _Greymoor Keep_
+|tip Manually skip to the next step.
+step
+goto blackreach_base 67.93,18.96
+step
+goto 67.19,21.09
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 67.93,18.96
+step
+goto 57.24,36.17
+'Use _Greymoor Keep_
+'Travel to _Grotto Falls_
+|tip Manually skip to the next step.
+step
+goto 16.69,71.66
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 16.06,64.01
+step
+goto 7.99,60.04
+step
+goto 7.44,45.37
+step
+goto 9.39,46.00
+step
+goto 08.36,36.72
+'Open _The Scraps_
+|tip Manually skip to the next step
+step
+goto thescraps_base 77.18,24.65 |tip Go upstairs.
+step
+goto 86.83,31.34
+step
+goto 87.68,37.75
+step
+goto 72.89,50.49
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 77.75,60.21
+step
+goto 57.89,44.65
+step
+goto 50.70,38.31
+step
+goto 40.56,32.25
+step
+goto 41.13,35.63
+step
+goto 29.08,39.51
+step
+goto 28.24,60.35
+kill Dwarven Spider
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Expansion\\The Reach
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\The Reach",[[
 loadingimage loadscreen_thereach_01.dds
 description The Reach Skyshards and Delves.
 step
+'Open _The Reach_
+'Travel to _Druadach Mountains_
+|tip Manually skip to the next step.
+step
+goto reach_base 46.94,31.06
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 33.56,22.93
+'Use _Druadach Mountains_
+'Travel to _Briar Rock_
+|tip Manually skip to the next step.
+step
+goto 33.58,66.40
+'Open _Briar Rock Ruins_
+|tip Manually skip to the next step.
+step
+goto briarrockruins_ext_base 78.65,41.35
+step
+goto 57.66,60.18
+'Open _Briar Rock Crypts_
+|tip Manually skip to the next step.
+step
+goto briarrockruins_int01_base 53.76,07.09
+'Open _Briar Rock Ruins_
+|tip Manually skip to the next step.
+step
+goto briarrockruins_ext_base 37.90,50.71
+step
+goto 54.05,61.00 |tip Go upstairs.
+step
+goto 24.42,58.44
+'Open _Dead Crone Tower_
+|tip Manually skip to the next step.
+step
+goto briarrockruins_tower01_base 46.97,84.66
+'Open _Briar Rock Ruins_
+|tip Manually skip to the next step.
+step
+goto briarrockruins_ext_base 33.50,62.13
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 24.52,61.97
+'Open _Dead Crone Tower_
+|tip Manually skip to the next step.
+step
+goto briarrockruins_tower02_base 38.39,50.00
+step
+goto briarrockruins_tower03_base 61.58,18.86
+'Open _Dead Crone Overlook_
+|tip Manually skip to the next step
+step
+goto briarrockruins_ext_base 13.43,57.50
+kill Matron Grygarsnit
+|tip Manually skip to the next step.
+step
+'Open _The Reach_ Map
+'Travel to _Lost Valley_
+|tip Manually skip to the next step.
+step
+goto reach_base 76.65,69.91
+step
+goto 81.15,71.14
+step
+goto 80.85,74.36
+step
+goto 82.97,72.27
+step
+goto 82.12,71.86
+step
+goto 82.12,71.86
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 80.58,72.18
+step
+goto 80.61,70.50
+step
+goto 72.88,68.69
+step
+goto 72.57,70.18
+'Open _Gloomshade_
+|tip Manually skip to the next step.
+step
+goto Gloomreach2_base 39.16,25.32
+step
+goto 42.81,17.66
+step
+goto 66.39,23.44
+step
+goto 67.22,32.62
+step
+goto 83.01,52.02
+step
+goto Gloomreach2B_base 79.87,61.43
+step
+goto 79.44,76.43
+step
+goto 69.59,85.33
+step
+goto 61.29,87.68
+step
+goto 59.78,71.11
+step
+goto 64.90,65.62
+step
+goto 63.95,55.91
+step
+goto 61.65,55.21
+step
+goto Gloomreach3_base 64.78,41.24
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto Gloomreach2_base 65.04,45.89
+step
+goto Gloomreach2B_base 63.49,61.22
+step
+goto 61.59,69.90
+step
+goto 44.60,71.34
+step
+goto 54.77,76.57
+step
+goto Gloomreach2_base 32.16,77.25
+step
+goto Gloomreach2C_base 32.03,44.54
+step
+goto Gloomreach5_base 11.77,51.02
+step
+goto 15.57,57.36
+step
+goto 29.42,49.87
+kill Pythis the Betrayer
+|tip Manually skip to the next step
+step
+'Open _Blackreach: Arkthzand Cavern_ Map
+'Travel to _Arkthzand_
+|tip Manually skip to the next step.
+step
+goto U28_blackreach_base 41.82,30.87
+'Use _Void Annomaly_
+|tip Manually skip to the next step.
+step
+goto 42.94,33.23
+'Use _Void Annomaly_
+|tip Manually skip to the next step.
+step
+goto 40.85,37.07
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 32.93,27.60
+step
+goto 36.11,22.88
+'Use _Arkthzand_
+'Travel to _Nighthollow_
+|tip Manually skip to the next step.
+step
+goto 73.86,62.51
+step
+goto 90.78,72.54
+'Use _Void Anomaly_
+'Use _Skyshard_
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Expansion\\Blackwood
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Blackwood",[[

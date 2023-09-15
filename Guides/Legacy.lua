@@ -1781,7 +1781,7 @@ goto 51.03,56.58
 wayshrine Mathiisen
 step
 goto 51.03,56.58
-'Use _Mathiisen_ Wayshrine
+'Use _Mathiisen_
 'Travel to _Vulkhel Guard_ |q Long Lost Lore/Return to the Mages Guild
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -1872,7 +1872,7 @@ goto 23.15,57.37 |q To Mathiisen/Meet with Razum-dar near Mathiisen
 |only Aldmeri Dominion
 step
 goto 54.85,41.07
-'Use _Vulkhel Guard_ Wayshrine
+'Use _Vulkhel Guard_
 'Travel to _Mathiisen_ |q To Mathiisen/Meet with Razum-dar near Mathiisen
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -2487,7 +2487,7 @@ goto 28.85,77.38
 |only Aldmeri Dominion
 step
 goto skywatch_base 18.35,42.01
-'Use _Skywatch_ Wayshrine
+'Use _Skywatch_
 'Travel to _Vulkhel Guard_ |q Spirited Away/.*Pray for Ancalin's Children.* |count 1
 |tip Manually skip to the next step.
 |only not Aldmeri Dominion
@@ -2516,7 +2516,7 @@ step
 goto 66.84,75.62 |q Spirited Away/.*Pray for Ancalin's Children.* |count 3
 step
 goto 58.92,76.11
-'Use _Phaer_ Wayshrine
+'Use _Phaer_
 'Travel to _Tanzelwil_ |q Spirited Away/.*Pray for Ancalin's Children.* |count 3
 |tip Manually skip to the next step.
 step
@@ -2524,7 +2524,7 @@ goto 39.67,70.02
 'Pray _Wirande's Grave Marker_ |q Spirited Away/.*Pray for Ancalin's Children.* |count 3
 step
 goto 52.64,72.84
-'Use _Tanzelwil_ Wayshrine
+'Use _Tanzelwil_
 'Travel to _Skywatch_ |q Final Blows |future
 |tip Manually skip to the next step.
 step
@@ -3067,7 +3067,7 @@ talk Egranor
 turnin Final Blows
 step
 goto 18.15,41.87
-'Use _Skywatch_ Wayshrine
+'Use _Skywatch_
 'Travel to _College_ |q Blessings of the Eight |future
 |tip Manually skip to the next step.
 step
@@ -3325,7 +3325,7 @@ step
 goto 40.83,44.18 |q Take Me Home/Talk to Gaireth in Skywatch
 step
 goto 54.85,41.07
-'Use _Vulkhel Guard_ Wayshrine
+'Use _Vulkhel Guard_
 'Travel to _Skywatch_ |q Take Me Home/Talk to Gaireth in Skywatch
 |tip Manually skip to the next step.
 step
@@ -3334,7 +3334,7 @@ talk Gaireth
 turnin Take Me Home
 step
 goto 18.17,41.94
-'Use _Skywatch_ Wayshrine
+'Use _Skywatch_
 'Travel to _College_ |q The Wayward Dagger |future
 |tip Manually skip to the next step.
 step
@@ -3418,7 +3418,7 @@ goto 41.48,12.97
 |tip Manually skip to the next step.
 step
 goto skywatch_base 18.17,41.93
-'Use _Skywatch_ Wayshrine
+'Use _Skywatch_
 'Travel to _College_ |q Rightful Inheritance |future
 |tip Manually skip to the next step.
 step
@@ -3626,13 +3626,13 @@ goto 35.63,51.07
 talk Captain Jimila |q The Great Tree/Talk to Captain Jimila in Skywatch
 step
 goto 18.30,42.02
-'Use _Skywatch_ Wayshrine
+'Use _Skywatch_
 'Travel to _Vulkhel Guard_ |q The Great Tree/Talk to Captain Jimila in Vulkhel Guard
 |tip Manually skip to the next step.
 |only not Aldmeri Dominion
 step
 goto 18.30,42.02
-'Use _Skywatch_ Wayshrine
+'Use _Skywatch_
 'Travel to _Harborage_ |q Chasing Shadows/Go to the Harborage
 |only Aldmeri Dominion
 |tip Manually skip to the next step.
@@ -3696,7 +3696,7 @@ goto 27.17,17.31
 |only Aldmeri Dominion
 step
 goto vulkhelguard_base 55.08,41.05
-'Use _Vulkhel Guard_ Wayshrine
+'Use _Vulkhel Guard_
 'Travel to _The Harborage_ |q Chasing Shadows/Return to the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -4357,7 +4357,7 @@ goto eldenrootcrafting_base 14.45,53.61
 |tip Manually skip to the next step.
 step
 goto eldenrootservices_base 53.44,50.84
-'Use _Elden Root_ Wayshrine
+'Use _Elden Root_
 'Travel to _Haven_ |q Carnival Conundrum/.*Aid Carnival Performers.*
 |tip Manually skip to the next step.
 step
@@ -4878,7 +4878,7 @@ step
 goto 55.14,64.55 |q The Wandering Minstrel/Talk to Enda
 step
 goto eldenrootservices_base 53.44,51.66
-'Use _Elden Root_ Wayshrine
+'Use _Elden Root_
 'Travel to _Gray Mire_ |q The Wandering Minstrel/Talk to Enda
 |tip Manually skip to the next step.
 step
@@ -5148,7 +5148,7 @@ goto 47.89,82.20
 |tip Manually skip to the next step.
 step
 goto grahtwood_base 71.28,52.91
-'Use _Ossuary_ Wayshrine
+'Use _Ossuary_
 'Travel to _Elden Root Temple_ |q Until Death/Use Dog Whistle
 |tip Manually skip to the next step.
 step
@@ -5198,7 +5198,7 @@ goto 55.09,27.04
 wayshrine Cormount
 step
 goto 55.09,27.04
-'Use _Cormount_ Wayshrine
+'Use _Cormount_
 'Travel to _Elden Root Temple_ |q Rare Imports/Talk to Enthoras
 |tip Manually skip to the next step.
 step
@@ -5379,7 +5379,7 @@ step
 goto 65.21,39.59 |q The Blacksap's Hold |future |tip Drop down the waterfall carefully.
 step
 goto 61.93,39.57
-'Use _Elden Root Temple_ Wayshrine
+'Use _Elden Root Temple_
 'Travel to _Cormount_ |q The Blacksap's Hold |future
 |tip Manually skip to the next step.
 step
@@ -5656,7 +5656,7 @@ goto 29.56,49.07
 |tip Manually skip to the next step.
 step
 goto grahtwood_base 55.09,27.02
-'Use _Cormount_ Wayshrine
+'Use _Cormount_
 'Travel to _Elden Root Temple_ |q The Wounded Wood |future
 |tip Manually skip to the next step.
 step
@@ -6003,7 +6003,7 @@ talk Captain Halakalal
 turnin The Innkeeper's Daughter
 step
 goto 41.14,75.65
-'Use _Redfur Trading Post_ Wayshrine
+'Use _Redfur Trading Post_
 'Travel to _Elden Root_ |q Storgh's Bow/Deliver the Bow to Orthelos
 |tip Manually skip to the next step.
 step
@@ -6063,7 +6063,7 @@ talk Rondrin
 turnin Phantom Guilt
 step
 goto 55.07,26.98
-'Use _Cormount_ Wayshrine
+'Use _Cormount_
 'Travel to _Gil-Var-Delle_ |q Rare Imports/Deliver the Crate to Alyxe
 |tip Manually skip to the next step.
 step
@@ -8048,7 +8048,7 @@ goto 22.99,57.28 |q The Tharn Speaks/Search for Information in Wormroot Depths
 |only Aldmeri Dominion
 step
 goto 54.85,41.04
-'Use _Vulkhel Guard_ Wayshrine
+'Use _Vulkhel Guard_
 'Travel to _Redfur Trading Port_ in Grahtwood |q The Tharn Speaks/Search for Information in Wormroot Depths
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -8245,7 +8245,7 @@ talk Major Cirenwe
 accept Report to Marbruk
 step
 goto 32.71,37.35
-'Use _Seaside Sanctuary_ Wayshrine
+'Use _Seaside Sanctuary_
 'Travel to _Marbruk_ |q Report to Marbruk/Travel to Marbruk
 |tip Manually skip to the next step.
 step
@@ -8747,7 +8747,7 @@ talk Fanrel
 turnin The Falinesti Faithful
 step
 goto 59.32,41.31
-'Use _Falinesti_ Wayshrine
+'Use _Falinesti_
 'Travel to _Verrant Morass_ |q Shades of Green/Travel to Hectahame
 |tip Manually skip to the next step.
 step
@@ -9066,7 +9066,7 @@ talk Vadelen Indothan
 turnin The Unfilled Order
 step
 goto 82.57,66.06
-'Use _Woodhearth_ Wayshrine
+'Use _Woodhearth_
 'Travel to _Marbruk_ |q Forthor's Cursed Axe/Talk to Forthor
 |tip Manually skip to the next step.
 step
@@ -9085,7 +9085,7 @@ talk Forthor
 turnin Forthor's Cursed Axe
 step
 goto 33.89,60.51
-'Use _Marbruk_ Wayshrine
+'Use _Marbruk_
 'Travel to _Moonhenge_ |q To Velyn Harbor/Go to Velyn Harbor
 |tip Manually skip to the next step.
 step
@@ -10248,7 +10248,7 @@ goto 58.20,62.41
 'Examine _The Book of Dawn and Dusk_ |lorebook The Book of Dawn and Dusk/1/18/2
 step
 goto 56.73,67.24
-'Use _Bloodtoil_ Wayshrine
+'Use _Bloodtoil_
 'Travel to _Vulkwasten_ |q Payment In Kind |future
 |tip Manually skip to the next step.
 step
@@ -10423,7 +10423,7 @@ step
 goto malabaltor_base 61.62,68.21 |q The Hound's Plan/Find the Silvenar in Jathsogur
 step
 goto 56.72,67.24
-'Use _Bloodtoil_ Wayshrine
+'Use _Bloodtoil_
 'Travel to _Abamath_ |q The Hound's Plan/Find the Silvenar in Jathsogur
 |tip Manually skip to the next step.
 step
@@ -10838,7 +10838,7 @@ talk Fuldir
 turnin A Nord in Need
 step
 goto 63.47,49.21
-'Use _Baandari Market_ Wayshrine
+'Use _Baandari Market_
 'Travel to _The Harborage_ in Auridon |q Halls of Torment/Enter the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -11169,7 +11169,7 @@ goto 85.12,26.54 |q Proving the Deed/Talk to Merric at-Aswala
 |only Aldmeri Dominion
 step
 goto baandaritradingpost_base 63.11,49.68
-'Use _Baandari Market_ Wayshrine
+'Use _Baandari Market_
 'Travel to _Vulkwasten_ |q Proving the Deed/Talk to Merric at-Aswala
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -11195,7 +11195,7 @@ accept The Mad God's Bargain
 |only Aldmeri Dominion
 step
 goto 46.04,79.02
-'Use _Vulkwasten_ Wayshrine
+'Use _Vulkwasten_
 'Travel to _The Harborage_ in Auridon |q Valley of Blades/Enter The Harborage |future
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -12456,7 +12456,7 @@ turnin Stonefire Machinations
 accept To Rawl'kha
 step
 goto 34.84,52.00
-'Use _Arenthia_ Wayshrine
+'Use _Arenthia_
 'Travel to _Fort Grimwatch_ |q On the Doorstep |future
 |tip Manually skip to the next step.
 step
@@ -12884,7 +12884,7 @@ goto 53.61,46.47
 talk Khuzi |q A Night to Forget/Talk to Khuzi
 step
 goto 38.19,53.47
-'Use _Rawl'kha_ Wayshrine
+'Use _Rawl'kha_
 'Travel to _The Harborage_ in Auridon |q Shadow of Sancre Tor/Enter the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -13352,7 +13352,7 @@ wayshrine Eyevea
 |only Aldmeri Dominion
 step
 goto 86.59,35.76
-'Use _Eyevea_ Wayshrine
+'Use _Eyevea_
 'Travel to _The Harborage_ in Auridon |q Council of the Five Companions/Go to the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -13778,7 +13778,7 @@ talk Rollin
 turnin A Night to Forget
 step
 goto 37.91,53.64
-'Use _Rawl'kha_ Wayshrine
+'Use _Rawl'kha_
 'Travel to _Willowgrove_ |q Into the Vice Den |future
 |tip Manually skip to the next step.
 step
@@ -14466,7 +14466,7 @@ talk Kuna
 turnin How Few Remain
 step
 goto 37.91,53.64
-'Use _Rawl'kha_ Wayshrine
+'Use _Rawl'kha_
 'Travel to _S'ren-ja_ |q A Traitor's Luck/Talk to the Spy
 |tip Manually skip to the next step.
 step
@@ -14955,7 +14955,7 @@ talk Champion
 turnin The Den of Lorkhaj
 step
 goto 33.13,25.82
-'Use _Dune_ Wayshrine
+'Use _Dune_
 'Travel to _Skywatch_ in Auridon |q Messages Across Tamriel/Talk to Razum-dar in Skywatch
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -15029,7 +15029,7 @@ goto 12.51,59.43
 |only Aldmeri Dominion
 step
 goto dune_base 33.13,25.82
-'Use _Dune_ Wayshrine
+'Use _Dune_
 'Travel to _The Harborage_ in Glenumbra |q Cadwell's Silver/Return to Cadwell at the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
@@ -15051,7 +15051,7 @@ goto 53.70,72.08
 |only Daggerfall Covenant
 step
 goto dune_base 33.13,25.82
-'Use _Dune_ Wayshrine
+'Use _Dune_
 'Travel to _The Harborage_ in Stonefalls |q Cadwell's Gold/Talk to Cadwell at the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
@@ -15462,7 +15462,7 @@ goto 29.12,79.00
 turnin Izad's Treasure
 step
 goto 43.80,81.27
-'Use _Saintsport_ Wayshrine
+'Use _Saintsport_
 'Travel to _Port Hunding_ |q Sphere Assembly/Talk to Rulorn
 |tip Manually skip to the next step.
 step
@@ -16909,7 +16909,7 @@ step
 goto 52.27,42.03 |q Legacy of Baelborne Rock/Tell Athel Baelborne to Leave
 step
 goto 49.30,20.73
-'Use _Daggerfall_ Wayshrine
+'Use _Daggerfall_
 'Travel to _Baelborne Rock_ |q Legacy of Baelborne Rock/Tell Athel Baelborne to Leave
 |tip Manually skip to the next step.
 step
@@ -16921,7 +16921,7 @@ talk Claudie Themond
 turnin Legacy of Baelborne Rock
 step
 goto 37.42,72.96
-'Use _Daggerfall_ Wayshrine
+'Use _Daggerfall_
 'Travel to _The Harborage_ |q Daughter of Giants/Go to the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
@@ -17063,7 +17063,7 @@ step
 |only Daggerfall Covenant
 step
 goto glenumbra_base 37.42,72.96
-'Use _Baelborne Rock_ Wayshrine
+'Use _Baelborne Rock_
 'Travel to _Wyrd Tree_ |q The Dagger's Edge/Assist the Remly Brothers
 |tip Manually skip to the next step.
 |only not Daggerfall Covenant
@@ -17693,7 +17693,7 @@ goto 78.19,30.92
 |tip Manually skip to the next step.
 step
 goto 75.36,30.09
-'Use _Burial Tombs_ Wayshrine
+'Use _Burial Tombs_
 'Travel to _Hag Fen_ |q Wyrd and Coven/Talk to Sibellec
 |tip Manually skip to the next step.
 step
@@ -17702,7 +17702,7 @@ talk Sibellec the Old
 turnin Wyrd and Coven
 step
 goto 73.58,41.12
-'Use _Hag Fen_ Wayshrine
+'Use _Hag Fen_
 'Travel to _Aldcroft_ |q A Brush With Death/Talk to Odette Vinielle
 |tip Manually skip to the next step.
 step
@@ -18119,7 +18119,7 @@ goto 63.67,25.01
 'Examine _Frontier, Conquest_ |lorebook Frontier, Conquest/1/19/2
 step
 goto 60.59,24.93
-'Go to the _Redoubt_ Wayshrine |q The Lion Guard's Stand/Go to the Redoubt Wayshrine
+'Go to the _Redoubt_ |q The Lion Guard's Stand/Go to the Redoubt Wayshrine
 step
 goto 60.59,24.93
 talk Blithe Croque |q The Lion Guard's Stand/Talk to Blithe Croque
@@ -18208,7 +18208,7 @@ goto 67.91,32.82
 wayshrine North Hag Fen
 step
 goto 67.88,32.82
-'Use _North Hag Fen_ Wayshrine
+'Use _North Hag Fen_
 'Travel to _Lion Guard Redoubt_ |q Mists of Corruption/Find Knights in Cath Bedraud
 |tip Manually skip to the next step.
 step
@@ -18519,7 +18519,7 @@ talk Healer Alezan
 turnin Fortune in Failure
 step
 goto 60.53,25.20
-'Use _Lion Guard Redoubt_ Wayshrine
+'Use _Lion Guard Redoubt_
 'Travel to _Crosswych_ |q Forgotten Ancestry/Honor the Winvale Scion
 |tip Manually skip to the next step.
 step
@@ -18580,7 +18580,7 @@ talk Harald Winvale
 turnin Forgotten Ancestry
 step
 goto 75.33,30.06
-'Use _Burial Tombs_ Wayshrine
+'Use _Burial Tombs_
 'Travel to _Crosswych_ |q Legitimate Interests/Talk to Tamien Sellan at the Crosswych Inn
 |tip Manually skip to the next step.
 step
@@ -18777,7 +18777,7 @@ talk Margot Oscent
 accept The Slavers
 step
 goto 72.50,42.65
-'Use _Koeglin Village_ Wayshrine
+'Use _Koeglin Village_
 'Travel to _The Harborage_ in Glenumbra |q Chasing Shadows/Go to the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
@@ -19477,7 +19477,7 @@ goto 27.28,43.42
 'Examine _Orcs: The Vermin Among Us_ |lorebook Orcs: The Vermin Among Us/1/2/6
 step
 goto 29.55,48.11
-'Use _Bonesnap Ruins_ Wayshrine
+'Use _Bonesnap Ruins_
 'Travel to _Koeglin Village_ |q Lighthouse Attack Plans/Talk to a Deputy in Koeglin Village
 |tip Manually skip to the next step.
 step
@@ -19490,7 +19490,7 @@ talk Margot Oscent
 turnin The Slavers
 step
 goto 72.41,42.60
-'Use _Koeglin Village_ Wayshrine
+'Use _Koeglin Village_
 'Travel to _Firebrand Keep_ |q Fire in the Fields |future
 |tip Manually skip to the next step.
 step
@@ -20446,7 +20446,7 @@ step
 goto 46.36,37.78 |q Pursuing the Shard/Talk to a Gate Guard at At-Tura Estate
 step
 goto 40.06,50.14
-'Use _Wayrest_ Wayshrine
+'Use _Wayrest_
 'Travel to _Soulshriven_ |q Pursuing the Shard/Talk to a Gate Guard at At-Tura Estate
 |tip Manually skip to the next step.
 step
@@ -20543,7 +20543,7 @@ goto 46.26,40.63
 |tip Manually skip to the next step.
 step
 goto 49.27,41.05
-'Use _Pariah Abbey_ Wayshrine
+'Use _Pariah Abbey_
 'Travel to _Wayrest_ |q Another Omen/Talk to High King Emeric in Wayrest
 |tip Manually skip to the next step.
 step
@@ -20937,7 +20937,7 @@ step
 goto 65.23,42.85 |q King Aphren's Sword |future
 step
 goto 70.11,41.25
-'Use _Wind Keep_ Wayshrine
+'Use _Wind Keep_
 'Travel to _Dro-Dara Plantation_ |q King Aphren's Sword |future
 |tip Manually skip to the next step.
 step
@@ -21179,7 +21179,7 @@ goto 44.56,30.88
 talk Captain Ernele |q The Road to Rivenspire/Talk to Captain Ernele
 step
 goto 40.07,50.16
-'Use _Wayrest_ Wayshrine
+'Use _Wayrest_
 'Travel to _The Harborage_ in Glenumbra |q Castle of the Worm/Go to the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
@@ -21348,7 +21348,7 @@ step
 |only Daggerfall Covenant
 step
 goto wayrest_base 40.07,50.16
-'Use _Wayrest_ Wayshrine
+'Use _Wayrest_
 'Travel to _Alcaire Castle_ |q The Road to Rivenspire/Go to Rivenspire
 |tip Manually skip to the next step.
 |only not Daggerfall Covenant
@@ -22714,7 +22714,7 @@ talk Marisette
 turnin Crimes of the Past
 step
 goto 28.03,49.55
-'Use _Hoarfrost Downs_ Wayshrine
+'Use _Hoarfrost Downs_
 'Travel to _Sanguine Barrows_ |q Hope Lost/Meet Adusa at the Barn
 |tip Manually skip to the next step.
 step
@@ -22866,7 +22866,7 @@ goto 66.98,44.65
 wayshrine Fell's Run
 step
 goto 66.98,44.65
-'Use _Fell's Run_ Wayshrine
+'Use _Fell's Run_
 'Travel to _Sanguine Barrows_ |q Archaic Relics/Find the Fingerbone of Saint Marben
 |tip Manually skip to the next step.
 step
@@ -22878,7 +22878,7 @@ goto 68.70,62.30
 'Search _Ancient Grave_ |q Archaic Relics/Find the Fingerbone of Saint Marben
 step
 goto 66.15,67.67
-'Use _Sanguine Barrows_ Wayshrine
+'Use _Sanguine Barrows_
 'Travel to _Fell's Run_ |q A Change of Heart |future
 |tip Manually skip to the next step.
 step
@@ -23045,7 +23045,7 @@ talk Constable Agazu
 turnin Fell's Justice
 step
 goto 67.02,44.69
-'Use _Fell's Run_ Wayshrine
+'Use _Fell's Run_
 'Travel to _Tamrith Camp_ |q Archaic Relics/Find Saint Ellenica's Prayer Book
 |tip Manually skip to the next step.
 step
@@ -23128,7 +23128,7 @@ talk Alvaren Garoutte
 turnin Archaic Relics
 step
 goto hoarfrost_base 27.86,48.97
-'Use _Hoarfrost Downs_ Wayshrine
+'Use _Hoarfrost Downs_
 'Travel to _Boralis_ |q Northpoint in Peril/Talk to Baron Dorell at Northpoint
 |tip Manually skip to the next step.
 step
@@ -23468,7 +23468,7 @@ goto rivenspire_base 71.48,39.87
 talk Brigibeth Chauvry |q Shedding the Past/Talk to Brigibeth
 step
 goto 67.12,44.63
-'Use _Fell's Run_ Wayshrine
+'Use _Fell's Run_
 'Travel _Shornhelm_ |q The Lady's Keepsake/Find Lothson in Shornhelm
 |tip Manually skip to the next step.
 step
@@ -23564,7 +23564,7 @@ turnin Assassin Hunter
 accept The Assassin's List
 step
 goto 26.76,49.03
-'Open _Crestshade_ Wayshrine
+'Open _Crestshade_
 'Travel to _Tamrith Camp_ |q The Assassin's List/Collect the List of Targets
 |tip Manually skip to the next step.
 step
@@ -23572,7 +23572,7 @@ goto 30.16,65.99
 'Take _List of Targets_ |q The Assassin's List/Collect the List of Targets
 step
 goto 25.93,66.14
-'Use _Tamrith Camp_ Wayshrine
+'Use _Tamrith Camp_
 'Travel _Crestshade_ |q The Assassin's List/Talk to Adusa-daro
 |tip Manually skip to the next step.
 step
@@ -23593,7 +23593,7 @@ turnin Threat of Death
 accept A Dagger to the Heart
 step
 goto 26.82,49.03
-'Use _Crestshade_ Wayshrine
+'Use _Crestshade_
 'Travel to _Shornhelm_ |q A Dagger to the Heart/Meet Adusa-daro at Montclair Manor
 |tip Manually skip to the next step.
 step
@@ -23614,7 +23614,7 @@ talk Adusa-daro
 turnin A Dagger to the Heart
 step
 goto 72.74,38.92
-'Use _Shornhelm_ Wayshrine
+'Use _Shornhelm_
 'Travel to _Hoarfrost Downs_ |q The Price of Longevity/Return to Cave of Sorrows
 |tip Manually skip to the next step.
 step
@@ -23645,7 +23645,7 @@ step
 goto 62.93,57.20 |q A Lucky Break/Find Nedras' Sister Gendinora
 step
 goto hoarfrost_base 28.04,49.53
-'Use _Hoarfrost Downs_ Wayshrine
+'Use _Hoarfrost Downs_
 'Travel to _Northpoint_ |q A Lucky Break/Find Nedras' Sister Gendinora
 |tip Manually skip to the next step.
 step
@@ -23984,13 +23984,13 @@ step
 goto 68.81,40.45 |q Favor for the Queen/Talk to Elvira
 step
 goto 72.74,38.89
-'Use _Shornhelm_ Wayshrine 
+'Use _Shornhelm_ 
 'Travel to _Northpoint_ |q Favor for the Queen/Talk to Elvira
 |tip Manually skip to the next step.
 |only not Daggerfall Covenant
 step
 goto 72.74,38.89
-'Use _Shornhelm_ Wayshrine
+'Use _Shornhelm_
 'Travel to _Daggerfall_ in Glenumbra |q The Tharn Speaks/Travel to the Mages Guild
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
@@ -24004,7 +24004,7 @@ talk Abnur Tharn |q The Tharn Speaks/Talk to Abnur Tharn
 |only Daggerfall Covenant
 step
 goto 49.09,20.74
-'Use _Daggerfall_ Wayshrine
+'Use _Daggerfall_
 'Travel to _Wind Keep_ in Stormhaven |q The Tharn Speaks/Search for Information in Norvulk Ruins
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
@@ -25099,7 +25099,7 @@ step
 goto 41.44,56.46 |q Gone Missing |future
 step
 goto 42.49,56.50
-'Use _Goat's Head Oasis_ Wayshrine
+'Use _Goat's Head Oasis_
 'Travel _Divad's Chagrin Mine_ |q Gone Missing |future
 |tip Manually skip to the next step.
 step
@@ -25434,7 +25434,7 @@ talk Letta
 turnin Snakes in the Sands
 step
 goto alikr_base 56.61,59.14
-'Use _Bergama_ Wayshrine
+'Use _Bergama_
 'Travel to _Sentinel_ |q The Search is Over/Talk to Falisa
 |tip Manually skip to the next step.
 step
@@ -25572,7 +25572,7 @@ step
 goto 35.16,54.60 |q Master of Leki's Blade |future
 step
 goto 29.99,72.41
-'Use _Sentinel_ Wayshrine
+'Use _Sentinel_
 'Travel to _Bergama_ |q Master of Leki's Blade |future
 |tip Manually skip to the next step.
 step
@@ -26269,7 +26269,7 @@ goto 84.35,49.73
 'Examine _The Order of the Ancestor Moth_ |lorebook The Order of the Ancestor Moth/1/13/7
 step
 goto 83.22,50.87
-'Use _Shrikes' Aerie_ Wayshrine
+'Use _Shrikes' Aerie_
 'Travel to _HoonDing's Watch_ |q Feathered Fiends |future
 |tip Manually skip to the next step.
 step
@@ -26736,7 +26736,7 @@ goto bangkorai_base 46.68,37.12
 wayshrine Eastern Evermore
 step
 goto 46.63,37.16
-'Use _Eastern Evermore_ Wayshrine
+'Use _Eastern Evermore_
 'Travel to _The Harborage_ in Glenumbra |q Valley of Blades/Enter the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
@@ -27032,7 +27032,7 @@ turnin Shadow of Sancre Tor
 |only Daggerfall Covenant
 step
 'Open _Bangkorai_ Map
-'Travel to _Eastern Evermore_ Wayshrine |q The Mad God's Bargain/Talk to Valaste
+'Travel to _Eastern Evermore_ |q The Mad God's Bargain/Talk to Valaste
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -27183,7 +27183,7 @@ wayshrine Eyevea
 |only Daggerfall Covenant
 step
 goto 86.59,35.76
-'Use _Eyevea_ Wayshrine
+'Use _Eyevea_
 'Travel to _Eastern Evermore_ in Bangkorai |q Will of the Council
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
@@ -27371,7 +27371,7 @@ turnin Council of the Five Companions
 |only Daggerfall Covenant
 step
 'Open _Bangkorai_ Map
-'Travel to _Eastern Evermore_ Wayshrine |q Beyond the Call
+'Travel to _Eastern Evermore_ |q Beyond the Call
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -27810,7 +27810,7 @@ turnin Destroying the Dark Witnesses
 accept Dark Wings
 step
 goto 52.52,8.46
-'Use _Halcyon Lake_ Wayshrine
+'Use _Halcyon Lake_
 'Travel to _Eastern Evermore_ |q Dark Wings/Speak to Phylgaux
 |tip Manually skip to the next step.
 step
@@ -28208,7 +28208,7 @@ step
 goto 70.98,53.98 |q Heart of Evil |future
 step
 goto bangkorai_base 46.65,37.15
-'Use _Eastern Evermore_ Wayshrine
+'Use _Eastern Evermore_
 'Travel to _Halcyon Lake_ |q Heart of Evil |future
 |tip Manually skip to the next step.
 step
@@ -29109,7 +29109,7 @@ goto 33.34,63.40
 wayshrine Nilata Ruins
 step
 goto 33.34,63.40
-'Use _Nilata Ruins_ Wayshrine
+'Use _Nilata Ruins_
 'Travel to _Bangkorai Pass_ |q Storming the Garrison/Talk to Queen Arzhela
 |tip Manually skip to the next step.
 step
@@ -29346,7 +29346,7 @@ talk Jean-Jacques Alois
 turnin A Handful of Stolen Dreams
 step
 goto 57.18,71.42
-'Use _Old Tower_ Wayshrine
+'Use _Old Tower_
 'Travel to _Nilata Ruins_ |q A Marriage in Ruins |future
 |tip Manually skip to the next step.
 step
@@ -30160,7 +30160,7 @@ goto wayrest_base 42.96,51.21
 talk Vanus Galerion |q Messages Across Tamriel/Talk to Vanus Galerion
 step
 goto 40.07,50.21
-'Use _Wayrest_ Wayshrine
+'Use _Wayrest_
 'Travel to _Daggerfall_ in Glenumbra |q Messages Across Tamriel/Talk to Copper Dariah in Daggerfall
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
@@ -30790,7 +30790,7 @@ goto 28.44,25.05
 wayshrine Foyen Docks
 step
 goto 28.44,25.05
-'Use _Foyen Docks_ Wayshrine
+'Use _Foyen Docks_
 'Travel to _Dhalmora_ |q Unorthodox Tactics/Talk to Iron-Claws
 |tip Manually skip to the next step.
 step
@@ -31546,7 +31546,7 @@ step
 goto 71.65,56.24 |q The Fate of a Friend/Find Stands-In-Still-Water
 step
 goto 72.14,59.14
-'Use _Othrenis_ Wayshrine
+'Use _Othrenis_
 'Travel to _Davon's Watch_ |q The Fate of a Friend/Find Stands-In-Still-Water
 |tip Manually skip to the next step.
 step
@@ -31698,7 +31698,7 @@ goto 48.81,69.15 |q Desperate Souls |future |tip Leave this building.
 |only Ebonheart Pact
 step
 goto 58.04,77.87
-'Use _Davon's Watch_ Wayshrine
+'Use _Davon's Watch_
 'Travel to _Othrenis_ |q Desperate Souls |future
 |tip Manually skip to the next step.
 |only Ebonheart Pact
@@ -32199,7 +32199,7 @@ goto 46.99,56.15
 wayshrine Vivec's Antlers
 step
 goto 46.91,56.18
-'Use _Vivec's Antlers_ Wayshrine
+'Use _Vivec's Antlers_
 'Travel to _Ebonheart_ |q Restoring Order/Convince the Dark Elves
 |tip Manually skip to the next step.
 step
@@ -32230,7 +32230,7 @@ talk Drathus Othral
 turnin Restoring Order
 step
 goto 45.80,63.01
-'Use _Ebonheart_ Wayshrine
+'Use _Ebonheart_
 'Travel to _Vivec's Antlers_ |q The Coral Heart |future
 |tip Manually skip to the next step.
 step
@@ -32329,7 +32329,7 @@ goto 35.08,52.91
 wayshrine Sulfur Pools
 step
 goto 35.08,52.91
-'Use _Sulfur Pools_ Wayshrine
+'Use _Sulfur Pools_
 'Travel to _The Harborage_ |q Daughter of Giants/Go to the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
@@ -33349,7 +33349,7 @@ goto 32.89,61.00
 wayshrine Ashen Road
 step
 goto 32.89,61.00
-'Use _Ashen Road_ Wayshrine
+'Use _Ashen Road_
 'Travel to _Kragenmoor_ |q Aggressive Negotiations/Talk to Denu Faren
 |tip Manually skip to the next step.
 step
@@ -33428,7 +33428,7 @@ goto stonefalls_base 30.25,63.11
 kill Captain Dunveril |q Vengeance for House Dres/Kill Captain Dunveril
 step
 goto 32.90,61.04
-'Use _Ashen Road_ Wayshrine_
+'Use _Ashen Road__
 'Travel to _Kragenmoor_ |q Vengeance for House Dres/Talk to Grandmaster Omin Dres
 |tip Manually skip to the next step.
 step
@@ -33513,7 +33513,7 @@ talk Valdam Andoren
 turnin A Goblin's Affection
 step
 goto 32.78,60.93
-'Use _Ashen Road_ Wayshrine
+'Use _Ashen Road_
 'Travel to _Kragenmoor_ |q The Fetish/Find Someone to Identify the Statue
 |tip Manually skip to the next step.
 step
@@ -33523,7 +33523,7 @@ talk Acolyte Raloro |q The Fetish/Find Someone to Identify the Statue
 |tip Manually skip to the next step.
 step
 goto 50.80,51.55
-'Use _Kragenmoor_ Wayshrine
+'Use _Kragenmoor_
 'Travel to _Sathram Plantation_ |q The Fetish/Find Someone to Identify the Statue
 |tip Manually skip to the next step.
 step
@@ -33538,7 +33538,7 @@ talk Haldyn's Bag
 turnin The Fetish
 step
 goto 19.09,52.94
-'Use _Sathram Plantation_ Wayshrine
+'Use _Sathram Plantation_
 'Travel _Ashen Road_ |q Savages of Stonefalls/Collect Gurlisk's Head
 |tip Manually skip to the next step.
 step
@@ -33741,7 +33741,7 @@ goto 52.05,71.33 |q Chasing Shadows/Go to the Harborage
 |only Ebonheart Pact
 step
 goto 46.16,63.14
-'Use _Ebonheart_ Wayshrine
+'Use _Ebonheart_
 'Travel to _The Harborage_ |q Chasing Shadows/Go to the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
@@ -33818,7 +33818,7 @@ step
 |only Ebonheart Pact
 step
 goto ebonheart_base 46.16,63.14
-'Use _Ebonheart_ Wayshrine
+'Use _Ebonheart_
 'Travel to _Ashen Road_ |q A Letter for Deshaan/Find Dandrii Dran
 |tip Manually skip to the next step.
 |only not Ebonheart Pact
@@ -35343,7 +35343,7 @@ talk Dolril Belvayn
 turnin Honor Bound
 step
 goto 27.01,54.93
-'Use _Muth Gnaar Hills_ Wayshrine
+'Use _Muth Gnaar Hills_
 'Travel to _Mournhold_ |q Cultural Exchange/Trade for a Dunmer Book
 |tip Manually skip to the next step.
 step
@@ -35480,7 +35480,7 @@ goto 58.16,38.53
 wayshrine Shad Astula
 step
 goto 58.20,38.51
-'Use _Shad Astula_ Wayshrine
+'Use _Shad Astula_
 'Travel to _Mournhould_ |q Cultural Exchange/Talk to Rigurt the Brash
 |tip Manually skip to the next step.
 step
@@ -35489,7 +35489,7 @@ talk Rigurt the Brash
 turnin Cultural Exchange
 step
 goto 67.00,65.28
-'Use _Mournhold_ Wayshrine
+'Use _Mournhold_
 'Travel to _Shad Astula_ |q By Invitation Only/Find Arch-Mage Valeyn
 |tip Manually skip to the next step.
 step
@@ -35670,7 +35670,7 @@ step
 goto 55.80,38.35 |q Trade Negotiations |future
 step
 goto 58.18,38.54
-'Use _Shad Astula_ Wayshrine
+'Use _Shad Astula_
 'Travel to _Mournhold_ |q Trade Negotiations |future
 |tip Manually skip to the next step.
 step
@@ -36054,7 +36054,7 @@ talk Churasu
 turnin Strange Guard Beasts
 step
 goto 82.16,54.67
-'Use _Silent Mire_ Wayshrine
+'Use _Silent Mire_
 'Travel to _Tal'Deic Grounds_ |q Rules and Regulations |future
 |tip Manually skip to the next step.
 step
@@ -36495,7 +36495,7 @@ talk Ganthis
 accept Onward to Shadowfen
 step
 goto mournhold_base 67.11,64.98
-'Use _Mournhold_ Wayshrine
+'Use _Mournhold_
 'Travel to _The Harborage_ in Stonefalls |q Castle of the Worm/Go to the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
@@ -36664,7 +36664,7 @@ step
 |only Ebonheart Pact
 step
 goto mournhold_base 66.72,65.27
-'Use _Mournhold_ Wayshrine
+'Use _Mournhold_
 'Travel to _Muth Gnaar Hills_ |q A Fair Warning/Talk to Aralyon the Scholar
 |tip Manually skip to the next step.
 |only not Ebonheart Pact
@@ -36674,7 +36674,7 @@ talk Aralyon the Scholar
 turnin A Fair Warning
 step
 goto 26.95,54.88
-'Use _Muth Gnaar Hills_ Wayshrine
+'Use _Muth Gnaar Hills_
 'Travel to _Mournhold_ |q Onward to Shadowfen/Find the Shadowfen Border
 |tip Manually skip to the next step.
 step
@@ -38764,7 +38764,7 @@ goto 48.83,69.40 |q The Tharn Speaks/Search for Information in Knife Ear Grotto
 |only Ebonheart Pact
 step
 goto 58.04,77.87
-'Use _Davon's Watch_ Wayshrine
+'Use _Davon's Watch_
 'Travel to _Eidolon's Hollow_ in Deshaan |q The Tharn Speaks/Search for Information in Knife Ear Grotto
 |tip Manually skip to the next step.
 |only Ebonheart Pact
@@ -38826,7 +38826,7 @@ goto stonefalls_base 79.71,39.90 |q A Poisoned Heart/.*Use the Enchanted Contain
 |only Ebonheart Pact
 step
 goto davonswatch_base 57.95,77.98
-'Use _Davon's Watch_ Wayshrine
+'Use _Davon's Watch_
 'Travel to _Hissmir_ |q A Poisoned Heart/.*Use the Enchanted Container to Collect Poison Gas.*
 |tip Manually skip to the next step.
 |only Ebonheart Pact
@@ -39398,7 +39398,7 @@ turnin The Dream of the Hist
 accept Swamp to Snow
 step
 goto 32.05,60.99
-'Use _Alten Corimont_ Wayshrine
+'Use _Alten Corimont_
 'Travel to _The Harborage_ in Stonefalls |q Halls of Torment/Enter the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
@@ -39967,7 +39967,7 @@ talk Fresgil |q For Kyne's Honor/Talk to Fresgil
 'Tell her _I need to find her son. Maybe we can get through to her and bring her back to the light._
 step
 goto 47.63,39.92
-'Use _Kynesgrove_ Wayshrine
+'Use _Kynesgrove_
 'Travel to _Windhelm_ |q For Kyne's Honor/Find Sahun in Windhelm
 |tip Manually skip to the next step.
 step
@@ -40011,7 +40011,7 @@ turnin One Victor, One King
 accept Sounds of Alarm
 step
 goto 46.16,38.09
-'Use _Windhelm_ Wayshrine
+'Use _Windhelm_
 'Travel to _Kynesgrove_ |q For Kyne's Honor/Confront Ormi at Kynesgrove
 |tip Manually skip to the next step.
 step
@@ -40301,7 +40301,7 @@ goto 36.91,42.45
 wayshrine Fort Morvunskar
 step
 goto 36.91,42.45
-'Use _Fort Morvunskar_ Wayshrine
+'Use _Fort Morvunskar_
 'Travel to _Windhelm_ |q Party Planning/Bring Party Items to Rigurt
 |tip Manually skip to the next step.
 step
@@ -40323,7 +40323,7 @@ talk Rigurt the Brash
 turnin Party Planning
 step
 goto 46.25,38.05
-'Use _Windhelm_ Wayshrine
+'Use _Windhelm_
 'Travel to _Fort Morvunskar_ |q Strange Allies |future
 |tip Manually skip to the next step.
 step
@@ -40996,7 +40996,7 @@ talk Selgaard Wood-Hewer
 turnin Dark Deeds
 step
 goto 36.97,42.50
-'Use _Fort Morvunskar_ Wayshrine
+'Use _Fort Morvunskar_
 'Travel to _Wittestadr_ |q A Right to Live |future
 |tip Manually skip to the next step.
 step
@@ -41641,7 +41641,7 @@ step
 goto 66.28,60.30
 step
 goto 65.02,61.16
-'Use _Jorunn's Stand_ Wayshrine
+'Use _Jorunn's Stand_
 'Travel to _Logging Camp_ |q In Search of Kireth Vanos |future
 |tip Manually skip to the next step.
 step
@@ -41927,7 +41927,7 @@ goto 37.21,47.29
 'Use _Jolinne's Skull_ |q Torn Asunder/Find the First Daughter
 step
 goto 46.28,38.11
-'Use _Windhelm_ Wayshrine
+'Use _Windhelm_
 'Travel _Wittestadr_ |q Torn Asunder/Find the Second Daughter
 |tip Manually skip to the next step.
 step
@@ -41989,7 +41989,7 @@ goto 66.44,56.78
 turnin Torn Asunder
 step
 goto 65.15,61.16
-'Use _Jorunn's Stand_ Wayshrine
+'Use _Jorunn's Stand_
 'Travel to _Kynesgrove_ |q Proving the Deed/Meet Aelif to Travel to Ragnthar
 |tip Manually skip to the next step.
 |only Ebonheart Pact
@@ -42074,7 +42074,7 @@ goto eastmarch_base 49.80,35.09 |q Proving the Deed/Talk to Merric at-Aswala
 |only Ebonheart Pact
 step
 goto windhelm_base 45.97,38.25
-'Use _Windhelm_ Wayshrine
+'Use _Windhelm_
 'Travel to _Fort Amol_ |q Proving the Deed/Talk to Merric at-Aswala
 |tip Manually skip to the next step.
 |only Ebonheart Pact
@@ -42091,7 +42091,7 @@ accept Will of the Council
 |only Ebonheart Pact
 step
 goto 14.16,13.13
-'Use _Fort Amol_ Wayshrine
+'Use _Fort Amol_
 'Travel to _The Harborage_ in Stonefalls |q Valley of Blades/Enter The Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
@@ -43655,7 +43655,7 @@ talk Amitra
 turnin A Ritual in the Ragged Hills
 step
 goto 28.60,46.99
-'Use _Ragged Hills_ Wayshrine
+'Use _Ragged Hills_
 'Travel to _Honrich Tower_ |q Aiding Sigunn/Find Salvageable Goods
 |tip Manually skip to the next step.
 step
@@ -44118,7 +44118,7 @@ talk Jofnir Iceblade
 turnin Will of the Council
 step
 goto 72.39,53.95
-'Use _Riften_ Wayshrine
+'Use _Riften_
 'Travel to _The Harborage_ in Stonefalls |q Shadow of Sancre Tor/Enter the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
@@ -44306,7 +44306,7 @@ turnin Shadow of Sancre Tor
 |only Ebonheart Pact
 step
 'Open _The Rift_ Map
-'Travel to _Riften_ Wayshrine |q The Mad God's Bargain/Talk to Valaste
+'Travel to _Riften_ |q The Mad God's Bargain/Talk to Valaste
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -44456,7 +44456,7 @@ wayshrine Eyevea
 |only Ebonheart Pact
 step
 goto 86.40,35.84
-'Use _Eyevea_ Wayshrine
+'Use _Eyevea_
 'Travel to _The Harborage_ in Stonefalls |q Council of the Five Companions/Go to the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
@@ -44573,7 +44573,7 @@ talk Innarrek
 turnin Drink, Drink, and Be Merry
 step
 goto 72.44,53.74
-'Use _Riften_ Wayshrine
+'Use _Riften_
 'Travel to _Fallowstone Hall_ |q Finding Winter's Hammer/Return Winter's Hammer to Sage Svari
 |tip Manually skip to the next step.
 step
@@ -44672,7 +44672,7 @@ talk Sigunn
 turnin Aiding Sigunn
 step
 goto therift_base 61.69,31.16
-'Use _Fallowstone Hall_ Wayshrine
+'Use _Fallowstone Hall_
 'Travel to _Riften_ |q Those She Devours |future
 |tip Manually skip to the next step.
 step
@@ -45207,7 +45207,7 @@ accept Messages Across Tamriel
 |only Ebonheart Pact
 step
 goto 78.38,75.01
-'Use _Trolhetta Summit_ Wayshrine
+'Use _Trolhetta Summit_
 'Travel to _Trolhetta_ |q Names of the Fallen/Talk to Narir
 |tip Manually skip to the next step.
 step
@@ -45269,7 +45269,7 @@ talk Thane Viri
 turnin River of Names
 step
 goto 72.39,53.94
-'Use _Riften_ Wayshrine
+'Use _Riften_
 'Travel to _Skald's Retreat_ |q Lost Companions/Find Rigvar
 |tip Manually skip to the next step.
 step
@@ -45299,7 +45299,7 @@ goto 13.97,26.16
 kill Varnedo |q Redguard on the Run/Kill Varnedo
 step
 goto 15.30,27.36
-'Use _Geirmund's Hall_ Wayshrine
+'Use _Geirmund's Hall_
 'Travel to _Riften_ |q Redguard on the Run/Return to Gorgath Deadeye in Riften
 |tip Manually skip to the next step.
 step
@@ -45308,7 +45308,7 @@ talk Gorgath Deadeye
 turnin Redguard on the Run
 step
 goto 71.97,53.61
-'Use _Riften_ Wayshrine
+'Use _Riften_
 'Travel to _Trolhetta_ |q Lost Companions/Talk to Snorrvild
 |tip Manually skip to the next step.
 step
@@ -45318,7 +45318,7 @@ talk Snorrvild
 turnin Lost Companions
 step
 goto 81.19,65.08
-'Use _Trolhetta_ Wayshrine
+'Use _Trolhetta_
 'Travel to _Mourhold_ in Deshaan |q Messages Across Tamriel/Talk to Thrush in Mournhold
 |tip Manually skip to the next step.
 |only Ebonheart Pact
@@ -45392,7 +45392,7 @@ goto 52.04,70.85
 |only Ebonheart Pact
 step
 goto therift_base 81.28,65.07
-'Use _Trolhetta_ Wayshrine
+'Use _Trolhetta_
 'Travel to _The Harborage_ in Auridon |q Cadwell's Silver/Return to Cadwell at the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -45414,7 +45414,7 @@ goto 71.98,22.09
 |only Aldmeri Dominion
 step
 goto therift_base 81.28,65.07
-'Use _Trolhetta_ Wayshrine
+'Use _Trolhetta_
 'Travel to _Harborage_ in Glenumbra |q Cadwell's Gold/Return to Cadwell at the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
@@ -46240,7 +46240,7 @@ goto 61.95,71.91
 talk Minstrel Idria |q The Lost Lute/Find Minstrel Idria
 step
 goto 20.17,40.88
-'Use _Hollow City_ Wayshrine
+'Use _Hollow City_
 'Travel to _Moonless Walk_ |q Saving Stibbons |future
 |tip Manually skip to the next step.
 step
@@ -46314,7 +46314,7 @@ talk Stibbons
 turnin Saving Stibbons
 step
 goto 38.58,55.45
-'Use _Shrouded Plains_ Wayshrine
+'Use _Shrouded Plains_
 'Travel to _Hollow City_ |q The Soul-Meld Mage |future
 |tip Manually skip to the next step.
 step
@@ -47714,7 +47714,7 @@ talk Grundskar
 turnin News of Fallen Kin
 step
 goto 19.91,41.44
-'Use _Hollow City_ Wayshrine
+'Use _Hollow City_
 'Travel to _Reaver Citadel_ |q The Citadel Must Fall/Collect Fighters Guild Ward Key
 |tip Manually skip to the next step.
 step
@@ -47950,7 +47950,7 @@ goto 53.67,47.15
 accept God of Schemes
 step
 goto 19.97,41.40
-'Use _Hollow City_ Wayshrine
+'Use _Hollow City_
 'Travel to _The Harborage_ in Auridon |q God of Schemes/Go to the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -47970,7 +47970,7 @@ goto 72.84,48.98
 |only Aldmeri Dominion
 step
 goto hollowcity_base 19.97,41.40
-'Use _Hollow City_ Wayshrine
+'Use _Hollow City_
 'Travel to _The Harborage_ in Glenumbra |q God of Schemes/Go to the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
@@ -47990,7 +47990,7 @@ goto 66.34,63.28
 |only Daggerfall Covenant
 step
 goto hollowcity_base 19.97,41.40
-'Use _Hollow City_ Wayshrine
+'Use _Hollow City_
 'Travel to _The Harborage_ in Stonefalls |q God of Schemes/Go to the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
@@ -48243,7 +48243,7 @@ turnin Reporting for Duty
 |only Aldmeri Dominion
 step
 goto 47.06,55.73
-'Use _Eastern Elsweyr Wayshrine_
+'Use _Eastern Elsweyr_
 'Travel to _Vulkhel Guard_ in Auridon
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -48344,7 +48344,7 @@ goto 65.18,49.43
 |only Daggerfall Covenant
 step
 goto northhighrockgate_base 62.70,47.55
-'Use _Northern High Rock Gate_ Wayshrine
+'Use _Northern High Rock Gate_
 'Travel to _Daggerfall_ in Glenumbra
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
@@ -48446,7 +48446,7 @@ turnin Reporting for Duty
 |only Ebonheart Pact
 step
 goto 56.88,45.03
-'Use _North Morrowind_ Wayshrine
+'Use _North Morrowind_
 'Travel to _Davon's Watch_ in Stonefalls
 |tip Manually skip to the next step.
 |only Ebonheart Pact
