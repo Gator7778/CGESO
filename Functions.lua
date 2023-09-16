@@ -690,7 +690,6 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 				GetCurrentMapIndex() == Enums.WrothgarMap then return 4
 				
 		elseif  GetCurrentMapIndex() == Enums.CraglornMap or
-		        GetCurrentMapIndex() == Enums.FargraveMap or
 				GetCurrentMapIndex() == Enums.GlenumbraMap or
 			    GetCurrentMapIndex() == Enums.GrahtwoodMap or
 			    GetCurrentMapIndex() == Enums.GreenshadeMap or
@@ -703,6 +702,7 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 		elseif 	GetCurrentMapIndex() == Enums.AlikrMap or
 				GetCurrentMapIndex() == Enums.ArtaeumMap or
 		        GetCurrentMapIndex() == Enums.AuridonMap or
+		        GetCurrentMapIndex() == Enums.FargraveMap or
 				GetCurrentMapIndex() == Enums.MalabalTorMap or
 				GetCurrentMapIndex() == Enums.StormhaveMap or
 				GetCurrentMapIndex() == Enums.SummersetMap or
@@ -752,7 +752,6 @@ function Utils.DistanceOffsetForIsComplete()
 				GetCurrentMapIndex() == Enums.WrothgarMap then return 4
 				
 		elseif  GetCurrentMapIndex() == Enums.CraglornMap or
-		        GetCurrentMapIndex() == Enums.FargraveMap or
 				GetCurrentMapIndex() == Enums.GlenumbraMap or
 			    GetCurrentMapIndex() == Enums.GrahtwoodMap or
 			    GetCurrentMapIndex() == Enums.GreenshadeMap or
@@ -765,6 +764,7 @@ function Utils.DistanceOffsetForIsComplete()
 		elseif 	GetCurrentMapIndex() == Enums.AlikrMap or
 				GetCurrentMapIndex() == Enums.ArtaeumMap or
 		        GetCurrentMapIndex() == Enums.AuridonMap or
+		        GetCurrentMapIndex() == Enums.FargraveMap or
 			    GetCurrentMapIndex() == Enums.MalabalTorMap or
 				GetCurrentMapIndex() == Enums.StormhaveMap or
 				GetCurrentMapIndex() == Enums.SummersetMap or

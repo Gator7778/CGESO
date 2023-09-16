@@ -8805,18 +8805,6 @@ goto 20.71,50.11
 step
 goto u30_undertowcavern_base 48.62,86.85
 step
-goto 49.54,81.65
-step
-goto 33.18,70.80
-step
-goto 49.85,74.92
-step
-goto 60.86,62.84
-step
-goto 60.86,62.84
-step
-goto 52.60,70.49
-step
 goto 52.45,40.52
 |tip Stay on Top Ramp.
 'Use _Skyshard_
@@ -8827,17 +8815,16 @@ goto 50.31,16.06
 kill Druvaakh The Smasher
 |tip Manually skip to the next step.
 step
-goto 52.29,13.30
-step
 goto 57.19,14.98
 'Enter _Blackwood_
+|tip Manually skip to the next step.
 step
-goto blackwood_base 50.25,06.64
+goto u30_leyawiincity_base 50.25,06.64
 'Use _Leyawiin Outskirts_
 'Travel to _Blueblood_
 |tip Manually skip to the next step.
 step
-goto 29.37,64.18
+goto blackwood_base 29.37,64.18
 |tip Climb to the top of the tower.
 'Use _Skyshard_
 |tip Manually skip to the next step.
@@ -8863,12 +8850,7 @@ goto VaultDelve_INT01_base 82.97,50.44
 'Open _Doomvault_
 |tip Manually skip to the next step.
 step
-goto VaultDelve_EXT01_base 41.25,76.73
-step
-goto 68.65,56.73
-'Use _Morgane's Sending Stone_
-step
-goto 64.04,43.56
+goto VaultDelve_EXT01_base 64.71,50.96
 step
 goto 36.06,53.46
 step
@@ -8898,17 +8880,13 @@ goto VaultDelve_EXT01_base 31.83,64.33
 'Open _Doomvault Porcixid_
 |tip Manually skip to the next step.
 step
-goto VaultDelve_INT02A_base 55.51,47.55
-step
-goto 13.47,47.14
+goto VaultDelve_INT02A_base 13.47,47.14
 'Open _Doomvault Porcixid_
 |tip Manually skip to the next step.
 step
-goto VaultDelve_EXT02_base
+goto VaultDelve_EXT02_base 54.59,48.29
 step
-goto 42.37,33.41
-step
-goto 21.03,49.28
+goto 54.14,61.35
 step
 goto 84.97,49.89
 'Open _Doomvault Porcixid_
@@ -8927,16 +8905,11 @@ goto blackwood_base 81.33,70.67
 |tip Manually skip to the next step.
 step
 goto 83.97,69.45
+|tip Climb back up to the top.
 'Open _Vunalk_
 |tip Manually skip to the next step.
 step
-goto vunalk2_base
-step
-goto 52.43,70.74
-step
-goto 76.06,73.82
-step
-goto 80.33,39.13
+goto vunalk2_base 76.06,73.82
 step
 goto 75.77,21.15
 step
@@ -8944,19 +8917,13 @@ goto 85.67,21.13
 'Use _Skyshard_
 |tip Manually skip to the next step.
 step
-goto 54.52,42.69
+goto 57.33,28.80
 step
-goto 54.61,42.58
+goto 48.93,38.60
 step
 goto 44.89,25.52
 step
-goto 20.71,31.13
-step
-goto 20.71,31.13
-step
-goto 20.18,30.86
-step
-goto 18.55,40.21
+goto 17.28,38.69
 step
 goto 27.92,43.53
 kill Choking Vine
@@ -8966,41 +8933,36 @@ goto 21.98,67.00
 step
 goto vunalk1_base 04.57,71.47
 'Open _Blackwood_
+|tip Manually skip to the next step.
 step
 goto blackwood_base 76.97,73.33
 'Use _Vunalk_
 'Travel to _Stonewastes_
 |tip Manually skip to the next step.
 step
+goto 70.31,91.06
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 60.41,77.90
+step
 goto 58.84,76.49
 'Use _Skyshard_
 |tip Manually skip to the next step.
 step
-goto 54.82,77.21
+goto 51.39,73.46
 'Open _Xi-Tsei_
 |tip Manually skip to the next step.
 step
-goto u30_xanmeeroverlook_ext_base 54.59,68.15
-step
-goto 38.89,63.95
-step
-goto 40.64,36.63
-step
-goto 49.55,34.72
+goto u30_xanmeeroverlook_ext_base 49.55,34.72
 'Open _Xi-Tsei_
 |tip Manually skip to the next step.
 step
-goto u30_xanmeeroverlook_int_base 35.52,37.25
-step
-goto 36.49,76.50
-step
-goto 35.52,37.25
+goto u30_xanmeeroverlook_int_base 29.84,34.45
 step
 goto 27.28,22.57
 step
 goto 56.98,28.16
-step
-goto 62.09,31.62
 step
 goto 67.66,19.04
 step
@@ -9047,9 +9009,7 @@ goto 64.12,18.22
 'Enter _Bloodrun Cave_
 |tip Manually skip to the next step.
 step
-goto u30_bloodruncave_base 48.89,08.03
-step
-goto 51.73,14.33
+goto u30_bloodruncave_base 67.92,17.44
 step
 goto 66.59,29.01
 step
@@ -9057,11 +9017,7 @@ goto 53.91,29.62
 'Use _Skyshard_
 |tip Manually skip to the next step.
 step
-goto 53.01,38.12 |tip Drop down.
-step
-goto 64.90,48.86
-step
-goto 43.17,51.71
+goto 45.98,33.64
 step
 goto 43.17,51.71
 step
@@ -9083,15 +9039,11 @@ goto 36.93,26.98
 step
 goto arpeniaL_base 43.34,19.97
 step
-goto 65.34,13.31
-step
-goto arpeniaH2_base 67.77,21.03
-step
 goto arpeniaL_base 64.37,22.53
 step
 goto 81.95,42.59
 step
-goto 64.18,56.95
+goto 63.70,52.33
 step
 goto arpeniaH_base 90.44,53.01
 step
@@ -9103,22 +9055,133 @@ goto 87.37,55.35
 step
 goto 61.70,65.39
 step
-goto 45.43,60.89
-step
-goto 45.64,61.95
-step
 goto 40.81,56.08
+step
+goto 25.88,55.98
 step
 goto 16.41,39.00
 kill Shadow Knight Nassuphae
 |tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Expansion\\The Deadlands
-step 
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\The Deadlands",[[
 loadingimage loadscreen_ardent_hope_01.dds
 description The Deadlands Skyshards and Delves.
 step
+'Open _Fargarve_ Map
+'Travel to _The Shambles_
+|tip Manually skip to the next step.
+step
+goto u32_theshambles_base 48.89,49.59
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 34.88,38.05
+'Use _The Shambles_
+'Travel to _False Martyrs' Folly_
+|tip Manually skip to the next step.
+step
+goto u32deadlandszone_base 80.74,34.59
+step
+goto 79.62,28.95
+step
+goto 89.42,26.85
+'Enter _False Martyrs' Folly_
+|tip Manually skip to the next step.
+step
+goto u32_folly_delve_base 58.46,65.29
+step
+goto 69.90,62.40
+step
+goto 64.40,31.56
+step
+goto 70.68,31.01
+step
+goto 75.68,54.97
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 72.78,50.23 |tip Drop down carefully.
+step
+goto 62.28,35.38
+step
+goto 56.95,38.16
+step
+goto 54.84,44.44
+kill Kurkron the Mangler
+|tip Manually skip to the next step.
+step
+'Open _The Deadlands_ Map
+'Travel to _Annihilarch's Summit_
+|tip Manually skip to the next step.
+step
+goto u32deadlandszone_base 63.03,30.53
+step
+goto 65.61,30.23
+|tip Climb Big Rock.
+'Use _Skyshrard_
+|tip Manually skip to the next step.
+step
+goto 66.91,26.71
+'Use _Annihilarch's Summit_
+'Travel to _The Scourshales_
+|tip Manually skip to the next step.
+step
+goto 71.57,39.66
+step
+goto 71.08,38.96
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 61.72,44.14
+'Use _The Scourshales_
+'Travel to _Raging Coast_
+|tip Manually skip to the next step.
+step
+goto 45.02,67.98
+step
+goto 46.36,67.72
+|tip Climb Rock to the top.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 45.02,67.98
+step
+goto 45.08,70.74
+'Use _Raging Coast_
+'Travel to _The Blood Pit_
+|tip Manually skip to the next step.
+step
+goto 19.16,61.44
+step
+goto 13.13,54.15
+'Open _The Brandfire Reformatory_
+|tip Manually skip to the next step.
+step
+goto u32_dreaded_refuge_ext_base 31.26,52.76
+step
+goto 16.19,24.23
+step
+goto 08.07,27.19
+step
+goto 23.19,31.88
+step
+goto 26.33,25.55
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 21.52,12.03
+|tip Drop down.
+'Open _Reformatory Keep_
+|tip Manually skip to the next step.
+step
+goto u32_dreaded_refuge_int_base 31.49,33.97
+step
+goto 50.44,34.28
+step
+goto u32_dreaded_refuge_int_base2 50.04,42.67
+kill Kynreeve Brosuroth
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Expansion\\High Isle and Amenos
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\High Isle and Amenos",[[
