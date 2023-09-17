@@ -9519,8 +9519,32 @@ goto 28.94,53.20
 step
 goto 31.47,50.70
 step
+goto 24.16,47.13
+step
 goto 21.53,47.01
 'Enter _Fauns' Thicket_
+|tip Manually skip to the next step.
+step
+goto u36_LKH_base 50.41,65.77
+step
+goto 45.80,75.11
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 35.94,48.98
+step
+goto 17.97,53.37
+step
+goto 16.05,64.35
+step
+goto 24.33,63.37
+step
+goto 36.85,71.50
+step
+goto 39.44,59.49
+step
+goto 56.85,52.50
+kill Bahltur
 |tip Manually skip to the next step.
 step
 'Open _Galen and Y'ffelon_
@@ -9533,7 +9557,63 @@ goto 26.12,26.57
 'Use _Skyshard_
 |tip Manually skip to the next step.
 step
-goto 
+goto 26.15,25.10
+step
+goto 28.98,22.11
+'Use _Glimmertarn_
+'Travel to _Llanshara_
+|tip Manually skip to the next step.
+step
+goto 51.84,33.34
+step
+goto 54.18,32.87
+step
+goto 55.12,34.63
+step
+goto 57.59,32.13
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 56.00,35.02
+step
+goto 53.81,38.62
+step
+goto 52.97,44.94
+'Open _Embervine_
+|tip Manually skip to the next step.
+step
+goto u36_embervine_int1_base 22.24,37.48
+step
+goto 35.59,60.91
+step
+goto 73.01,55.17
+step
+goto 65.80,46.43
+'Open _Lower Jungle_
+|tip Manually skip to the next step.
+step
+goto u36_embervine_base 55.35,28.45
+'Enter _Inner Caverns_
+|tip Manually skip to the next step.
+step
+goto u36_embervine_int2_base  56.40,10.53
+step
+goto 25.23,13.52
+step
+goto 28.06,28.54
+'Open _Jungle Overlook_
+|tip Manually skip to the next step.
+step
+goto u36_embervine_base 37.81,18.67
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 24.88,09.76
+step
+goto 26.50,29.47
+kill Traux the Ancient
+kill Druid Rerlas
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Expansion\\Telvanni Peninsula
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Telvanni Peninsula",[[
