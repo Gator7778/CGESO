@@ -9188,12 +9188,352 @@ CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\High Isle an
 loadingimage loadscreen_hi_systres_zone_01.dds
 description High Isle and Amenos Skyshards and Delves.
 step
+'Open_High Isle and Amenos_ Map
+'Travel to _Westbay_
+|tip Manually skip to the next step.
+step
+goto u34_gonfalonbaycity_base 07.18,35.35
+step
+goto u34_systreszone_base 50.44,79.83
+step
+goto 51.47,78.25
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 50.44,79.83
+step
+goto u34_gonfalonbaycity_base 07.18,35.35
+step
+goto 05.24,48.47
+'Use _Westbay_
+'Travel to _Coral Road_
+|tip Manually skip to the next step.
+step
+goto u34_systreszone_base 29.55,74.91
+step
+goto 29.15,74.96
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 29.73,75.30
+step
+goto 29.41,80.57
+step
+goto 25.05,83.89
+step
+goto 26.05,85.23
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 33.00,91.27
+'Enter _Breakwater Cave_
+|tip Manually skip to the next step.
+step
+goto u34_breakwatercave_base 56.87,76.47
+step
+goto 78.39,56.43
+step
+goto 81.28,24.06
+step
+goto 90.46,40.33
+step
+goto 58.09,30.18
+step
+goto 51.36,19.69
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 59.06,30.53
+step
+goto 17.85,46.98
+step
+goto 10.41,67.28
+kill Brineclaw
+|tip Manually skip to the next step.
+step
+'Open _High Isle and Amenos_ Map
+'Travel to _Castle Navire_
+|tip Manually skip to the next step.
+step
+goto u34_systreszone_base 26.66,74.87
+step
+goto 27.54,70.65
+'Enter _The Firepot_
+|tip Manually skip to the next step.
+step
+goto u34_firepotcave_base 76.15,73.74
+step
+goto 57.55,84.49
+step
+goto 55.07,66.37
+step
+goto 37.90,60.65
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 55.07,66.37
+step
+goto 63.61,49.55
+kill Esh'curnu the Behemoth
+|tip Manually skip to the next step.
+step
+'Open _High Isle and Amenos_ Map
+'Travel to _Stonelore Grove_
+|tip Manually skip to the next step.
+step
+goto u34_systreszone_base 15.42,56.92
+step
+goto 14.56,56.68
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _High Isle and Amenos_ Map
+'Travel to _Garick's Rest_
+|tip Manually skip to the next step.
+step
+goto 24.09,47.60
+step
+goto 21.41,44.69
+'Open _Death's Valor Keep_
+|tip Manually skip to the next step.
+step
+goto u34_hauntedsepulcherext_base 56.74,81.84
+step
+goto 48.59,92.41
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 56.74,81.84
+step
+goto 24.54,47.54
+step
+goto 62.71,18.72
+'Open _Death's Valor Keep Catacombs_
+|tip Manually skip to the next step.
+step
+goto u34_hauntedsepulcherint_base 53.22,33.89
+step
+goto 35.80,46.69
+kill Lord Leobert
+|tip Manually skip to the next step.
+step
+goto 18.12,47.21
+'Open _Death's Valor Keep_
+|tip Manually skip to the next step.
+step
+goto u34_hauntedsepulcherext_base 43.50,54.48
+step
+goto 25.10,72.80
+'Open _High Isle_
+|tip Manually skip to the next step.
+step
+goto u34_systreszone_base 24.09,47.60
+step
+goto 28.18,45.05
+step
+goto 33.50,38.35
+step
+goto 35.04,37.54
+step
+goto 31.29,34.04
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 35.04,37.54
+step
+goto 33.24,39.72
+step
+goto 39.32,41.05
+step
+goto 45.79,52.70
+step
+goto 48.52,52.35
+step
+goto 48.39,48.90
+step
+goto 48.04,48.56
+'Travel _Shipwreck Shoals_
+|tip Manually skip to the next step.
+step
+goto u34_shipwreckshoalsext_base 39.96,75.62
+step
+goto 33.28,55.59
+step
+goto 27.67,59.99
+step
+goto 35.51,65.76
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 28.22,43.50 |tip Drop down.
+step
+goto 47.75,35.31
+step
+goto 47.45,41.63
+'Open _Hadolid Warrens_
+|tip Manually skip to the next step.
+step
+goto u34_shipwreckshoalsint_base 55.14,46.37
+step
+goto 29.57,49.62
+step
+goto 29.07,82.21
+kill Captain Ilthalaa
+|tip Manually skip to the next step.
+step
+'Open _High Isle and Amenos_
+'Travel to _Tor Draioch_
+|tip Manually skip to the next step.
+step
+goto u34_systreszone_base 50.11,67.39
+step
+goto 50.03,65.52
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 50.11,67.39
+step
+goto 57.04,70.98
+'Use _Tor Draioch_
+'Travel to _All Flags_
+|tip Manually skip to the next step.
+step
+goto 32.08,65.42
+step
+goto 33.19,62.20
+step
+goto 32.45,62.03
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 33.19,62.20
+step
+goto 32.08,65.42
+step
+goto 30.44,66.12
+'Use _All Flags_
+'Travel to _Trappers Peak_
+|tip Manually skip to the next step.
+step
+goto 60.35,35.76
+'Travel _Raft to Whalefall_
+|tip Manually skip to the next step.
+step
+goto u34_whalefall_cay_base 69.12,64.46
+step
+goto 46.65,46.78
+step
+goto 40.48,31.06
+kill Jailer Mannick
+|tip Manually skip to the next step.
+step
+goto 44.72,58.20
+step
+goto 47.08,58.90
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _High Isle and Amenos_
+'Travel to _Serpents Hollow_
+|tip Manually skip to the next step.
+step
+goto u34_systreszone_base 68.69,30.27
+step
+goto 66.27,26.86
+step
+goto 68.92,24.17
+step
+goto 66.84,20.71
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _High Isle and Amenos_
+'Travel to _Brokerock_
+|tip Manually skip to the next step.
+step
+goto 77.16,42.81
+step
+goto 78.18,45.12
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 76.58,43.00
+step
+goto 88.25,35.61
+'Use _Brokerock_
+'Travel to _Flooded Coast_
+|tip Manually skip to the next step.
+step
+goto 80.05,26.39
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 83.98,24.45
+step
+goto 81.60,20.27
+'Open _Coral Cliffs_
+|tip Manually skip to the next step.
+step
+goto u34_coralcliffsext_base 63.91,29.57
+step
+goto 52.87,29.03
+'Enter _Coral Cliffs_
+|tip Manually skip to the next step.
+step
+goto u34_coralcliffsint_base 31.62,34.77
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 23.74,86.13
+'Enter _Coral Cliffs_
+|tip Manually skip to the next step.
+step
+goto u34_coralcliffsext_base 17.92,58.00
+step
+goto 40.37,77.91
+step
+goto 56.07,71.21
+kill Madena Braques
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Expansion\\Galen and Y'ffelon
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Galen and Y'ffelon",[[
 loadingimage loadscreen_galen_zone.dds
 description Galen and Y'ffelon Skyshards and Delves.
 step
+'Open _Galen and Y'ffelon_
+'Travel to _Eastern Shores_
+|tip Manually skip to the next step.
+step
+goto u36_galenisland_base 51.99,54.62
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 31.47,50.70
+step
+goto 28.28,52.47
+step
+goto 28.94,53.20
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 31.47,50.70
+step
+goto 21.53,47.01
+'Enter _Fauns' Thicket_
+|tip Manually skip to the next step.
+step
+'Open _Galen and Y'ffelon_
+'Travel to _Glimmertarn_
+|tip Manually skip to the next step.
+step
+goto u36_galenisland_base 26.15,25.10
+step
+goto 26.12,26.57
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Telvanni Peninsula",[[
