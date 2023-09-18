@@ -39403,7 +39403,7 @@ step
 goto 50.57,46.90
 'Take _Bright River-Shale_ |q Blood of the Reach/.*Gather Ritual Components.* |count 1
 step
-goto 49.10,45.93
+goto 49.10,45.93 |q Blood of the Reach/.*Gather Ritual Components.* |count 2
 step
 goto 61.56,34.59
 wayshrine Karthwasten
@@ -41640,7 +41640,7 @@ step
 goto 53.87,59.47
 wayshrine Wounded Crossing
 step
-goto 47.49,63.50
+goto 47.49,63.50 |q The Celestial Palanquin/Talk to Initiate Tilgo
 step
 goto 45.08,70.74
 wayshrine Raging Coast
@@ -44679,7 +44679,7 @@ goto 73.50,44.80
 'Open _Gonfalon Bay_ |q The Hidden Lord/.*Talk to the Alliance Leaders.*
 |tip Manually skip to the next step.
 step
-goto 53.44,36.88
+goto 53.44,36.88 |q The Hidden Lord/.*Talk to the Alliance Leaders.*
 step
 goto 38.23,41.00 |q The Hidden Lord/.*Talk to the Alliance Leaders.*
 step
@@ -45318,7 +45318,7 @@ step
 goto 58.15,51.56
 talk Leramil the Wise |q Fate's Proxy/Talk to Leramil the Wise |future
 step
-goto 58.05,51.51
+goto 59.12,57.25
 |tip Watch the dialogue.
 'Use _Portal to Necrom Necropolis_ |q Fate's Proxy/Investigate the Necrom Necropolis
 |tip Manually skip to the next step.
@@ -45328,7 +45328,7 @@ goto 47.38,35.28
 talk Curate Gadayn
 accept Keeper of the Fate
 step
-goto 56.70,39.06 |q Keeper of the Fate/Talk to the Port Master
+goto 56.22,39.45 |q Keeper of the Fate/Talk to the Port Master
 step
 goto 75.03,27.97
 talk Port Master Ulene |q Keeper of the Fate/Talk to the Port Master
@@ -45342,27 +45342,27 @@ goto 86.87,21.26
 'Open _Lower Deck_ |q Keeper of the Fate/Board the Stormwing
 |tip Manually skip to the next step.
 step
-goto 428.46,331.87
+goto 89.67,19.81
 'Examine _Hidden Kindred Instructions_ |q Keeper of the Fate/.*Search the Stormwing.* |count 1 |future
 step
-goto 422.54,331.28
+goto 84.10,19.43
 'Take _Stormwing Hold Key_ |q Keeper of the Fate/.*Search the Stormwing.* |count 2
 step
-goto 424.34,332.90
+goto 86.04,20.88
 'Open _Ship's Hold_ |q Keeper of the Fate/.*Search the Stormwing.* |count 3
 |tip Manually skip to the next step.
 step
-goto 422.69,333.03
-'Search _Crate_ |q Keeper of the Fate/.*Search the Stormwing.* |count 3
+goto 84.28,20.80
+'Search _Sack_ |q Keeper of the Fate/.*Search the Stormwing.* |count 3
 step
-goto 429.08,332.08
+goto 90.21,20.17
 'Examine _First Mate Dalmir's Log_ |q Keeper of the Fate/.*Search the Stormwing.* |count 4
 step
-goto 424.55,332.68
+goto 85.87,20.68
 'Climb _Ship's Lower Deck_ |q Keeper of the Fate/Return to Curate Gadayn
 |tip Manually skip to the next step.
 step
-goto 426.56,333.02
+goto 87.88,20.96
 'Open _Necrom_ |q Keeper of the Fate/Return to Curate Gadayn
 |tip Manually skip to the next step.
 step
@@ -45532,7 +45532,7 @@ goto 73.27,79.07 |q Spirit of Fate/Ascend the Tel Rendys Tower
 step
 goto 69.30,76.51
 |tip Go upstairs.
-'Use _Portal to Tel Rendys Tower Middle Floor_ |q Spirit of Fate/Ascend the Tel Rendys Tower
+'Use _Portal to Tel Rendys Middle Floor_ |q Spirit of Fate/Ascend the Tel Rendys Tower
 |tip Manually skip to the next step.
 step
 goto 64.88,77.78
@@ -45654,11 +45654,11 @@ step
 goto 51.38,21.93
 'Use _Portal to Tel Baro Lower Floor_ |q Spirit of Fate/Enter Tel Baro Tower
 step
-|tip Go upstairs.
+'_Go upstairs._
 'Use _Portal to Tel Baro Middle Floor_ |q Spirit of Fate/Find Meln the Mouthless
 |tip Manually skip to the next step.
 step
-|tip Go upstairs.
+'_Go upstairs._
 'Use _Portal to Tel Baro Sanctum_ |q Spirit of Fate/Find Meln the Mouthless
 step
 '_Straight ahead of you_
@@ -45667,7 +45667,7 @@ step
 '_Next to the Portal_
 'Take _Meln's Soul Gem_ |q Spirit of Fate/Take the Soul Gem
 step
-'Use _Portal to Telvanni Peninsula_ |q Spirit of Fate/Leave Tel Baro
+'Use _Telvanni Peninsula_ |q Spirit of Fate/Leave Tel Baro |future
 |tip Manually skip to the next step.
 step
 goto u38_telvannipeninsula_base 56.44,35.65
@@ -45675,6 +45675,7 @@ talk Meln the Mouthless
 turnin Spirit of Fate
 step
 goto 56.46,36.10
+|tip Watch the dialogue.
 'Use _Portal to Alavelis_ |q Fate's Proxy/Investigate Alavelis
 |tip Manually skip to the next step.
 step
@@ -45754,7 +45755,7 @@ goto 67.61,76.08
 talk Cipher Mukheesh |q Fate's Lost Dream/Talk to Cipher Mukheesh |future
 step
 goto 67.42,76.19
-'Open _Tranquil Catalog_ |q Fate's Lost Dream/Enter the Tranquil Catalog |future
+'Open _The Tranquil Catalog_ |q Fate's Lost Dream/Enter the Tranquil Catalog |future
 |tip Manually skip to the next step.
 step
 goto UI_Maps_U38_TP4_Catalog_01_bas 78.13,48.08 |q Fate's Lost Dream/Search the Tranquil Catalog |future
@@ -45900,7 +45901,7 @@ goto 13.87,72.69
 'Examine _On the Infinite Panopticon_ |lorebook On the Infinite Panopticon/3/49/7
 step
 goto 21.63,73.05
-talk Scruut |q A Hidden Fate/Talk to Scruut
+talk Scruut |q A Hidden Fate/Talk to Scruut |future
 step
 goto 27.52,58.75 |q A Hidden Fate/Return to Leramil the Wise
 step
@@ -46128,11 +46129,11 @@ goto 42.47,43.90
 'Use _Portal to the Necrom Bindery_ |q Conclave of Fate/Return to the Necrom Bindery |future
 |tip Manually skip to the next step.
 step
-goto u38_Necrom_base 58.15,52.38
+goto u38_Necrom_base 59.22,58.20
 |tip Watch the dialogue.
 talk Curate Gadayn |q Conclave of Fate/Talk to Curate Gadayn |future
 step
-goto 58.19,52.42
+goto 59.29,58.19
 talk Meln the Mouthless |q Conclave of Fate/Talk to Meln the Mouthless
 step
 'Open _Telvanni Peninsula_ Map
@@ -46258,10 +46259,10 @@ goto u38_TP6Trial2_base 54.41,19.22
 talk Magister Gothren |q Conclave of Fate/Talk to Magister Gothren |future
 step
 goto 52.07,16.61
-'Use _Portal to Vaermina Shrine_ |q Conclave of Fate/Enter Shelreni's Portal |future
+'Use _Portal to Shrine of Vaermina_ |q Conclave of Fate/Enter Shelreni's Portal |future
 |tip Manually skip to the next step.
 step
-goto u38_infinitepanopticon9_base 18.43,70.37 |q Conclave of Fate/Explore the Area
+goto u38_infinitepanopticon9_base 18.43,70.37 |q Conclave of Fate/Explore the Area |future
 step
 goto 22.24,47.61 |q Conclave of Fate/Explore the Area
 step
@@ -46298,7 +46299,7 @@ goto 70.00,43.36
 'Use _Portal to Necrom Bindery_ |q Conclave of Fate/Return to Necrom Bindery |future
 |tip Manually skip to the next step.
 step
-goto u38_Necrom_base 58.23,51.93
+goto u38_Necrom_base 59.33,57.62
 talk Leramil the Wise
 turnin Conclave of Fate
 accept A Calamity of Fate
@@ -46327,7 +46328,7 @@ goto 54.03,33.36
 talk Master Shelreni |q A Calamity of Fate/Talk to Master Shelreni
 step
 'Open _Telvanni Peninsula_ Map
-'Travel to _Necrom_ in Telvanni Peninsula |q A Calamity of Fate/Return to the Necrom Bindery
+'Travel to _Necrom_ |q A Calamity of Fate/Return to the Necrom Bindery
 |tip Manually skip to the next step.
 step
 goto u38_Necrom_base 55.82,52.48 |q A Calamity of Fate/Return to the Necrom Bindery
@@ -46402,6 +46403,7 @@ goto 40.42,73.13
 step
 goto 51.08,52.15
 kill Hidden Kindred |q A Calamity of Fate/Defeat the Hidden Kindred |future
+|tip Manually skip to the next step.
 step
 goto 54.09,51.39
 talk Scruut |q A Calamity of Fate/Talk to Scruut
@@ -46608,6 +46610,7 @@ goto 29.43,31.77 |q An Unhealthy Fate/Find the Next Manufactory
 step
 goto 36.79,15.53
 'Use _Portal to the Mythos_ |q An Unhealthy Fate/Find the Next Manufactory
+|tip Manually skip to the next step.
 step
 goto 52.66,20.67
 kill Blightcrown |q An Unhealthy Fate/Kill Blightcrown |future
@@ -46639,7 +46642,7 @@ goto 13.06,20.08
 |tip Manually skip to the next step.
 step
 goto u38_apocrypha_base 86.58,62.93
-talk Hermaeus Mora |q An Unhealthy Fate/Talk to Hermaeus Mora
+talk Hermaeus Mora |q An Unhealthy Fate/Talk to Hermaeus Mora |future
 step
 goto 79.58,62.18
 'Use _Writhing Waste_
@@ -46731,4 +46734,6 @@ step
 goto 81.30,74.53
 talk Leramil the Wise
 turnin Chronicle of Fate
+step
+'_Congradulations All Guides Complete_
 ]])

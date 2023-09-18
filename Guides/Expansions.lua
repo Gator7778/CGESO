@@ -46195,27 +46195,27 @@ goto 86.87,21.26
 'Open _Lower Deck_ |q Keeper of the Fate/Board the Stormwing
 |tip Manually skip to the next step.
 step
-goto 428.46,331.87
+goto 89.67,19.81
 'Examine _Hidden Kindred Instructions_ |q Keeper of the Fate/.*Search the Stormwing.* |count 1 |future
 step
-goto 422.54,331.28
+goto 84.10,19.43
 'Take _Stormwing Hold Key_ |q Keeper of the Fate/.*Search the Stormwing.* |count 2
 step
-goto 424.34,332.90
+goto 86.04,20.88
 'Open _Ship's Hold_ |q Keeper of the Fate/.*Search the Stormwing.* |count 3
 |tip Manually skip to the next step.
 step
-goto 422.69,333.03
-'Search _Crate_ |q Keeper of the Fate/.*Search the Stormwing.* |count 3
+goto 84.28,20.80
+'Search _Sack_ |q Keeper of the Fate/.*Search the Stormwing.* |count 3
 step
-goto 429.08,332.08
+goto 90.21,20.17
 'Examine _First Mate Dalmir's Log_ |q Keeper of the Fate/.*Search the Stormwing.* |count 4
 step
-goto 424.55,332.68
+goto 85.87,20.68
 'Climb _Ship's Lower Deck_ |q Keeper of the Fate/Return to Curate Gadayn
 |tip Manually skip to the next step.
 step
-goto 426.56,333.02
+goto 87.88,20.96
 'Open _Necrom_ |q Keeper of the Fate/Return to Curate Gadayn
 |tip Manually skip to the next step.
 step

@@ -23,6 +23,16 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 
 
 ### Recent Updates
+### 09/17/2023
+* Map Revamp
+* MQO DLC
+* Highlight Objectives
+* Minor Fixes
+* More Dialogue Options
+* Lorebook Guides
+* Skyshard and Delve Guide
+* Minor Fixes
+
 ### 06/09/2023
 * Fix Typo in Azandar Al-Cybiades Guide
 * Fixed Wayshrine name change made by Zenimax from Baandari Trading Post Wayshrine to Baandari Market Wayshrine.

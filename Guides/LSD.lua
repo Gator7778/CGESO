@@ -1649,43 +1649,59 @@ step
 goto 64.98,32.91
 'Examine _Civility and Etiquette: Wood Orcs I_ |lorebook Civility and Etiquette: Wood Orcs I/1/11/5
 step
-'Open _Hew's Bane_ Map
-'Travel to _Zeht's Displeasure_ |lorebook The Thief God's Treasures/1/11/3
+goto 67.37,33.39 |lorebook The Thief God's Treasures/1/11/3
+step
+goto 72.69,36.79 |lorebook The Thief God's Treasures/1/11/3
+step
+goto 75.32,33.61
+'Use _Two Rivers_
+'Travel to _Zeht's Displeasure_ in Hew's Bane |lorebook The Thief God's Treasures/1/11/3
 |tip Manually skip to the next step.
 step
 goto hewsbane_base 38.33,59.55
 'Examine _The Thief God's Treasures_ |lorebook The Thief God's Treasures/1/11/3
 step
-'Open _Gold Coast_ Map
-'Travel to _Kvatch_ |lorebook Eulogy for Emperor Varen/1/19/6
+goto 40.58,56.71
+'Use _Zeht's Displeasure_
+'Travel to _Kvatch_ in Gold Coast |lorebook Eulogy for Emperor Varen/1/19/6
 |tip Manually skip to the next step.
 step
 goto goldcoast_base 85.83,50.68
 'Examine _Eulogy for Emperor Varen_ |lorebook Eulogy for Emperor Varen/1/19/6
 step
-'Open _Vvardenfell_ Map
-'Travel to _Urshilaku Camp_ |lorebook The Art of Kwama Egg Cooking/1/11/6
+goto 79.21,50.23 |lorebook The Art of Kwama Egg Cooking/1/11/6
+step
+goto 82.06,49.51 |lorebook The Art of Kwama Egg Cooking/1/11/6
+step
+goto kvatchcity_base 30.99,93.59 |lorebook The Art of Kwama Egg Cooking/1/11/6
+step
+goto 51.33,89.52
+'Use _Kvatch_
+'Travel to _Urshilaku Camp_ in Vvardenfell |lorebook The Art of Kwama Egg Cooking/1/11/6
 |tip Manually skip to the next step.
 step
 goto vvardenfell_base 24.28,23.09
 'Examine _The Art of Kwama Egg Cooking_ |lorebook The Art of Kwama Egg Cooking/1/11/6
 step
-'Open _Summerset_
-'Travel to _The Crystal Tower_ |lorebook Ayrenn: The Unforeseen Queen/1/9/10
+goto 26.11,25.78
+'Use _Urshilaku Camp_
+'Travel to _The Crystal Tower_ in Summerset |lorebook Ayrenn: The Unforeseen Queen/1/9/10
 |tip Manually skip to the next step.
 step
 goto summerset_base 29.90,25.92
 'Examine _Ayrenn: The Unforeseen Queen_ |lorebook Ayrenn: The Unforeseen Queen/1/9/10
 step
-'Open _Blackwood_ Map
-'Travel to _Borderwatch_ |lorebook House Tharn of Nibenay/1/19/7
+goto 28.25,24.68
+'Use _The Crystal Tower_
+'Travel to _Borderwatch_ in Blackwood |lorebook House Tharn of Nibenay/1/19/7
 |tip Manually skip to the next step.
 step
 goto blackwood_base 16.01,37.66
 'Examine _House Tharn of Nibenay_ |lorebook House Tharn of Nibenay/1/19/7
 step
-'Open _Telvanni Peninsula_ Map
-'Travel to _Padomaic Crest_ |lorebook Where Magical Paths Meet/1/11/8
+goto 16.33,40.74
+'Use _Borderwatch_
+'Travel to _Padomaic Crest_ in Telvanni Peninsula |lorebook Where Magical Paths Meet/1/11/8
 |tip Manually skip to the next step.
 step
 goto u38_telvannipeninsula_base 50.82,55.31 |lorebook Where Magical Paths Meet/1/11/8
@@ -1695,8 +1711,13 @@ step
 goto 44.92,55.66
 'Examine _Where Magical Paths Meet_ |lorebook Where Magical Paths Meet/1/11/8
 step
-'Open _Apocrypha_ Map
-'Travel to _Cipher's Midden_ |lorebook Fragmentae Abyssum Hermaeus Morus/1/8/9
+goto 46.77,57.47 |lorebook Fragmentae Abyssum Hermaeus Morus/1/8/9
+step
+goto 50.82,55.31 |lorebook Fragmentae Abyssum Hermaeus Morus/1/8/9
+step
+goto 52.62,59.45
+'Use _Padomaic Crest_
+'Travel to _Cipher's Midden_ in Apocrypha |lorebook Fragmentae Abyssum Hermaeus Morus/1/8/9
 |tip Manually skip to the next step.
 step
 goto u38_ciphersmidden_city_base 43.10,47.03
@@ -9620,4 +9641,361 @@ CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Telvanni Pen
 loadingimage loadscreen_telvanni_peninsula_01.dds
 description Telvanni Peninsula Skyshards and Delves.
 step
+'Open _Telvanni Peninsula_ Map
+'Travel to _Necrom Outskirts_
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 77.26,50.41
+step
+goto 78.63,49.94
+'Open _Anchre Egg Mine_
+|tip Manually skip to the next step.
+step
+goto u38_eggmine_base 51.79,69.35
+step
+goto 40.44,63.67
+step 
+goto 21.56,52.16
+step
+goto 18.61,55.97
+step
+goto 39.82,38.99
+step
+goto 38.50,54.52
+step
+goto 28.66,53.60
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 21.56,52.16
+step
+goto 41.78,14.25
+step
+goto 51.56,21.28
+step
+goto 51.38,44.66
+kill Zaedare the Afflicted
+|tip Manually skip to the next step.
+step
+'Open _Telvanni Peninsula_ Map
+'Travel to _Necrom Outskirts_
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 71.14,44.72
+step
+goto 67.45,42.61
+step
+goto 69.88,36.33
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 67.36,42.56
+step
+goto 56.74,43.18
+step
+goto 55.41,41.78
+step
+goto 46.24,37.27
+step
+goto 39.29,37.54
+step
+goto 34.66,32.80
+step
+goto 31.50,34.21
+step
+goto 31.74,36.43
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Telvanni Peninsula_ Map
+'Travel to _Ald Isra_
+|tip Manually skip to the next step.
+step
+goto 33.15,63.49 |q The Traitor's Trade |future
+step
+goto 27.35,65.27 |q The Traitor's Trade |future
+step
+goto 24.33,69.04
+'Open _Camonnaruhn_
+|tip Manually skip to the next step.
+step
+goto u38_camonnaruhn_base 83.47,42.68
+step
+goto 80.13,47.69
+step
+goto 75.05,54.93
+step
+goto 35.89,87.95
+step
+goto 24.81,68.77
+step
+goto 14.85,58.75
+step
+goto 30.43,56.42
+step
+goto 37.77,42.88
+step
+goto 54.15,51.09
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 30.89,23.09
+step
+goto 58.86,19.14
+kill Matron Chruchak
+|tip Manually skip to the next step.
+step
+'Open _Telvanni Peninsula_ Map
+'Travel to _Alavelis_
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 49.25,76.73
+step
+goto 51.73,78.13
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 49.25,76.73
+step
+goto 40.81,73.65
+'Use _Alavelis_
+'Travel to _Padomaic Crest_
+|tip Manually skip to the next step.
+step
+goto 64.40,53.93
+step
+goto 66.25,53.71
+step
+goto 66.99,60.87
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Apocrypha_ Map
+'Travel to _Soundless Bight_
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 85.86,70.51
+step
+goto 91.00,68.48
+step
+goto 89.61,67.25
+step
+goto 90.38,66.53
+'Open _Quires Wind_
+|tip Manually skip to the next step.
+step
+goto u38_quires_wind_base 39.38,76.43
+step
+goto 41.28,43.77
+step
+goto 70.93,44.15
+step
+goto 71.32,65.91
+step
+goto 55.97,66.09
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 60.07,74.25
+step
+goto 60.72,65.58
+step
+goto 72.22,65.76
+step
+goto 74.79,25.03
+step
+goto 17.91,24.53
+step
+goto 22.01,40.63
+step
+goto 25.24,73.50
+kill Cipher Gelon
+|tip Manually skip to the next step.
+step
+'Open _Apocrypha_ Map
+'Travel to _Tranquil Catalog_
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 66.09,70.28
+step
+goto 57.89,73.43
+'Open _The Disquiet Study_
+|tip Manually skip to the next step.
+step
+goto u38_disquiet_study_base 63.80,72.76
+step
+goto 72.60,63.89
+step
+goto 72.01,57.02
+step
+goto 56.78,52.94
+step
+goto 56.95,45.38
+step
+goto 48.83,37.55
+step
+goto 45.55,30.01
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 40.82,32.06 |tip Drop down.
+step
+goto 43.75,61.24
+kill Uzur the All-Seeing
+|tip Manually skip to the next step.
+step
+'Open _Apocrypha_ Map
+'Travel to _Apogee Nadir_
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 40.50,44.95
+step
+goto 41.51,44.26
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 44.93,44.73
+step
+goto 47.46,47.51
+'Open _Central Orphic Tunnels_
+|tip Manually skip to the next step.
+step
+goto u38_Tunnel2_base 59.04,33.23
+step
+goto 59.33,11.91
+'Use _Skyshard_
+|tip Manually skip to the next step. 
+step
+goto 59.04,33.23
+step
+goto 41.02,37.74
+'Open _Apocrypha: Chroma Incognito_
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 42.53,42.43
+step
+goto 37.49,42.18
+step
+goto 33.35,38.66
+'Open _Apogee of the Tormenting Eye_
+|tip Manually skip to the next step.
+step
+goto u38_apogee_wind_base 46.97,73.04
+step
+goto 45.84,55.73
+step
+goto 22.65,50.44
+step
+goto 26.86,21.81
+step
+goto 47.72,25.77
+step
+goto 48.21,46.79
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 47.72,25.77
+step
+goto 64.64,24.89
+step
+goto 72.50,31.82
+step
+goto 74.57,76.73
+step
+goto 52.10,79.75
+kill The Supernal Trespasser
+|tip Manually skip to the next step.
+step
+'Open _Apocrypha_ Map
+'Travel to _Feral Gallery_
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 10.20,32.72
+step
+goto 16.55,29.73
+step
+goto 19.33,32.60
+step
+goto 23.04,35.13
+step
+goto 24.90,33.49
+step
+goto 21.97,33.04
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Apocrypha_ Map
+'Travel to _Forlorn Palisades_
+|tip Manually skip to the next step.
+step
+goto 39.05,19.07
+'Open _Fathoms Drift_
+|tip Manually skip to the next step.
+step
+goto U38_CorpuscleBight_01_Base 34.29,75.70
+step
+goto 22.78,72.38
+step
+goto 25.60,30.38
+step
+goto 33.03,29.73
+step
+goto 42.13,12.46
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 30.48,32.30
+step
+goto 24.88,23.83
+step
+goto 49.28,14.86
+|tip Drop down.
+kill The Light Keeper
+|tip Manually skip to the next step.
+step
+'Open _Apocrypha_ Map
+'Travel to _Forlorn Palisades_
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 41.11,26.22
+step
+goto 45.38,32.40
+step
+goto 51.32,34.77
+step
+goto 51.24,31.48
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 51.32,34.77
+step
+goto 45.38,32.40
+step
+goto 41.17,24.01
+'Use _Forlorn Palisades_
+'Travel to _Speiran Tar_
+|tip Manually skip to the next step.
+step
+goto 71.10,51.50
+step
+goto 68.06,49.80
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 71.10,51.50
+step
+goto 73.02,43.68
+'Use _Speiran Tar_
+'Travel to _Writhing Wastes_
+|tip Manually skip to the next step.
+step
+goto 82.65,64.32
+step
+goto 87.58,57.96
+step
+goto 89.37,56.63
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'_Congradulations All Skyshards and Delves Complete_
 ]])
