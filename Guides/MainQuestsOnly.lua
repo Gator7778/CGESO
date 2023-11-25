@@ -3072,6 +3072,7 @@ step
 goto 42.38,50.88 |q A Lasting Winter/Bring Brelor to the Welkynd Stones
 step
 goto 40.07,54.30
+|tip Watch the dialogue.
 'Visit the _Western Welkynd Stone_ |q A Lasting Winter/Bring Brelor to the Welkynd Stones
 step
 'Next to you:
@@ -5104,7 +5105,6 @@ goto 71.78,77.33
 step
 goto 70.87,76.39
 |tip Go upstairs.
-kill Houndsman Mystic
 'Use _Rune Key of Malacath on Stone of Magicka_ |q The Prisoner of Jathsogur/Disrupt Magicka Stone
 step
 goto 70.94,74.85
@@ -6712,6 +6712,7 @@ turnin The Mad God's Bargain
 |only Aldmeri Dominion
 step
 goto 52.70,48.52
+|tip Go Outside.
 talk Arch-Mage Shalidor
 accept The Arch-Mage's Boon
 |only Aldmeri Dominion
@@ -13956,6 +13957,7 @@ turnin The Mad God's Bargain
 |only Daggerfall Covenant
 step
 goto 52.70,48.52
+|tip Go Outside.
 talk Arch-Mage Shalidor
 accept The Arch-Mage's Boon
 |only Daggerfall Covenant
@@ -22558,6 +22560,7 @@ turnin The Mad God's Bargain
 |only Ebonheart Pact
 step
 goto 52.70,48.52
+|tip Go Outside.
 talk Arch-Mage Shalidor
 accept The Arch-Mage's Boon
 |only Ebonheart Pact
@@ -31930,7 +31933,7 @@ goto 70.42,39.34
 step
 goto 76.69,67.61 |q In Search of a Sponsor/Escape the Mechanical Fundament |tip Jump down the hole
 step
-goto mechanicalfundamentlow02_base 90.34,81.43 |q In Search of a Sponsor/Escape the Mechanical Fundament |tip Jump down the hole
+goto mechanicalfundamentlow02_base 90.34,81.43 |q In Search of a Sponsor/Escape the Mechanical Fundament |tip Drop down the hole
 step
 goto mechanicalfundamentup02_base 95.42,67.80
 |tip Follow path up and around to the door.
