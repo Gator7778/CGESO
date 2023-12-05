@@ -9676,7 +9676,7 @@ goto 41.88,19.90
 step
 goto 45.37,29.47 |q The Missing Prophecy/Collect Bulging Purse
 step
-goto 52.89,49.14 |q The Missing Prophecy/Collect Bulging Purse |tip Up the ramp.
+goto 52.89,49.14 |q The Missing Prophecy/Collect Bulging Purse |tip Go up the ramp.
 step
 goto 65.54,36.80 |q The Missing Prophecy/Collect Bulging Purse
 step
@@ -14202,7 +14202,7 @@ goto 37.21,44.26
 'Open _The Brass Fortress_ |q The Strangeness of Seht/Collect Lamp Tube
 |tip Manually skip to the next step.
 step
-goto brassfortress_base 53.04,56.57 |q The Strangeness of Seht/Collect Lamp Tube |tip Go up the ramp
+goto brassfortress_base 53.04,56.57 |q The Strangeness of Seht/Collect Lamp Tube |tip Go up the ramp.
 step
 goto 61.82,56.99
 talk Hailibah
@@ -21658,7 +21658,7 @@ step
 step
 goto lilmothcity_base 38.00,46.53 |q Frog Totem Turnaround/Find Chal-Maht
 step
-goto 31.63,57.10 |q Frog Totem Turnaround/Find Chal-Maht |tip Go up the ramp
+goto 31.63,57.10 |q Frog Totem Turnaround/Find Chal-Maht |tip Go up the ramp.
 step
 goto 32.30,70.68
 |tip Follow the ramp to Chal-Maht
@@ -28595,7 +28595,7 @@ step
 goto 66.74,30.33
 talk Lahini |q Order of the New Moon/Talk to Lahini
 step
-goto 67.92,37.86 |q Order of the New Moon/Complete the Trial Path |tip Up the ramp.
+goto 67.92,37.86 |q Order of the New Moon/Complete the Trial Path |tip Go up the ramp.
 step
 goto 64.76,31.70
 'Activate _Door Switch_ |q Order of the New Moon/Complete the Trial Path
