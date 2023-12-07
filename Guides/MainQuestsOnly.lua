@@ -794,8 +794,10 @@ turnin A Hostile Situation
 accept To Tanzelwil
 step
 goto 56.80,56.09 |q The Harborage/Find the Harborage
+|only Aldmeri Dominion
 step
 goto 88.80,60.05 |q The Harborage/Find the Harborage
+|only Aldmeri Dominion
 step
 goto auridon_base 69.66,92.87
 'Open _The Harborage_ |q The Harborage/Find the Harborage |future
@@ -811,7 +813,7 @@ goto 60.13,36.29
 |only Aldmeri Dominion
 step
 goto visionofthecompanions_base 39.21,55.56
-'Follow _The Prophet_ |q The Harborage/Follow the Prophet
+'Follow _The Prophet_ |q The Harborage/Follow the Prophet |future
 |only Aldmeri Dominion
 step
 goto 39.21,55.56
@@ -2345,7 +2347,7 @@ talk Sheogorath |q Simply Misplaced/Talk to Sheogorath
 |only Aldmeri Dominion
 step
 goto 51.70,56.30
-'Take _Circus of Cheerful Slaughter_ |q Simply Misplaced/Collect the Book
+'Take _Circus of Cheerful Slaughter_ |lorebook Circus of Cheerful Slaughter/1/7/4
 |only Aldmeri Dominion
 step
 goto eldenrootmagesguilddown_base 36.10,53.44
@@ -4153,11 +4155,6 @@ step
 goto greenshade_base 28.89,50.39
 wayshrine Serpent's Grotto
 step
-'Use _Serpent's Grotto_
-'Travel to _Vulkhel Guard_ in Auridon |q The Tharn Speaks/Go to the Vulkhel Guard Mages Guild
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
 goto vulkhelguard_base 22.98,53.34
 'Open _Mages Guild_ |q The Tharn Speaks/Go to the Vulkhel Guard Mages Guild
 |only Aldmeri Dominion
@@ -4200,7 +4197,7 @@ goto 53.82,27.06
 |only Aldmeri Dominion
 step
 goto 53.82,27.06
-'Watch _Vision_ |q The Tharn Speaks/Watch the Vision
+'Watch the _Vision_ |q The Tharn Speaks/Watch the Vision
 |only Aldmeri Dominion
 step
 'Next to you:
@@ -10456,8 +10453,7 @@ talk Sheogorath |q Simply Misplaced/Talk to Sheogorath
 |only Daggerfall Covenant
 step
 goto 51.70,56.30
-'Take _Circus of Cheerful Slaughter_ |q Simply Misplaced/Collect the Book |future
-|tip Manually skip to the next step.
+'Take _Circus of Cheerful Slaughter_ |lorebook Circus of Cheerful Slaughter/1/7/4
 |only Daggerfall Covenant
 step
 goto wayrest_base 55.02,48.73
@@ -11480,6 +11476,11 @@ step
 goto shornhelm_base 23.90,67.80
 talk Valaste
 turnin Circus of Cheerful Slaughter
+|only Daggerfall Covenant
+step
+goto 34.99,64.73
+talk Arch-Mage Shalidor
+accept Chateau of the Ravenous Rodent
 |only Daggerfall Covenant
 step
 goto 34.99,64.73
@@ -16286,136 +16287,29 @@ accept In With the Tide
 step
 goto 71.61,56.30 |q The Coral Heart |future
 step
-goto 72.14,59.14
-'Use _Othrenis_
-'Travel to _The Harborage_ |q Long Lost Lore/Enter the Ruins
-|tip Manually skip to the next step.
+goto stonefalls_base 90.12,43.39
+talk Merric at-Aswala |q Anchors from the Harbour/Find Merric and Aelif
 |only Ebonheart Pact
 step
-goto 73.79,37.45 |q Long Lost Lore/Enter the Ruins
+goto 89.76,43.59
+'Search _Worm Cultists_ |q Anchors from the Harbour/.*Search Worm Cultists.*
 |only Ebonheart Pact
 step
-goto 71.78,39.72
-'Open _Inner Sea Armature_ |q Long Lost Lore/Enter the Ruins |future
-|tip Manually skip to the next step.
+goto 90.27,43.43
+|tip Watch the dialogue.
+talk Aelif |q Anchors from the Harbour/Talk to Aelif
 |only Ebonheart Pact
 step
-goto innerseaarmature_base 80.98,37.58 |q Long Lost Lore/.*Retrieve the Tomes.* |future
+goto 89.74,43.64
+'Examine _Jorunn the Skald-King_ |lorebook Jorunn the Skald-King/1/9/4
 |only Ebonheart Pact
 step
-goto 71.17,24.09 |q Long Lost Lore/.*Retrieve the Tomes.*
+goto davonswatch_base 68.89,68.85 |q Anchors from the Harbour/Return to Sees-All-Colors
 |only Ebonheart Pact
 step
-goto 61.12,24.09
-'Take _The Winds of Change_ |q Long Lost Lore/.*Retrieve the Tomes.* |count 1
-|only Ebonheart Pact
-step
-goto 35.84,24.36 |q Long Lost Lore/.*Retrieve the Tomes.*
-|only Ebonheart Pact
-step
-goto innerseaarmature_base 52.32,52.61
-'Take _Untold Legends_ |q Long Lost Lore/.*Retrieve the Tomes.* |count 2
-|only Ebonheart Pact
-step
-goto 35.60,46.52 |q Long Lost Lore/.*Retrieve the Tomes.*
-|only Ebonheart Pact
-step
-goto 19.83,59.47
-'Take _The Hidden Twilight_ |q Long Lost Lore/.*Retrieve the Tomes.* |count 3
-|only Ebonheart Pact
-step
-goto 27.17,86.26
-'Examine _Summoning Rituals of the Arch-Mage_ |q Long Lost Lore/.*Retrieve the Tomes.* |count 4
-|only Ebonheart Pact
-step
-'Open _Stonefalls_ Map
-'Travel to _Davon's Watch_ |q Long Lost Lore/Return to the Mages Guild
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto davonswatch_base 48.86,71.11 |q Long Lost Lore/Return to the Mages Guild
-|only Ebonheart Pact
-step
-goto 48.91,49.39
-'Open _Mages Guild_ |q Long Lost Lore/Return to the Mages Guild
-|only Ebonheart Pact
-step
-goto 48.26,43.64
-|tip Go downstairs.
-talk Valaste |q Long Lost Lore/Talk to Valaste
-|only Ebonheart Pact
-step
-goto 48.93,39.53
-'Examine _Arcane Brazier_ |q Long Lost Lore/Place the Tome on the Arcane Brazier
-|only Ebonheart Pact
-step
-goto 48.26,43.64
-talk Valaste |q Long Lost Lore/Talk to Valaste
-|only Ebonheart Pact
-step
-goto 48.91,43.19
-'Attune _Ritual Orb_ |q Long Lost Lore/Summon Arch-Mage Shalidor
-|only Ebonheart Pact
-step
-goto 48.97,42.59
-talk Arch-Mage Shalidor |q Long Lost Lore/Talk to Arch-Mage Shalidor
-|only Ebonheart Pact
-step
-goto 48.90,41.16
-'Use _Portal to Cheesemonger's Hollow_ |q Long Lost Lore/Enter the Portal to Sheogorath's Shrine |future
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto cheesemongershollow_base 13.29,62.58
-talk Haskill |q Long Lost Lore/Talk to Haskill |future
-|only Ebonheart Pact
-step
-goto 13.40,56.50
-|tip kill the enemies that appear
-'Close _The Portal_ |q Long Lost Lore/Close the Portal
-|only Ebonheart Pact
-step
-goto cheesemongershollow_base 13.29,62.58
-talk Haskill |q Long Lost Lore/Talk to Haskill
-|only Ebonheart Pact
-step
-goto 13.80,67.68
-'Wait for _Haskill to Open the Door_ |q Long Lost Lore/Wait for Haskill to Open the Door
-|only Ebonheart Pact
-step
-goto 13.39,75.12 |q Long Lost Lore/Explore the Hollow
-|only Ebonheart Pact
-step
-goto 28.24,75.45 |q Long Lost Lore/Explore the Hollow
-|only Ebonheart Pact
-step
-goto 69.89,35.54
-'Explore _The Hollow_ |q Long Lost Lore/Explore the Hollow
-|only Ebonheart Pact
-step
-goto 78.72,25.73
-kill Gutsripper |q Long Lost Lore/Kill Gutsripper
-|only Ebonheart Pact
-step
-goto 79.59,25.44
-'Take _Tome_ |q Long Lost Lore/Take the Tomes
-|only Ebonheart Pact
-step
-goto 76.87,27.16
-talk Sheogorath |q Long Lost Lore/Talk to Sheogorath
-|only Ebonheart Pact
-step
-goto 77.35,27.49
-'Observe _The Conversation_ |q Long Lost Lore/Observe the Conversation
-|only Ebonheart Pact
-step
-goto 77.53,27.97
-talk Arch-Mage Shalidor |q Long Lost Lore/Talk to Arch-Mage Shalidor
-|only Ebonheart Pact
-step
-goto davonswatch_base 48.33,43.67
-talk Valaste
-turnin Long Lost Lore
+goto 70.00,52.12
+|tip Inside the Fighters Guild.
+talk Guildmaster Sees-All-Colors |q Anchors from the Harbour/Return to Sees-All-Colors
 |only Ebonheart Pact
 step
 goto stonefalls_base 85.75,40.54 |lorebook Varieties of Faith: The Dark Elves/1/20/8 |tip Go outside.
@@ -16517,6 +16411,14 @@ talk Merric at-Aswala |q Anchors from the Harbour/Talk to Merric
 step
 goto 44.42,13.89
 'Take _Doshia's Journal_ |q Anchors from the Harbour/Retrieve Doshia's Journal
+|only Ebonheart Pact
+step
+goto 29.57,36.78 |q Anchors from the Harbour/Report to Sees-All-Colors
+|only Ebonheart Pact
+step
+goto 61.79,88.99
+'Climb _Stonefalls_ |q Anchors from the Harbour/Report to Sees-All-Colors
+|tip Manually skip to the next step.
 |only Ebonheart Pact
 step
 goto stonefalls_base 53.14,36.32
@@ -16891,7 +16793,6 @@ goto 15.33,23.55
 |tip Manually skip to the next step.
 step
 goto 14.60,23.91
-|tip Walk into the big open room.
 |tip Clear the room.
 kill General Serien |q The General's Demise/Kill General Serien |future
 step
@@ -17096,10 +16997,10 @@ step
 goto 78.51,52.09
 'Open _Southern Ruins_ |q Climbing the Spire/Enter the Southern Ruins
 step
-goto 83.13,54.89
+goto 83.12,54.88
 'Use _Lord Ward Stone_ |q Climbing the Spire/Lower the Southern Ruins Ward
 step
-goto 79.07,51.91
+goto 79.07,51.89
 'Open _Tormented Spire_ |q Climbing the Spire/Find the Northern Ruins
 |tip Manually skip to the next step.
 step
@@ -17669,7 +17570,7 @@ goto deshaan_base 13.82,54.08
 'Examine _Noxiphilic Sanguivoria_ |lorebook Noxiphilic Sanguivoria/1/16/4
 |only Ebonheart Pact
 step
-goto deshaan_base 13.05,53.66
+goto 13.05,53.66
 'Find the _Ruins Entrance_ |q Hiding in Plain Sight/Find the Ruins Entrance |future
 step
 goto 13.05,53.66
@@ -17965,7 +17866,7 @@ talk Sheogorath |q Simply Misplaced/Talk to Sheogorath
 |only Ebonheart Pact
 step
 goto 51.70,56.30
-'Take _Circus of Cheerful Slaughter_ |q Simply Misplaced/Collect the Book
+'Take _Circus of Cheerful Slaughter_ |lorebook Circus of Cheerful Slaughter/1/7/4
 |only Ebonheart Pact
 step
 goto mournhold_base 33.55,57.14
@@ -18591,14 +18492,12 @@ talk Priest Dilyne
 accept The Wounds in the World
 step
 goto 79.89,39.32
-|tip Make sure to kill it close to orange portal.
 kill Watcher |q The Wounds in the World/.*Kill Watchers to Close Portals.* |count 1
 step
 goto 79.98,39.55
 'Take _Reliquary Stone_ |q A Saint Asunder/.*Find Reliquary Stones.* |count 1
 step
 goto 78.12,39.72
-|tip Make sure to kill it close to orange portal.
 kill Watcher |q The Wounds in the World/.*Kill Watchers to Close Portals.* |count 2
 step
 goto 78.27,39.75
@@ -18608,7 +18507,6 @@ goto 80.04,37.49
 'Take _Reliquary Spire_ |q A Saint Asunder/Find the Reliquary Spire
 step
 goto 79.55,36.60
-|tip Make sure to kill it close to orange portal.
 kill Watcher |q The Wounds in the World/.*Kill Watchers to Close Portals.* |count 3
 step
 goto 78.32,37.15
@@ -18618,7 +18516,6 @@ goto 77.09,37.85
 'Take _Reliquary Stone_ |q A Saint Asunder/.*Find Reliquary Stones.* |count 3
 step
 goto 76.65,38.16
-|tip Make sure to kill it close to orange portal.
 kill Watcher |q The Wounds in the World/.*Kill Watchers to Close Portals.* |count 4
 step
 goto 76.97,36.46
@@ -18794,7 +18691,7 @@ goto 60.69,45.62
 step
 goto deshaan_base 40.19,48.92
 talk Ganthis
-accept Onward to Shadowfen |future
+accept Onward to Shadowfen
 step
 goto mournhold_base 67.11,64.98
 'Use _Mournhold_
@@ -19133,12 +19030,12 @@ talk Valaste |q Circus of Cheerful Slaughter/Talk to Valaste
 |only Ebonheart Pact
 step
 goto 30.61,68.00
-'Examine _Circus of Cheerful Slaughter_ |q Circus of Cheerful Slaughter/Read "Circus of Cheerful Slaughter" |future
+'Examine _Circus of Cheerful Slaughter_ |q Circus of Cheerful Slaughter/Read "Circus of Cheerful Slaughter"
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
 goto circusofcheerfulslaughter_base 57.93,71.95
-talk Sheogorath |q Circus of Cheerful Slaughter/Talk to Sheogorath |future
+talk Sheogorath |q Circus of Cheerful Slaughter/Talk to Sheogorath
 |only Ebonheart Pact
 step
 goto 75.00,61.97
@@ -19176,9 +19073,17 @@ talk Sheogorath |q Circus of Cheerful Slaughter/Find Sheogorath in Daggerwaymore
 |only Ebonheart Pact
 step
 goto 22.87,65.45
-.'Save _Vanus Galerion_ |q Circus of Cheerful Slaughter/Save the Guild Members
-.'Save _Arch-Mage Shalidor_ |q Circus of Cheerful Slaughter/Save the Guild Members
-.'Save _Valaste_ |q Circus of Cheerful Slaughter/Save the Guild Members
+'Save _Vanus Galerion_ |q Circus of Cheerful Slaughter/Save the Guild Members
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 28.99,60.03
+'Save _Arch-Mage Shalidor_ |q Circus of Cheerful Slaughter/Save the Guild Members
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 28.32,67.71
+'Save _Valaste_ |q Circus of Cheerful Slaughter/Save the Guild Members
 |only Ebonheart Pact
 step
 goto 26.95,63.40
@@ -19465,7 +19370,12 @@ step
 goto 72.57,44.47
 wayshrine Forsaken Hamlet
 step
-goto altencorimont_base 31.94,60.75
+goto altencorimont_base 41.38,27.34
+|tip The Prophet appears:
+accept The Tharn Speaks
+|only Ebonheart Pact
+step
+goto 31.94,60.75
 wayshrine Alten Corimont
 step
 goto 54.35,75.53 |q Cracking the Egg/Meet Vicecanon Servyna in Hatching Pools
@@ -19562,7 +19472,7 @@ turnin Keepers of the Shell
 accept The Mnemic Egg
 step
 'Open _Stonefalls_ Map
-'Travel to _Davon's Watch_ |q The Tharn Speaks/Go to the Davon's Watch Mages Guild
+'Travel to _Davon's Watch_ in Stonefalls |q The Tharn Speaks/Go to the Davon's Watch Mages Guild
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -19574,7 +19484,7 @@ goto 48.92,49.61
 |only Ebonheart Pact
 step
 goto 46.27,41.59
-|tip Go downstairs inside the Mages Guild.
+|tip He is Go downstairs inside the Mages Guild.
 talk Abnur Tharn |q The Tharn Speaks/Talk to Abnur Tharn
 |only Ebonheart Pact
 step
@@ -19598,9 +19508,6 @@ step
 goto 44.20,37.89
 'Examine _Speaking Stone_ |q The Tharn Speaks/Search for Information in Knife Ear Grotto
 |tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto 48.13,29.23 |q The Tharn Speaks/Search for Information in Knife Ear Grotto
 |only Ebonheart Pact
 step
 goto 70.68,22.29 |q The Tharn Speaks/Search for Information in Knife Ear Grotto
