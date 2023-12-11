@@ -2088,58 +2088,18 @@ CGV:RegisterGuide("LEVELING\\Craglorn",[[
 loadingimage loadscreen_craglorn_01.dds
 description The constellations have disappeared. Ancient Yokudan warriors and deadly atronachs menace the rocky expanse of Craglorn.
 step
-'_***TIP ALTERNATIVELY YOU CAN CHOOSE TO DO IMPERIAL SEWERS GUIDE THE END OF IT WILL BRING YOU BACK TO CRAGLORN IT IS A PVP ZONE.***_
-'Open _Grahtwood_ Map
-'Travel _Elden Root_ |q The Star-Gazers |future
+'***TIP _ALTERNATIVELY YOU CAN CHOOSE TO DO IMPERIAL SEWERS GUIDE THE END OF IT WILL BRING YOU BACK TO CRAGLORN IT IS A PVP ZONE._*** |q The Star-Gazers |future
 |tip Manually skip to the next step.
-|only Aldmeri Dominion
 step
-goto eldenrootgroundfloor_base 66.76,45.06
-talk Star-Gazer Herald
+'Open _Craglorn_ Map
+'Travel to _Belkarth_ |q The Star-Gazers |future
+|tip Manually skip to the next step.
+step
+goto belkarth_base 51.46,37.55
+'Examine _A Dire Warning_
 accept The Star-Gazers
-|only Aldmeri Dominion
 step
-goto 66.76,45.06
-'Use _Cart to Belkarth_ |q The Star-Gazers/Board the Cart |future
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-'_***TIP ALTERNATIVELY YOU CAN CHOOSE TO DO IMPERIAL SEWERS GUIDE THE END OF IT WILL BRING YOU BACK TO CRAGLORN IT IS A PVP ZONE.***_
-'Open _Stormhaven_ Map
-'Travel to _Wayrest_ |q The Star-Gazers |future
-|tip Manually skip to the next step.
-|only Daggerfall Covenant
-step
-goto wayrest_base 40.65,15.43
-talk Star-Gazer Herald
-accept The Star-Gazers
-|only Daggerfall Covenant
-step
-goto 41.28,16.05
-'Use _Cart to Belkarth_ |q The Star-Gazers/Board the Cart |future
-|tip Manually skip to the next step.
-|only Daggerfall Covenant
-step
-'_***TIP ALTERNATIVELY YOU CAN CHOOSE TO DO IMPERIAL SEWERS GUIDE THE END OF IT WILL BRING YOU BACK TO CRAGLORN IT IS A PVP ZONE.***_
-'Open _Deshaan_ Map
-'Travel to _Mournhold_ |q The Star-Gazers/Board the Cart
-|tip Manually skip to the next step
-|only Ebonheart Pact
-step
-goto mournhold_base 65.87,48.34
-talk Star-Gazer Herald
-accept The Star-Gazers
-|only Ebonheart Pact
-step
-goto 65.87,48.34
-'Use _Cart to Belkarth_ |q The Star-Gazers/Board the Cart |future
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto belkarth_base 52.76,39.47 |q The Star-Gazers/Ask About Star-Gazers In Town |future
-step
-goto 44.97,64.15
-talk Slonn Clod-Kicker |q The Star-Gazers/Ask About Star-Gazers In Town
+goto 42.94,65.95 |q The Star-Gazers/Find Hara
 step
 goto 25.07,57.11
 'Open _Star-Gazers' Observatory_ |q The Star-Gazers/Find Hara
@@ -11836,7 +11796,7 @@ goto 38.61,34.31
 |tip Manually skip to the next step.
 step
 goto 37.02,34.66
-|tip She is upstairs.
+|tip Go upstairs.
 talk Neria Lerano
 turnin The Memory Stone
 step

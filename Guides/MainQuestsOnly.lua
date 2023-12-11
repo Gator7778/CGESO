@@ -20163,11 +20163,10 @@ goto 34.01,38.68
 'Search _Strongbox_ |q Blindsided/Search the Strongbox
 step
 goto 34.08,38.72
-|tip She appears.
 talk Queen Nurnhilde |q Blindsided/Talk to Queen Nurnhilde
 step
 goto 33.67,38.23
-|tip Go downstairs.
+|tip Drop down.
 talk Lieutenant Koruni
 turnin Blindsided
 accept Sleep for the Dead
@@ -20268,7 +20267,7 @@ step
 goto 23.15,43.92
 talk Giant |q The Siege of Cradlecrush/Talk to the Giant
 step
-goto 22.02,47.13
+goto 22.13,48.43
 'Get _Inside the Fort_ |q The Siege of Cradlecrush/Get Inside the Fort
 step
 goto 22.91,50.47
@@ -20403,7 +20402,7 @@ turnin Sleeping on the Job
 accept The Pride of a Prince
 step
 goto 28.89,44.35
-|tip He is in Deldwine's Inn.
+|tip Inside this building.
 talk Lord Vurlop |q The Pride of a Prince/Talk to Lord Vurlop
 step
 goto 69.53,42.81
@@ -20412,7 +20411,6 @@ goto 69.53,42.81
 talk Thane Harvald |q The Pride of a Prince/Talk to Thane Harvald
 step
 goto 68.97,28.68
-|tip She walks around.
 talk Naryu Virian |q The Pride of a Prince/.*Talk to the Pact Delegates.* |count 1
 |tip Manually skip to the next step.
 step
@@ -20541,7 +20539,7 @@ step
 goto 35.96,67.65 |q Our Poor Town/Find Stormy-Eye's Key
 step
 goto 34.22,66.10
-|tip They are tiny green bugs flying all around this area. They are spread out, so you may have to search around for them.
+|tip All aorund this area.
 'Collect _Torchbug Wings_ |q Our Poor Town/Find Stormy-Eye's Key
 |tip Manually skip to the next tep.
 step
@@ -20555,7 +20553,6 @@ goto 34.20,65.24
 talk Asmalah the Caller |q Our Poor Town/Confront the Stranger in the House
 step
 goto 33.88,68.67
-|tip Dismiss any allies and slow dps stop just below 50% or it will bug and you will have to logout to fix it.
 kill Asmalah the Caller |q Our Poor Town/Confront Asmalah
 step
 goto 33.48,68.75
@@ -20570,7 +20567,6 @@ step
 goto 95.83,80.22 |q Our Poor Town/Search the Ruined House for the Reagents
 step
 goto eastmarch_base 34.16,67.66
-|tip It is in the corner of the ruined house.
 'Search _Reagent Filled Vase_ |q Our Poor Town/Search the Ruined House for the Reagents
 step
 goto 35.86,67.62 |q Our Poor Town/Return to Stormy-Eyes
@@ -20707,7 +20703,7 @@ goto 45.62,67.45
 talk High Priest Esling |q Eternal Slumber/Talk to the High Priest |future
 step
 goto 45.61,67.46
-'Observe the _Dreamwalker_ |q Eternal Slumber/Observe the Dreamwalker
+'Observe _Stormy Eyes_ |q Eternal Slumber/Observe the Dreamwalker
 step
 goto 45.63,67.44
 talk High Priest Esling |q Eternal Slumber/.*Pray at the Totems.* |count 1
@@ -20755,7 +20751,6 @@ goto 45.01,67.94
 'Use _Totem of the Fox_ |q Gods Save the King/Pray to the Fox
 step
 goto mistwatchtower_base 78.76,62.98
-|tip You start to freeze in this cave, so you have to stop at the fires along the path.
 talk Fractured Spirit of Jorunn |q Gods Save the King/Talk to the Shade of Jorunn
 step
 goto 50.90,58.05 |q Gods Save the King/Free Fractured Spirit of Jorunn
@@ -21910,6 +21905,7 @@ step
 |tip Manually skip to the next step.
 step
 '_In the middle of the room:_
+kill Draugr
 kill Thallik Wormfather |q Shattered Hopes/Kill Thallik Wormfather
 step
 '_After you kill the Draugr:_
