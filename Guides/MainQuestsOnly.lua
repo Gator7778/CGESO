@@ -6709,7 +6709,7 @@ turnin The Mad God's Bargain
 |only Aldmeri Dominion
 step
 goto 52.70,48.52
-|tip Go Outside.
+|tip Go outside.
 talk Arch-Mage Shalidor
 accept The Arch-Mage's Boon
 |only Aldmeri Dominion
@@ -13958,7 +13958,7 @@ turnin The Mad God's Bargain
 |only Daggerfall Covenant
 step
 goto 52.70,48.52
-|tip Go Outside.
+|tip Go outside.
 talk Arch-Mage Shalidor
 accept The Arch-Mage's Boon
 |only Daggerfall Covenant
@@ -22466,7 +22466,7 @@ turnin The Mad God's Bargain
 |only Ebonheart Pact
 step
 goto 52.70,48.52
-|tip Go Outside.
+|tip Go outside.
 talk Arch-Mage Shalidor
 accept The Arch-Mage's Boon
 |only Ebonheart Pact
@@ -27018,7 +27018,7 @@ talk Kelmen Locke |q Elemental Army/Talk to Kelmen |future
 step
 goto 88.39,65.82 |q Elemental Army/Kill the Air Monarch
 step
-goto craglorn_base 82.85,62.94 |q Elemental Army/Kill the Air Monarch
+goto 82.85,62.94 |q Elemental Army/Kill the Air Monarch
 step
 goto 81.16,57.64 |q Elemental Army/Kill the Air Monarch
 step
@@ -27276,7 +27276,7 @@ goto 58.27,42.70
 step
 goto ilthagsundertower_base 56.05,66.13 |q The Serpent's Fang/Kill Ilthag Ironblood |future |tip Drop down in the hole. 
 step
-goto ilthagsundertower02_base 67.51,19.70 |q The Serpent's Fang/Kill Ilthag Ironblood
+goto ilthagsundertower02_base 67.51,19.70 |q The Serpent's Fang/Kill Ilthag Ironblood |tip Drop down in the hole.
 step
 goto 26.63,11.11 |q The Serpent's Fang/Kill Ilthag Ironblood
 step
@@ -27401,7 +27401,7 @@ goto 60.52,72.12
 'Open _Sanctum of Farsight_ |q Dawn of the Exalted Viper/Enter the Sanctum of Farsight
 step
 goto howlingsepulchersscrying_base 53.94,51.47
-'Activate _Ritual Fires_ |q Dawn of the Exalted Viper/Activate the Ritual Fires
+'Activate _Pedestal_ |q Dawn of the Exalted Viper/Activate the Ritual Fires
 step
 goto 53.94,51.47
 |tip Watch the dialogue.
@@ -27445,7 +27445,7 @@ talk The Thief
 turnin Dawn of the Exalted Viper
 step
 goto 25.11,61.20
-|tip Go Outside.
+|tip Go outside.
 talk The Celestial Warrior
 accept The Time-Lost Warrior
 step
@@ -27491,7 +27491,7 @@ goto 60.12,76.43
 talk Eveli Sharp-Arrow |q Invitation to Orsinium/Rendezvous with the Caravan
 step
 goto 63.78,76.47
-'Defend _Orc Peasants_ |q Invitation to Orsinium/Rescue the Orc Peasants
+kill Winterborn Forces |q Invitation to Orsinium/Rescue the Orc Peasants
 step
 goto 64.53,74.96
 talk Ulsha |q Invitation to Orsinium/Rescue the Remaining Orc Peasants
@@ -27756,11 +27756,11 @@ step
 goto rectory01_base 50.47,38.22
 talk Priest Uugus |q A King-Sized Problem/Save Priest Uugus |future
 step
-goto 69.37,61.56 |q A King-Sized Problem/Find High Priestess Solgra
+goto 69.37,61.56 |q A King-Sized Problem/Find High Priestess Solgra |future
 step
-goto 39.90,44.93 |q A King-Sized Problem/Find High Priestess Solgra
+goto 39.90,44.93 |q A King-Sized Problem/Find High Priestess Solgra |future
 step
-goto 26.48,77.90 |q A King-Sized Problem/Find High Priestess Solgra
+goto 26.48,77.90 |q A King-Sized Problem/Find High Priestess Solgra |future
 step
 goto 60.98,87.75
 kill Mazogug the Bold |q A King-Sized Problem/Rescue High Priestess Solgra |future
@@ -27937,7 +27937,6 @@ step
 goto 71.20,50.02
 wayshrine Shatul
 step
-goto 77.42,52.08
 |tip Crouch to find Giants trail from this spot.
 kill Urgkail the Cleaver |q A Question of Succession/Kill Urgkail the Cleaver
 step
@@ -28184,7 +28183,6 @@ talk Chief Bazrag |q To Save a Chief/Escort Chief Bazrag to Safety
 |tip Manually skip to the next step.
 step
 goto 39.87,33.26
-|tip Hitting the last valve first removes the time limit.
 'Use _Pressure Plate Valve_ |q To Save a Chief/Escort Chief Bazrag to Safety
 |tip Manually skip to the next step.
 step
@@ -28363,7 +28361,7 @@ goto 75.33,39.45
 step
 goto 75.04,68.80
 |tip Watch dialogue
-kill the Vosh Rakh |q The Anger of a King/Kill the Vosh Rakh |future
+kill  Vosh Rakh |q The Anger of a King/Kill the Vosh Rakh |future
 step
 goto 75.50,70.44
 'Examine _Vosh Rakh Orders_ |q The Anger of a King/Find the Information You Seek
@@ -28916,7 +28914,7 @@ goto 23.11,78.52 |q Cleaning House/Meet Velsa Outside Silver-Claw's Warehouse |t
 step
 goto 30.37,89.75 |q Cleaning House/Meet Velsa Outside Silver-Claw's Warehouse |tip Drop off edge over the boxes stay crouched then drop. down by the big rocks and follow around behind the building.
 step
-goto 32.94,90.72
+goto 33.72,90.51
 talk Velsa |q Cleaning House/Meet Velsa Outside Silver-Claw's Warehouse
 step
 goto 33.56,89.86
@@ -28953,19 +28951,9 @@ step
 'Travel _Abah's Landing_ |q Cleaning House/Return Silver-Claw's Ledger |future
 |tip Manually skip to the next step.
 step
-goto 21.38,43.10
-'Open _Thieves Den_ |q Cleaning House/Return Silver-Claw's Ledger |future
-|tip Manually skip to the next step.
+goto abahslanding_base 32.12,57.36 |q Cleaning House/Return Silver-Claw's Ledger |future
 step
-goto safehouse_base 43.09,63.20 |q Cleaning House/Return Silver-Claw's Ledger
-step
-goto 50.12,40.73 |q Cleaning House/Return Silver-Claw's Ledger
-step
-goto 87.41,38.80
-'Climb _Abah's Landing_ |q Cleaning House/Return Silver-Claw's Ledger
-|tip Manually skip to the next step.
-step
-goto abahslanding_base 27.16,32.64
+goto 27.99,32.93
 talk Silver-Claw |q Cleaning House/Return Silver-Claw's Ledger
 step
 goto 27.23,33.04
@@ -29015,11 +29003,11 @@ talk Silver-Claw |q The Long Game/Talk to Silver-Claw
 step
 goto 42.16,48.33 |q The Long Game/Meet Percius Loche at the Diamond Thimble |tip Go upstairs.
 step
-goto 42.95,42.11
+goto 43.78,41.98
 'Open _The Diamond Thimble_ |q The Long Game/Meet Percius Loche at the Diamond Thimble
 |tip Manually skip to the next step.
 step
-goto 42.81,43.43
+goto 43.66,43.30
 talk Percius Loche |q The Long Game/Meet Percius Loche at the Diamond Thimble
 step
 goto 42.87,43.41
@@ -29081,7 +29069,7 @@ goto hiradirgecitadeltg3_s1_base 31.92,45.91
 'Spy on _Chief Inspector Rhanbiq and Cosh_ |q The Long Game/Spy on Chief Inspector Rhanbiq and Cosh
 step
 'Open _Hew's Bane_ Map
-'Travel to _Abah's Landing_ |q The Long Game/Escape Iron Wheel Headquarters
+'Travel to _Abah's Landing_ |q The Long Game/Escape Iron Wheel Headquarters |future
 |tip Manually skip to the next step.
 step
 goto abahslanding_base 21.47,43.03
@@ -29089,6 +29077,7 @@ goto abahslanding_base 21.47,43.03
 |tip Manually skip to the next step.
 step
 goto safehouse_base 36.57,42.35
+|tip Watch the dialogue.
 talk Zeira |q The Long Game/Meet Zeira at the Thieves Den
 step
 goto 36.57,42.35
@@ -29113,7 +29102,10 @@ step
 goto 43.95,43.53
 talk Mamaea |q A Flawless Plan/Talk to Mamaea
 step
-goto 42.89,37.18 |q A Flawless Plan/Find Percius Loche's Trail
+goto 42.89,37.18
+'Find _Percius Loche's Trail_ |q A Flawless Plan/Find Percius Loche's Trail
+step
+goto 31.92,52.77 |q A Flawless Plan/Find Percius Loche's Trail
 step
 goto 25.79,63.04
 talk Percius Loche |q A Flawless Plan/Talk to Percius Loche |future
@@ -29123,14 +29115,12 @@ step
 goto hewsbane_base 45.01,44.77 |q A Flawless Plan/Talk to Zeira
 step
 goto 40.30,39.55
-talk Zeira |q A Flawless Plan/Talk to Zeira |future
-step
 talk Zeira |q A Flawless Plan/Travel to al-Danobia Tomb |future
 |tip Manually skip to the next step.
 step
 goto aldanobia_base 44.13,58.72
 talk Percius Loche
-talk Zeira |q A Flawless Plan/Sneak Past the Iron Wheel
+talk Zeira |q A Flawless Plan/Sneak Past the Iron Wheel |future
 |tip Manually skip to the next step.
 step
 goto 49.02,46.16
@@ -29138,6 +29128,10 @@ goto 49.02,46.16
 step
 goto aldanobitombdungeon_base 17.13,63.83
 'Open _Tu'wacca's Pillars_ |q A Flawless Plan/Explore al-Danobia Tomb
+step
+goto 16.23,59.83
+|tip Watch the dialogue.
+'Examine _Excerpt from al-Danobia Heist Journal_ |lorebook Excerpt from al-Danobia Heist Journal/3/28/48
 step
 goto 20.27,58.75
 .'_Turn Left Relief Wheel to Scroll_
@@ -29200,6 +29194,7 @@ goto 61.37,59.93
 'Open _Al-Danobia Crypt_ |q A Flawless Plan/Investigate the Treasure Vaults
 step
 goto 77.95,60.09
+|tip Watch the dialogue.
 kill Lakayd the Repentant |q A Flawless Plan/Find a Way into the al-Danobia Vault Room
 step
 goto 80.96,60.02
@@ -29278,7 +29273,7 @@ goto 87.34,38.42
 step
 goto abahslanding_base 39.92,47.20 |q Forever Hold Your Peace/Meet Silver-Claw at Spotless Goods
 step
-goto abahslanding_base 45.37,47.28
+goto abahslanding_base 46.14,47.20
 'Open _Spotless Goods Shipping Concern_ |q Forever Hold Your Peace/Meet Silver-Claw at Spotless Goods
 |tip Manually skip to the next step.
 step
@@ -29343,7 +29338,7 @@ goto hubalajadpalace_base 31.18,29.36
 step
 goto 30.94,29.54
 talk Zafrik |q Forever Hold Your Peace/Help Zeira Gain Entry
-|tip Persuade and lie to him.
+|tip Persuade.
 step
 goto 32.78,33.33
 talk Zeira |q Forever Hold Your Peace/Talk to Zeira |future
@@ -29666,10 +29661,7 @@ step
 goto 70.44,70.72 |q The One That Got Away/Find Bellulor Chatterbeak in the Shornhelm Outlaws Refuge
 |only Daggerfall Covenant
 step
-goto 82.36,58.71 |q The One That Got Away/Find Bellulor Chatterbeak in the Shornhelm Outlaws Refuge
-|only Daggerfall Covenant
-step
-goto rivenspire_base 47.35,53.19
+goto 64.44,62.65
 'Open _Shornhelm Outlaws Refuge_ |q The One That Got Away/Find Bellulor Chatterbeak in the Shornhelm Outlaws Refuge |future
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
@@ -29836,7 +29828,7 @@ step
 goto goldcoast_base 36.96,47.04 |q Signed in Blood/Find a Way Into the Jarol Estate
 step
 goto 29.79,37.06
-'Unlock _Jarol Estate Gat_e |q Signed in Blood/Find a Way Into the Jarol Estate
+'Unlock _Jarol Estate Gate_ |q Signed in Blood/Find a Way Into the Jarol Estate
 |tip Manually skip to the next step.
 step
 goto 25.05,38.49
@@ -30029,7 +30021,7 @@ goto 47.17,55.45
 'Spy on _Grand Sermonizer_ |q A Lesson in Silence/Spy on the Grand Sermonizer
 step
 goto athimahmanson01_base 57.73,32.46
-|tip Open Interrogation Hall and walk into the room.
+|tip Open Interrogation Hall.
 'Wait for _Tanek to Investigate_ |q A Lesson in Silence/Wait for Tanek to Investigate |future
 step
 goto 48.52,40.32
@@ -35394,7 +35386,7 @@ goto 76.52,37.21
 |tip Manually skip to the next step.
 step
 goto 77.49,36.82
-'Wait to _Be Introduced_ |q The Usurper Queen/Wait to Be Introduced |future
+'Wait to be _Introduced_ |q The Usurper Queen/Wait to Be Introduced |future
 step
 goto 77.81,36.70
 talk Euraxia Tharn |q The Usurper Queen/Talk to Euraxia Tharn
