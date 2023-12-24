@@ -35330,6 +35330,9 @@ step
 goto 73.92,54.02
 kill Gravestalker Gemmia |q A Rage of Dragons/Kill Gravestalker Gemmia
 step
+goto 73.92,54.02
+'Rendezvous with Khamira |q A Rage of Dragons/Rendezvous with Khamira
+step
 goto 63.51,53.56
 |tip Watch the dialogue.
 'Enter _Elsweyr_ |q A Rage of Dragons/Follow the Dragon |future
@@ -35751,9 +35754,11 @@ goto 62.29,33.33
 'Open _Rimmen_ |q Two Queens/Rendezvous at the Sewer Entrance |future
 |tip Manually skip to the next step.
 step
-goto 66.19,40.63 |q Two Queens/Rendezvous at the Sewer Entrance |future
+goto 65.43,41.09 |q Two Queens/Rendezvous at the Sewer Entrance |future
 step
-goto 55.96,35.68 |q Two Queens/Rendezvous at the Sewer Entrance
+goto 55.96,35.68 |q Two Queens/Rendezvous at the Sewer Entrance |future
+step
+goto 61.67,31.94 |q Two Queens/Rendezvous at the Sewer Entrance |future
 step
 goto 61.67,31.94
 'Rendezvous at the _Sewer Entrance_ |q Two Queens/Rendezvous at the Sewer Entrance
@@ -36290,6 +36295,7 @@ goto 69.09,42.19
 |tip This is an endurance phase if you try to burn you will run out of Magicka/Stamina.
 |tip During air phase watch the ground stay out of red circles and get into the green circle in the center and after use dragonhorn and stay out of lightning.
 kill Mulaamnir |q Jode's Core/Kill Mulaamnir
+|tip Manually skip to the next step.
 step
 goto 74.55,43.12
 'Use _Dragonhorn_ |q Jode's Core/Sound the Dragonhorn |future
@@ -36326,6 +36332,8 @@ goto 50.35,39.45
 step
 goto 50.35,39.45
 talk Envoy Cashia |q The Heir of Anequina/Talk to Envoy Cashia
+step
+goto 52.83,34.50 |q The Heir of Anequina/Talk to Abnur Tharn |future
 step
 goto 71.93,38.95
 talk Abnur Tharn |q The Heir of Anequina/Talk to Abnur Tharn |future
@@ -36468,7 +36476,7 @@ talk Za'ji
 talk Sai Sahan |q The Dragon's Lair/Talk to Sai Sahan |future
 step
 goto 74.80,71.96
-'Find the _Perfect Pounce_ |q The Dragon's Lair/Find the Perfect Pounce
+'Find _The Perfect Pounce_ |q The Dragon's Lair/Find the Perfect Pounce
 step
 goto 74.73,72.44
 'Remove the _Wheel Lock_ |q The Dragon's Lair/Seize the Perfect Pounce
@@ -36487,7 +36495,7 @@ goto 79.70,26.52
 'Travl to _Tideholm_ |q The Dragon's Lair/Sail to the Island
 |tip Manually skip to the next step.
 step
-goto ELS_Dragonguard_island01_base 51.39,83.21
+goto ELS_Dragonguard_island01_base 53.42,81.33
 talk Sai Sahan |q The Dragon's Lair/Talk to Sai Sahan
 step
 goto 62.83,70.80
@@ -36520,12 +36528,10 @@ step
 goto ELS_Dragonguard_island03_base 29.39,32.04 |q The Dragon's Lair/Search for the Dragon
 step
 goto 79.51,66.53
-|tip Follow path through 2 broken walls to the next door.
 'Open _Sanctum Balcony_ |q The Dragon's Lair/Search for the Dragon
 |tip Manually skip to the next step.
 step
 goto 72.44,64.88
-|tip Watch the dialogue.
 'Use _Lever_ |q The Dragon's Lair/Search for the Dragon
 |tip Manually skip to the next step.
 step
@@ -36538,16 +36544,16 @@ step
 goto 52.55,36.81
 'Open _Dragon Chamber_ |q The Dragon's Lair/Enter the Dragonguard Chamber
 step
-goto ELS_Dragonguard_island01_base 48.86,36.59
+goto ELS_Dragonguard_island01_base 51.33,35.32
 |tip Watch the dialogue.
 talk Nahfahlaar |q The Dragon's Lair/Talk to the Dragon |future
 step
-goto 50.01,34.16
+goto 50.04,34.72
 talk Sai Sahan
 turnin The Dragon's Lair
 accept Reformation
 step
-goto 44.47,38.57
+goto 46.37,36.95
 'Open _Dragonguard Sanctum_ |q Reformation/Enter Dragonguard Sanctum
 step
 goto ELS_DG_Sanctuary_base 26.24,69.13 |q Reformation/Talk to Za'ji
@@ -36564,11 +36570,11 @@ step
 goto 33.27,74.69
 'Open _Nahfahlaar Chamber_ |q Reformation/Return to Sai
 step
-goto ELS_Dragonguard_island01_base 47.80,38.75
+goto ELS_Dragonguard_island01_base 49.93,37.14
 talk Sai Sahan
 turnin Reformation
 step
-goto 49.01,38.39
+goto 51.24,36.89
 talk Nahfahlaar
 accept Uneasy Alliances
 step
@@ -36886,12 +36892,12 @@ goto 30.01,21.81
 'Open _New Moon Fortress_ |q Order of the New Moon/Enter the New Moon Fortress |future
 |tip Manually skip to the next step.
 step
-goto newmoonfortress1_base 79.27,38.80
+goto newmoonfortress1_base 79.31,39.04
 talk Trial Master Zayri |q Order of the New Moon/Talk to Trial Master Zayri |future
 step
 goto 89.09,40.76 |q Order of the New Moon/Complete the First Trial
 step
-goto 89.20,30.39 |q Order of the New Moon/Complete the First Trial |tip Go downstairs.
+goto 88.99,30.23 |q Order of the New Moon/Complete the First Trial
 step
 goto 82.51,36.85 |q Order of the New Moon/Complete the First Trial
 step
@@ -36904,8 +36910,8 @@ goto 81.26,25.13
 |tip Manually skip to the next step.
 step
 goto 76.12,30.67
-|tip Move Cube with light attacks.
 'Move _Game Cube on Square_ |q Order of the New Moon/Complete the First Trial
+|tip Manually skip to the next step.
 step
 goto 73.39,30.35
 'Open _New Moon Temple_ |q Order of the New Moon/Continue the Trial Path
@@ -36913,10 +36919,9 @@ step
 goto 66.74,30.33
 talk Lahini |q Order of the New Moon/Talk to Lahini
 step
-goto 67.92,37.86 |q Order of the New Moon/Complete the Trial Path
+goto 67.92,37.86 |q Order of the New Moon/Complete the Trial Path |tip Go up the ramp.
 step
 goto 64.76,31.70
-|tip Go up the ramp.
 'Activate _Door Switch_ |q Order of the New Moon/Complete the Trial Path
 |tip Manually skip to the next step.
 step
@@ -36924,39 +36929,50 @@ goto 67.13,27.01
 'Move _Game Cube on Square_ |q Order of the New Moon/Complete the Trial Path
 |tip Manually skip to the next step.
 step
+goto 66.24,21.42 |q Order of the New Moon/Complete the Trial Path
+step
 goto 68.78,25.61
-|tip Move through the doorway.
 'Activate _Door Switch_ |q Order of the New Moon/Complete the Trial Path
 |tip Manually skip to the next step.
 step
+goto 67.52,27.45 |q Order of the New Moon/Complete the Trial Path
+step
 goto 60.95,30.48
-|tip Move Game Cube to this spot using attacks.
-'Move _Game Cube to this Point_ |q Order of the New Moon/Complete the Trial Path
+'Move _Game Cube to this Square_ |q Order of the New Moon/Complete the Trial Path
+|tip Manually skip to the next step.
+step
+goto 57.42,24.84 |q Order of the New Moon/Complete the Trial Path
+step
+goto 59.17,29.09
+'Activate _Door Switch_ |q Order of the New Moon/Complete the Trial Path
 |tip Manually skip to the next step.
 step
 goto 56.93,29.62
-'Move _Game Cube to this Point_ |q Order of the New Moon/Complete the Trial Path
-|tip Move Game Cube to this spot using attacks.
+'Move _Game Cube to this Square_ |q Order of the New Moon/Complete the Trial Path
+|tip Manually skip to the next step.
+step
+goto 56.51,33.43 |q Order of the New Moon/Complete the Trial Path
 step
 goto 62.32,33.54
 'Activate _Door Switch_ |q Order of the New Moon/Complete the Trial Path
 |tip Manually skip to the next step.
 step
-goto 62.31,39.40
-'Game _Cube Location_ |q Order of the New Moon/Complete the Trial Path
-|tip Manually skip to the next step.
+goto 62.44,39.39 |q Order of the New Moon/Complete the Trial Path
 step
 goto 61.03,30.13
-'Move _Game Cube to this Point_ |q Order of the New Moon/Complete the Trial Path
+'Move _Game Cube to this Square_ |q Order of the New Moon/Complete the Trial Path
 |tip Move Game Cube to this spot using attacks.
+step
+goto 57.31,24.86 |q Order of the New Moon/Complete the Trial Path
 step
 goto 59.20,29.04
 'Activate _Door Switch_ |q Order of the New Moon/Complete the Trial Path
 |tip Manually skip to the next step.
 step
+goto 61.03,30.23 |q Order of the New Moon/Complete the Trial Path
+step
 goto 57.00,31.06
-'Move _Game Cube to this Point_ |q Order of the New Moon/Complete the Trial Path
-|tip Move Game Cube to this spot using attacks.
+'Move _Game Cube to this Square_ |q Order of the New Moon/Complete the Trial Path
 step
 goto 55.74,30.47
 'Open _New Moon Temple_ |q Order of the New Moon/Talk to Trial Master Zayri
@@ -36976,28 +36992,24 @@ goto 49.62,38.41
 |tip Manually skip to the next step.
 step
 goto 49.49,51.39
-'Explore the _Fortress_ |q Order of the New Moon/Explore the Fortress
-step
-goto 49.49,51.39
-'Observe the _Ritual_ |q Order of the New Moon/Observe the Ritual
+'Observe _Ritual_ |q Order of the New Moon/Observe the Ritual |future
 step
 goto 49.49,51.39
 talk Caska |q Order of the New Moon/Talk to Caska
 step
 goto 44.73,55.23
-'Destroy the _Aeonstone_ |q Order of the New Moon/Destroy the Aeonstone |future
+|tip Watch the dialogue.
+'Destroy _Aeonstone_ |q Order of the New Moon/Destroy the Aeonstone |future
 step
 goto 40.32,52.80
 'Open _New Moon Fortress_ |q Order of the New Moon/Meet Up With Caska
 |tip Manually skip to the next step.
 step
-goto 25.56,50.21 |q Order of the New Moon/Meet Up With Caska
+goto 25.56,50.21 |q Order of the New Moon/Meet Up With Caska |tip Go upstairs.
 step
-goto 09.54,53.72 |q Order of the New Moon/Meet Up With Caska |tip Go upstairs.
+goto 09.54,53.72 |q Order of the New Moon/Meet Up With Caska
 step
-goto 11.91,66.67 |q Order of the New Moon/Meet Up With Caska
-step
-goto newmoonfortress2_base 81.82,48.32 |q Order of the New Moon/Meet Up With Caska
+goto newmoonfortress2_base 79.75,48.43 |q Order of the New Moon/Meet Up With Caska
 step
 goto 87.79,76.54 |q Order of the New Moon/Meet Up With Caska
 step
@@ -37961,9 +37973,9 @@ step
 goto 34.08,31.97
 talk Lyris |q Dark Clouds Over Solitude/Talk to Lyris Titanborn
 step
-goto 34.04,30.63 |q Dark Clouds Over Solitude/Return to Solitude |tip Drop down slowly and carefully.
+goto 34.04,30.63 |q Dark Clouds Over Solitude/Return to Solitude
 step
-goto 37.69,27.80 |q Dark Clouds Over Solitude/Return to Solitude |tip Drop down slowly and carefully.
+goto 44.23,31.13 |q Dark Clouds Over Solitude/Return to Solitude |tip Drop down slowly and carefully.
 step
 goto 48.10,25.91
 wayshrine Northern Watch
@@ -38514,35 +38526,36 @@ step
 goto 83.25,45.38
 'Examine _Netherroot Notes_ |lorebook Netherroot Notes/3/39/23
 step
-goto 95.34,42.32
-'Examine _Lycanthropic Immunity_ |lorebook Lycanthropic Immunity/3/39/24
-step
 goto 86.40,40.01
 'Examine _Refined Netherroot Brew_ |q The Vampire Scholar/Investigate the First Laboratory
+|tip Manually skip to the next step.
+step
+goto 95.34,42.32
+'Examine _Lycanthropic Immunity_ |q The Vampire Scholar/Investigate the First Laboratory
 step
 goto 89.49,38.03
 'Open _Tower Corridor_ |q The Vampire Scholar/Find Fennorian
 |tip Manually skip to the next step.
 step
 goto 71.92,27.67
-'Open _Netherroot Garden_ |q The Vampire Scholar/Find Fennorian |future
+'Open _Netherroot Garden_ |q The Vampire Scholar/Find Fennorian
 step
 goto 56.35,33.85
-'Use _Primary Distillate Overflow_ twice |q The Vampire Scholar/Shut Down the Netherroot Machines |future
+'Use _Primary Distillate Overflow_ 2 Times |q The Vampire Scholar/Shut Down the Netherroot Machines
 |tip Manually skip to the next step.
 step
 goto 56.80,21.50
-'Use _Secondary Intake_ twice |q The Vampire Scholar/Shut Down the Netherroot Machines
+'Use _Secondary Intake_ 2 Times |q The Vampire Scholar/Shut Down the Netherroot Machines
 step
 goto 32.52,27.56
 'Open _Tower Corridor_ |q The Vampire Scholar/Find Fennorian
 |tip Manually skip to the next step.
 step
-goto 07.68,28.09 |q The Vampire Scholar/Find Fennorian
+goto 08.73,27.35 |q The Vampire Scholar/Find Fennorian
 step
 goto 22.64,66.38
 'Open _Experimentation Chamber_ |q The Vampire Scholar/Find Fennorian
-|tip Watch dialogue after you open the door.
+|tip Manually skip to the next step.
 step
 goto 40.17,66.13
 |tip Watch the dialogue.
@@ -38559,20 +38572,21 @@ goto 50.96,74.36
 |tip Manually skip to the next step.
 step
 goto 69.19,53.77
-'Examine _Gray Host Communique_ |lorebook Gray Host Communique/3/39/26
+'Examine _Gray Host Communique_ |q The Vampire Scholar/Search Tzinghalis's Sanctum
 step
 goto 65.45,58.34
 'Examine _Skyrim Map_ |q The Vampire Scholar/Search Tzinghalis's Sanctum
+|tip Manually skip to the next step.
 step
 goto 67.87,59.09
 talk Lyris Titanborn |q The Vampire Scholar/Talk to Lyris Titanborn
 step
 goto 80.73,57.63
-'Use _Great Lift Antechamber_ |q The Vampire Scholar/Return to the Blue Palace
+'Use _Great Lift Antechamber_ |q Adanzda's Mining Samples |future
 |tip Manually skip to the next step.
 step
 goto 96.16,72.55
-'Open _Blackreach: Lightless Hollow_ |q The Vampire Scholar/Return to the Blue Palace
+'Open _Blackreach: Lightless Hollow_ |q Adanzda's Mining Samples |future
 |tip Manually skip to the next step.
 step
 goto blackreach_base 76.75,47.22 |q The Vampire Scholar/Return to the Blue Palace
@@ -38814,15 +38828,13 @@ goto 45.81,36.71
 'Open _The Undergrove_ |q The Gray Host/Enter the Undergrove |future
 |tip Manually skip to the next step.
 step
-goto MidnightSK5Barrow 45.03,31.43
-|tip Follow path around.
+goto MidnightSK5Barrow 59.76,55.00 |q The Gray Host/Explore the Undergrove |future
+step
+goto 45.03,31.43
 'Open _The Undergrove Nursery_ |q The Gray Host/Explore the Undergrove |future
 step
-goto 46.64,39.68
-'Confront the _Gray Host Leaders_ |q The Gray Host/Confront the Gray Host Leaders
-step
 goto 46.36,39.91
-kill Exarch Ulfra |q The Gray Host/Protect Svana
+kill Exarch Ulfra |q The Gray Host/Protect Svana |future
 step
 goto 45.93,39.13
 talk Svana |q The Gray Host/Talk to Svana
@@ -38960,13 +38972,14 @@ goto 31.28,37.65
 step
 goto blackreach_base 52.19,11.77 |q Greymoor Rising/Ascend Greymoor Keep
 step
-goto 52.99,10.72 |q Greymoor Rising/Ascend Greymoor Keep
+goto 53.06,11.71
+'Ascend _Greymoor Keep_ |q Greymoor Rising/Ascend Greymoor Keep |future
 step
 goto 53.46,09.16 |q Greymoor Rising/Escape the Stone Husk Gallery |future
 step
 goto 54.79,08.67 |q Greymoor Rising/Escape the Stone Husk Gallery |future
 step
-goto 56.35,09.36 |q Greymoor Rising/Escape the Stone Husk Gallery |future
+goto 56.35,9.36 |q Greymoor Rising/Escape the Stone Husk Gallery |future
 step
 goto 57.97,12.81 |q Greymoor Rising/Escape the Stone Husk Gallery |future
 step
@@ -39027,6 +39040,7 @@ goto 26.89,29.57
 'Open _Tower of the Wolf_ |q Greymoor Rising/Go to the Tower of the Wolf
 step
 goto 24.50,26.89
+|tip Use Execute Button at end of fight.
 kill High King Svargrim |q Greymoor Rising/Kill High King Svargrim
 step
 goto 24.74,22.71
@@ -39418,6 +39432,8 @@ step
 goto 24.35,47.72
 talk Count Verandis Ravenwatch |q The Study of Souls/Talk to Count Verandis Ravenwatch
 step
+goto 24.23,49.92 |q The Study of Souls/Search for an Entrance
+step
 goto 20.34,48.54
 'Examine _The Library of Arkthzand_ |q The Study of Souls/Search for an Entrance
 step
@@ -39448,19 +39464,19 @@ step
 goto 32.34,31.82 |q The Study of Souls/Explore the Library of Arkthzand
 step
 goto 18.26,54.13
-talk Count Verandis Ravenwatch |q The Study of Souls/Talk to Count Verandis Ravenwatch |future
+talk Count Verandis Ravenwatch |q The Study of Souls |future
 |tip Manually skip to the next step.
 step
-goto 14.25,57.55
+goto 14.42,60.34
 'Use _Void Portals_ |q The Study of Souls/Reach the Door on the Upper Level
 |tip Go right then use left steps and climb over rubble.
 |tip Manually skip to the next step.
 step
-goto 13.56,65.32
+goto 16.46,67.42
 'Use _Void Portals_ |q The Study of Souls/Reach the Door on the Upper Level
 |tip Manually skip to the next step.
 step
-goto 15.10,66.71
+goto 21.72,65.35
 'Use _Void Portals_ |q The Study of Souls/Reach the Door on the Upper Level
 |tip Manually skip to the next step.
 step
@@ -39478,33 +39494,33 @@ goto 40.57,58.05
 talk Count Verandis Ravenwatch |q The Study of Souls/Talk to Count Verandis Ravenwatch
 step
 goto 42.76,57.09
-'Rotate _Void Crystal Once_ |q The Study of Souls/Realign the Containment Apparatus
+'Rotate _Void Crystal_ 1 Time |q The Study of Souls/Realign the Containment Apparatus
 |tip Manually skip to the next step.
 step
 goto 47.56,63.05
-'Rotate _Void Crystal twice_ |q The Study of Souls/Realign the Containment Apparatus
+'Rotate _Void Crystal_ 2 Times |q The Study of Souls/Realign the Containment Apparatus
 |tip Manually skip to the next step.
 step
 goto 43.69,63.94
 'Use _Void Portal_
-'Rotate _Void Crystal twice_ |q The Study of Souls/Realign the Containment Apparatus
+'Rotate _Void Crystal_ 2 Times |q The Study of Souls/Realign the Containment Apparatus
 |tip Manually skip to the next step.
 step
 goto 47.80,64.41
-'Rotate _Void Crystal four times_ |q The Study of Souls/Realign the Containment Apparatus
+'Rotate _Void Crystal_ 4 Times |q The Study of Souls/Realign the Containment Apparatus
 |tip Manually skip to the next step.
 step
 goto 54.04,64.00
 'Use _Void Portal_
-'Rotate _Void Crystal twice_ |q The Study of Souls/Realign the Containment Apparatus
+'Rotate _Void Crystal_ 2 Times |q The Study of Souls/Realign the Containment Apparatus
 |tip Manually skip to the next step.
 step
 goto 54.21,58.35
-'Rotate _Void Crystal Seven times_ |q The Study of Souls/Realign the Containment Apparatus
+'Rotate _Void Crystal_ 7 Times |q The Study of Souls/Realign the Containment Apparatus
 |tip Manually skip to the next step.
 step
 goto 49.01,53.09
-'Rotate _Void Crystal Four times_ |q The Study of Souls/Realign the Containment Apparatus
+'Rotate _Void Crystal_ 4 Times |q The Study of Souls/Realign the Containment Apparatus
 step
 goto 47.87,57.72
 talk Pentarch Cievernes |q The Study of Souls/Talk to the Shade
@@ -39541,7 +39557,7 @@ step
 'Travel to _Rebel's Retreat_ |q The Study of Souls/Return to Rebel's Retreat
 |tip Manually skip to the next step.
 step
-goto reach_base 56.08,49.70 |q The Study of Souls/Return to Rebel's Retreat
+goto reach_base 56.08,49.70 |q The Study of Souls |future
 step
 goto 56.27,52.10
 talk Arana
@@ -39621,7 +39637,7 @@ goto DarkDescent_base 62.60,27.59
 |tip Manually skip to the next step.
 step
 goto 64.74,15.23
-'Find _Nathari_ |q The Awakening Darkness/Find Nathari
+kill Shade Colossus |q The Awakening Darkness/Find Nathari
 step
 goto 72.46,15.97
 'Open _Ritual Cavern_ |q The Awakening Darkness/Pursue Nathari
@@ -39632,16 +39648,10 @@ goto 57.31,74.21
 step
 goto 59.03,72.51
 |tip Watch the dialogue.
-'Reach the _Ritual Site_ |q The Awakening Darkness/Reach the Ritual Site
-step
-goto 59.03,72.51
-kill Nathari |q The Awakening Darkness/Stop the Ritual
+kill Nathari |q The Awakening Darkness/Stop the Ritual |future
 step
 goto 53.52,79.94
-'Find _Bradan_ |q The Awakening Darkness/Find Bradan
-step
-goto 53.52,79.94
-talk Bradan |q The Awakening Darkness/Talk to Bradan
+talk Bradan |q The Awakening Darkness/Talk to Bradan |future
 step
 'Open _The Reach_ Map
 'Travel to _Rebel's Retreat_ |q The Awakening Darkness/Return to Rebel's Retreat
@@ -39674,7 +39684,13 @@ goto 91.74,69.09
 'Open _Nighthollow Keep_ |q The Dark Heart/Explore Nighthollow Keep
 |tip Manually skip to the next step.
 step
-goto nighthollowkeep1_base 28.29,33.12
+goto nighthollowkeep1_base 22.51,56.76 |q The Dark Heart/Explore Nighthollow Keep
+step
+goto 23.30,46.54 |q The Dark Heart/Explore Nighthollow Keep
+step
+goto 32.40,46.28 |q The Dark Heart/Explore Nighthollow Keep
+step
+goto 28.29,33.12
 'Open _Nighthollow Study_ |q The Dark Heart/Explore Nighthollow Keep
 step
 goto 24.05,34.40
@@ -39684,7 +39700,7 @@ goto 22.70,33.39
 talk Count Verandis Ravenwatch |q The Dark Heart/Talk to Count Verandis Ravenwatch
 step
 goto 22.70,33.39
-'Observe the _Auramancy Magic_ |q The Dark Heart/Observe the Auramancy Magic
+'Observe _Auramancy Magic_ |q The Dark Heart/Observe the Auramancy Magic
 step
 goto 22.70,33.39
 talk Count Verandis Ravenwatch |q The Dark Heart/Talk to Count Verandis Ravenwatch
@@ -39693,15 +39709,17 @@ goto 27.61,33.41
 'Open _Nighthollow Keep_ |q The Dark Heart/Explore Nighthollow Keep
 |tip Manually skip to the next step.
 step
-goto 54.04,44.67
+goto 47.26,29.28 |q The Dark Heart/Explore Nighthollow Keep
+step
+goto 52.86,46.28
 'Use _Void Portal_ |q The Dark Heart/Explore Nighthollow Keep
 |tip Manually skip to the next step.
 step
-goto 46.80,61.86
+goto 49.21,59.92
 'Use _Void Portal_ |q The Dark Heart/Explore Nighthollow Keep
 |tip Manually skip to the next step.
 step
-goto 67.24,66.70
+goto 68.79,68.78
 'Use _Void Portal_ |q The Dark Heart/Explore Nighthollow Keep
 |tip Manually skip to the next step.
 step
@@ -39715,7 +39733,7 @@ goto 74.19,79.28
 talk Count Verandis Ravenwatch |q The Dark Heart/Talk to Count Verandis Ravenwatch
 step
 goto 74.19,79.28
-'Observe the _Auramancy Magic_ |q The Dark Heart/Observe the Auramancy Magic
+'Observe _Auramancy Magic_ |q The Dark Heart/Observe the Auramancy Magic
 step
 goto 74.19,79.28
 talk Count Verandis Ravenwatch |q The Dark Heart/Talk to Count Verandis Ravenwatch
@@ -39723,6 +39741,8 @@ step
 goto 74.60,75.72
 'Open _Nighthollow Keep_ |q The Dark Heart/Find the Path to the Dark Heart
 |tip Manually skip to the next step.
+step
+goto 90.26,66.02 |q The Dark Heart/Find the Path to the Dark Heart
 step
 goto 78.26,56.35
 'Open _Grand Chamber of the Nighthollow_ |q The Dark Heart/Find the Path to the Dark Heart
@@ -39733,10 +39753,7 @@ goto nighthollowkeep2_base 44.44,50.14
 |tip Manually skip to the next step.
 step
 goto 16.49,49.78
-'Find the _Path to the Dark Heart_ |q The Dark Heart/Find the Path to the Dark Heart
-step
-goto 16.49,49.78
-'Observe the _Auramancy Magic_ |q The Dark Heart/Observe the Auramancy Magic
+'Observe _Auramancy Magic_ |q The Dark Heart/Observe the Auramancy Magic |future
 step
 goto 16.49,49.78
 talk Count Verandis Ravenwatch |q The Dark Heart/Talk to Count Verandis Ravenwatch
@@ -39749,7 +39766,7 @@ goto 12.00,50.52
 |tip Manually skip to the nxt step.
 step
 goto nighthollowkeep3_base 15.15,31.07
-'Observe the _Auramancy Magic_ |q The Dark Heart/Observe the Auramancy Magic |future
+'Observe _Auramancy Magic_ |q The Dark Heart/Observe the Auramancy Magic |future
 step
 goto 15.15,31.07
 talk Count Verandis Ravenwatch |q The Dark Heart/Talk to Count Verandis Ravenwatch
@@ -39761,7 +39778,9 @@ goto 09.35,32.60
 'Open _Dark Heart Chamber_ |q The Dark Heart/Enter the Dark Heart Chamber
 |tip Manually skip to the next step.
 step
-goto u28_DarkHeart_base 41.02,51.29
+goto u28_DarkHeart_base 79.63,51.64 |q The Dark Heart/Protect Count Verandis Ravenwatch |future
+step
+goto 41.02,51.29
 kill Lord Idrisin |q The Dark Heart/Protect Count Verandis Ravenwatch |future
 step
 goto 29.14,39.48
@@ -39955,6 +39974,7 @@ goto 71.49,51.13
 talk Fennorian |q The End of Eternity/Learn About Keystones in Bthar-Zel
 |tip Manually skip to the next step.
 step
+goto 68.78,52.71
 'Use _Void Portal behind you_ |q The End of Eternity/Learn About Keystones in Bthar-Zel
 |tip Manually skip to the next step.
 step
@@ -39967,7 +39987,7 @@ goto 67.19,54.86
 'Use _Void Portal on next Bridge_ |q The End of Eternity/Learn About Keystones in Bthar-Zel
 |tip Drop down off the right side.
 step
-goto 71.38,61.88
+goto 78.39,56.22
 'Use _Void Portal in the doorway_ |q The End of Eternity/Learn About Keystones in Bthar-Zel
 'Use _Void Portal on the next platform_ |q The End of Eternity/Learn About Keystones in Bthar-Zel
 'Use _Void Portal on the next platform_ |q The End of Eternity/Learn About Keystones in Bthar-Zel
@@ -39978,6 +39998,7 @@ goto 71.38,61.88
 |tip Manually skip to the next step
 step 
 goto 81.45,51.02
+|tip Go upstairs.
 'Open _Bthar-Zel Repository_ |q The End of Eternity/Learn About Keystones in Bthar-Zel
 |tip Manually skip to the next step.
 step
