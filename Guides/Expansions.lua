@@ -3853,17 +3853,14 @@ goto 90.95,62.55
 |tip Manually skip to the next step.
 step
 goto 86.58,66.63
-|tip Do this 6 times.
-'Hit the _Kinetic Resonator_ |q Quarry Conundrum/Solve the Puzzle of the Orb of Illumination
+'Hit the _Kinetic Resonator_ 6 Times |q Quarry Conundrum/Solve the Puzzle of the Orb of Illumination
 |tip Manually skip to the next step.
 step
 goto 88.27,63.64
-|tip Do this 3 times.
-'Hit the _Kinetic Resonator_ |q Quarry Conundrum/Solve the Puzzle of the Orb of Illumination
+'Hit the _Kinetic Resonator_ 3 Times |q Quarry Conundrum/Solve the Puzzle of the Orb of Illumination
 |tip Manually skip to the next step.
 step
 goto 86.57,60.69
-|tip Do this 1 time.
 'Hit the _Kinetic Resonator_ |q Quarry Conundrum/Solve the Puzzle of the Orb of Illumination
 step
 goto 90.69,63.57
@@ -33811,13 +33808,11 @@ goto 34.73,16.15
 |tip Manually skip to the next step.
 step
 goto 35.00,15.74
-|tip Turn Three Times.
-'Use _Dwemer Puzzle Block_ |q Blood of the Reach/Open the Door to Bthar-Zel
+'Use _Dwemer Puzzle Block_ 3 Times |q Blood of the Reach/Open the Door to Bthar-Zel
 |tip Manually skip to the next step.
 step
 goto 35.47,15.99
-|tip Turn Three Times.
-'Use _Dwemer Puzzle Block_ |q Blood of the Reach/Open the Door to Bthar-Zel
+'Use _Dwemer Puzzle Block_ 3 Times |q Blood of the Reach/Open the Door to Bthar-Zel
 step
 goto 35.35,16.12
 talk Count Verandis Ravenwatch |q Blood of the Reach/Talk to Count Verandis Ravenwatch |future
@@ -34951,13 +34946,12 @@ accept A Mortal's Touch
 step
 goto 60.52,72.00
 'Examine _Dread Lady's Letter_ |q A Mortal's Touch/Examine the Letter
-step
 
 -- START: ALDMERI DOMINION FACTION PROLOGUE GUIDE
 step
 goto 52.27,59.61
 |tip Go outside.
-'Travel _Passage to Malabal Tor_ |q A Mortal's Touch/Go to the Location Shown on Your Map
+'Travel _Passage to Malabal Tor_ |q A Mortal's Touch/Go to the Location Shown on Your Map |future
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -34975,7 +34969,7 @@ step
 goto 32.49,74.73 |q A Mortal's Touch/Find Lyranth Inside the Delve
 |only Aldmeri Dominion
 step
-goto 50.43,74.87 |q A Mortal's Touch/Find Lyranth Inside the Delve
+goto 46.62,75.32 |q A Mortal's Touch/Find Lyranth Inside the Delve
 |only Aldmeri Dominion
 step
 goto 47.00,88.79 |q A Mortal's Touch/Find Lyranth Inside the Delve
@@ -34997,9 +34991,12 @@ goto 38.42,89.90
 
 -- START: DAGGERFALL COVENANT FACTION
 step
-goto 52.27,59.61
-|tip Go outside.
-'Travel _Passage to _ |q A Mortal's Touch/Go to the Location Shown on Your Map
+goto hollowcity_base 36.88,65.49 |q A Mortal's Touch/Go to the Location Shown on Your Map |tip Go outside.
+step
+goto 28.39,42.03 |q A Mortal's Touch/Go to the Location Shown on Your Map
+step
+goto 32.04,35.83
+'Travel _Passage to Rivenspire_ |q A Mortal's Touch/Go to the Location Shown on Your Map |future
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -35033,9 +35030,9 @@ goto 28.29,88.73
 
 -- START: EBONHEART PACT FACTION
 step
-goto 52.27,59.61
+goto hollowcity_base 64.23,65.07
 |tip Go outside.
-'Travel _Passage to  |q A Mortal's Touch/Go to the Location Shown on Your Map
+'Travel _Passage to Shadowfen_ |q A Mortal's Touch/Go to the Location Shown on Your Map |future
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -35094,7 +35091,7 @@ goto grahtwood_base 56.55,66.51
 'Open _Ne Salas_ |q A Mortal's Touch/Enter Ne Salas |future
 |tip Manually skip to the next step.
 step
-goto 83.20,23.53
+goto nesalas_base 83.20,23.53
 talk Eveli Sharp-Arrow |q A Mortal's Touch/Talk to Eveli Sharp-Arrow |future
 step
 goto 14.98,33.43 |q A Mortal's Touch/Find the Imperial Cache
@@ -35120,17 +35117,17 @@ goto 45.62,74.25 |q A Mortal's Touch/Reach the Lower Annex Chamber
 step
 goto 35.71,78.10 |q A Mortal's Touch/Reach the Lower Annex Chamber
 step
-goto 38.58,57.29 |q A Mortal's Touch/Reach the Lower Annex Chamber
+goto 35.36,58.30 |q A Mortal's Touch/Reach the Lower Annex Chamber
 step
 goto 36.44,26.68 |q A Mortal's Touch/Reach the Lower Annex Chamber
 step
 goto u29_ne_salas_vault1_base 56.51,25.52 |q A Mortal's Touch/Reach the Lower Annex Chamber
 step
 goto 54.10,53.29
-'Destroy _Protective Ward_ |q A Mortal's Touch/Destroy the Protective Ward
+'Destroy _Protective Ward_ |q A Mortal's Touch/Destroy the Protective Ward |future
 step
 goto 53.95,52.63
-'Search _Imperial Cache_ |q A Mortal's Touch/Search the Imperial Cache
+'Search _Imperial Cache_ |q A Mortal's Touch/Search the Imperial Cache |future
 step
 goto 54.57,53.68
 talk Eveli Sharp-Arrow |q A Mortal's Touch/Talk to Eveli Sharp-Arrow
@@ -35188,6 +35185,7 @@ step
 goto 35.64,50.76 |q The Emperor's Secret/Talk to Eveli Sharp-Arrow
 step
 goto 40.26,49.32
+|tip Go down the ramp.
 talk Eveli Sharp-Arrow |q The Emperor's Secret/Talk to Eveli Sharp-Arrow
 step
 goto 39.96,49.63
@@ -35215,7 +35213,7 @@ goto 80.14,44.42
 'Enter _Portal to the Deadlands_ |q The Emperor's Secret/Follow Doombringer Eshil Through the Portal |future
 |tip Manually skip to the next step.
 step
-goto bwp2deadlands_base 40.49,63.92 |q The Emperor's Secret/Find Doombringer Eshil
+goto bwp2deadlands_base 40.49,63.92 |q The Emperor's Secret/Find Doombringer Eshil |future
 step
 goto 59.47,44.44 |q The Emperor's Secret/Find Doombringer Eshil
 step
@@ -35690,7 +35688,10 @@ goto 75.58,08.06
 'Open _Veyond Gandrasel_ |q Giving Up the Ghost/Find Tiras Tirethi with the Phantasmal Censer
 |tip Manually skip to the next step.
 step
-goto veyond3_base 86.57,71.96 |q Giving Up the Ghost/Find Tiras Tirethi with the Phantasmal Censer
+goto veyond3_base 86.57,71.96 |q Giving Up the Ghost |future
+step
+goto 67.82,55.31
+'Find _Tiras Tirethi with the Phantasmal Censer_ |q Giving Up the Ghost/Find Tiras Tirethi with the Phantasmal Censer
 step
 goto 67.82,55.31
 talk to Revus Demnevanni|q Giving Up the Ghost/Talk to Revus Demnevanni |future
@@ -35759,6 +35760,7 @@ step
 goto 65.34,13.31 |q Glittering Lies/.*Free the Blackfeather Court.* |count 1
 step
 goto arpeniaH2_base 67.77,21.03
+|tip Go upstairs.
 'Destroy _Ornate Mirror_ |q Glittering Lies/.*Free the Blackfeather Court.* |count 1
 step
 goto arpeniaL_base 64.37,22.53 |q Glittering Lies/.*Free the Blackfeather Court.* |count 2 |tip Drop down.
@@ -35798,7 +35800,8 @@ step
 goto arpeniaL_base 37.55,38.77 |q Glittering Lies/Exit Arpenia Ruins
 step
 goto arpeniaL_base 32.25,30.16
-'Open _Blackwood_ |q Glittering Lies/Exit Arpenia Ruins
+'Open _Blackwood_ |q Glittering Lies/Exit Arpenia Ruins |future
+|tip Manually skip to the next step.
 step
 goto blackwood_base 36.58,26.96
 talk Duke of Crows
@@ -35821,7 +35824,7 @@ step
 goto 37.76,59.83 |q A Deadly Secret/Go to Fort Blueblood
 step
 goto 38.02,60.64
-talk Commander Ortin |q A Deadly Secret/Talk to Commander Ortin
+talk Commander Ortin |q A Deadly Secret/Talk to Commander Ortin |future
 step
 goto 38.21,60.62
 'Open _Fort Blueblood Watchtower_ |q A Deadly Secret/Enter the Watchtower
@@ -35964,7 +35967,7 @@ goto 69.73,46.14
 |tip Manually skip to the next step.
 step
 goto U30_castleGiovesse2_base 85.48,47.36
-'Examine _Letter from Astra_ |q A Deadly Secret/Search the Hidden Chamber
+'Examine _Letter from Astra_ |lorebook Letter from Astara/3/42/13
 step
 goto 88.14,46.43
 talk Elam Drals |q A Deadly Secret/Talk to Elam Drals
@@ -35995,8 +35998,9 @@ goto 45.40,50.49
 'Use _Memory Stone_ |q Haunted Legacy/Use the Memory Stone |future
 step
 goto 44.63,50.79
-|tip Go upstairs.
-'Use _Memory Stone_ |q Haunted Legacy/Use the Memory Stone |future
+|tip Go upstairs to third floor.
+'Use _Memory Stone_|q Haunted Legacy/Mimic the Ghostly Killer |future
+|tip Manually skip to the next step.
 step
 goto 44.49,48.67
 'Activate _Suspicious Wall_ |q Haunted Legacy/Mimic the Ghostly Killer |future
@@ -36149,13 +36153,16 @@ goto 56.97,44.30
 talk Yisara |q The Ghostwriter of Giovesse/Talk to Yisara |future
 step
 goto 56.96,44.34 
-|tip If you chose to destroy the ring use the amall brazier on the table.
+|tip If you chose to destroy the ring Use Small Brazier.
 talk Yisara
 turnin The Ghostwriter of Giovesse
 step
 goto 56.66,44.45
-'Open _Castle Giovesse Ruins_ |q Haunted Legacy/Find the Lost Carriage
+'Open _Castle Giovesse Ruins_ |q Haunted Legacy |future
 |tip Manually skip to the next step.
+step
+goto 61.15,57.35
+talk Faric Gemain |q Haunted Legacy/Talk to Faric Gemain
 step
 goto 61.12,57.45
 'Search _Waterlogged Chest_ |q Haunted Legacy/Search the Chest |future
@@ -36205,10 +36212,9 @@ goto 22.65,46.45
 step
 goto 23.49,46.61
 talk Darene Gavendier |q Shrine of Nocturnal/Convince Darene Gavendier to Stop Thieving
-|tip Manually skip to the next step.
 step
 goto 23.49,46.61
-talk Giovanni Corvus |q Shrine of Nocturnal/Convince Giovanni Corvus to Stop Thieving
+talk Giovanni Corvus |q Shrine of Nocturnal/Convince Giovanni Corvus to Stop Thieving |future
 |tip Manually skip to the next step.
 step
 goto 25.66,45.75
@@ -36460,6 +36466,7 @@ goto 72.66,47.74
 |tip Manually skip to the next step.
 step
 goto 87.90,43.35
+|tip kill All the waves.
 'Kick _Dorm'ant Vine Tongue_ |q An Abundance of Stibbons/Rescue Stibbons |future
 |tip Manually skip to the next step.
 step
@@ -36493,11 +36500,11 @@ goto 74.33,51.57
 |tip Manually skip to the next step.
 step
 goto VaultDelve_INT01_base 82.97,50.44
-'Open _Doomvault_ |q A Battle of Silk and Flame/Find Morgane
+'Open _Doomvault_ |q A Battle of Silk and Flame/Find Morgane |future
 |tip Manually skip to the next step.
 step
 goto VaultDelve_EXT01_base 41.25,76.73
-'Examine _Morgrane Brousseau_ |q A Battle of Silk and Flame/Take the Sending Stone
+'Examine _Morgrane Brousseau_ |q A Battle of Silk and Flame/Take the Sending Stone |future
 step
 goto 68.65,56.73
 'Use _Morgane's Sending Stone_ |q A Battle of Silk and Flame/.*Investigate the Doomvault.* |count 1
@@ -36546,6 +36553,8 @@ step
 goto 21.03,49.28
 'Use _Morgane's Sending Stone_ |q A Battle of Silk and Flame/.*Investigate the Doomvault.* |count 3
 step
+goto 36.29,62.72 |q A Battle of Silk and Flame/Find the Daedric Device
+step
 goto 84.97,49.89
 'Open _Doomvault Porcixid_ |q A Battle of Silk and Flame/Find the Daedric Device
 |tip Manually skip to the next step.
@@ -36564,7 +36573,7 @@ step
 goto 69.22,25.53 |q A Battle of Silk and Flame/Exit the Doomvault
 step
 goto VaultDelve_INT01_base 12.23,50.66
-'Open _Blackwood_ |q A Battle of Silk and Flame/Exit the Doomvault
+'Open _Blackwood_ |q A Battle of Silk and Flame/Exit the Doomvault |future
 step
 goto blackwood_base 73.93,51.43
 talk Khud af-Hadajja
@@ -36613,7 +36622,7 @@ talk Brigadine Lieutenant Viria |q Shadows in the Swamp/Talk to Brigadine Lieute
 step
 goto 71.04,41.24
 'Use _Xal Irasotl Barrier_
-'Open _Xal Irasotl_ |q Shadows in the Swamp/Investigate Xal Irasotl
+'Open _Xal Irasotl_ |q Shadows in the Swamp/Investigate Xal Irasotl |future
 |tip Manually skip to the next step.
 step
 goto u30_XalIrasotl_base 78.31,39.35
@@ -36623,7 +36632,7 @@ goto 77.69,40.14
 talk Naheesh Nurwul |q Shadows in the Swamp/Talk to Naheesh Nurwul
 step
 goto 79.13,38.59
-'Use _Ancient Lure_ |q Shadows in the Swamp/.*Disable the Lures.* |count 1
+'Disable _Ancient Lure_ |q Shadows in the Swamp/.*Disable the Lures.* |count 1
 step
 goto 59.88,20.47 |q Shadows in the Swamp/.*Disable the Lures.* |count 2
 step
@@ -36750,7 +36759,7 @@ goto 59.25,27.43
 |tip Manually skip to the next step.
 step
 goto 55.50,23.28
-'Enter _Rellesel Retreat_ |q The Face of Change/Investigate the Ayleid Ruin
+'Enter _Rellesel Retreat_ |q The Face of Change/Investigate the Ayleid Ruin |future
 step
 goto 55.35,23.43
 talk Mighty Flicka |q The Face of Change/Gain Entry to the Ruin |future
@@ -36843,11 +36852,11 @@ talk Mim-Jasa
 accept Destroying What Remains
 step
 goto 64.12,18.22
-'Enter _Bloodrun Cave_ |q Destroying What Remains/Enter Bloodrun Cave
+'Enter _Bloodrun Cave_ |q Destroying What Remains/Enter Bloodrun Cave |future
 |tip Manually skip to the next step.
 step
 goto u30_bloodruncave_base 48.89,08.03
-talk Eveli Sharp-Arrow |q An Unexpected Adversary/Talk to Eveli Sharp-Arrow
+talk Eveli Sharp-Arrow |q An Unexpected Adversary/Talk to Eveli Sharp-Arrow |future
 step
 goto 51.73,14.33
 'Destroy _Shadowscale Remains_ |q Destroying What Remains/.*Destroy Shadowscale Remains.* |count 1
@@ -36880,9 +36889,14 @@ step
 goto 29.13,65.04
 'Take _Shade Sickle_ |q Shrine of Nocturnal/Collect the Shade Sickle
 step
+goto 35.07,63.49 |q An Unexpected Adversary/Find the Sanctuary Entrance
+step
 goto 28.89,77.16 |q An Unexpected Adversary/Find the Sanctuary Entrance
 step
 goto 36.29,77.95 |q An Unexpected Adversary/Find the Sanctuary Entrance
+step
+goto 41.79,86.15
+'Find _Sanctuary Entrance_ |q An Unexpected Adversary/Find the Sanctuary Entrance
 step
 goto 41.80,83.85
 talk Eveli Sharp-Arrow |q An Unexpected Adversary/Talk to Eveli Sharp-Arrow |future
@@ -36902,15 +36916,18 @@ goto 46.84,94.24
 'Open _Dark Brotherhood Sanctuary Storage Halls_ |q An Unexpected Adversary/Explore the Sanctuary
 |tip Manually skip to the next step.
 step
-goto 53.31,92.39 |q An Unexpected Adversary/Talk to Elam Drals |future
+goto 53.31,92.39 |q An Unexpected Adversary |future
 step
-goto 53.25,84.30 |q An Unexpected Adversary/Talk to Elam Drals |future
+goto 53.25,84.30 |q An Unexpected Adversary |future
+step
+goto 72.74,74.29
+'Explore _Sanctuary_ |q An Unexpected Adversary/Explore the Sanctuary
 step
 goto 72.74,74.29
 talk Elam Drals |q An Unexpected Adversary/Talk to Elam Drals |future
 step
 goto 73.11,74.45
-'Use _Portal_ |q An Unexpected Adversary/Enter the Portal
+'Use _Portal_ |q An Unexpected Adversary/Enter the Portal |future
 |tip Manually skip to the next step.
 step
 goto u30_welke_upper_base 56.18,39.11
@@ -36933,7 +36950,7 @@ goto 54.57,54.86
 'Open _Welke_ |q An Unexpected Adversary/Explore the Ayleid Ruins
 |tip Manually skip to the next step.
 step
-goto 57.35,59.61 |q An Unexpected Adversary/Observe the Conversation |future
+goto 56.82,60.37 |q An Unexpected Adversary/Observe the Conversation |future
 step
 goto u30_welke_lower_base 33.21,66.52
 'Observe _Conversation_ |q An Unexpected Adversary/Observe the Conversation |future
@@ -37019,7 +37036,7 @@ goto 80.87,53.25
 |tip Manually skip to the next step.
 step
 goto 77.50,54.05
-talk Beragon |q An Unexpected Adversary/Talk to Beragon
+talk Beragon |q An Unexpected Adversary/Talk to Beragon |future
 step
 goto 77.94,52.04
 talk Councilor Lovidicus |q An Unexpected Adversary/Talk to Councilor Lovidicus
@@ -37096,6 +37113,8 @@ step
 goto 36.49,76.50
 'Destroy _Ritual Focus_ |q Idol Threats/Rescue Hands-like-Fish
 step
+goto 42.92,61.34 |q Idol Threats/Rescue Last-to-Eat
+step
 goto 35.52,37.25 |q Idol Threats/Rescue Last-to-Eat
 step
 goto 27.28,22.57 |q Idol Threats/Rescue Last-to-Eat
@@ -37124,7 +37143,7 @@ goto 68.07,51.11
 |tip Manually skip to the next step.
 step
 goto 71.07,68.90
-'Open _Blackwood_ |q Idol Threats/Leave Xi-Tsei
+'Open _Blackwood_ |q Idol Threats/Leave Xi-Tsei |future
 |tip Manually skip to the next step.
 step
 goto blackwood_base 56.07,78.00
@@ -37139,7 +37158,7 @@ goto 63.13,79.78
 talk Nuxul |q The Rising Winds/Talk to Nuxul
 step
 goto 61.15,76.14
-'Open _Elossi's Hut_ |q The Rising Winds/Talk to Nuxul |future
+'Open _Elossi's Hut_ |q The Rising Wind |future
 |tip Manually skip to the next step.
 step
 goto 60.97,76.07
@@ -37272,18 +37291,15 @@ goto 63.27,89.76
 talk Lyranth |q A Hidden Vault/Talk to Lyranth |future
 step
 goto 62.69,90.01
-|tip Turn three times.
-'Turn _Ward Cube_ |q A Hidden Vault/Find a Way Into the Vault
+'Turn _Ward Cube_ 3 Times |q A Hidden Vault/Find a Way Into the Vault
 |tip Manually skip to the next step.
 step
 goto 62.58,89.76
-|tip Turn two times.
-'Turn _Ward Cube_ |q A Hidden Vault/Find a Way Into the Vault
+'Turn _Ward Cube_ 2 Times |q A Hidden Vault/Find a Way Into the Vault
 |tip Manually skip to the next step.
 step
 goto 62.69,89.53
-|tip Turn three times.
-'Turn _Ward Cube_ |q A Hidden Vault/Find a Way Into the Vault
+'Turn _Ward Cube_ 3 Times |q A Hidden Vault/Find a Way Into the Vault
 step
 goto 62.35,89.75
 'Open _Doomvault Capraxus_ |q A Hidden Vault/Enter the Daedric Vault |future
@@ -37312,18 +37328,15 @@ goto 63.37,42.18
 talk Eveli Sharp-Arrow |q A Hidden Vault/Talk to Eveli Sharp-Arrow |future
 step
 goto 58.02,42.93
-|tip Turn three times.
-'Turn _Ward Cube_ |q A Hidden Vault/Disrupt the Inner Ward
+'Turn _Ward Cube_ 3 Times |q A Hidden Vault/Disrupt the Inner Ward
 |tip Manually skip to the next step.
 step
 goto 57.48,42.28
-|tip Turn two times
-'Turn _Ward Cube_ |q A Hidden Vault/Disrupt the Inner Ward
+'Turn _Ward Cube_ 2 Times |q A Hidden Vault/Disrupt the Inner Ward
 |tip Manually skip to the next step.
 step
 goto 57.79,41.57
-|tip Turn three times.
-'Turn _Ward Cube_ |q A Hidden Vault/Disrupt the Inner Ward
+'Turn _Ward Cube_ 3 Times |q A Hidden Vault/Disrupt the Inner Ward
 step
 goto 56.22,42.28
 'Open _Doomvault Corridor_ |q A Hidden Vault/Explore the Daedric Vault
@@ -37367,23 +37380,19 @@ talk Lyranth |q A Hidden Vault/Explore the Daedric Vault
 |tip Manually skip to the next step.
 step
 goto 46.27,56.76
-|tip Turn three times.
-'Turn _Ward Cube_ |q A Hidden Vault/Disrupt the Final Ward |future
+'Turn _Ward Cube_ 3 Times |q A Hidden Vault/Disrupt the Final Ward |future
 |tip Manually skip to the next step.
 step
 goto 45.32,56.73
-|tip Turn two times.
-'Turn _Ward Cube_ |q A Hidden Vault/Disrupt the Final Ward
+'Turn _Ward Cube_ 2 Times |q A Hidden Vault/Disrupt the Final Ward
 |tip Manually skip to the next step.
 step
 goto 43.65,56.80
-|tip Turn three times.
-'Turn _Ward Cube_ |q A Hidden Vault/Disrupt the Final Ward
+'Turn _Ward Cube_ 3 Times |q A Hidden Vault/Disrupt the Final Ward
 |tip Manually skip to the next step.
 step
 goto 42.56,56.80
-'Turn _Ward Cube_ |q A Hidden Vault/Disrupt the Final Ward
-|tip Turn cube three times.
+'Turn _Ward Cube_ 3 Times |q A Hidden Vault/Disrupt the Final Ward
 step
 goto 44.50,58.67
 'Open _Doomvault Capraxus Inner Vault_ |q A Hidden Vault/Enter the Inner Vault
@@ -37416,11 +37425,10 @@ step
 goto 61.40,82.86 |q A Hidden Vault/Search the Deep Vault
 step
 goto 54.96,65.55
-|tip Watch the dialogue.
-talk Destron |q A Hidden Vault/Talk to Destron |future
+talk Calia |q A Hidden Vault/Talk to Calia
 step
 goto 54.96,65.55
-talk Calia |q A Hidden Vault/Talk to Calia
+talk Destron |q A Hidden Vault/Talk to Destron |future
 step
 goto 54.24,67.36
 talk Eveli Sharp-Arrow |q A Hidden Vault/Talk to Eveli Sharp-Arrow
@@ -37457,7 +37465,7 @@ goto 63.82,40.44
 |tip Manually skip to the next step.
 step
 goto 40.17,58.94
-talk Elam Drals |q A Mysterious Event/Talk to Elam Drals
+talk Elam Drals |q A Mysterious Event/Talk to Elam Drals |future
 step
 goto 39.50,62.59
 'Open _Amnis Manor_ |q A Mysterious Event/Enter Amnis Manor
@@ -37485,11 +37493,13 @@ goto 56.99,37.14
 'Open _Salvitto Estate_ |q A Mysterious Event/Search the Salvitto Estate |future
 |tip Manually skip to the next step.
 step
-goto 57.04,36.90 |q A Mysterious Event/Search the Salvitto Estate |tip Go upstairs.
+goto 57.04,36.90
+|tip Go upstairs.
+'Search _Salvitto Estate_ |q A Mysterious Event/Search the Salvitto Estate
 step
 goto 56.99,37.15
 |tip Go downstairs.
-'Open _Blackwood_ |q A Mysterious Event/Pursue Gracian Salvitto
+'Open _Blackwood_ |q A Mysterious Event/Pursue Gracian Salvitto |future
 |tip Manually skip to the next step.
 step
 goto 56.13,37.45 |q A Mysterious Event/Pursue Gracian Salvitto
@@ -37520,6 +37530,7 @@ goto 53.07,49.03
 'Choose _Outfit_ |q A Mysterious Event/Choose Formal Attire for the Event
 step
 goto 53.07,49.03
+|tip Watch the dialogue.
 talk Eveli Sharp-Arrow |q A Mysterious Event/Talk to Eveli Sharp-Arrow
 step
 goto 51.68,50.11
@@ -37556,7 +37567,7 @@ goto 65.96,90.72
 |tip Manually skip to the next step.
 step
 goto u30_deadlandskeep_ext_base 32.77,50.56
-talk Eveli Sharp-Arrow |q A Mysterious Event/Talk to Eveli Sharp-Arrow
+talk Eveli Sharp-Arrow |q A Mysterious Event/Talk to Eveli Sharp-Arrow |future
 step
 goto 75.39,37.11
 'Open _Vandacia's Keep_ |q A Mysterious Event/Enter Vandacia's Keep |future
@@ -37606,6 +37617,7 @@ goto 72.63,65.55
 |tip Manually skip to the next step.
 step
 goto 76.20,68.25
+|tip Watch the dialogue.
 'Place _Reeker_ |q A Mysterious Event/Place the Reekers
 |tip Manually skip to the next step.
 step
@@ -37713,6 +37725,7 @@ step
 |tip Manually skip to the next step.
 step
 goto 65.51,70.33
+|tip Watch the dialogue.
 talk Sombren |q Weapons of Destruction/Talk to Sombren |future
 step
 goto 69.87,71.18 |q Weapons of Destruction/Reach the Portal Site
@@ -37739,7 +37752,7 @@ goto 83.97,69.45
 'Open _Vunalk_ |q In Need of a Bath/Enter the Ruins of Vunalk |future
 |tip Manually skip to the next step.
 step
-goto vunalk2_base 44.01,75.38 |q In Need of a Bath/Bathe Deet-Loh
+goto vunalk2_base 44.01,75.38 |q In Need of a Bath/Bathe Deet-Loh |future
 step
 goto 52.43,70.74
 'Bathe _Humble Pool_ |q In Need of a Bath/Bathe Deet-Loh
@@ -37799,7 +37812,7 @@ goto 70.80,73.45
 |tip Manually skip to the next step.
 step
 goto u30_ashenforest_ext_base 29.45,78.59
-talk Xynaa |q Weapons of Destruction/Talk to Xynaa
+talk Xynaa |q Weapons of Destruction/Talk to Xynaa |future
 step
 goto 25.69,71.65 |q Weapons of Destruction/Reach the Obelisk of Origin
 step
@@ -37981,7 +37994,7 @@ goto 28.22,28.94
 talk Keshu the Black Fin |q Pyre of Ambition/Talk to Keshu the Black Fin
 step
 goto 28.48,28.36
-'Open _Fort Redmane_ |q Pyre of Ambition/Enter Fort Redmane
+'Open _Fort Redmane_ |q Pyre of Ambition/Enter Fort Redmane |future
 |tip Manually skip to the next step.
 step
 goto u30_redmayne_ext_base 49.90,62.18
@@ -38082,10 +38095,12 @@ goto 50.05,83.43
 step
 goto u30_Gideoncity_base 90.34,67.78 |q Heroes of Blackwood/Talk to Sombren |future
 step
+goto blackwood_base 58.68,52.21 |q Heroes of Blackwood/Talk to Sombren |future
+step
 goto 57.56,51.13 |q Heroes of Blackwood/Talk to Sombren |future
 step
 goto blackwood_base 51.56,47.40
-talk Sombren |q Heroes of Blackwood/Talk to Sombren
+talk Sombren |q Heroes of Blackwood/Talk to Sombren |future
 step
 goto 51.68,47.41
 talk Eveli Sharp-Arrow |q Heroes of Blackwood/Talk to Eveli Sharp-Arrow
@@ -38118,6 +38133,10 @@ loadingimage loadscreen_ardent_hope_01.dds
 description The Deadlands is Mehrunes Dagon's realm of Oblivion.
 -- BEGIN: DEADLANDS PROLOGUE GUIDE
 step
+'Open _Craglorn_
+'Travel to _Belkarth_ |q An Apocalyptic Situation |future
+|tip Manually skip to the next step.
+step
 goto belkarth_base 60.56,20.95
 talk Rogatina Cinna
 accept An Apocalyptic Situation
@@ -38128,7 +38147,7 @@ goto 60.56,20.95
 
 -- START: ALDMERI DOMINION FACTION PROLOGUE GUIDE
 step
-goto deadmansdrop_base 68.47,43.35 |q An Apocalyptic Situation/Find Lyranth in Dead Man's Drop
+goto deadmansdrop_base 68.47,43.35 |q An Apocalyptic Situation/Find Lyranth in Dead Man's Drop |future
 |only Aldmeri Dominion
 step
 goto 44.76,36.95
@@ -38136,14 +38155,14 @@ goto 44.76,36.95
 |only Aldmeri Dominion
 step
 goto 44.76,36.95
-'Use Portal to _Lyranth's Hidden Lair_ |q An Apocalyptic Situation/Enter the Portal
+'Use Portal to _Lyranth's Hidden Lair_ |q An Apocalyptic Situation/Enter the Portal |future
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 -- END: ALDMERI DOMINION FACTION PROLOGUE GUIDE
 
 -- START: DAGGERFALL COVENANT FACTION
 step
-goto silumm_base 44.26,43.60 |q An Apocalyptic Situation/Find Lyranth in Silumm
+goto silumm_base 44.26,43.60 |q An Apocalyptic Situation/Find Lyranth in Silumm |future
 |only Daggerfall Covenant
 step
 goto 44.03,22.68 |q An Apocalyptic Situation/Find Lyranth in Silumm
@@ -38167,7 +38186,7 @@ goto 81.52,57.15
 
 -- START: EBONHEART PACT FACTION
 step
-goto fortgreenwall_base 17.68,44.84
+goto fortgreenwall_base 17.68,44.84 |future
 |only Ebonheart Pact
 step
 goto 20.40,19.99 |q An Apocalyptic Situation/Find Lyranth in Fort Greenwall
@@ -38186,7 +38205,7 @@ goto 33.04,24.87
 -- BEGIN: MERGED PROLOGUE FOR ALL FACTIONS
 step
 goto u31_lyranthhideaway_base 55.83,77.36 
-'Examine _Lyranth_ |q An Apocalyptic Situation/Examine Lyranth
+'Remove _Enchanted Blade_ |q An Apocalyptic Situation/Remove the Enchanted Blade |future
 step
 goto 55.83,77.36
 talk Lyranth |q An Apocalyptic Situation/Talk to Lyranth
@@ -38206,16 +38225,16 @@ goto 52.31,21.33
 talk Lyranth |q An Apocalyptic Situation/Talk to Lyranth
 step
 goto 50.70,20.73
-'Use Portal to _Greenshade_ |q An Apocalyptic Situation/Enter the Portal
+'Use _Portal to Greenshade_ |q An Apocalyptic Situation/Enter the Portal |future
 |tip Manually skip to the next step.
 step
 goto greenshade_base 53.47,69.42
-talk Lyranth |q An Apocalyptic Situation/Talk to Lyranth
+talk Lyranth |q An Apocalyptic Situation/Talk to Lyranth |future
 step
 goto 49.91,71.23 |q An Apocalyptic Situation/Find the Waking Flame Cultists
 step
 goto 48.22,69.35 
-'Use Portal to _Walking Flame Camp_ |q An Apocalyptic Situation/Explore the Waking Flame Camp |future
+'Use _Portal to Walking Flame Camp_ |q An Apocalyptic Situation/Explore the Waking Flame Camp |future
 |tip Manually skip to the next step.
 step
 goto u31_culthideaway_base 62.35,86.32
@@ -38244,7 +38263,7 @@ goto 77.64,22.44
 talk Lyranth |q An Apocalyptic Situation/Talk to Lyranth
 step
 goto 65.55,34.90
-'Use Portal to _Marbruk Outlaws Refuge_ |q An Apocalyptic Situation/Enter the Portal |future
+'Use _Portal to Marbruk Outlaws Refuge_ |q An Apocalyptic Situation/Enter the Portal |future
 |tip Manually skip to the next step.
 step
 goto MarbrukOutlawsRefuge_base 52.47,63.53
@@ -38282,7 +38301,7 @@ goto 61.78,25.97
 |tip Manually skip to the next step.
 step
 goto MarbrukOutlawsRefuge_base 52.83,62.48
-'Place _Cauldron_ |q The Key and the Cataclyst/Place the Root and Tincture into the Cauldron |future
+'Place _Lyranth's Cauldron_ |q The Key and the Cataclyst/Place the Root and Tincture into the Cauldron |future
 step
 goto 52.83,62.48
 talk Lyranth |q The Key and the Cataclyst/Talk to Lyranth
@@ -38458,15 +38477,9 @@ talk Valsirenn |q The Force of Change/Fire |future
 |tip Manually skip to the next step.
 step
 goto 53.17,68.15
-'Use _Conjured Flame_ |q The Force of Change/Fire
-|tip Manually skip to the next step.
-step
-goto 53.20,67.99
-'Use _Conjured Water_ |q The Force of Change/Water
-|tip Manually skip to the next step.
-step
-goto 53.34,67.88
-'Use _Conjured Soil_ |q The Force of Change/Soil
+.'Use _Conjured Flame_ |q The Force of Change/Fire
+.'Use _Conjured Water_ |q The Force of Change/Water
+.'Use _Conjured Soil_ |q The Force of Change/Soil
 step
 goto 53.43,68.06
 'Search _Dirt Mound_ |q The Force of Change/Take Apocalypse Seed
@@ -38508,7 +38521,7 @@ goto 21.28,67.60
 step
 goto u32_fargrave_base 56.39,27.02 |q Web of Lies/Talk to Divayth Fyr
 step
-goto 63.37,26.03
+goto 63.37,25.03
 'Open _Bazaar_ |q Web of Lies/Talk to Divayth Fyr
 |tip Manually skip to the next step.
 step
@@ -38671,6 +38684,7 @@ goto 57.91,27.70
 |tip Manually skip to the next step.
 step
 goto 36.20,37.11
+|tip Watch the dialogue.
 'Destroy _Votive Rune_ |q The Celestial Palanquin/.*Disrupt Sister Celdina's Ritual.* |count 1 |future
 step
 goto 38.20,21.18
@@ -38734,7 +38748,7 @@ goto 16.79,29.98
 |tip Manually skip to the next step.
 step
 goto u32_collectorvilla_ext_base 51.75,47.01
-talk Gazmod the Collector |q Destruction Incarnate/Talk to Gazmod the Collector
+talk Gazmod the Collector |q Destruction Incarnate/Talk to Gazmod the Collector |future
 step
 goto 65.32,51.71
 'Open _The Collector's Galleries_ |q Destruction Incarnate/Explore the Collector's Galleries
@@ -38801,7 +38815,7 @@ goto u32deadlandszone_base 34.96,77.49
 'Open _Burning Gyre Keep_ |q Destruction Incarnate/Enter Burning Gyre Keep |future
 |tip Manually skip to the next step.
 step
-goto u32_burninggyre_base 27.44,28.28 |q Destruction Incarnate/Explore Burning Gyre Keep
+goto u32_burninggyre_base 27.44,28.28 |q Destruction Incarnate/Explore Burning Gyre Keep |future
 step
 goto 33.68,80.16 |q Destruction Incarnate/Explore Burning Gyre Keep
 step
@@ -38840,8 +38854,6 @@ wayshrine False Martyrs' Folly
 step
 goto 80.74,34.59 |q Courier's Folly |future
 step
-goto 79.62,28.95 |q Courier's Folly |future
-step
 goto 79.85,30.12
 'Examine _Telofas's Diary_
 accept Courier's Folly
@@ -38854,10 +38866,10 @@ goto 88.78,27.01
 talk Selveni Andalor |q Mettle and Stone/Talk to Selveni
 step
 goto 89.42,26.85
-'Enter _False Martyrs' Folly_ |q Mettle and Stone/Enter the False Martyrs' Folly
+'Enter _False Martyrs' Folly_ |q Mettle and Stone/Enter the False Martyrs' Folly |future
 |tip Manually skip to the next step.
 step
-goto u32_folly_delve_base 58.46,65.29 |q Courier's Folly/Retrieve the Planestone 
+goto u32_folly_delve_base 58.46,65.29 |q Courier's Folly/Retrieve the Planestone |future
 step
 goto 39.87,68.11
 'Use _Energy Font_ |q Mettle and Stone/.*Power the Stones.* |count 1
@@ -39115,7 +39127,7 @@ goto 38.89,55.64
 talk Rynkyus |q The Durance Vile/Investigate Zynoahz's Gaol
 step
 goto 38.90,55.69
-|tip Listen to the Conversation
+|tip Watch the dialogue.
 talk Arox The Mutilator |q The Durance Vile/Talk to Arox the Mutilator |future
 step
 goto 40.20,57.84 |q A Gem of a Mystery |future
@@ -39221,7 +39233,6 @@ step
 goto 24.08,67.76
 talk Elegian |q The Durance Vile/Talk to Elegian
 step
-|tip Listen to the Conversation.
 'Open _The Deadlands_ Map
 'Travel to _Wretched Spire_ |q Peace's Wretched Price/Go to Spire Hall
 |tip Manually skip to the next step.
@@ -39265,8 +39276,9 @@ step
 goto 77.50,60.69 |q Peace's Wretched Price/Find Vontan
 step
 goto 66.79,78.25
-talk Gilfrex |q The Force of Change/Talk to Gilfrex
+talk Gilfrex |q The Force of Change/Talk to Gilfrex |future
 |tip Persuade him.
+|tip Manually skip to the next step.
 step
 goto 51.99,78.20 |q Peace's Wretched Price/Find Vontan
 step
@@ -39338,9 +39350,9 @@ goto 87.25,55.03
 'Open _Wretched Spire_ |q Peace's Wretched Price/Chase Tarvyn Indoril
 |tip Manually skip to the next step.
 step
-goto u32deadlandszone_base 72.04,48.11 |q Peace's Wretched Price/Talk to Tarvyn Indoril |future
+goto u32deadlandszone_base 72.04,48.11 |q Peace's Wretched Price/Talk to Tarvyn Indoril |future |tip Follow Tarvyn Indoril
 step
-goto 74.21,50.83 |q Peace's Wretched Price/Talk to Tarvyn Indoril |future
+goto 74.21,50.83 |q Peace's Wretched Price/Talk to Tarvyn Indoril |future |tip Follow Tarvyn Indoril
 step
 goto 72.47,51.49
 talk Tarvyn Indoril |q Peace's Wretched Price/Talk to Tarvyn Indoril |future
@@ -39362,8 +39374,16 @@ goto 70.60,23.00 |q Born of Grief/Go to the Base of Annihilarch's Summit
 step
 goto 71.09,20.99 |q Born of Grief/Enter the Passage |future
 step
+goto 70.62,20.20 |q Born of Grief/Enter the Passage |future
+step
+goto 72.45,20.45 |q Born of Grief/Enter the Passage |future
+step
+goto 69.01,18.94 |q Born of Grief/Enter the Passage |future
+step
+goto 69.58,17.83 |q Born of Grief/Enter the Passage |future
+step
 goto 68.74,15.80
-'Enter _Passage to Annihilarch's Summit_ |q Born of Grief/Enter the Passage
+'Enter _Passage to Annihilarch's Summit_ |q Born of Grief/Enter the Passage |future
 step
 goto 67.46,13.86
 talk Arox the Mutilator |q Born of Grief/Talk to Arox the Mutilator |future
@@ -39398,10 +39418,10 @@ goto 67.13,14.44
 talk Lyranth |q Born of Grief/Talk to Lyranth |future
 step
 goto 67.41,14.65
-'Use _Portal to Fort Grief_ |q Born of Grief/Use the Portal
+'Use _Portal to Fort Grief_ |q Born of Grief/Use the Portal |future
 |tip Manually skip to the next step.
 step
-goto u32_GriefEXT_base 61.27,68.40 |q Born of Grief/Explore the Fort
+goto u32_GriefEXT_base 61.27,68.40 |q Born of Grief/Explore the Fort |future
 step
 goto 76.80,76.18
 'Unlock _Bladebearers' Cage_ |q Born of Grief/Free the Captive Bladebearers |future
@@ -39419,34 +39439,33 @@ step
 goto 37.78,36.88 |q Born of Grief/Enter Fort Grief Citadel
 step
 goto 42.07,51.41
-'Open _Fort Grief Citadel_ |q Born of Grief/Enter Fort Grief Citadel
+'Open _Fort Grief Citadel_ |q Born of Grief/Enter Fort Grief Citadel |future
 |tip Manually skip to the next step.
 step
-goto u32_GriefINT_base 38.55,43.44 |q Born of Grief/Find the Riven Cataclyst
+goto u32_GriefINT_base 38.55,43.44 |q Born of Grief/Find the Riven Cataclyst |future
 step
 goto 50.87,43.80 |q Born of Grief/Find the Riven Cataclyst
 step
 goto 71.14,50.90 |q Born of Grief/Confront Sister Celdina and Valkynaz Nokvroz |future
 step
 goto 67.90,60.41
-'Open _Riven Cataclyst Chamber_ |q Born of Grief/Confront Sister Celdina and Valkynaz Nokvroz
+'Open _Riven Cataclyst Chamber_ |q Born of Grief/Confront Sister Celdina and Valkynaz Nokvroz |future
 |tip Manually skip to the next step.
 step
-goto 47.54,64.54
 goto 51.50,60.78
 |tip Watch the dialogue.
 |tip Destroy Cataclyst Vessel when you see an electric current flowing to the Storm Incarnate and stay in the healing circle when its up near Rynkyus.
-kill Storm Incarnate |q Born of Grief/Defeat the Incarnate
+kill Storm Incarnate |q Born of Grief/Defeat the Incarnate |future
 step
 goto 51.16,59.73
 'Destroy _Cataclyst Core_ |q Born of Grief/Destroy the Riven Cataclyst
 step
 goto 52.61,65.71
-'Use Portal to _Wretched Spire_ |q Born of Grief/Exit Fort Grief
+'Use _Portal to Wretched Spire_ |q Born of Grief/Exit Fort Grief
 |tip Manually skip to the next step.
 step
 goto u32deadlandszone_base 70.59,45.60
-talk Lyranth |q Born of Grief/Talk to Lyranth
+talk Lyranth |q Born of Grief/Talk to Lyranth |future
 step
 goto 67.92,43.81 |q Born of Grief/Go to the House of Whims
 step
@@ -39473,7 +39492,7 @@ talk Lyranth
 turnin Born of Grief
 accept Deadlight
 step
-goto 49.47,28.64 |q Salvaged Plans/Talk to Grasp-Kyn Zyr |tip Go downstairs.
+goto 49.47,28.64 |q Salvaged Plans/Talk to Grasp-Kyn Zyr |tip Go outside.
 step
 goto 43.13,26.68
 talk Grasp-Kyn Zyr
@@ -39487,7 +39506,8 @@ step
 goto 60.91,42.71
 talk Arox the Mutilator |q Deadlight/Talk to Arox the Mutilator
 step
-'Open _The Deadlands_ Map
+goto 53.16,30.29
+'Use _Fargrave_
 'Travel to _Annihilarch's Summit_ |q Deadlight/.*Search Cultist Sites.*
 |tip Manually skip to the next step.
 step
@@ -39727,7 +39747,7 @@ goto 40.63,54.79
 talk Hyxo |q The Force of Change/Talk to Hyxo |future
 step
 goto 43.16,57.97
-talk Valsirenn |q The Force of Change/Talk to Talk to Valsirenn
+talk Valsirenn |q The Force of Change/Talk to Talk to Valsirenn |future
 step
 goto 43.16,57.97
 |tip Watch the dialogue.
@@ -39745,7 +39765,7 @@ goto 18.94,61.27
 'Use _Portal to Deadlight_ |q Deadlight/Enter the Portal |future
 |tip Manually skip to the next step.
 step
-goto u32_Deadlight_EXT_base 45.89,45.80 |q Deadlight/Infiltrate Deadlight Citadel
+goto u32_Deadlight_EXT_base 45.89,45.80 |q Deadlight/Infiltrate Deadlight Citadel |future
 step
 goto 29.76,58.91 |q Deadlight/Infiltrate Deadlight Citadel
 step
@@ -39793,7 +39813,7 @@ goto 66.48,27.78
 step
 goto 60.37,27.89
 |tip Watch the dialogue.
-'Examine _The Anchorite Amulet_ |q Deadlight/Examine the Anchorite's Amulet
+'Examine _The Anchorite Amulet_ |q Deadlight/Examine the Anchorite's Amulet |future
 step
 goto 57.19,27.79
 talk The Anchorite |q Deadlight/Talk to the Anchorite
@@ -39850,18 +39870,15 @@ step
 goto 33.86,54.30 |q Against All Hope/Go to the Old Portal Dais
 step
 goto 34.64,55.80
-|tip turn three times.
-'Turn _Runic Stone_ |q Against All Hope/Reactivate the Portal |future
+'Turn _Runic Stone_ 3 Times |q Against All Hope/Reactivate the Portal |future
 |tip Manually skip to the next step.
 step
 goto 34.89,56.24
-|tip turn two times.
-'Turn _Runic Stone_ |q Against All Hope/Reactivate the Portal
+'Turn _Runic Stone_ 2 Times |q Against All Hope/Reactivate the Portal
 |tip Manually skip to the next step.
 step
 goto 35.37,56.04
-|tip turn three times.
-'Turn _Runic Stone_ |q Against All Hope/Reactivate the Portal
+'Turn _Runic Stone_ 3 Times |q Against All Hope/Reactivate the Portal
 step
 goto 35.05,55.89
 talk Madam Whim |q Against All Hope/Talk to Madam Whim
@@ -39870,10 +39887,10 @@ goto 35.13,56.14
 talk Arox the Mutilator |q Against All Hope/Talk to Arox
 step
 goto 35.12,55.81
-'Use _Portal to Ardent Hope_ |q Against All Hope/Enter the Portal
+'Use _Portal to Ardent Hope_ |q Against All Hope/Enter the Portal |future
 |tip Manually skip to the next step.
 step
-goto u32_dl6_ahope_inner_keep_base 69.09,70.50 |q Against All Hope/Reach the Inner Keep
+goto u32_dl6_ahope_inner_keep_base 69.09,70.50 |q Against All Hope/Reach the Inner Keep |future
 step
 goto 40.16,46.35 |q Against All Hope/Reach the Inner Keep
 step
@@ -39892,7 +39909,7 @@ goto 58.10,83.67
 step
 goto 68.33,68.31 |q Against All Hope/Search for the Anchorite
 step
-goto 85.64,67.25
+goto 87.05,68.47
 'Eavesdrop on the _Blood Adepts_ |q Against All Hope/Eavesdrop on the Blood Adepts |future
 step
 goto 78.48,61.22
@@ -39938,8 +39955,8 @@ goto 49.86,52.11
 'Destroy _Perfected Cataclyst Core_ |q Against All Hope/Destroy the Perfected Cataclyst
 step
 goto u32_fargrave_base 46.98,32.17
-|tip Watch dialogue.
-'Open _House of Whims_ |q Against All Hope/Return to the House of Whims
+|tip Wait to be teleported.
+'Open _House of Whims_ |q Against All Hope/Return to the House of Whims |future
 step
 goto 46.08,31.96
 |tip Go upstairs.
@@ -39948,15 +39965,16 @@ turnin Against All Hope
 accept The Last Ambition
 step
 goto 61.41,42.49
-|tip Go downstairs.
-talk Eveli Sharp-Arrow |q The Last Ambition/Talk to Eveli Sharp-Arrow
+|tip Go outside.
+talk Eveli Sharp-Arrow |q The Last Ambition/Talk to Eveli Sharp-Arrow |future
 step
 goto 47.13,32.15
-|tip Watch the dialogue upstairs.
 'Open _House of Whim_ |q The Last Ambition/Go to the House of Whims
 |tip Manually skip to the next step.
 step
 goto 45.97,32.32
+|tip Go upstairs.
+|tip Watch the dialogue.
 'Take _Empty Memory Vessel_ |q The Last Ambition/Perform the Ritual |future
 step
 goto 45.95,32.30
@@ -39966,7 +39984,7 @@ goto 45.86,32.05
 talk Madam Whim |q The Last Ambition/Talk to Madam Whim
 step
 goto 52.86,30.11
-|tip Go downstairs.
+|tip Go outside.
 'Use _Fargrave_
 'Travel to _The Blood Pit_ in The Deadlands |q Reformatory Rescue |future
 |tip Manually skip to the next step.
@@ -40071,7 +40089,7 @@ goto u32_dreaded_refuge_int_base 65.10,63.08 |q Reformatory Rescue/.*Investigate
 step
 goto 26.45,61.36 |q Reformatory Rescue/.*Investigate the Brandfire Reformatory.* |count 3
 step
-goto 28.40,34.07 |q Reformatory Rescue/.*Investigate the Brandfire Reformatory.* |count 3
+goto 31.25,34.92 |q Reformatory Rescue/.*Investigate the Brandfire Reformatory.* |count 3
 step
 goto u32_dreaded_refuge_int_base2 50.04,42.67
 kill Kynreeve Brosuroth |q Reformatory Rescue/.*Investigate the Brandfire Reformatory.* |count 3
@@ -40125,7 +40143,7 @@ goto 16.30,65.69
 'Open _Portal to the Isle of Joys_ |q The Last Ambition/Explore the Isle of Joys |future
 |tip Manually skip to the next step.
 step
-goto u32_IsleOfJoy_base 68.81,63.05 |q The Last Ambition/Explore the Isle of Joys
+goto u32_IsleOfJoy_base 68.81,63.05 |q The Last Ambition/Explore the Isle of Joys |future
 step
 goto 65.90,45.53 |q The Last Ambition/Explore the Isle of Joys
 step
@@ -40167,7 +40185,7 @@ step
 goto u32_shatteredambition_base 47.64,38.41
 'Examine _Discarded Diary_ |q The Last Ambition/Search the Hidden Chamber
 step
-goto 48.93,38.63
+goto 49.14,40.77
 talk Eveli Sharp-Arrow |q The Last Ambition/Talk to Eveli Sharp-Arrow
 step
 goto 50.43,36.70
@@ -40177,21 +40195,24 @@ goto 48.50,36.70
 talk Lyranth |q The Last Ambition/Talk to Lyranth
 step
 goto 48.50,36.70
-'Use Portal to _Annihilarch's Summit_ |q The Last Ambition/Travel to Annihilarch's Summit |future
+'Use _Portal to Annihilarch's Summit_ |q The Last Ambition/Travel to Annihilarch's Summit |future
 |tip Manually skip to the next step.
 step
-goto u32deadlandszone_base 72.59,20.55 |q The Last Ambition/Confront Sombren |future
+goto u32deadlandszone_base 72.42,20.67 |q The Last Ambition/Confront Sombren |future
+step
+goto 70.12,19.19 |q The Last Ambition/Confront Sombren |future
 step
 goto 70.54,18.52
 'Open _Ambition's End_ |q The Last Ambition/Confront Sombren |future
 |tip Manually skip to the next step.
 step
 goto u32deadlandszone_base 73.51,18.38
-|tip Watch dialogue.
 kill Destron's Echo |q The Last Ambition/Confront Sombren
+|tip Manually skip to the next step.
 step
 goto 73.22,18.64
-'Use _Portal to Fargrave_ |q The Last Ambition/Return to Fargrave
+|tip Watch dialogue.
+'Use _Portal to Fargrave_ |q The Last Ambition/Return to Fargrave |future
 |tip Manually skip to the next step.
 step
 goto u32_fargrave_base 45.67,32.00
@@ -40209,13 +40230,13 @@ goto 45.74,32.21
 |tip Watch the dialogue
 talk Lyranth |q Ambition's End/Talk to Lyranth |future
 step
-goto 56.30,33.90 |q Ambition's End/Find Arox the Mutilator
+goto 49.07,28.58 |q Ambition's End/Find Arox the Mutilator |tip Go outside.
 step
-goto 63.37,25.04
+goto 63.37,25.92
 'Open _Bazaar_ |q Ambition's End/Find Arox the Mutilator
 |tip Manually skip to the next step.
 step
-goto u32_fargravebazaar_base 52.04,29.86 |q Ambition's End/Find Arox the Mutilator |tip Go downstairs.
+goto u32_fargravebazaar_base 52.04,29.86 |q Ambition's End/Find Arox the Mutilator
 step
 goto 50.27,05.56
 'Open _Fargrave Foodstuffs_ |q Ambition's End/Find Arox the Mutilator
@@ -40260,10 +40281,11 @@ talk Lyranth |q Ambition's End/Talk to Lyranth |future
 step
 goto 64.87,57.57 |q Ambition's End/Find Your Allies
 step
-goto 63.74,51.59 |q Ambition's End/Find the Anchorite
+goto 63.74,51.59 |q Ambition's End/Find the Anchorite |future
 step
 goto 51.02,50.66
-'Open _Solace Keep_ |q Ambition's End/Find the Anchorite
+'Open _Solace Keep_ |q Ambition's End/Find the Anchorite |future
+|tip Manually skip to the next step.-
 step
 goto u32_dsolace_int1_base 13.96,41.72
 'Open _Solace Keep Battlements_ |q Ambition's End/Find the Anchorite
@@ -40277,21 +40299,21 @@ goto 21.62,50.66
 'Open _Solace Palace_ |q Ambition's End/Find Sombren
 |tip Manually skip to the next step.
 step
-goto 40.58,58.62 |q Ambition's End/Find Sombren
+goto u32_dsolace_int2_base 40.58,58.62 |q Ambition's End/Find Sombren
 step
 goto u32_dsolace_int2_base 23.38,50.21
-'Open _The Lava Court_ |q Ambition's End/Find Sombren
+'Open _The Lava Court_ |q Ambition's End/Find Sombren |future
 step
-goto u32_dsolace_ext2_base 65.68,44.01 |q Ambition's End/Find Sombren
+goto u32_dsolace_ext2_base 65.68,44.01 |q Ambition's End/Follow Sombren |future
 step
-goto 65.43,57.55 |q Ambition's End/Find Sombren
+goto 65.43,57.55 |q Ambition's End/Follow Sombren |future
 step
-goto 45.91,57.78 |q Ambition's End/Find Sombren
+goto 45.91,57.78 |q Ambition's End/Follow Sombren |future
 step
-goto 46.05,39.83 |q Ambition's End/Find Sombren
+goto 46.05,39.83 |q Ambition's End/Follow Sombren |future
 step
 goto 18.78,39.69
-'Use Portal to _Sundercliff_ |q Ambition's End/Follow Sombren |future
+'Use _Portal to Sundercliff_ |q Ambition's End/Follow Sombren |future
 |tip Manually skip to the next step.
 step
 goto u32_Sundercliff_base 18.68,20.14
@@ -40323,7 +40345,6 @@ step
 |tip Manually skip to the next step.
 step
 goto u32_fargrave_base 46.98,32.19
-|tip Go upstairs.
 'Open _House of Whims_ |q Hope Springs Eternal/Go to the House of Whims |future
 |tip Manually skip to the next step.
 step
@@ -40331,7 +40352,7 @@ goto 45.47,31.89
 |tip Go upstairs.
 talk Madam Whip |q Hope Springs Eternal/Talk to Madam Whim |future
 step
-goto 47.66,26.25 |q Hope Springs Eternal/Look for Lyranth |tip Go downstairs.
+goto 47.66,26.25 |q Hope Springs Eternal/Look for Lyranth |tip Go outside.
 step
 goto 39.79,24.78 |q Hope Springs Eternal/Look for Lyranth
 step
@@ -40378,10 +40399,10 @@ description Explore High Isle and Amenos, a land never-before-seen in The Elder 
 -- BEGIN: HIGH ISLE PROLOGUE GUIDE
 step
 'Open _Stormhaven_ Map
-'Travel to _Wayrest_
+'Travel to _Wayrest_ |q Ascending Doubt |future
 |tip Manually skip to the next step.
 step
-goto wayrest_base 46.57,45.48
+goto wayrest_base 46.57,45.48 |q Ascending Doubt |future
 step
 goto 46.90,34.90
 talk Jakarn

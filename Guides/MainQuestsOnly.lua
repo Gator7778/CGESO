@@ -6931,7 +6931,7 @@ goto 38.40,51.21
 |tip All around this area.
 kill Flame Atronachs
 kill Frost Atronachs
-'Charge the _Fang Five Times_ |q The Fires of Dune/.*Charge the Fang.*
+'Charge the _Fang_ 5 Times |q The Fires of Dune/.*Charge the Fang.*
 step
 goto 40.15,51.45
 'Use _Sacred Khajiit Fang_ |q The Fires of Dune/Close the Portal
@@ -18201,11 +18201,9 @@ kill Dwarven Sphere
 step
 goto 50.33,43.58
 'Examine _Arbiter of Perfection_
-|tip Do this three times.
-'Choose _<Take a closer look at the pegs.>_
+'Choose _<Take a closer look at the pegs.>_ 3 Times
 'Choose _<Add a gear.>_
-|tip Do this Five times.
-'Choose _<Take a closer look at the sockets.>_
+'Choose _<Take a closer look at the sockets.>_ 5 Times
 'Choose _<Add a dynamo core.>_
 kill Arbiter of Perfection |q The Seal of Three/Pass Sotha Sil's Trial
 step
@@ -23324,15 +23322,15 @@ goto 20.04,16.29
 |tip Manually skip to the next step.
 step
 goto 20.04,18.71
-'Rotate _Crystal Prism three times_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ 3 Times |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 17.81,18.72
-'Rotate _Crystal Prism twice_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ 2 Times |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 17.69,20.87
-'Rotate _Crystal Prism once_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 27.41,25.76
@@ -23340,11 +23338,11 @@ goto 27.41,25.76
 |tip Manually skip to the next step.
 step
 goto 27.67,20.94
-'Rotate _Crystal Prism three times_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ 3 Times |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 25.18,13.87
-'Rotate _Crystal Prism three times_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ 3 Times |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 22.61,13.86
@@ -27872,17 +27870,14 @@ goto 90.95,62.55
 |tip Manually skip to the next step.
 step
 goto 86.58,66.63
-|tip Do this 6 times.
-'Hit the _Kinetic Resonator_ |q Quarry Conundrum/Solve the Puzzle of the Orb of Illumination
+'Hit the _Kinetic Resonator_ 6 Times |q Quarry Conundrum/Solve the Puzzle of the Orb of Illumination
 |tip Manually skip to the next step.
 step
 goto 88.27,63.64
-|tip Do this 3 times.
-'Hit the _Kinetic Resonator_ |q Quarry Conundrum/Solve the Puzzle of the Orb of Illumination
+'Hit the _Kinetic Resonator_ 3 Times |q Quarry Conundrum/Solve the Puzzle of the Orb of Illumination
 |tip Manually skip to the next step.
 step
 goto 86.57,60.69
-|tip Do this 1 time.
 'Hit the _Kinetic Resonator_ |q Quarry Conundrum/Solve the Puzzle of the Orb of Illumination
 step
 goto 90.69,63.57
@@ -36648,24 +36643,25 @@ step
 goto moonlitcove01_base 74.15,37.09 |q Uneasy Alliances/Find Bahzahar's Hideout
 step
 goto 87.79,41.40
-|tip Takes him a few minutes to make his way to you.
 talk Za'ji |q Uneasy Alliances/Talk to Za'ji |future
 step
 goto 70.64,50.74 |q Uneasy Alliances/Follow Za'ji
 step
-goto 71.82,30.82 |q Uneasy Alliances/Follow Za'ji
+goto 71.82,30.82
+'Follow _Za'ji_ |q Uneasy Alliances/Follow Za'ji
 step
 goto 71.82,30.82
-talk Za'ji |q Uneasy Alliances/Find the Key |future
+talk Za'ji |q Uneasy Alliances/Talk to Za'ji
+step
+goto 72.06,33.29
+'Use _Grappling Point_ |q Uneasy Alliances/Find the Key
 |tip Manually skip to the next step.
 step
-goto 71.88,33.07
-|tip Look up in the quest area and get on the tallest part of the rock so you can use the grappling hook.
+goto 67.25,31.37
 'Use _Grappling Point_ |q Uneasy Alliances/Find the Key
 |tip Manually skip to the next step.
 step
 goto 64.88,31.19
-'Use _Grappling Point_
 'Open _Za'ji's Lockbox_ |q Uneasy Alliances/Find the Key
 step
 goto 89.89,40.96
@@ -39370,11 +39366,11 @@ goto 34.73,16.15
 |tip Manually skip to the next step.
 step
 goto 35.00,15.74
-'Turn _Dwarven Puzzle Block_ Three times |q Blood of the Reach/Open the Door to Bthar-Zel
+'Turn _Dwarven Puzzle Block_ 3 Times |q Blood of the Reach/Open the Door to Bthar-Zel
 |tip Manually skip to the next step.
 step
 goto 35.47,15.99
-'Turn _Dwarven Puzzle Block_ Three times |q Blood of the Reach/Open the Door to Bthar-Zel
+'Turn _Dwarven Puzzle Block_ 3 Times |q Blood of the Reach/Open the Door to Bthar-Zel
 step
 goto 35.35,16.12
 talk Count Verandis Ravenwatch |q Blood of the Reach/Enter Bthar-Zel
@@ -40733,15 +40729,15 @@ goto 63.27,89.76
 talk Lyranth |q A Hidden Vault/Talk to Lyranth
 step
 goto 62.69,90.01
-'Turn _Ward_ Three times |q A Hidden Vault/Find a Way Into the Vault
+'Turn _Ward_ 3 Times |q A Hidden Vault/Find a Way Into the Vault
 |tip Manually skip to the next step.
 step
 goto 62.58,89.76
-'Turn _Ward Cube_ Two times |q A Hidden Vault/Find a Way Into the Vault
+'Turn _Ward Cube_ 2 Times |q A Hidden Vault/Find a Way Into the Vault
 |tip Manually skip to the next step.
 step
 goto 62.69,89.53
-'Turn _Ward Cube_ Three times |q A Hidden Vault/Find a Way Into the Vault
+'Turn _Ward Cube_ 3 Times |q A Hidden Vault/Find a Way Into the Vault
 step
 goto 62.35,89.75
 'Open _Doomvault Capraxus_ |q A Hidden Vault/Enter the Daedric Vault |future
@@ -40769,15 +40765,15 @@ goto 63.37,42.18
 talk Eveli Sharp-Arrow |q A Hidden Vault/Talk to Eveli Sharp-Arrow
 step
 goto 58.02,42.93
-'Turn _Ward Cube_ Three times. |q A Hidden Vault/Disrupt the Inner Ward
+'Turn _Ward Cube_ 3 Times |q A Hidden Vault/Disrupt the Inner Ward
 |tip Manually skip to the next step.
 step
 goto 57.48,42.28
-'Turn _Ward Cube_ Two times |q A Hidden Vault/Disrupt the Inner Ward
+'Turn _Ward Cube_ 2 Times |q A Hidden Vault/Disrupt the Inner Ward
 |tip Manually skip to the next step.
 step
 goto 57.79,41.57
-'Turn _Ward Cube_ Three times |q A Hidden Vault/Disrupt the Inner Ward
+'Turn _Ward Cube_ 3 Times |q A Hidden Vault/Disrupt the Inner Ward
 step
 goto 56.22,42.28
 'Open _Doomvault Corridor_ |q A Hidden Vault/Explore the Daedric Vault
@@ -40825,19 +40821,19 @@ goto 46.27,56.76
 'Explore the _Daedric Vault_ |q A Hidden Vault/Explore the Daedric Vault
 step
 goto 46.27,56.76
-'Turn _Ward Cube_ Three times |q A Hidden Vault/Disrupt the Final Ward
+'Turn _Ward Cube_ 3 Times |q A Hidden Vault/Disrupt the Final Ward
 |tip Manually skip to the next step.
 step
 goto 45.32,56.73
-'Turn _Ward Cube_ Two times |q A Hidden Vault/Disrupt the Final Ward
+'Turn _Ward Cube_ 2 Times |q A Hidden Vault/Disrupt the Final Ward
 |tip Manually skip to the next step.
 step
 goto 43.65,56.80
-'Turn _Ward Cube_ Three times |q A Hidden Vault/Disrupt the Final Ward
+'Turn _Ward Cube_ 3 Times |q A Hidden Vault/Disrupt the Final Ward
 |tip Manually skip to the next step.
 step
 goto 42.56,56.80
-'Turn _Ward Cube_ Three times |q A Hidden Vault/Disrupt the Final Ward
+'Turn _Ward Cube_ 3 Times |q A Hidden Vault/Disrupt the Final Ward
 step
 goto 44.50,58.67
 'Open _Doomvault Capraxus Inner Vault_ |q A Hidden Vault/Enter the Inner Vault
@@ -42251,15 +42247,15 @@ step
 goto 33.86,54.30 |q Against All Hope/Go to the Old Portal Dais
 step
 goto 34.64,55.80
-'Turn _Runic Stone_ Three times |q Against All Hope/Reactivate the Portal |future
+'Turn _Runic Stone_ 3 Times |q Against All Hope/Reactivate the Portal |future
 |tip Manually skip to the next step.
 step
 goto 34.89,56.24
-'Turn _Runic Stone_ Two times |q Against All Hope/Reactivate the Portal
+'Turn _Runic Stone_ 2 Times |q Against All Hope/Reactivate the Portal
 |tip Manually skip to the next step.
 step
 goto 35.37,56.04
-'Turn _Runic Stone_ Three times |q Against All Hope/Reactivate the Portal
+'Turn _Runic Stone_ 3 Times |q Against All Hope/Reactivate the Portal
 step
 goto 35.05,55.89
 talk Madam Whim |q Against All Hope/Talk to Madam Whim
