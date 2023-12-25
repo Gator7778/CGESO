@@ -37158,7 +37158,7 @@ goto 63.13,79.78
 talk Nuxul |q The Rising Winds/Talk to Nuxul
 step
 goto 61.15,76.14
-'Open _Elossi's Hut_ |q The Rising Wind |future
+'Open _Elossi's Hut_ |q The Rising Winds |future
 |tip Manually skip to the next step.
 step
 goto 60.97,76.07
@@ -38155,7 +38155,7 @@ goto 44.76,36.95
 |only Aldmeri Dominion
 step
 goto 44.76,36.95
-'Use Portal to _Lyranth's Hidden Lair_ |q An Apocalyptic Situation/Enter the Portal |future
+'Use _Portal to _Lyranth's Hidden Lair_ |q An Apocalyptic Situation/Enter the Portal |future
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 -- END: ALDMERI DOMINION FACTION PROLOGUE GUIDE
@@ -38179,7 +38179,7 @@ goto 81.52,57.15
 |only Daggerfall Covenant
 step
 goto 81.52,57.15
-'Use Portal to _Lyranth's Hidden Lair_ |q An Apocalyptic Situation/Enter the Portal |future
+'Use _Portal to Lyranth's Hidden Lair_ |q An Apocalyptic Situation/Enter the Portal |future
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 -- END: DAGGERFALL COVENANT FACTION
@@ -38197,7 +38197,7 @@ goto 33.04,24.87
 |only Ebonheart Pact
 step
 goto 33.04,24.87
-'Use Portal to _Lyranth's Hidden Lair_ |q An Apocalyptic Situation/Enter the Portal |future
+'Use _Portal to Lyranth's Hidden Lair_ |q An Apocalyptic Situation/Enter the Portal |future
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 -- END: EBONHEART PACT FACTION
@@ -40407,19 +40407,20 @@ step
 goto 46.90,34.90
 talk Jakarn
 accept Ascending Doubt
-|only Aldmeri Dominion
 step
-goto wayrest_base 46.57,45.48
-step
+goto wayrest_base 46.57,45.48 |q Ascending Doubt/Talk to Tarazka |future
 
 -- START: ALDMERI DOMINION FACTION PROLOGUE GUIDE
 step
 goto 40.10,50.35
 'Use _Wayrest_
-'Travel to _Tel Mora_ in Vvardenfell
+'Travel to _Tel Mora_ in Vvardenfell |q Ascending Doubt/Talk to Tarazka |future
 |only Aldmeri Dominion
 step
-goto vvardenfell_base 66.68,42.05
+goto vvardenfell_base 65.84,36.46 |q Ascending Doubt/Talk to Tarazka |future
+|only Aldmeri Dominion
+step
+goto 66.68,42.05
 talk Tarazka |q Ascending Doubt/Talk to Tarazka |future
 |only Aldmeri Dominion
 step
@@ -40457,9 +40458,9 @@ goto 44.16,79.38
 
 -- START: DAGGERFALL COVENANT FACTION
 step
-goto 40.10,50.35
+goto wayrest_base 40.10,50.35
 'Use _Wayrest_
-'Travel to _Seyda Need_ in Vvardenfell
+'Travel to _Seyda Need_ in Vvardenfell |q Ascending Doubt/Talk to Tarazka |future
 |only Daggerfall Covenant
 step
 goto vvardenfell_base 35.88,75.92
@@ -40503,9 +40504,9 @@ goto 43.91,83.09
 
 -- START: EBONHEART PACT FACTION
 step
-goto 40.10,50.35
+goto wayrest_base 40.10,50.35
 'Use _Wayrest_
-'Travel to _West Gash_ in Vvardenfell
+'Travel to _West Gash_ in Vvardenfell |q Ascending Doubt/Talk to Tarazka |future
 |only Ebonheart Pact
 step
 goto vvardenfell_base 26.97,50.36
@@ -40529,7 +40530,7 @@ step
 goto 52.48,78.72 |q Ascending Doubt/Search for the Ascendant Order Hideout
 |only Ebonheart Pact
 step
-goto 21.05,46.74 |q Ascending Doubt/Search for the Ascendant Order Hideout
+goto 25.02,51.47 |q Ascending Doubt/Search for the Ascendant Order Hideout
 |only Ebonheart Pact
 step
 goto 41.92,50.45
@@ -40570,22 +40571,22 @@ goto 31.46,33.64
 'Enter _Sareloth Grotto_ |q Ascending Doubt/Enter Sareloth Grotto |future
 |tip Manually skip to the next step.
 step
-goto u33_Prologue1bINT_base 48.85,22.97 |q Ascending Doubt/Search Sareloth Grotto
+goto u33_Prologue1bINT_base 48.85,22.97 |q Ascending Doubt/Search Sareloth Grotto |future
 step
 goto 49.25,26.18
-|tip Use Valessea's Shell
+'Use _Valessea's Shell_
 'Search _Weathered Chest_ |q Ascending Doubt/.*Use Valessea's Shell to Find the Medallions.* |count 1 |future
 step
 goto 65.69,23.51
-|tip Use Valessea's Shell
+'Use _Valessea's Shell_
 'Search _Weathered Chest_ |q Ascending Doubt/.*Use Valessea's Shell to Find the Medallions.* |count 2
 step
 goto 64.22,43.92
-|tip Use Valessea's Shell
+'Use _Valessea's Shell_
 'Search _Weathered Chest_ |q Ascending Doubt/.*Use Valessea's Shell to Find the Medallions.* |count 3
 step
 goto 43.51,42.50
-|tip Use Valessea's Shell
+'Use _Valessea's Shell_
 'Search _Weathered Chest_ |q Ascending Doubt/.*Use Valessea's Shell to Find the Medallions.* |count 4
 step
 goto 35.96,56.42 |q Ascending Doubt/.*Use Valessea's Shell to Find the Medallions.*
@@ -40593,14 +40594,14 @@ step
 goto 49.88,66.28 |q Ascending Doubt/.*Use Valessea's Shell to Find the Medallions.*
 step
 goto 50.17,81.84
-|tip Use Valessea's Shell
+'Use _Valessea's Shell_
 'Search _Weathered Chest_ |q Ascending Doubt/.*Use Valessea's Shell to Find the Medallions.* |count 5
 step
 goto 45.16,75.66
 talk Jakarn |q Ascending Doubt/Talk to Jakarn
 step
 'Open _Vvardenfell_ Map
-'Travel to _Vivec City Temple_ |q Ascending Doubt/Travel to Lady Arabelle's Camp
+'Travel to _Vivec Temple_ |q Ascending Doubt/Travel to Lady Arabelle's Camp
 |tip Manually skip to the next step.
 step
 goto viviccity_base 51.71,41.50 |q Ascending Doubt/Travel to Lady Arabelle's Camp
@@ -40671,7 +40672,7 @@ step
 goto 46.52,67.47
 talk Guild Scholar Valessea |q A King's Retreat/Talk to Valessea
 step
-goto 45.55,76.91 |q A King's Retreat/Go to Sword's Rest Isle
+goto 45.21,75.52 |q A King's Retreat/Go to Sword's Rest Isle
 step
 goto 57.26,76.58
 'Travel _Boat to Sword's Rest Isle_ |q A King's Retreat/Go to Sword's Rest Isle |future
@@ -40706,7 +40707,7 @@ goto 53.53,37.39
 talk Lady Arabelle |q A King's Retreat/Talk to Lady Arabelle
 step
 'Open _Vvardenfell_ Map
-'Travel to _Vivec City Temple_ |q A King's Retreat/Go to Lady Arabelle's Camp
+'Travel to _Vivec Temple_ |q A King's Retreat/Go to Lady Arabelle's Camp
 |tip Manually skip to the next step.
 step
 goto viviccity_base 51.71,41.50 |q A King's Retreat/Go to Lady Arabelle's Camp
@@ -40770,7 +40771,7 @@ talk Yarzidh |q Of Knights and Knaves/Investigate the Inn
 |tip Manually skip to the next step.
 step
 goto 42.76,35.71
-talk Marisette Lemaitre |q The Large Delegate/Talk to the Innkeeper
+talk Marisette Lemaitre |q The Large Delegate/Talk to the Innkeeper |future
 step
 goto 42.76,35.71
 talk Rigurt the Brash |q The Large Delegate/Talk to Rigurt the Brash
@@ -40788,7 +40789,7 @@ talk Sergeant Dupertuis |q The Large Delegate/Confront Ulgonash
 |tip Manually skip to the next step.
 step
 goto 47.97,36.49
-'Find _Berjac Catillon_ |q The Large Delegate/Confront Ulgonash
+talk _Berjac Catillon_ |q The Large Delegate/Confront Ulgonash
 |tip Manually skip to the next step.
 step
 goto 43.07,55.61
@@ -40841,7 +40842,9 @@ step
 'Travel to _Westbay_ |q Of Knights and Knaves/Investigate the Shallows
 |tip Manually skip to the next step.
 step
-goto u34_systreszone_base 51.48,78.24
+goto u34_systreszone_base 51.17,79.15 |q Of Knights and Knaves/Investigate the Shallows
+step
+goto 51.48,78.24
 'Use _Skyshard_ |q Of Knights and Knaves/Investigate the Shallows
 |tip Manually skip to the next step.
 step
