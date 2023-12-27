@@ -43321,8 +43321,9 @@ goto 83.38,22.01
 'Find _High King Emeric_ |q Escape from Amenos/Find High King Emeric
 step
 goto 83.38,22.01
-talk Queen Ayrenn |q Escape from Amenos/Talk to Queen Ayrenn
+talk Queen Ayrenn |q Escape from Amenos |future
 'Tell her _Any ideas on how we can find High King Emeric now?_
+|tip Manually skip to the next step.
 step
 goto 81.60,20.27
 'Open _Coral Cliffs_ |q Escape from Amenos/Search the Nearby Cave
@@ -44394,6 +44395,8 @@ goto 56.44,84.81
 |tip Go up the ramp at the back of the room.
 'Turn _Temple Druid Stone_ |q The Dream of Kasorayn/.*Align the Temple Druid Stones.* |count 1
 step
+goto 45.39,91.98 |q The Dream of Kasorayn/.*Align the Temple Druid Stones.* |count 2
+step
 goto 47.91,84.55
 |tip Go up the ramp at the back of the room.
 'Turn _Temple Druid Stone_ |q The Dream of Kasorayn/.*Align the Temple Druid Stones.* |count 2
@@ -44434,10 +44437,10 @@ goto 68.08,31.58
 talk Frii |q The Dream of Kasorayn/Talk to Frii
 step
 'Open _Galen and Y'ffelon_ Map
-'Travel to _Vastyr_ |q The Dream of Kasorayn/Go to Vastyr
+'Travel to _Vastyr_ |q The Dream of Kasorayn/Go to Vastyr 
 step
 goto u36_VastyrCity_base 52.26,37.40
-'Open _Castle Mornard_ |q The Dream of Kasorayn/Talk to Sir Stefan Mornard
+'Open _Castle Mornard_ |q The Dream of Kasorayn/Talk to Sir Stefan Mornard |future
 |tip Manually skip to the next step.
 step
 goto u36_VastyrCityCastle_base 22.12,55.66
@@ -44471,7 +44474,7 @@ goto 66.07,68.87
 step
 goto u36_gn6_madmaiden_base 43.00,45.22
 |tip On Top Deck of The Mad Maiden
-'Defend the _Mad Maiden_ |q Guardian of Y'ffelon/Defend the Mad Maiden |future
+'Defend the _Mad Maiden_ |q Guardian of Y'ffelon/Defend the Mad Maiden |future 
 step
 goto 36.56,61.33
 'Use _Ship's Bell_ |q Guardian of Y'ffelon/Signal the Crew |future
@@ -44642,7 +44645,6 @@ goto u34_systreszone_base 55.95,54.12 |q The Hidden Lord/Investigate the Dufort 
 step
 goto 54.18,53.10
 'Examine _Deal with the Messenger_ |lorebook Deal with the Messenger/3/47/1
-|tip Manually skip to the next step.
 step
 goto 55.63,52.20
 'Examine _Messenger's Report_ |q The Hidden Lord/Investigate the Dufort Shipyards
@@ -44720,7 +44722,7 @@ goto 78.01,72.97
 'Open _Office of the Knight Commander_ |q The Hidden Lord/Talk to Duchess Elea
 |tip Manually skip to the next step.
 step
-goto 78.01,60.48
+goto 74.68,63.69
 talk Duchess Elea Dufort |q The Hidden Lord/Talk to Duchess Elea
 step
 goto 79.38,52.46
@@ -45071,7 +45073,7 @@ talk Lady Arabelle Davaux
 turnin The Ivy Throne
 accept And Now, Perhaps, Peace
 step
-goto 25.81,60.67
+goto 20.58,54.53
 talk Druid Laurel |q And Now, Perhaps, Peace/Talk to Druid Laurel
 step
 goto 55.58,72.87
@@ -45100,7 +45102,7 @@ goto 74.36,43.83
 talk Lady Arabelle Davaux |q And Now, Perhaps, Peace/Talk to Lady Arabelle
 step
 goto 73.50,44.88
-'Open _Mandrake Manor_ |q And Now, Perhaps, Peace/.*Gather Your Allies.* |count 1
+'Open _Gonfalon Bay_ |q And Now, Perhaps, Peace/.*Gather Your Allies.* |count 1
 |tip Manually skip to the next step.
 step
 goto 47.02,42.84

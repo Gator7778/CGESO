@@ -2799,7 +2799,7 @@ CGV.MapData = {
     ["u36_yfreesint2_base"] =               { name = "Yfrees Path",                             id = 910, xoffset = 0.047666, yoffset = 0.552225, scale = 0.005871, },
     ["u36_c2_yfreespath_base"] =            { name = "Yfrees Path",                             id = 910, xoffset = 0.042966, yoffset = 0.559766, scale = 0.013167, },
     ["u36_GN3Cave_base"] =                  { name = "Clohaigh",                                id = 911, xoffset = 0.052357, yoffset = 0.554660, scale = 0.010077, },
-    ["u36_LKH_base"] =                      { name = "Fauns' Thicket",                          id = 912, xoffset = 0.038336, yoffset = 0.557908, scale = 0.010879, },
+    ["u36_LKH_base"] =                      { name = "Fauns' Thicket",                          id = 912, xoffset = 0.038336, yoffset = 0.557908, scale = 0.040879, },
     ["u36_VastyrCityCathedral_base"] =      { name = "Vastyr Cathedral District",               id = 913, xoffset = 0.036597, yoffset = 0.564909, scale = 0.014352, },
     ["u36_VastyrCityCath_AltRt_base"] =     { name = "Vastyr Old Druid Tunnels",                id = 914, xoffset = 0.042530, yoffset = 0.564197, scale = 0.010018, },
     ["u36_ivyhame_base"] =                  { name = "Ivyhame",                                 id = 915, xoffset = 0.057195, yoffset = 0.560290, scale = 0.010012, },
