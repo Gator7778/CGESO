@@ -668,8 +668,7 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 				GetCurrentMapIndex() == Enums.ImperialCityMap or
 			    GetCurrentMapIndex() == Enums.KhenarthisRoostMap then return 2
 			
-		elseif 	GetCurrentMapIndex() == Enums.ApocryphaMap or
-		        GetCurrentMapIndex() == Enums.AzkthzandCavernMap or
+		elseif 	GetCurrentMapIndex() == Enums.AzkthzandCavernMap or
 				GetCurrentMapIndex() == Enums.BalFoyenMap or
 			    GetCurrentMapIndex() == Enums.BangkoraiMap or
 				GetCurrentMapIndex() == Enums.Blackwood or
@@ -689,7 +688,8 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 				GetCurrentMapIndex() == Enums.TheReachMap or
 				GetCurrentMapIndex() == Enums.WrothgarMap then return 4
 				
-		elseif  GetCurrentMapIndex() == Enums.CraglornMap or
+		elseif  GetCurrentMapIndex() == Enums.ApocryphaMap or
+		        GetCurrentMapIndex() == Enums.CraglornMap or
 				GetCurrentMapIndex() == Enums.GlenumbraMap or
 			    GetCurrentMapIndex() == Enums.GrahtwoodMap or
 			    GetCurrentMapIndex() == Enums.GreenshadeMap or
@@ -731,8 +731,7 @@ function Utils.DistanceOffsetForIsComplete()
 				GetCurrentMapIndex() == Enums.ImperialCityMap or
 			    GetCurrentMapIndex() == Enums.KhenarthisRoostMap then return 2
 			
-		elseif 	GetCurrentMapIndex() == Enums.ApocryphaMap or
-		        GetCurrentMapIndex() == Enums.AzkthzandCavernMap or
+		elseif 	GetCurrentMapIndex() == Enums.AzkthzandCavernMap or
 				GetCurrentMapIndex() == Enums.BalFoyenMap or			    
 				GetCurrentMapIndex() == Enums.BangkoraiMap or
 				GetCurrentMapIndex() == Enums.Blackwood or
@@ -752,7 +751,8 @@ function Utils.DistanceOffsetForIsComplete()
 				GetCurrentMapIndex() == Enums.TheReachMap or
 				GetCurrentMapIndex() == Enums.WrothgarMap then return 4
 				
-		elseif  GetCurrentMapIndex() == Enums.CraglornMap or
+		elseif  GetCurrentMapIndex() == Enums.ApocryphaMap or
+		        GetCurrentMapIndex() == Enums.CraglornMap or
 				GetCurrentMapIndex() == Enums.GlenumbraMap or
 			    GetCurrentMapIndex() == Enums.GrahtwoodMap or
 			    GetCurrentMapIndex() == Enums.GreenshadeMap or
