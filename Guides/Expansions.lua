@@ -22706,29 +22706,29 @@ goto 35.51,57.96
 'Free _Anash_ |q Death and Dreaming/.*Rally the Survivors.* |count 1
 step
 goto 70.20,58.37
-kill the Ayleid Forces |q Death and Dreaming/.*Rally the Survivors.* |count 3
+kill the Ayleid Forces |q Death and Dreaming/.*Rally the Survivors.* |count 2
 step
 goto 34.69,43.67
-'Open _Sap-Speaker's Lodge_ |q Death and Dreaming/.*Rally the Survivors.* |count 2
+'Open _Sap-Speaker's Lodge_ |q Death and Dreaming/.*Rally the Survivors.* |count 3
 |tip Manually skip to the next step.
 step
 goto 32.24,37.55
-'Search _Sap-Speaker's Chest_ |q Death and Dreaming/.*Rally the Survivors.* |count 2
+'Search _Sap-Speaker's Chest_ |q Death and Dreaming/.*Rally the Survivors.* |count 3
 |tip Manually skip to the next step.
 step
 goto 34.29,42.86
-'Open _Murkmire_ |q Death and Dreaming/.*Rally the Survivors.* |count 2
+'Open _Murkmire_ |q Death and Dreaming/.*Rally the Survivors.* |count 3
 |tip Manually skip to the next step.
 step
 goto 48.57,50.61
-'Open _Storehouse_ |q Death and Dreaming/.*Rally the Survivors.* |count 2
+'Open _Storehouse_ |q Death and Dreaming/.*Rally the Survivors.* |count 3
 |tip Manually skip to the next step.
 step
 goto 50.20,50.20
-'Bandage _Peexalt_ |q Death and Dreaming/.*Rally the Survivors.* |count 2
+'Bandage _Peexalt_ |q Death and Dreaming/.*Rally the Survivors.* |count 3
 step
 goto 49.39,50.20
-'Open _Murkmire_ |q Death and Dreaming/.*Rally the Survivors.* |count 3
+'Open _Murkmire_ |q Death and Dreaming/.*Rally the Survivors.* |count 4
 |tip Manually skip to the next step.
 step
 goto 62.04,40.00

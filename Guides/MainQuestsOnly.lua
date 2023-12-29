@@ -34464,7 +34464,7 @@ goto 53.67,33.81
 talk Xukas |q Missing in Murkmire/Talk to Xukas
 step
 goto 48.77,26.41
-'Open _Cyrodilic Collections_ |q Missing in Murkmire/Talk to Famia
+'Open _Cyrodilic Collections_ |q Missing in Murkmire/Talk to Famia |future
 |tip Manually skip to the next step.
 step
 goto 49.34,24.46
@@ -34500,7 +34500,7 @@ goto 52.14,52.92
 talk Jaxsik-Orrn |q Missing in Murkmire/Talk to Jaxsik-Orrn |future
 step
 goto 50.32,53.23
-'Destroy _Supply Crate_ |q Missing in Murkmire/.*Smash Crates.* |count 1
+'Destroy _Supply Crate_ |q Missing in Murkmire/.*Smash Crates.* |count 1 |future
 step
 goto 51.89,55.12
 'Destroy _Supply Crate_ |q Missing in Murkmire/.*Smash Crates.* |count 2
@@ -34608,7 +34608,7 @@ goto 72.47,40.16 |q Whispers in the Wood/Talk to Chime-Maker Shuvu
 step
 goto 70.50,44.32 |q Whispers in the Wood/Talk to Chime-Maker Shuvu
 step
-goto deadwatervillage_base 68.95,46.92 |q Whispers in the Wood/Talk to Chime-Maker Shuvu |tip Drop down
+goto 68.95,46.92 |q Whispers in the Wood/Talk to Chime-Maker Shuvu |tip Drop down
 step
 goto 66.17,49.40
 talk Chime-Maker Shuvu |q Whispers in the Wood/Talk to Chime-Maker Shuvu
@@ -34633,7 +34633,9 @@ step
 goto 50.72,71.96
 talk Famia Mercius |q Whispers in the Wood/Talk to Famia |future
 step
-goto 37.12,69.74 |q Whispers in the Wood/Talk to Kassandra |future
+goto 42.43,59.51 |q Something About Stibbons |future
+step
+goto 37.15,56.43 |q Something About Stibbons |future
 step
 goto 31.84,62.20
 talk Kassandra |q Whispers in the Wood/Talk to Kassandra |future
@@ -34694,7 +34696,7 @@ step
 goto 30.40,28.35 |q Whispers in the Wood/Go to the Main Blackguard Camp
 step
 goto 30.83,27.58
-talk Jaxsik-Orrn |q Whispers in the Wood/Talk to Jaxsik-Orrn
+talk Jaxsik-Orrn |q Whispers in the Wood/Talk to Jaxsik-Orrn |future
 step
 goto 22.39,28.24
 'Enter _Tomb of Many Spears_ |q Whispers in the Wood/Kill Etra of the Many Spears
@@ -34751,9 +34753,9 @@ goto UI_Map_swallowedgrove_base 22.09,79.68 |q Death and Dreaming/Explore the Sw
 step
 goto 38.48,86.94 |q Death and Dreaming/Explore the Swallowed Grove |future
 step
-goto 46.14,86.43 |q Death and Dreaming/Explore the Swallowed Grove
+goto 46.14,86.43 |q Death and Dreaming/Explore the Swallowed Grove |future
 step
-goto 44.78,72.47 |q Death and Dreaming/Explore the Swallowed Grove
+goto 44.78,72.47 |q Death and Dreaming/Explore the Swallowed Grove |future
 step
 goto 70.35,61.17
 |tip Follow Xukas
@@ -34779,7 +34781,6 @@ kill Aki-Kahz, Bringer of Dust |q Death and Dreaming/Explore the Swallowed Grove
 |tip Manually skip to the next step.
 step
 goto 67.52,30.06
-|tip Manually skip to the next step.
 'Open _The Dreaming Nest_ |q Death and Dreaming/Enter the Dreaming Nest |future
 |tip Manually skip to the next step.
 step
@@ -34819,29 +34820,29 @@ goto 35.51,57.96
 'Free _Anash_ |q Death and Dreaming/.*Rally the Survivors.* |count 1
 step
 goto 70.20,58.37
-kill the Ayleid Forces |q Death and Dreaming/.*Rally the Survivors.* |count 3
+kill the Ayleid Forces |q Death and Dreaming/.*Rally the Survivors.* |count 2
 step
 goto 34.69,43.67
-'Open _Sap-Speaker's Lodge_ |q Death and Dreaming/.*Rally the Survivors.* |count 2
+'Open _Sap-Speaker's Lodge_ |q Death and Dreaming/.*Rally the Survivors.* |count 3
 |tip Manually skip to the next step.
 step
 goto 32.24,37.55
-'Search _Sap-Speaker's Chest_ |q Death and Dreaming/.*Rally the Survivors.* |count 2
+'Search _Sap-Speaker's Chest_ |q Death and Dreaming/.*Rally the Survivors.* |count 3
 |tip Manually skip to the next step.
 step
 goto 34.29,42.86
-'Open _Murkmire_ |q Death and Dreaming/.*Rally the Survivors.* |count 2
+'Open _Murkmire_ |q Death and Dreaming/.*Rally the Survivors.* |count 3
 |tip Manually skip to the next step.
 step
 goto 48.57,50.61
-'Open _Storehouse_ |q Death and Dreaming/.*Rally the Survivors.* |count 2
+'Open _Storehouse_ |q Death and Dreaming/.*Rally the Survivors.* |count 3
 |tip Manually skip to the next step.
 step
 goto 50.20,50.20
-'Bandage _Peexalt_ |q Death and Dreaming/.*Rally the Survivors.* |count 2
+'Bandage _Peexalt_ |q Death and Dreaming/.*Rally the Survivors.* |count 3
 step
 goto 49.39,50.20
-'Open _Murkmire_ |q Death and Dreaming/.*Rally the Survivors.* |count 3
+'Open _Murkmire_ |q Death and Dreaming/.*Rally the Survivors.* |count 4
 |tip Manually skip to the next step.
 step
 goto 62.04,40.00
@@ -35191,6 +35192,8 @@ talk Anais Davaux
 accept A Rage of Dragons
 step
 goto elsweyr_base 70.50,28.92 |q A Rage of Dragons/Talk to Abnur Tharn
+step
+goto 60.65,28.38 |q A Rage of Dragons/Talk to Abnur Tharn
 step
 goto 49.20,22.75 |q A Rage of Dragons/Talk to Abnur Tharn
 step
