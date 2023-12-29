@@ -32645,7 +32645,9 @@ goto 53.97,46.97
 step
 goto 56.09,44.57 |q The Queen's Decree/Talk to Rhanul
 step
-goto shimmerene_base 30.31,38.66 |q The Queen's Decree/Talk to Rhanul
+goto shimmerene_base 30.80,49.77 |q The Queen's Decree/Talk to Rhanul
+step
+goto 30.31,38.66 |q The Queen's Decree/Talk to Rhanul
 step
 goto 36.25,36.41 |q The Queen's Decree/Talk to Rhanul
 step
@@ -32730,7 +32732,7 @@ goto 22.79,33.42 |q The Queen's Decree/Escape the Undercroft
 step
 goto 07.81,25.18
 |tip Go downstairs.
-'Open _Summerset_ |q The Queen's Decree/Escape the Undercroft
+'Open _Summerset_ |q The Queen's Decree/Escape the Undercroft |future
 |tip Manually skip to the next step.
 step
 goto shimmerene_base 51.59,43.35 |q The Queen's Decree/Talk to Razum-dar |future
@@ -32772,9 +32774,11 @@ step
 goto 58.50,62.05
 talk Razum-dar |q The Queen's Decree/Talk to Razum-dar
 step
-goto 25.13,70.09 |q The Queen's Decree/Meet Valsirenn at the Coral Forest |tip Watch dialogue
+goto 25.13,70.09 |q The Queen's Decree/Meet Valsirenn at the Coral Forest
 step
-goto summerset_base 63.43,52.73
+goto summerset_base 59.36,51.62 |q The Queen's Decree/Meet Valsirenn at the Coral Forest
+step
+goto 63.43,52.73
 talk Valsirenn |q The Queen's Decree/Meet Valsirenn at the Coral Forest
 step
 goto 68.62,55.45
@@ -32798,6 +32802,10 @@ talk Kinlady Avinisse |q The Queen's Decree/Confront Kinlady Avinisse |future
 step
 goto 66.87,58.08
 wayshrine Sil-Var-Woad
+step
+goto 64.64,61.10 |q The Queen's Decree/Travel to Artaeum
+step
+goto 64.58,64.23 |q The Queen's Decree/Travel to Artaeum
 step
 goto 62.58,65.72
 wayshrine Eastern Pass
@@ -32937,6 +32945,7 @@ goto 35.60,30.79
 |tip Manually skip to the next step.
 step
 goto summerset_base 43.17,43.44
+|tip Watch the dialogue.
 talk Razum-dar |q A Pearl of Great Price/Talk to Razum-dar |future
 step
 goto 41.23,44.77 |q A Pearl of Great Price/Talk to Canonreeve Farmeldo
@@ -33253,8 +33262,14 @@ step
 goto 31.39,32.40
 'Take _The Year 2920, Vol. 4_ |lorebook The Year 2920, Vol. 4/3/17/98
 step
+goto 31.75,32.32 |lorebook Sages of the Crystal Tower/3/35/1
+step
 goto 32.03,32.57
 'Take _Sages of the Crystal Tower_ |lorebook Sages of the Crystal Tower/3/35/1
+step
+goto 31.76,32.33 |q The Tower Sentinels/Find Hannayel's Quiet Room
+step
+goto 31.57,32.66 |q The Tower Sentinels/Find Hannayel's Quiet Room
 step
 goto 31.79,32.75
 'Open _Study Hall_ |q The Tower Sentinels/Find Hannayel's Quiet Room
@@ -33357,6 +33372,7 @@ goto 72.84,49.83
 'Open _Ancient Ruins_ |q The Tower Sentinels/Find Sapiarch Imedril
 step
 goto 64.11,35.43
+|tip Watch the dialogue.
 'Burn _Mephala's Webs_ |q The Tower Sentinels/Help Save Sapiarch Imedril
 step
 goto 64.78,37.12
@@ -33368,7 +33384,6 @@ step
 goto 60.30,36.52
 'Open _Coral-Splitter Caves_ |q The Tower Sentinels/Leave the Ruins
 step
-|tip Watch the dialogue.
 'Open _Artaeum_ Map
 'Travel to the _Artaeum_ |q The Tower Sentinels/Return to Artaeum |future
 |tip Manually skip to the next step.
@@ -33400,11 +33415,7 @@ goto artaeum_base 65.92,27.03
 |tip Manually skip to the next step.
 step
 goto dreamingcave01_base 39.50,54.50
-talk Ritemaster in the Dreaming Cave |q The Dreaming Cave/Meet the Ritemaster in the Dreaming Cave
-|tip Manually skip to the next step.
-step
-goto 39.50,54.50
-'Use _Dawnstar Gem_ |q The Dreaming Cave/Use the Dawnstar Gem
+'Use _Dawnstar Gem_ |q The Dreaming Cave/Use the Dawnstar Gem |future
 step
 goto 39.50,54.50
 talk Ritemaster Iachesis |q The Dreaming Cave/Talk to Ritemaster Iachesis
@@ -33447,11 +33458,12 @@ goto 50.97,32.72
 'Enter _Eton Nir Grotto_ |q The Dreaming Cave/Search Eton Nir Grotto for the Meridia Shrine
 |tip Manually skip to the next step.
 step
-goto etonnir_01_base 16.96,34.86
-|tip Watch dialogue and follow Sadara-do.
-'Open _Merdia Shrine_ |q The Dreaming Cave/Investigate the Shrine |future
+goto etonnir_01_base 16.26,34.75
+'Open _Meridia Shrine_ |q The Dreaming Cave/Find Erilthel |future
+|tip Manually skip to the next step.
 step
 goto etonnir_02_base 36.70,51.70
+|tip Watch the dialogue.
 talk Meridia |q The Dreaming Cave/Talk to Meridia |future
 step
 goto 36.70,51.70
@@ -33690,8 +33702,6 @@ goto 39.21,46.60
 talk Ritemaster Iachesis |q Lost in Translation |future
 |tip Manually skip to the next step.
 step
-goto 35.31,47.32 |q Lost in Translation/Follow the Path
-step
 goto 27.84,46.43 |q Lost in Translation/Follow the Path
 step
 goto 15.96,36.81 |q Lost in Translation/Follow the Path
@@ -33718,11 +33728,8 @@ goto 52.94,30.61
 step
 goto 52.94,30.61
 |tip Watch dialogue.
-talk Ritemaster Iachesis |q Lost in Translation/Talk to Ritemaster Iachesis
-step
-goto 52.94,30.61
 kill Aaderyna
-kill Ddynedan |q Lost in Translation/Defend Against the Daedric Attack
+kill Ddynedan |q Lost in Translation/Defend Against the Daedric Attack |future
 step
 goto 52.94,30.61
 |tip Watch the dialogue.
@@ -34253,7 +34260,7 @@ goto 22.41,38.85
 talk Zadaza |q Sunken Treasure/Talk to Zadaza |future
 step
 goto 23.20,39.41
-talk Famia Mercius |q Sunken Treasure/Talk to Famia
+talk Famia Mercius |q Sunken Treasure/Talk to Famia |future
 step
 goto 10.91,25.44 |q Sunken Treasure/Meet Famia's Contact
 step
