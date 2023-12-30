@@ -1453,8 +1453,8 @@ CGV.MapData = {
 {
 
       --[[ Go to a map, execute this in chat:
-    /CGpos gps - For general map data. Works in any map.
-    /CGpos - For city and delve data, and also to confirm DDS map filename is correct.
+    /cgpos gps - For general map data. Works in any map.
+    /cgpos - For city and delve data, and also to confirm DDS map filename is correct.
   ]]    --
 
     -- Aldmeri Dominion

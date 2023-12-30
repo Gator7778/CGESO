@@ -35333,10 +35333,11 @@ step
 goto 73.16,58.53 |q A Rage of Dragons/Find the Source of the Undead
 step
 goto 73.92,54.02
-kill Gravestalker Gemmia |q A Rage of Dragons/Kill Gravestalker Gemmia
+kill Gravestalker Gemmia |q A Rage of Dragons/Kill Gravestalker Gemmia |future
 step
 goto 73.92,54.02
-'Rendezvous with Khamira |q A Rage of Dragons/Rendezvous with Khamira
+|tip Watch the dialogue.
+'Rendezvous with _Khamira_ |q A Rage of Dragons/Rendezvous with Khamira
 step
 goto 63.51,53.56
 |tip Watch the dialogue.
@@ -35381,6 +35382,7 @@ talk Lord Gharesh-ri |q The Usurper Queen/Talk to Lord Gharesh-ri |future
 |tip Manually skip to the next step.
 step
 'Open _Northern Elsweyr_ Map
+|tip Skip the tour.
 'Travel to _Rimmen_ |q The Usurper Queen/Meet Abnur Tharn in Rimmen |future
 |tip Manually skip to the next step.
 step
@@ -35407,10 +35409,8 @@ goto 77.81,36.70
 talk Euraxia Tharn |q The Usurper Queen/Talk to Euraxia Tharn
 step
 goto 77.81,36.70
-'Listen to _Zumog Phoom_ |q The Usurper Queen/Listen to Zumog Phoom
-step
-goto 77.81,36.70
-'Defend _Yourself_ |q The Usurper Queen/Defend Yourself
+|tip Watch the dialogue.
+'Defend _Yourself_ |q The Usurper Queen/Defend Yourself |future
 step
 goto rimmensewer_base53.67,95.36
 talk Abnur Tharn |q The Usurper Queen/Talk to Abnur Tharn
@@ -35440,7 +35440,7 @@ step
 goto elsweyr_base 41.44,44.20
 'Go to _Desert Wind Adeptorium_ |q The Usurper Queen/Go to Desert Wind Adeptorium
 step
-goto 41.49,44.74 |q The Usurper Queen/Find a Way Into the Adeptorium
+goto 40.57,44.07 |q The Usurper Queen/Find a Way Into the Adeptorium
 step
 goto 39.68,43.10
 'Enter _Desert Wind Caverns_ |q The Usurper Queen/Find a Way Into the Adeptorium |future
@@ -35588,6 +35588,7 @@ goto riverholdinstance_base 53.31,77.52
 'Meet _Allies_ |q The Battle for Riverhold/Meet Allies
 step
 goto 49.24,54.82
+|tip Watch the dialogue.
 'Warn _Captain Nala-do_ |q The Battle for Riverhold/Warn Captain Nala-do
 step
 goto 49.24,54.82
@@ -35616,7 +35617,7 @@ step
 goto 65.83,63.06 |q The Battle for Riverhold/Activate the Blessed Pillar of the Winter Moon
 step
 goto 50.48,65.30
-kill the Forces |q The Battle for Riverhold/Activate the Blessed Pillar of the Winter Moon
+'Activate _Blessed Pillar of the Winter Moon_ |q The Battle for Riverhold/Activate the Blessed Pillar of the Winter Moon
 step
 goto 48.17,62.35
 'Watch the _Dragons_ |q The Battle for Riverhold/Watch the Dragons
@@ -35662,9 +35663,9 @@ step
 goto 70.53,45.72
 wayshrine Hakoshae
 step
-goto 68.98,46.14 |q Two Queens/Find Aneshi |tip Follow the road.
+goto 68.98,46.14 |q Two Queens/Find Aneshi
 step
-goto 66.03,49.13 |q Two Queens/Find Aneshi |tip Follow the road.
+goto 66.03,49.13 |q Two Queens/Find Aneshi
 step
 goto 59.04,66.15
 wayshrine Tenmar Temple
@@ -35752,8 +35753,8 @@ goto 54.72,29.96
 |tip Manually skip to the next step.
 step
 goto 57.45,27.96
-|tip Wait for this step to complete.
 'Burn _Siege Weapon_ |q Two Queens/Destroy the North Siege Weapons
+|tip Manually skip to the next step.
 step
 goto 62.29,33.33
 'Open _Rimmen_ |q Two Queens/Rendezvous at the Sewer Entrance |future
@@ -35766,10 +35767,7 @@ step
 goto 61.67,31.94 |q Two Queens/Rendezvous at the Sewer Entrance |future
 step
 goto 61.67,31.94
-'Rendezvous at the _Sewer Entrance_ |q Two Queens/Rendezvous at the Sewer Entrance
-step
-goto 61.67,31.94
-talk Captain Nala-do |q Two Queens/Talk to Captain Nala-do
+talk Captain Nala-do |q Two Queens/Talk to Captain Nala-do |future
 step
 goto 66.74,28.95
 'Open _Rimmen Palace Recesses_ |q Two Queens/Enter the Palace Sewer |future
@@ -35787,11 +35785,10 @@ goto 57.52,61.09 |q Two Queens/Find a Way into the Palace
 step
 goto 57.73,34.75 |q Two Queens/Find a Way into the Palace
 step
-goto 79.46,34.99
-'Find a _Way into the Palace_ |q Two Queens/Find a Way into the Palace
+goto 79.46,34.99 |q Two Queens/Find a Way into the Palace
 step
 goto 78.71,27.75
-'Examine _King Hemakar's Grave_ |q Two Queens/Examine the Royal Crypt
+'Examine _King Hemakar's Grave_ |q Two Queens/Examine the Royal Crypt |future
 step
 goto 78.71,27.75
 talk Zamarak |q Two Queens/Talk to Zamarak
@@ -35810,9 +35807,9 @@ goto 29.84,42.82
 'Open _Chapel of the Guiding Moons_ |q Two Queens/Go to the Chapel of the Guiding Moons
 |tip Manually skip to the next step.
 step
-goto 35.94,57.77
+goto 36.33,58.00
 |tip Watch dialogue
-'Fight the _Forces_ |q Two Queens/Escape the Chapel |future
+kill Guardians |q Two Queens/Escape the Chapel |future
 step
 goto 55.97,85.13
 'Open _The Great Hall_ |q Two Queens/Enter the Great Hall
@@ -35825,7 +35822,6 @@ goto 73.87,78.73
 'Destory _Necromantic Glass_ |q Two Queens/Destroy the Necromantic Glass
 step
 goto 73.41,55.51
-|tip Go upstairs.
 'Open _Royal Chambers_ |q Two Queens/Go to the Royal Chambers
 |tip Manually skip to the next step.
 step
@@ -35877,7 +35873,7 @@ talk Abnur Tharn |q The Final Order/Rendezvous at Sandswirl Manor |future
 |tip Manually skip to the next step.
 step
 goto 77.60,36.10
-'Open _Rimmen Palace Throne Room_ |q The Final Order/Rendezvous at Sandswirl Manor
+'Open _Rimmen Palace Throne Room_ |q The Final Order/Rendezvous at Sandswirl Manor |future
 |tip Manually skip to the next step.
 step
 goto 76.56,37.20
@@ -35945,6 +35941,7 @@ goto 65.16,22.63
 'Examine _Dragonguard Report_ |q The Final Order/Find the Dragonguard Report
 step
 goto 65.23,22.89
+|tip Watch the dialogue.
 talk Prefect Calo |q The Final Order/Talk to Prefect Calo |future
 step
 'Open _Northern Elsweyr_ Map
@@ -36135,7 +36132,7 @@ goto 77.73,36.74
 talk Khamira |q Cadwell the Betrayer/Talk to Khamira |future
 step
 goto 77.69,36.32
-'Open _Rimmen Palace Royal Study_ |q Cadwell the Betrayer/Enter the Royal Study
+'Open _Royal Study_ |q Cadwell the Betrayer/Enter the Royal Study
 step
 goto 77.39,35.57
 'Listen to _Khamira_ |q Cadwell the Betrayer/Listen to Khamira
@@ -36303,10 +36300,11 @@ kill Mulaamnir |q Jode's Core/Kill Mulaamnir
 |tip Manually skip to the next step.
 step
 goto 74.55,43.12
+|tip Watch the dialogue.
 'Use _Dragonhorn_ |q Jode's Core/Sound the Dragonhorn |future
 step
 goto 73.65,43.64
-'Open _Elsweyr_ |q Jode's Core/Leave the Plane of Jode
+'Open _Elsweyr_ |q Jode's Core/Leave the Plane of Jode |future
 |tip Manually skip to the next step.
 step
 goto rimmen_base 70.91,41.98

@@ -24490,9 +24490,10 @@ step
 goto 73.16,58.53 |q A Rage of Dragons/Find the Source of the Undead
 step
 goto 73.92,54.02
-kill Gravestalker Gemmia |q A Rage of Dragons/Kill Gravestalker Gemmia
+kill Gravestalker Gemmia |q A Rage of Dragons/Kill Gravestalker Gemmia |future
 step
 goto 73.92,54.02
+|tip Watch the dialogue.
 'Rendezvous with _Khamira_ |q A Rage of Dragons/Rendezvous with Khamira
 step
 goto 63.51,53.56
@@ -25003,7 +25004,7 @@ step
 goto elsweyr_base 41.44,44.20
 'Go to _Desert Wind Adeptorium_ |q The Usurper Queen/Go to Desert Wind Adeptorium
 step
-goto 41.49,44.74 |q The Usurper Queen/Find a Way Into the Adeptorium
+goto 40.57,44.07 |q The Usurper Queen/Find a Way Into the Adeptorium
 step
 goto 39.68,43.10
 'Enter _Desert Wind Caverns_ |q The Usurper Queen/Find a Way Into the Adeptorium |future
@@ -25162,6 +25163,7 @@ goto riverholdinstance_base 53.31,77.52
 'Meet _Allies_ |q The Battle for Riverhold/Meet Allies
 step
 goto 49.24,54.82
+|tip Watch the dialogue.
 'Warn _Captain Nala-do_ |q The Battle for Riverhold/Warn Captain Nala-do
 step
 goto 49.24,54.82
@@ -25190,7 +25192,7 @@ step
 goto 65.83,63.06 |q The Battle for Riverhold/Activate the Blessed Pillar of the Winter Moon
 step
 goto 50.48,65.30
-kill the Forces |q The Battle for Riverhold/Activate the Blessed Pillar of the Winter Moon
+'Activate _Blessed Pillar of the Winter Moon_ |q The Battle for Riverhold/Activate the Blessed Pillar of the Winter Moon
 step
 goto 48.17,62.35
 'Watch the _Dragons_ |q The Battle for Riverhold/Watch the Dragons
@@ -25983,6 +25985,7 @@ goto 68.23,43.62 |q Two Queens/Talk to Captain Nala-do
 talk Captain Nala-do |q Two Queens/Talk to Captain Nala-do
 step
 goto 67.69,50.25
+|tip Watch the dialogue.
 'Open _South Weapons Platform_ |q Two Queens/Destroy the South Siege Weapons
 |tip Manually skip to the next step.
 step
@@ -26002,6 +26005,7 @@ goto 67.50,50.55
 |tip Manually skip to the next step.
 step
 goto 62.58,33.49
+|tip Watch the dialogue.
 'Open _North Weapons Platform_ |q Two Queens/Destroy the North Siege Weapons
 |tip Manually skip to the next step.
 step
@@ -26087,6 +26091,7 @@ goto 73.41,55.51
 |tip Manually skip to the next step.
 step
 goto 76.47,43.83
+|tip Watch the dialogue.
 'Open _Rimmen Palace Courtyard_ |q Two Queens/Enter the Palace Courtyard |future
 |tip Manually skip to the next step.
 step
@@ -26133,7 +26138,7 @@ talk Abnur Tharn |q The Final Order/Rendezvous at Sandswirl Manor |future
 |tip Manually skip to the next step.
 step
 goto 77.60,36.10
-'Open _Rimmen Palace Throne Room_ |q The Final Order/Rendezvous at Sandswirl Manor
+'Open _Rimmen Palace Throne Room_ |q The Final Order/Rendezvous at Sandswirl Manor |future
 |tip Manually skip to the next step.
 step
 goto 76.56,37.20
@@ -26400,7 +26405,7 @@ goto 77.73,36.74
 talk Khamira |q Cadwell the Betrayer/Talk to Khamira |future
 step
 goto 77.69,36.32
-'Open _Rimmen Palace Royal Study_ |q Cadwell the Betrayer/Enter the Royal Study
+'Open _Royal Study_ |q Cadwell the Betrayer/Enter the Royal Study
 step
 goto 77.39,35.57
 'Listen to _Khamira_ |q Cadwell the Betrayer/Listen to Khamira
@@ -26514,10 +26519,8 @@ goto 25.47,72.21
 'Open _Moon Gate of Anequina_ |q Jode's Core/Go to the Moon Gate of Anequina |future
 |tip Manually skip to the next step.
 step
-goto moongate_base 34.09,77.19 |q Jode's Core |future
-step
-goto 30.07,84.45
-talk Prefect Calo |q Jode's Core/Talk to Prefect Calo
+goto moongate_base 30.07,84.45
+talk Prefect Calo |q Jode's Core/Talk to Prefect Calo |future
 step
 goto 71.36,62.97
 kill Euraxian Forces |q Jode's Core/Defeat the Euraxians |future
@@ -26568,10 +26571,11 @@ kill Mulaamnir |q Jode's Core/Kill Mulaamnir
 |tip Manually skip to the next step.
 step
 goto 74.55,43.12
+|tip Watch the dialogue.
 'Use _Dragonhorn_ |q Jode's Core/Sound the Dragonhorn |future
 step
 goto 73.65,43.64
-'Open _Elsweyr_ |q Jode's Core/Leave the Plane of Jode
+'Open _Elsweyr_ |q Jode's Core/Leave the Plane of Jode |future
 |tip Manually skip to the next step.
 step
 goto rimmen_base 70.91,41.98
