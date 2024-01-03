@@ -588,7 +588,7 @@ step
 goto 59.48,50.67 |lorebook Flesh to Cut from Bone/1/18/5
 step
 goto 75.73,39.65
-|tip Upstairs in this building.
+|tip Go upstairs.
 'Examine _Flesh to Cut from Bone_ |lorebook Flesh to Cut from Bone/1/18/5
 step
 'Open _Malabal Tor_ Map
@@ -1132,7 +1132,11 @@ goto 28.40,63.99
 'Travel to _Bergama_ |lorebook Varieties of Faith, Crown Redguards/1/5/5
 |tip Manually skip to the next step.
 step
-goto bergama_base 67.87,55.57
+goto bergama_base 64.15,39.80 |lorebook Varieties of Faith, Crown Redguards/1/5/5
+step
+goto 56.75,55.28 |lorebook Varieties of Faith, Crown Redguards/1/5/5
+step
+goto 67.87,55.57
 |tip Upstairs on the table inside Halls of Judgement.
 'Examine _Varieties of Faith, Crown Redguards_ |lorebook Varieties of Faith, Crown Redguards/1/5/5
 step
@@ -1336,7 +1340,7 @@ step
 'Travel to _Quarantine Serk_ |lorebook The Living Gods/1/23/1
 |tip Manually skip to the next step.
 step
-goto deshaan_base 12.05,40.41
+goto deshaan_base 12.23,40.59
 'Examine _The Living Gods_ |lorebook The Living Gods/1/23/1
 step
 goto 14.02,45.59
@@ -1568,6 +1572,7 @@ goto therift_base 83.57,57.08
 CGV:RegisterGuide("Extras\\Extras\\Lorebooks\\Expansion",[[
 loadingimage loadscreen_deadlandsvault_01.dds
 description Expansion Lorebooks.
+step
 'Open _Coldharbour_ Map
 'Travel to _The Hollow City_ |lorebook I was Summoned by a Mortal/1/29/4
 |tip Manually skip to the next step.
@@ -1605,6 +1610,8 @@ step
 goto 59.07,67.27 |lorebook The Lightless Oubliette/1/29/7
 step
 goto 58.78,58.06 |lorebook The Lightless Oubliette/1/29/7
+step
+goto 67.14,55.78 |lorebook The Lightless Oubliette/1/29/7
 step
 goto 67.55,57.21
 'Examine _The Lightless Oubliette_ |lorebook The Lightless Oubliette/1/29/7
@@ -1649,59 +1656,44 @@ step
 goto 64.98,32.91
 'Examine _Civility and Etiquette: Wood Orcs I_ |lorebook Civility and Etiquette: Wood Orcs I/1/11/5
 step
-goto 67.37,33.39 |lorebook The Thief God's Treasures/1/11/3
-step
-goto 72.69,36.79 |lorebook The Thief God's Treasures/1/11/3
-step
-goto 75.32,33.61
-'Use _Two Rivers_
-'Travel to _Zeht's Displeasure_ in Hew's Bane |lorebook The Thief God's Treasures/1/11/3
+'Open _Hews's Bane_ Map
+'Travel to _Zeht's Displeasure_ |lorebook The Thief God's Treasures/1/11/3
 |tip Manually skip to the next step.
 step
 goto hewsbane_base 38.33,59.55
 'Examine _The Thief God's Treasures_ |lorebook The Thief God's Treasures/1/11/3
 step
-goto 40.58,56.71
-'Use _Zeht's Displeasure_
-'Travel to _Kvatch_ in Gold Coast |lorebook Eulogy for Emperor Varen/1/19/6
+'Open _Gold Coast_
+'Travel to _Kvatch_ |lorebook Eulogy for Emperor Varen/1/19/6
 |tip Manually skip to the next step.
 step
 goto goldcoast_base 85.83,50.68
 'Examine _Eulogy for Emperor Varen_ |lorebook Eulogy for Emperor Varen/1/19/6
 step
-goto 79.21,50.23 |lorebook The Art of Kwama Egg Cooking/1/11/6
-step
-goto 82.06,49.51 |lorebook The Art of Kwama Egg Cooking/1/11/6
-step
-goto kvatchcity_base 30.99,93.59 |lorebook The Art of Kwama Egg Cooking/1/11/6
-step
 goto 51.33,89.52
-'Use _Kvatch_
-'Travel to _Urshilaku Camp_ in Vvardenfell |lorebook The Art of Kwama Egg Cooking/1/11/6
+'Open _Vvardenfell_ Map
+'Travel to _Urshilaku Camp_ |lorebook The Art of Kwama Egg Cooking/1/11/6
 |tip Manually skip to the next step.
 step
 goto vvardenfell_base 24.28,23.09
 'Examine _The Art of Kwama Egg Cooking_ |lorebook The Art of Kwama Egg Cooking/1/11/6
 step
-goto 26.11,25.78
-'Use _Urshilaku Camp_
-'Travel to _The Crystal Tower_ in Summerset |lorebook Ayrenn: The Unforeseen Queen/1/9/10
+'Open _Summerset_ Map
+'Travel to _The Crystal Tower_ |lorebook Ayrenn: The Unforeseen Queen/1/9/10
 |tip Manually skip to the next step.
 step
 goto summerset_base 29.90,25.92
 'Examine _Ayrenn: The Unforeseen Queen_ |lorebook Ayrenn: The Unforeseen Queen/1/9/10
 step
-goto 28.25,24.68
-'Use _The Crystal Tower_
-'Travel to _Borderwatch_ in Blackwood |lorebook House Tharn of Nibenay/1/19/7
+'Open _Blackwood_
+'Travel to _Borderwatch_ |lorebook House Tharn of Nibenay/1/19/7
 |tip Manually skip to the next step.
 step
 goto blackwood_base 16.01,37.66
 'Examine _House Tharn of Nibenay_ |lorebook House Tharn of Nibenay/1/19/7
 step
-goto 16.33,40.74
-'Use _Borderwatch_
-'Travel to _Padomaic Crest_ in Telvanni Peninsula |lorebook Where Magical Paths Meet/1/11/8
+'Open _Telvanni Peninsula_ Map
+'Travel to _Padomaic Crest_ |lorebook Where Magical Paths Meet/1/11/8
 |tip Manually skip to the next step.
 step
 goto u38_telvannipeninsula_base 50.82,55.31 |lorebook Where Magical Paths Meet/1/11/8

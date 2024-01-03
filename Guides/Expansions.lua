@@ -31797,11 +31797,10 @@ goto 50.96,74.36
 |tip Manually skip to the next step.
 step
 goto 69.19,53.77
-'Examine _Gray Host Communique_ |q The Vampire Scholar/Search Tzinghalis's Sanctum
+'Examine _Gray Host Communique_ |lorebook Gray Host Communique/3/39/26
 step
 goto 65.45,58.34
 'Examine _Skyrim Map_ |q The Vampire Scholar/Search Tzinghalis's Sanctum
-|tip Manually skip to the next step.
 step
 goto 67.87,59.09
 talk Lyris Titanborn |q The Vampire Scholar/Talk to Lyris Titanborn
@@ -32675,7 +32674,7 @@ step
 goto 57.97,12.81
 'Defend _Fennorian_ |q Greymoor Rising/Defend Fennorian
 step
-goto 57.97,12.81
+goto 58.08,13.09
 'Open _Greymoor Keep Upper Levels_ |q Greymoor Rising/Enter the Upper Keep
 step
 goto greymooreintsec02_base 44.88,72.38 |q Greymoor Rising/Find High King Svargrim
@@ -32726,11 +32725,12 @@ goto 26.89,29.57
 'Open _Tower of the Wolf_ |q Greymoor Rising/Go to the Tower of the Wolf
 step
 goto 24.50,26.89
-|tip Use Execute Button at end of fight.
-kill High King Svargrim |q Greymoor Rising/Kill High King Svargrim
+kill High King Svargrim
+'Use _Potion Toss_ |q Greymoor Rising/Kill High King Svargrim
 step
 goto 24.74,22.71
-'Open _Castle Dour Courtyard_ |q Greymoor Rising/Leave the Tower of the Wolf
+'Open _Castle Dour Courtyard_ |q Greymoor Rising/Leave the Tower of the Wolf |future
+|tip Manually skip to the next step.
 step
 goto 28.27,34.87 |q Greymoor Rising/Talk to Svana
 talk Svana
@@ -34108,12 +34108,12 @@ step
 goto 87.32,76.45
 talk Arana |q The Awakening Darkness/Talk to Arana
 step
-goto 87.37,79.48 |q The Awakening Darkness/Find the Barrow Entrance |future
+goto 87.06,79.32 |q The Awakening Darkness/Find the Barrow Entrance |future
 step
 goto 81.83,77.69 |q The Awakening Darkness/Find the Barrow Entrance |future
 step
 goto 81.84,79.69
-'Examine _Consealed Entrance_ |q The Awakening Darkness/Find the Barrow Entrance |future
+'Examine _Concealed Entrance_ |q The Awakening Darkness/Find the Barrow Entrance |future
 step
 goto 81.86,79.76
 'Open _Lost Valley Barrow_ |q The Awakening Darkness/Search the Barrow
@@ -34145,7 +34145,9 @@ step
 goto 52.59,81.06
 talk Arana |q The Awakening Darkness/Talk to Arana
 step
-goto 37.82,78.47 |q The Awakening Darkness/Enter the Dark Descent
+goto 37.29,82.85 |q The Awakening Darkness/Enter the Dark Descent
+step
+goto 37.47,86.65 |q The Awakening Darkness/Enter the Dark Descent
 step
 goto 49.67,87.12
 'Open _The Dark Descent_ |q The Awakening Darkness/Enter the Dark Descent |future
@@ -34649,7 +34651,11 @@ step
 'Travel to _Arkthzand_ |q The End of Eternity/Go to the Orrery Chamber
 |tip Manually skip to the next step.
 step
-goto U28_blackreach_base 34.38,43.01 |q The End of Eternity/Go to the Orrery Chamber
+goto U28_blackreach_base 33.24,35.98 |q The End of Eternity/Go to the Orrery Chamber
+step
+goto 34.46,43.16 |q The End of Eternity/Go to the Orrery Chamber
+step
+goto 31.10,41.20 |q The End of Eternity/Go to the Orrery Chamber
 step
 goto 23.76,47.19
 'Open _Arkthzand Orrery_ |q The End of Eternity/Go to the Orrery Chamber
@@ -34784,7 +34790,7 @@ goto 23.76,47.19
 'Open _Arkthzand Orrery_ |q The End of Eternity/Go to the Orrery Chamber
 step
 goto u28_OrreryChamber_base 51.56,53.48
-talk Count Verandis Ravenwatch |q The End of Eternity/Talk to Count Verandis Ravenwatch
+talk Count Verandis Ravenwatch |q The End of Eternity/Talk to Count Verandis Ravenwatch |future
 |tip Manually skip to the next step.
 step
 goto 83.43,43.73
@@ -41851,7 +41857,7 @@ step
 goto 29.57,49.62 |q Spies in the Shallows/.*Locate Sensitive Documents.* |count 5
 step
 goto 29.07,82.21
-kill Captain Ilthalaa |q Spies in the Shallows/.*Locate Sensitive Documents.* |count 5
+kill Captain Ithala |q Spies in the Shallows/.*Locate Sensitive Documents.* |count 5
 |tip Manually skip to the next step.
 step
 goto 43.11,75.94
