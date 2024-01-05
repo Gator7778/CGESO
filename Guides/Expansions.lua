@@ -37018,6 +37018,7 @@ talk Captain Rian Liore |q An Unexpected Adversary/Find Eveli Sharp-Arrow |futur
 |tip Manually skip to the next step.
 step
 goto 78.06,67.01
+|tip Go up the ramp.
 talk Eveli Sharp-Arrow |q An Unexpected Adversary/Talk to Eveli Sharp-Arrow |future
 step
 goto 78.35,68.04
@@ -37438,10 +37439,10 @@ step
 goto 61.40,82.86 |q A Hidden Vault/Search the Deep Vault
 step
 goto 54.96,65.55
-talk Calia |q A Hidden Vault/Talk to Calia
+talk Calia |q A Hidden Vault/Talk to Calia |future
 step
 goto 54.96,65.55
-talk Destron |q A Hidden Vault/Talk to Destron |future
+talk Destron |q A Hidden Vault/Talk to Destron
 step
 goto 54.24,67.36
 talk Eveli Sharp-Arrow |q A Hidden Vault/Talk to Eveli Sharp-Arrow
@@ -37583,13 +37584,13 @@ goto u30_deadlandskeep_ext_base 32.77,50.56
 talk Eveli Sharp-Arrow |q A Mysterious Event/Talk to Eveli Sharp-Arrow |future
 step
 goto 75.39,37.11
-'Open _Vandacia's Keep_ |q A Mysterious Event/Enter Vandacia's Keep |future
+'Open _Vandacia's Deadlands Keep_ |q A Mysterious Event/Enter Vandacia's Keep |future
 step
 goto u30_deadlandskeep_int_base 09.84,67.17
 talk Eveli Sharp-Arrow |q A Mysterious Event/Talk to Eveli Sharp-Arrow |future
 step
 goto 19.97,67.18
-'Open _Inner Chambers_ |q A Mysterious Event/Search Vandacia's Keep
+'Open _Inner Keep Chambers_ |q A Mysterious Event/Search Vandacia's Keep
 |tip Manually skip to the next step.
 step
 goto 45.50,61.68 |q A Mysterious Event/Search Vandacia's Keep
@@ -37691,6 +37692,7 @@ goto 43.40,50.01
 |tip Manually skip to the next step.
 step
 goto 48.92,50.70
+|tip Watch the dialogue.
 talk Sombren |q Weapons of Destruction/Talk to Sombren |future
 step
 goto 48.92,50.70
@@ -38037,8 +38039,8 @@ step
 goto u30_redmayne_ext_base 35.09,53.61 |q Pyre of Ambition/Find the Ambitions
 step
 goto 53.33,40.55
-'Defend _Ambitions_ |q Pyre of Ambition/Defend the Ambitions
 |tip Stay around Ambitions
+'Defend _Ambitions_ |q Pyre of Ambition/Defend the Ambitions
 step
 goto 50.14,47.26
 |tip Watch the dialogue.
@@ -38057,6 +38059,7 @@ goto 86.42,65.01
 'Open _Fort Redmane Inner Courtyard_ |q Pyre of Ambition/Reach the Courtyard
 step
 goto u30_redmayne_ext_base 63.66,53.59
+'Use _Ambition's Wrath_
 kill Vandacia |q Pyre of Ambition/Kill Vandacia
 step
 goto 63.66,53.59
@@ -39250,7 +39253,7 @@ step
 'Travel to _Wretched Spire_ |q Peace's Wretched Price/Go to Spire Hall
 |tip Manually skip to the next step.
 step
-goto 74.50,50.87 |q Peace's Wretched Price/Go to Spire Hall
+goto 74.50,50.87 |q Peace's Wretched Price/Go to Spire Hall |future
 step
 goto 70.25,48.08
 'Open _Spire Hall_ |q Peace's Wretched Price/Go to Spire Hall
@@ -39428,6 +39431,7 @@ goto 67.04,12.68
 'Unlock _Wind-Gate Lock_ |q Born of Grief/Open the Wind-Gate
 step
 goto 67.13,14.44
+|tip Watch the dialogue.
 talk Lyranth |q Born of Grief/Talk to Lyranth |future
 step
 goto 67.41,14.65
@@ -40220,6 +40224,7 @@ goto 70.54,18.52
 |tip Manually skip to the next step.
 step
 goto u32deadlandszone_base 73.51,18.38
+|tip Watch the dialogue.
 kill Destron's Echo |q The Last Ambition/Confront Sombren
 |tip Manually skip to the next step.
 step
@@ -40331,7 +40336,7 @@ goto 18.78,39.69
 step
 goto u32_Sundercliff_base 18.68,20.14
 |tip Drop down.
-kill Fire Behemoth |q Ambition's End/Reclaim the Siege Weapons
+kill Fire Behemoth |q Ambition's End/Reclaim the Siege Weapons |future
 step
 goto 74.09,19.07
 |tip Drop down.
@@ -40339,11 +40344,14 @@ goto 74.09,19.07
 |tip Manually skip to the next step.
 step
 goto 85.70,19.80
+'Use _Egonymic_ on Mehrunes Dagon
 kill Sombren |q Ambition's End/Defeat Sombren
 step
 goto 77.83,24.32
+'Use _Egonymic_
 kill Mehrunes Dagon |q Ambition's End/Banish Mehrunes Dagon
 step
+goto 84.10,22.
 goto 84.10,22.20
 'Use _Portal to Wretched Spire_ |q Ambition's End/Return to Wretched Spire |future
 |tip Manually skip to the next step.
