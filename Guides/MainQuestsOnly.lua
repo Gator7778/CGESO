@@ -42865,11 +42865,11 @@ goto 32.92,54.75
 step
 goto u34_CastleNavireInt_base 28.72,29.03 |q People of Import/.*Find Duchess Elea's Notes.* |future
 step
-goto 44.98,29.03 |q People of Import/.*Find Duchess Elea's Notes.*
+goto 42.55,27.30 |q People of Import/.*Find Duchess Elea's Notes.*
 step
-goto 45.59,39.97 |q People of Import/.*Find Duchess Elea's Notes.*
+goto 42.17,37.68 |q People of Import/.*Find Duchess Elea's Notes.*
 step
-goto 75.08,39.97
+goto 70.60,37.58
 'Open _Duchess Elea's Study_ |q People of Import/.*Find Duchess Elea's Notes.*
 |tip Manually skip to the next step.
 step
@@ -42879,18 +42879,13 @@ step
 goto 90.91,38.51
 'Examine _Duchess Elea's Investigation Notes_ |q People of Import/.*Find Duchess Elea's Notes.* |count 2
 step
-goto 76.14,40.27
+goto 71.48,37.89
 'Open _Castle Navire Lower Halls_ |q People of Import/Return to the Courtyard
 |tip Manually skip to the next step.
 step
-goto 72.95,47.72
+goto 68.92,44.91
 'Open _Castle Navire South Courtyard_ |q People of Import/Return to the Courtyard
 |tip Manually skip to the next step.
-step
-goto u34_CastleNaviresExt_base 70.75,52.98 |q People of Import/Return to the Courtyard
-step
-goto 57.77,66.90
-'Open _Castle Navire Courtyard_ |q People of Import/Return to the Courtyard
 step
 goto 23.08,63.39
 'Find _Lady Arabelle and Lord Bacaro_ |q People of Import/Find Lady Arabelle and Lord Bacaro
@@ -43047,7 +43042,9 @@ goto 48.04,48.56
 'Travel _Shipwreck Shoals_ |q Deadly Investigations/Enter Shipwreck Shoals |future
 |tip Manually skip to the next step.
 step
-goto u34_shipwreckshoalsext_base 62.32,80.88 |q Deadly Investigations/Find Captain Tsuzo
+goto u34_shipwreckshoalsext_base 62.32,80.88 |q Deadly Investigations/Find Captain Tsuzo |future
+step
+goto 73.70,68.23 |q Deadly Investigations/Find Captain Tsuzo
 step
 goto 71.37,44.21 |q Deadly Investigations/Find Captain Tsuzo
 step
@@ -43164,7 +43161,7 @@ goto 84.00,30.57
 'Take _Vulk'esh Claw_ |q Escape from Amenos/.*Gather Ritual Items.* |count 1
 step
 goto 85.50,26.08
-'Take _Sailor's Bone_ |q Escape from Amenos/.*Gather Ritual Items.* |count 2
+'Take _Sailor's Bones_ |q Escape from Amenos/.*Gather Ritual Items.* |count 2
 step
 goto 80.95,27.72
 'Take _Harpy Feather_ |q Escape from Amenos/.*Gather Ritual Items.* |count 3
@@ -43236,15 +43233,15 @@ goto 74.15,24.83
 talk Caska |q Escape from Amenos/Talk to Caska |future
 step
 goto 73.26,23.70
-'Open _Old Coin Fort_ |q Escape from Amenos/Enter the Coin Fort
+'Open _Old Coin Fort_ |q Escape from Amenos/Enter the Coin Fort |future
 |tip Manually skip to the next step.
 step
 goto u34_GrnSrpntLr_Ext1_base 45.07,36.02
 |tip Watch the dialogue.
-kill Serpents |q Escape from Amenos/Defeat the Serpents
+kill Serpents |q Escape from Amenos/Defeat the Serpents |future
 step
 goto 42.13,23.62
-'Open _Coin Fort Inner Keep_ |q Escape from Amenos/Find Prince Irnskar |future
+'Open _Coin Fort_ |q Escape from Amenos/Find Prince Irnskar |future
 |tip Manually skip to the next step.
 step
 goto u34_GrnSrpntLrInt_base 32.96,46.48
@@ -43331,7 +43328,7 @@ goto 66.77,72.96
 'Examine _Banneret Jenine's Orders_ |lorebook Banneret Jenine's Orders/3/45/34
 step
 goto 67.81,72.22
-talk Lady Arabelle Davaux |q To Catch a Magus/Talk to Lady Arabelle Davaux
+talk Lady Arabelle Davaux |q To Catch a Magus/Talk to Lady Arabelle Davaux |future
 step
 'Open _High Isle and Amenos_ Map
 'Travel to _Castle Navire_ |q To Catch a Magus/Go to the Navire Dungeons
@@ -43462,7 +43459,7 @@ step
 goto 33.35,64.06 |q The Ascendant Storm/Find the Alliance Leaders |tip Go downstairs.
 step
 goto 66.31,58.30
-kill the Vulk'esh |q The Ascendant Storm/Stop the Vulk'esh Assault |future
+kill Vulk'esh |q The Ascendant Storm/Stop the Vulk'esh Assault |future
 step
 goto 70.95,53.91
 talk Queen Ayrenn |q The Ascendant Storm/Talk to Queen Ayrenn
@@ -43828,7 +43825,6 @@ step
 goto 67.24,67.16 |q Tides of Ruin/Retrieve the Cell Key
 step
 goto 82.90,49.28
-kill Goriath
 'Take _Tonnere Dungeon Key_ |q Tides of Ruin/Retrieve the Cell Key
 step
 goto 67.94,67.20 |q Tides of Ruin/Free Sir Stefan Mornard
@@ -44027,11 +44023,11 @@ step
 goto 13.35,29.45
 talk Captain Siravaen |q The Siege of Vastyr/Talk to Captain Siravaen |future
 step
-goto 13.28,27.99 |q The Siege of Vastyr/Find a Way Down to the Docks |future |tip Drop down carefully.
+goto 13.28,27.99 |q The Siege of Vastyr/Find a Way Down to the Docks |tip Drop down carefully.
 step
-goto 16.89,23.53 |q The Siege of Vastyr/Find a Way Down to the Docks |future
+goto 16.89,23.53 |q The Siege of Vastyr/Find a Way Down to the Docks
 step
-goto 13.89,20.45 |q The Siege of Vastyr/Find a Way Down to the Docks |future
+goto 13.89,20.45 |q The Siege of Vastyr/Find a Way Down to the Docks
 step
 goto 14.69,22.14
 'Destroy _Mooring_ |q The Siege of Vastyr/.*Release the Mad Maiden's Moorings.* |count 1 |future
@@ -44058,7 +44054,7 @@ goto 14.73,23.28
 talk Captain Siravaen |q The Siege of Vastyr/Talk to Captain Siravaen |future
 step
 goto 14.79,23.11
-'Open _Mad Maiden_ |q The Siege of Vastyr/Go to Vastyr
+'Open _The Mad Maiden_ |q The Siege of Vastyr/Go to Vastyr
 step
 goto u36_VastyrCityCathedral_base 33.24,45.90
 |tip Watch the dialogue.
@@ -44067,7 +44063,7 @@ step
 goto 30.87,34.62 |q The Siege of Vastyr/Find Count Leonard Mornard
 step
 goto 44.09,32.39
-talk Count Mornard |q The Siege of Vastyr/Talk to Count Mornard |future
+talk Count Leonard Mornard |q The Siege of Vastyr/Talk to Count Mornard |future
 step
 goto u36_VastyrCityCathedral_base 58.39,21.68
 'Open _Vastyr Old Druid Tunnels_ |q The Siege of Vastyr/Find Archdruid Ellic
@@ -44086,11 +44082,14 @@ talk Archdruid Ellic |q The Siege of Vastyr/Talk to Archdruid Ellic
 step
 goto 62.44,32.51 |q The Siege of Vastyr/Find Archdruid Rahval
 step
+goto 55.18,35.19 |q The Siege of Vastyr/Find Archdruid Rahval
+step
 goto 61.69,39.25
 'Open _Path to Courtyard_ |q The Siege of Vastyr/Find Archdruid Rahval
+|tip Manually skip to the next step.
 step
 goto 64.03,47.64
-kill Sealord Nalos |q The Siege of Vastyr/Kill Sealord Nalos
+kill Sealord Nalos |q The Siege of Vastyr/Kill Sealord Nalos |future
 step
 goto 66.22,51.14
 'Open _Courtyard_ |q The Siege of Vastyr/Find Archdruid Rahval
@@ -44101,7 +44100,7 @@ goto 70.26,59.25
 'Find _Archdruid Rahval_ |q The Siege of Vastyr/Find Archdruid Rahval
 step
 goto 74.94,56.89
-'Open _Cathredral Courtyard_ |q The Siege of Vastyr/Investigate the Cathedral |future
+'Open _Cathredral Courtyard_ |q The Siege of Vastyr/Investigate the Cathedral
 |tip Manually skip to the next step.
 step
 goto u36_VastyrCity_base 50.21,54.51
@@ -44109,7 +44108,7 @@ goto u36_VastyrCity_base 50.21,54.51
 talk Sir Stefan Mornard |q The Siege of Vastyr/Talk to Sir Stefan Mornard |future
 step
 goto 49.25,50.47
-'Open _Cathredral District_ |q The Siege of Vastyr/Find Captain Siravaen |future
+'Open _Cathredral District_ |q The Siege of Vastyr/Find Captain Siravaen
 |tip Manually skip to the next step.
 step
 goto 45.80,47.42
@@ -44123,7 +44122,7 @@ goto 52.25,37.41
 'Open _Castle Mornard_ |q The Siege of Vastyr/Go to Castle Mornard
 step
 goto u36_VastyrCityCastle_base 44.78,64.97
-talk Lord Bacaro |q The Siege of Vastyr/Talk to Lord Bacaro
+talk Lord Bacaro Volorus |q The Siege of Vastyr/Talk to Lord Bacaro
 step
 goto 20.63,51.36
 talk Sir Stefan Mornard
@@ -44168,7 +44167,7 @@ talk Frii |q The Dream of Kasorayn/.*Activate the Druid Stones.* |count 1 |futur
 step
 goto 57.30,37.23
 |tip Climb the rocks to the left.
-'Turn _Druid Stone_ |q The Dream of Kasorayn/.*Activate the Druid Stones.* |count 1
+'Turn _Druid Stone_ |q The Dream of Kasorayn/.*Activate the Druid Stones.* |count 1 |future
 step
 goto 59.70,34.43 |q The Dream of Kasorayn/.*Activate the Druid Stones.* |count 2
 step
@@ -44203,10 +44202,11 @@ kill Sika Redhorn |q The Dream of Kasorayn/Defeat the Throne Guardian |future
 |tip Manually skip to the next step.
 step
 goto 80.63,64.30
-'Touch _Dancing Mote_ |q The Dream of Kasorayn/Follow Frii |future
+'Touch _Dancing Mote_ |q The Dream of Kasorayn/Reach the Ivy Throne
 |tip Manually skip to the next step.
 step
 goto 84.97,59.06
+|tip Watch dialogue.
 'Open _Druid King's Garden_ |q The Dream of Kasorayn/Follow Frii |future
 |tip Manually skip to the next step.
 step
@@ -44248,6 +44248,8 @@ talk Druid King Kasorayn |q The Dream of Kasorayn/Talk to Druid King Kasorayn
 step
 goto 52.43,87.43
 talk Elder Verline |q The Dream of Kasorayn/Talk to Elder Verline
+step
+goto 58.38,92.02 |q The Dream of Kasorayn/.*Align the Temple Druid Stones.* |count 1
 step
 goto 56.44,84.81
 |tip Go up the ramp at the back of the room.
@@ -44294,8 +44296,8 @@ step
 goto 68.08,31.58
 talk Frii |q The Dream of Kasorayn/Talk to Frii
 step
-'Open _Galen and Y'ffelon_ Map
-'Travel to _Vastyr_ |q The Dream of Kasorayn/Go to Vastyr 
+'Open _Galen and Y'ffelonn_ Map
+'Travel to _Vastyr_ |q The Dream of Kasorayn/Go to Vastyr
 step
 goto u36_VastyrCity_base 52.26,37.40
 'Open _Castle Mornard_ |q The Dream of Kasorayn/Talk to Sir Stefan Mornard |future
@@ -44332,7 +44334,7 @@ goto 66.07,68.87
 step
 goto u36_gn6_madmaiden_base 43.00,45.22
 |tip On Top Deck of The Mad Maiden
-'Defend the _Mad Maiden_ |q Guardian of Y'ffelon/Defend the Mad Maiden |future 
+kill Iron Atronach |q Guardian of Y'ffelon/Defend the Mad Maiden |future
 step
 goto 36.56,61.33
 'Use _Ship's Bell_ |q Guardian of Y'ffelon/Signal the Crew |future
@@ -44341,25 +44343,26 @@ goto 55.56,21.56
 'Use _Ballista_ |q Guardian of Y'ffelon/Fire Forward Ballista
 step
 goto 43.00,45.22
-'Defend the _Mad Maiden_ |q Guardian of Y'ffelon/Defend the Mad Maiden
+kill Magma Golem |q Guardian of Y'ffelon/Defend the Mad Maiden
 step
 goto 56.22,56.11
-'Board the _Enemy Ship_ |q Guardian of Y'ffelon/Board the Enemy Ship
+kill Vulk'esh Elder |q Guardian of Y'ffelon/Board the Enemy Ship
 step
 goto 39.56,85.00
-'Use _Enemy Ballista_ |q Guardian of Y'ffelon/Fire Enemy Ballista
+'Use _Ballista_ |q Guardian of Y'ffelon/Fire Enemy Ballista
 step
 goto 55.22,61.44
 kill Elder Dovhan |q Guardian of Y'ffelon/Defeat Elder Dovhan
 step
 goto 51.11,33.22
+|tip Go upstairs.
 talk Captain Siravaen |q Guardian of Y'ffelon/Talk to Captain Siravaen
 step
 goto 49.22,34.67
-'Enter _Captain's Quarters_ |q Guardian of Y'ffelon/Go Below Deck
+'Enter _Captain's Quarters_ |q Guardian of Y'ffelon/Go Below Deck |future
 step
 goto u36_capper2_volcano_base 36.21,43.02
-talk Sir Stefan Mornard |q Guardian of Y'ffelon/Talk to Sir Stefan Mornard
+talk Sir Stefan Mornard |q Guardian of Y'ffelon/Talk to Sir Stefan Mornard |future
 step
 goto 54.61,45.27
 'Open _Cage_ |q Guardian of Y'ffelon/Free the Captives |future
@@ -44385,7 +44388,7 @@ goto 56.15,60.29
 |tip Manually skip to the next step.
 step
 goto u36_gn6_stronghold_base 43.67,23.90
-talk Sir Stefan Mornard |q Guardian of Y'ffelon/Talk to Sir Stefan Mornard
+talk Sir Stefan Mornard |q Guardian of Y'ffelon/Talk to Sir Stefan Mornard |future
 step
 goto 51.87,42.04 |q Guardian of Y'ffelon/Reach Druid King Kasorayn's Tomb
 step
@@ -44394,7 +44397,7 @@ step
 goto 24.38,59.35 |q Guardian of Y'ffelon/Reach Druid King Kasorayn's Tomb
 step
 goto 24.43,56.44
-'Open _Cage_ |q Guardian of Y'ffelon/Free Druid Laurel |future
+'Open _Cage_ |q Guardian of Y'ffelon/Free Druid Laurel
 step
 goto 24.51,56.68
 talk Druid Laurel |q Guardian of Y'ffelon/Talk to Druid Laurel |future
@@ -44409,14 +44412,14 @@ step
 goto 48.17,73.26
 'Wait for _Frii to Awaken Urdiir the Guardian_ |q Guardian of Y'ffelon/Wait for Frii to Awaken Urdiir the Guardian |future
 step
-goto 
+goto 51.68,78.66
 |tip Kill Blazing Lion, Blazing Wamasu, and Blazing Gryphon during shield phase. Dodge the fireballs in the final shield phase since there is no animals to fights.
 kill Archdruid Orlaith |q Guardian of Y'ffelon/Defeat Archdruid Orlaith
 step
 goto 52.62,87.37
 talk Frii |q Guardian of Y'ffelon/Talk to Frii
 step
-'Open _Galen and Y'ffelon_ Map
+'Open _Galen and Y'ffelonn_ Map
 'Travel to _Vastyr_ |q Guardian of Y'ffelon/Return to Vastyr |future
 |tip Manually skip to the next step.
 step
@@ -44744,7 +44747,7 @@ step
 goto u36_VastyrCityCastleLib_base 64.46,12.20 |q The Ivy Throne/Find the Druid King's Crown
 step
 goto 54.64,26.53
-talk Count Stefan Mornard |q The Ivy Throne/Talk to Count Stefan Mornard
+talk Count Stefan Mornard |q The Ivy Throne/Talk to Count Stefan Mornard |future
 step
 'Open _Galen and Y'ffelon_ Map
 'Travel to _Glimmertarn_ |q The Ivy Throne/Go to Glimmertarn
@@ -44894,7 +44897,7 @@ goto 48.52,83.84
 'Enter _Mount Firesong_ |q The Ivy Throne/Find Lord Bacaro
 step
 goto 41.45,89.35
-|tip When Lord Bacaro becomes immune kill the other forces that appear. After killing the forces that appear go into a green circle and Use Wind Vortex to avoid lava covered ground.
+|tip When Lord Bacaro becomes immune kill the other forces that appear. After killing the forces that appear go into a green circle and Use(Execute button) Wind Vortex to avoid lava covered ground.
 kill Lord Bacaro |q The Ivy Throne/Defeat Lord Bacaro
 step
 goto 40.05,88.76
@@ -44909,11 +44912,8 @@ step
 goto 39.68,87.97
 'Place _Sacred Crown_ |q The Ivy Throne/Place the Crown
 step
-goto 39.68,87.97
-'Exit _Mount Firesong_ |q The Ivy Throne/Exit Mount Firesong |future
-|tip Manually skip to the next step.
-step
 goto u36_capper2_volcano_base 05.47,38.23
+|tip Watch the dialogue.
 talk Lady Arabelle Davaux |q The Ivy Throne/Talk to Lady Arabelle |future
 step
 goto 6.29,36.56
@@ -44949,8 +44949,9 @@ step
 goto 28.43,18.36
 talk Druid Laurel |q And Now, Perhaps, Peace/Talk to Druid Laurel
 step
-'Open _High Isle and Amenos_ Map
-'Travel to _Gonfalon Square_ |q And Now, Perhaps, Peace/Go to Mandrake Manor
+goto 28.96,22.06
+'Use _Glimmertarn_
+'Travel to _Gonfalon Square_ in High Isle and Amenos |q And Now, Perhaps, Peace/Go to Mandrake Manor
 |tip Manually skip to the next step.
 step
 goto u34_gonfalonbaycity_base 72.73,45.29

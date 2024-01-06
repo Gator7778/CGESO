@@ -41306,25 +41306,25 @@ goto 32.92,54.75
 step
 goto u34_CastleNavireInt_base 28.72,29.03 |q People of Import/.*Find Duchess Elea's Notes.* |future
 step
-goto 44.98,29.03 |q People of Import/.*Find Duchess Elea's Notes.*
+goto 42.55,27.30 |q People of Import/.*Find Duchess Elea's Notes.*
 step
-goto 45.59,39.97 |q People of Import/.*Find Duchess Elea's Notes.*
+goto 42.17,37.68 |q People of Import/.*Find Duchess Elea's Notes.*
 step
-goto 70.60,37.43
+goto 70.60,37.58
 'Open _Duchess Elea's Study_ |q People of Import/.*Find Duchess Elea's Notes.*
 |tip Manually skip to the next step.
 step
-goto 87.93,37.04
+goto 88.60,37.09
 'Examine _Steward Hercian's Map_ |q People of Import/.*Find Duchess Elea's Notes.* |count 1
 step
-goto 90.42,38.36
+goto 90.91,38.51
 'Examine _Duchess Elea's Investigation Notes_ |q People of Import/.*Find Duchess Elea's Notes.* |count 2
 step
-goto 71.48,38.02
+goto 71.48,37.89
 'Open _Castle Navire Lower Halls_ |q People of Import/Return to the Courtyard
 |tip Manually skip to the next step.
 step
-goto 68.89,44.91
+goto 68.92,44.91
 'Open _Castle Navire South Courtyard_ |q People of Import/Return to the Courtyard
 |tip Manually skip to the next step.
 step
@@ -42884,7 +42884,7 @@ step
 goto 33.35,64.06 |q The Ascendant Storm/Find the Alliance Leaders |tip Go downstairs.
 step
 goto 66.31,58.30
-kill the Vulk'esh |q The Ascendant Storm/Stop the Vulk'esh Assault |future
+kill Vulk'esh |q The Ascendant Storm/Stop the Vulk'esh Assault |future
 step
 goto 70.95,53.91
 talk Queen Ayrenn |q The Ascendant Storm/Talk to Queen Ayrenn
@@ -43741,7 +43741,6 @@ step
 goto 67.24,67.16 |q Tides of Ruin/Retrieve the Cell Key
 step
 goto 82.90,49.28
-kill Goriath
 'Take _Tonnere Dungeon Key_ |q Tides of Ruin/Retrieve the Cell Key
 step
 goto 67.94,67.20 |q Tides of Ruin/Free Sir Stefan Mornard
@@ -44755,6 +44754,7 @@ goto u36_ivyhame_hiddenroom_base 86.16,51.79
 |tip Manually skip to the next step.
 step
 goto 85.91,51.63
+|tip Watch the dialogue.
 talk Frii |q The Dream of Kasorayn/Talk to Frii |future
 step
 goto 85.26,52.21
@@ -44898,10 +44898,10 @@ goto 51.11,33.22
 talk Captain Siravaen |q Guardian of Y'ffelon/Talk to Captain Siravaen
 step
 goto 49.22,34.67
-'Enter _Captain's Quarters_ |q Guardian of Y'ffelon/Go Below Deck
+'Enter _Captain's Quarters_ |q Guardian of Y'ffelon/Go Below Deck |future
 step
 goto u36_capper2_volcano_base 36.21,43.02
-talk Sir Stefan Mornard |q Guardian of Y'ffelon/Talk to Sir Stefan Mornard
+talk Sir Stefan Mornard |q Guardian of Y'ffelon/Talk to Sir Stefan Mornard |future
 step
 goto 54.61,45.27
 'Open _Cage_ |q Guardian of Y'ffelon/Free the Captives |future
@@ -44936,7 +44936,7 @@ step
 goto 24.38,59.35 |q Guardian of Y'ffelon/Reach Druid King Kasorayn's Tomb
 step
 goto 24.43,56.44
-'Open _Cage_ |q Guardian of Y'ffelon/Free Druid Laurel
+'Open _Cage_ |q Guardian of Y'ffelon/Free Druid Laurel |future
 step
 goto 24.51,56.68
 talk Druid Laurel |q Guardian of Y'ffelon/Talk to Druid Laurel |future
@@ -45451,11 +45451,8 @@ step
 goto 39.68,87.97
 'Place _Sacred Crown_ |q The Ivy Throne/Place the Crown
 step
-goto 39.68,87.97
-'Exit _Mount Firesong_ |q The Ivy Throne/Exit Mount Firesong |future
-|tip Manually skip to the next step.
-step
 goto u36_capper2_volcano_base 05.47,38.23
+|tip Watch the dialogue.
 talk Lady Arabelle Davaux |q The Ivy Throne/Talk to Lady Arabelle |future
 step
 goto 6.29,36.56
@@ -45491,8 +45488,9 @@ step
 goto 28.43,18.36
 talk Druid Laurel |q And Now, Perhaps, Peace/Talk to Druid Laurel
 step
-'Open _High Isle and Amenos_ Map
-'Travel to _Gonfalon Square_ |q And Now, Perhaps, Peace/Go to Mandrake Manor
+goto 28.96,22.06
+'Use _Glimmertarn_
+'Travel to _Gonfalon Square_ in High Isle and Amenos |q And Now, Perhaps, Peace/Go to Mandrake Manor
 |tip Manually skip to the next step.
 step
 goto u34_gonfalonbaycity_base 72.73,45.29
