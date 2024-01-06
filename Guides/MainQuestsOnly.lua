@@ -45063,10 +45063,7 @@ goto 57.01,49.43
 talk Hermaeus Mora |q Fate's Proxy/Talk to Hermaeus Mora
 step
 goto 56.85,49.37
-'Use _Emerald, Umber, and Onyx Glyphics_ |q Fate's Proxy/Use the Glyphics
-|tip Manually skip to the next step.
-step
-goto 56.85,49.37
+'Use _Emerald, Umber, and Onyx Glyphics_
 'Mark _Contract with Hermaeus Mora_ |q Fate's Proxy/Use the Glyphics
 step
 'Open _Telvanni Peninsula_ Map
@@ -45092,7 +45089,7 @@ goto 60.30,52.39
 'Open _Necrom Bindery_ |q Fate's Proxy/Meet Leramil the Wise in Necrom
 |tip Manually skip to the next step.
 step
-goto 58.15,51.56
+goto 59.24,57.27
 talk Leramil the Wise |q Fate's Proxy/Talk to Leramil the Wise |future
 step
 goto 59.12,57.25
@@ -45107,8 +45104,8 @@ accept Keeper of the Fate
 step
 goto 56.22,39.45 |q Keeper of the Fate/Talk to the Port Master
 step
-goto 75.03,27.97
-talk Port Master Ulene |q Keeper of the Fate/Talk to the Port Master
+goto 75.45,28.13
+talk Port Master Ulene |q Keeper of the Fate/Talk to the Port Master |future
 |tip Persuade her.
 step
 goto 76.60,18.44 |q Keeper of the Fate/Board the Stormwing |future
@@ -45889,7 +45886,7 @@ step
 goto 69.17,41.67
 'Defend _Yourself_ |q A Hidden Fate/Defend Yourself |future
 step
-goto 67.92,44.17
+goto 70.0,46.25
 |tip Watch the dialogue.
 talk Hermaeus Mora |q A Hidden Fate/Talk to Hermaeus Mora
 step
@@ -45922,7 +45919,7 @@ step
 goto 36.42,49.20
 'Go to _Tel Rendys_ |q Conclave of Fate/Go to Tel Rendys
 step
-goto 36.42,49.20
+goto 36.37,49.23
 talk Meln the Mouthless |q Conclave of Fate/Talk to Meln the Mouthless
 step
 goto 34.18,49.94
@@ -45960,7 +45957,7 @@ talk Meln the Mouthless |q Conclave of Fate/Talk to Meln the Mouthless
 step
 goto 32.26,54.74 |q Conclave of Fate/Enter Tel Huulen
 step
-goto tlv_aldisra_base 87.54,70.07 |q Conclave of Fate/Enter Tel Huulen
+goto tlv_aldisra_base 86.49,70.02 |q Conclave of Fate/Enter Tel Huulen
 step
 goto 66.85,72.30 |q Conclave of Fate/Enter Tel Huulen
 step
@@ -46081,7 +46078,7 @@ talk Leramil the Wise
 turnin Conclave of Fate
 accept A Calamity of Fate
 step
-goto 58.21,51.81
+goto 59.31,57.57
 talk Meln the Mouthless |q A Calamity of Fate/Talk to Meln the Mouthless
 step
 'Open _Telvanni Peninsula_ Map
@@ -46114,12 +46111,12 @@ goto 60.30,52.39
 'Open _Necrom Bindery_ |q A Calamity of Fate/Return to the Necrom Bindery
 |tip Manually skip to the next step.
 step
-goto 58.21,51.92
+goto 59.33,57.68
 |tip Go upstairs.
 talk Leramil the Wise |q A Calamity of Fate/Find the Infinite Panopticon |future
 |tip Manually skip to the next step.
 step
-'Open _Apocrypha_
+'Open _Apocrypha_ Map
 'Travel to _Feral Gallery_ |q A Calamity of Fate/Find the Infinite Panopticon
 |tip Manually skip to the next step.
 step
@@ -46354,7 +46351,7 @@ goto 72.13,35.35
 step
 goto 67.93,42.14 |q An Unhealthy Fate/Find the Western Manufactory
 step
-goto u38_tp8mythos01_base 67.54,63.56 |q An Unhealthy Fate/Find the Western Manufactory
+goto u38_tp8mythos01_base 67.54,63.56 |q An Unhealthy Fate/Find the Western Manufactory |tip Wait for Bridge to complete.
 step
 goto 71.41,83.63
 kill Mind Terror |q An Unhealthy Fate/Defend Your Allies |future

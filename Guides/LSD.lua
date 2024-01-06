@@ -1,7 +1,7 @@
 local CGV = _G.CGV
 CGV.GuideMenuTier = "TAM"
 
-CGV:RegisterGuide("Extras\\Extras\\Lorebooks\\Aldmeri Dominion",[[
+CGV:RegisterGuide("Extras\\Extras\\Lorebooks",[[
 loadingimage loadscreen_eldentreeplatform_01.dds
 description Almeri Dominion Lorebooks.
 step
@@ -893,12 +893,7 @@ goto 32.74,52.65 |lorebook A Looter's Paradise/1/28/4
 step
 goto 31.20,55.36
 |tip Inside house.
-'Examine _A Looter's Paradise_ |lorebook A Looter's Paradise/1/28/4 |next Extras\\Extras\\Lorebooks\\Daggerfall Covenant
-]])
-
-CGV:RegisterGuide("Extras\\Extras\\Lorebooks\\Daggerfall Covenant",[[
-loadingimage loadscreen_daggerfallmanor_01.dds
-description Daggerfall Covenant Lorebooks.
+'Examine _A Looter's Paradise_ |lorebook A Looter's Paradise/1/28/4
 step
 'Open _Glenumbra_ Map
 'Travel to _Daggerfall_ in Glenumbria |lorebook A Warning to the Aldmeri Dominion/1/1/2
@@ -1243,12 +1238,7 @@ step
 |tip Manually skip to the next step.
 step
 goto 60.77,62.58
-'Examine _The Warrior's Charge_ |lorebook The Warrior's Charge/1/18/9 |next Extras\\Extras\\Lorebooks\\Ebonheart Pact
-]])
-
-CGV:RegisterGuide("Extras\\Extras\\Lorebooks\\Ebonheart Pact",[[
-loadingimage loadscreen_ebonheartpactmanor_01.dds
-description Ebonheart Pact Lorebooks.
+'Examine _The Warrior's Charge_ |lorebook The Warrior's Charge/1/18/9
 step
 'Open _Stonefalls_
 'Travel to _Senie_ |lorebook The Brothers of Strife/1/20/2
@@ -1566,12 +1556,7 @@ goto 72.34,54.20
 |tip Manually skip to the next step.
 step
 goto therift_base 83.57,57.08
-'Examine _Thenephan's Mysteries of Mead_ |lorebook Thenephan's Mysteries of Mead/1/24/4 |next Extras\\Extras\\Lorebooks\\Expansion
-]])
-
-CGV:RegisterGuide("Extras\\Extras\\Lorebooks\\Expansion",[[
-loadingimage loadscreen_deadlandsvault_01.dds
-description Expansion Lorebooks.
+'Examine _Thenephan's Mysteries of Mead_ |lorebook Thenephan's Mysteries of Mead/1/24/4
 step
 'Open _Coldharbour_ Map
 'Travel to _The Hollow City_ |lorebook I was Summoned by a Mortal/1/29/4
