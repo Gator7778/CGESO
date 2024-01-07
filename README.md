@@ -24,6 +24,20 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 
 ### Recent Updates
 ### 09/17/2023
+* Full Guide
+* - Major & Minor Changes
+* - Highlight Objectives
+* - Major and Minor Fixes
+* - More Dialogue Options
+* - Broken Zones Completely Revamped
+* Main Quest Only
+* - Major & Minor Changes
+* - Highlight Objectives
+* - Major and Minor Fixes
+* - More Dialogue Options
+* - Broken Zones Completely Revamped
+
+### 09/17/2023
 * Map Revamp
 * MQO DLC
 * Highlight Objectives
