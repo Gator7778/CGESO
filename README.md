@@ -23,7 +23,7 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 
 
 ### Recent Updates
-### 09/17/2023
+### 01/06/2024
 ### Full Guide
 * - Major & Minor Changes
 * - Highlight Objectives
