@@ -24497,7 +24497,6 @@ goto 73.92,54.02
 'Rendezvous with _Khamira_ |q A Rage of Dragons/Rendezvous with Khamira
 step
 goto 63.51,53.56
-|tip Watch the dialogue.
 'Enter _Elsweyr_ |q A Rage of Dragons/Follow the Dragon |future
 |tip Manually skip to the next step.
 step
@@ -25156,11 +25155,11 @@ goto 49.37,22.98
 talk Cadwell |q The Battle for Riverhold/Talk to Cadwell |future
 step
 goto 50.36,20.02
-talk Khamira |q The Battle for Riverhold/Talk to Khamira
+talk Khamira |q The Battle for Riverhold/Talk to Khamira |future
 step
 goto riverholdinstance_base 53.31,77.52
 |tip Watch dialogue
-'Meet _Allies_ |q The Battle for Riverhold/Meet Allies
+'Meet _Allies_ |q The Battle for Riverhold/Meet Allies |future
 step
 goto 49.24,54.82
 |tip Watch the dialogue.
@@ -25179,12 +25178,8 @@ goto 48.63,49.20
 'Open _Riverhold_ |q The Battle for Riverhold/Activate the Blessed Pillar of the Spring Moon
 |tip Manually skip to the next step.
 step
-goto 44.41,47.50 |q The Battle for Riverhold/Activate the Blessed Pillar of the Spring Moon
-step
 goto 36.08,29.11
 kill the Forces |q The Battle for Riverhold/Activate the Blessed Pillar of the Spring Moon
-step
-goto 44.41,47.50 |q The Battle for Riverhold/Activate the Blessed Pillar of the Summer Moon
 step
 goto 69.69,48.46
 kill the Forces |q The Battle for Riverhold/Activate the Blessed Pillar of the Summer Moon
@@ -26087,6 +26082,7 @@ goto 73.87,78.73
 'Destory _Necromantic Glass_ |q Two Queens/Destroy the Necromantic Glass
 step
 goto 73.41,55.51
+|tip Go upstairs.
 'Open _Royal Chambers_ |q Two Queens/Go to the Royal Chambers
 |tip Manually skip to the next step.
 step
@@ -26518,6 +26514,8 @@ step
 goto 25.47,72.21
 'Open _Moon Gate of Anequina_ |q Jode's Core/Go to the Moon Gate of Anequina |future
 |tip Manually skip to the next step.
+step
+goto moongate_base 34.09,77.19 |q Jode's Core |future
 step
 goto moongate_base 30.07,84.45
 talk Prefect Calo |q Jode's Core/Talk to Prefect Calo |future
@@ -28550,6 +28548,7 @@ step
 goto 42.85,29.44 |q Order of the New Moon/Meet Up With Caska
 step
 goto 24.92,47.28
+|tip Drop down.
 talk Caska |q Order of the New Moon/Talk to Caska |future
 step
 'Open _Southern Elsweyr_ Map
@@ -28599,7 +28598,7 @@ goto 33.27,74.78
 'Open _Nahfahlaar's Chamber_ |q The Pride of Alkosh/Talk to Nahfahlaar
 |tip Manually skip to the next step.
 step
-goto ELS_Dragonguard_island01_base 51.32,36.98
+goto ELS_Dragonguard_island01_base 51.33,37.06
 talk Nahfahlaar |q The Pride of Alkosh/Talk to Nahfahlaar
 step
 'Open _Southern Elsweyr_ Map
@@ -28875,12 +28874,12 @@ goto 33.27,74.68
 'Open _Nahfahlaar's Chamber_ |q The Pride of Alkosh/Talk to Sai Sahan
 |tip Manually skip to the next step.
 step
-goto ELS_Dragonguard_island01_base 50.47,35.90
+goto ELS_Dragonguard_island01_base 50.48,35.37
 talk Sai Sahan
 turnin The Pride of Alkosh
 accept The Dragonguard
 step
-goto 50.09,36.21
+goto 50.71,36.15
 talk General Renmus |q The Dragonguard/Talk to General Renmus
 step
 'Open _Southern Elsweyr_ Map
@@ -29150,10 +29149,10 @@ goto 63.97,55.15
 talk Khamira |q New Moon Rising/Talk to Khamira
 step
 goto 63.97,55.15
-'Watch _Khamira's Attunement_ |q The Dark Aeon/Watch Khamira's Attunement
+'Watch _Khamira's Attunement_ |q New Moon Rising/Watch Khamira's Attunement
 step
 goto 63.97,55.15
-talk Khamira |q The Dark Aeon/Talk to Khamira |future
+talk Khamira |q New Moon Rising/Talk to Khamira |future
 step
 goto 41.98,42.96
 'Use _Dragonguard Sanctum_
