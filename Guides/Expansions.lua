@@ -21,149 +21,12 @@ talk Drake of Blades
 turnin City on the Brink
 |only Aldmeri Dominion
 step
-goto 85.18,72.01
-|tip The Scouting Board Quests are Random.
-'Read _Scouting Board_
-accept Scouting the Elven Gardens
-|only Aldmeri Dominion
-step
-goto 87.22,73.10
-'Climb _Elven Gardens District_
-'Investigate the _Elven Gardens District_ |q Scouting the Elven Gardens/Investigate the Elven Gardens District  |future
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto imperialcity_base 36.77,36.14
-'Use _Banner_
-turnin Scouting the Elven Gardens
-|only Aldmeri Dominion
-step
-goto 35.21,35.58
-talk Drake of Blades
-accept The Lock and the Legion
-|only Aldmeri Dominion
-step
-goto 26.49,39.05
-|tip Drop down.
-'Use _Unmarked Wall_ |q The Lock and the Legion/Draw the Dragonguard Seal
-|only Aldmeri Dominion
-step
-goto 34.70,42.06
-'Open _Elven Gardens Safe House_ |q The Lock and the Legion/Meet with Captain Regilus
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 35.06,42.79
-talk Captain Regilus |q The Lock and the Legion/Meet with Captain Regilus
-|only Aldmeri Dominion
-step
-goto 33.46,43.26
-|tip Go upstairs.
-'Open _Elven Gardens District_ |q The Lock and the Legion/.*Collect Scrap Metal.*
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 31.52,46.16
-kill Voidstalkers that patrol in this area
-kill Xivkyn Voidstalker
-'Collect _Scrap Metal_ |q The Lock and the Legion/.*Collect Scrap Metal.* |count 3
-|only Aldmeri Dominion
-step
-goto 14.47,45.20
-'Use _Metalworking Equipment_ |q The Lock and the Legion/Create the False Key
-|only Aldmeri Dominion
-step
-goto 28.87,29.65
-'Use _Vat of Acid_ |q The Lock and the Legion/Treat the Key with Acid
-|only Aldmeri Dominion
-step
-goto 21.60,28.67
-'Open _Groundskeeper's Storehouse_ |q The Lock and the Legion/Find Regilus in the Groundskeeper's Storehouse
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 21.59,28.67
-talk Captain Regilus |q The Lock and the Legion/Find Regilus in the Groundskeeper's Storehouse
-|only Aldmeri Dominion
-step
-goto 16.49,37.25
-'Open _Plundered Counting House_ |q The Lock and the Legion/Switch the Keys
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 16.46,37.26
-'Open _Daedric Strongbox_ |q The Lock and the Legion/Switch the Keys
-|only Aldmeri Dominion
-step
-goto 34.70,42.06
-'Open _Elven Gardens Safe House_ |q The Lock and the Legion/Meet Captain Regilus at the Safe House
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 35.03,42.74
-talk Captain Regilus |q The Lock and the Legion/Meet Captain Regilus at the Safe House
-|only Aldmeri Dominion
-step
-goto 33.47,43.29
-|tip Go upstairs.
-'Open _Elven Gardens District_ |q The Lock and the Legion/Bring the Key to the Drake of Blades
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 30.36,50.11
-'Open _Nobles District_ |q The Lock and the Legion/Bring the Key to the Drake of Blades
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 36.11,73.89
-'Open _Temple District_ |q The Lock and the Legion/Bring the Key to the Drake of Blades
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 46.73,86.28
-'Open _Irrigation Tunnels_ |q The Lock and the Legion/Bring the Key to the Drake of Blades
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto Imperialsewers_aldmeri1_base 81.90,61.92 |q The Lock and the Legion/Bring the Key to the Drake of Blades
-|only Aldmeri Dominion
-step
-goto 80.36,63.61 |q The Lock and the Legion/Bring the Key to the Drake of Blades
-|only Aldmeri Dominion
-step
-goto 83.04,64.95 |q The Lock and the Legion/Bring the Key to the Drake of Blades
-|only Aldmeri Dominion
-step
-goto 85.62,65.47 |q The Lock and the Legion/Bring the Key to the Drake of Blades
-|only Aldmeri Dominion
-step
-goto 86.27,71.56
-'Open _Aldmeri Dominion Base_ |q The Lock and the Legion/Bring the Key to the Drake of Blades
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 85.10,72.70
-talk Drake of Blades
-turnin The Lock and the Legion
-|only Aldmeri Dominion
-step
-goto 85.18,72.01
-|tip The Scouting Board Quests are Random.
-'Read _Scouting Board_
-accept Scouting the Nobles District
-|only Aldmeri Dominion
-step
 goto 87.36,73.00
-'Climb _Nobles District Ladder_ |q Scouting the Nobles District/Investigate the Nobles District |future
+'Climb _Nobles District_ |q The Imperial Standard |future
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
-goto imperialcity_base 28.83,53.96
-'Use _Banner_
-turnin Scouting the Nobles District
-|only Aldmeri Dominion
-step
-goto 29.08,54.19
+goto imperialcity_base 29.08,54.19
 talk Zelanus Equitius
 accept The Imperial Standard
 |only Aldmeri Dominion
@@ -181,21 +44,17 @@ goto 27.91,60.61
 talk Captain Caudex |q The Imperial Standard/Talk to Captain Caudex
 |only Aldmeri Dominion
 step
-goto 27.45,61.33
-'Open _Nobles District_ |q The Imperial Standard/Defend the South Door
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
 goto 23.57,58.34
-'Defend the _North Door_ |q The Imperial Standard/Defend the North Door
+|tip Drop down.
+'Defend _North Door_ |q The Imperial Standard/Defend the North Door
 |only Aldmeri Dominion
 step
 goto 20.45,67.76
-'Defend the _West Door_ |q The Imperial Standard/Defend the West Door
+'Defend _West Door_ |q The Imperial Standard/Defend the West Door
 |only Aldmeri Dominion
 step
 goto 30.17,69.62
-'Defend the _South Door_ |q The Imperial Standard/Defend the South Door
+'Defend _South Door_ |q The Imperial Standard/Defend the South Door
 |only Aldmeri Dominion
 step
 goto 27.77,61.66
@@ -209,6 +68,7 @@ talk Captain Caudex |q The Imperial Standard/Talk to Captain Caudex
 |only Aldmeri Dominion
 step
 goto 36.13,73.89
+|tip Drop down.
 'Open _Temple District_ |q The Imperial Standard/Talk to the Drake of Blades
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -240,30 +100,193 @@ talk Drake of Blades
 turnin The Imperial Standard
 |only Aldmeri Dominion
 step
-goto 85.18,72.01
-'Read _Scouting Board_
-accept Scouting the Memorial District
-|only Aldmeri Dominion
-step
-goto 86.94,73.11
-'Climb _Memorial District_ |q Scouting the Memorial District/Investigate the Memorial District |future
+goto 87.35,72.52
+'Climb _Temple District_ |q The Bleeding Temple |future
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
-goto imperialcity_base 56.20,19.20
-'Use _Banner_
-turnin Scouting the Memorial District
+goto imperialcity_base 62.97,81.44
+talk Drake of Blades
+accept The Bleeding Temple
 |only Aldmeri Dominion
 step
-goto 56.16,19.73
+goto 58.29,69.75
+|tip Drop down.
+'Use _Daedric Altar_ |q The Bleeding Temple/Free the Clergy near the Shrine of Julianos
+|only Aldmeri Dominion
+step
+goto 42.00,70.45
+'Use _Daedric Altar_ |q The Bleeding Temple/Free the Clergy near the Shrine of Mara
+|only Aldmeri Dominion
+step
+goto 36.54,80.54
+'Use _Daedric Altar_ |q The Bleeding Temple/Free the Clergy near the Shrine of Dibella
+|only Aldmeri Dominion
+step
+goto 65.54,83.14
+'Open _Temple Rectory_ |q The Bleeding Temple/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 65.58,83.15
+talk Drake of Blades |q The Bleeding Temple/Talk to the Drake of Blades
+|only Aldmeri Dominion
+step
+goto 50.23,76.69
+'Defeat _Molag Bal's Temple Forces_ |q The Bleeding Temple/Defeat Molag Bal's Temple Forces
+|only Aldmeri Dominion
+step
+goto 37.92,75.15 |q The Bleeding Temple/Talk to Egnatius
+|only Aldmeri Dominion
+step
+goto 34.84,83.51
+'Open _Temple Hideout_ |q The Bleeding Temple/Talk to Egnatius
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 31.86,83.03
+talk Father Egnatius |q The Bleeding Temple/Talk to Egnatius
+|only Aldmeri Dominion
+step
+goto 29.32,83.49
+'Open _Temple District_ |q The Bleeding Temple/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 46.73,86.28
+'Open _Irrigation Tunnels_ |q The Bleeding Temple/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto Imperialsewers_aldmeri1_base 81.90,61.92 |q The Bleeding Temple/Talk to the Drake of Blades
+|only Aldmeri Dominion
+step
+goto 80.36,63.61 |q The Bleeding Temple/Talk to the Drake of Blades
+|only Aldmeri Dominion
+step
+goto 83.04,64.95 |q The Bleeding Temple/Talk to the Drake of Blades
+|only Aldmeri Dominion
+step
+goto 85.62,65.47 |q The Bleeding Temple/Talk to the Drake of Blades
+|only Aldmeri Dominion
+step
+goto 86.27,71.56
+'Open _Aldmeri Dominion Base_ |q The Bleeding Temple/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 85.10,72.70
+talk Drake of Blades
+turnin The Bleeding Temple
+|only Aldmeri Dominion
+step
+goto 86.79,73.00
+'Climb _Arena District_ |q The Watcher in the Walls |future
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto imperialcity_base 64.38,31.78
+'Examine _Bloody Scroll_
+accept The Watcher in the Walls
+|only Aldmeri Dominion
+step
+goto 77.76,34.29 |q The Watcher in the Walls/Defeat All Daedra in the Arena
+|only Aldmeri Dominion
+step
+goto 75.68,35.71 |q The Watcher in the Walls/Defeat All Daedra in the Arena
+|only Aldmeri Dominion
+step
+goto 72.89,36.78
+kill Dredaza the Ringmaster |q The Watcher in the Walls/Defeat All Daedra in the Arena
+|only Aldmeri Dominion
+step
+goto 71.80,38.04
+'Wait for _The Rat to Contact You_ |q The Watcher in the Walls/Wait for The Rat to Contact You
+|only Aldmeri Dominion
+step
+goto 71.01,38.43
+'Open _Arena Storage Room_ |q The Watcher in the Walls/Find The Rat's Hideout
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 68.73,38.95
+'Open _Trapdoor_ |q The Watcher in the Walls/Find The Rat's Hideout
+|only Aldmeri Dominion
+step
+goto 80.59,38.08
+talk The Rat |q The Watcher in the Walls/Talk to The Rat
+|only Aldmeri Dominion
+step
+goto 79.42,38.02
+'Climb _Arena District_ |q The Watcher in the Walls/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 70.10,38.02
+'Use _Arena Side Door_ |q The Watcher in the Walls/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 70.96,34.75 |q The Watcher in the Walls/Talk to the Drake of Blades
+|only Aldmeri Dominion
+step
+goto 77.67,34.36 |q The Watcher in the Walls/Talk to the Drake of Blades
+|only Aldmeri Dominion
+step
+goto 79.77,33.17 |q The Watcher in the Walls/Talk to the Drake of Blades
+|only Aldmeri Dominion
+step
+goto 76.71,50.39
+'Open _Arboretum_ |q The Watcher in the Walls/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 63.48,74.01
+'Open _Temple District_ |q The Watcher in the Walls/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 46.73,86.28
+'Open _Irrigation Tunnels_ |q The Watcher in the Walls/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto Imperialsewers_aldmeri1_base 81.90,61.92 |q The Watcher in the Walls/Talk to the Drake of Blades
+|only Aldmeri Dominion
+step
+goto 80.36,63.61 |q The Watcher in the Walls/Talk to the Drake of Blades
+|only Aldmeri Dominion
+step
+goto 83.04,64.95 |q The Watcher in the Walls/Talk to the Drake of Blades
+|only Aldmeri Dominion
+step
+goto 85.62,65.47 |q The Watcher in the Walls/Talk to the Drake of Blades
+|only Aldmeri Dominion
+step
+goto 86.27,71.56
+'Open _Aldmeri Dominion Base_ |q The Watcher in the Walls/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 85.10,72.70
+talk Drake of Blades
+turnin The Watcher in the Walls
+|only Aldmeri Dominion
+step
+goto 86.94,73.11
+'Climb _Memorial District_ |q Of Brands and Bones |future
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto imperialcity_base 56.16,19.73
 talk Drake of Blades
 accept Of Brands and Bones
 |only Aldmeri Dominion
 step
 goto 50.52,27.21
 kill Worm Cult enemies in this area:
-'Collect the _Chapel Key_ |q Of Brands and Bones/Collect the Chapel Key
-'Collect a _Daedric Brand_ |q Of Brands and Bones/Collect a Daedric Brand
+'Collect _Chapel Key_ |q Of Brands and Bones/Collect the Chapel Key
+'Collect _Daedric Brand_ |q Of Brands and Bones/Collect a Daedric Brand
 |only Aldmeri Dominion
 step
 goto 40.71,26.70
@@ -279,17 +302,16 @@ goto 40.79,26.92
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
+goto 46.07,19.51 |q Of Brands and Bones/Meet the Drake in the Undertaker's Office
+|only Aldmeri Dominion
+step
 goto 41.75,15.70
 'Open _Undertaker's Office_ |q Of Brands and Bones/Meet the Drake in the Undertaker's Office
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
-goto 46.34,14.30
-'Meet the _Drake in the Undertaker's Office_ |q Of Brands and Bones/Meet the Drake in the Undertaker's Office
-|only Aldmeri Dominion
-step
 goto 46.31,14.16
-talk Drake of Blades |q Of Brands and Bones/Talk to the Drake of Blades
+talk Drake of Blades |q Of Brands and Bones/Talk to the Drake of Blades |future
 |only Aldmeri Dominion
 step
 goto 46.43,14.78
@@ -367,30 +389,141 @@ talk Drake of Blades
 turnin Of Brands and Bones
 |only Aldmeri Dominion
 step
-goto 85.18,72.01
-|tip The Scouting Board Quests are Random.
-'Read _Scouting Board_
-accept Scouting the Arboretum
-|only Aldmeri Dominion
-step
-goto 86.81,72.53
-'Climb _Arboretum_ |q Scouting the Arboretum/Investigate the Arboretum |future
+goto 87.22,73.10
+'Climb _Elven Gardens District_ |q The Lock and the Legion |future
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
-goto imperialcity_base 84.68,61.64
-'Use _Banner_
-turnin Scouting the Arboretum
+goto imperialcity_base 35.21,35.58
+talk Drake of Blades
+accept The Lock and the Legion
 |only Aldmeri Dominion
 step
-goto 84.55,60.45
+goto 26.49,39.05
+|tip Drop down.
+'Use _Unmarked Wall_ |q The Lock and the Legion/Draw the Dragonguard Seal
+|only Aldmeri Dominion
+step
+goto 34.70,42.06
+'Open _Elven Gardens Safe House_ |q The Lock and the Legion/Meet with Captain Regilus
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 35.06,42.79
+talk Captain Regilus |q The Lock and the Legion/Meet with Captain Regilus
+|only Aldmeri Dominion
+step
+goto 33.46,43.26
+|tip Go upstairs.
+'Open _Elven Gardens District_ |q The Lock and the Legion/.*Collect Scrap Metal.*
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 28.65,34.01
+|tip All around this district.
+kill Xivkyn Voidstalker
+'Collect _Scrap Metal_ |q The Lock and the Legion/.*Collect Scrap Metal.* |count 3
+|only Aldmeri Dominion
+step
+goto 14.47,45.20
+'Use _Metalworking Equipment_ |q The Lock and the Legion/Create the False Key
+|only Aldmeri Dominion
+step
+goto 28.87,29.65
+'Use _Vat of Acid_ |q The Lock and the Legion/Treat the Key with Acid
+|only Aldmeri Dominion
+step
+goto 25.07,26.80 |q The Lock and the Legion/Find Regilus in the Groundskeeper's Storehouse
+|only Aldmeri Dominion
+step
+goto 21.60,28.67
+'Open _Groundskeeper's Storehouse_ |q The Lock and the Legion/Find Regilus in the Groundskeeper's Storehouse
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 21.59,28.67
+talk Captain Regilus |q The Lock and the Legion/Find Regilus in the Groundskeeper's Storehouse
+|only Aldmeri Dominion
+step
+goto 16.49,37.25
+'Open _Plundered Counting House_ |q The Lock and the Legion/Switch the Keys
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 16.46,37.26
+'Open _Daedric Strongbox_ |q The Lock and the Legion/Switch the Keys
+|only Aldmeri Dominion
+step
+goto 16.46,37.26
+'Open _Elven Gardens District_ |q The Lock and the Legion/Meet Captain Regilus at the Safe House
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 34.70,42.06
+'Open _Elven Gardens Safe House_ |q The Lock and the Legion/Meet Captain Regilus at the Safe House
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 35.03,42.74
+talk Captain Regilus |q The Lock and the Legion/Meet Captain Regilus at the Safe House
+|only Aldmeri Dominion
+step
+goto 33.47,43.29
+|tip Go upstairs.
+'Open _Elven Gardens District_ |q The Lock and the Legion/Bring the Key to the Drake of Blades
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 30.36,50.11
+'Open _Nobles District_ |q The Lock and the Legion/Bring the Key to the Drake of Blades
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 36.11,73.89
+'Open _Temple District_ |q The Lock and the Legion/Bring the Key to the Drake of Blades
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 46.73,86.28
+'Open _Irrigation Tunnels_ |q The Lock and the Legion/Bring the Key to the Drake of Blades
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto Imperialsewers_aldmeri1_base 81.90,61.92 |q The Lock and the Legion/Bring the Key to the Drake of Blades
+|only Aldmeri Dominion
+step
+goto 80.36,63.61 |q The Lock and the Legion/Bring the Key to the Drake of Blades
+|only Aldmeri Dominion
+step
+goto 83.04,64.95 |q The Lock and the Legion/Bring the Key to the Drake of Blades
+|only Aldmeri Dominion
+step
+goto 85.62,65.47 |q The Lock and the Legion/Bring the Key to the Drake of Blades
+|only Aldmeri Dominion
+step
+goto 86.27,71.56
+'Open _Aldmeri Dominion Base_ |q The Lock and the Legion/Bring the Key to the Drake of Blades
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 85.10,72.70
+talk Drake of Blades
+turnin The Lock and the Legion
+|only Aldmeri Dominion
+step
+goto 86.81,72.53
+'Climb _Arboretum_ |q Knowledge is Power |future
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto imperialcity_base 84.55,60.45
 talk Drake of Blades
 accept Knowledge is Power
 |only Aldmeri Dominion
 step
 goto 75.90,66.44
 kill Szekesnarana the Cauterizer
-'Collect the _Black Iron Key_ |q Knowledge is Power/Recover the Coded Book
+'Collect _Black Iron Key_ |q Knowledge is Power/Recover the Coded Book
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -398,7 +531,7 @@ goto 75.15,65.30
 'Unlock _General's Cache_ |q Knowledge is Power/Recover the Coded Book
 |only Aldmeri Dominion
 step
-goto 84.58,59.98
+goto 80.65,68.86
 'Rescue _Chief Archivist Sergianus_ |q Knowledge is Power/Rescue the Chief Archivist
 |only Aldmeri Dominion
 step
@@ -428,7 +561,7 @@ talk Chief Archivist Sergianus |q Knowledge is Power/Find the Chief Archivist in
 |only Aldmeri Dominion
 step
 goto 84.58,58.98
-'Cast the _Translation Spell_ |q Knowledge is Power/Cast the Translation Spell
+'Cast _Translation Spell_ |q Knowledge is Power/Cast the Translation Spell
 |only Aldmeri Dominion
 step
 goto 84.58,58.98
@@ -466,191 +599,6 @@ step
 goto 85.10,72.70
 talk Drake of Blades
 turnin Knowledge is Power
-|only Aldmeri Dominion
-step
-goto 85.18,72.01
-|tip The Scouting Board Quests are Random.
-'Read _Scouting Board_
-accept Scouting the Temple District
-|only Aldmeri Dominion
-step
-goto 87.35,72.52
-'Climb _Temple District_ |q Scouting the Temple District/Investigate the Temple District |future
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto imperialcity_base 61.05,80.80
-'Use _Banner_
-turnin Scouting the Temple District
-|only Aldmeri Dominion
-step
-goto imperialcity_base 62.97,81.44
-talk Drake of Blades
-accept The Bleeding Temple
-|only Aldmeri Dominion
-step
-goto 58.29,69.75
-'Use  _Daedric Altar_ |q The Bleeding Temple/Free the Clergy near the Shrine of Julianos
-|only Aldmeri Dominion
-step
-goto 42.00,70.45
-'Use _Daedric Altar_ |q The Bleeding Temple/Free the Clergy near the Shrine of Mara
-|only Aldmeri Dominion
-step
-goto 36.54,80.54
-'Use _Daedric Altar_ |q The Bleeding Temple/Free the Clergy near the Shrine of Dibella
-|only Aldmeri Dominion
-step
-goto 65.54,83.14
-'Open _Temple Rectory_ |q The Bleeding Temple/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 65.58,83.15
-talk Drake of Blades |q The Bleeding Temple/Talk to the Drake of Blades
-|only Aldmeri Dominion
-step
-goto 50.23,76.69
-'Defeat _Molag Bal's Temple Forces_ |q The Bleeding Temple/Defeat Molag Bal's Temple Forces
-|only Aldmeri Dominion
-step
-goto 34.84,83.51
-'Open _Temple Hideout_ |q The Bleeding Temple/Talk to Egnatius
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 31.86,83.03
-talk Father Egnatius |q The Bleeding Temple/Talk to Egnatius
-|only Aldmeri Dominion
-step
-goto 29.32,83.49
-'Open _Temple District_ |q The Bleeding Temple/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 46.73,86.28
-'Open _Irrigation Tunnels_ |q The Bleeding Temple/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto Imperialsewers_aldmeri1_base 81.90,61.92 |q The Bleeding Temple/Talk to the Drake of Blades
-|only Aldmeri Dominion
-step
-goto 80.36,63.61 |q The Bleeding Temple/Talk to the Drake of Blades
-|only Aldmeri Dominion
-step
-goto 83.04,64.95 |q The Bleeding Temple/Talk to the Drake of Blades
-|only Aldmeri Dominion
-step
-goto 85.62,65.47 |q The Bleeding Temple/Talk to the Drake of Blades
-|only Aldmeri Dominion
-step
-goto 86.27,71.56
-'Open _Aldmeri Dominion Base_ |q The Bleeding Temple/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 85.10,72.70
-talk Drake of Blades
-turnin The Bleeding Temple
-|only Aldmeri Dominion
-step
-goto 85.18,72.01
-|tip The Scouting Board Quests are Random.
-'Read _Scouting Board_
-accept Scouting the Arena District
-|only Aldmeri Dominion
-step
-goto 86.79,73.00
-'Climb _Arena District_ |q Scouting the Arena District/Investigate the Arena District |future
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto imperialcity_base 63.95,31.94
-'Use_ Banner_
-turnin Scouting the Arena District
-|only Aldmeri Dominion
-step
-goto 64.38,31.78
-'Examine _Bloody Scroll_
-accept The Watcher in the Walls
-|only Aldmeri Dominion
-step
-goto 77.76,34.29 |q The Watcher in the Walls/Defeat All Daedra in the Arena
-|only Aldmeri Dominion
-step
-goto 75.68,35.71
-'Enter the _Arena_ |q The Watcher in the Walls/Defeat All Daedra in the Arena
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 72.89,36.78
-|tip You may need a group to defeat these bosses.
-'Defeat _All Daedra in the Arena_ |q The Watcher in the Walls/Defeat All Daedra in the Arena
-|only Aldmeri Dominion
-step
-goto 74.69,36.23
-'Wait for _The Rat to Contact You_ |q The Watcher in the Walls/Wait for The Rat to Contact You
-|only Aldmeri Dominion
-step
-goto 71.01,38.43
-'Open _Arena Storage Room_ |q The Watcher in the Walls/Find The Rat's Hideout
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 68.73,38.95
-'Open _Trapdoor_ |q The Watcher in the Walls/Find The Rat's Hideout
-|only Aldmeri Dominion
-step
-goto 80.59,38.08
-talk The Rat |q The Watcher in the Walls/Talk to The Rat
-|only Aldmeri Dominion
-step
-goto 70.10,38.02
-|tip Go outside.
-'Open _Arena Side Door_ |q The Watcher in the Walls/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 76.71,50.39
-'Open _Arboretum_ |q The Watcher in the Walls/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 63.48,74.01
-'Open _Temple District_ |q The Watcher in the Walls/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 46.73,86.28
-'Open _Irrigation Tunnels_ |q The Watcher in the Walls/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto Imperialsewers_aldmeri1_base 81.90,61.92 |q The Watcher in the Walls/Talk to the Drake of Blades
-|only Aldmeri Dominion
-step
-goto 80.36,63.61 |q The Watcher in the Walls/Talk to the Drake of Blades
-|only Aldmeri Dominion
-step
-goto 83.04,64.95 |q The Watcher in the Walls/Talk to the Drake of Blades
-|only Aldmeri Dominion
-step
-goto 85.62,65.47 |q The Watcher in the Walls/Talk to the Drake of Blades
-|only Aldmeri Dominion
-step
-goto 86.27,71.56
-'Open _Aldmeri Dominion Base_ |q The Watcher in the Walls/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 85.10,72.70
-talk Drake of Blades
-turnin The Watcher in the Walls
-|only Aldmeri Dominion
-step
-goto 85.10,72.70
-talk Drake of Blades
 accept The Sublime Brazier
 |only Aldmeri Dominion
 step
@@ -712,6 +660,7 @@ goto 85.64,68.79 |q The Sublime Brazier/Travel to the Dragonfire Cathedral
 step
 goto 84.30,68.08
 'Open _Ancient Underground_ |q The Sublime Brazier/Travel to the Dragonfire Cathedral |future
+|tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
 goto Imperialsewer_daggerfall1_base 6.21,62.41
@@ -724,28 +673,17 @@ talk Drake of Blades
 turnin City on the Brink
 |only Daggerfall Covenant
 step
-goto 6.38,62.80
-|tip The Scouting Board Quests are Random.
-'Read _Scouting Board_
-accept Scouting the Nobles District
-|only Daggerfall Covenant
-step
 goto 6.62,60.45
-'Climb _Nobles District_ |q Scouting the Nobles District/Investigate the Nobles District |future
+'Climb _Nobles District_ |q The Imperial Standard |future
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto imperialcity_base 28.67,76.75
-'Use _Banner_
-turnin Scouting the Nobles District
-|only Daggerfall Covenant
-step
-goto 28.72,76.22
+goto imperialcity_base 28.72,76.22
 talk Zelanus Equitius
 accept The Imperial Standard
 |only Daggerfall Covenant
 step
-goto 29.59,61.55 |q The Imperial Standard/Talk to Captain Caudex
+goto 29.59,61.55 |q The Imperial Standard/Talk to Captain Caudex |tip Drop down.
 |only Daggerfall Covenant
 step
 goto 27.71,61.63
@@ -758,24 +696,17 @@ goto 27.91,60.61
 talk Captain Caudex |q The Imperial Standard/Talk to Captain Caudex
 |only Daggerfall Covenant
 step
-goto 27.45,61.33
-'Open _Nobles District_ |q The Imperial Standard/Defend the South Door
-|tip Manually skip to the next step.
-|only Daggerfall Covenant
-step
 goto 23.57,58.34
-kill the enemies that attack:
-'Defend the _North Door_ |q The Imperial Standard/Defend the North Door
+|tip Drop down.
+'Defend _North Door_ |q The Imperial Standard/Defend the North Door
 |only Daggerfall Covenant
 step
 goto 20.45,67.76
-kill the enemies that attack:
-'Defend the _West Door_ |q The Imperial Standard/Defend the West Door
+'Defend _West Door_ |q The Imperial Standard/Defend the West Door
 |only Daggerfall Covenant
 step
 goto 30.17,69.62
-kill the enemies that attack:
-'Defend the _South Door_ |q The Imperial Standard/Defend the South Door
+'Defend _South Door_ |q The Imperial Standard/Defend the South Door
 |only Daggerfall Covenant
 step
 goto 27.77,61.66
@@ -793,18 +724,15 @@ goto 22.66,50.95
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto 13.92,48.01
+goto 14.06,48.02
 'Open _Lambent Passage_ |q The Imperial Standard/Talk to the Drake of Blades
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto Imperialsewer_daggerfall1_base 9.72,59.47 |q The Imperial Standard/Talk to the Drake of Blades
+goto Imperialsewer_daggerfall1_base 9.84,63.30 |q The Imperial Standard/Talk to the Drake of Blades
 |only Daggerfall Covenant
 step
-goto 9.79,63.30 |q The Imperial Standard/Talk to the Drake of Blades
-|only Daggerfall Covenant
-step
-goto 6.78,63.94
+goto 6.79,63.94
 'Open _Daggerfall Covenant Base_ |q The Imperial Standard/Talk to the Drake of Blades
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
@@ -814,133 +742,185 @@ talk Drake of Blades
 turnin The Imperial Standard
 |only Daggerfall Covenant
 step
-goto 6.38,62.79
-|tip The Scouting Board Quests are Random.
-'Read _Scouting Board_
-accept Scouting the Arboretum
-|only Daggerfall Covenant
-step
-goto 6.14,61.03
-'Climb _Arboretum_ |q Scouting the Arboretum/Investigate the Arboretum |future
+goto 6.13,60.48
+'Climb _Temple District_ |q The Bleeding Temple |future
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto imperialcity_base 79.24,72.42
-'Use _Banner_
-turnin Scouting the Arboretum
-|only Daggerfall Covenant
-step
-goto 79.43,71.66
+goto imperialcity_base 38.76,77.17
 talk Drake of Blades
-accept Knowledge is Power
+accept The Bleeding Temple
 |only Daggerfall Covenant
 step
-goto 75.90,66.44
-kill Szekesnarana the Cauterizer
-'Collect the _Black Iron Key_ |q Knowledge is Power/Recover the Coded Book
+goto 36.54,80.54
+|tip Drop down.
+'Use _Daedric Altar_ |q The Bleeding Temple/Free the Clergy near the Shrine of Dibella
+|only Daggerfall Covenant
+step
+goto 42.00,70.45
+'Use _Daedric Altar_ |q The Bleeding Temple/Free the Clergy near the Shrine of Mara
+|only Daggerfall Covenant
+step
+goto 58.29,69.75
+'Use _Daedric Altar_ |q The Bleeding Temple/Free the Clergy near the Shrine of Julianos
+|only Daggerfall Covenant
+step
+goto 65.54,83.14
+'Open _Temple Rectory_ |q The Bleeding Temple/Talk to the Drake of Blades
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto 75.15,65.30
-'Unlock _General's Cache_ |q Knowledge is Power/Recover the Coded Book
+goto 65.58,83.15
+talk Drake of Blades |q The Bleeding Temple/Talk to the Drake of Blades
 |only Daggerfall Covenant
 step
-goto 80.65,68.86
-'Rescue _Chief Archivist Sergianus_ |q Knowledge is Power/Rescue the Chief Archivist
+goto 50.23,76.69
+'Defeat _Molag Bal's Temple Forces_ |q The Bleeding Temple/Defeat Molag Bal's Temple Forces
 |only Daggerfall Covenant
 step
-goto 69.69,75.42
-'Take _Magical Cipher_ |q Knowledge is Power/.*Find the Spell Ciphers.* |count 1
+goto 37.92,75.15 |q The Bleeding Temple/Talk to Egnatius
 |only Daggerfall Covenant
 step
-goto 64.05,66.55
-'Take _Magical Cipher_ |q Knowledge is Power/.*Find the Spell Ciphers.* |count 2
-|only Daggerfall Covenant
-step
-goto 71.59,55.70
-'Take _Magical Cipher_ |q Knowledge is Power/.*Find the Spell Ciphers.* |count 3
-|only Daggerfall Covenant
-step
-goto 80.06,55.56
-'Take _Magical Cipher_ |q Knowledge is Power/.*Find the Spell Ciphers.* |count 4
-|only Daggerfall Covenant
-step
-goto 84.60,58.98
-'Open _Ruined Archives_ |q Knowledge is Power/Find the Chief Archivist in the Archives
+goto 34.84,83.51
+'Open _Temple Hideout_ |q The Bleeding Temple/Talk to Egnatius
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto 84.58,58.98
-talk Chief Archivist Sergianus |q Knowledge is Power/Find the Chief Archivist in the Archives
+goto 31.86,83.03
+talk Father Egnatius |q The Bleeding Temple/Talk to Egnatius
 |only Daggerfall Covenant
 step
-goto 84.58,58.98
-'Cast the _Translation Spell_ |q Knowledge is Power/Cast the Translation Spell
-|only Daggerfall Covenant
-step
-goto 84.58,58.98
-'Open _Arboretum_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
+goto 29.32,83.49
+'Open _Temple District_ |q The Bleeding Temple/Talk to the Drake of Blades
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto 63.48,74.02
-'Open _Temple District_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
+goto 36.86,74.53
+'Open _Nobles District_ |q The Bleeding Temple/Talk to the Drake of Blades
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto 36.83,74.52
-'Open _Nobles District_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
-|tip Manually skip to the next step.
-|only Daggerfall Covenant
-step
-goto 22.64,50.91
-'Open _Elven Gardens District_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
+goto 22.65,50.95
+'Open _Elven Gardens District_ |q The Bleeding Temple/Talk to the Drake of Blades
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
 goto 14.06,48.02
-'Open _Lambent Passage_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
+'Open _Lambent Passage_ |q The Bleeding Temple/Talk to the Drake of Blades
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto Imperialsewer_daggerfall1_base 9.84,63.30 |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
+goto Imperialsewer_daggerfall1_base 9.84,63.30 |q The Bleeding Temple/Talk to the Drake of Blades
 |only Daggerfall Covenant
 step
 goto 6.79,63.94
-'Open _Daggerfall Covenant Base_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
+'Open _Daggerfall Covenant Base_ |q The Bleeding Temple/Talk to the Drake of Blades
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
 goto 6.14,62.52
 talk Drake of Blades
-turnin Knowledge is Power
+turnin The Bleeding Temple
 |only Daggerfall Covenant
 step
-goto 6.38,62.80
-|tip The Scouting Board Quests are Random.
-'Read _Scouting Board_
-accept Scouting the Memorial District
-|only Daggerfall Covenant
-step
-goto imperialcity_base 6.72,60.89
-'Climb _Memorial District_ |q Scouting the Memorial District/Investigate the Memorial District |future
+goto 6.59,61.06
+'Climb _Arena District_ |q The Watcher in the Walls |future
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto 54.71,30.16
-'Use _Banner_
-turnin Scouting the Memorial District
+goto imperialcity_base 73.23,47.28
+'Examine _Bloody Scroll_
+accept The Watcher in the Walls
 |only Daggerfall Covenant
 step
-goto 55.36,30.63
+goto 76.31,42.02 |q The Watcher in the Walls/Defeat All Daedra in the Arena
+|only Daggerfall Covenant
+step
+goto 75.68,35.71 |q The Watcher in the Walls/Defeat All Daedra in the Arena
+|only Daggerfall Covenant
+step
+goto 72.89,36.78
+kill Dredaza the Ringmaster |q The Watcher in the Walls/Defeat All Daedra in the Arena
+|only Daggerfall Covenant
+step
+goto 71.80,38.04
+'Wait for _The Rat to Contact You_ |q The Watcher in the Walls/Wait for The Rat to Contact You
+|only Daggerfall Covenant
+step
+goto 71.01,38.43
+'Open _Arena Storage Room_ |q The Watcher in the Walls/Find The Rat's Hideout
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto 68.73,38.95
+'Open _Trapdoor_ |q The Watcher in the Walls/Find The Rat's Hideout
+|only Daggerfall Covenant
+step
+goto 80.59,38.08
+talk The Rat |q The Watcher in the Walls/Talk to The Rat
+|only Daggerfall Covenant
+step
+goto 79.42,38.02
+'Climb _Arena District_ |q The Watcher in the Walls/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto 70.10,38.02
+'Use _Arena Side Door_ |q The Watcher in the Walls/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto 70.96,34.75 |q The Watcher in the Walls/Talk to the Drake of Blades
+|only Daggerfall Covenant
+step
+goto 77.67,34.36 |q The Watcher in the Walls/Talk to the Drake of Blades
+|only Daggerfall Covenant
+step
+goto 79.77,33.17 |q The Watcher in the Walls/Talk to the Drake of Blades
+|only Daggerfall Covenant
+step
+goto 63.41,27.50
+'Open _Memorial District_ |q The Watcher in the Walls/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto 36.29,27.47
+'Open _Elven Gardens District_ |q The Watcher in the Walls/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto 14.06,48.02
+'Open _Lambent Passage_ |q The Watcher in the Walls/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto Imperialsewer_daggerfall1_base 9.84,63.30 |q The Watcher in the Walls/Talk to the Drake of Blades
+|only Daggerfall Covenant
+step
+goto 6.79,63.94
+'Open _Daggerfall Covenant Base_ |q The Watcher in the Walls/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto 6.14,62.52
+talk Drake of Blades
+turnin The Watcher in the Walls
+|only Daggerfall Covenant
+step
+goto 6.72,60.89
+'Climb _Memorial District_ |q Of Brands and Bones |future
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto imperialcity_base 55.36,30.63
 talk Drake of Blades
 accept Of Brands and Bones
 |only Daggerfall Covenant
 step
 goto 50.52,27.21
 kill Worm Cult enemies in this area:
-'Collect the _Chapel Key_ |q Of Brands and Bones/Collect the Chapel Key
-'Collect a _Daedric Brand_ |q Of Brands and Bones/Collect a Daedric Brand
+'Collect _Chapel Key_ |q Of Brands and Bones/Collect the Chapel Key
+'Collect _Daedric Brand_ |q Of Brands and Bones/Collect a Daedric Brand
 |only Daggerfall Covenant
 step
 goto 40.71,26.70
@@ -956,17 +936,16 @@ goto 40.79,26.92
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
+goto 46.07,19.51 |q Of Brands and Bones/Meet the Drake in the Undertaker's Office
+|only Daggerfall Covenant
+step
 goto 41.75,15.70
 'Open _Undertaker's Office_ |q Of Brands and Bones/Meet the Drake in the Undertaker's Office
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto 46.34,14.30
-'Meet the _Drake in the Undertaker's Office_ |q Of Brands and Bones/Meet the Drake in the Undertaker's Office
-|only Daggerfall Covenant
-step
 goto 46.31,14.16
-talk Drake of Blades |q Of Brands and Bones/Talk to the Drake of Blades
+talk Drake of Blades |q Of Brands and Bones/Talk to the Drake of Blades |future
 |only Daggerfall Covenant
 step
 goto 46.43,14.78
@@ -1025,23 +1004,12 @@ talk Drake of Blades
 turnin Of Brands and Bones
 |only Daggerfall Covenant
 step
-goto 6.38,62.80
-|tip The Scouting Board Quests are Random.
-'Read _Scouting Board_
-accept Scouting the Elven Gardens
-|only Daggerfall Covenant
-step
 goto 6.70,60.61
-'Climb _Elven Gardens District_ |q Scouting the Elven Gardens/Investigate the Elven Gardens District |future
+'Climb _Elven Gardens District_ |q The Lock and the Legion |future
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto imperialcity_base 33.13,27.27
-'Use _Banner_
-turnin Scouting the Elven Gardens
-|only Daggerfall Covenant
-step
-goto 32.67,27.71
+goto imperialcity_base 32.67,27.71
 talk Drake of Blades
 accept The Lock and the Legion
 |only Daggerfall Covenant
@@ -1065,7 +1033,8 @@ goto 33.46,43.26
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto 31.52,46.16
+goto 28.65,34.01
+|tip All around this district.
 kill Voidstalkers that patrol in this area
 'Collect _Scrap Metal_ |q The Lock and the Legion/.*Collect Scrap Metal.* |count 3
 |only Daggerfall Covenant
@@ -1079,6 +1048,9 @@ goto imperialcity_base 28.33,30.65 |q The Lock and the Legion/Treat the Key with
 step
 goto 28.87,29.65
 'Use _Vat of Acid_ |q The Lock and the Legion/Treat the Key with Acid
+|only Daggerfall Covenant
+step
+goto 25.07,26.80 |q The Lock and the Legion/Find Regilus in the Groundskeeper's Storehouse
 |only Daggerfall Covenant
 step
 goto 21.60,28.67
@@ -1097,6 +1069,11 @@ goto 16.49,37.25
 step
 goto 16.46,37.26
 'Open _Daedric Strongbox_ |q The Lock and the Legion/Switch the Keys
+|only Daggerfall Covenant
+step
+goto 16.46,37.26
+'Open _Elven Gardens District_ |q The Lock and the Legion/Meet Captain Regilus at the Safe House
+|tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
 goto 34.70,42.06
@@ -1126,180 +1103,95 @@ talk Drake of Blades
 turnin The Lock and the Legion
 |only Daggerfall Covenant
 step
-goto 6.38,62.80
-|tip The Scouting Board Quests are Random.
-'Read _Scouting Board_
-accept Scouting the Temple District
-|only Daggerfall Covenant
-step
-goto 6.13,60.48
-'Climb _Temple District_ |q Scouting the Temple District/Investigate the Temple District |future
+goto 6.14,61.03
+'Climb _Arboretum_ |q Knowledge is Power |future
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto imperialcity_base 38.53,77.35
-'Use _Banner_
-turnin Scouting the Temple District
-|only Daggerfall Covenant
-step
-goto 38.76,77.17
+goto imperialcity_base 79.43,71.66
 talk Drake of Blades
-accept The Bleeding Temple
+accept Knowledge is Power
 |only Daggerfall Covenant
 step
-goto 36.54,80.54
-'Use _Daedric Altar_ |q The Bleeding Temple/Free the Clergy near the Shrine of Dibella
-|only Daggerfall Covenant
-step
-goto 42.00,70.45
-'Use _Daedric Altar_ |q The Bleeding Temple/Free the Clergy near the Shrine of Mara
-|only Daggerfall Covenant
-step
-goto 58.29,69.75
-'Use _Daedric Altar_ |q The Bleeding Temple/Free the Clergy near the Shrine of Julianos
-|only Daggerfall Covenant
-step
-goto 65.54,83.14
-'Open _Temple Rectory_ |q The Bleeding Temple/Talk to the Drake of Blades
+goto 75.90,66.44
+kill Szekesnarana the Cauterizer
+'Collect _Black Iron Key_ |q Knowledge is Power/Recover the Coded Book
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto 65.58,83.15
-talk Drake of Blades |q The Bleeding Temple/Talk to the Drake of Blades
+goto 75.15,65.30
+'Unlock _General's Cache_ |q Knowledge is Power/Recover the Coded Book
 |only Daggerfall Covenant
 step
-goto 50.23,76.69
-|tip You may need a group to complete this part.
-'Defeat _Molag Bal's Temple Forces_ |q The Bleeding Temple/Defeat Molag Bal's Temple Forces
+goto 80.65,68.86
+'Rescue _Chief Archivist Sergianus_ |q Knowledge is Power/Rescue the Chief Archivist
 |only Daggerfall Covenant
 step
-goto 34.84,83.51
-'Open _Temple Hideout_ |q The Bleeding Temple/Talk to Egnatius
+goto 69.69,75.42
+'Take _Magical Cipher_ |q Knowledge is Power/.*Find the Spell Ciphers.* |count 1
+|only Daggerfall Covenant
+step
+goto 64.05,66.55
+'Take _Magical Cipher_ |q Knowledge is Power/.*Find the Spell Ciphers.* |count 2
+|only Daggerfall Covenant
+step
+goto 71.59,55.70
+'Take _Magical Cipher_ |q Knowledge is Power/.*Find the Spell Ciphers.* |count 3
+|only Daggerfall Covenant
+step
+goto 80.06,55.56
+'Take _Magical Cipher_ |q Knowledge is Power/.*Find the Spell Ciphers.* |count 4
+|only Daggerfall Covenant
+step
+goto 84.60,58.98
+'Open _Ruined Archives_ |q Knowledge is Power/Find the Chief Archivist in the Archives
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto 31.86,83.03
-talk Father Egnatius |q The Bleeding Temple/Talk to Egnatius
+goto 84.58,58.98
+talk Chief Archivist Sergianus |q Knowledge is Power/Find the Chief Archivist in the Archives
 |only Daggerfall Covenant
 step
-goto 36.86,74.53
-'Open _Nobles District_ |q The Bleeding Temple/Talk to the Drake of Blades
+goto 84.58,58.98
+'Cast _Translation Spell_ |q Knowledge is Power/Cast the Translation Spell
+|only Daggerfall Covenant
+step
+goto 84.58,58.98
+'Open _Arboretum_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto 22.65,50.95
-'Open _Elven Gardens District_ |q The Bleeding Temple/Talk to the Drake of Blades
+goto 63.48,74.02
+'Open _Temple District_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto 36.83,74.52
+'Open _Nobles District_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto 22.64,50.91
+'Open _Elven Gardens District_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
 goto 14.06,48.02
-'Open _Lambent Passage_ |q The Bleeding Temple/Talk to the Drake of Blades
+'Open _Lambent Passage_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto Imperialsewer_daggerfall1_base 9.84,63.30 |q The Bleeding Temple/Talk to the Drake of Blades
+goto Imperialsewer_daggerfall1_base 9.84,63.30 |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
 |only Daggerfall Covenant
 step
 goto 6.79,63.94
-'Open _Daggerfall Covenant Base_ |q The Bleeding Temple/Talk to the Drake of Blades
+'Open _Daggerfall Covenant Base_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
 goto 6.14,62.52
 talk Drake of Blades
-turnin The Bleeding Temple
-|only Daggerfall Covenant
-step
-goto 6.38,62.80
-|tip The Scouting Board Quests are Random.
-'Read _Scouting Board_
-accept Scouting the Arena District
-|only Daggerfall Covenant
-step
-goto 6.59,61.06
-'Climb _Arena District_ |q Scouting the Arena District/Investigate the Arena District |future
-|tip Manually skip to the next step.
-|only Daggerfall Covenant
-step
-goto imperialcity_base 74.39,47.69
-'Use _Banner_
-turnin Scouting the Arena District
-|only Daggerfall Covenant
-step
-goto 73.23,47.28
-'Examine _Bloody Scroll_
-accept The Watcher in the Walls
-|only Daggerfall Covenant
-step
-goto 76.31,42.02 |q The Watcher in the Walls/Defeat All Daedra in the Arena
-|only Daggerfall Covenant
-step
-goto 75.68,35.71 |q The Watcher in the Walls/Defeat All Daedra in the Arena
-|only Daggerfall Covenant
-step
-goto 72.89,36.78
-|tip You may need a group to defeat these bosses.
-'Defeat _All Daedra in the Arena_ |q The Watcher in the Walls/Defeat All Daedra in the Arena
-|only Daggerfall Covenant
-step
-goto 74.69,36.23
-'Wait for _The Rat to Contact You_ |q The Watcher in the Walls/Wait for The Rat to Contact You
-|only Daggerfall Covenant
-step
-goto 71.01,38.43
-'Open _Arena Storage Room_ |q The Watcher in the Walls/Find The Rat's Hideout
-|tip Manually skip to the next step.
-|only Daggerfall Covenant
-step
-goto 68.73,38.95
-'Open _Trapdoor_ |q The Watcher in the Walls/Find The Rat's Hideout
-|only Daggerfall Covenant
-step
-goto 80.59,38.08
-talk The Rat |q The Watcher in the Walls/Talk to The Rat
-|only Daggerfall Covenant
-step
-goto 70.10,38.02
-'Open _Arena Side Door_ |q The Watcher in the Walls/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Daggerfall Covenant
-step
-goto 70.96,34.75 |q The Watcher in the Walls/Talk to the Drake of Blades
-|only Daggerfall Covenant
-step
-goto 77.67,34.36 |q The Watcher in the Walls/Talk to the Drake of Blades
-|only Daggerfall Covenant
-step
-goto 63.41,27.50
-'Open _Memorial District_ |q The Watcher in the Walls/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Daggerfall Covenant
-step
-goto 36.29,27.47
-'Open _Elven Gardens District_ |q The Watcher in the Walls/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Daggerfall Covenant
-step
-goto 14.06,48.02
-'Open _Lambent Passage_ |q The Watcher in the Walls/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Daggerfall Covenant
-step
-goto Imperialsewer_daggerfall1_base 9.84,63.30 |q The Watcher in the Walls/Talk to the Drake of Blades
-|only Daggerfall Covenant
-step
-goto 6.79,63.94
-'Open _Daggerfall Covenant Base_ |q The Watcher in the Walls/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Daggerfall Covenant
-step
-goto 6.14,62.52
-talk Drake of Blades
-turnin The Watcher in the Walls
-|only Daggerfall Covenant
-step
-goto 6.14,62.52
-talk Drake of Blades
+turnin Knowledge is Power
 accept The Sublime Brazier
 |only Daggerfall Covenant
 step
@@ -1344,14 +1236,12 @@ goto 6.44,62.67
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto 9.52,63.31 |q The Sublime Brazier/Travel to the Dragonfire Cathedral
-|only Daggerfall Covenant
-step
-goto 10.63,63.32 |q The Sublime Brazier/Travel to the Dragonfire Cathedral
+goto 10.48,63.30 |q The Sublime Brazier/Travel to the Dragonfire Cathedral
 |only Daggerfall Covenant
 step
 goto Imperialsewer_daggerfall1_base 9.04,60.88
 'Open _Ancient Underground_ |q The Sublime Brazier/Travel to the Dragonfire Cathedral |future
+|tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
 goto Imperialsewers_ebon1_base 54.09,23.64
@@ -1364,325 +1254,14 @@ talk Drake of Blades
 turnin City on the Brink
 |only Ebonheart Pact
 step
-goto 54.46,23.78
-|tip The Scouting Board Quests are Random.
-'Read _Scouting Board_
-accept Scouting the Memorial District
-|only Ebonheart Pact
-step
-goto 52.26,23.24
-'Climb _Memorial District_ |q Scouting the Memorial District/Investigate the Memorial District |future
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto imperialcity_base 40.56,22.87
-'Use _Banner_
-turnin Scouting the Memorial District
-|only Ebonheart Pact
-step
-goto 42.14,22.57
-talk Drake of Blades
-accept Of Brands and Bones
-|only Ebonheart Pact
-step
-goto 50.52,27.21
-kill Worm Cult enemies in this area:
-'Collect the _Chapel Key_ |q Of Brands and Bones/Collect the Chapel Key
-'Collect a _Daedric Brand_ |q Of Brands and Bones/Collect a Daedric Brand
-|only Ebonheart Pact
-step
-goto 40.71,26.70
-'Open _Defiled Chapel of Arkay_ |q Of Brands and Bones/Go to the Chapel
-|only Ebonheart Pact
-step
-goto 42.68,28.02
-'Use _Pile of Bones_ |q Of Brands and Bones/Brand a Skeleton to Hear Its Confession
-|only Ebonheart Pact
-step
-goto 40.79,26.92
-'Open _Memorial District_ |q Of Brands and Bones/Meet the Drake in the Undertaker's Office
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto 41.75,15.70
-'Open _Undertaker's Office_ |q Of Brands and Bones/Meet the Drake in the Undertaker's Office
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto 46.34,14.30
-'Meet the _Drake in the Undertaker's Office_ |q Of Brands and Bones/Meet the Drake in the Undertaker's Office
-|only Ebonheart Pact
-step
-goto 46.31,14.16
-talk Drake of Blades |q Of Brands and Bones/Talk to the Drake of Blades
-|only Ebonheart Pact
-step
-goto 46.43,14.78
-'Open _Memorial District_ |q Of Brands and Bones/.*Collect Concentrated Kindlepitch.*
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto 41.36,16.60
-kill Xivkyn Soulbrander
-'Collect _Concentrated Kindlepitch_ |q Of Brands and Bones/.*Collect Concentrated Kindlepitch.* |count 1
-|only Ebonheart Pact
-step
-goto 36.19,18.69
-kill Xivkyn Soulbrander
-'Collect _Concentrated Kindlepitch_ |q Of Brands and Bones/.*Collect Concentrated Kindlepitch.* |count 2
-|only Ebonheart Pact
-step
-goto 34.85,22.57
-kill Xivkyn Soulbrander
-'Collect _Concentrated Kindlepitch_ |q Of Brands and Bones/.*Collect Concentrated Kindlepitch.* |count 3
-|only Ebonheart Pact
-step
-goto 58.45,26.66
-'Open _Crematorium_ |q Of Brands and Bones/Meet the Drake in the Crematorium
-|only Ebonheart Pact
-step
-goto 56.23,28.07
-'Use _Newly Dug Mineshaft_ |q Of Brands and Bones/Destroy the Secret Dig Site
-|only Ebonheart Pact
-step
-goto 57.21,26.57
-'Open _Memorial District_ |q Of Brands and Bones/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto 62.84,27.54
-'Open _Arena District_ |q Of Brands and Bones/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto 79.29,30.54
-'Open _Harena Hypogeum_ |q Of Brands and Bones/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto Imperialsewers_ebon1_base 46.46,25.63 |q Of Brands and Bones/Talk to the Drake of Blades
-|only Ebonheart Pact
-step
-goto 49.69,27.77 |q Of Brands and Bones/Talk to the Drake of Blades
-|only Ebonheart Pact
-step
-goto 53.68,27.26 |q Of Brands and Bones/Talk to the Drake of Blades
-|only Ebonheart Pact
-step
-goto 53.04,24.14
-'Open _Ebonheart Pact Base_ |q Of Brands and Bones/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto 54.17,23.49
-talk Drake of Blades
-turnin Of Brands and Bones
-|only Ebonheart Pact
-step
-goto 54.45,23.78
-|tip The Scouting Board Quests are Random.
-'Read _Scouting Board_
-accept Scouting the Arboretum
-|only Ebonheart Pact
-step
-goto 52.09,22.79
-'Climb _Arboretum_ |q Scouting the Arboretum/Investigate the Arboretum |future
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto imperialcity_base 86.07,52.76
-'Use _Banner_
-turnin Scouting the Arboretum
-|only Ebonheart Pact
-step
-goto 85.91,52.84
-talk Drake of Blades
-accept Knowledge is Power
-|only Ebonheart Pact
-step
-goto 75.90,66.44
-kill Szekesnarana the Cauterizer
-'Collect the _Black Iron Key_ |q Knowledge is Power/Recover the Coded Book
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto 75.15,65.30
-'Unlock _General's Cache_ |q Knowledge is Power/Recover the Coded Book
-|only Ebonheart Pact
-step
-goto 80.65,68.86
-'Rescue _Chief Archivist Sergianus_ |q Knowledge is Power/Rescue the Chief Archivist
-|only Ebonheart Pact
-step
-goto 69.69,75.42
-'Take _Magical Cipher_ |q Knowledge is Power/.*Find the Spell Ciphers.* |count 1
-|only Ebonheart Pact
-step
-goto 64.05,66.55
-'Take _Magical Cipher_ |q Knowledge is Power/.*Find the Spell Ciphers.* |count 2
-|only Ebonheart Pact
-step
-goto 71.59,55.70
-'Take _Magical Cipher_ |q Knowledge is Power/.*Find the Spell Ciphers.* |count 3
-|only Ebonheart Pact
-step
-goto 80.06,55.56
-'Take _Magical Cipher_ |q Knowledge is Power/.*Find the Spell Ciphers.* |count 4
-|only Ebonheart Pact
-step
-goto 84.60,58.98
-'Open _Ruined Archives_ |q Knowledge is Power/Find the Chief Archivist in the Archives
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto 84.58,58.98
-talk Chief Archivist Sergianus |q Knowledge is Power/Find the Chief Archivist in the Archives
-|only Ebonheart Pact
-step
-goto 84.58,58.98
-'Cast the _Translation Spell_ |q Knowledge is Power/Cast the Translation Spell
-|only Ebonheart Pact
-step
-goto 84.58,58.98
-'Open _Arboretum_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto 76.68,50.95
-'Open _Arena District_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto 79.29,30.54
-'Open _Harena Hypogeum_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto Imperialsewers_ebon1_base 46.46,25.63 |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
-|only Ebonheart Pact
-step
-goto 49.69,27.77 |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
-|only Ebonheart Pact
-step
-goto 53.68,27.26 |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
-|only Ebonheart Pact
-step
-goto 53.04,24.14
-'Open _Ebonheart Pact Base_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto 54.17,23.49
-talk Drake of Blades
-turnin Knowledge is Power
-|only Ebonheart Pact
-step
-goto 54.45,23.78
-|tip The Scouting Board Quests are Random.
-'Read _Scouting Board_
-accept Scouting the Temple District
-|only Ebonheart Pact
-step
-goto 52.26,22.65
-'Climb _Temple District_ |q Scouting the Temple District/Investigate the Temple District |future
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto imperialcity_base 56.02,71.55
-'Use _Banner_
-turnin Scouting the Temple District
-|only Ebonheart Pact
-step
-goto 55.78,71.54
-talk Drake of Blades
-accept The Bleeding Temple
-|only Ebonheart Pact
-step
-goto 58.29,69.75
-'Use  _Daedric Altar_ |q The Bleeding Temple/Free the Clergy near the Shrine of Julianos
-|only Ebonheart Pact
-step
-goto 42.00,70.45
-'Use _Daedric Altar_ |q The Bleeding Temple/Free the Clergy near the Shrine of Mara
-|only Ebonheart Pact
-step
-goto 36.54,80.54
-'Use _Daedric Altar_ |q The Bleeding Temple/Free the Clergy near the Shrine of Dibella
-|only Ebonheart Pact
-step
-goto 65.54,83.14
-'Open _Temple Rectory_ |q The Bleeding Temple/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto 65.58,83.15
-talk Drake of Blades |q The Bleeding Temple/Talk to the Drake of Blades
-|only Ebonheart Pact
-step
-goto 50.23,76.69
-|tip You may need a group to complete this part.
-'Defeat _Molag Bal's Temple Forces_ |q The Bleeding Temple/Defeat Molag Bal's Temple Forces
-|only Ebonheart Pact
-step
-goto 34.84,83.51
-'Open _Temple Hideout_ |q The Bleeding Temple/Talk to Egnatius
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto 31.86,83.03
-talk Father Egnatius |q The Bleeding Temple/Talk to Egnatius
-|only Ebonheart Pact
-step
-goto 63.44,73.40
-'Open _Arboretum_ |q The Bleeding Temple/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto 76.68,50.95
-'Open _Arena District_ |q The Bleeding Temple/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto 79.29,30.54
-'Open _Harena Hypogeum_ |q The Bleeding Temple/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto Imperialsewers_ebon1_base 46.46,25.63 |q The Bleeding Temple/Talk to the Drake of Blades
-|only Ebonheart Pact
-step
-goto 49.69,27.77 |q The Bleeding Temple/Talk to the Drake of Blades
-|only Ebonheart Pact
-step
-goto 53.68,27.26 |q The Bleeding Temple/Talk to the Drake of Blades
-|only Ebonheart Pact
-step
-goto 53.04,24.14
-'Open _Ebonheart Pact Base_ |q The Bleeding Temple/Talk to the Drake of Blades
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto 54.17,23.49
-talk Drake of Blades
-turnin The Bleeding Temple
-|only Ebonheart Pact
-step
-goto 54.45,23.78
-'Open _Scouting Board_
-accept Scouting the Nobles District
-|only Ebonheart Pact
+goto 56.71,22.98 |q The Imperial Standard |future
 step
 goto 52.56,22.67
-'Open _Nobles District_ |q Scouting the Nobles District/Investigate the Nobles District
+'Climb _Nobles District_ |q The Imperial Standard |future
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
-goto imperialcity_base 34.08,70.46
-'Use _Banner_
-turnin Scouting the Nobles District
-|only Ebonheart Pact
-step
-goto 35.72,69.91
+goto imperialcity_base 35.72,69.91
 talk Zelanus Equitius
 accept The Imperial Standard
 |only Ebonheart Pact
@@ -1700,21 +1279,17 @@ goto 27.91,60.61
 talk Captain Caudex |q The Imperial Standard/Talk to Captain Caudex
 |only Ebonheart Pact
 step
-goto 27.45,61.33
-'Open _Nobles District_ |q The Imperial Standard/Defend the South Door
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
 goto 23.57,58.34
-'Defend the _North Door_ |q The Imperial Standard/Defend the North Door
+|tip Drop down.
+'Defend _North Door_ |q The Imperial Standard/Defend the North Door
 |only Ebonheart Pact
 step
 goto 20.45,67.76
-'Defend the _West Door_ |q The Imperial Standard/Defend the West Door
+'Defend _West Door_ |q The Imperial Standard/Defend the West Door
 |only Ebonheart Pact
 step
 goto 30.17,69.62
-'Defend the _South Door_ |q The Imperial Standard/Defend the South Door
+'Defend _South Door_ |q The Imperial Standard/Defend the South Door
 |only Ebonheart Pact
 step
 goto 27.77,61.66
@@ -1766,23 +1341,285 @@ talk Drake of Blades
 turnin The Imperial Standard
 |only Ebonheart Pact
 step
-goto 54.45,23.78
-|tip The Scouting Board Quests are Random.
-'Read _Scouting Board_
-accept Scouting the Elven Gardens
-|only Ebonheart Pact
-step
-goto 52.55,23.23
-'Climb _Elven Gardens District_ |q Scouting the Elven Gardens/Investigate the Elven Gardens District |future
+goto 52.26,22.65
+'Climb _Temple District_ |q The Bleeding Temple |future
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
-goto imperialcity_base 28.90,46.51
-'Use _Banner_
-turnin Scouting the Elven Gardens
+goto imperialcity_base 55.78,71.54
+talk Drake of Blades
+accept The Bleeding Temple
 |only Ebonheart Pact
 step
-goto 29.99,46.64
+goto 58.29,69.75
+|tip Drop down.
+'Use _Daedric Altar_ |q The Bleeding Temple/Free the Clergy near the Shrine of Julianos
+|only Ebonheart Pact
+step
+goto 42.00,70.45
+'Use _Daedric Altar_ |q The Bleeding Temple/Free the Clergy near the Shrine of Mara
+|only Ebonheart Pact
+step
+goto 36.54,80.54
+'Use _Daedric Altar_ |q The Bleeding Temple/Free the Clergy near the Shrine of Dibella
+|only Ebonheart Pact
+step
+goto 65.54,83.14
+'Open _Temple Rectory_ |q The Bleeding Temple/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 65.58,83.15
+talk Drake of Blades |q The Bleeding Temple/Talk to the Drake of Blades
+|only Ebonheart Pact
+step
+goto 50.23,76.69
+'Defeat _Molag Bal's Temple Forces_ |q The Bleeding Temple/Defeat Molag Bal's Temple Forces
+|only Ebonheart Pact
+step
+goto 37.92,75.15 |q The Bleeding Temple/Talk to Egnatius
+|only Ebonheart Pact
+step
+goto 34.84,83.51
+'Open _Temple Hideout_ |q The Bleeding Temple/Talk to Egnatius
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 31.86,83.03
+talk Father Egnatius |q The Bleeding Temple/Talk to Egnatius
+|only Ebonheart Pact
+step
+goto 29.32,83.49
+'Open _Temple District_ |q The Bleeding Temple/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 63.44,73.40
+'Open _Arboretum_ |q The Bleeding Temple/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 76.68,50.95
+'Open _Arena District_ |q The Bleeding Temple/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 79.29,30.54
+'Open _Harena Hypogeum_ |q The Bleeding Temple/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto Imperialsewers_ebon1_base 46.46,25.63 |q The Bleeding Temple/Talk to the Drake of Blades
+|only Ebonheart Pact
+step
+goto 49.69,27.77 |q The Bleeding Temple/Talk to the Drake of Blades
+|only Ebonheart Pact
+step
+goto 53.68,27.26 |q The Bleeding Temple/Talk to the Drake of Blades
+|only Ebonheart Pact
+step
+goto 53.04,24.14
+'Open _Ebonheart Pact Base_ |q The Bleeding Temple/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 54.17,23.49
+talk Drake of Blades
+turnin The Bleeding Temple
+|only Ebonheart Pact
+step
+goto 52.10,23.09
+'Climb _Arena District_ |q The Watcher in the Walls |future
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto imperialcity_base 84.54,45.38
+'Examine _Bloody Scroll_
+accept The Watcher in the Walls
+|only Ebonheart Pact
+step
+goto 76.31,42.02 |q The Watcher in the Walls/Defeat All Daedra in the Arena
+|only Ebonheart Pact
+step
+goto 75.68,35.71 |q The Watcher in the Walls/Defeat All Daedra in the Arena
+|only Ebonheart Pact
+step
+goto 72.89,36.78
+kill Dredaza the Ringmaster |q The Watcher in the Walls/Defeat All Daedra in the Arena
+|only Ebonheart Pact
+step
+goto 71.80,38.04
+'Wait for _The Rat to Contact You_ |q The Watcher in the Walls/Wait for The Rat to Contact You
+|only Ebonheart Pact
+step
+goto 71.01,38.43
+'Open _Arena Storage Room_ |q The Watcher in the Walls/Find The Rat's Hideout
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 68.73,38.95
+'Open _Trapdoor_ |q The Watcher in the Walls/Find The Rat's Hideout
+|only Ebonheart Pact
+step
+goto 80.59,38.08
+talk The Rat |q The Watcher in the Walls/Talk to The Rat
+|only Ebonheart Pact
+step
+goto 79.42,38.02
+'Climb _Arena District_ |q The Watcher in the Walls/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 70.10,38.02
+'Use _Arena Side Door_ |q The Watcher in the Walls/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 70.96,34.75 |q The Watcher in the Walls/Talk to the Drake of Blades
+|only Ebonheart Pact
+step
+goto 77.67,34.36 |q The Watcher in the Walls/Talk to the Drake of Blades
+|only Ebonheart Pact
+step
+goto 79.77,33.17 |q The Watcher in the Walls/Talk to the Drake of Blades
+|only Ebonheart Pact
+step
+goto 79.29,30.54
+'Open _Harena Hypogeum_ |q The Watcher in the Walls/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto Imperialsewers_ebon1_base 46.46,25.63 |q The Watcher in the Walls/Talk to the Drake of Blades
+|only Ebonheart Pact
+step
+goto 49.69,27.77 |q The Watcher in the Walls/Talk to the Drake of Blades
+|only Ebonheart Pact
+step
+goto 53.68,27.26 |q The Watcher in the Walls/Talk to the Drake of Blades
+|only Ebonheart Pact
+step
+goto 53.04,24.14
+'Open _Ebonheart Pact Base_ |q The Watcher in the Walls/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 54.17,23.49
+talk Drake of Blades
+turnin The Watcher in the Walls
+|only Ebonheart Pact
+step
+goto 52.26,23.24
+'Climb _Memorial District_ |q Of Brands and Bones |future
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto imperialcity_base 42.14,22.57
+talk Drake of Blades
+accept Of Brands and Bones
+|only Ebonheart Pact
+step
+goto 50.52,27.21
+kill Worm Cult enemies in this area:
+'Collect _Chapel Key_ |q Of Brands and Bones/Collect the Chapel Key
+'Collect _Daedric Brand_ |q Of Brands and Bones/Collect a Daedric Brand
+|only Ebonheart Pact
+step
+goto 40.71,26.70
+'Open _Defiled Chapel of Arkay_ |q Of Brands and Bones/Go to the Chapel
+|only Ebonheart Pact
+step
+goto 42.68,28.02
+'Use _Pile of Bones_ |q Of Brands and Bones/Brand a Skeleton to Hear Its Confession
+|only Ebonheart Pact
+step
+goto 40.79,26.92
+'Open _Memorial District_ |q Of Brands and Bones/Meet the Drake in the Undertaker's Office
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 46.07,19.51 |q Of Brands and Bones/Meet the Drake in the Undertaker's Office
+|only Ebonheart Pact
+step
+goto 41.75,15.70
+'Open _Undertaker's Office_ |q Of Brands and Bones/Meet the Drake in the Undertaker's Office
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 46.31,14.16
+talk Drake of Blades |q Of Brands and Bones/Talk to the Drake of Blades |future
+|only Ebonheart Pact
+step
+goto 46.43,14.78
+'Open _Memorial District_ |q Of Brands and Bones/.*Collect Concentrated Kindlepitch.*
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 41.36,16.60
+|tip All around this district.
+kill Xivkyn Soulbrander
+'Collect _Concentrated Kindlepitch_ |q Of Brands and Bones/.*Collect Concentrated Kindlepitch.* |count 1
+|only Ebonheart Pact
+step
+goto 36.19,18.69
+|tip All around this district.
+kill Xivkyn Soulbrander
+'Collect _Concentrated Kindlepitch_ |q Of Brands and Bones/.*Collect Concentrated Kindlepitch.* |count 2
+|only Ebonheart Pact
+step
+goto 34.85,22.57
+|tip All around this district.
+kill Xivkyn Soulbrander
+'Collect _Concentrated Kindlepitch_ |q Of Brands and Bones/.*Collect Concentrated Kindlepitch.* |count 3
+|only Ebonheart Pact
+step
+goto 58.45,26.66
+'Open _Crematorium_ |q Of Brands and Bones/Meet the Drake in the Crematorium
+|only Ebonheart Pact
+step
+goto 56.23,28.07
+'Use _Newly Dug Mineshaft_ |q Of Brands and Bones/Destroy the Secret Dig Site
+|only Ebonheart Pact
+step
+goto 57.21,26.57
+'Open _Memorial District_ |q Of Brands and Bones/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 62.84,27.54
+'Open _Arena District_ |q Of Brands and Bones/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 79.29,30.54
+'Open _Harena Hypogeum_ |q Of Brands and Bones/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto Imperialsewers_ebon1_base 46.46,25.63 |q Of Brands and Bones/Talk to the Drake of Blades
+|only Ebonheart Pact
+step
+goto 49.69,27.77 |q Of Brands and Bones/Talk to the Drake of Blades
+|only Ebonheart Pact
+step
+goto 53.68,27.26 |q Of Brands and Bones/Talk to the Drake of Blades
+|only Ebonheart Pact
+step
+goto 53.04,24.14
+'Open _Ebonheart Pact Base_ |q Of Brands and Bones/Talk to the Drake of Blades
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 54.17,23.49
+talk Drake of Blades
+turnin Of Brands and Bones
+|only Ebonheart Pact
+step
+goto 52.55,23.23
+'Climb _Elven Gardens District_ |q The Lock and the Legion |future
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto imperialcity_base 29.99,46.64
 talk Drake of Blades
 accept The Lock and the Legion
 |only Ebonheart Pact
@@ -1790,9 +1627,6 @@ step
 goto 26.49,39.05
 |tip Drop down.
 'Use _Unmarked Wall_ |q The Lock and the Legion/Draw the Dragonguard Seal
-|only Ebonheart Pact
-step
-goto 33.21,44.80 |q The Lock and the Legion/Meet with Captain Regilus
 |only Ebonheart Pact
 step
 goto 34.70,42.06
@@ -1809,7 +1643,8 @@ goto 33.46,43.26
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
-goto 31.52,46.16
+goto 28.65,34.01
+|tip All around this district.
 kill Voidstalkers that patrol in this area
 'Collect _Scrap Metal_ |q The Lock and the Legion/.*Collect Scrap Metal.* |count 3
 |only Ebonheart Pact
@@ -1823,6 +1658,9 @@ goto 28.33,30.65 |q The Lock and the Legion/Treat the Key with Acid
 step
 goto 28.87,29.65
 'Use _Vat of Acid_ |q The Lock and the Legion/Treat the Key with Acid
+|only Ebonheart Pact
+step
+goto 25.07,26.80 |q The Lock and the Legion/Find Regilus in the Groundskeeper's Storehouse
 |only Ebonheart Pact
 step
 goto 21.60,28.67
@@ -1841,6 +1679,11 @@ goto 16.49,37.25
 step
 goto 16.46,37.26
 'Open _Daedric Strongbox_ |q The Lock and the Legion/Switch the Keys
+|only Ebonheart Pact
+step
+goto 16.46,37.26
+'Open _Elven Gardens District_ |q The Lock and the Legion/Meet Captain Regilus at the Safe House
+|tip Manually skip to the next step.
 |only Ebonheart Pact
 step
 goto 34.70,42.06
@@ -1891,86 +1734,91 @@ talk Drake of Blades
 turnin The Lock and the Legion
 |only Ebonheart Pact
 step
-goto 54.45,23.78
-|tip The Scouting Board Quests are Random.
-'Read _Scouting Board_
-accept Scouting the Arena District
-|only Ebonheart Pact
-step
-goto 52.10,23.09
-'Climb _Arena District_ |q Scouting the Arena District/Investigate the Arena District |future
+goto 52.09,22.79
+'Climb _Arboretum_ |q Knowledge is Power |future
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
-goto imperialcity_base 84.19,45.65
-'Use _Banner_
-turnin Scouting the Arena District
+goto imperialcity_base 85.91,52.84
+talk Drake of Blades
+accept Knowledge is Power
 |only Ebonheart Pact
 step
-goto 84.54,45.38
-'Examine _Bloody Scroll_
-accept The Watcher in the Walls
-|only Ebonheart Pact
-step
-goto 76.31,42.02 |q The Watcher in the Walls/Defeat All Daedra in the Arena
-|only Ebonheart Pact
-step
-goto 75.68,35.71 |q The Watcher in the Walls/Defeat All Daedra in the Arena
-|only Ebonheart Pact
-step
-goto 72.89,36.78
-|tip You may need a group to defeat these bosses.
-'Defeat _All Daedra in the Arena_ |q The Watcher in the Walls/Defeat All Daedra in the Arena
-|only Ebonheart Pact
-step
-goto 74.69,36.23
-'Wait for _The Rat to Contact You_ |q The Watcher in the Walls/Wait for The Rat to Contact You
-|only Ebonheart Pact
-step
-goto 71.01,38.43
-'Open _Arena Storage Room_ |q The Watcher in the Walls/Find The Rat's Hideout
+goto 75.90,66.44
+kill Szekesnarana the Cauterizer
+'Collect _Black Iron Key_ |q Knowledge is Power/Recover the Coded Book
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
-goto 68.73,38.95
-'Open _Trapdoor_ |q The Watcher in the Walls/Find The Rat's Hideout
+goto 75.15,65.30
+'Unlock _General's Cache_ |q Knowledge is Power/Recover the Coded Book
 |only Ebonheart Pact
 step
-goto 80.59,38.08
-talk The Rat |q The Watcher in the Walls/Talk to The Rat
+goto 80.65,68.86
+'Rescue _Chief Archivist Sergianus_ |q Knowledge is Power/Rescue the Chief Archivist
 |only Ebonheart Pact
 step
-goto 70.10,38.02
-'Open _Arena Side Door_ |q The Watcher in the Walls/Talk to the Drake of Blades
+goto 69.69,75.42
+'Take _Magical Cipher_ |q Knowledge is Power/.*Find the Spell Ciphers.* |count 1
+|only Ebonheart Pact
+step
+goto 64.05,66.55
+'Take _Magical Cipher_ |q Knowledge is Power/.*Find the Spell Ciphers.* |count 2
+|only Ebonheart Pact
+step
+goto 71.59,55.70
+'Take _Magical Cipher_ |q Knowledge is Power/.*Find the Spell Ciphers.* |count 3
+|only Ebonheart Pact
+step
+goto 80.06,55.56
+'Take _Magical Cipher_ |q Knowledge is Power/.*Find the Spell Ciphers.* |count 4
+|only Ebonheart Pact
+step
+goto 84.60,58.98
+'Open _Ruined Archives_ |q Knowledge is Power/Find the Chief Archivist in the Archives
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 84.58,58.98
+talk Chief Archivist Sergianus |q Knowledge is Power/Find the Chief Archivist in the Archives
+|only Ebonheart Pact
+step
+goto 84.58,58.98
+'Cast _Translation Spell_ |q Knowledge is Power/Cast the Translation Spell
+|only Ebonheart Pact
+step
+goto 84.58,58.98
+'Open _Arboretum_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 76.68,50.95
+'Open _Arena District_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
 goto 79.29,30.54
-'Open _Harena Hypogeum_ |q The Watcher in the Walls/Talk to the Drake of Blades
+'Open _Harena Hypogeum_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
-goto Imperialsewers_ebon1_base 46.46,25.63 |q The Watcher in the Walls/Talk to the Drake of Blades
+goto Imperialsewers_ebon1_base 46.46,25.63 |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
 |only Ebonheart Pact
 step
-goto 49.69,27.77 |q The Watcher in the Walls/Talk to the Drake of Blades
+goto 49.69,27.77 |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
 |only Ebonheart Pact
 step
-goto 53.68,27.26 |q The Watcher in the Walls/Talk to the Drake of Blades
+goto 53.68,27.26 |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
 |only Ebonheart Pact
 step
 goto 53.04,24.14
-'Open _Ebonheart Pact Base_ |q The Watcher in the Walls/Talk to the Drake of Blades
+'Open _Ebonheart Pact Base_ |q Knowledge is Power/Take "The Sublime Brazier" to the Drake of Blades
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
 goto 54.17,23.49
 talk Drake of Blades
-turnin The Watcher in the Walls
-|only Ebonheart Pact
-step
-goto 54.17,23.49
-talk Drake of Blades
+turnin Knowledge is Power
 accept The Sublime Brazier
 |only Ebonheart Pact
 step
@@ -1995,22 +1843,13 @@ goto 50.81,32.43
 'Search _Marked Barrel_ |q The Sublime Brazier/Find The Rat's Message
 |only Ebonheart Pact
 step
-goto 50.86,33.60 |q The Sublime Brazier/Talk to the Drake of Blades
-|only Ebonheart Pact
-step
-goto 49.61,33.57 |q The Sublime Brazier/Talk to the Drake of Blades
+goto 50.91,33.26 |q The Sublime Brazier/Talk to the Drake of Blades
 |only Ebonheart Pact
 step
 goto 48.56,30.45 |q The Sublime Brazier/Talk to the Drake of Blades
 |only Ebonheart Pact
 step
 goto 49.59,27.77 |q The Sublime Brazier/Talk to the Drake of Blades
-|only Ebonheart Pact
-step
-goto 50.81,27.79 |q The Sublime Brazier/Talk to the Drake of Blades
-|only Ebonheart Pact
-step
-goto 52.60,28.10 |q The Sublime Brazier/Talk to the Drake of Blades
 |only Ebonheart Pact
 step
 goto 53.04,24.14
@@ -2036,6 +1875,7 @@ step
 goto Imperialsewers_ebon1_base 51.85,29.53
 |tip Go upstairs.
 'Open _Ancient Underground_ |q The Sublime Brazier/Travel to the Dragonfire Cathedral |future
+|tip Manually skip to the next step.
 |only Ebonheart Pact
 step
 goto imperial_dragonfire_tunne_base 61.88,53.38
@@ -2044,22 +1884,14 @@ step
 goto imperial_dragonfire_cath_base 44.67,26.13
 'Watch _Father Egnatius Prepare the Ritual_ |q The Sublime Brazier/Watch Father Egnatius Prepare the Ritual
 step
-goto 45.77,47.48
-'Go to the _Siege Platform_ |q The Sublime Brazier/Go to the Siege Platform
-step
 goto 46.70,48.26
-kill the enemies that attack:
-'Use the _Ballistae to Defend the Entrance_ |q The Sublime Brazier/.*Use the Ballistae to Defend the Entrance.*
+kill Gate Crasher |q The Sublime Brazier/Defeat the Gate Crasher |future
 step
-goto 45.60,52.40
-'Defeat the _Gate Crasher_ |q The Sublime Brazier/Defeat the Gate Crasher
-step
-goto 44.90,27.47
-kill General Malivus
-'Defend the _Sublime Brazier_ |q The Sublime Brazier/Defend the Sublime Brazier
+goto 45.12,30.72
+kill General Malivus |q The Sublime Brazier/Defend the Sublime Brazier
 step
 goto 44.59,24.65
-'Witness the _Ritual_ |q The Sublime Brazier/Witness the Ritual
+'Witness _Ritual_ |q The Sublime Brazier/Witness the Ritual
 step
 goto 44.47,24.31
 talk Drake of Blades |q The Sublime Brazier/Talk to The Drake of Blades
