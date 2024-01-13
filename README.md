@@ -21,6 +21,22 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 
 <br/>
 
+### Recent Updates
+### 01/13/2024
+### Southern Elsweyr Full Guide
+* - Highlight Objectives
+* - Minor Fixes
+### Southern Elsweyr Main Quest Only
+* - Highlight Objectives
+* - Minor Fixes
+### Imperial City Full Guide
+* - Highlight Objectives
+* - Major and Minor Fixes
+* - Completely Revamped
+### Southern Elsweyr Main Quest Only
+* - Highlight Objectives
+* - Major and Minor Fixes
+* - Completely Revamped
 
 ### Recent Updates
 ### 01/06/2024
