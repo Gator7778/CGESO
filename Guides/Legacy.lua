@@ -33,10 +33,10 @@ step
 goto u30_balfiera_int2_base 51.29,34.79
 'Follow _Norianwe_ |q The Gates of Adamant/Follow Norianwe
 step
-goto 51.29,34.79
+goto u30_balfiera_int1_base 51.29,34.79
 'Practice _Combat_ |q The Gates of Adamant/Practice Combat
 step
-goto 52.36,32.29
+goto 52.14,31.47
 talk Norianwe |q The Gates of Adamant/Talk to Norianwe
 step
 goto 50.75,27.47
@@ -50,7 +50,7 @@ goto u30_balfiera_int3_base 49.81,45.45
 'Open _Balfiera Ruins_ |q The Gates of Adamant/Lead Norianwe Outside
 |tip Manually skip to the next step.
 step
-goto u30_balfiera_int5_base 75.95,45.42
+goto u30_balfiera_int3_base 75.95,45.42
 'Open _Balfiera Island_ |q The Gates of Adamant/Lead Norianwe Outside
 step
 goto u30_balfiera_ext 70.51,51.10
@@ -68,22 +68,18 @@ goto u30_balfiera_ext 66.87,71.27
 'Open _Skyshard Vault_ |q The Gates of Adamant/Acquire the Skyshard
 |tip Manually skip to the next step.
 step
-|tip Straight ahead. Kill the Gargoyle and then acquire the Skyshard.
 'Use _Skyshard_ |q The Gates of Adamant/Acquire the Skyshard
 step
 'Open _Balfiera Island_ |q The Gates of Adamant/Return to the Gate
 |tip Manually skip to the next step.
 step
 goto 70.55,51.17
-'Open _Gallery Balfiera_ |q The Gates of Adamant/Return to the Gate
+'Open _Gallery Foyer_ |q The Gates of Adamant/Return to the Gate
 |tip Manually skip to the next step.
 step
 goto u30_balfiera_int7_base 49.05,53.61
-'Return to _Gate_ |q The Gates of Adamant/Return to the Gate
-step
-goto 49.05,53.61
 |tip Go upstairs.
-'Activate _Skyshard Aperture_ |q The Gates of Adamant/Repair the Gate
+'Activate _Skyshard Aperture_ |q The Gates of Adamant/Repair the Gate |future
 step
 goto 48.62,53.02
 talk Norianwe |q The Gates of Adamant/Talk to Norianwe
@@ -102,23 +98,25 @@ goto u30_balfiera_int8_base 64.79,72.48
 'Open _Keywright's Gallery_ |q The Gates of Adamant/Enter the Keywright's Gallery
 |tip Manually skip to the next step.
 step
-goto 62.06,61.65
-'Enter _Keywright's Gallery_ |q The Gates of Adamant/Enter the Keywright's Gallery
+goto 62.06,61.65 |q The Gates of Adamant/Talk to Norianwe |future
 step
 goto 47.01,55.19
 talk Norianwe
 turnin The Gates of Adamant
 step
-'Use _Khenarthi's Roost_ |next Leveling Guides\\The Wailing Prison
-|tip Manually skip to the next step.
+goto 33.95,47.28
+'Use _Khenarthi's Roost_ |q Storm on the Horizon |future
+|tip Manually skip to the next step. |next Leveling Guides\\The Wailing Prison
 |only Aldmeri Dominion
 step
-'Use _Stros M'kai_ |next Leveling Guides\\The Wailing Prison
-|tip Manually skip to the next step.
+goto 35.69,42.76
+'Use _Stros M'kai_ |q The Broken Spearhead |future
+|tip Manually skip to the next step. |next Leveling Guides\\The Wailing Prison
 |only Daggerfall Covenant
 step
-'Use _Bleakrock Isle_ |next Leveling Guides\\The Wailing Prison
-|tip Manually skip to the next step.
+goto 42.06,35.81
+'Use _Bleakrock Isle_ |q A Beginning at Bleakrock |future
+|tip Manually skip to the next step. |next Leveling Guides\\The Wailing Prison
 |only Ebonheart Pact
 ]])
 
