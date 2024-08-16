@@ -54,5 +54,6 @@ Enums = {
 	TheRiftMap = 12,
 	VvardenfellMap = 30,
 	WesternSkyrimMap = 38,
+	WestWealdMap = 51,
 	WrothgarMap = 27,
 }

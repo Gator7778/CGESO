@@ -1,9 +1,9 @@
-## Title: |cfd5b02Community Leveling Guides|r v1099
+## Title: |cfd5b02Community Leveling Guides|r v1103
 ## Description: A Zygor addon updated by snichols7778, Hydra9268, Krandor1, and Sharlikran for the Necrom DLC.
 ## Author: snichols7778, Hydra9268
-## Version: 1099
-## AddOnVersion: 1099
-## APIVersion: 101040 101041
+## Version: 1103
+## AddOnVersion: 1103
+## APIVersion: 101043
 ## DependsOn: LibGPS>=71
 ## SavedVariables: CGESOSettings
 ## Disclaimer: This Add-on is not created by, affiliated with or sponsored by ZeniMax Media Inc. or its affiliates. The Elder Scrolls and related logos are registered trademarks or trademarks of ZeniMax Media Inc. in the United States and/or other countries. All rights reserved. This Add-on is not sponsored by Zygor Guides.

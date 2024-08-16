@@ -9973,6 +9973,20 @@ step
 goto 89.37,56.63
 'Use _Skyshard_
 |tip Manually skip to the next step.
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\West Weald",[[
+loadingimage loadscreen_west_weald_01.dds
+description West Weald Coming Soon.
+step
+Coming Soon.
 step
 '_Congradulations All Skyshards and Delves Complete_
+step
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\West Weald",[[
+loadingimage loadscreen_west_weald_01.dds
+description Telvanni Peninsula Skyshards and Delves.
+step
 ]])

@@ -686,6 +686,7 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 				GetCurrentMapIndex() == Enums.StonefallsMap or
 				GetCurrentMapIndex() == Enums.StrosMKaiMap or
 				GetCurrentMapIndex() == Enums.TheReachMap or
+				GetCurrentMapIndex() == Enums.WestWealdMap or
 				GetCurrentMapIndex() == Enums.WrothgarMap then return 4
 				
 		elseif  GetCurrentMapIndex() == Enums.ApocryphaMap or
@@ -749,6 +750,7 @@ function Utils.DistanceOffsetForIsComplete()
 				GetCurrentMapIndex() == Enums.StonefallsMap or
 				GetCurrentMapIndex() == Enums.StrosMKaiMap or
 				GetCurrentMapIndex() == Enums.TheReachMap or
+				GetCurrentMapIndex() == Enums.WestWealdMap or
 				GetCurrentMapIndex() == Enums.WrothgarMap then return 4
 				
 		elseif  GetCurrentMapIndex() == Enums.ApocryphaMap or
