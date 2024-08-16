@@ -35571,9 +35571,13 @@ step
 goto 42.49,58.27
 talk Zamarak |q The Final Order/Talk to Zamarak |future
 step
-goto 49.24,35.92 |q The Final Order/Track Down the Assassination Squad
+goto 51.27,55.03 |q The Final Order/Track Down the Assassination Squad
 step
-goto elsweyr_base 34.42,51.85 |q The Final Order/Track Down the Assassination Squad
+goto 21.03,58.34 |q The Final Order/Track Down the Assassination Squad
+step
+goto elsweyr_base 32.94,51.6 |q The Final Order/Track Down the Assassination Squad
+step
+goto 31.02,52.56 |q The Final Order/Track Down the Assassination Squad
 step
 goto 31.38,53.11 |q The Final Order/Track Down the Assassination Squad
 step
@@ -35675,7 +35679,7 @@ goto 48.99,75.34 |q Cadwell the Betrayer/Go to Zumog Phoom's Lair
 step
 goto elsweyr_base 40.23,54.38 |q Cadwell the Betrayer/Go to Zumog Phoom's Lair
 step
-goto stitches_base 72.79,61.84 |q Cadwell the Betrayer/Go to Zumog Phoom's Lair |tip Follow path down.
+goto stitches_base 59.94,59.02 |q Cadwell the Betrayer/Go to Zumog Phoom's Lair
 step
 goto elsweyr_base 42.10,51.46
 'Go to _Zumog Phoom's Lair_ |q Cadwell the Betrayer/Go to Zumog Phoom's Lair
@@ -35812,7 +35816,7 @@ step
 goto 44.84,28.30
 'Activate _Temple Relic_ |q Cadwell the Betrayer/Activate the Temple Relic
 step
-goto 54.20,32.85
+goto 49.40,29.26
 'Observe _Khamira_ |q Cadwell the Betrayer/Observe Khamira
 step
 goto 54.20,32.85
@@ -35910,8 +35914,8 @@ goto 55.39,42.97
 'Open _Jode's Core_ |q Jode's Core/Reach Jode's Core
 step
 goto 69.09,42.19
-|tip This is an endurance phase if you try to burn you will run out of Magicka/Stamina.
-|tip During air phase watch the ground stay out of red circles and get into the green circle in the center and after use dragonhorn and stay out of lightning.
+|tip During air phase watch the ground stay out of red circles and get into the green circle in the center.
+'Use _Dragonhorn_
 kill Mulaamnir |q Jode's Core/Kill Mulaamnir
 |tip Manually skip to the next step.
 step
@@ -36174,7 +36178,6 @@ step
 goto ELS_DG_Sanctuary_base 26.24,69.13 |q Reformation/Talk to Za'ji
 step
 goto 42.00,42.93
-|tip Follow path downstairs.
 wayshrine Dragonguard Sanctum
 step
 goto 74.82,34.17
@@ -36521,6 +36524,10 @@ goto 81.26,25.13
 'Activate _Door Switch_ |q Order of the New Moon/Complete the First Trial
 |tip Manually skip to the next step.
 step
+goto 83.76,24.36
+'Goto _Game Cube_ |q Order of the New Moon/Complete the First Trial
+|tip Manually skip to the next step.
+step
 goto 76.12,30.67
 'Move _Game Cube on Square_ |q Order of the New Moon/Complete the First Trial
 |tip Manually skip to the next step.
@@ -36538,6 +36545,7 @@ goto 64.76,31.70
 |tip Manually skip to the next step.
 step
 goto 67.13,27.01
+|tip Go through Doorway.
 'Move _Game Cube on Square_ |q Order of the New Moon/Complete the Trial Path
 |tip Manually skip to the next step.
 step
@@ -36569,7 +36577,9 @@ goto 62.32,33.54
 'Activate _Door Switch_ |q Order of the New Moon/Complete the Trial Path
 |tip Manually skip to the next step.
 step
-goto 62.44,39.39 |q Order of the New Moon/Complete the Trial Path
+goto 62.30,39.49
+'Goto _Game Cube_ |q Order of the New Moon/Complete the Trial Path
+|tip Manually skip to the next step.
 step
 goto 61.03,30.13
 'Move _Game Cube to this Square_ |q Order of the New Moon/Complete the Trial Path
@@ -36580,8 +36590,6 @@ step
 goto 59.20,29.04
 'Activate _Door Switch_ |q Order of the New Moon/Complete the Trial Path
 |tip Manually skip to the next step.
-step
-goto 61.03,30.23 |q Order of the New Moon/Complete the Trial Path
 step
 goto 57.00,31.06
 'Move _Game Cube to this Square_ |q Order of the New Moon/Complete the Trial Path
@@ -36785,12 +36793,8 @@ goto 44.36,57.11
 'Use _Grappling Point_ |q The Pride of Alkosh/Pass the First Trial
 |tip Manually skip to the next step.
 step
-goto 39.65,57.50
+goto 45.56,57.76
 |tip Look up and behind you.
-'Use _Grappling Point_ |q The Pride of Alkosh/Pass the First Trial
-|tip Manually skip to the next step.
-step
-goto 45.53,57.82
 'Use _Grappling Point_ |q The Pride of Alkosh/Pass the First Trial
 |tip Manually skip to the next step.
 step
@@ -36802,7 +36806,7 @@ goto 58.55,54.64
 'Use _Grappling Point_ |q The Pride of Alkosh/Pass the First Trial
 |tip Manually skip to the next step.
 step
-goto 53.62,42.56
+goto 53.59,42.59
 'Use _Grappling Point_ |q The Pride of Alkosh/Pass the First Trial
 |tip Manually skip to the next step.
 step
@@ -36940,7 +36944,7 @@ step
 'Travel to _Black Heights_ |q The Dragonguard/Go to the Sentry Tower
 |tip Manually skip to the next step.
 step
-goto southernelsweyr_base 41.04,28.92 |q The Dragonguard/Go to the Sentry Tower
+goto southernelsweyr_base 29.22,40.74 |q The Dragonguard/Go to the Sentry Tower
 step
 goto 38.06,42.20
 talk Caska |q The Dragonguard/Talk to Caska |future
@@ -36970,6 +36974,7 @@ goto 56.36,20.00 |q The Dragonguard/Find a Way Into Doomstone Keep
 step
 goto 59.78,17.52
 'Enter _Doomstone Caverns_ |q The Dragonguard/Find a Way Into Doomstone Keep |future
+|tip Manually skip to the next step.
 step
 goto doomstonkeep_base 59.04,25.98 |q The Dragonguard/Search the Caverns |future
 step
@@ -37063,7 +37068,6 @@ goto 51.22,36.70
 talk Nahfahlaar |q The Dark Aeon/Talk to Nahfahlaar
 step
 goto 49.84,37.05
-|tip Watch the dialogue
 'Examine _Portal_ |q The Dark Aeon/Investigate the Portal
 |tip Manually skip to the next step.
 step
@@ -37135,12 +37139,12 @@ step
 goto dragonholdlower01_base 26.60,60.78 |q The Dark Aeon/.*Disrupt the Ritual Sites.* |count 1
 step
 goto dragonholdlower02_base 23.40,87.07
-'Disrupt the _Ritual Sites_ |q The Dark Aeon/.*Disrupt the Ritual Sites.* |count 1
+'Disrupt the _Ritual Site_ |q The Dark Aeon/.*Disrupt the Ritual Sites.* |count 1
 step
 goto 32.18,68.08 |q The Dark Aeon/.*Disrupt the Ritual Sites.* |count 2
 step
 goto 66.38,54.13
-'Disrupt the _Ritual Sites_ |q The Dark Aeon/.*Disrupt the Ritual Sites.* |count 2
+'Disrupt the _Ritual Site_ |q The Dark Aeon/.*Disrupt the Ritual Sites.* |count 2
 step
 goto 70.03,61.87 |q The Dark Aeon/Explore the Ancient Ruins
 step
@@ -37231,6 +37235,8 @@ talk Sai Sahan |q New Moon Rising/Talk to Sai Sahan |future
 step
 goto moonlitcove01_base 27.38,66.44 |q New Moon Rising/Find the Hidden Door
 step
+goto 31.05,86.22 |q New Moon Rising/Find the Hidden Door
+step
 goto 44.6,85.31
 'Find _Hidden Door_ |q New Moon Rising/Find the Hidden Door
 step
@@ -37250,10 +37256,10 @@ step
 goto 14.53,53.92 |q New Moon Rising/.*Find the Missing Tablet Pieces.* |count 2
 step
 goto 16.95,38.79
-'Take _Tablet Fragment_ |q New Moon Rising/.*Find the Missing Tablet Pieces.* |count 2
 |tip Follow Spirit Alfiq
+'Take _Tablet Fragment_ |q New Moon Rising/.*Find the Missing Tablet Pieces.* |count 2
 step
-goto 7.74,48.95 |q New Moon Rising/.*Find the Missing Tablet Pieces.* |count 3
+goto 7.74,48.95 |q New Moon Rising/.*Find the Missing Tablet Pieces.* |count 3 |tip Go upstairs.
 step
 goto 27.21,66.49 |q New Moon Rising/.*Find the Missing Tablet Pieces.* |count 3
 step
@@ -37328,6 +37334,8 @@ step
 goto 68.06,50.54
 |tip Wait for Nahfahlaar to get rid of the blockage.
 kill the Dark Aeon Forces |q New Moon Rising/Destroy the First Dark Aeon Focal Point
+step
+goto 81.64,50.89 |q New Moon Rising/Destroy the Second Dark Aeon Focal Point
 step
 goto 91.06,70.68 |q New Moon Rising/Destroy the Second Dark Aeon Focal Point
 step
