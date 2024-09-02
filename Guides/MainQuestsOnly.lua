@@ -46590,7 +46590,6 @@ goto 23.65,61.37 |q When the Ground Shook/Search for the Wildburn Seed
 step
 goto 40.94,62.03
 'Open _Essondul Lower Chambers_ |q When the Ground Shook/Search for the Wildburn Seed
-|tip Manually skip to the next step.
 step
 goto 55.47,61.98
 'Take _Wildburn Seed_ |q When the Ground Shook/Take the Wildburn Seed
@@ -46614,18 +46613,19 @@ talk Beragon
 turnin When the Ground Shook
 step
 'Open _West Weald_ Map
-'Travel to _Wildburn's Edge_ |q Paths of Chaos/Meet at Beragon's Townhouse
-|tip Manually skip to the next step.
+'Travel to _Skingrad City_ |q Paths of Chaos/Meet at Beragon's Townhouse
+tip Manally skip to the next step.
 step
-goto u42_Skingrad_base 31.78,82.93
-'Open _Skingrad_ |q Paths of Chaos/Meet at Beragon's Townhouse
-|tip Manually skip to the next step.
+goto u42_Skingrad_base 43.99,68.94 |q Paths of Chaos/Meet at Beragon's Townhouse
 step
-goto 42.57,72.46
-'Open _Beragon's Townhouse_ |q Paths of Chaos/Meet at Beragon's Townhouse
+goto 41.76,72.18 |q Paths of Chaos/Meet at Beragon's Townhouse
+step
+goto 42.55,72.50
+'Open _Beragon's Townhouse_ |q Paths of Chaos/Meet at Beragon's Townhouse |future
+|tip Manually skip to the next step.
 step
 goto 43.76,73.63
-talk Beragon |q Paths of Chaos/Talk to Beragon
+talk Beragon |q Paths of Chaos/Talk to Beragon |future
 step
 goto 43.76,73.63
 talk Leramil the Wise
@@ -46635,15 +46635,21 @@ goto 43.76,73.63
 talk Beragon
 accept Seeds of Suspicion
 step
+goto 41.76,72.18 |q Seeds of Suspicion/Go to Vashabar
+step
+goto 46.51,65.75 |q Seeds of Suspicion/Go to Vashabar
+step
 goto 45.91,57.95
 'Use _Skingrad City_
 'Travel to _Ostumir_ |q Seeds of Suspicion/Go to Vashabar
 |tip Manually skip to the next step,
 step
-goto westwealdoverland_base 45.21,78.68 |q Seeds of Suspicion/Go to Vashabar
+goto westwealdoverland_base 45.15,78.36 |q Seeds of Suspicion/Go to Vashabar
 step
 goto u42_Vashabar_base 81.92,70.22
 wayshrine Vashabar
+step
+goto 41.86,73.71 |q Seeds of Suspicion/Talk to Greenspeaker Darolith
 step
 goto 15.20,52.04 |q Seeds of Suspicion/Talk to Greenspeaker Darolith
 step
@@ -46656,10 +46662,11 @@ step
 goto 42.18,47.21 |q Seeds of Suspicion/Go to King Nantharion's Residence
 step
 goto 39.31,28.01
-talk King Nantharion |q Seeds of Suspicion/Talk to King Nantharion
+talk King Nantharion |q Seeds of Suspicion/Talk to King Nantharion |future
 step
 goto 39.20,32.33
-talk Tribune Alea Idolus |q Seeds of Suspicion/Talk to Tribune Alea Idolus
+talk Tribune Alea Idolus |q Seeds of Suspicion/Talk to Tribune Alea Idolus |future
+|tip Manually skip to the next step.
 step
 goto 35.60,52.91 |q Seeds of Suspicion/Find the Wildburn Seed
 step
@@ -46716,11 +46723,12 @@ step
 goto 56.18,51.04
 talk Beragon |q Seeds of Suspicion/Talk to Beragon
 step
-goto 57.48,54.85
-'Go to _Tribune Alea_ |q Seeds of Suspicion/Go to Tribune Alea
+goto 56.16,51.02
+talk Beragon |q Seeds of Suspicion/Talk to Beragon |future
 step
 goto 57.22,55.46
-'Enter _Hoperoot_ |q Seeds of Suspicion/Enter Hoperoot
+'Enter _Hoperoot_ |q Seeds of Suspicion/Enter Hoperoot |future
+|tip Manually skip to the next step.
 step
 goto u42_hoperoot1_base 59.38,50.74 |q Seeds of Suspicion/Search Hoperoot
 step
@@ -46734,11 +46742,11 @@ goto 67.28,37.41 |q Seeds of Suspicion/Find King Nantharion
 step
 goto 86.86,55.80 |q Seeds of Suspicion/Find King Nantharion
 step
-goto 69.95,66.56
-'Examine _Report on Feldagard Keep_ |q Seeds of Suspicion/Examine the Documents
-step
 goto 68.86,64.59
-'Take _Recollection Map_ |q Seeds of Suspicion/Take the Map
+'Take _Recollection Map_ |q Seeds of Suspicion/Take the Map |future
+step
+goto 69.95,66.56
+'Examine _Report on Feldagard Keep_ |q Seeds of Suspicion/Examine the Documents |future
 step
 goto 73.06,71.13 |q Seeds of Suspicion/Continue to Explore Hoperoot
 step
@@ -46753,9 +46761,6 @@ step
 goto 37.70,48.53
 'Use _Echonir_ |q Seeds of Suspicion/Use the Echonir |future
 step
-goto 37.70,48.53
-'Observe _Memory_ |q Seeds of Suspicion/Observe Memory
-step
 goto 35.76,46.29
 talk Tribune Alea Idolus |q Seeds of Suspicion/Talk to Tribune Alea Idolus
 step
@@ -46768,6 +46773,9 @@ step
 goto 35.32,35.71 |q Seeds of Suspicion/Search for King Nantharion
 step
 goto 31.57,51.10 |q Seeds of Suspicion/Enter the Throne Room |future
+step
+goto 41.50,45.72
+'Listen to _King Nantharion_ |q Seeds of Suspicion/Listen to King Nantharion |future
 step
 goto 62.18,27.55 |q Seeds of Suspicion/Enter the Throne Room |future
 step
@@ -46782,12 +46790,13 @@ step
 goto 64.37,79.27
 'Burn _Wildburn Seed_ |q Seeds of Suspicion/Destroy the Wildburn Seed
 step
-goto 56.49,76.40 |q Seeds of Suspicion/Escape Hoperoot
+goto 56.49,76.40 |q Seeds of Suspicion/Escape Hoperoot |future
 step
 goto 59.89,90.29
-'Use _West Weald_ |q Seeds of Suspicion/Escape Hoperoot
+'Use _West Weald_ |q Seeds of Suspicion/Escape Hoperoot |future
+|tip Manually skip to the next step.
 step
-goto 60.03,50.89
+goto westwealdoverland_base 60.03,50.89
 talk Beragon |q Seeds of Suspicion/Talk to Beragon
 step
 goto 59.76,44.07
@@ -46800,6 +46809,8 @@ goto 59.76,44.07
 step
 goto u42_Skingrad_base 44.03,69.33 |q Seeds of Suspicion/Return to Beragon's Townhouse
 step
+goto 41.76,72.18 |q Seeds of Suspicion/Return to Beragon's Townhouse
+step
 goto 42.54,72.51
 'Open _Beragon's Townhouse_ |q Seeds of Suspicion/Return to Beragon's Townhouse
 step
@@ -46807,6 +46818,8 @@ goto 43.68,73.32
 talk Beragon
 turnin Seeds of Suspicion
 accept Relics of the Three Princes
+step
+goto 41.76,72.18 |q Relics of the Three Princes/Investigate the Outcast Inn
 step
 goto 46.51,65.75 |q Relics of the Three Princes/Investigate the Outcast Inn
 step
@@ -46827,9 +46840,8 @@ step
 '_At the Bar._
 talk Innkeeper Brynmir |q The Many Paths/Talk to Innkeeper Brynmir
 step
-'_The Next Room_ |q The Many Paths/Get a Bucket of Well Water
-step
 goto 63.30,52.78
+'_The Next Room_
 |tip Go Out to the Courtyard.
 'Take _Bucket of Well Water_ |q The Many Paths/Get a Bucket of Well Water
 step
@@ -46846,9 +46858,8 @@ step
 '_At the Bar._
 talk Innkeeper Brynmir |q The Many Paths/Talk to Innkeeper Brynmir
 step
-'_The Next Room_ |q The Many Paths/Search for the Recipe Book
-step
 goto 62.48,52.42
+'_The Next Room_
 |tip Go Out to the Courtyard.
 'Examine _Old Monk's Diary_ |lorebook Old Monk's Diary/3/50/43
 step
@@ -46864,23 +46875,24 @@ goto 99.82,52.43
 'Examine_Gilraedal's Book of Obscure and Ancient Spirits_ |q The Many Paths/Search for the Recipe Book
 step
 goto 99.20,52.63
-'Open _Outcast Inn Courtyard_ |q The Many Paths/Return to Innkeeper Brymnir
+'Open _Outcast Inn Courtyard_ |q The Many Paths/Return to Innkeeper Brynmir
 |tip Manually skip to the next step.
 step
 goto 62.61,53.33
-'Open _Outcast Inn_ |q The Many Paths/Return to Innkeeper Brymnir
+'Open _Outcast Inn_ |q The Many Paths/Return to Innkeeper Brynmir
 |tip Manually skip to the next step.
 step
 '_At the Bar._
-talk Innkeeper Brynmir |q The Many Paths/Talk to Innkeeper Brynmir
+talk Innkeeper Brynmir |q The Many Paths/Talk to Innkeeper Brynmir |future
 step
 '_Go Downstairs_
-'Open _Outcast Inn Cellar_ |q The Many Paths/Enter the Outcast Inn Cellar
+'Open _Outcast Inn Cellar_ |q The Many Paths/Enter the Outcast Inn Cellar |future
+|tip Manually skip to the next step.
 step
-goto 48.56,30.66
-talk Ithelia |q The Many Paths/Talk to Ithelia
+goto U42_UI_Maps_InnBetween_01.48.56,30.66
+talk Ithelia |q The Many Paths/Talk to Ithelia |future
 step
-goto U42_UI_Maps_InnBetween_01 48.56,26.03
+goto U42_UI_Maps_InnBetween_01.48.56,26.03
 'Take _Lamp of Clarity_ |q The Many Paths/Take the Lamp
 step
 goto 35.20,15.11
@@ -46888,12 +46900,13 @@ goto 35.20,15.11
 step
 goto 34.67,13.80
 'Enter _Portal to the Many Paths_ |q The Many Paths/Enter the Many Paths
+|tip Manually skip to the next step.
 step
-goto U42_UI_Maps_InnBetween_02 25.04,48.82
+goto U42_UI_Maps_InnBetween_02.25.04,48.82
 talk Ithelia |q The Many Paths/Talk to Ithelia |future
 step
 goto 16.07,56.18
-'Take _Tirum Wood_ |q The Many Paths/Take the Tirum Wood
+'Take _Tirum Wood_ |q The Many Paths/Take the Tirum Weed
 step
 goto 18.70,55.67
 'Enter _Portal to the Outcast Inn_ |q The Many Paths/Return to the Cellar
@@ -46901,8 +46914,9 @@ step
 goto U42_UI_Maps_InnBetween_01 49.08,12.93
 'Use _Lamp of Clarity_ |q The Many Paths/Use the Lamp
 step
-goto 01 49.08,12.93
+goto 49.08,12.93
 'Enter _Portal to the Many Paths_ |q The Many Paths/Enter the Many Paths
+|tip Manually skip to the next step.
 step
 goto U42_UI_Maps_InnBetween_03 71.53,62.00 |q The Many Paths/Explore This Path
 step
@@ -46926,19 +46940,20 @@ goto U42_UI_Maps_InnBetween_01 64.10,13.54
 step
 goto 64.10,13.54
 'Enter _Portal to the Many Paths_ |q The Many Paths/Enter the Many Paths
+|tip Manually skip to the next step.
 step
-goto U42_UI_Maps_InnBetween_04 66.42,80.61 |q The Many Paths/Explore This Path
+goto U42_UI_Maps_InnBetween_04 66.42,80.13 |q The Many Paths/Explore This Path |future
 step
 goto 65.81,57.28 |q The Many Paths/Explore This Path
 step
 goto 42.93,57.44 |q The Many Paths/Explore This Path
 step
-goto 38.40,62.24 |q The Many Paths/Explore This Path
+goto 38.72,65.25 |q The Many Paths/Explore This Path
 step
 goto 38.35,29.59 |q The Many Paths/Explore This Path
 step
 goto 25.59,29.53
-talk Torvesard |q The Many Paths/Talk to Torvesard
+talk Torvesard |q The Many Paths/Talk to Torvesard |future
 step
 goto 14.59,25.27
 'Take _Lute Berries_ |q The Many Paths/Take the Lute Berries
@@ -46957,11 +46972,11 @@ goto 52.93,29.36
 .'Place _Harkfruit_
 .'Ignite _Heat Element_
 .'Open _Valve_  to Add Heat
-.'Close _Valve_ Reduce Heat_
+.'Close _Valve_ Reduce Heat
 .'Place _Lute Berries_
 .'Activate _Cooling Elements_
 .'Open _Valve_ Add Cold
-.'Close _Valve_
+.'Close _Valve_ Reduce Cold
 .'Mix _Pot of Steeped Tirum Weed_ four times
 .'Mix _Dish of Chilled Lute Berries_ two times
 .'Mix _Break of Harkfruit Juice_ four times
@@ -46969,20 +46984,22 @@ goto 52.93,29.36
 .'Take _Sage's Dream_ |q The Many Paths/Properly Mix a Sage's Dream
 step
 goto 49.34,88.30
-'Open _Outcast Inn_ |q The Many Paths/Return to the Outcast Inn
+'Open _Outcast Inn_ |q The Many Paths/Return to the Outcast Inn |future
+|tip Manually skip to the next step.
 step
 'Go back to the _Fireplace next to the Bar_
-'Place _Sage's Dream_ |q The Many Paths/Give the Sage's Dream to Ithelia
+'Place _Sage's Dream_ |q The Many Paths/Give the Sage's Dream to Ithelia |future
 step
 talk Ithelia |q The Many Paths/Talk to Ithelia
 step
 goto westwealdoverland_base 63.92,54.11
+|tip Outside.
 talk Leramil the Wise
 turnin The Many Paths
 step
 goto u42_Skingrad_base 32.44,42.55
 'Use _Skingrad Vineyards_
-'Travel to _Feldagard Keep_ |q Relics of the Three Princes/Investigate Feldagard Keep
+'Travel to _Feldagard Keep_ |q Relics of the Three Princes |future
 |tip Manually skip to the next step.
 step
 goto westwealdoverland_base 41.46,64.26
@@ -47000,9 +47017,9 @@ goto 40.68,62.67
 step
 goto U42_UI_Maps_FeldagardKeep_01 60.30,69.96
 |tip Look above wall.
-talk Commander Merian |q Hold the Line/Talk to Commander Merian
+talk Commander Merian |q Hold the Line/Talk to Commander Merian |future
 step
-goto 64.98,21
+goto 64.61,70.14
 'Reset _Foothold Trap_ |q Hold the Line/.*Slow the Daedric Assault.* |count 1
 step
 goto 89.32,69.64
@@ -47020,45 +47037,43 @@ step
 goto 46.09,75.67
 'Burn _Rope_ |q Hold the Line/.*Slow the Daedric Assault.* |count 6
 step
+goto 20.11,68.21 |q Hold the Line/Reach the Courtyard
+step
 goto 38.69,32.14
 'Open _Feldagard Keep Courtyard_ |q Hold the Line/Reach the Courtyard
 |tip Manually skip to the next step.
 step
 goto 70.51,28.71
-talk Commander Merian |q Hold the Line/Talk to Commander Merian
+talk Commander Merian |q Hold the Line/Talk to Commander Merian |future
 step
 goto 59.34,36.69
 'Take _Bucket of Oil_ |q Hold the Line/Take the Bucket of Oil
 step
 goto 83.16,33.22
-'Pour _Bucket of Oil_ |q Hold the Line/.*Pour Oil Aruond the Barricade.* |count 1
+'Pour _Bucket of Oil_ |q Hold the Line/.*Pour Oil Around the Barricade.* |count 1
 step
 goto 82.30,27.71
-'Pour _Bucket of Oil_ |q Hold the Line/.*Pour Oil Aruond the Barricade.* |count 2
+'Pour _Bucket of Oil_ |q Hold the Line/.*Pour Oil Around the Barricade.* |count 2
 step
 goto 82.90,20.89
-'Pour _Bucket of Oil_ |q Hold the Line/.*Pour Oil Aruond the Barricade.* |count 3
+'Pour _Bucket of Oil_ |q Hold the Line/.*Pour Oil Around the Barricade.* |count 3
 step
 goto 57.69,20.57
-'Take _Ballista Parts_
-goto 83.16,33.22
-'Pour _Bucket of Oil_ |q Hold the Line/Repair the Ballista Parts
+'Take _Ballista Parts_ |q Hold the Line/Repair the Ballista
 |tip Manually skip to the next step.
 step
-goto 70.10,26.50
-'Repair _Broken Ballista_ |q Hold the Line/Repair the Ballista
+goto 83.16,33.22
+.'Repair _Broken Ballista_ |q Hold the Line/Repair the Ballista
 step
 goto 70.10,26.50
+.'Use _ Repaired Ballista_
 .'Ignite _Wall_
-.'kill First Wave of Daedra
-.'kill Second Wave of Daedra
-.'kill Third Wave of Daedra |q Hold the Line/Operate the Ballista
-step
-goto 71.72,12.39
-kill Remaining Daedra |q Hold the Line/kill Remaining Daedra
+kill First Wave of Daedra
+kill Second Wave of Daedra
+kill Third Wave of Daedra |q Hold the Line/Operate the Ballista
 step
 goto 77.92,05.92
-'Open _Felagard Keep Barracks |q Hold the Line/Enter the Keep's Barracks
+'Open _Felagard Keep Barracks_ |q Hold the Line/Enter the Keep's Barracks
 step
 goto U42_UI_Maps_FeldagardKeep_02 63.58,14.74
 talk Tribune Alea Idolus |q Hold the Line/Talk to Tribune Alea Idolus
@@ -47077,6 +47092,10 @@ goto 74.98,45.99 |q Hold the Line/Search the Keep's Barracks
 step
 goto U42_UI_Maps_FeldagardKeep_03 51.35,12.00 |q Hold the Line/Search the Keep's Barracks
 step
+goto 64.10,09.35 |q Hold the Line/Search the Keep's Barracks
+step
+goto 50.50,10.22 |q Hold the Line/Search the Keep's Barracks
+step
 goto 50.93,41.26
 'Open _Feldgard Barracks Amrory_ |q Hold the Line/Enter the Barracks Armory |future
 step
@@ -47089,7 +47108,7 @@ step
 goto 34.04,90.73 |q Hold the Line/Get in Position at the Gateway
 step
 goto 48.86,68.79
-'Enter _Portal to Mirrormoor_ |q Hold the Line/Enter the Portal
+'Enter _Portal to Mirrormoor_ |q Hold the Line/Enter the Portal |future
 step
 goto U42_feldagard_mirrormoor_base 44.51,48.01
 kill Shardborn |q Hold the Line/Defeat the Shardborn
@@ -47114,16 +47133,21 @@ tip Manally skip to the next step.
 step
 goto u42_Skingrad_base 43.99,68.94 |q Relics of the Three Princes/Return to Beragon's Townhouse
 step
+goto 41.76,72.18 |q Relics of the Three Princes/Return to Beragon's Townhouse |future
+step
 goto 42.55,72.50
-'Open _Beragon's Townhouse_ |q Relics of the Three Princes/Return to Beragon's Townhouse
+'Open _Beragon's Townhouse_ |q Relics of the Three Princes/Return to Beragon's Townhouse |future
+|tip Manually skip to the next step.
 step
 goto 43.67,73.33
-talk Beragon |q Relics of the Three Princes/Talk to Beragon
+talk Beragon |q Relics of the Three Princes/Talk to Beragon |future
 step
 goto 43.72,73.37
 talk Leramil the Wise |q Relics of the Three Princes/Talk to Leramil the Wise
 step
-goto 46.03,67.16 |q Relics of the Three Princes/Go to Niryastare |tip Leave Beragon's Townhouse.
+goto 41.76,72.18 |q Relics of the Three Princes/Go to Niryastare
+step
+goto 46.03,67.16 |q Relics of the Three Princes/Go to Niryastare
 step
 goto 45.74,58.01
 'Use _Skingrad City_
@@ -47216,6 +47240,7 @@ goto 33.58,42.31
 step
 goto 32.47,44.49
 'Use _Abolisher Portal_ |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 3
+|tip Manually skip to the next step.
 step
 goto 18.18,44.53 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 3
 step
@@ -47280,9 +47305,6 @@ step
 goto 42.50,77.01
 'Use _Echonir_ |q Relics of the Three Princes/Use the Echonir
 step
-goto 42.50,77.01
-'Observe _Memory_ |q King Nantharion's Gambit/Observe Memory
-step
 goto 42.29,76.81
 talk Beragon |q Relics of the Three Princes/Talk to Beragon
 step
@@ -47291,6 +47313,8 @@ step
 |tip Manually skip to the next step.
 step
 goto u42_Skingrad_base 43.99,68.94 |q Relics of the Three Princes/Return to Beragon's Townhouse
+step
+goto goto 41.76,72.18 |q Relics of the Three Princes/Return to Beragon's Townhouse
 step
 goto 42.55,72.50
 'Open _Beragon's Townhouse_ |q Relics of the Three Princes/Return to Beragon's Townhouse
@@ -47303,14 +47327,19 @@ step
 goto 43.75,73.82
 'Examine _Skein of Secrets_ |q King Nantharion's Gambit/Use the Skein of Secrets
 step
-goto 45.26,68.76 |q King Nantharion's Gambit/Investigate Terthil Farm |tip Leave Baragon's Townhouse.
+goto 43.75,73.82
+talk Beragon |q King Nantharion's Gambit/Talk to Beragon
+step
+goto 41.76,72.18 |q King Nantharion's Gambit/Investigate Terthil Farm
+step
+goto 45.26,68.76 |q King Nantharion's Gambit/Investigate Terthil Farm
 step
 goto 45.77,58.13
 'Use _Skingrad City_
 'Travel to _Ontus_ |q King Nantharion's Gambit/Investigate Terthil Farm
 |tip Manually skip to the next step.
 step
-goto 64.85,34.92 |q King Nantharion's Gambit/Investigate Terthil Farm
+goto westwealdoverland_base 64.85,34.92 |q King Nantharion's Gambit/Investigate Terthil Farm
 step
 goto 70.15,31.35
 wayshrine North Hook
@@ -47328,7 +47357,7 @@ step
 goto 59.73,33.78
 'Examine _Warning to the Weald_ |q King Nantharion's Gambit/.*Explore Terthil Farm.* |count 1 |future
 step
-goto
+goto 59.18,33.99
 'Examine _Melvia Terthil's Note_ |q King Nantharion's Gambit/.*Explore Terthil Farm.* |count 2
 step
 goto 59.29,33.04
@@ -47370,6 +47399,8 @@ step
 step
 goto u42_Skingrad_base 43.99,68.94 |q King Nantharion's Gambit/Return to Beragon's Townhouse
 step
+goto 41.76,72.18 |q King Nantharion's Gambit/Return to Beragon's Townhouse
+step
 goto 42.55,72.50
 'Open _Beragon's Townhouse_ |q King Nantharion's Gambit/Return to Beragon's Townhouse
 step
@@ -47379,25 +47410,28 @@ step
 goto 43.75,73.82
 'Take _Skein of Secrets_ |q King Nantharion's Gambit/Use the Skein of Secrets
 step
-goto 45.26,68.76 |q King Nantharion's Gambit/Meet Beragon at Fort Dirich |tip Leave Baragon's Townhouse.
+goto 41.76,72.18 |q King Nantharion's Gambit/Meet Beragon at Fort Dirich
+step
+goto 45.26,68.76 |q King Nantharion's Gambit/Meet Beragon at Fort Dirich
 step
 goto 45.77,58.13
 'Use _Skingrad City_
 'Travel to _Skingrad Vineyards_ |q King Nantharion's Gambit/Meet Beragon at Fort Dirich
 |tip Manually skip to the next step.
 step
-goto westwealdoverland_base 63.43,49.36 |q King Nantharion's Gambit/Explore the Ruins
+goto westwealdoverland_base 63.43,49.36 |q King Nantharion's Gambit/Explore the Ruins |future
 step
 goto 62.84,48.98
-'Examine _Wildburn Spriggen Senche_ |q King Nantharion's Gambit/Explore the Ruins
+'Examine _Wildburn Spriggen Senche_ |q King Nantharion's Gambit/Explore the Ruins |future
 step
 goto 62.70,48.82
 'Enter _Fort Dirich Dungeons_ |q King Nantharion's Gambit/Enter Fort Dirich Dungeons
 step
 goto U42_Colovian_Ruins_base 52.63,33.91
-'Burn _Wildburn Seed_ |q King Nantharion's Gambit/.*Destroy Wildburn Seeds.* |count 1
+'Burn _Wildburn Seed_ |q King Nantharion's Gambit/.*Destroy Wildburn Seeds.* |count 1 |future
 step
 goto 49.28,27.67
+|tip Watchthe dialogue.
 'Use _Echonir_ |q King Nantharion's Gambit/Observe Memory of Ithelia
 step
 goto 33.44,20.13
@@ -47421,6 +47455,9 @@ goto u42_Skingrad_base 32.47,42.25
 |tip Manually skip to the next step.
 step
 goto u42_Vashabar_base 49.51,44.62
+'Meet _Beragon_ |q King Nantharion's Gambit/Meet Beragon at Vashabar
+step
+goto 49.51,44.62
 talk Beragon |q King Nantharion's Gambit/Talk to Beragon |future
 step
 goto 53.23,37.89
@@ -47449,13 +47486,11 @@ step
 goto 37.26,42.31 |q King Nantharion's Gambit/Explore Miscarcand
 step
 goto 33.49,62.96
-'Open _Miscarcand Deep Halls_ |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
+'Open _Miscarcand Deep Halls_ |q King Nantharion's Gambit/Explore Miscarcand Deep Halls |future
+|tip Manually skip to the next step.
 step
 goto 32.38,80.67
-'Use _Echonir_ |q King Nantharion's Gambit/Use the Echonir
-step
-goto 32.38,80.64
-'Observe _Memory_ |q King Nantharion's Gambit/Observe Memory
+'Use _Echonir_ |q King Nantharion's Gambit/Use the Echonir |future
 step
 goto 35.64,86.95 |q King Nantharion's Gambit/Escape the Memory
 step
@@ -47465,13 +47500,11 @@ step
 goto 41.95,71.97
 'Use _Portal to Miscarcand Deep Halls_ |q King Nantharion's Gambit/Enter the Portal
 step
-goto 42.68,65.44 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
-step
 goto 61.59,66.54
 'Use _Echonir_ |q King Nantharion's Gambit/Use the Echonir |future
 step
 goto 61.59,66.54
-'Observe _Memory_ |q King Nantharion's Gambit/Observe Memory
+'Observe _Memory_ |q King Nantharion's Gambit/Observe the Memory
 step
 goto 68.19,65.98 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
 step
@@ -47480,6 +47513,7 @@ goto 67.82,49.33
 step
 goto 67.82,49.33
 'Use _Portal to Darkened Home_ |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
+|tip Manually skip to the next step.
 step
 goto u42_miscarcand2_base 74.72,33.53 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
 step
@@ -47492,6 +47526,7 @@ goto 67.79,16.15
 step
 goto 67.79,16.15
 'Use _Portal to the Well of Carcand_ |q King Nantharion's Gambit/Stop King Nantharion
+|tip Manually skip to the next step.
 step
 goto 44.81,15.90 |q King Nantharion's Gambit/Stop King Nantharion
 step
@@ -47499,13 +47534,15 @@ goto 45.00,40.54
 kill King Nantharion |q King Nantharion's Gambit/Stop King Nantharion
 step
 goto 45.00,40.54
-'Observe Ithelia |q King Nantharion's Gambit/Observe Ithelia
+'Observe _Ithelia_ |q King Nantharion's Gambit/Observe Ithelia
 step
 'Open _West Weald_ Map
 'Travel to _Skingrad City_ |q King Nantharion's Gambit/Return to Beragon's Townhouse
 |tip Manually skip to the next step.
 step
 goto u42_Skingrad_base 43.99,68.94 |q King Nantharion's Gambit/Return to Beragon's Townhouse
+step
+goto 41.76,72.18 |q King Nantharion's Gambit/Return to Beragon's Townhouse
 step
 goto 42.55,72.50
 'Open _Beragon's Townhouse_ |q King Nantharion's Gambit/Return to Beragon's Townhouse
@@ -47522,9 +47559,12 @@ goto 43.66,73.31
 'Use _Skein of Secrets_ |q The Untraveled Road/Use the Skein of Secrets
 step
 goto 43.67,73.34
+|tip Watch the dialogue.
 talk Leramil the Wise |q The Untraveled Road/Talk to Leramil the Wise
 step
-goto 45.26,68.76 |q The Untraveled Road/Go to Wendir |tip Leave Baragon's Townhouse.
+goto 41.76,72.18 |q The Untraveled Road/Go to Wendir
+step
+goto 45.26,68.76 |q The Untraveled Road/Go to Wendir
 step
 goto 45.77,58.13
 'Use _Skingrad City_
@@ -47536,20 +47576,21 @@ step
 goto 74.62,31.80 |q The Untraveled Road/Go to Wendir
 step
 goto 74.93,32.08
-'Use _Abolisher_ |q The Untraveled Road/Use Abolisher
+'Use _Abolisher_ |q The Untraveled Road/Use Abolisher |future
 step
 goto 74.93,32.08
-'Use _Portal to Fargrave |q The Untraveled Road/Enter the Portal
+'Use _Portal to Fargrave_ |q The Untraveled Road/Enter the Portal |future
+|tip Manually skip to the next step.
 step
 goto u42_PE5_FargraveRuins_base 15.91,21.30
-talk Leramil the Wise |q The Untraveled Road/Talk to Leramil the Wise
+talk Leramil the Wise |q The Untraveled Road/Talk to Leramil the Wise |future
 step
-goto 46.02,55.16 |q The Untraveled Road/Follow the Crystal Path
+goto 46.02,55.16 |q The Untraveled Road/Follow the Crystal Path |future
 step
-goto 78.09,48.91 |q The Untraveled Road/Follow the Crystal Path
+goto 78.09,48.91 |q The Untraveled Road/Follow the Crystal Path |future
 step
 goto 76.77,86.23
-'Open _Fargrave Inner Quarter_ |q The Untraveled Road/Enter the Inner Quarter
+'Open _Fargrave Inner Quarter_ |q The Untraveled Road/Enter the Inner Quarter |future
 step
 goto U42_PE5_FargraveIQ01_base 38.53,48.82 |q The Untraveled Road/Follow the Crystal Path
 step
@@ -47572,9 +47613,10 @@ goto 57.18,80.67
 .'Activate _Second Mirror_ |q The Untraveled Road/Find a Way to Open the Portal
 step
 goto 54.93,84.69
-'Enter _Portal to Fargrave Loom Quarter_ |q The Untraveled Road/Enter the Loop of the Untraveled Road
+'Enter _Portal to Fargrave Loom Quarter_ |q The Untraveled Road/Enter the Loop of the Untraveled Road |future
+|tip Manually skip to the next step.
 step
-goto 39.05,27.26 |q The Untraveled Road/Explore the Loom
+goto u42_PE5_LoomRoad_base 39.05,27.26 |q The Untraveled Road/Explore the Loom
 step
 goto 41.67,38.53
 'Use _Echonir_ |q The Untraveled Road/Use the Echonir |future
@@ -47592,13 +47634,14 @@ goto 32.59,47.43
 talk Leramil the Wise |q The Untraveled Road/Talk to Leramil the Wise
 step
 goto 32.07,46.78
+|tip Check Map on Next run.
 'Use _Portal to The Loom of Untraveled Road_ |q The Untraveled Road/Enter the Portal
 step
 goto u42_pe5_ithpri_copy_base 58.90,45.22
 'Use _Echonir_ |q The Untraveled Road/Use the Echonir |future
 step
 goto 45.22,39.78
-'Use _Lamp of Clarity_ |q The Untraveled Road/Use the Lamp of Clarity
+'Use _Lamp of Clarity_ |q The Untraveled Road/Use the Lamp of Clarity |future
 step
 goto 27.11,53.19 |q The Untraveled Road/Escape the Prison
 step
@@ -47616,7 +47659,7 @@ goto 16.90,44.24
 'Use _Lamp of Clarity_ |q The Untraveled Road/Rescue Tribune Alea |future
 step
 goto 35.29,24.08
-'Use _Abolisher_ |q The Untraveled Road/Use Abolisher
+'Use _Abolisher_ |q The Untraveled Road/Use Abolisher |future
 step
 goto 35.36,23.99
 'Use _Portal to the Loop of the Untraveled Road_ |q The Untraveled Road/Enter the Portal
@@ -47628,13 +47671,13 @@ step
 goto 54.08,18.98 |q The Untraveled Road/Reach the Loom's Core
 step
 goto 52.36,34.71
-kill Shardmarshal Vargas |q The Untraveled Road/Defeat Shardmarshal Vargas
+kill Shardmarshal Vargas |q The Untraveled Road/Defeat Shardmarshal Vargas |future
 step
 goto 52.15,44.61
 'Use _Abolisher_ |q The Untraveled Road/Destroy the Loom of the Untraveled Road
 step
 goto 52.42,39.29
-'Observe _Ithelia |q The Untraveled Road/Obseve Ithelia
+'Observe _Ithelia_ |q The Untraveled Road/Obseve Ithelia
 step
 goto 50.40,38.91
 'Use _Portal to Skingrad_ |q The Untraveled Road/Exit the Loom
@@ -47672,6 +47715,9 @@ goto 75.75,15.99
 step
 goto U42_EPL_CHLVault_base 70.27,33.32 |q Ithelia's Fury/Locate the Tear
 step
+goto 56.46,72.80
+'Examine _Reality Tear_ |q Ithelia's Fury/Examine the Tear
+step
 goto 50.24,75.40
 talk Scruut |q Ithelia's Fury/Talk to Scruut
 step
@@ -47686,7 +47732,8 @@ step
 goto 71.03,70.02 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
 step
 goto 71.75,73.34
-talk Tribune Alea Idolus |q Ithelia's Fury/Talk to Tribune Alea Idolus
+talk Tribune Alea Idolus |q Ithelia's Fury/Talk to Tribune Alea Idolus |future
+|tip Manually skip to the next step.
 step
 goto 71.79,73.41
 'Open _Haladin Lumber Camp_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
@@ -47695,6 +47742,8 @@ step
 goto u42_base_haldain 20.83,31.56 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
 step
 goto 23.25,70.22 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
+step
+goto 26.78,74.88 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
 step
 goto 62.71,76.77 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
 step
@@ -47710,10 +47759,12 @@ step
 goto u38_apocrypha_base 38.39,20.71 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
 step
 goto 39.05,19.09
-'Open _Fathoms Drift_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
+'Enter _Fathoms Drift_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
+|tip Manually skip to the next step.
 step
 goto U38_CorpuscleBight_02_Base 28.51,87.28
-talk Curate Gadayn |q Ithelia's Fury/Talk to Curate Gadayn
+talk Curate Gadayn |q Ithelia's Fury/Talk to Curate Gadayn |future
+|tip Manually skip to the next step.
 step
 goto U38_CorpuscleBight_01_Base 34.27,75.12 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
 step
@@ -47722,22 +47773,21 @@ step
 goto 26.42,42.29 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
 step
 goto 29.85,37.56
-'Use _Mephala's Silk |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
+'Use _Mephala's Silk_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
 step
 'Open _Telvanni Peninsula_ Map
 'Travel to _Necrom Outskirts_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 3
 |tip Manually skip to the next step.
 step
-goto u38_telvannipeninsula_base 76.41,44.08 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 3
-step
-goto 77.30,50.46 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 3
+goto u38_telvannipeninsula_base 77.30,50.46 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 3
 step
 goto 78.63,49.94
 'Open _Anchre Egg Mine_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 3
 |tip Manually skip to the next step.
 step
 goto u38_eggmine_base 50.65,83.81
-talk Beragon |q Ithelia's Fury/Talk to Beragon
+talk Beragon |q Ithelia's Fury/Talk to Beragon |future
+|tip Manually skip to the next step.
 step
 goto 72.04,69.29 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 3
 step
@@ -47745,7 +47795,7 @@ goto 75.57,28.09
 'Open _Boethiah's Forge_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 3
 |tip Manually skip to the next step.
 step
-goto 62.02,33.10
+goto u42_eggmineforge_base 62.02,33.10
 'Use _Boethiah's Forge_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 3
 step
 goto 61.72,38.05
@@ -47757,6 +47807,8 @@ step
 step
 goto u42_Skingrad_base 43.99,68.94 |q Ithelia's Fury/Go to Beragon's Townhouse
 step
+goto 41.76,72.18 |q Ithelia's Fury/Go to Beragon's Townhouse
+step
 goto 42.55,72.50
 'Open _Beragon's Townhouse_ |q Ithelia's Fury/Go to Beragon's Townhouse
 step
@@ -47764,7 +47816,8 @@ goto u42_Skingrad_base 43.58,73.56
 talk Leramil the Wise |q Ithelia's Fury/Talk to Leramil the Wise
 step
 goto 43.62,73.46
-'Use _Portal to Fargrave_ |q Ithelia's Fury/Go to Fargrave
+'Use _Portal to Fargrave_ |q Ithelia's Fury/Go to Fargrave |future
+|tip Manually skip to the next step.
 step
 goto U42_PE5C1_FargraveIQ02_base 34.86,40.42 |q Ithelia's Fury/Return to the Loom of the Untraveled Road
 step
@@ -47774,7 +47827,7 @@ goto 53.03,69.77
 'Open _Portal to Fargrave Inner Quarter_ |q Ithelia's Fury/Return to the Loom of the Untraveled Road
 |tip Manually skip to the next step.
 step
-goto U42_PE5_FargraveIQ01_base |q Ithelia's Fury/Return to the Loom of the Untraveled Road
+goto U42_PE5_FargraveIQ01_base 54.84,85.29 |q Ithelia's Fury/Return to the Loom of the Untraveled Road
 step
 goto 54.95,85.00
 'Use _Portal to the Loom of the Untraveled Road_ |q Ithelia's Fury/Return to the Loom of the Untraveled Road
@@ -47787,7 +47840,7 @@ step
 goto 50.40,17.70 |q Ithelia's Fury/Return to the Loom of the Untraveled Road
 step
 goto 51.20,32.22
-'Use _Echonir_ |q Ithelia's Fury/Use the Echonir
+'Use _Echonir_ |q Ithelia's Fury/Use the Echonir |future
 step
 goto 51.20,32.22
 'Witness _Memory_ |q Ithelia's Fury/Witness the Memory
@@ -47801,14 +47854,20 @@ step
 goto u42_Skingrad_base 43.78,73.38
 talk Scruut |q Ithelia's Fury/Talk to Scruut
 step
-'Open _West Weald_
+goto 41.76,72.18 |q Ithelia's Fury/Go to Ceyond
+step
+goto 45.26,68.76 |q Ithelia's Fury/Go to Ceyond
+step
+goto 45.77,58.13
+'Use _Skingrad City_
 'Travel to _Feldagard Keep_ |q Ithelia's Fury/Go to Ceyond
 |tip Manually skip to the next step.
 step
 goto westwealdoverland_base 44.09,62.57
-'Open _Ceyond_ |q Ithelia's Fury/Go to Ceyond
+'Open _Ceyond_ |q Ithelia's Fury/Go to Ceyond |future
+|tip Manually skip to the next step.
 step
-goto u42_C1_Ceyond_base 23.26,63.88 |q Ithelia's Fury/Find the Primordial Shattered Titan
+goto u42_C1_Ceyond_base 32.49,57.39 |q Ithelia's Fury/Find the Primordial Shattered Titan
 step
 goto 23.55,19.15 |q Ithelia's Fury/Find the Primordial Shattered Titan
 step
@@ -47825,10 +47884,10 @@ goto 83.65,17.41
 |tip Manually skip to the next step.
 step
 goto 83.11,33.03
-kill Primordial Shattered Titan |q Ithelia's Fury/Defeat the Primordial Shattered Titan
+kill Primordial Shattered Titan |q Ithelia's Fury/Defeat the Primordial Shattered Titan |future
 step
 goto 83.45,33.93
-'Take _Primordial Shattered Titan Fragment |q Ithelia's Fury/Gather the Shattered Fragment
+'Take _Primordial Shattered Titan Fragment_ |q Ithelia's Fury/Gather the Shattered Fragment
 step
 'Open _West Weald_ Map
 'Travel to _Skingrad City_ |q Ithelia's Fury/Return to Beragon's Townhouse
@@ -47836,10 +47895,13 @@ step
 step
 goto u42_Skingrad_base 43.99,68.94 |q Ithelia's Fury/Return to Beragon's Townhouse
 step
+goto 41.76,72.18 |q Ithelia's Fury/Return to Beragon's Townhouse
+step
 goto 42.55,72.50
 'Open _Beragon's Townhouse_ |q Ithelia's Fury/Return to Beragon's Townhouse
 step
 goto 43.69,73.75
+|tip Go upstairs.
 talk to Leramil the Wise |q Ithelia's Fury/Talk to Leramil the Wise
 step
 goto 43.71,73.81
@@ -47849,13 +47911,9 @@ goto 43.71,73.73
 'Place _Shattered Titan Fragment_ |q Ithelia's Fury/Place the Shattered Titan Fragment
 step
 goto 43.71,73.73
-'Place _Lamp of Clarity |q Ithelia's Fury/.*Place the Daedric Relics.* |count 1
-step
-goto 43.71,73.73
-'Place _Skein of Secrets_ |q Ithelia's Fury/.*Place the Daedric Relics.* |count 2
-step
-goto 43.71,73.73
-'Place _Abolisher_ |q Ithelia's Fury/.*Place the Daedric Relics.* |count 3
+'Place _Lamp of Clarity_
+'Place _Skein of Secrets_
+'Place _Abolisher_ |q Ithelia's Fury/.*Place the Daedric Relics.*
 step
 goto 43.75,73.75
 'Align _Threads of Fate_ |q Ithelia's Fury/Assist Leramil with the Ritual
@@ -47866,21 +47924,17 @@ turnin Ithelia's Fury
 accept Fate of the Forgotten Prince
 step
 goto 43.69,73.77
-'Take _Skein of Secrets_ |q Fate of the Forgotten Prince/.*Take the Daedric Relics.* |count 1
-step
-goto 43.73,73.78
-'Take _Lamp of Clarity_ |q Fate of the Forgotten Prince/.*Take the Daedric Relics.* |count 2
-step
-goto 43.75,73.74
-'Take _Abolisher_ |q Fate of the Forgotten Prince/.*Take the Daedric Relics.* |count 3
-step
-goto 43.74,73.77
-'Take _Mirror of Truth |q Fate of the Forgotten Prince/Take the Mirror of Truth
+.'Take _Skein of Secrets_
+.'Take _Lamp of Clarity_
+.'Take _Abolisher_ |q Fate of the Forgotten Prince/.*Take the Daedric Relics.*
+.'Take _Mirror of Truth_ |q Fate of the Forgotten Prince/Take the Mirror of Truth
 step
 goto 43.64,73.78
-'Use _Portal to the Apocrypha_ |q Fate of the Forgotten Prince/Go to Apocrypha
+'Use _Portal to the Apocrypha_ |q Fate of the Forgotten Prince/Go to Apocrypha |future
+|tip Manually skip to the next step.
 step
-goto u38_apocrypha_base 46.28,46.30 |q Fate of the Forgotten Prince/Use the Skein of Secrets
+goto u38_apocrypha_base 46.28,46.30
+'Use _Skein of Secrets_ |q Fate of the Forgotten Prince/Use the Skein of Secrets |future
 step
 goto 47.46,47.54
 'Open _Central Orphic Tunnels_ |q Fate of the Forgotten Prince/Follow the Trail
@@ -47897,46 +47951,55 @@ goto u38_Tunnel2b_base 78.03,36.12
 step
 goto U42_UI_Maps_PEC2_HMSanctum_01 36.70,45.88 |q Fate of the Forgotten Prince/Explore the Whispered Path
 step
-goto 79.21,47.57 |q Fate of the Forgotten Prince/Enter the Mythos
+goto 79.21,47.57
+'Use _Portal to the Mythos_ |q Fate of the Forgotten Prince/Enter the Mythos |future
 step
-goto 19.01,56.13 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum
+goto U42_UI_Maps_PEC2_HMSanctum_02 19.01,56.13 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum |future
 step
 goto 25.40,55.97
-'Use _Lamp of Clarity_ |q Fate of the Forgotten Prince/Use the Lamp of Clarity
+'Use _Lamp of Clarity_ |q Fate of the Forgotten Prince/Use the Lamp of Clarity |future
 step
 goto 42.26,56.36 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum
 step
 goto 42.54,39.95
-'Use _Lamp of Clarity |q Fate of the Forgotten Prince/Use the Lamp of Clarity
+'Use _Lamp of Clarity_ |q Fate of the Forgotten Prince |future
+|tip Manually skip to the next step.
 step
 goto 43.37,24.88 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum
 step
-goto 56.54,19.25
-'Use _Lamp of Clarity_ |q Fate of the Forgotten Prince/Use the Lamp Clarity
+goto 56.79,25.12 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum
 step
-goto 57.02,11.08 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum
+goto 56.54,19.25
+'Use _Lamp of Clarity_ |q Fate of the Forgotten Prince |future
+|tip Manually skip to the next step.
+step
+goto 57.02,11.08 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum |future
 step
 goto 66.96,12.27 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum
 step
 goto 66.91,17.74
-'Use _Lamp of Clarity_ |q Fate of the Forgotten Prince/Use the Lamp of Clarity
+'Use _Lamp of Clarity_ |q Fate of the Forgotten Prince |future
+|tip Manually skip to the next step.
 step
 goto 62.61,38.21
-'Use _Abolisher_ |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum
+'Use _Abolisher_ |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum |future
+|tip Manually skip to the next step.
 step
 goto 62.74,45.75 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum
+step
+goto 56.71,48.99 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum
 step
 goto 66.59,55.88 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum
 step
 goto 82.04,56.16
-'Use _Echonir_ |q Fate of the Forgotten Prince/Use the Echonir
+'Use _Echonir_ |q Fate of the Forgotten Prince/Use the Echonir |future
 step
 goto 82.04,56.16
 'Use _Skeins of Secrets_ |q Fate of the Forgotten Prince/Use the Skein of Secrets
 step
 goto 67.94,56.13 |q Fate of the Forgotten Prince/Destroy the First Mirrormoor Ward
 step
-goto U42_UI_Maps_PEC2_HMSanctum_02b 57.09,76.34 |q Fate of the Forgotten Prince/Destroy the First Mirrormoor Ward
+goto U42_UI_Maps_PEC2_HMSanctum_02b 67.71,76.77 |q Fate of the Forgotten Prince/Destroy the First Mirrormoor Ward
 step
 goto 76.41,76.94 |q Fate of the Forgotten Prince/Destroy the First Mirrormoor Ward
 step
@@ -47944,7 +48007,9 @@ goto 78.40,87.58 |q Fate of the Forgotten Prince/Destroy the First Mirrormoor Wa
 step
 goto 87.66,86.07 |q Fate of the Forgotten Prince/Destroy the First Mirrormoor Ward
 step
-goto 86.77,62.88 |q Fate of the Forgotten Prince/Destroy the First Mirrormoor Ward
+goto 86.71,63.00 |q Fate of the Forgotten Prince/Destroy the First Mirrormoor Ward
+step
+goto 80.59,65.95 |q Fate of the Forgotten Prince/Destroy the First Mirrormoor Ward
 step
 goto 80.44,59.75
 'Destroy _Mirrormoor Ward_ |q Fate of the Forgotten Prince/Destroy the First Mirrormoor Ward
@@ -47953,12 +48018,14 @@ goto 67.21,61.87 |q Fate of the Forgotten Prince/Destroy the Second Mirrormoor W
 step
 goto 67.48,49.25 |q Fate of the Forgotten Prince/Destroy the Second Mirrormoor Ward
 step
+goto 81.10,46.52 |q Fate of the Forgotten Prince/Destroy the Second Mirrormoor Ward
+step
 goto 80.53,52.33
 'Destroy _Mirrormoor Ward_ |q Fate of the Forgotten Prince/Destroy the Second Mirrormoor Ward
 step
 goto 87.39,49.31 |q Fate of the Forgotten Prince/Enter Hermaeus Mora's Private Sanctum
 step
-goto 87.57,42.08 |q Fate of the Forgotten Prince/Enter Hermaeus Mora's Private Sanctum
+goto 86.43,42.24 |q Fate of the Forgotten Prince/Enter Hermaeus Mora's Private Sanctum
 step
 goto 79.61,41.37 |q Fate of the Forgotten Prince/Enter Hermaeus Mora's Private Sanctum
 step
@@ -47966,16 +48033,15 @@ goto 79.86,35.56 |q Fate of the Forgotten Prince/Enter Hermaeus Mora's Private S
 step
 goto 70.28,35.42 |q Fate of the Forgotten Prince/Enter Hermaeus Mora's Private Sanctum
 step
-goto 56.93,56.25 |q Fate of the Forgotten Prince/Enter Hermaeus Mora's Private Sanctum
+goto 67.00,52.63 |q Fate of the Forgotten Prince/Enter Hermaeus Mora's Private Sanctum
 step
 goto 84.65,56.02
 'Open _Hermaeus Mora's Private Sanctum_ |q Fate of the Forgotten Prince/Enter Hermaeus Mora's Private Sanctum
 step
-goto 50.17,50.36
-kill Ithelia |q Fate of the Forgotten Prince/Defeat Ilthelia
-step
-goto 50.17,50.36
-talk Ithelia |q Fate of the Forgotten Prince/Talk to Ithelia
+goto U42_UI_Maps_PEC2_HMSanctum_03 47.73,50.42
+|tip Watch the dialogue.
+kill Ithelia
+'Use _Mirror of Truth_ |q Fate of the Forgotten Prince/Defeat Ilthelia |future
 step
 goto 50.17,50.36
 'Observe _Ithelia_ |q Fate of the Forgotten Prince/Observe Ithelia
@@ -47988,9 +48054,9 @@ goto 50.17,50.36
 'Observe _Ithelia_ |q Fate of the Forgotten Prince/Observe Ithelia
 step
 goto 56.28,50.55
-'Use _Portal to Ithelia's Prison_ |q Fate of the Forgotten Prince/Enter Ilthelia's Prison
+'Use _Portal to Ithelia's Prison_ |q Fate of the Forgotten Prince/Enter Ithelia's Prison
 step
-goto 56.59,43.03
+goto u42_pc2_ithpri_copy_base 56.59,43.03
 talk Ithelia |q Fate of the Forgotten Prince/Talk to Ithelia
 step
 goto 58.96,50.93
@@ -48003,11 +48069,13 @@ goto 53.98,49.63
 'Use _Abolisher on Portal_ |q Fate of the Forgotten Prince/Use Abolisher to Seal the Portal
 step
 goto 48.32,46.33
-'Use _Portal to Beragon's Townhouse |q Fate of the Forgotten Prince/Return to Beragon's Townhouse
+'Use _Portal to Beragon's Townhouse_ |q Fate of the Forgotten Prince/Return to Beragon's Townhouse |future
+|tip Manually skip to the next step.
 step
 goto u42_Skingrad_base 43.74,73.81
 talk Leramil the Wise
 turnin Fate of the Forgotten Prince
+step
 goto 43.79,73.79
 talk Scruut
 accept In Memory Of
@@ -48015,7 +48083,9 @@ step
 goto 43.78,73.81
 talk Leramil the Wise |q In Memory Of/Talk to Leramil the Wise
 step
-goto 45.26,68.76 |q The Untraveled Road/Go to Wendir |tip Leave Baragon's Townhouse.
+goto 41.76,72.18 |q In Memory Of/.*Repair the Reality Tears.* |count 1 |tip Go downstairs.
+step
+goto 45.26,68.76 |q In Memory Of/.*Repair the Reality Tears.* |count 1
 step
 goto 45.77,58.13
 'Use _Skingrad City_
@@ -48024,7 +48094,9 @@ goto 45.77,58.13
 step
 goto westwealdoverland_base 73.87,17.32 |q In Memory Of/.*Repair the Reality Tears.* |count 1
 step
-goto 75.76,15.99 |q In Memory Of/.*Repair the Reality Tears.* |count 1
+goto 75.76,15.99
+'Enter _Faro's Cavern_ |q In Memory Of/.*Repair the Reality Tears.* |count 1
+|tip Manually skip to the next step.
 step
 goto U42_EPL_CHLVault_base 69.33,33.77 |q In Memory Of/.*Repair the Reality Tears.* |count 1
 step
@@ -48034,7 +48106,7 @@ goto 51.97,74.69
 step
 goto 67.84,27.88 |q In Memory Of/.*Repair the Reality Tears.* |count 2
 step
-goto 4.64,26.30
+goto westwealdoverland_base 4.64,26.30
 'Enter _West Weald_ |q In Memory Of/.*Repair the Reality Tears.* |count 2
 |tip Manually skip to the next step.
 step
@@ -48069,9 +48141,7 @@ step
 goto 45.05,27.11
 'Enter _Watchling Grotto_ |q In Memory Of/.*Repair the Reality Tears.* |count 3
 step
-goto u42_epl_apc_vlt_base 87.95,44.48 |q In Memory Of/.*Repair the Reality Tears.* |count 3
-step
-goto 27.03,56.91 |q In Memory Of/.*Repair the Reality Tears.* |count 3
+goto u42_epl_apc_vlt_base 27.03,56.91 |q In Memory Of/.*Repair the Reality Tears.* |count 3
 step
 goto 19.48,34.71
 .'Place _Skein of Secrets_
@@ -48082,6 +48152,8 @@ step
 |tip Manually skip to the next step.
 step
 goto u42_Skingrad_base 43.99,68.94 |q In Memory Of/Return to Beragon's Townhouse
+step
+goto 41.76,72.18 |q In Memory Of/Return to Beragon's Townhouse
 step
 goto 42.55,72.50
 'Open _Beragon's Townhouse_ |q In Memory Of/Return to Beragon's Townhouse
@@ -48098,7 +48170,8 @@ goto 42.14,73.59
 talk Scuut |q In Memory Of/Talk to Scruut
 step
 goto 41.92,73.16
-'Enter _Portal to Apocrypha_ |q In Memory Of/Enter the Portal
+'Enter _Portal to Apocrypha_ |q In Memory Of/Enter the Portal |future
+|tip Manually skip to the next step.
 step
 goto UI_Maps_U42_Capper3_Sanctum 46.64,61.57
 'Listen _Exchange_ |q In Memory Of/Listen to the Exchange
@@ -48108,11 +48181,12 @@ talk Hermaeus Mora |q In Memory Of/Talk to Hermaeus Mora
 step
 goto 46.43,49.15
 'Use _West Weald_ |q In Memory Of/Return to Beragon's Townhouse
+|tip Manually skip to the next step.
 step
-goto u42_Skingrad_base 41.97,74.03
+goto u42_Skingrad_base 41.96,74.57
 talk Curate Gadayn |q In Memory Of/Talk to Curate Gadayn
 step
-goto 41.97,74.03
+goto 41.96,74.57
 talk Leramil the Wise
 turnin In Memory Of
 step
