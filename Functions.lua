@@ -686,7 +686,6 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 				GetCurrentMapIndex() == Enums.StonefallsMap or
 				GetCurrentMapIndex() == Enums.StrosMKaiMap or
 				GetCurrentMapIndex() == Enums.TheReachMap or
-				GetCurrentMapIndex() == Enums.WestWealdMap or
 				GetCurrentMapIndex() == Enums.WrothgarMap then return 4
 				
 		elseif  GetCurrentMapIndex() == Enums.ApocryphaMap or
@@ -698,7 +697,8 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 			    GetCurrentMapIndex() == Enums.ReapersMarchMap or
 				GetCurrentMapIndex() == Enums.RivenspireMap or
 				GetCurrentMapIndex() == Enums.ShadowfenMap or
-				GetCurrentMapIndex() == Enums.VvardenfellMap then return 6
+				GetCurrentMapIndex() == Enums.VvardenfellMap or
+				GetCurrentMapIndex() == Enums.WestWealdMap then return 6
 				
 		elseif 	GetCurrentMapIndex() == Enums.AlikrMap or
 				GetCurrentMapIndex() == Enums.ArtaeumMap or
@@ -750,7 +750,6 @@ function Utils.DistanceOffsetForIsComplete()
 				GetCurrentMapIndex() == Enums.StonefallsMap or
 				GetCurrentMapIndex() == Enums.StrosMKaiMap or
 				GetCurrentMapIndex() == Enums.TheReachMap or
-				GetCurrentMapIndex() == Enums.WestWealdMap or
 				GetCurrentMapIndex() == Enums.WrothgarMap then return 4
 				
 		elseif  GetCurrentMapIndex() == Enums.ApocryphaMap or
@@ -762,7 +761,8 @@ function Utils.DistanceOffsetForIsComplete()
 			    GetCurrentMapIndex() == Enums.ReapersMarchMap or
 				GetCurrentMapIndex() == Enums.RivenspireMap or
 				GetCurrentMapIndex() == Enums.ShadowfenMap or
-				GetCurrentMapIndex() == Enums.VvardenfellMap then return 6
+				GetCurrentMapIndex() == Enums.VvardenfellMap or
+				GetCurrentMapIndex() == Enums.WestWealdMap then return 6
 				
 		elseif 	GetCurrentMapIndex() == Enums.AlikrMap or
 				GetCurrentMapIndex() == Enums.ArtaeumMap or

@@ -48821,9 +48821,4311 @@ turnin Chronicle of Fate
 CGV:RegisterGuide("LEVELING\\West Weald",[[
 loadingimage loadscreen_west_weald_01.dds
 description The West Weald is an open countryside of the Colovia region in southern Cyrodiil, well known for its vineyards and tomato farms.
+-- START: ALDMERI DOMINION FACTION PROLOGUE GUIDE
 step
--- START: PROLOGUE GUIDE
+'Open _Grahtwood_ Map
+'Travel to _Elden Root_ in Grahtwood |q Prisoner of Fate |future
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto eldenrootgroundfloor_base 68.69,45.10
+talk Galsa-Baru
+accept Prisoner of Fate
+|only Aldmeri Dominion
+step
+goto 73.54,48.34 |q Prisoner of Fate/Talk to Leramil the Wise
+step
+goto 74.20,44.88
+'Open _Elden Root Outlaws Refuge_ |q Prisoner of Fate/Talk to Leramil the Wise
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto grahtwoodoutlawrefuge_base 52.64,42.99 |q Prisoner of Fate/Talk to Leramil the Wise
+|only Aldmeri Dominion
+step
+goto 43.64,27.27
+talk Leramil the Wise |q Prisoner of Fate/Talk to Leramil the Wise
+|only Aldmeri Dominion
+step
+goto 38.68,23.55
+'Use _Portal to Stonefalls_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+-- END: ALDMERI DOMINION FACTION PROLOGUE GUIDE
 
--- END: PROLOGUE GUIDE
-'Coming Soon
+-- START: DAGGERFALL COVENANT FACTION
+'Open _Stormhaven_ Map
+'Travel to _Wayrest_ in Stormhaven |q Prisoner of Fate |future
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto wayrest_base 27.95,50.73
+talk Galsa-Baru
+accept Prisoner of Fate
+|only Daggerfall Covenant
+step
+goto 26.86,48.06
+'Open _Wayrest Outlaws Refuge_ |q Prisoner of Fate/Talk to Leramil the Wise
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto 25.19,82.52
+talk Leramil the Wise |q Prisoner of Fate/Talk to Leramil the Wise
+|only Daggerfall Covenant
+step
+goto 27.16.79.91
+'Use _Portal to Stonefalls_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+-- END: DAGGERFALL COVENANT FACTION
+
+-- START: EBONHEART PACT FACTION
+'Open _Deshaan_ Map
+'Travel to _Mournhold_ in Deshaan |q Prisoner of Fate |future
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto mournhold_base 60.55,59.11
+talk Galsa-Baru
+accept Prisoner of Fate
+|only Ebonheart Pact
+step
+goto 66.67,42.32 |q Prisoner of Fate/Talk to Leramil the Wise
+|only Ebonheart Pact
+step
+goto 64.28,41.69
+'Open _Mournhold Outlaws Refuge_ |q Prisoner of Fate/Talk to Leramil the Wise
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto MournholdOutlawsRefuge_base 45.92,23.25
+talk Leramil the Wise |q Prisoner of Fate/Talk to Leramil the Wise
+|only Ebonheart Pact
+step
+goto 50.33,23.18
+'Use _Portal to Stonefalls_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+-- END: EBONHEART PACT FACTION
+
+-- BEGIN: MERGED PROLOGUE FOR ALL FACTIONS
+goto stonefalls_base 58.68,59.03 |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
+step
+goto 58.54,59.41
+'Open _Mephala's Nest_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
+|tip Manually skip to the next step.
+step
+goto mephalasnest_base 75.09,63.69 |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
+step
+goto 76.69,46.61 |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
+step
+goto 62.22,46.39 |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
+step
+goto 56.66,29.57
+'Open _Shrine of Maphala_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
+|tip Manually skip to the next step.
+step
+goto u41_shrineofmephala_base 71.18,54.32 |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
+step
+goto 71.18,31.51
+'Examine _A Dance Along the Webs_ |lorebook A Dance Along the Webs/3/3/108
+step
+goto 71.59,42.82
+'Use _Echonir_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
+|tip Manually skip to the next step.
+step
+goto 71.18,48.13
+'Activate _Ritual Circle_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
+|tip Manually skip to the next step.
+step
+goto 71.18,48.13
+'Use _Portal to Sanctuary of Whispers_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
+|tip Manually skip to the next step.
+step
+goto u41_shrineofmephala_base 19.43,45.57
+talk Torvesard |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
+|tip Manually skip to the next step.
+step
+goto 26.60,43.82
+|tip Choose Reaper's March Option in dialogue.
+talk Leramil the Wise |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
+step
+goto 31.80,48.54
+'Use _Portal to Reaper's March_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+|tip Manually skip to the next step.
+step
+goto dune_base 58.69,71.88
+talk Old Ri'jhaad |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+|tip Manually skip to the next step.
+step
+goto 60.13,60.80
+'Open _Shrine of Jone_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+|tip Manually skip to the next step.
+step
+goto 60.10,59.72
+'Use _Shrine of Jone_ |q Prisoner of Fate/Obtain the Blessing of Jone
+step
+goto 45.04,73.83
+'Open _Shrine of Jode_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+|tip Manually skip to the next step.
+step
+goto 43.93,73.71
+'Use _Shrine of Jode_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+|tip Manually skip to the next step.
+step
+goto 57.37,70.91
+talk Old Ri'jhaad |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+|tip Manually skip to the next step.
+step
+goto 59.07,72.25
+'Use _Echonir_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+|tip Manually skip to the next step.
+step
+goto 58.62,71.65
+talk Old Ri'jhaad |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+|tip Manually skip to the next step.
+step
+goto 48.73,61.81 |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+step
+goto 52.48,56.10 |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+step
+goto 52.32,44.43 |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+step
+goto 33.15,25.82
+'Use _Dune_
+'Travel to _Cormount_ in Grahtwood |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+tip Manually skip to the next step.
+step
+goto grahtwood_base 53.76,28.05 |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+step
+goto 50.81,26.76 |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+step
+goto 47.70,22.62
+'Open _Reliquary Ruins_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+|tip Manually skip to the next step.
+step
+goto reliquaryofstars_base 52.73,86.89
+talk Beragon |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+|tip Manually skip to the next step.
+step
+goto 48.17,86.01 |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+step
+goto 48.14,55.74
+'Open _Flesh Gardens_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+|tip Manually skip to the next step.
+step
+goto 48.08,17.82
+'Open _Moonshadow Shrine_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+|tip Manually skip to the next step.
+step
+goto u41_shrineofazura_base 63.46,53.84 |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+step
+goto 42.56,21.77
+'Open _Moonshadow Sanctum_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+|tip Manually skip to the next step.
+step
+goto 28.36,21.92
+kill Endegor |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+|tip Manually skip to the next step.
+step
+goto 29.91,22.68
+'Examine _Endegor's Order_ |lorebook Endegor's Orders/3/3/106
+step
+goto 29.42,22.00
+talk Beragon |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+|tip Manually skip to the next step.
+step
+goto 28.40,22.00
+'Use _Echonir_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+|tip Manually skip to the next step.
+step
+goto 29.95,20.56
+talk Beragon |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+|tip Manually skip to the next step.
+step
+goto 30.22,22.04
+talk Leramil the Wise |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+step
+goto 29.57,13.25
+'Use _Portal to Reaper's March_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 3
+|tip Manually skip to the next step.
+step
+goto dune_base 52.58,44.87 |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 3
+step
+goto 33.15,25.82
+'Use _Dune_
+'Travel to _Moonmount_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 3
+tip Manually skip to the next step.
+step
+goto reapersmarch_base 30.01,69.75 |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 3
+step
+goto 23.24,69.66
+'Open _Do'Krin Temple_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 3
+|tip Manually skip to the next step.
+step
+goto dokrintemple_base 22.82,50.62 |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 3
+step
+goto 25.18,24.31 |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 3
+step
+goto 58.90,24.05 |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 3
+step
+goto 58.73,16.12
+'Use _Portal to Shrine of Boethra_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 3
+|tip Manually skip to the next step.
+step
+goto u41boethrashrine_base 83.85,47.14 |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 3
+step
+goto 30.83,46.79
+|tip Watch the dialogue.
+talk Leramil the Wise |q Prisoner of Fate/Talk to Leramil the Wise |future
+step
+goto 32.34,32.02
+'Use _Portal to Vvardenfell_ |q Prisoner of Fate/Meet Leramil in Vvardenfell |future
+|tip Manually skip to the next step.
+step
+goto vvardenfell_base 87.28,78.12
+talk Curate Gadayn |q Prisoner of Fate/Talk to Curate Gadayn |future
+step
+goto 88.34,75.63 |q Prisoner of Fate/Go to Holamayan Monastery
+step
+goto 87.96,70.27 |q Prisoner of Fate/Go to Holamayan Monastery
+step
+goto 86.47,69.94
+talk Abbot Andor Indoril |q Prisoner of Fate/Talk to Abbot Andor Indoril |future
+step
+goto 86.45,69.87
+'Use _Portal to Holamayan Monastery_ |q Prisoner of Fate/Go to the Holamayan Library
+|tip Manually skip to the next step.
+step
+goto u41_holamayan_base 50.79,66.63 |q Prisoner of Fate/Go to the Holamayan Library
+step
+goto 85.30,63.37
+'Use _Echonir_ |q Prisoner of Fate/Use the Echonir |future
+step
+goto 85.30,65.37
+'Examine _Testament of Dandera Helas_ |q Prisoner of Fate/Examine the Book |future
+step
+goto 86.55,57.78
+talk Leramil the Wise |q Prisoner of Fate/Talk to Leramil the Wise
+step
+goto 9.61,67.14
+talk Nias Othralas |q Prisoner of Fate/Learn the Location of the Shrine
+step
+'Open _Vvardenfell_ Map
+'Travel to _Sadrith Mora_ |q Prisoner of Fate/Search for the Shrine
+|tip Manually skip to the next step.
+step
+goto vvardenfell_base 89.51,53.65 |q Prisoner of Fate/Search for the Shrine
+step
+goto 90.02,53.18
+'Use _Echonir_ |q Prisoner of Fate/Use the Echonir |future
+|tip Manually skip to the next step.
+step
+goto 90.02,53.23
+talk Leramil the Wise |q Prisoner of Fate/Talk to Leramil the Wise |future
+step
+goto 90.26,53.41
+'Enter _The Inner Sea_ |q Prisoner of Fate/Enter the Sea |future
+|tip Manually skip to the next step.
+step
+goto u41_underseapath_base 16.00,68.33 |q Prisoner of Fate/Find the Shrine of Inevitable Secrets |future
+step
+goto 29.10,52.02 |q Prisoner of Fate/Find the Shrine of Inevitable Secrets
+step
+goto 91.40,38.40
+'Use _Portal to Shrine of Inevitable Secrets_ |q Prisoner of Fate/Use the Portals |future
+|tip Manually skip to the next step.
+step
+goto u41_shrineofmora_base 46.21,44.47 |q Prisoner of Fate/Find Torvesard |future
+step
+goto 48.06,67.84 |q Prisoner of Fate/Find Torvesard
+step
+goto 67.61,51.62 |q Prisoner of Fate/Find Torvesard
+step
+goto 91.84,51.53
+'Find _Torvesard_ |q Prisoner of Fate/Find Torvesard
+step
+goto 91.49,53.91
+talk Hermaeus Mora |q Prisoner of Fate/Talk to Hermaeus Mora
+step
+goto 93.44,51.66
+'Use _Portal to the Mythos_ |q Prisoner of Fate/Enter the Mythos Portal
+step
+goto u41_mythos_base 17.10,39.11 |q Prisoner of Fate/Pursue Torvesard
+step
+goto 33.05,39.56 |q Prisoner of Fate/Pursue Torvesard
+step
+goto 45.61,37.27 |q Prisoner of Fate/Pursue Torvesard
+step
+goto 48.28,19.68 |q Prisoner of Fate/Pursue Torvesard
+step
+goto 57.82,19.43 |q Prisoner of Fate/Pursue Torvesard
+step
+goto 51.09,11.69 |q Prisoner of Fate/Pursue Torvesard
+step
+goto 42.07,38.95 |q Prisoner of Fate/Pursue Torvesard
+step
+goto 62.80,61.61 |q Prisoner of Fate/Pursue Torvesard
+step
+goto 69.69,85.30
+'Open _The Mythos Vaults_ |q Prisoner of Fate/Pursue Torvesard
+|tip Manually skip to the next step.
+step
+goto u41_pro_mythos_base 49.60,37.12
+kill Glass Mantikora |q Prisoner of Fate/Defeat the Glass Mantikora |future
+step
+goto 49.60,44.14
+'Use _Portal to Glyphic of Shattered Reflections_ |q Prisoner of Fate/Follow Torvesard
+step
+goto 49.61,64.21
+'Witness the _Glyphic Memory_ |q Prisoner of Fate/Witness the Glyphic Memory
+step
+goto 49.48,66.96
+'Use _Portal to the Mythos Spire_ |q Prisoner of Fate/Follow Torvesard
+|tip Manually skip to the next step.
+step
+goto 50.02,89.05
+'Open _Ithelia's Prison_ |q Prisoner of Fate/Follow Torvesard
+step
+goto u41_pro_ithpri_base 52.86,51.14
+talk Torvesard |q Prisoner of Fate/Talk to Torvesard
+step
+goto 71.37,30.50
+'Use _The Mythos Vault_ |q Prisoner of Fate/Return to the Mythos Vault |future
+|tip Manually skip to the next tip.
+step
+goto u41_pro_mythos_base 49.42,81.23
+talk Hermaeus Mora |q Prisoner of Fate/Talk to Hermaeus Mora |future
+step
+goto 49.78,86.19
+talk Leramil the Wise |q Prisoner of Fate/Talk to Leramil the Wise
+step
+goto 47.91,85.03
+'Use _Portal to Grahtwood_ |q Prisoner of Fate/Go to Grahtwood|future
+|tip Manually skip to the next step.
+step
+goto grahtwood_base 61.99,64.75
+talk Leramil the Wise
+turnin Prisoner of Fate
+step
+-- END: MERGED PROLOGUE GUIDE
+
+-- BEGIN GOLD ROAD GUIDE
+'Open _West Weald_ Map
+'Travel to _Skingrad Vineyards_ |q Paths of Chaos |future
+|tip Manually skip to the next step.
+step
+goto u42_Skingrad_base 34.64,41.92
+talk Leramil the Wise
+accept Paths of Chaos
+step
+goto 40.93,39.65 |q Seeking Armistice |future
+step
+goto 45.90,57.97
+wayshrine Skingrad City
+step
+'Use _Skingrad City_
+'Travel to _Skingrad Vineyards_ |q Seeking Armistice |future
+|tip Manually skip to the next step.
+step
+goto 49.02,27.56 |q Seeking Armistice |future
+step
+goto 45.73,16.43
+talk Bella Vestum
+accept Seeking Armistice
+step
+goto westwealdoverland_base 71.66,51.47
+talk Pim |q Seeking Armistice/Talk to Pim |future
+step
+goto 66.12,49.95
+'Examine _Bitterfish Shaman_ |q Seeking Armistice/.*Investigate the Bitterfish Camp.* |count 1 |future
+step
+goto 65.85,50.65
+'Examine _Empty Shrine_ |q Seeking Armistice/.*Investigate the Bitterfish Camp.* |count 2
+step
+goto 65.85,50.65
+talk Pim |q Seeking Armistice/Talk to Pim
+step
+goto 76.79,52.56
+'Examine _Sharp Tooth Shaman_ |q Seeking Armistice/.*Investigate the Sharp Tooth Camp.* |count 1 |future
+step
+goto 77.42,52.61
+'Examine _Rusty Knife_ |q Seeking Armistice/.*Investigate the Sharp Tooth Camp.* |count 2
+step
+goto 76.85,52.99
+'Disarm _Trap_ |q Seeking Armistice/Free Bella
+step
+goto 76.85,52.99
+talk Bella Vestum |q Seeking Armistice/Talk to Bella
+step
+goto 76.89,52.91
+|tip Watch the dialogue.
+talk Pim |q Seeking Armistice/Talk to Pim
+step
+goto 74.92,50.37
+'Meet _Pim at Gray's Hollow_ |q Seeking Armistice/Meet Pim at Gray's Hollow
+step
+goto 73.62,48.24
+'Take _Bitterfish Totem_ |q Seeking Armistice/Retrieve Bitterfish Totem
+step
+goto 73.66,48.20
+'Collect _Sharp Tooth Totem_ |q Seeking Armistice/Retrieve Sharp Tooth Totem
+step
+goto 71.52,49.47
+talk to Pim |q Seeking Armistice/Talk to Pim |future
+step
+goto 71.52,49.47
+talk to Pim
+turnin Seeking Armistice
+step
+goto 69.03,47.55 |q Where There's a Will |future
+step
+goto 66.19,46.76
+talk Aquilia Verres
+accept Where There's a Will
+step
+goto 64.69,44.82
+talk Mizzik Thunderboots |q Where There's a Will/Talk to Mizzik Thunderboots
+step
+goto 65.67,44.79
+'Take _Sealed Will_ |q Where There's a Will/Take the Will |future
+step
+goto 65.65,44.66
+talk Chef Edric Brussiner |q Where There's a Will/Talk to Edric Brussiner
+step
+goto 65.74,44.76
+talk Mizzik Thunderboots |q Where There's a Will/Talk to Mizzik Thunderboots
+step
+goto 66.33,43.68
+'Open _Weatherleah Manor_ |q Where There's a Will/Meet Lady Weatherleah's Family in the Manor
+|tip Manually skip to the next step.
+step
+goto u42_weatherleahmanor_base 38.27,63.87
+|tip Watch the dialogue.
+talk Chef Edric Brussiner |q Where There's a Will/.*Talk to the Family.* |count 1 |future
+step
+goto 39.49,60.66
+talk Groundskeeper Otho Florius |q Where There's a Will/.*Talk to the Family.* |count 2
+step
+goto 39.49,60.66
+talk Aquila Verres |q Where There's a Will/.*Talk to the Family.* |count 3
+step
+goto 44.64,59.76
+talk Pelena Weatherleah |q Where There's a Will/.*Talk to the Family.* |count 4
+step
+goto 44.64,59.76
+talk Uriel Weatherleah |q Where There's a Will/.*Talk to the Family.* |count 5 |future
+|tip Manually skip to the next step.
+step
+goto 56.69,70.63
+'Open _Manor Study_ |q Where There's a Will/Meet Mizzik Thunderboots in the Study
+|tip Manually skip to the next step.
+step
+goto 70.20,71.13
+'Examine _Will and Testament of Lucilla Weatherleah_ |q Where There's a Will/Read Lady Weatherleah's Will |future
+step
+goto 66.24,76.07
+'Examine _Letter to Lady Weatherleah_ |q Where There's a Will/.*Investigate the Study.* |count 1
+step
+goto 73.66,77.36
+'Examine _Lady Weatherleah's Journal_ |q Where There's a Will/.*Investigate the Study.* |count 2
+step
+goto 80.67,68.07
+.'Examine _Portrait of Betu_
+.'Examine _Letter of Warning_ |q Where There's a Will/.*Investigate the Study.* |count 3
+step
+goto 73.64,73.25
+talk Mizzik Thunderboots |q Where There's a Will/Talk to Mizzik Thunderboots
+step
+goto 59.83,71.69
+'Open _Weatherleah Manor_ |q Where There's a Will/.*Question the Family.* |count 1
+|tip Manually skip to the next step.
+step
+goto 36.45,72.73
+talk Aquilia Verres |q Where There's a Will/.*Question the Family.* |count 1
+step
+goto 42.55,74.47
+'Open _Weatherleah Estate_ |q Where There's a Will/.*Question the Family.* |count 2
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 67.18,43.81
+talk Pelena Weatherleah |q Where There's a Will/.*Question the Family.* |count 2
+step
+goto 67.44,43.70
+talk Uriel Weatherleah |q Where There's a Will/.*Question the Family.* |count 3
+step
+goto 66.25,44.93 |q Where There's a Will/Talk to Chef Edric Brussiner
+step
+goto 66.65,45.03
+talk Chef Edric Brussiner |q Where There's a Will/Talk to Chef Edric Brussiner
+step
+goto 66.78,44.97
+talk Groundskeeper Otho Florius |q Where There's a Will/Talk to Groundskeeper Otho Florius
+step
+goto 66.33,43.68
+'Open _Weatherleah Manor_ |q Where There's a Will/Enter the Library
+|tip Manually skip to the next step.
+step
+goto u42_weatherleahmanor_base 28.40,71.14
+'Open _Manor Library_ |q Where There's a Will/Enter the Library
+|tip Manually skip to the next step.
+step
+goto 21.84,73.07
+'Examine _Broken Statue_ |q Where There's a Will/.*Investigate the Library.* |count 1 |future
+step
+goto 14.39,71.14
+'Examine _Fallen Books_ |q Where There's a Will/.*Investigate the Library.* |count 2
+step
+goto 8.33,64.96
+'Examine _Broken Glass_ |q Where There's a Will/.*Investigate the Library.* |count 3
+step
+goto 14.58,75.27
+talk Mizzik Thunderboots |q Where There's a Will/Talk to Mizzik Thunderboots
+step
+goto 26.18,70.16
+'Open _Weatherleah Manor_ |q Where There's a Will/Investigate Window Exterior
+|tip Manually skip to the next step.
+step
+goto 43.06,75.30
+'Open _Weatherleah Estate_ |q Where There's a Will/Investigate Window Exterior
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 65.47,43.93 |q Where There's a Will/Investigate Window Exterior
+step
+goto 65.82,43.33
+'Take _Gilded Key_ |q Where There's a Will/Investigate Window Exterior
+step
+goto 64.59,42.11
+'Examine _Edric's Confesssion_ |q Where There's a Will/.*Examine the Scene.* |count 1 |future
+step
+goto 64.56,42.12
+'Examine _Foul-Smelling Tea_ |q Where There's a Will/.*Examine the Scene.* |count 2
+step
+goto 64.60,42.09
+'Examine _Poisoned Tankard_ |q Where There's a Will/.*Examine the Scene.* |count 3
+step
+goto 64.58,42.07
+'Examine _Memorial to Uriel Weatherleah_ |q Where There's a Will/.*Examine the Scene.* |count 4
+step
+goto 64.64,42.14
+talk Mizzik Thunderboots |q Where There's a Will/Talk to Mizzik Thunderboots
+step
+goto 65.73,42.64 |q Where There's a Will/Find the Imposter Uriel
+step
+goto 66.73,42.94
+'Open _Weatherleah Manor_ |q Where There's a Will/Find the Imposter Uriel
+|tip Manually skip to the next step.
+step
+goto u42_weatherleahmanor_base 72.34,51.35 |q Where There's a Will/Find the Imposter Uriel
+step
+goto 49.27,58.22
+talk Uriel Weatherleah |q Where There's a Will/Talk to the Imposter Uriel |future
+step
+goto 76.78,50.11
+'Open _Manor Kitchen_ |q Where There's a Will/Talk to Pelena Weatherleah
+|tip Manually skip to the next step.
+step
+goto 87.58,57.80
+talk Pelena Weatherleah |q Where There's a Will/Talk to Pelena Weatherleah
+step
+goto 79.95,51.51
+'Open _Weatherleah Manor_ |q Where There's a Will/Talk to Groundskeeper Otho Florius
+|tip Manually skip to the next step.
+step
+goto 41.99,50.05|q Where There's a Will/Talk to Groundskeeper Otho Florius
+step
+goto 43.13,75.30
+'Open _Weatherleah Estate_ |q Where There's a Will/Talk to Groundskeeper Otho Florius
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 66.46,44.74
+talk Groundskeeper Otho Florius |q Where There's a Will/Talk to Groundskeeper Otho Florius
+step
+goto 66.33,43.68
+'Open _Weatherleah Manor_ |q Where There's a Will/Investigate Lady Weatherleah's Chambers
+|tip Manually skip to the next step.
+step
+goto u42_weatherleahmanor_base 42.67,50.90 |q Where There's a Will/Investigate Lady Weatherleah's Chambers
+step
+goto 73.07,50.43 |q Where There's a Will/Investigate Lady Weatherleah's Chambers
+step
+goto 67.66,31.45 
+'Open _Lady Weatherleah's Bedchamber_ |q Where There's a Will/Investigate Lady Weatherleah's Chambers
+|tip Manually skip to the next step.
+step
+goto 52.20,33.37
+'Examine _Scrap of Fabric_ |q Where There's a Will/Investigate Lady Weatherleah's Chambers
+|tip Manually skip to the next step.
+step
+goto 46.05,34.10
+'Take _Stained Teacup_ |q Where There's a Will/Investigate Lady Weatherleah's Chambers
+|tip Manually skip to the next step.
+step
+goto 53.57,38.86
+'Examine _Letter to Pelena_ |q Where There's a Will/Investigate Lady Weatherleah's Chambers
+step
+goto 51.19,36.99
+talk Mizzik Thunderboots |q Where There's a Will/Talk to Mizzik Thunderboots
+step
+goto 59.53,30.10
+'Open _Weatherleah Manor_ |q Where There's a Will/Investigate the Scream Down the Hall
+|tip Manually skip to the next step.
+step
+goto 71.12,50.28 |q Where There's a Will/Investigate the Scream Down the Hall
+step
+goto 43.23,51.02 |q Where There's a Will/Investigate the Scream Down the Hall
+step
+goto 42.34,60.76
+|tip Watch the dialogue.
+'Examine _To Investigator Mizzik_ |q Where There's a Will/Investigate the Body |future
+step
+goto 46.88,62.12
+'Examine _Betu_ |q Where There's a Will/Examine Betu
+step
+goto 46.88,62.12
+talk Groundskeeper Otho Florius |q Where There's a Will/Talk to Groundskeeper Otho Florius
+step
+goto 76.78,50.45
+'Open _Manor Kitchen_ |q Where There's a Will/Search the Pantry
+|tip Manually skip to the next step.
+step
+goto 82.95,32.11
+'Take _Medical Herbs_ |q Where There's a Will/Search the Pantry
+step
+goto 79.63,51.48
+'Open _Weatherleah Manor_ |q Where There's a Will/Apply Remedy to Betu
+|tip Manually skip to the next step.
+step
+goto 43.10,50.69 |q Where There's a Will/Apply Remedy to Betu
+step
+goto 47.36,61.07
+'Use _Remedy_ |q Where There's a Will/Apply Remedy to Betu
+step
+goto 42.73,58.36
+talk Mizzik Thunderboots |q Where There's a Will/Talk to Mizzik Thunderboots
+step
+goto u42_weatherleahbasement_base 21.31,17.38 |q Where There's a Will/Follow Betu
+step
+goto 57.46,83.21 |q Where There's a Will/Follow Betu
+step
+goto 9.05,86.07
+'Open _Weatherleah Cavern_ |q Where There's a Will/Follow Betu
+|tip Manually skip to the next step.
+step
+goto u42_weatherleahtunnels_base 24.88,20.56 |q Where There's a Will/Follow Betu
+step
+goto 22.25,38.62 |q Where There's a Will/Follow Betu
+step
+goto 25.30,67.76 |q Where There's a Will/Follow Betu
+step
+goto 43.11,70.17 |q Where There's a Will/Follow Betu
+step
+goto 48.53,83.90 |q Where There's a Will/Follow Betu
+step
+goto 62.77,81.51 |q Where There's a Will/Follow Betu
+step
+goto 86.76,79.65
+talk Pelena Weatherleah |q Where There's a Will/Talk to Pelena Weatherleah |future
+step
+goto 85.10,78.89
+talk Mizzik Thunderboots |q Where There's a Will/Talk to Mizzik Thunderboots
+step
+goto 85.02,79.25
+'Examine _Dusty Golden Goblet_ |q Where There's a Will/Examine What Betu Found
+step
+goto 85.10,57.79 |q Where There's a Will/Follow Betu
+step
+goto 62.85,58.05 |q Where There's a Will/Follow Betu
+step
+goto 69.31,32.52
+'Examine _Note from Lady Weatherleah_ |q Where There's a Will/Investigate the Area |future
+step
+goto 39.09,33.62
+'Open _Weatherleah Caverns_ |q Where There's a Will/Return to Aquilia Verres
+|tip Manually skip to the next step.
+step
+goto 27.13,8.84 |q Where There's a Will/Return to Aquilia Verres
+step
+goto 32.61,8.00
+'Open _Weatherleah Manor_ |q Where There's a Will/Return to Aquilia Verres
+|tip Manually skip to the next step.
+step
+goto u42_weatherleahbasement_base 34.40,13.13 |q Where There's a Will/Return to Aquilia Verres
+step
+goto u42_weatherleahmanor_base 42.88,50.95 |q Where There's a Will/Return to Aquilia Verres
+step
+goto 35.98,59.86
+talk Aquilia Verres |q Where There's a Will/Talk to Aquilia Verres |future
+step
+goto 35.98,59.86
+talk Mizzik Thunderboots
+turnin Where There's a Will
+step
+goto 42.89,75.30
+'Open _Weatherleah Estate_ |q Paths of Chaos/Investigate Elenglynn
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 66.41,46.88 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 69.02,47.71 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 70.47,45.80 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 70.09,42.80 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 70.09,40.35 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 70.97,41.36
+'Use _Skyshard_ |q Paths of Chaos/Investigate Elenglynn
+|tip Manually skip to the next step.
+step
+goto 74.19,43.71 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 74.51,44.29
+talk Leramil the Wise |q Paths of Chaos/Investigate Elenglynn
+|tip Manually skip to the next step.
+step
+goto 74.44,44.27
+'Open _Elenglynn_ |q Paths of Chaos/Investigate Elenglynn
+|tip Manually skip to the next step.
+step
+goto UI_Maps_U42_PE1_Elenglynn 05.36,54.32 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 7.38,42.09 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 44.65,42.71 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 44.83,54.18 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 40.23,54.28 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 40.40,38.06 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 44.55,32.16 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 57.62,30.39 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 70.59,32.65 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 71.34,21.05 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 83.17,29.74 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 74.23,38.53 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 58.06,38.65 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 57.65,46.04 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 65.57,47.06 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 62.61,60.96 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 84.17,63.93 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 92.57,42.50 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 79.71,53.51 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 74.43,53.33
+'Search _Ayleid Chest_ |q Paths of Chaos/Investigate Elenglynn
+|tip Manually skip to the next step.
+step
+goto 79.62,57.47
+'Unlock _Maze Gate_ |q Paths of Chaos/Investigate Elenglynn
+|tip Manually skip to the next step.
+step
+goto 79.52,66.00
+'Unlock _Maze Gate_ |q Paths of Chaos/Investigate Elenglynn
+|tip Manually skip to the next step.
+step
+goto 76.24,77.60 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 69.16,72.81 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 58.66,73.33
+talk Ithelia |q Paths of Chaos/Investigate Elenglynn
+|tip Manually skip to the next step.
+step
+goto 57.98,72.86
+|tip Watch the dialogue.
+'Use _Echonir_ |q Paths of Chaos/Investigate Elenglynn
+|tip Manually skip to the next step.
+step
+goto 52.47,81.13 |q Paths of Chaos/Investigate Elenglynn
+step
+goto 35.62,81.27
+'Enter _West Weald_ |q Paths of Chaos/Investigate Elenglynn
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 76.46,45.47
+talk Leramil the Wise |q Paths of Chaos/Investigate Elenglynn
+step
+goto 70.86,44.37 |q The Missing Cohort |future
+step
+goto 68.96,47.59 |q The Missing Cohort |future
+step
+goto u42_Skingrad_base 56.83,28.04 |q The Missing Cohort |future
+step
+goto westwealdoverland_base 76.59,55.96 |q The Missing Cohort |future
+step
+goto 77.88,57.39 |q The Missing Cohort |future
+step
+goto 77.14,59.90
+'Use _Skyshard_ |q The Missing Cohort |future
+|tip Manually skip to the next step.
+step
+goto 77.99,59.59 |q The Missing Cohort |future
+step
+goto 77.25,63.19
+talk Sergeant Tegula
+accept The Missing Cohort
+step
+goto 75.89,65.62 |q The Missing Cohort/Find Tribune Alea Idolus
+step
+goto 77.07,65.54
+talk Tribune Alea Idolus |q The Missing Cohort/Talk to Tribune Alea Idolus |future
+step
+goto 76.94,65.05
+'Open _Rustwall Manor_ |q The Missing Cohort/Enter the Manor House |future
+|tip Manually skip to the next step.
+step
+goto 76.73,64.93
+'Examine _Bloody Servant Tunic_ |q The Missing Cohort/.*Search for Clues.* |count 1 |future
+step
+goto 76.42,65.14
+'Examine _Warning Candle_ |q The Missing Cohort/.*Search for Clues.* |count 2
+step
+goto 76.84,64.39
+|tip Go upstairs.
+'Examine _To Tribune Alea Idolus_ |q The Missing Cohort/.*Search for Clues.* |count 3
+step
+goto 76.93,65.03
+|tip Go downstairs.
+'Open _Rustwall Estate_ |q The Missing Cohort/Meet Tribune Alea in the Barracks
+|tip Manually skip to the next step.
+step
+goto 77.47,66.04
+'Open _Legionary Barracks_ |q The Missing Cohort/Meet Tribune Alea in the Barracks
+|tip Manually skip to the next step.
+step
+goto 77.45,66.50
+'Examine _Letter to Captain Leronus_ |q The Missing Cohort/Examine the Letter |future
+step
+goto 77.45,66.50
+talk Tribune Alea Idolus |q The Missing Cohort/Talk to Tribune Alea
+step
+goto 77.50,65.99
+'Open _Rustwall Estate_ |q The Missing Cohort/Find Groundskeeper Gaius
+|tip Manually skip to the next step.
+step
+goto 79.11,65.86
+'Open _Groundskeeper Gaius's House_ |q The Missing Cohort/Find Groundskeeper Gaius
+|tip Manually skip to the next step.
+step
+goto 79.03,66.05
+|tip Watch the dialogue.
+talk Groundskeeper Gaius |q The Missing Cohort/Talk to Groundskeeper Gaius |future
+step
+goto 79.21,66.09
+'Take _Groundskeeper Gaius's Map_ |q The Missing Cohort/Take Groundskeeper Gaius's Map
+step
+goto 79.08,65.86
+'Open _Rustwall Estate_ |q The Missing Cohort/Enter the Gardens
+|tip Manually skip to the next step.
+step
+goto 79.70,65.71 |q The Missing Cohort/Enter the Gardens
+step
+goto 79.94,66.46 |q The Missing Cohort/Find the Statue |future
+step
+goto 77.64,66.91
+'Search _Statue of King Rislav Larich_ |q The Missing Cohort/Search the Statue |future
+step
+goto 79.45,67.06 |q The Missing Cohort/Enter the Rustwall Catacombs
+step
+goto 79.66,65.65 |q The Missing Cohort/Enter the Rustwall Catacombs
+step
+goto 78.02,65.38
+'Open _Rustwall Catacombs_ |q The Missing Cohort/Enter the Rustwall Catacombs |future
+|tip Manually skip to the next step.
+step
+goto U42_Rustwall_Crypt_01_base 81.31,37.31 |q The Missing Cohort/Search the Catacombs |future
+step
+goto 41.04,21.82 |q The Missing Cohort/Search the Catacombs
+step
+goto 16.09,30.27 |q The Missing Cohort/Search the Catacombs
+step
+goto 31.69,55.98 |q The Missing Cohort/Search the Catacombs
+step
+goto 31.62,66.84
+talk Legionary Caepio |q The Missing Cohort/Talk to Legionary Caepio |future
+step
+goto 64.07,55.96
+'Climb Down _Ruins_ |q The Missing Cohort/Find the Daedric Portal
+step
+goto U42_Rustwall_Crypt_02_base 38.10,11.29 |q The Missing Cohort/Search the Ruins
+step
+goto 52.76,20.15 |q The Missing Cohort/Search the Ruins
+step
+goto 52.20,46.81 |q The Missing Cohort/Search the Ruins
+step
+goto 64.28,46.56
+'Destroy _Portal Anchor_ |q The Missing Cohort/Destroy the Portal Anchors |future
+|tip Manually skip to the next step.
+step
+goto 66.34,53.24
+'Destroy _Portal Anchor_ |q The Missing Cohort/Destroy the Portal Anchors
+step
+goto 52.20,46.81 |q The Missing Cohort/Escape the Ruins
+step
+goto 52.76,20.15 |q The Missing Cohort/Escape the Ruins
+step
+goto 38.10,11.29 |q The Missing Cohort/Escape the Ruins
+step
+goto 31.48,39.83
+'Climb _Catacombs_ |q The Missing Cohort/Escape the Ruins
+|tip Manually skip to the next step.
+step
+goto U42_Rustwall_Crypt_01_base 15.60,53.00 |q The Missing Cohort/Escape the Ruins
+step
+goto 40.13,20.27 |q The Missing Cohort/Escape the Ruins
+step
+goto 47.93,36.69 |q The Missing Cohort/Escape the Ruins
+step
+goto 81.36,21.31 |q The Missing Cohort/Escape the Ruins
+step
+goto 53.38,20.98
+'Open _Rustwall Estate_ |q The Missing Cohort/Escape the Ruins
+step
+goto westwealdoverland_base 79.62,65.69 |q The Missing Cohort/Talk to Tribune Alea Idolus
+step
+goto 80.69,64.74 |q The Missing Cohort/Talk to Tribune Alea Idolus
+step
+goto 81.51,66.02 |q The Missing Cohort/Talk to Tribune Alea Idolus
+step
+goto 80.56,67.21
+|tip Watch the dialogue.
+talk Tribune Alea Idolus 
+turnin The Missing Cohort
+step
+goto 80.15,64.34 |q When the Ground Shook |future
+step
+goto 83.10,62.98
+wayshrine Trader's Luck
+step
+goto 80.12,64.40 |q When the Ground Shook |future
+step
+goto 78.25,69.06
+'Examine _Trapper's Offer_
+accept Flocking Together
+step
+goto 78.14,69.03
+'Gather _Old Guzzard_ |q Flocking Together/Gather Old Guzzard
+step
+goto 80.12,64.40 |q When the Ground Shook |future
+step
+goto u42_Skingrad_base 77.93,56.15 |q When the Ground Shook |future
+step
+goto westwealdoverland_base 65.42,66.70
+wayshrine Wildburn's Edge
+step
+goto 63.23,64.73
+'Use _Skyshard_ |q When the Ground Shook |future
+|tip Manually skip to the next step.
+step
+goto 63.29,63.31
+talk Legionary Luther
+accept Burnt Biscuits
+step
+goto 59.77,59.68
+'Search _Slashed Basket_ |q Burnt Biscuits/.*Search the Wreckage.* |count 1
+step
+goto 59.75,59.59
+'Search _Smashed Crate_ |q Burnt Biscuits/.*Search the Wreckage.* |count 2
+step
+goto 59.78,59.40
+'Search _Ruined Baskets_ |q Burnt Biscuits/.*Search the Wreckage.* |count 3
+step
+goto 59.89,59.54
+talk Legionary Luther |q Burnt Biscuits/Talk to Legionary Luther
+step
+goto 58.48,60.91
+'Feed _Burnbiscuit_ |q Burnt Biscuits/Feed Burnbiscuit |future
+step
+goto 59.68,61.16 |q Burnt Biscuits/Return to Legionary Luther
+step
+goto 60.08,59.90
+talk Legionary Luther |q Burnt Biscuits/Talk to Legionary Luther
+step
+'Open _West Weald_ Map
+'Travel _Wildburn's Edge_ |q When the Ground Shook |future
+|tip Manually skip to the next step.
+step
+goto 55.83,73.34
+talk Pellecia Urgelian
+accept When the Ground Shook
+step
+goto 54.33,74.62
+wayshrine Ostumir
+step
+goto 54.85,76.00
+talk Beragon |q When the Ground Shook/Talk to Beragon
+step
+goto 53.92,77.43
+'Dig _Fallen Rubble_ |q When the Ground Shook/.*Rescue Villagers.* |count 1
+step
+goto 54.32,79.38 |q When the Ground Shook/.*Rescue Villagers.*
+step
+goto 53.18,79.36
+talk Greenspeaker Sorilen |q When the Ground Shook/Talk to Greenspeaker Sorilen |future
+step
+goto 51.60,79.21
+'Destroy _Strangling Vine_ |q When the Ground Shook/.*Rescue Villagers.* |count 2
+step
+goto 52.04,79.54 |q When the Ground Shook/.*Rescue Villagers.* |count 3
+step
+goto 52.44,78.38
+'Open _Auria's House_ |q When the Ground Shook/.*Rescue Villagers.* |count 3
+|tip Manually skip to the next step.
+step
+goto 52.47,78.85
+'Rescue _Collapsed Beam_ |q When the Ground Shook/.*Rescue Villagers.* |count 3
+step
+goto 52.32,78.32
+'Open _Ostumir_ |q When the Ground Shook/Find the Ruins
+|tip Manually skip to the next step.
+step
+goto 53.53,77.81 |q When the Ground Shook/Find the Ruins
+step
+goto 54.77,79.18 |q When the Ground Shook/Find the Ruins
+step
+goto 56.44,78.05
+'Examine _Orders for Immediate Retrieval_ |q When the Ground Shook/Examine the Note |future
+step
+goto 56.42,78.11
+talk Beragon |q When the Ground Shook/Talk to Beragon
+step
+goto 56.61,77.75
+'Enter _Essondul_ |q When the Ground Shook/Enter the Ayleid Ruins |future
+|tip Manually skip to the next step.
+step
+goto UI_Maps_Ostumir_Int_01 88.35,75.14 |q When the Ground Shook/Search for Greenspeaker Sorilen |future
+step
+goto 74.00,74.90 |q When the Ground Shook/Search for Greenspeaker Sorilen
+step
+goto UI_Maps_Ostumir_Int_01 75.59,64.35 |q When the Ground Shook/Search for Greenspeaker Sorilen
+step
+goto 86.49,56.20 |q When the Ground Shook/Search for Greenspeaker Sorilen
+step
+goto 85.78,45.14
+talk Greenspeaker Sorilen |q When the Ground Shook/Talk to Greenspeaker Sorilen |future
+step
+goto 83.92,20.23 |q When the Ground Shook/Search for the Wildburn Seed
+step
+goto 33.22,25.69 |q When the Ground Shook/Search for the Wildburn Seed
+step
+goto 7.46,42.01 |q When the Ground Shook/Search for the Wildburn Seed
+step
+goto 9.01,51.54 |q When the Ground Shook/Search for the Wildburn Seed
+step
+goto 23.338,50.75 |q When the Ground Shook/Search for the Wildburn Seed
+step
+goto 23.65,61.37 |q When the Ground Shook/Search for the Wildburn Seed
+step
+goto 40.94,62.03
+'Open _Essondul Lower Chambers_ |q When the Ground Shook/Search for the Wildburn Seed
+step
+goto 55.47,61.98
+'Take _Wildburn Seed_ |q When the Ground Shook/Take the Wildburn Seed
+step
+goto 61.71,38.75 |q When the Ground Shook/Catch up with Beragon
+step
+goto 68.88,39.64 |q When the Ground Shook/Catch up with Beragon
+step
+goto 75.06,67.51 |q When the Ground Shook/Catch up with Beragon
+step
+goto 74.00,74.90 |q When the Ground Shook/Catch up with Beragon
+step
+goto 88.35,75.14 |q When the Ground Shook/Catch up with Beragon
+step
+goto 82.75,83.42
+'Enter _Ostumir_ |q When the Ground Shook/Catch up with Beragon
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 56.39,78.42
+talk Beragon
+turnin When the Ground Shook
+step
+'Open _West Weald_ Map
+'Travel to _Skingrad City_ |q Crafting Certification |future
+tip Manally skip to the next step.
+step
+goto u42_Skingrad_base 46.21,64.21 |q Crafting Certification |future
+step
+goto 55.64,64.04
+talk Danel Telleno
+accept Crafting Certification
+step
+goto 55.64,64.04
+talk Danel Telleno |q Crafting Certification/Talk to Danel Telleno
+step
+goto 55.30,65.64
+talk Millenith
+turnin Crafting Certification
+step
+goto 61.64,61.94
+step
+goto 60.26,61.00
+'Open _Count Calantius's Office_ |q Burnt Biscuits/Go to Count Calantius's Office in Skingrad
+|tip Manually skip to the next step.
+step
+goto 58.99,61.53
+|tip Watch the dialogue.
+talk Count Calantius
+turnin Burnt Biscuits
+step
+goto 46.21,64.21 |q Paths of Chaos/Meet at Beragon's Townhouse
+step
+goto 43.99,68.94 |q Paths of Chaos/Meet at Beragon's Townhouse
+step
+goto 41.76,72.18 |q Paths of Chaos/Meet at Beragon's Townhouse
+step
+goto 42.55,72.50
+'Open _Beragon's Townhouse_ |q Paths of Chaos/Meet at Beragon's Townhouse |future
+|tip Manually skip to the next step.
+step
+goto 43.76,73.63
+talk Beragon |q Paths of Chaos/Talk to Beragon |future
+step
+goto 43.76,73.63
+talk Leramil the Wise
+turnin Paths of Chaos
+step
+goto 43.76,73.63
+talk Beragon
+accept Seeds of Suspicion
+step
+goto 43.37,73.41
+'Open _Skingrad_ |q Faded Scarlets |future
+|tip Manually skip to the next step.
+step
+goto 38.83,78.16 |q Faded Scarlets |future
+step
+goto 33.97,73.49 |q Seeds of Suspicion/Go to Vashabar
+talk Hooke
+accept Faded Scarlets
+step
+goto 38.83,78.16 |q Seeds of Suspicion/Go to Vashabar
+step
+goto 46.51,65.75 |q Seeds of Suspicion/Go to Vashabar
+step
+goto 45.91,57.95
+'Use _Skingrad City_
+'Travel to _Ostumir_ |q Seeds of Suspicion/Go to Vashabar
+|tip Manually skip to the next step,
+step
+goto westwealdoverland_base 47.42,77.72 |q Seeds of Suspicion/Go to Vashabar
+step
+goto 48.43,79.12
+'Use _Skyshard_ |q Seeds of Suspicion/Go to Vashabar
+|tip Manually skip to the next step.
+step
+goto 47.42,77.72 |q Seeds of Suspicion/Go to Vashabar
+step
+goto 45.15,78.36 |q Seeds of Suspicion/Go to Vashabar
+step
+goto 41.91,73.87 |q Seeds of Suspicion/Go to Vashabar
+step
+goto u42_Vashabar_base 81.92,70.22
+wayshrine Vashabar
+step
+goto 46.97,71.31 |q Seeds of Suspicion/Go to Vashabar
+step
+goto 48.61,70.70 |q Seeds of Suspicion/Go to Vashabar |tip Go upstairs.
+step
+goto 48.48,71.21
+'Use _Skyshard_ |q Seeds of Suspicion/Go to Vashabar
+|tip Manually skip to the next step.
+step
+goto 46.97,71.31 |q Seeds of Suspicion/Go to Vashabar
+step
+goto u42_Vashabar_base 66.66,71.81
+talk Laeni
+accept The Voice of the Village
+step
+goto 41.86,73.71 |q Seeds of Suspicion/Talk to Greenspeaker Darolith
+step
+goto 15.20,52.04 |q Seeds of Suspicion/Talk to Greenspeaker Darolith
+step
+goto 16.21,46.43
+talk Greenspeaker Darolith |q Seeds of Suspicion/Talk to Greenspeaker Darolith
+step
+goto 16.47,47.30
+talk Beragon |q Seeds of Suspicion/Talk to Beragon
+step
+goto 16.80,54.51 |q The Voice of the Village/Find Agawen Ciiril
+step
+goto 28.13,46.66
+talk Agawen Ciiril |q The Voice of the Village/Talk to Agawen Ciiril |future
+step
+goto 25.33,59.81
+talk Greenspeaker Nedolir |q The Voice of the Village/.*Talk to the Fathers.* |count 1
+step
+goto 47.11,44.61 |q Faded Scarlets/Recruit Valenia
+step
+goto 26.54,32.66
+talk Valenia |q Faded Scarlets/Recruit Valenia
+|tip Manually skip to the next step.
+step
+goto 39.32,18.15 |q The Voice of the Village/.*Talk to the Fathers.* |count 2
+step
+goto 66.80,33.70 |q The Voice of the Village/.*Talk to the Fathers.* |count 2
+step
+goto 61.52,37.35
+talk Minth |q The Voice of the Village/.*Talk to the Fathers.* |count 2
+step
+goto 66.80,33.70 |q The Voice of the Village/Talk to Agawen Ciiril at the Stables
+step
+goto 68.95,42.09
+talk Agawen Ciiril |q The Voice of the Village/Talk to Agawen Ciiril at the Stables
+step
+goto 60.88,53.54 |q Seeds of Suspicion/Go to King Nantharion's Residence
+step
+goto 37.25,41.43 |q Seeds of Suspicion/Go to King Nantharion's Residence
+step
+goto 40.35,32.00
+talk Malaniel |q The Voice of the Village/Talk to Malaniel
+step
+goto 39.31,28.01
+talk King Nantharion |q Seeds of Suspicion/Talk to King Nantharion |future
+step
+goto 39.20,32.33
+talk Tribune Alea Idolus |q Seeds of Suspicion/Talk to Tribune Alea Idolus |future
+|tip Manually skip to the next step.
+step
+goto 35.60,52.91 |q Seeds of Suspicion/Find the Wildburn Seed
+step
+goto 46.37,71.27
+talk Gundelion |q The Voice of the Village/Talk to Gundelion
+step
+goto 35.72,60.37
+talk Spinner Belwelas |q The Voice of the Village/Talk to Spinner Belwelas
+step
+goto 48.35,56.48
+'Enter _Wilderhall_ |q The Voice of the Village/Search the Wilderhall for the Rite of Propagation
+|tip Manually skip to the next step.
+step
+goto U42_Wilderhall_base 57.40,20.89
+'Examine _Rite to Propagation_|lorebook Rite of Propagation/3/50/54
+step
+goto 46.79,90.46
+'Enter _Vashabar_ |q The Voice of the Village/Talk to Agawen Ciiril
+|tip Manually skip to the next step.
+step
+goto Vashabar 60.92,64.12 |q The Voice of the Village/Talk to Agawen Ciiril
+step
+goto 67.72,42.34
+talk Agawen Ciiril |q The Voice of the Village/Talk to Agawen Ciiril
+step
+goto 65.07,66.14 |q The Voice of the Village/Find the Couple in the Overgrown Ruin
+step
+goto 54.97,69.81
+'Enter _Vashabar Ruin_ |q The Voice of the Village/Find the Couple in the Overgrown Ruin
+|tip Manually skip to the next step.
+step
+goto 53.72,74.63
+talk Clendagal |q The Voice of the Village/Talk to Clendagal |future
+step
+goto 54.36,71.39
+'Enter _Vashabar_ |q The Voice of the Village/Retrieve a Dormant Seedpod with Laeni
+|tip Manually skip to the next step.
+step
+goto 81.92,70.22 |q Seeds of Suspicion/Find the Wildburn Seed
+step
+goto westwealdoverland_base 43.96,67.22 |q Seeds of Suspicion/Find the Wildburn Seed
+step
+goto 45.38,68.94 |q The Voice of the Village/Retrieve a Dormant Seedpod with Laeni
+step
+goto 44.66,69.84
+'Take _Greenspring Seed_ |q The Voice of the Village/Retrieve a Dormant Seedpod with Laeni |future
+step
+goto 45.38,68.94 |q Seeds of Suspicion/Find the Wildburn Seed
+step
+goto 41.13,64.56
+wayshrine Feldagard Keep
+step
+goto 41.46,64.26
+talk Tribune Alea Idolus
+accept Hold the Line
+step
+goto westwealdoverland_base 42.17,62.26 |q Hold the Line/Go to the Marketplace Overlook
+step
+goto 41.80,61.56
+talk Tribune Alea Idolus |q Hold the Line/Talk to Tribune Alea Idolus |future
+step
+goto 40.68,62.67
+'Open _Feldagard Keep_ |q Hold the Line/Enter Feldagard Keep |future
+|tip Manually skip to the next step.
+step
+goto U42_UI_Maps_FeldagardKeep_01 60.30,69.96
+|tip Look above wall.
+talk Commander Merian |q Hold the Line/Talk to Commander Merian |future
+step
+goto 64.61,70.14
+'Reset _Foothold Trap_ |q Hold the Line/.*Slow the Daedric Assault.* |count 1
+step
+goto 89.32,69.64
+'Burn _Rope_ |q Hold the Line/.*Slow the Daedric Assault.* |count 2
+step
+goto 79.73,63.18
+'Reset _Foothold Trap_ |q Hold the Line/.*Slow the Daedric Assault.* |count 3
+step
+goto 90.09,51.67
+'Burn _Rope_ |q Hold the Line/.*Slow the Daedric Assault.* |count 4
+step
+goto 47.16,59.70
+'Reset _Foothold Trap_ |q Hold the Line/.*Slow the Daedric Assault.* |count 5
+step
+goto 46.09,75.67
+'Burn _Rope_ |q Hold the Line/.*Slow the Daedric Assault.* |count 6
+step
+goto 20.11,68.21 |q Hold the Line/Reach the Courtyard
+step
+goto 38.69,32.14
+'Open _Feldagard Keep Courtyard_ |q Hold the Line/Reach the Courtyard
+|tip Manually skip to the next step.
+step
+goto 70.51,28.71
+talk Commander Merian |q Hold the Line/Talk to Commander Merian |future
+step
+goto 59.34,36.69
+'Take _Bucket of Oil_ |q Hold the Line/Take the Bucket of Oil
+step
+goto 83.16,33.22
+'Pour _Bucket of Oil_ |q Hold the Line/.*Pour Oil Around the Barricade.* |count 1
+step
+goto 82.30,27.71
+'Pour _Bucket of Oil_ |q Hold the Line/.*Pour Oil Around the Barricade.* |count 2
+step
+goto 82.90,20.89
+'Pour _Bucket of Oil_ |q Hold the Line/.*Pour Oil Around the Barricade.* |count 3
+step
+goto 57.69,20.57
+'Take _Ballista Parts_ |q Hold the Line/Repair the Ballista
+|tip Manually skip to the next step.
+step
+goto 83.16,33.22
+.'Repair _Broken Ballista_ |q Hold the Line/Repair the Ballista
+step
+goto 70.10,26.50
+.'Use _ Repaired Ballista_
+.'Ignite _Wall_
+kill First Wave of Daedra
+kill Second Wave of Daedra
+kill Third Wave of Daedra |q Hold the Line/Operate the Ballista
+step
+goto 77.92,05.92
+|tip Kill Daedric Attackers.
+'Open _Felagard Keep Barracks_ |q Hold the Line/Enter the Keep's Barracks |future
+step
+goto U42_UI_Maps_FeldagardKeep_02 63.58,14.74
+talk Tribune Alea Idolus |q Hold the Line/Talk to Tribune Alea Idolus
+step
+goto 49.72,12.43 |q Hold the Line/Search the Keep's Barracks
+step
+goto 27.55,45.85 |q Hold the Line/Search the Keep's Barracks
+step
+goto 16.48,36.69 |q Hold the Line/Search the Keep's Barracks
+step
+goto 15.57,61.64 |q Hold the Line/Search the Keep's Barracks
+step
+goto 49.65,73.73 |q Hold the Line/Search the Keep's Barracks
+step
+goto 73.85,86.87 |q Hold the Line/Search the Keep's Barracks
+step
+goto 74.98,45.99 |q Hold the Line/Search the Keep's Barracks
+step
+goto U42_UI_Maps_FeldagardKeep_03 51.35,12.00 |q Hold the Line/Search the Keep's Barracks
+step
+goto 64.10,09.35 |q Hold the Line/Search the Keep's Barracks
+step
+goto 50.50,10.22 |q Hold the Line/Search the Keep's Barracks
+step
+goto 50.93,41.26
+'Open _Barracks Amrory_ |q Hold the Line/Enter the Barracks Armory |future
+step
+goto 50.40,55.02
+'Observe _Daedric Commander_ |q Hold the Line/Observe the Daedric Commander
+step
+goto 52.39,53.84
+talk Tribune Alea Idolus |q Hold the Line/Talk to Tribune Alea Idolus
+step
+goto 33.16,53.16 |q Hold the Line/Get in Position at the Gateway
+step
+goto 34.04,90.95 |q Hold the Line/Get in Position at the Gateway
+step
+goto 51.17,86.98 |q Hold the Line/Get in Position at the Gateway |future
+step
+goto 48.86,68.79
+'Enter _Portal to Mirrormoor_ |q Hold the Line/Enter the Portal
+step
+goto U42_feldagard_mirrormoor_base 44.51,48.01
+kill Shardborn |q Hold the Line/Defeat the Shardborn
+step
+goto 41.96,50.47
+'Take _Abolisher_ |q Hold the Line/Take Abolisher
+step
+'Use _Abolisher_
+'Enter _Portal to Feldagard Keep_ |q Hold the Line/Return to Feldagard Keep |future
+step
+goto U42_UI_Maps_FeldagardKeep_01 22.41,86.21
+talk Commander Merian |q Hold the Line/Talk to Commander Merian
+step
+goto 20.74,85.45
+talk Tribune Alea Idolus
+turnin Hold the Line
+step
+'_WALK OUT DONT TELEPORT_
+'Open _West Weald_ Map
+'Travel to _Feldagard Keep_
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 43.96,67.22 |q Seeds of Suspicion/Find the Wildburn Seed
+step
+goto 48.25,64.42
+'Examine _Marcien's Message_
+accept Found Family
+step
+goto 37.63,68.89
+'Examine _Cracked Spyglass_ |q Faded Scarlets/Recruit Valenia
+|tip Manually skip to the next step.
+step
+goto 37.64,68.73
+'Examine _Warm Embers_ |q Faded Scarlets/Recruit Valenia
+|tip Manually skip to the next step.
+step
+goto 37.64,68.78
+'Examine _Burned Fragment_ |lorebook Burned Fragment/3/50/93
+step
+goto 41.13,64.56
+'Use _Feldagard Keep_
+'Travel to _Vashabar_ |q Faded Scarlets/Recruit Valenia
+|tip Manually skip to the next step.
+step
+goto 41.91,73.76 |q Found Family/Gather Versidue
+step
+goto 45.31,78.69 |q Found Family/Gather Versidue
+step
+goto 39.98,80.30 |q Found Family/Gather Versidue
+step
+goto 39.29,77.93
+'Gather _Versidue_ |q Found Family/Gather Versidue
+step
+goto 39.98,80.30 |q Faded Scarlets/Recruit Valenia
+step
+goto 45.31,78.69 |q Faded Scarlets/Recruit Valenia
+step
+goto 41.91,73.76 |q Faded Scarlets/Recruit Valenia
+step
+'Use _Vashabar_
+'Travel to _Feldagard Keep_ |q Seeds of Suspicion/Find the Wildburn Seed
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 40.21,65.85 |q The Voice of the Village/Retrieve an Ayleid Mosaic with Clendagal
+step
+goto 38.97,65.50
+'Open _Cualorn_ |q The Voice of the Village/Retrieve an Ayleid Mosaic with Clendagal
+|tip Manually skip to the next step.
+step
+goto U42_Vashabar_AyleidRuins_base 38.13,31.94 |q The Voice of the Village/Retrieve an Ayleid Mosaic with Clendagal
+step
+goto 40.37,85.63 |q The Voice of the Village/Retrieve an Ayleid Mosaic with Clendagal
+step
+goto 61.42,66.73
+'Take _Ayleid Mosaic |q The Voice of the Village/Retrieve an Ayleid Mosaic with Clendagal
+step
+'Open _West Weald_ Map
+'Travel to _Vashabar_ |q The Voice of the Village/Find Agawen Ciiril
+|tip Manually skip to the next step.
+step
+goto u42_Vashabar_base 40.40,46.36 |q Faded Scarlets/Recruit Valenia
+step
+goto 24.68,34.51 |q Faded Scarlets/Recruit Valenia
+step
+goto 35.41,33.19
+|tip Persuade.
+talk Valenia |q Faded Scarlets/Recruit Valenia
+step
+goto 30.52,35.31 |q The Voice of the Village/Find Agawen Ciiril
+step
+goto 24.34,47.96
+talk Greenspeaker Nedolir |q The Voice of the Village/Talk to Greenspeaker Nedolir |future
+step
+goto 21.96,47.73
+'Place _Ayleid Mosaic_ |q The Voice of the Village/Listen to the Rite or Propagation
+step
+goto 22.13,46.29
+'Place _Dormant Seedpod_ |q The Voice of the Village/Listen to the Rite or Propagation
+step
+goto 21.43,47.19
+talk Laeni
+turnin The Voice of the Village
+step
+goto 55.48,52.34 |q The Deserter |future
+step
+goto westwealdoverland_base 44.24,67.12 |q The Deserter |future
+step
+goto 52.68,62.95
+wayshrine Fall's Path
+step
+goto 49.98,62.99 |q The Deserter |future
+step
+goto 49.24,59.41 |q The Deserter |future
+step
+goto 48.76,57.23
+'Use _Skyshard_ |q The Deserter |future
+|tip Manually skip to the next step.
+step
+goto 41.77,54.78
+wayshrine Three Points
+step
+goto 39.15,54.14 |q The Deserter |future
+step
+goto 38.42,52.07 |q The Deserter |future
+step
+goto 39.51,50.45
+'Use _Skyshard_ |q The Deserter |future
+|tip Manually skip to the next step.
+step
+goto 37.03,55.08
+wayshrine Centurion's Watch
+step
+goto 29.17,59.48
+talk Captain Dartorius
+accept The Deserter
+step
+goto 26.07,59.00 |q The Deserter/Locate Legionary Ulrath and the Legion Squadron
+step
+goto 25.63,56.31 |q The Deserter/Locate Legionary Ulrath and the Legion Squadron
+step
+goto 26.35,55.49 |q The Deserter/Locate Legionary Ulrath and the Legion Squadron
+step
+goto 27.37,55.51
+talk Legionary Ulrath |q The Deserter/Talk to Legionary Ulrath |future
+step
+goto 27.08,55.47
+'Examine _Take Legionary Ulrath's Report_ |q The Deserter/Take Legionary Ulrath's Note
+step
+goto 26.35,55.49 |q The Deserter/Talk to Captain Dartorius
+step
+goto 25.63,56.31 |q The Deserter/Talk to Captain Dartorius
+step
+goto 26.07,59.00 |q The Deserter/Talk to Captain Dartorius
+step
+goto 29.17,59.48
+talk Captain Dartorius
+turnin The Deserter
+step
+goto 19.80,60.96
+wayshrine Sutch
+step
+goto 18.91,61.30
+talk Maerenah
+accept Terror of the Weald
+step
+goto 16.98,61.40
+|tip Persuade him.
+talk Big Urm |q Faded Scarlets/Recruit Big Urm |future
+step
+goto 16.14,65.17 |q Terror of the Weald/Enter Tham's Tavern
+step
+goto 17.41,64.18
+'Open _Tham's Tavern_ |q Terror of the Weald/Enter Tham's Tavern
+step
+goto 17.29,63.74
+'Examine _Tattered Cloak_ |q Terror of the Weald/.*Search Tham's Tavern.* |count 1
+step
+goto 17.11,64.09
+'Examine _Bloodied Sword_ |q Terror of the Weald/.*Search Tham's Tavern.* |count 2
+step
+goto 16.78,63.56
+'Examine _Tham's Note_ |q Terror of the Weald/.*Search Tham's Tavern.* |count 3
+step
+goto 16.79,63.57
+talk Maerenah |q Terror of the Weald/Talk to Maerenah
+step
+goto 17.42,64.15
+'Open _Sutch_ |q Terror of the Weald/Enter the Sutch Depository
+|tip Manually skip to the next step.
+step
+goto 18.84,64.09
+'Open _Sutch Depository_ |q Terror of the Weald/Enter the Sutch Depository
+step
+goto 18.92,63.78
+'Search _Bank Clerk's Lockbox_ |q Terror of the Weald/Find the Vault Key |future
+step
+goto 18.87,63.41
+|tip Go downstairs.
+'Open _Sutch Depository Vault_ |q Terror of the Weald/Enter the Vault
+step
+goto 18.87,63.60
+talk Rosalyn Metrick |q Terror of the Weald/Talk to Rosalyn
+step
+goto 18.84,63.45
+'Open _Sutch Depository_ |q Terror of the Weald/Leave the Bank
+|tip Manually skip to the next step.
+step
+goto 18.86,64.10
+'Open _Sutch_ |q Terror of the Weald/Leave the Bank
+step
+goto 18.51,64.48
+'Examine _Tracks_ |q Terror of the Weald/.*Follow Grivier's Trail.* |count 1
+step
+goto 18.22,65.14
+'Search _Miner's Pack_ |q Terror of the Weald/.*Follow Grivier's Trail.* |count 2
+step
+goto 17.47,65.69
+'Examine _Discarded Clothing_ |q Terror of the Weald/.*Follow Grivier's Trail.* |count 3
+step
+goto 16.16,66.60
+'Examine _The Terror's Orders_ |q Terror of the Weald/Examine the Paper |future
+step
+goto 16.16,66.60
+talk Maerenah |q Terror of the Weald/Talk to Maerenah
+step
+goto 17.20,66.98
+talk Grivier Metrick |q Terror of the Weald/Talk to Grivier |future
+step
+goto 17.23,66.98
+talk Maerenah |q Terror of the Weald/Talk to Maerenah
+step
+goto 17.71,66.36 |q Terror of the Weald/Go to the Alchemy Shop
+step
+goto 19.15,66.49
+'Open _Rosalyn's Alchemy Shop_ |q Terror of the Weald/Go to the Alchemy Shop
+step
+goto 19.36,67.26
+'Take _Combustion Canisters_ |q Terror of the Weald/.*Grab the Alchemy Components.* |count 1
+step
+goto 19.36,66.91
+'Take _Alchemical Oil_ |q Terror of the Weald/.*Grab the Alchemy Components.* |count 2
+step
+goto 19.13,66.52
+'Open _Sutch_ |q Terror of the Weald/.*Destroy the Weapon Stockpile.* |count 1
+|tip Manually skip to the next step.
+step
+goto 19.84,65.56
+'Place _Terror's Weapon Stockpile_ |q Terror of the Weald/.*Destroy the Weapon Stockpiles.* |count 1
+step
+goto 20.07,66.82 |q Terror of the Weald/.*Destroy the Weapon Stockpiles.* |count 2
+step
+goto 21.40,66.37
+'Place _Terror's Weapon Stockpile_ |q Terror of the Weald/.*Destroy the Weapon Stockpiles.* |count 2
+step
+goto 22.48,66.10 |q Terror of the Weald/Enter the Mine
+step
+goto 21.99,65.75
+'Open _Sutch Mine_ |q Terror of the Weald/Enter the Mine |future
+|tip Manually skip to the next step.
+step
+goto u42_base_sutchmine 64.59,21.35
+|tip Watch the dialogue.
+'Place _Combustion Canister_ |q Terror of the Weald/Destroy the First Bloodfiend Den |future
+step
+goto 57.63,33.98 |q Terror of the Weald/Search for a Second Bloodfiend Den
+step
+goto 16.91,34.11
+'Place _Combustion Canister_ |q Terror of the Weald/Destroy the Second Bloodfiend Den |future
+step
+goto 17.95,33.69
+talk Maerenah |q Terror of the Weald/Talk to Maerenah
+step
+goto 21.74,45.51 |q Terror of the Weald/Find Balandrus's Lair
+step
+goto 25.66,66.60
+'Open _Balandrus's Lair_ |q Terror of the Weald/Find Balandrus's Lair
+step
+goto 53.74,68.77
+kill Balandrus the Terror |q Terror of the Weald/Defeat Balandrus the Terror
+step
+goto 68.12,64.98 |q Terror of the Weald/Exit the Mine
+step
+goto 75.15,44.77
+'Open _West Weald_ |q Terror of the Weald/Exit the Mine
+step
+goto westwealdoverland_base 21.58,64.86
+talk Tham |q Terror of the Weald/Talk to Tham
+step
+goto 21.67,64.90
+talk Maerenah
+turnin Terror of the Weald
+step
+goto 16.67,62.19 |q Seeds of Suspicion/Find the Wildburn Seed
+step
+goto 15.51,56.15
+'Use _Skyshard_ |q Seeds of Suspicion/Find the Wildburn Seed
+|tip Manually skip to the next step.
+step
+goto 16.98,58.00 |q Seeds of Suspicion/Find the Wildburn Seed
+step
+goto 16.67,62.19 |q Seeds of Suspicion/Find the Wildburn Seed
+step
+goto 14.07,61.27
+'Open _Varen's Watch_ |q Seeds of Suspicion/Find the Wildburn Seed
+|tip Manually skip to the next step.
+step
+goto UI_Maps_U42_VarensWall_Ext 59.70,75.74
+'Examine _Captain Abitius's Order_
+accept Cold Fires on the Watch
+step
+goto 41.81,71.62 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 1
+step
+goto 35.31,76.71 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 1
+step
+goto 31.07,69.87 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 1
+step
+goto 30.15,70.82
+|tip Go upstairs.
+'Ignite _Watch Fire_ |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 1
+step
+goto 35.31,76.71 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 2 |tip Go downstairs.
+step
+goto 44.44,64.14 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 2
+step
+goto 63.11,60.95 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 2
+step
+goto 54.73,64.97
+|tip Go upstairs.
+'Ignite _Watch Fire_ |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 2
+step
+goto 64.90,61.81 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 3 |tip Go downstairs.
+step
+goto 57.02,49.48 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 3
+step
+goto U42_VarensWatch_int_base 64.02,58.41 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 3
+step
+goto 34.50,71.13 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 3
+step
+goto 21.71,42.78 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 3
+step
+goto 35.63,33.43 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 3
+step
+goto UI_Maps_U42_VarensWall_Ext 50.49,39.98
+|tip Go all te way upstairs.
+'Use _Skyshard_ |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 3
+|tip Manually skip to the next step.
+step
+goto U42_VarensWatch_int_base 57.97,36.08 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 3 |tip Go downstairs.
+step
+goto 71.34,12.84 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 3
+step
+goto UI_Maps_U42_VarensWall_Ext 63.58,31.87
+kill Commander Hanhael |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 3
+|tip Manually skip to the next step.
+step
+goto 63.58,31.87
+'Ignite _Watch Fire_ |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 3
+step
+goto U42_VarensWatch_int_base 69.08,11.13 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 4
+step
+goto 37.33,32.62 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 4
+step
+goto 37.92,71.64 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 4
+step
+goto 64.01,58.38 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 4
+step
+goto UI_Maps_U42_VarensWall_Ext 57.40,49.50 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 4
+step
+goto 73.62,47.45 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 4
+step
+goto 68.28,41.69 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 4
+step
+goto 68.15,40.98
+|tip Go all the way upstairs.
+'Ignite _Watch Fire_ |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 4
+step
+'Open _West Weald_ Map
+'Travel to _Sutch_ |q Cold Fires on the Watch/Leave Varen's Watch
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 16.83,55.91
+talk Captain Abitius
+turnin Cold Fires on the Watch
+step
+goto 19.80,60.96
+'Use _Sutch_
+'Travel to _Three Points_ |q Seeds of Suspicion/Find the Wildburn Seed
+|tip Manually skip to the next step.
+step
+goto 43.41,54.73 |q Seeds of Suspicion/Find the Wildburn Seed
+step
+goto 47.58,50.83 |q Seeds of Suspicion/Find the Wildburn Seed
+step
+goto 45.55,47.38 |q Seeds of Suspicion/Find the Wildburn Seed
+step
+goto 43.85,47.25 |q Seeds of Suspicion/Burn the Wildburn Seed |future
+step
+goto 45.30,46.57
+'Burn _Wildburn Seed_ |q Seeds of Suspicion/Burn the Wildburn Seed |future
+step
+goto 45.25,46.61
+talk Beragon |q Seeds of Suspicion/Talk to Beragon
+step
+goto 50.63,49.15 |q Seeds of Suspicion/Rendezvous Near Hoperoot
+step
+goto 56.18,51.04
+talk Beragon |q Seeds of Suspicion/Talk to Beragon |future
+step
+goto 57.22,55.46
+'Enter _Hoperoot_ |q Seeds of Suspicion/Enter Hoperoot |future
+|tip Manually skip to the next step.
+step
+goto u42_hoperoot1_base 59.38,50.74 |q Seeds of Suspicion/Search Hoperoot |future
+step
+goto 37.11,61.19 |q Seeds of Suspicion/Search Hoperoot
+step
+goto 33.52,53.69 |q Seeds of Suspicion/Find King Nantharion |future
+step
+goto 41.96,33.60 |q Seeds of Suspicion/Find King Nantharion
+step
+goto 67.28,37.41 |q Seeds of Suspicion/Find King Nantharion
+step
+goto 86.86,55.80 |q Seeds of Suspicion/Find King Nantharion
+step
+goto 68.86,64.59
+|tip Watch the dialogue.
+'Take _Recollection Map_ |q Seeds of Suspicion/Take the Map |future
+step
+goto 69.95,66.56
+'Examine _Report on Feldagard Keep_ |q Seeds of Suspicion/Examine the Documents |future
+step
+goto 73.06,71.13 |q Seeds of Suspicion/Continue to Explore Hoperoot
+step
+goto 86.37,77.89 |q Seeds of Suspicion/Continue to Explore Hoperoot
+step
+goto 78.36,71.93 |q Seeds of Suspicion/Continue to Explore Hoperoot
+step
+goto 61.50,68.82 |q Seeds of Suspicion/Continue to Explore Hoperoot
+step
+goto 54.28,52.63 |q Seeds of Suspicion/Continue to Explore Hoperoot
+step
+goto 37.70,48.53
+|tip Watch the dialogue.
+'Use _Echonir_ |q Seeds of Suspicion/Use the Echonir |future
+step
+goto 35.76,46.29
+talk Tribune Alea Idolus |q Seeds of Suspicion/Talk to Tribune Alea Idolus
+step
+goto 27.99,44.47 |q Seeds of Suspicion/Search for King Nantharion
+step
+goto 13.29,43.21 |q Seeds of Suspicion/Search for King Nantharion
+step
+goto 17.43,34.76 |q Seeds of Suspicion/Search for King Nantharion
+step
+goto 35.32,35.71 |q Seeds of Suspicion/Search for King Nantharion
+step
+goto 31.57,51.10 |q Seeds of Suspicion/Enter the Throne Room |future
+step
+goto 41.50,45.72
+'Listen _King Nantharion_ |q Seeds of Suspicion/Listen to King Nantharion |future
+step
+goto 62.18,27.55 |q Seeds of Suspicion/Enter the Throne Room |future
+step
+goto 77.44,54.32 |q Seeds of Suspicion/Enter the Throne Room
+step
+goto 71.39,66.12
+'Enter _Hoperoot Throne Room_ |q Seeds of Suspicion/Enter the Throne Room
+step
+goto 65.21,76.52
+kill Greenspeaker Sorilen |q Seeds of Suspicion/Defeat Greenspeaker Sorilen
+step
+goto 64.37,79.27
+'Burn _Wildburn Seed_ |q Seeds of Suspicion/Destroy the Wildburn Seed
+step
+goto 56.49,76.40 |q Seeds of Suspicion/Escape Hoperoot |future |tip Watch the dialogue.
+step
+goto 59.89,90.29
+'Use _West Weald_ |q Seeds of Suspicion/Escape Hoperoot |future
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 60.03,50.89
+talk Beragon |q Seeds of Suspicion/Talk to Beragon |future
+step
+goto 59.76,44.07
+wayshrine Ontus
+step
+goto 59.41,43.80
+'Examine _Constable Seeks Deputy_
+accept Another Death in Ontus
+step
+goto u42_ontus_city_base 61.38,58.48
+talk Constable Yabren |q Another Death in Ontus/Talk to Constable Yabren
+step
+goto 62.34,57.70
+'Examine _Dalenn Forster_ |q Another Death in Ontus/.*Examine Recent Graves.* |count 1
+step
+goto 60.86,54.38
+'Examine _Evanoa Harklin_ |q Another Death in Ontus/.*Examine Recent Graves.* |count 2
+step
+goto 59.13,55.29
+'Examine _Gelw Vashreef_ |q Another Death in Ontus/.*Examine Recent Graves.* |count 3
+step
+goto 61.38,58.48
+talk Constable Yabren |q Another Death in Ontus/Talk to Constable Yabren
+step
+goto 53.76,54.30
+'Open _Stonechip Gambling Den_ |q Another Death in Ontus/.*Talk to Ontus Townsfolk.*
+|tip Manually skip to the next step.
+step
+goto 54.42,52.84
+talk Ghrakug |q Another Death in Ontus/.*Talk to Ontus Townsfolk.* |count 1
+step
+goto 53.54,53.34
+'Open _Stonechip Tavern_ |q Faded Scarlets/Recruit Fallen-Knives
+|tip Manually skip to the next step.
+step
+goto 51.54,52.94
+talk Fallen-Knives |q Faded Scarlets/Recruit Fallen-Knives
+'Tell him "_Tell me more about destroying the record of your debt instead of paying._"
+|tip Manually skip to the next step.
+step
+goto 49.84,54.40
+'Open _Ontus_ |q Found Family/Find Star-Gazer Sariyaah
+|tip Manually skip to the next step.
+step
+goto 46.91,53.44
+talk Star-Gazer Sariyaah
+turnin Found Family
+turnin Flocking Together
+step
+goto 50.89,47.66
+'Open _Constable Station_ |q Another Death in Ontus/Search Constable's Office
+|tip Manually skip to the next step.
+step
+goto 50.47,46.38
+|tip Go upstairs.
+'Examine _Constable Ulbren's Notebook_ |lorebook Constable Ulbren's Notebook/3/50/21
+step
+goto 50.71,46.46
+'Open _Ontus_ |q Another Death in Ontus/.*Talk to Ontus Townsfolk.*
+|tip Manually skip to the next step.
+step
+goto 53.76,48.18
+'Open _Ranch Overseer Merrarq's House_ |q Another Death in Ontus/.*Talk to Ontus Townsfolk.*
+|tip Manually skip to the next step.
+step
+goto 54.41,48.89
+talk Ranch Overseer Merrarq |q Another Death in Ontus/.*Talk to Ontus Townsfolk.* |count 2
+step
+goto 54.60,48.27
+'Open _Ontus_ |q Faded Scarlets/Recruit Fallen-Knives
+|tip Manually skip to the next step.
+step
+goto 52.26,44.89
+'Unlock _Laurina's House_ |q Faded Scarlets/Recruit Fallen-Knives
+|tip Manually skip to the next step.
+step
+goto 51.17,44.27
+'Examine _Laurina's Ledger_ |q Faded Scarlets/Recruit Fallen-Knives
+|tip Manually skip to the next step.
+step
+goto 52.31,44.48
+'Open _Ontus_ |q Another Death in Ontus/Investigate the Murders
+|tip Manually skip to the next step.
+step
+goto 53.62,40.00
+talk Quarry Boss Laurina |q Another Death in Ontus/Investigate the Murders
+step
+goto 52.45,48.59
+talk Constable Yabren |q Another Death in Ontus/Talk to Constable Yabren
+step
+goto 49.55,49.78
+'Open _Carvain Ranch Offices_ |q Another Death in Ontus/Talk to Baron Carvain
+|tip Manually skip to the next step.
+step
+goto 47.54,49.03
+talk Baron Carvain |q Another Death in Ontus/Talk to Baron Carvain
+step
+goto 48.87,49.24
+'Open _Ontus_ |q Another Death in Ontus/Talk to Lady Raxalee
+|tip Manually skip to the next step.
+step
+goto 58.95,42.33
+'Open _Raxalee Quarry Offices_ |q Another Death in Ontus/Talk to Lady Raxalee
+|tip Manually skip to the next step.
+step
+goto 61.10,42.27
+talk Lady Raxalee |q Another Death in Ontus/Talk to Lady Raxalee
+step
+goto 59.20,42.42
+'Open _Ontus_ |q Faded Scarlets/Recruit Fallen-Knives
+|tip Manually skip to the next step.
+step
+goto 48.81,55.35
+'Open _Stonechip Tavern_ |q Faded Scarlets/Recruit Fallen-Knives
+|tip Manually skip to the next step.
+step
+goto 51.56,52.93
+talk Fallen-Knives |q Faded Scarlets/Recruit Fallen-Knives
+step
+goto 51.27,54.21
+'Open _Stonechip Gambling Den_ |q Another Death in Ontus/Talk to Constable Yabren
+|tip Manually skip to the next step.
+step
+goto 54.37,52.82
+talk Ghrakug |q Another Death in Ontus/Talk to Ghrakug
+step
+goto 54.99,54.03
+'Open _Ontus_ |q Another Death in Ontus/.*Search Carvain Manor.*
+|tip Manually skip to the next step.
+step
+goto 29.62,71.58 |q Another Death in Ontus/.*Search Carvain Manor.*
+step
+goto 24.12,58.15 |q Another Death in Ontus/.*Search Carvain Manor.*
+step
+goto 16.11,70.27
+'Use _Skyshard_ |q Another Death in Ontus/.*Search Carvain Manor.*
+|tip Manually skip to the next step.
+step
+goto 44.80,73.02 |q Another Death in Ontus/.*Search Carvain Manor.*
+step
+goto 59.97,83.94
+'Open _Carvain Manor_ |q Another Death in Ontus/.*Search Carvain Manor.*
+|tip Manually skip to the next step.
+step
+goto 52.35,83.92
+'Examine _A Profitable Discovery_ |q Another Death in Ontus/.*Search Carvain Manor.* |count 1
+step
+goto 51.16,84.52
+|tip Go upstairs.
+'Examine _Delivery Confirmation_ |q Another Death in Ontus/.*Search Carvain Manor.* |count 2
+step
+goto 51.29,83.91
+|tip Go downstairs.
+'Open _Ontus_ |q Another Death in Ontus/.*Search Lady Raxalee's Tower.*
+|tip Manually skip to the next step.
+step
+goto 44.80,73.02 |q Another Death in Ontus/.*Search Lady Raxalee's Tower.*
+step
+goto 29.62,71.58 |q Another Death in Ontus/.*Search Lady Raxalee's Tower.*
+step
+goto 66.27,35.15 |q Another Death in Ontus/.*Search Lady Raxalee's Tower.*
+step
+goto 51.12,9.27 |q Another Death in Ontus/.*Search Lady Raxalee's Tower.*
+step
+goto 37.77,17.25
+'Open _Raxalee's Tower |q Another Death in Ontus/.*Search Lady Raxalee's Tower.*
+|tip Manually skip to the next step.
+step
+goto 37.09,16.77
+|tip Go upstairs.
+'Examine _An Increasing Problem_ |q Another Death in Ontus/.*Search Lady Raxalee's Tower.* |count 1
+step
+goto 35.28,15.91
+'Examine _Alchemist's Report_ |q Another Death in Ontus/.*Search Lady Raxalee's Tower.* |count 2
+step
+goto 37.34,16.82
+|tip Go downstairs.
+goto 37.34,16.82
+'Open _Ontus_ |q Another Death in Ontus/Investigate Zeggar's Blind
+|tip Manually skip to the next step.
+step
+goto 54.59,10.96 |q Another Death in Ontus/Investigate Zeggar's Blind
+step
+goto westwealdoverland_base 59.49,39.88
+'Open _Zeggar's Blind_ |q Another Death in Ontus/Investigate Zeggar's Blind
+|tip Manually skip to the next step.
+step
+goto U42_UI_Maps_FornDortis_01 27.84,54.37 |q Another Death in Ontus/Investigate Zeggar's Blind
+step
+goto 74.22,81.80
+'Take _Desk Key_ |q Another Death in Ontus/Take the Key |future
+step
+goto 76.58,53.91
+'Unlock _Alchemist Surius's Desk_ |q Another Death in Ontus/Use the Desk Key |future
+step
+goto 74.73,53.03
+'Destroy _Alchemical Equipment |q Another Death in Ontus/Destroy Alchemical Equipment
+step
+goto 47.90,41.00
+'Destroy _Alchemical Scale_ |q Another Death in Ontus/Destroy Alchemical Scale
+step
+goto 62.28,62.53
+'Destroy _Alchemical Apparatus |q Another Death in Ontus/Destroy Alchemical Apparatus
+step
+'Open _West Weald_ Map
+'Travel to _Ontus_ |q Another Death in Ontus/Meet Yabren at Stonechip Gambling Den
+|tip Manually skip to the next step.
+step
+goto u42_ontus_city_base 53.69,54.20
+'Open _Stonechip Gambling Den_ |q Another Death in Ontus/Meet Yabren at Stonechip Gambling Den
+step
+goto 54.02,53.52
+talk Ghrakug |q Another Death in Ontus/Talk to Ghrakug
+step
+goto 55.03,54.05
+'Open _Ontus_ |q Another Death in Ontus/Go to the Ontus Reservoir
+|tip Manually skip to the next step.
+step
+goto 46.55,54.62 |q Another Death in Ontus/Go to the Ontus Reservoir
+step
+goto 66.57,35.05 |q Another Death in Ontus/Go to the Ontus Reservoir
+step
+goto 61.66,19.72
+'Open _Ontus Reservoir_ |q Another Death in Ontus/Go to the Ontus Reservoir
+|tip Manually skip to the next step.
+step
+goto 65.88,17.69
+'Untie _Yabren's Bonds_ |q Another Death in Ontus/Free Constable Yabren
+step
+goto 65.56,17.01
+'Listen to _Baron Carvain and Lady Raxalee_ |q Another Death in Ontus/Listen to Baron Carvain and Lady Raxalee
+step
+goto 67.64,14.06
+kill Mercenary Adder |q Another Death in Ontus/Defeat Mercenary Adder
+kill Rowdy Tharden |q Another Death in Ontus/Defeat Rowdy Tharden
+step
+goto 62.33,19.31
+'Open _West Weald_ |q Another Death in Ontus/Find Baron Carvain and Lady Raxalee
+|tip Manually skip to the next step.
+step
+goto 63.63,29.40
+talk Constable Yabren
+turnin Another Death in Ontus
+step
+goto westwealdoverland_base 59.76,44.07
+'Use _Ontus_
+'Travel to _Skingrad City_ |q Seeds of Suspicion/Return to Beragon's Townhouse
+|tip Manually skip to the next step.
+step
+goto u42_Skingrad_base 44.03,69.33 |q Seeds of Suspicion/Return to Beragon's Townhouse
+step
+goto 41.76,72.18 |q Seeds of Suspicion/Return to Beragon's Townhouse
+step
+goto 42.54,72.51
+'Open _Beragon's Townhouse_ |q Seeds of Suspicion/Return to Beragon's Townhouse
+step
+goto 43.68,73.32
+talk Beragon
+turnin Seeds of Suspicion
+accept Relics of the Three Princes
+step
+goto 43.37,73.41
+'Open _Skingrad_ |q Faded Scarlets/Find Hooke in the Skingrad Outlaws Refuge
+|tip Manually skip to the next step.
+step
+goto 46.51,65.75 |q Faded Scarlets/Find Hooke in the Skingrad Outlaws Refuge
+step
+goto 45.71,57.99 |q Faded Scarlets/Find Hooke in the Skingrad Outlaws Refuge
+step
+goto 63.41,58.95
+'Examine _Skingrad Seeks Adventurers!_
+accept Skingrad Seeks Adventurers!
+step
+goto 61.43,57.61
+talk Legionary Castus
+turnin Skingrad Seeks Adventurers!
+step
+goto 72.25,55.04
+'Open _Skingrad Outlaws Refuge_ |q Faded Scarlets/Find Hooke in the Skingrad Outlaws Refuge
+|tip Manually skip to the next step.
+step
+goto u42_skingrad_or_base 23.81,37.41 |q Faded Scarlets/Find Hooke in the Skingrad Outlaws Refuge
+step
+goto 26.89,48.40 |q Faded Scarlets/Find Hooke in the Skingrad Outlaws Refuge
+step
+goto 65.49,44.11
+talk Hooke |q Faded Scarlets/Talk to Hooke |future
+step
+'Open _West Weald_
+'Travel to _Wildburn's Edge_ |q Faded Scarlets/Go to Naku's Claim
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 61.67,71.12 |q Faded Scarlets/Go to Naku's Claim
+step
+goto 60.19,67.09
+'Examine _Note to a Scarlet_ |q Faded Scarlets/Read the Note |future
+step
+goto 65.37,66.67
+'Use _Wildburn's Edge_
+'Travel to _Ostumir_ |q A Matter of Propriety |future
+|tip Manually skip to the next step.
+step
+goto 54.70,73.54
+talk Grander Nemacret
+accept A Matter of Propriety
+step
+goto 53.46,72.87
+'Open _Fyrelight Cave_ |q A Matter of Propriety |future
+|tip Manually skip to the next step.
+step
+goto u42_base_clawcave 75.68,48.14 |q A Matter of Propriety/.*Find Dowry Items.*
+step
+goto 64.15,44.96 |q A Matter of Propriety/.*Find Dowry Items.*
+step
+goto 60.55,34.07
+'Take _Grander's Gemstones_ |q A Matter of Propriety/.*Find Dowry Items.* |count 1
+step
+goto 48.37,24.71 |q A Matter of Propriety/.*Find Dowry Items.*
+step
+goto 55.65,23.91 |q A Matter of Propriety/.*Find Dowry Items.*
+step
+goto 55.90,7.04
+|tip Go upstairs.
+'Take _Grander's Jewelry_ |q A Matter of Propriety/.*Find Dowry Items.* |count 2
+step
+goto 44.28,08.73 |q A Matter of Propriety/.*Find Dowry Items.* |tip Drop down.
+step
+goto 30.63,14.40
+'Take _Grander's Spices_ |q A Matter of Propriety/.*Find Dowry Items.* |count 3
+step
+goto 21.40,19.17 |q Faded Scarlets/Find the Meeting Site |tip Cross the Bridge.
+step
+goto 24.50,25.38 |q Faded Scarlets/Find the Meeting Site
+step
+goto 31.29,22.12 |q Faded Scarlets/Find the Meeting Site
+step
+goto 32.19,38.04 |q Faded Scarlets/Find the Meeting Site
+step
+goto 33.30,42.26
+'Use _Skyshard_  |q Faded Scarlets/Find the Meeting Site
+|tip Manually skip to the next step.
+step
+goto 32.19,38.04 |q Faded Scarlets/Find the Meeting Site
+step
+goto 31.29,22.12 |q Faded Scarlets/Find the Meeting Site
+step
+goto 24.25,25.05 |q Faded Scarlets/Find the Meeting Site
+step
+goto 23.22,31.36 |q Faded Scarlets/Find the Meeting Site
+step
+goto 23.92,37.51
+'Examine _Naku_ |q Faded Scarlets/Examine Naku's Corpse |future
+step
+goto 28.93,58.24 |q A Matter of Propriety/.*Find Dowry Items.*
+step
+goto 41.51,60.62
+'Take _Grander's Silks_ |q A Matter of Propriety/.*Find Dowry Items.* |count 4
+step
+goto 52.28,60.45 |q A Matter of Propriety/Talk to Amaurel Verdulis
+step
+goto 55.21,71.97 |q A Matter of Propriety/Talk to Amaurel Verdulis
+step
+goto 59.96,75.67 |q A Matter of Propriety/Talk to Amaurel Verdulis
+step
+goto 58.68,84.32 |q A Matter of Propriety/Talk to Amaurel Verdulis
+step
+goto 72.66,89.65 |q A Matter of Propriety/Talk to Amaurel Verdulis
+step
+goto 
+kill Scourgetail |q A Matter of Propriety/Talk to Amaurel Verdulis
+|tip Manually skip to the next step.
+step
+goto 77.29,57.76
+talk Amaurel Verdulis |q A Matter of Propriety/Talk to Amaurel Verdulis
+step
+goto 78.96,59.25
+'Open _West Weald_ |q A Matter of Propriety/Return to Grander Nemarcet
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 54.78,73.77
+talk Grander Nemarcet
+turnin A Matter of Propriety
+step
+goto 54.37,74.59
+'Use _Ostumir_
+'Travel to _Skingrad Vineyards_ |q Relics of the Three Princes/Investigate the Outcast Inn
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 66.28,55.34 |q Relics of the Three Princes/Investigate the Outcast Inn
+step
+goto 63.96,54.17
+talk Leramil the Wise
+accept The Many Paths
+step
+goto 63.53,53.94
+'Open _The Outcast Inn_ |q The Many Paths/Enter the Outcast Inn |future
+step
+'_At the Bar._
+talk Innkeeper Brynmir |q The Many Paths/Talk to Innkeeper Brynmir
+step
+goto 63.30,52.78
+'_The Next Room_
+|tip Go Out to the Courtyard.
+'Take _Bucket of Well Water_ |q The Many Paths/Get a Bucket of Well Water
+step
+goto 63.34,53.50
+'Open _The Outcast Inn_ |q The Many Paths/Bring Water to Innkeeper Brynmir
+|tip Manually skip to the next step.
+step
+'_At the Bar_
+'Bring _Water to Innkeeper Brynmir_ |q The Many Paths/Bring Water to Innkeeper Brynmir
+step
+'_Right of the Bar_
+talk Ithelia |q The Many Paths/Talk to Ithelia
+step
+'_At the Bar._
+talk Innkeeper Brynmir |q The Many Paths/Talk to Innkeeper Brynmir
+step
+goto 62.48,52.42
+'_The Next Room_
+|tip Go Out to the Courtyard.
+'Examine _Old Monk's Diary_ |lorebook Old Monk's Diary/3/50/43
+step
+goto 61.99,53.60 |lorebook Open Tabs: 2E 579/3/50/42
+step
+goto 62.63,54.22
+'Examine _Old Tabs: 2E 579_ |lorebook Open Tabs: 2E 579/3/50/42
+step
+goto 61.04,52.56
+'Open _Outcast Inn Outbuilding_ |q The Many Paths/Search for the Recipe Book
+|tip Manually skip to the next step.
+step
+goto 61.34,52.43
+|tip Go upstairs.
+'Examine _Gilraedal's Book of Obscure and Ancient Spirits_ |q The Many Paths/Search for the Recipe Book
+step
+goto 61.24,52.46
+'Open _Outcast Inn Courtyard_ |q The Many Paths/Return to Innkeeper Brynmir
+|tip Manually skip to the next step.
+step
+goto 62.61,53.33
+'Open _Outcast Inn_ |q The Many Paths/Return to Innkeeper Brynmir
+|tip Manually skip to the next step.
+step
+'_At the Bar._
+talk Innkeeper Brynmir |q The Many Paths/Talk to Innkeeper Brynmir |future
+step
+'_Go Downstairs_
+'Open _Outcast Inn Cellar_ |q The Many Paths/Enter the Outcast Inn Cellar |future
+|tip Manually skip to the next step.
+step
+goto U42_UI_Maps_InnBetween_01 48.56,30.66
+talk Ithelia |q The Many Paths/Talk to Ithelia |future
+step
+goto 48.56,26.03
+'Take _Lamp of Clarity_ |q The Many Paths/Take the Lamp
+step
+goto 35.20,15.11
+'Use _Lamp of Clarity_ |q The Many Paths/Use the Lamp
+step
+goto 34.67,13.80
+'Enter _Portal to the Many Paths_ |q The Many Paths/Enter the Many Paths
+step
+goto U42_UI_Maps_InnBetween_02 25.04,48.82
+talk Ithelia |q The Many Paths/Talk to Ithelia |future
+step
+goto 16.07,56.18
+'Take _Tirum Wood_ |q The Many Paths/Take the Tirum Weed
+step
+goto 18.70,55.67
+'Enter _Portal to the Outcast Inn_ |q The Many Paths/Return to the Cellar
+step
+goto U42_UI_Maps_InnBetween_01 49.08,12.93
+'Use _Lamp of Clarity_ |q The Many Paths/Use the Lamp
+step
+goto 49.08,12.93
+'Enter _Portal to the Many Paths_ |q The Many Paths/Enter the Many Paths
+step
+goto U42_UI_Maps_InnBetween_03 71.53,62.00 |q The Many Paths/Explore This Path
+step
+goto 66.21,38.75 |q The Many Paths/Explore This Path
+step
+goto 47.96,29.27 |q The Many Paths/Explore This Path
+step
+goto 39.25,29.48 |q The Many Paths/Explore This Path
+step
+goto 15.90,29.45
+talk Ithelia |q The Many Paths/Talk to Ithelia |future
+step
+goto 19.49,25.59
+'Take _Harkfruit_ |q The Many Paths/Take the Harkfruit
+step
+goto 18.54,27.35
+'Enter _Portal to the Outcast Inn_ |q The Many Paths/Return to the Cellar
+step
+goto U42_UI_Maps_InnBetween_01 64.10,13.54
+'Use _Lamp of Clarity_ |q The Many Paths/Use the Lamp
+step
+goto 64.10,13.54
+'Enter _Portal to the Many Paths_ |q The Many Paths/Enter the Many Paths
+|tip Manually skip to the next step.
+step
+goto U42_UI_Maps_InnBetween_04 66.42,80.13 |q The Many Paths/Explore This Path |future
+step
+goto 65.81,57.28 |q The Many Paths/Explore This Path
+step
+goto 42.93,57.44 |q The Many Paths/Explore This Path
+step
+goto 38.72,65.25 |q The Many Paths/Explore This Path
+step
+goto 38.35,29.59 |q The Many Paths/Explore This Path
+step
+goto 25.59,29.53
+talk Torvesard |q The Many Paths/Talk to Torvesard |future
+step
+goto 14.59,25.27
+'Take _Lute Berries_ |q The Many Paths/Take the Lute Berries
+step
+goto 15.98,30.95
+'Enter _Portal to the Outcast Inn_ |q The Many Paths/Return to the Cellar
+step
+goto U42_UI_Maps_InnBetween_01 51.97,30.83
+talk Innkeeper Brynmir |q The Many Paths/Talk to Innkeeper Brynmir
+step
+goto 52.93,29.36
+|tip Listen to Brynmir Directions.
+.'Place _Tirum Weed_
+.'Ignite _Heating Element_
+.'Open _Valve_ Add Heat
+.'Close _Valve_ Reduce Heat
+.'Place _Harkfruit_
+.'Ignite _Heat Element_
+.'Open _Valve_  to Add Heat
+.'Close _Valve_ Reduce Heat
+.'Place _Lute Berries_
+.'Activate _Cooling Elements_
+.'Open _Valve_ Add Cold
+.'Close _Valve_ Reduce Cold
+.'Mix _Pot of Steeped Tirum Weed_ four times
+.'Mix _Dish of Chilled Lute Berries_ two times
+.'Mix _Break of Harkfruit Juice_ four times
+.'Pour _Drinkmaker Valve_
+.'Take _Sage's Dream_ |q The Many Paths/Properly Mix a Sage's Dream
+step
+goto 49.34,88.30
+'Open _Outcast Inn_ |q The Many Paths/Return to the Outcast Inn |future
+|tip Manually skip to the next step.
+step
+'Go back to the _Fireplace next to the Bar_
+'Place _Sage's Dream_ |q The Many Paths/Give the Sage's Dream to Ithelia |future
+step
+talk Ithelia |q The Many Paths/Talk to Ithelia
+step
+goto westwealdoverland_base 63.92,54.11
+|tip Outside.
+talk Leramil the Wise
+turnin The Many Paths
+step
+'Open _West Weald_ Map
+'Travel to _Skingrad City_ |q Relics of the Three Princes/Return to Beragon's Townhouse
+tip Manally skip to the next step.
+step
+goto u42_Skingrad_base 43.99,68.94 |q Relics of the Three Princes/Return to Beragon's Townhouse
+step
+goto 41.76,72.18 |q Relics of the Three Princes/Return to Beragon's Townhouse |future
+step
+goto 42.55,72.50
+'Open _Beragon's Townhouse_ |q Relics of the Three Princes/Return to Beragon's Townhouse |future
+|tip Manually skip to the next step.
+step
+goto 43.67,73.33
+talk Beragon |q Relics of the Three Princes/Talk to Beragon |future
+step
+goto 43.72,73.37
+talk Leramil the Wise |q Relics of the Three Princes/Talk to Leramil the Wise
+step
+goto 43.37,73.41
+'Open _Skingrad_ |q Faded Scarlets/Find Hooke in the Skingrad Outlaws Refuge
+|tip Manually skip to the next step.
+step
+goto 46.03,67.16 |q Faded Scarlets/Find Hooke in the Skingrad Outlaws Refuge
+step
+goto 45.71,57.99 |q Faded Scarlets/Find Hooke in the Skingrad Outlaws Refuge
+step
+goto 72.25,55.04
+'Open _Skingrad Outlaws Refuge_ |q Faded Scarlets/Find Hooke in the Skingrad Outlaws Refuge
+|tip Manually skip to the next step.
+step
+goto u42_skingrad_or_base 23.81,37.41 |q Faded Scarlets/Find Hooke in the Skingrad Outlaws Refuge
+step
+goto 26.89,48.40 |q Faded Scarlets/Find Hooke in the Skingrad Outlaws Refuge
+step
+goto 62.83,42.85 |q Faded Scarlets/Find Hooke in the Skingrad Outlaws Refuge
+step
+goto 68.63,63.13
+|tip Go upstairs.
+talk Hooke |q Faded Scarlets/Talk to Hooke |future
+step
+goto 45.74,58.01
+'Open _West Weald_ Map
+'Travel to _Sutch_ |q Relics of the Three Princes/Go to Niryastare
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 20.48,58.73
+|tip He moves around.
+talk Beragon |q Relics of the Three Princes/Talk to Beragon |future
+step
+goto 20.48,57.79
+'Scout _Defense_ |q Relics of the Three Princes/.*Scout the Defense.* |count 1
+step
+goto 18.29,57.39
+'Scout _Defense_ |q Relics of the Three Princes/.*Scout the Defense.* |count 2
+step
+goto 18.35,57.40
+|tip Watch the dialogue.
+talk Beragon |q Relics of the Three Princes/Talk to Beragon
+step
+goto 20.01,55.80 |q Relics of the Three Princes/Enter Niryastare
+step
+goto 20.07,56.10
+'Open _Niryastare_ |q Relics of the Three Princes/Enter Niryastare |future
+|tip Manually skip to the next step.
+step
+goto UI_Maps_U42_PE3_Niryastare_01 62.91,28.58 |q Relics of the Three Princes/Explore Niryastare |future
+step
+goto 59.53,50.31
+'Examine _Mystic Tarim's Notes_ |q Relics of the Three Princes/.*Examine the Notes.* |count 1 |future
+step
+goto 59.53,50.31
+'Examine _King Nantharion's Orders_ |q Relics of the Three Princes/.*Examine the Notes.* |count 2
+step
+goto 59.06,50.46
+talk Beragon |q Relics of the Three Princes/Talk to Beragon
+step
+goto 64.64,43.81 |q Relics of the Three Princes/Search for the Lesser Stone
+step
+goto 79.14,45.20 |q Relics of the Three Princes/Search for the Lesser Stone
+step
+goto 79.08,28.00 |q Relics of the Three Princes/Search for the Lesser Stone
+step
+goto 66.99,26.37
+'Use _Lamp of Clarity_
+'Take _Lesser Welkynd Stone_ |q Relics of the Three Princes/Take the Lesser Stone |future
+step
+goto 79.14,28.75 |q Relics of the Three Princes/Place the Lesser Stone in Socket
+step
+goto 78.20,44.39 |q Relics of the Three Princes/Place the Lesser Stone in Socket
+step
+goto 62.89,50.48
+'Place _Lesser Welkynd Stone_ |q Relics of the Three Princes/Place the Lesser Stone in Socket
+step
+goto 42.67,49.45 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 1
+step
+goto 29.75,56.75
+.'Use _Abolisher_
+.'Use _Abolisher Portal_ |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 1
+|tip Manually skip to the next step.
+step
+goto 15.68,56.75
+'Use _Lamp of Clarity_
+'Take _Lesser Welkynd Stone_ |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 1
+step
+goto 21.22,56.56
+'Use _Abolisher Portal_ |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 2
+|tip Manually skip to the next step.
+step
+goto 42.78,56.19 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 2
+step
+goto 60.15,43.89 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 2
+step
+goto 38.44,44.77 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 2
+step
+goto 29.93,50.93 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 2
+step
+goto 30.35,36.24 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 2
+step
+goto 18.25,37.26 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 2
+step
+goto 18.20,44.81 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 2
+step
+goto 27.94,44.24
+.'Use _Abolisher_
+.'Use _Abolisher Portal_ |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 2
+|tip Manually skip to the next step.
+step
+goto 33.58,42.31
+'Use _Lamp of Clarity_
+'Take _Lesser Welkynd Stone_ |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 2
+step
+goto 32.47,44.49
+'Use _Abolisher Portal_ |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 3
+|tip Manually skip to the next step.
+step
+goto 18.18,44.53 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 3
+step
+goto 17.86,36.98 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 3
+step
+goto 30.40,37.28 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 3
+step
+goto 30.33,52.34 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 3
+step
+goto 38.70,51.32 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 3
+step
+goto 38.93,44.24 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 3
+step
+goto 87.76,48.62
+'Use _Abolisher_
+'Use _Abolisher Portal_ |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 3
+|tip Manually skip to the next step.
+step
+goto 86.89,60.66 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 3
+step
+goto 72.34,56.73 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 3
+step
+goto 83.83,52.60 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 3
+step
+goto 79.25,52.66
+'Use _Lamp of Clarity_
+'Take _Lesser Welkynd Stone_ |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 3
+step
+goto 82.84,56.45 |q Relics of the Three Princes/Return to the Great Welkynd Stone
+step
+goto 73.39,60.47 |q Relics of the Three Princes/Return to the Great Welkynd Stone
+step
+goto 87.49,60.68 |q Relics of the Three Princes/Return to the Great Welkynd Stone
+step
+goto 87.42,57.09
+'Use _Abolisher Portal_ |q Relics of the Three Princes/Return to the Great Welkynd Stone
+|tip Manually skip to the next step.
+step
+goto 65.24,43.83 |q Relics of the Three Princes/Return to the Great Welkynd Stone
+step
+goto 60.83,48.43
+'Place _Lesser Welkynd Stone_ |q Relics of the Three Princes/.*Place the Lesser Stones.* |count 1
+step
+goto 59.02,50.48
+'Place _Lesser Welkynd Stone_ |q Relics of the Three Princes/.*Place the Lesser Stones.* |count 2
+step
+goto 60.90,52.43
+'Place _Lesser Welkynd Stone_ |q Relics of the Three Princes/.*Place the Lesser Stones.* |count 3
+step
+goto 63.06,58.10
+'Enter _Niryastare Vault_ |q Relics of the Three Princes/Enter the Vault
+step
+goto 63.21,67.40 |q Relics of the Three Princes/Search the Vault
+step
+goto 45.71,65.73
+'Use _Abolisher_
+'Use _Portal to Upper Vault_ |q Relics of the Three Princes/Use Abolisher to Reach the Upper Floor |future
+step
+goto 42.72,75.74
+'Take _Skein of Secrets_ |q Relics of the Three Princes/Take the Skein of Secrets |future
+step
+goto 42.50,77.01
+'Use _Echonir_ |q Relics of the Three Princes/Use the Echonir
+step
+goto 42.29,76.81
+talk Beragon |q Relics of the Three Princes/Talk to Beragon
+step
+'Open _West Weald_ Map
+'Travel to _Three Points_ |q Relics of the Three Princes/Return to Beragon's Townhouse
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 43.44,54.70 |q Faded Scarlets/Go to Caelum Vineyard
+step
+goto 45.24,54.10
+'Examine _Tarnished Slag_ |q Faded Scarlets/.*Search for Signs.* |count 1
+step
+goto 45.88,55.89
+'Examine _Handmade Gravestone_ |q Faded Scarlets/.*Search for Signs.* |count 2
+step
+goto 46.68,53.53 |q Faded Scarlets/.*Search for Signs.* |count 3
+step
+goto 46.72,51.39 |q Faded Scarlets/.*Search for Signs.* |count 3
+step
+goto 47.21,51.95
+'Examine _Sewer Pipe_ |q Faded Scarlets/.*Search for Signs.* |count 3
+step
+goto 46.92,51.30 |q Faded Scarlets/Talk to Hooke
+step
+goto 45.60,53.35 |q Faded Scarlets/Talk to Hooke
+step
+goto 45.16,55.40
+talk Hooke |q Faded Scarlets/Talk to Hooke
+step
+goto 45.69,53.61
+'Open _Caelum Cellars_ |q Faded Scarlets/Enter the Caelm Cellars |future
+|tip Manually skip to the next step.
+step
+goto u42_ICQuest_base 47.87,64.36 |q Faded Scarlets/Find Marcan Caelum
+step
+goto 67.17,71.98
+'Examine _Weathered Journal_ |q Faded Scarlets/.*Search the Room.* |count 1
+step
+'Examine _Dulled Knife_ |q Faded Scarlets/.*Search the Room.* |count 2
+step
+goto 75.23,66.53
+'Examine _Scarlets List_ |q Faded Scarlets/.*Search the Room.* |count 3
+step
+goto 66.53,57.68
+'Open _Caelum Cellars Inner Vaults_ |q Faded Scarlets/Confront Marcan Caelum
+|tip Manually skip to the next step.
+step
+goto u42_ICQuest2_base 53.67,29.43
+talk Hooke |q Faded Scarlets/Talk to Hooke |future
+step
+goto 35.95,30.27
+talk Marcan Caelum |q Faded Scarlets/Talk to Marcan Caelum
+step
+goto 38.23,37.64
+'Open _Inner Vaults Sewer_ |q Faded Scarlets/Leave the Caelum Cellars
+|tip Manually skip to the next step.
+step
+goto u42_ICQuestSewer_base 28.59,17.58
+'Open _West Weald_ |q Faded Scarlets/Leave the Caelum Cellars
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 47.22,51.29
+talk Hooke
+turnin Faded Scarlets
+step
+goto 43.45,54.73 |q Relics of the Three Princes/Return to Beragon's Townhouse
+step
+goto 41.80,54.76
+'Use _Three Points_
+'Travel to _Skingrad City_ |q Relics of the Three Princes/Return to Beragon's Townhouse
+|tip Manually skip to the next step.
+step
+goto u42_Skingrad_base 43.99,68.94 |q Relics of the Three Princes/Return to Beragon's Townhouse
+step
+goto 41.76,72.18 |q Relics of the Three Princes/Return to Beragon's Townhouse
+step
+goto 42.55,72.50
+'Open _Beragon's Townhouse_ |q Relics of the Three Princes/Return to Beragon's Townhouse
+step
+goto 43.75,73.81
+talk Beragon
+turnin Relics of the Three Princes
+accept King Nantharion's Gambit
+step
+goto 43.75,73.82
+'Examine _Skein of Secrets_ |q King Nantharion's Gambit/Use the Skein of Secrets
+step
+goto 43.75,73.82
+talk Beragon |q King Nantharion's Gambit/Talk to Beragon
+step
+goto 43.37,73.41
+'Open _Skingrad_ |q King Nantharion's Gambit/Investigate Terthil Farm
+|tip Manually skip to the next step.
+step
+goto 45.26,68.76 |q King Nantharion's Gambit/Investigate Terthil Farm
+step
+goto 45.77,58.13
+'Use _Skingrad City_
+'Travel to _Ontus_ |q King Nantharion's Gambit/Investigate Terthil Farm
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 60.45,40.66 |q King Nantharion's Gambit/Investigate Terthil Farm
+step
+goto 64.85,34.92 |q King Nantharion's Gambit/Investigate Terthil Farm
+step
+goto 70.15,31.35
+wayshrine North Hook
+step
+goto 70.81,30.19
+talk Elfbetta the Shy
+accept Ayleid Altercations
+step
+goto 69.21,22.92 |q King Nantharion's Gambit/Investigate Terthil Farm
+step
+goto 70.37,17.89
+wayshrine Valente Vineyards
+step
+goto 68.82,18.83
+talk Fennorian
+accept Vesper Valente
+step
+goto 72.05,17.57 |q Mini Menagerie |future
+step
+goto 71.30,12.11 |q Mini Menagerie |future
+step
+goto 69.73,11.72
+'Examine _Trapper's Note_
+accept Mini Menagerie
+step
+goto 69.67,11.72
+'Gather _Adolescent Guzzard_ |q Mini Menagerie/Gather Adolescent Guzzard
+step
+goto 69.08,23.02
+step
+goto 65.95,19.03
+talk Field Hand Dro'vir |q Vesper Valente/.*Investigate Valente.* |count 1
+step
+goto 64.02,18.87
+'Investigate _Barn_ |q Vesper Valente/.*Investigate Valente.* |count 2
+step
+goto 64.57,18.12
+'Examine _Valente Vineyard Grapes_ |q Vesper Valente/.*Investigate Valente.* |count 3
+step
+goto 64.63,18.17
+talk Fennorian |q Vesper Valente/Talk to Fennorian
+step
+goto 64.59,16.89 |q Vesper Valente/Vesper Valente
+step
+goto 67.17,17.43
+'Open _Valente Vineyards Courtyard_ |q Vesper Valente/Attend the Auction
+step
+goto 67.49,17.40
+talk Fennorian |q Vesper Valente/Talk to Fennorian
+step
+goto 67.99,17.15
+talk Lord Farid at-Malik |q Vesper Valente/.*Talk to Party Attendees.* |count 1
+step
+goto 68.22,16.23
+talk LordGallio Valente |q Vesper Valente/.*Talk to Party Attendees.* |count 2
+step
+goto 67.67,16.06
+talk Lady Ursilia Valente |q Vesper Valente/.*Talk to Party Attendees.* |count 3
+step
+goto 67.56,17.35
+talk Servant Eira |q Vesper Valente/.*Talk to Party Attendees.* |count 4
+step
+goto 67.85,16.41
+talk Fennorian |q Vesper Valente/Talk to Fennorian
+|tip Manually skip to the next step.
+step
+goto 67.32,16.32
+'Open _Valente Vineyards_ |q Vesper Valente/Enter the Manor
+|tip Manually skip to the next step.
+step
+goto 66.08,16.54
+'Open _Valente Manor_ |q Vesper Valente/Enter the Manor
+step
+goto 66.01,16.48
+'Open _Lord Valente's Office_ |q Vesper Valente/Find Gallio's Office
+step
+goto 66.06,16.49
+'Examine _Lord Gallio Valente's Journal_ |q Vesper Valente/.*Investigae Lord Gallio Valente's Office.* |count 1
+step
+goto 66.05,16.48
+'Take _Winery Key_ |q Vesper Valente/.*Investigae Lord Gallio Valente's Office.* |count 2
+step
+goto 66.03,16.47
+'Examine _Bogvir's Letter_ |q Vesper Valente/.*Investigae Lord Gallio Valente's Office.* |count 3
+step
+goto 66.03,16.49
+talk Lady Ursilia Valente |q Vesper Valente/Talk to Lady Ursilia Valente
+step
+goto 66.02,16.49
+talk Fennorian |q Vesper Valente/Talk to Fennorian
+step
+goto 66.01,16.49
+'Open _Valente Manor_ |q Vesper Valente/Enter the Winery
+|tip Manually skip to the next step.
+step
+goto 66.02,16.52
+'Open _Valente Winery_ |q Vesper Valente/Enter the Windery
+step
+goto u42_vdvcellar_base 63.11,15.66 |q Vesper Valente/Search the Winery
+step
+goto 71.01,39.05 |q Vesper Valente/Search the Winery
+step
+goto 70.23,56.56
+talk Fennorian |q Vesper Valente/Talk to Fennorian
+step
+goto 50.72,54.26 |q Vesper Valente/.*Gather the Ingredients.*
+step
+goto 45.74,30.35 |q Vesper Valente/.*Gather the Ingredients.*
+step
+goto 36.97,18.84
+|tip Go downstairs.
+'Take _Grape Pulp_ |q Vesper Valente/.*Gather the Ingredients.* |count 1
+step
+goto 36.96,29.33 |q Vesper Valente/.*Gather the Ingredients.*
+step
+goto 45.85,29.15 |q Vesper Valente/.*Gather the Ingredients.*
+step
+goto 43.28,56.06 |q Vesper Valente/.*Gather the Ingredients.*
+step
+goto 22.01,56.19
+'Take _Imperial Oak Tannin_ |q Vesper Valente/.*Gather the Ingredients.* |count 2
+step
+goto 25.72,77.29 |q Vesper Valente/.*Gather the Ingredients.*
+step
+goto 50.50,76.86
+'Take _Waxflower Petals_ |q Vesper Valente/.*Gather the Ingredients.* |count 3
+step
+goto 50.82,54.80 |q Vesper Valente/Return to Fennorian
+step
+goto 70.53,55.77
+talk Fennorian |q Vesper Valente/Talk to Fennorian |future
+step
+goto 67.96,55.07
+|tip Watch the dialogue.
+'Take _Counteragent_ |q Vesper Valente/Take the Counteragent |future
+step
+goto 72.65,55.64
+'Pour _Vesper Valente Victim_ |q Vesper Valente/.*Administer the Counteragent.* |count 1
+step
+goto 70.31,58.39
+'Pour _Vesper Valente Victim_ |q Vesper Valente/.*Administer the Counteragent.* |count 2
+step
+goto 72.44,60.47
+'Pour _Vesper Valente Victim_ |q Vesper Valente/.*Administer the Counteragent.* |count 3
+step
+goto 70.31,58.45
+talk Trenton Calus |q Vesper Valente/Talk to Trenton Calus
+step
+goto 71.35,64.92
+'Open _Valente Winery Shipping Cavern_ |q Vesper Valente/Enter the Caverns
+|tip Manually skip to the next step.
+step
+goto u42_vdvsecretlab_base 24.65,52.79 |q Vesper Valente/Find Lord Gallio Valente's Laboratory
+step
+goto 37.57,66.96 |q Vesper Valente/Find Lord Gallio Valente's Laboratory
+step
+goto 41.94,49.86
+kill Lord Gallio Valente |q Vesper Valente/Find Lord Gallio Valente's Laboratory
+|tip Manually skip to the next step.
+step
+goto 71.78,48.00 |q Vesper Valente/Find Lord Gallio Valente's Laboratory
+step
+goto 73.42,60.95
+talk Fennorian |q Vesper Valente/Talk to Fennorian
+step
+goto 76.43,62.42
+'Turn _Flame Valve_ |q Vesper Valente/.*Destroy Laboratory Vats.* |count 1
+step
+goto 67.56,66.50
+'Turn _Flame Valve_ |q Vesper Valente/.*Destroy Laboratory Vats.* |count 2
+step
+goto 65.19,67.14
+'Turn _Flame Valve_ |q Vesper Valente/.*Destroy Laboratory Vats.* |count 3
+step
+goto 76.10,48.42
+'Burn _Mushroom Planter_ |q Vesper Valente/.*Burn the Mushroom Planters.* |count 1
+step
+goto 76.48,43.90
+'Burn _Mushroom Planter_ |q Vesper Valente/.*Burn the Mushroom Planters.* |count 2
+step
+goto 88.04,49.53
+'Open _West Weald_ |q Vesper Valente/Leave the Winery
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 69.50,16.46
+talk Fennorian
+turnin Vesper Valente
+step
+goto 71.31,22.18
+step
+goto 75.94,21.45
+talk Capptain Dromius Terrus
+accept The Silent Bell
+step
+goto 76.61,20.71
+talk Legionary Calvo Dorso |q The Silent Bell/Enter the Side Passage
+|tip Manually skip to the next step.
+step
+goto 76.79,20.73
+'Open _Fort Colovia_ |q The Silent Bell/Enter the Side Passage
+|tip Manually skip to the next step.
+step
+goto u42_base_towerbelli 38.40,39.11 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 47.57,21.10 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 67.31,17.46
+'Search _Barrel_ |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.* |count 1
+step
+goto 52.98,30.71 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 65.13,35.14 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 58.51,57.02 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 49.73,65.17
+'Use _Skyshard_ |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+|tip Manually skip to the next step.
+step
+goto 58.51,57.02 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 65.13,35.14 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 74.99,36.56 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 72.98,62.74 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 69.44,68.50
+'Search _Ash Pile_ |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.* |count 2
+step
+goto 64.67,73.89 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 49.65,67.40 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 43.48,65.97 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 45.06,68.58
+'Search _Hay Stack_ |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.* |count 3
+step
+goto 32.79,78.60 |q The Silent Bell/Enter the Bell Tower
+step
+goto 26.26,66.40
+kill Deserter Marius Gallo |q The Silent Bell/Enter the Bell Tower
+|tip Manually skip to the next step.
+step
+goto 22.23,62.19
+'Open _Fort Colovia Bell Tower_ |q The Silent Bell/Enter the Bell Tower
+step
+goto westwealdoverland_base 76.89,23.96
+'Use _Fort Colovia Bell_ |q The Silent Bell/Ring the Bell
+step
+goto 75.79,23.82 |q The Silent Bell/Talk to Captain Dromius Terrus |future |tip Drop down.
+step
+goto 75.89,21.51
+talk Captain Dromius Terrus
+turnin The Silent Bell
+step
+goto 70.36,17.88
+'Use _Valente Vineyards_
+'Travel to _Ontus_ |q Mini Menagerie/talk Star-Gazer Sariyaah
+|tip Manually skip to the next step.
+step
+goto u42_ontus_city_base 46.79,53.63
+talk Star-Gazer Sariyaah
+turnin Mini Menagerie
+accept Tracking the Trapper
+step
+goto westwealdoverland_base 59.71,44.04
+'Use _Ontus_
+'Travel to _Valente Vineyards_ |q Tracking the Trapper/Gather the Bait
+|tip Manually skip to the next step.
+step
+goto 63.94,27.30 |q Tracking the Trapper/Gather the Bait
+step
+goto 63.92,28.56
+'Search _Trapper Marcien_ |q Tracking the Trapper/Gather the Bait
+step
+goto 63.92,28.56
+'Use _Guzzard Bait_ |q Tracking the Trapper/Throw the Bait
+step
+goto 63.89,28.62
+'Lift _Nets_ |q Tracking the Trapper/Free Marcien
+step
+goto 63.89,28.62
+talk Trapper Marcien |q Tracking the Trapper/Talk to Trapper Marcien
+step
+goto 64.40,24.22
+'Use _Skyshard_ |q King Nantharion's Gambit/Investigate Terthil Farm
+|tip Manually skip to the next step.
+step
+goto 73.46,34.05
+talk Narsis Dren |q Ayleid Altercations/Talk to Narsis Dren
+step
+goto 73.21,33.36
+'Examine _Report From the Wendir Dig_ |q Ayleid Altercations/.*Investigate Recollection Activity.* |count 1
+step
+goto 72.95,32.00
+'Examine _Dealing with the Recollection_ |q Ayleid Altercations/.*Recover Narsis's Notes.* |count 1
+step
+goto 73.54,31.20
+'Examine _Notes on the Five Loyal Retainers_ |q Ayleid Altercations/.*Recover Narsis's Notes.* |count 2
+step
+goto 73.42,31.66
+'Examine _Letter to Vashabar_ |q Ayleid Altercations/.*Investigate Recollection Activity.* |count 
+step
+goto 74.43,31.70
+'Open _Wendir_ |q Ayleid Altercations/Enter Wendir
+|tip Manually skip to the next step.
+step
+goto u42_base_wendir 53.50,13.48
+talk Narsis Drean |q Ayleid Altercations/Talk to Narsis Dren
+step
+goto 53.47,22.27 |q Ayleid Altercations/.*Search for Altar Activation Items.*
+step
+goto 43.92,22.66 |q Ayleid Altercations/.*Search for Altar Activation Items.*
+step
+goto 42.60,29.10 |q Ayleid Altercations/.*Search for Altar Activation Items.*
+step
+goto 31.16,32.99
+'Take _Vial of Blood_ |q Ayleid Altercations/.*Search for Altar Activation Items.* |count 1
+step
+goto 28.18,38.24 |q Ayleid Altercations/.*Search for Altar Activation Items.*
+step
+goto 43.84,38.45 |q Ayleid Altercations/.*Search for Altar Activation Items.*
+step
+goto 43.86,44.94 |q Ayleid Altercations/.*Search for Altar Activation Items.*
+step
+goto 29.41,46.16 |q Ayleid Altercations/.*Search for Altar Activation Items.*
+step
+goto 34.55,61.34
+'Take _Sacred Water_ |q Ayleid Altercations/.*Search for Altar Activation Items.* |count 2
+step
+goto 38.22,81.42 |q Ayleid Altercations/.*Search for Altar Activation Items.*
+step
+goto 47.80,82.58 |q Ayleid Altercations/.*Search for Altar Activation Items.*
+step
+goto 62.66,76.31 |q Ayleid Altercations/.*Search for Altar Activation Items.*
+step
+goto 62.78,54.81 |q Ayleid Altercations/.*Search for Altar Activation Items.*
+step
+goto 43.74,54.60 |q Ayleid Altercations/.*Search for Altar Activation Items.*
+step
+goto 45.23,64.36
+'Open _Hall of the Loyal Retainers_ |q Ayleid Altercations/.*Search for Altar Activation Items.*
+|tip Manually skip to the next step.
+step
+goto 50.82,64.29
+kill Lor-Emero
+kill Ballepelin the Bolisterous
+kill Parhaelia |q Ayleid Altercations/.*Search for Altar Activation Items.*
+|tip Manually skip to the next step.
+step
+goto 53.77,67.71
+'Take _Aromatic Wine_ |q Ayleid Altercations/.*Search for Altar Activation Items.* |count 3
+step
+goto 53.48,60.15
+'Open _Wendir_ |q Ayleid Altercations/Go to the Altar
+|tip Manually skip to the next step.
+step
+goto 52.20,51.71
+talk Narsis Dren |q Ayleid Altercations/Talk to Narsis Dren |future
+step
+goto 51.75,51.07
+'Place _Altar_ |q Ayleid Altercations/Place the Items on the Altar
+step
+goto 51.74,51.13
+'Pour _Aromatic Wine_ |q Ayleid Altercations/Activate Altar
+step
+goto 53.50,50.21
+'Open _Wendir Vestibule_ |q Ayleid Altercations/Follow Dren
+|tip Manually skip to the next step.
+step
+goto 52.35,33.59
+talk Narsis Dren |q Ayleid Altercations/Talk to Narsis Dren |future
+step
+goto 52.39,33.30
+'Examine _Epitaph_ for the Five Loyal Retainers_ |q Ayleid Altercations/Read the Epitaph
+step
+.'_Start on Blue title_
+'_Go to the Far Right_
+'_Up Three Over two Up One_ |q Ayleid Altercations/Solve the Puzzle of the Last King
+step
+goto 53.39,29.57
+'Let _Narsis Dren Proceed_ |q Ayleid Altercations/Let Narsis Dren Proceed
+'_OR_
+'Tell _Narsis Dren To Be Careful_ |q Ayleid Altercations/Tell Narsis Dren To Be Careful
+step
+goto 54.56,27.80
+'Use _Ayleid Switch_ |q Ayleid Altercations/Locate Mechanism and Disarm the Trap
+step
+goto 53.64,29.43
+'Take _Emblem of the Last King_ |q Ayleid Altercations/Take the Emblem of the Last King
+step
+'Open _West Weald_ Map
+'Travel to _North Hook_ |q King Nantharion's Gambit/Investigate Terthil Farm
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 
+talk Elfbetta
+turnin Ayleid Altercations
+step
+goto 70.01,31.42 |q King Nantharion's Gambit/.*Explore Terthil Farm.* |count 1 |future
+step
+goto 59.73,33.78
+'Examine _Warning to the Weald_ |q King Nantharion's Gambit/.*Explore Terthil Farm.* |count 1 |future
+step
+goto 59.18,33.99
+'Examine _Melvia Terthil's Note_ |q King Nantharion's Gambit/.*Explore Terthil Farm.* |count 2
+step
+goto 59.29,33.04
+'Enter _Old Well_ |q King Nantharion's Gambit/Enter the Old Well
+step
+goto U42_Farm_Well_base 42.67,67.76
+'Use _Echonir_ |q King Nantharion's Gambit/.*Explore the Cave.* |count 1
+step
+goto 60.38,78.23
+'Burn _Wildburn Seed_ |q King Nantharion's Gambit/.*Explore the Cave.* |count 2
+step
+'Open _West Weald_ Map
+'Travel to _North Hook_ |q King Nantharion's Gambit/Investigate Hastrel Hollow
+|tip Manually skip to the next step.
+step
+goto 67.26,37.18
+talk Orissa Dellinoi
+accept Spilled Wine
+step
+goto 68.01,37.73
+'Open _Legion's Rest_ |q Spilled Wine/Find Lazen
+|tip Manually skip to the next step.
+step
+goto u42_windcave_base 65.44,94.42 |q Spilled Wine/.*Find Blue Aedral.*
+step
+goto 79.99,73.69 |q Spilled Wine/.*Find Blue Aedral.*
+step
+goto 80.00,65.72
+'Take _Blue Aedral_ |q Spilled Wine/.*Find Blue Aedral.* |count 1
+step
+goto 80.70,52.98 |q Spilled Wine/.*Find Blue Aedral.* |tip Go upstairs.
+step
+goto 68.29,40.37 |q Spilled Wine/.*Find Blue Aedral.*
+step
+goto 65.16,25.66
+'Take _Blue Aedral_ |q Spilled Wine/.*Find Blue Aedral.* |count 2
+step
+goto 46.43,06.89 |q Spilled Wine/.*Find Blue Aedral.*
+step
+goto 21.57,30.59 |q Spilled Wine/.*Find Blue Aedral.*
+step
+goto 28.64,35.37
+'Take _Blue Aedral_ |q Spilled Wine/.*Find Blue Aedral.* |count 3
+step
+goto 45.45,28.74
+'Use _Skyshard_ |q Spilled Wine/.*Find Blue Aedral.*
+|tip Manually skip to the next step.
+step
+goto 32.26,37.89 |q Spilled Wine/.*Find Blue Aedral.*
+step
+goto 40.26,42.59 |q Spilled Wine/.*Find Blue Aedral.* |tip Drop down.
+step
+goto 37.30,50.04
+kill Gilroy Vassinus |q Spilled Wine/.*Find Blue Aedral.*
+|tip Manually skip to the next step.
+step
+goto 42.20,61.51
+'Take _Blue Aedral_ |q Spilled Wine/.*Find Blue Aedral.* |count 4
+step
+goto 43.07,60.52
+'Examine _Blue Aedral Shipment Details_ |q Spilled Wine/Look for Evidence
+step
+goto 39.85,74.89 |q Spilled Wine/Talk to Orissa Outside Legion's Rest |tip Go upstairs.
+step
+goto 30.78,69.69
+'Open _West Weald_ |q Spilled Wine//Talk to Orissa Outside Legion's Rest
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 67.51,37.29
+talk Orissa Dellinoi
+turnin Spilled Wine
+step
+goto 70.15,31.38
+'Use _North Hook_
+'Travel to _Ontus_
+|tip Manually skip to the next step.
+step
+goto u42_ontus_city_base 46.79,53.63
+talk Star-Gazer Sariyaah
+turnin Tracking the Trapper
+step
+goto westwealdoverland_base 59.71,44.04
+'Use _Ontus_
+'Travel to _Centurion's Watch_ |q King Nantharion's Gambit/Talk to the Wood Elf Survivor |future
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 33.25,58.09
+talk Aengelor |q King Nantharion's Gambit/Talk to the Wood Elf Survivor |future
+step
+goto 33.65,58.71
+'Open _Hastrel Hollow Shrine_ |q King Nantharion's Gambit/.*Explore Ruins.*
+|tip Manually skip to the next step.
+step
+goto U42_Wood_Elf_Camp_base 30.19,48.94
+'Use _Echonir_ |q King Nantharion's Gambit/.*Explore Ruins.* |count 1
+step
+goto 40.99,78.68 |q King Nantharion's Gambit/.*Explore Ruins.* |count 2
+step
+goto 67.58,78.87 |q King Nantharion's Gambit/.*Explore Ruins.* |count 2
+step
+goto 77.02,64.96
+'Burn _Wildburn Seed_ |q King Nantharion's Gambit/.*Explore Ruins.* |count 2
+step
+goto 58.34,71.31
+'Examine _The Day of Remembering_ |q King Nantharion's Gambit/.*Explore Ruins.* |count 3
+step
+'Open _West Weald_ Map
+'Travel to _Skingrad City_ |q King Nantharion's Gambit/Return to Beragon's Townhouse
+|tip Manually skip to the next step.
+step
+goto u42_Skingrad_base 43.99,68.94 |q King Nantharion's Gambit/Return to Beragon's Townhouse
+step
+goto 41.76,72.18 |q King Nantharion's Gambit/Return to Beragon's Townhouse
+step
+goto 42.55,72.50
+'Open _Beragon's Townhouse_ |q King Nantharion's Gambit/Return to Beragon's Townhouse
+step
+goto 43.77,73.86
+talk Beragon |q King Nantharion's Gambit/Talk to Beragon
+step
+goto 43.75,73.82
+'Take _Skein of Secrets_ |q King Nantharion's Gambit/Use the Skein of Secrets
+step
+goto 43.37,73.41
+'Open _Skingrad_ |q King Nantharion's Gambit/Meet Beragon at Fort Dirich
+|tip Manually skip to the next step.
+step
+goto 45.26,68.76 |q King Nantharion's Gambit/Meet Beragon at Fort Dirich
+step
+goto 45.77,58.13
+'Use _Skingrad City_
+'Travel to _Skingrad Vineyards_ |q King Nantharion's Gambit/Meet Beragon at Fort Dirich
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 63.43,49.36 |q King Nantharion's Gambit/Explore the Ruins |future
+step
+goto 62.84,48.98
+'Examine _Wildburn Spriggen Senche_ |q King Nantharion's Gambit/Explore the Ruins |future
+step
+goto 62.70,48.82
+'Enter _Fort Dirich Dungeons_ |q King Nantharion's Gambit/Enter Fort Dirich Dungeons
+step
+goto U42_Colovian_Ruins_base 52.63,33.91
+'Burn _Wildburn Seed_ |q King Nantharion's Gambit/.*Destroy Wildburn Seeds.* |count 1 |future
+step
+goto 49.28,27.67
+|tip Watch the dialogue.
+'Use _Echonir_ |q King Nantharion's Gambit/Observe Memory of Ithelia
+step
+goto 33.44,20.13
+'Burn _Wildburn Seed_ |q King Nantharion's Gambit/.*Destroy Wildburn Seeds.* |count 2
+step
+goto 50.70,84.52
+'Open _West Weald_ |q King Nantharion's Gambit/Meet Beragon Outside
+step
+goto westwealdoverland_base 63.22,49.17
+talk Beragon |q King Nantharion's Gambit/Talk to Beragon
+step
+goto 63.21,49.17
+'Use _Skein of Secrets_ |q King Nantharion's Gambit/Use the Skein of Secrets
+step
+goto 63.21,49.17
+talk Beragon |q King Nantharion's Gambit/Talk to Beragon
+step
+goto u42_Skingrad_base 32.47,42.25
+'Use _Skingrad Vineyards_
+'Travel to _Vashabar_ |q King Nantharion's Gambit/Meet Beragon at Vashabar
+|tip Manually skip to the next step.
+step
+goto u42_Vashabar_base 49.51,44.62
+'Meet _Beragon_ |q King Nantharion's Gambit/Meet Beragon at Vashabar
+step
+goto 49.51,44.62
+talk Beragon |q King Nantharion's Gambit/Talk to Beragon |future
+step
+goto 53.23,37.89
+'Open _Miscarcand_ |q King Nantharion's Gambit/Enter Miscarcand |future
+|tip Manually skip to the next step.
+step
+goto u42_miscarcand1_base 67.38,22.88 |q King Nantharion's Gambit/Explore Miscarcand |future
+step
+goto 49.69,21.75 |q King Nantharion's Gambit/Explore Miscarcand
+step
+goto 46.87,13.49
+'Use _Abolisher_ |q King Nantharion's Gambit/Close the Portal |future
+step
+goto 44.06,15.29
+talk Tribune Alea Idolus |q King Nantharion's Gambit/Talk to Tribune Alea Idolus
+step
+goto 42.73,21.50
+'Use _Abolisher_
+'Use _Portal to Miscarcand Deep Halls_ |q King Nantharion's Gambit/Enter the Portal
+step
+goto 20.59,19.45 |q King Nantharion's Gambit/Explore Miscarcand
+step
+goto 16.38,39.88 |q King Nantharion's Gambit/Explore Miscarcand
+step
+goto 37.26,42.31 |q King Nantharion's Gambit/Explore Miscarcand
+step
+goto 33.49,62.96
+'Open _Miscarcand Deep Halls_ |q King Nantharion's Gambit/Explore Miscarcand Deep Halls |future
+|tip Manually skip to the next step.
+step
+goto 32.38,80.67
+|tip Watch the dialogue.
+'Use _Echonir_ |q King Nantharion's Gambit/Use the Echonir |future
+step
+goto 35.64,86.95 |q King Nantharion's Gambit/Escape the Memory
+step
+goto 41.95,71.97
+'Use _Abolisher_
+'Use _Portal to Miscarcand Deep Halls_ |q King Nantharion's Gambit/Enter the Portal |future
+step
+goto 61.59,66.54
+'Use _Echonir_ |q King Nantharion's Gambit/Use the Echonir |future
+step
+goto 61.59,66.54
+'Observe _Memory_ |q King Nantharion's Gambit/Observe the Memory
+step
+goto 68.19,65.98 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
+step
+goto 67.82,49.33
+'Use _Abolisher_
+'Use _Portal to Darkened Home_ |q King Nantharion's Gambit/Explore Miscarcand Deep Halls |future
+|tip Manually skip to the next step.
+step
+goto u42_miscarcand2_base 74.72,33.53 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
+step
+goto 89.39,34.36 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
+step
+goto 89.53,15.29 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
+step
+goto 67.79,16.15
+'Use _Abolisher_
+'Use _Portal to the Well of Miscarcand_ |q King Nantharion's Gambit/Stop King Nantharion |future
+|tip Manually skip to the next step.
+step
+goto 44.81,15.90 |q King Nantharion's Gambit/Stop King Nantharion |future
+step
+goto 45.00,40.54
+kill King Nantharion |q King Nantharion's Gambit/Stop King Nantharion
+step
+goto 45.00,40.54
+'Observe _Ithelia_ |q King Nantharion's Gambit/Observe Ithelia
+step
+'Open _West Weald_ Map
+'Travel to _Skingrad City_ |q King Nantharion's Gambit/Return to Beragon's Townhouse
+|tip Manually skip to the next step.
+step
+goto u42_Skingrad_base 43.99,68.94 |q King Nantharion's Gambit/Return to Beragon's Townhouse
+step
+goto 41.76,72.18 |q King Nantharion's Gambit/Return to Beragon's Townhouse
+step
+goto 42.55,72.50
+'Open _Beragon's Townhouse_ |q King Nantharion's Gambit/Return to Beragon's Townhouse
+step
+goto 43.67,73.34
+talk Leramil the Wise |q King Nantharion's Gambit/Talk to Leramil the Wise
+step
+goto 43.66,73.31
+talk Beragon
+turnin King Nantharion's Gambit
+accept The Untraveled Road
+step
+goto 43.66,73.31
+'Use _Skein of Secrets_ |q The Untraveled Road/Use the Skein of Secrets
+step
+goto 43.67,73.34
+|tip Watch the dialogue.
+talk Leramil the Wise |q The Untraveled Road/Talk to Leramil the Wise
+step
+goto 43.37,73.41
+'Open _Skingrad_ |q The Untraveled Road/Go to Wendir
+|tip Manually skip to the next step.
+step
+goto 45.26,68.76 |q The Untraveled Road/Go to Wendir
+step
+goto 45.77,58.13
+'Use _Skingrad City_
+'Travel to _North Hook_ |q The Untraveled Road/Go to Wendir
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 74.44,30.86 |q The Untraveled Road/Go to Wendir
+step
+goto 74.62,31.80 |q The Untraveled Road/Go to Wendir
+step
+goto 74.93,32.08
+'Use _Abolisher_
+'Use _Portal to Fargrave_ |q The Untraveled Road/Enter the Portal |future
+|tip Manually skip to the next step.
+step
+goto u42_PE5_FargraveRuins_base 15.91,21.30
+talk Leramil the Wise |q The Untraveled Road/Talk to Leramil the Wise |future
+step
+goto 46.02,55.16 |q The Untraveled Road/Follow the Crystal Path |future
+step
+goto 78.09,48.91 |q The Untraveled Road/Follow the Crystal Path |future
+step
+goto 76.77,86.23
+'Open _Fargrave Inner Quarter_ |q The Untraveled Road/Enter the Inner Quarter |future
+step
+goto U42_PE5_FargraveIQ01_base 38.53,48.82 |q The Untraveled Road/Follow the Crystal Path
+step
+goto 59.17,76.69
+'Use _Echonir_ |q The Untraveled Road/Use the Echonir |future
+step
+goto 59.17,76.69
+'Observe _Memory_ |q The Untraveled Road/Observe Memory
+step
+goto 59.77,75.86
+talk Leramil the Wise |q The Untraveled Road/Talk to Leramil the Wise
+step
+goto 57.81,79.37
+'Use _Lamp of Clarity_ |q The Untraveled Road/Use the Lamp of Clarity
+step
+goto 57.18,80.67
+.'Activate _Fourth Mirror_ |q The Untraveled Road/Find a Way to Open the Portal
+.'Activate _First Mirror_ |q The Untraveled Road/Find a Way to Open the Portal
+.'Activate _Third Mirror_ |q The Untraveled Road/Find a Way to Open the Portal
+.'Activate _Second Mirror_ |q The Untraveled Road/Find a Way to Open the Portal
+step
+goto 54.93,84.69
+'Enter _Portal to Fargrave Loom Quarter_ |q The Untraveled Road/Enter the Loop of the Untraveled Road |future
+|tip Manually skip to the next step.
+step
+goto u42_PE5_LoomRoad_base 39.05,27.26 |q The Untraveled Road/Explore the Loom |future
+step
+goto 41.67,38.53
+'Use _Echonir_ |q The Untraveled Road/Use the Echonir |future
+step
+goto 60.48,36.63 |q The Untraveled Road/Find the Loom's Core
+step
+goto 77.12,46.38 |q The Untraveled Road/Find the Loom's Core
+step
+goto 48.85,81.36 |q The Untraveled Road/Find the Loom's Core
+step
+goto 31.98,47.07
+'Use _Skein of Secrets_ |q The Untraveled Road/Use the Skein of Secrets |future
+step
+goto 32.59,47.43
+talk Leramil the Wise |q The Untraveled Road/Talk to Leramil the Wise
+step
+goto 32.07,46.78
+'Use _Portal to The Loom of Untraveled Road_ |q The Untraveled Road/Enter the Portal
+step
+goto u42_pe5_ithpri_copy_base 58.90,45.22
+'Use _Echonir_ |q The Untraveled Road/Use the Echonir |future
+step
+goto 45.22,39.78
+'Use _Lamp of Clarity_ |q The Untraveled Road/Use the Lamp of Clarity |future
+step
+goto 27.11,53.19 |q The Untraveled Road/Escape the Prison
+step
+goto 58.22,67.65
+'Use _Lamp of Clarity_ |q The Untraveled Road/Rescue Beragon |future
+step
+goto 59.92,68.12
+talk Beragon |q The Untraveled Road/Talk to Beragon
+step
+goto 53.88,75.22 |q The Untraveled Road/Escape the Prison
+step
+goto 29.92,77.91 |q The Untraveled Road/Escape the Prison
+step
+goto 16.90,44.24
+'Use _Lamp of Clarity_ |q The Untraveled Road/Rescue Tribune Alea |future
+step
+goto 35.29,24.08
+'Use _Abolisher_
+'Use _Portal to the Loop of the Untraveled Road_ |q The Untraveled Road/Enter the Portal |future
+step
+goto u42_PE5_LoomHeart_base 28.92,62.14 |q The Untraveled Road/Reach the Loom's Core
+step
+goto 36.40,22.73 |q The Untraveled Road/Reach the Loom's Core
+step
+goto 54.08,18.98 |q The Untraveled Road/Reach the Loom's Core
+step
+goto 52.36,34.71
+kill Shardmarshal Vargas |q The Untraveled Road/Defeat Shardmarshal Vargas |future
+step
+goto 52.15,44.61
+'Use _Abolisher_ |q The Untraveled Road/Destroy the Loom of the Untraveled Road
+step
+goto 52.42,39.29
+'Observe _Ithelia_ |q The Untraveled Road/Observe Ithelia
+step
+goto 50.40,38.91
+|tip Watch the dialogue.
+'Use _Portal to Skingrad_ |q The Untraveled Road/Exit the Loom
+step
+goto u42_Skingrad_base 43.80,73.85
+|tip Go upstairs.
+'Place _Displace Case_ |q The Untraveled Road/Return the Relics to the Case |future
+step
+goto 43.79,73.87
+talk Beragon |q The Untraveled Road/Talk to Beragon
+step
+goto 43.69,73.42
+talk Count Calantius |q The Untraveled Road/Talk to Count Calantius
+step
+goto 43.74,73.45
+|tip Watch the dialogue.
+talk Beragon
+turnin The Untraveled Road
+step
+goto 43.81,73.56
+talk Scruut
+accept Ithelia's Fury
+step
+goto 43.81,73.85
+'Take _Daedric Relics_ |q Ithelia's Fury/.*Gather the Daedric Relics.*
+step
+goto 43.74,73.83
+'Use _Portal of Instability_ |q Ithelia's Fury/Enter Scruut's Portal
+step
+goto westwealdoverland_base 75.65,15.95
+talk Levus Livonius |q Ithelia's Fury/Talk to Levus Livonius
+step
+goto 75.75,15.99
+'Enter _Faro's Cavern_ |q Ithelia's Fury/Locate the Tear
+|tip Manually skip to the next step.
+step
+goto U42_EPL_CHLVault_base 70.27,33.32 |q Ithelia's Fury/Locate the Tear
+step
+goto 51.88,74.27
+'Examine _Reality Tear_ |q Ithelia's Fury/Examine the Tear |future
+step
+goto 54.38,71.67
+talk Scruut |q Ithelia's Fury/Talk to Scruut
+step
+'Open _West Weald_ Map
+'Travel to _Wildburn's Edge_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 63.29,69.63 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
+step
+goto 66.90,72.23 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
+step
+goto 71.99,69.94
+talk Belienne
+accept Self-Preservation
+step
+goto 71.12,70.43 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
+step
+goto 71.75,73.34
+talk Tribune Alea Idolus |q Ithelia's Fury/Talk to Tribune Alea Idolus |future
+|tip Manually skip to the next step.
+step
+goto 71.79,73.41
+'Open _Haladin Lumber Camp_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
+|tip Manually skip to the next step.
+step
+goto u42_base_haldain 20.83,31.56 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
+step
+goto 23.25,70.22 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
+step
+goto 26.78,74.88 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
+step
+goto 50.96,75.64
+'Use _Skyshard_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
+|tip Manually skip to the next step.
+step
+goto 62.71,76.77 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
+step
+goto 77.82,57.07 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
+step
+goto 88.37,58.54
+'Use _Shrine of Azura_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
+step
+goto 71.76,35.69
+kill Aggression of Root |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
+|tip Manually skip to the next step.
+step
+goto 
+'Examine _Haldain's Journal_
+accept Appointed Executor
+step
+goto 73.53,28.81
+'Take _Haldain's Belongings |q Appointed Executor/Take Haldain's Belongings
+step
+'Open _West Weald_ Map
+'Travel to _Trader's Luck_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 81.69,62.43
+talk Belienne's Despair |q Self-Preservation/Talk to Belienne's Despair
+step
+goto 80.12,64.44 |q Self-Preservation/.*Gather River Flowers.*
+step
+goto 79.14,63.52
+'Gather _River Flower |q Self-Preservation/.*Gather River Flowers.* |count 1
+step
+goto 78.30,63.34
+'Gather _River Flower |q Self-Preservation/.*Gather River Flowers.* |count 2
+step
+goto 78.79,62.48
+'Gather _River Flower |q Self-Preservation/.*Gather River Flowers.* |count 3
+step
+goto 81.69,62.43
+talk Belienne's Despair |q Self-Preservation/Talk to Belienne's Despair
+step
+goto 81.70,62.42
+talk Belienne |q Self-Preservation/Talk to Belienne
+step
+goto 83.13,62.98
+'Use _Trader's Luck_
+'Travel to _Forlorn Palisades_ in Apocrypha |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 38.39,20.71 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
+step
+goto 39.05,19.09
+'Enter _Fathoms Drift_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
+|tip Manually skip to the next step.
+step
+goto U38_CorpuscleBight_02_Base 28.51,87.28
+talk Curate Gadayn |q Ithelia's Fury/Talk to Curate Gadayn |future
+|tip Manually skip to the next step.
+step
+goto U38_CorpuscleBight_01_Base 34.27,75.12 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
+step
+goto 22.78,72.40 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
+step
+goto 26.42,42.29 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
+step
+goto 29.85,37.56
+'Use _Mephala's Silk_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
+step
+'Open _Telvanni Peninsula_ Map
+'Travel to _Necrom Outskirts_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 3
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 77.30,50.46 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 3
+step
+goto 78.63,49.94
+'Open _Anchre Egg Mine_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 3
+|tip Manually skip to the next step.
+step
+goto u38_eggmine_base 50.65,83.81
+talk Beragon |q Ithelia's Fury/Talk to Beragon |future
+|tip Manually skip to the next step.
+step
+goto 72.04,69.29 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 3
+step
+goto 75.57,28.09
+'Open _Boethiah's Forge_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 3
+|tip Manually skip to the next step.
+step
+goto u42_eggmineforge_base 62.02,33.10
+'Use _Boethiah's Forge_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 3
+step
+goto 61.72,38.05
+talk Torvesard |q Ithelia's Fury/Talk to Torvesard
+step
+'Open _West Weald_ Map
+'Travel to _Skingrad City_ |q Ithelia's Fury/Go to Beragon's Townhouse
+|tip Manually skip to the next step.
+step
+goto u42_Skingrad_base 44.28,65.26
+'Open _Colovia Culinary Company_ |q Appointed Executor/Find Lepida Russus in Skingrad
+|tip Manally skip to the next step.
+step
+goto 42.12,63.26
+'Open _The Fertile Respite_ |q Appointed Executor/Find Lepida Russus in Skingrad
+|tip Manally skip to the next step.
+step
+goto 42.52,59.16
+'Open _Lepida Russus's Room_ |q Appointed Executor/Find Lepida Russus in Skingrad
+|tip Manally skip to the next step.
+step
+goto 43.22,59.87
+talk Lepida Russus
+turnin Appointed Executor
+step
+goto 43.15,59.77
+'Open _The Fertile Respite_ |q Ithelia's Fury/Go to Beragon's Townhouse
+|tip Manually skip to the next step.
+step
+goto 42.64,60.04
+'Open _Colovia Culinary Company_ |q Ithelia's Fury/Go to Beragon's Townhouse
+|tip Manually skip to the next step.
+step
+goto 42.69,63.36
+'Open _Skingrad_ |q Ithelia's Fury/Go to Beragon's Townhouse
+|tip Manually skip to the next step.
+step
+goto 43.99,68.94 |q Ithelia's Fury/Go to Beragon's Townhouse
+step
+goto 41.76,72.18 |q Ithelia's Fury/Go to Beragon's Townhouse
+step
+goto 42.55,72.50
+'Open _Beragon's Townhouse_ |q Ithelia's Fury/Go to Beragon's Townhouse
+step
+goto u42_Skingrad_base 43.58,73.56
+talk Leramil the Wise |q Ithelia's Fury/Talk to Leramil the Wise
+step
+goto 43.62,73.46
+'Use _Portal to Fargrave_ |q Ithelia's Fury/Go to Fargrave |future
+|tip Manually skip to the next step.
+step
+goto U42_PE5C1_FargraveIQ02_base 34.86,40.42 |q Ithelia's Fury/Return to the Loom of the Untraveled Road
+step
+goto 38.83,60.34 |q Ithelia's Fury/Return to the Loom of the Untraveled Road
+step
+goto 53.03,69.77
+'Open _Portal to Fargrave Inner Quarter_ |q Ithelia's Fury/Return to the Loom of the Untraveled Road
+|tip Manually skip to the next step.
+step
+goto U42_PE5_FargraveIQ01_base 54.95,85.00
+'Use _Portal to the Loom of the Untraveled Road_ |q Ithelia's Fury/Return to the Loom of the Untraveled Road
+|tip Manually skip to the next step.
+step
+goto u42_C1_LoomHeart_base 58.67,71.62 |q Ithelia's Fury/Return to the Loom of the Untraveled Road
+step
+goto 27.86,30.28 |q Ithelia's Fury/Return to the Loom of the Untraveled Road
+step
+goto 50.40,17.70 |q Ithelia's Fury/Return to the Loom of the Untraveled Road
+step
+goto 51.20,32.22
+'Use _Echonir_ |q Ithelia's Fury/Use the Echonir |future
+step
+goto 51.20,32.22
+'Witness _Memory_ |q Ithelia's Fury/Witness the Memory
+step
+goto 50.91,31.24
+talk Leramil the Wise |q Ithelia's Fury/Talk to Leramil the Wise
+step
+goto 49.28,37.88
+'Use _Portal to the Beragon's Townhouse_ |q Ithelia's Fury/Return to Beragon's Townhouse |future
+|tip Manually skip to the next step.
+step
+goto u42_Skingrad_base 43.78,73.38
+talk Scruut |q Ithelia's Fury/Talk to Scruut |future
+step
+goto 43.37,73.41
+'Open _Skingrad_ |q Ithelia's Fury/Go to Ceyond
+|tip Manually skip to the next step.
+step
+goto 45.26,68.76 |q Ithelia's Fury/Go to Ceyond
+step
+goto 45.77,58.13
+'Use _Skingrad City_
+'Travel to _Feldagard Keep_ |q Ithelia's Fury/Go to Ceyond
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 44.09,62.57
+'Open _Ceyond_ |q Ithelia's Fury/Go to Ceyond |future
+|tip Manually skip to the next step.
+step
+goto u42_C1_Ceyond_base 32.49,57.39 |q Ithelia's Fury/Find the Primordial Shattered Titan
+step
+goto 23.55,19.15 |q Ithelia's Fury/Find the Primordial Shattered Titan
+step
+goto 44.79,16.84 |q Ithelia's Fury/Find the Primordial Shattered Titan
+step
+goto 66.12,20.57 |q Ithelia's Fury/Find the Primordial Shattered Titan
+step
+goto 68.73,05.57 |q Ithelia's Fury/Find the Primordial Shattered Titan
+step
+goto 83.39,10.55 |q Ithelia's Fury/Find the Primordial Shattered Titan
+step
+goto 83.65,17.41
+'Open _Ceyond Grand Hall_ |q Ithelia's Fury/Find the Primordial Shattered Titan
+|tip Manually skip to the next step.
+step
+goto 83.11,33.03
+kill Primordial Shattered Titan |q Ithelia's Fury/Defeat the Primordial Shattered Titan |future
+step
+goto 83.45,33.93
+'Take _Primordial Shattered Titan Fragment_ |q Ithelia's Fury/Gather the Shattered Fragment
+step
+'Open _West Weald_ Map
+'Travel to _Skingrad City_ |q Ithelia's Fury/Return to Beragon's Townhouse
+|tip Manually skip to the next step.
+step
+goto u42_Skingrad_base 43.99,68.94 |q Ithelia's Fury/Return to Beragon's Townhouse
+step
+goto 41.76,72.18 |q Ithelia's Fury/Return to Beragon's Townhouse
+step
+goto 42.55,72.50
+'Open _Beragon's Townhouse_ |q Ithelia's Fury/Return to Beragon's Townhouse
+step
+goto 43.69,73.75
+|tip Go upstairs.
+talk to Leramil the Wise |q Ithelia's Fury/Talk to Leramil the Wise
+step
+goto 43.71,73.81
+talk Scruut |q Ithelia's Fury/Talk to Scruut
+step
+goto 43.71,73.73
+'Place _Shattered Titan Fragment_ |q Ithelia's Fury/Place the Shattered Titan Fragment
+step
+goto 43.71,73.73
+'Place _Lamp of Clarity_
+'Place _Skein of Secrets_
+'Place _Abolisher_ |q Ithelia's Fury/.*Place the Daedric Relics.*
+step
+goto 43.75,73.75
+'Align _Threads of Fate_ |q Ithelia's Fury/Assist Leramil with the Ritual
+step
+goto 43.67,73.75
+talk Leramil the Wise
+turnin Ithelia's Fury
+accept Fate of the Forgotten Prince
+step
+goto 43.69,73.77
+.'Take _Skein of Secrets_
+.'Take _Lamp of Clarity_
+.'Take _Abolisher_ |q Fate of the Forgotten Prince/.*Take the Daedric Relics.*
+.'Take _Mirror of Truth_ |q Fate of the Forgotten Prince/Take the Mirror of Truth
+step
+goto 43.64,73.78
+'Use _Portal to the Apocrypha_ |q Fate of the Forgotten Prince/Go to Apocrypha |future
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 46.28,46.30
+'Use _Skein of Secrets_ |q Fate of the Forgotten Prince/Use the Skein of Secrets |future
+step
+goto 47.46,47.54
+'Open _Central Orphic Tunnels_ |q Fate of the Forgotten Prince/Follow the Trail
+|tip Manually skip to the next step.
+step
+goto u38_Tunnel2_base 59.62,33.81 |q Fate of the Forgotten Prince/Follow the Trail
+step
+goto 74.24,41.50
+'Open _Portal to Central Orgphic Depths_ |q Fate of the Forgotten Prince/Follow the Trail
+|tip Manually skip to the next step.
+step
+goto u38_Tunnel2b_base 78.03,36.12
+'Enter _The Whispered Path_ |q Fate of the Forgotten Prince/Follow the Trail
+step
+goto U42_UI_Maps_PEC2_HMSanctum_01 36.70,45.88 |q Fate of the Forgotten Prince/Explore the Whispered Path
+step
+goto 79.21,47.57
+'Use _Portal to the Mythos_ |q Fate of the Forgotten Prince/Enter the Mythos |future
+|tip Manually skip to the next step.
+step
+goto U42_UI_Maps_PEC2_HMSanctum_02 19.01,56.13 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum |future
+step
+goto 25.40,55.97
+'Use _Lamp of Clarity_ |q Fate of the Forgotten Prince/Use the Lamp of Clarity |future
+step
+goto 42.26,56.36 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum
+step
+goto 42.54,39.95
+'Use _Lamp of Clarity_ |q Fate of the Forgotten Prince |future
+|tip Manually skip to the next step.
+step
+goto 43.37,24.88 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum
+step
+goto 56.79,25.12 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum
+step
+goto 56.54,19.25
+'Use _Lamp of Clarity_ |q Fate of the Forgotten Prince |future
+|tip Manually skip to the next step.
+step
+goto 57.02,11.08 |q Fate of the Forgotten Prince |future
+step
+goto 66.96,12.27 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum
+step
+goto 66.91,17.74
+'Use _Lamp of Clarity_ |q Fate of the Forgotten Prince |future
+|tip Manually skip to the next step.
+step
+goto 62.61,38.21
+'Use _Abolisher_ |q Fate of the Forgotten Prince |future
+|tip Manually skip to the next step.
+step
+goto 62.74,45.75 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum
+step
+goto 56.71,48.99 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum
+step
+goto 66.59,55.88 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum
+step
+goto 82.04,56.16
+'Use _Echonir_ |q Fate of the Forgotten Prince/Use the Echonir |future
+step
+goto 82.04,56.16
+'Use _Skeins of Secrets_ |q Fate of the Forgotten Prince/Use the Skein of Secrets
+step
+goto 67.94,56.13 |q Fate of the Forgotten Prince/Destroy the First Mirrormoor Ward
+step
+goto U42_UI_Maps_PEC2_HMSanctum_02b 67.71,76.77 |q Fate of the Forgotten Prince/Destroy the First Mirrormoor Ward
+step
+goto 76.41,76.94 |q Fate of the Forgotten Prince/Destroy the First Mirrormoor Ward
+step
+goto 78.40,87.58 |q Fate of the Forgotten Prince/Destroy the First Mirrormoor Ward
+step
+goto 87.66,86.07 |q Fate of the Forgotten Prince/Destroy the First Mirrormoor Ward
+step
+goto 86.71,63.00 |q Fate of the Forgotten Prince/Destroy the First Mirrormoor Ward
+step
+goto 80.59,65.95 |q Fate of the Forgotten Prince/Destroy the First Mirrormoor Ward
+step
+goto 80.44,59.75
+'Destroy _Mirrormoor Ward_ |q Fate of the Forgotten Prince/Destroy the First Mirrormoor Ward
+step
+goto 67.21,61.87 |q Fate of the Forgotten Prince/Destroy the Second Mirrormoor Ward
+step
+goto 67.48,49.25 |q Fate of the Forgotten Prince/Destroy the Second Mirrormoor Ward
+step
+goto 81.10,46.52 |q Fate of the Forgotten Prince/Destroy the Second Mirrormoor Ward
+step
+goto 80.53,52.33
+'Destroy _Mirrormoor Ward_ |q Fate of the Forgotten Prince/Destroy the Second Mirrormoor Ward
+step
+goto 87.39,49.31 |q Fate of the Forgotten Prince/Enter Hermaeus Mora's Private Sanctum
+step
+goto 86.43,42.24 |q Fate of the Forgotten Prince/Enter Hermaeus Mora's Private Sanctum
+step
+goto 79.61,41.37 |q Fate of the Forgotten Prince/Enter Hermaeus Mora's Private Sanctum
+step
+goto 79.86,35.56 |q Fate of the Forgotten Prince/Enter Hermaeus Mora's Private Sanctum
+step
+goto 70.28,35.42 |q Fate of the Forgotten Prince/Enter Hermaeus Mora's Private Sanctum
+step
+goto 67.00,52.63 |q Fate of the Forgotten Prince/Enter Hermaeus Mora's Private Sanctum
+step
+goto 84.65,56.02
+'Open _Hermaeus Mora's Private Sanctum_ |q Fate of the Forgotten Prince/Enter Hermaeus Mora's Private Sanctum
+step
+goto U42_UI_Maps_PEC2_HMSanctum_03 47.73,50.42
+|tip Watch the dialogue.
+kill Ithelia
+'Use _Mirror of Truth_ |q Fate of the Forgotten Prince/Defeat Ilthelia |future
+|tip Manually skip to the next step.
+step
+goto 50.17,50.36
+'Observe _Ithelia_ |q Fate of the Forgotten Prince/Observe Ithelia |future
+step
+goto 50.17,50.36
+|tip Use Portals.
+kill Torvesard |q Fate of the Forgotten Prince/Defeat Torvesard
+step
+goto 50.17,50.36
+'Observe _Ithelia_ |q Fate of the Forgotten Prince/Observe Ithelia
+step
+goto 56.28,50.55
+'Use _Portal to Ithelia's Prison_ |q Fate of the Forgotten Prince/Enter Ithelia's Prison |future
+|tip Manually skip to the next step.
+step
+goto u42_pc2_ithpri_copy_base 56.59,43.03
+talk Ithelia |q Fate of the Forgotten Prince/Talk to Ithelia |future
+step
+goto 58.96,50.93
+talk Hermaeus Mora |q Fate of the Forgotten Prince/Talk to Hermaeus Mora
+step
+goto 57.46,44.59
+'Witness _Ithelia Leave Reality_ |q Fate of the Forgotten Prince/Witness Ithelia Leave Reality
+step
+goto 53.98,49.63
+'Use _Abolisher on Portal_
+'Use _Portal to Beragon's Townhouse_ |q Fate of the Forgotten Prince/Return to Beragon's Townhouse |future
+|tip Manually skip to the next step.
+step
+goto u42_Skingrad_base 43.74,73.81
+talk Leramil the Wise
+turnin Fate of the Forgotten Prince
+step
+goto 43.79,73.79
+talk Scruut
+accept In Memory Of
+step
+goto 43.78,73.81
+talk Leramil the Wise |q In Memory Of/Talk to Leramil the Wise
+step
+goto 43.37,73.41
+|tip Go downstairs.
+'Open _Skingrad_ |q In Memory Of/.*Repair the Reality Tears.* |count 1
+|tip Manually skip to the next step.
+step
+goto 45.26,68.76 |q In Memory Of/.*Repair the Reality Tears.* |count 1
+step
+goto 45.77,58.13
+'Use _Skingrad City_
+'Travel to _Ontus_ |q In Memory Of/.*Repair the Reality Tears.* |count 1
+|tip Manually skip to the next step.
+step
+goto u42_ontus_city_base 48.88,55.20
+'Open _Stonechip Tavern_ |q Self-Preservation/Search for Belienne's Delight
+|tip Manually skip to the next step.
+step
+goto 51.28,53.10
+talk Belienne's Delight |q Self-Preservation/Talk to Belienne's Delight
+step
+goto 51.57,53.70
+'Steal _West Weald Wallop_ |q Self-Preservation/Steal a Cast of West Weald Wallop
+'_OR_
+talk Server Tsaxol |q Self-Preservation/Buy a Cast of West Weald Wallop
+step
+goto 51.31,53.12
+'Pour _Empty Mugs_ |q Self-Preservation/Pour Drinks for Belienne's Delight
+step
+goto 51.31,53.12
+'Drink _West Weald Wallop_ |q Self-Preservation/Drink with Belienne's Delight
+step
+goto 50.30,54.01
+talk Belienne |q Self-Preservation/Talk to Belienne
+step
+goto 49.84,54.42
+|tip Go downstairs.
+'Open _Ontus_ |q Self-Preservation/Search for Belienne's Fear
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 51.34,52.10
+talk Priest Faric Velain
+accept Unfinished Business
+step
+goto 51.12,51.99
+'Open _Nonungalo_ |q Unfinished Business/Enter Nonungalo |future
+|tip Manually skip to the next step.
+step
+goto u42_base_nonungalo 64.71,83.08 |q Unfinished Business/.*Gather the Ritual Items.*
+step
+goto 57.48,78.88 |q Unfinished Business/.*Gather the Ritual Items.*
+step
+goto 51.84,73.52 |q Unfinished Business/.*Gather the Ritual Items.*
+step
+goto 61.98,72.77
+'Take _Ritual Bowl_ |q Unfinished Business/.*Gather the Ritual Items.* |count 1
+step
+goto 41.04,71.18 |q Unfinished Business/.*Burn the Corrupted Corpses.* |count 1
+step
+goto 33.32,76.87 |q Unfinished Business/.*Burn the Corrupted Corpses.* |count 1
+step
+goto 30.87,86.81 |q Unfinished Business/.*Burn the Corrupted Corpses.* |count 1
+step
+goto 25.69,72.50
+'Burn _Corrupted Corpse_ |q Unfinished Business/.*Burn the Corrupted Corpses.* |count 1
+step
+goto 31.89,55.15 |q Unfinished Business/.*Gather the Ritual Items.*
+step
+goto 12.73,51.13 |q Unfinished Business/.*Gather the Ritual Items.*
+step
+goto 17.54,40.61
+'Destroy _Spider Web_ |q Self-Preservation/Rescue Belienne's Fear
+step
+goto 17.54,40.61
+talk Belienne's Fear |q Self-Preservation/Talk to Belienne's Fear
+step
+goto 18.18,40.74
+talk Belienne |q Self-Preservation/Talk to Belienne
+step
+goto 20.87,40.30 |q Unfinished Business/.*Gather the Ritual Items.*
+step
+goto 36.76,38.92 |q Unfinished Business/.*Gather the Ritual Items.*
+step
+goto 36.67,32.64
+'Take _Ritual Dagger_ |q Unfinished Business/.*Gather the Ritual Items.* |count 2
+step
+goto 32.53,37.08 |q Unfinished Business/.*Burn the Corrupted Corpses.*
+step
+goto 36.48,26.40 |q Unfinished Business/.*Burn the Corrupted Corpses.*
+step
+goto 41.08,26.35
+'Burn _Corrupted Corpse_ |q Unfinished Business/.*Burn the Corrupted Corpses.* |count 2
+step
+goto 36.60,19.40 |q Unfinished Business/.*Burn the Corrupted Corpses.*
+step
+goto 61.57,18.88 |q Unfinished Business/.*Burn the Corrupted Corpses.*
+step
+goto 60.02,30.93 |q Unfinished Business/.*Burn the Corrupted Corpses.*
+step
+goto 44.00,30.04
+'Use _Skyshard_ |q Unfinished Business/.*Burn the Corrupted Corpses.*
+|tip Manually skip to the next step.
+step
+goto 60.02,30.93 |q Unfinished Business/.*Burn the Corrupted Corpses.*
+step
+goto 61.57,18.88 |q Unfinished Business/.*Burn the Corrupted Corpses.*
+step
+goto 80.39,18.62 |q Unfinished Business/.*Burn the Corrupted Corpses.*
+step
+goto 83.56,23.11
+'Burn _Corrupted Corpse_ |q Unfinished Business/.*Burn the Corrupted Corpses.* |count 3
+step
+goto 79.52,41.45 |q Unfinished Business/.*Gather the Ritual Items.* |tip Go upstairs.
+step
+goto 73.42,45.49
+kill Shattered Shard |q Unfinished Business/.*Gather the Ritual Items.*
+|tip Manually skip to the next step.
+step
+goto 72.05,49.61
+'Examine _Ritual Scroll_ |q Unfinished Business/.*Gather the Ritual Items.* |count 3
+step
+goto 65.16,78.34 |q Unfinished Business/Meet Priest Faric Outside
+step
+goto westwealdoverland_base 51.86,51.99
+talk Priest Faric
+turnin Unfinished Business
+step
+goto westwealdoverland_base 41.75,54.65
+'Use _Three Points_
+'Travel to _Vashabar_ |q Self-Preservation/Meet Belienne in Vashabar
+|tip Manually skip to the next step.
+step
+goto u42_Vashabar_base 57.74,52.77
+|tip Watch the dialogue.
+talk Belienne |q Self-Preservation/Talk to Belienne |future
+step
+goto 55.76,44.33
+talk Belienne's Vanity |q Self-Preservation/Interrogate Belienne's Vanity
+step
+goto 57.12,46.13
+talk Belienne
+turnin Self-Preservation
+step
+goto 82.29,70.42
+'Use _Ontus_
+'Travel to _Valente Vineyards_ |q In Memory Of/.*Repair the Reality Tears.* |count 1
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base  73.87,17.32 |q In Memory Of/.*Repair the Reality Tears.* |count 1
+step
+goto 75.76,15.99
+'Enter _Faro's Cavern_ |q In Memory Of/.*Repair the Reality Tears.* |count 1
+|tip Manually skip to the next step.
+step
+goto U42_EPL_CHLVault_base 69.33,33.77 |q In Memory Of/.*Repair the Reality Tears.* |count 1
+step
+goto 51.97,74.69
+.'Place _Lamp of Clarity_
+.'Use _Spell Scroll_ |q In Memory Of/.*Repair the Reality Tears.* |count 1
+step
+goto 67.84,27.88 |q In Memory Of/.*Repair the Reality Tears.* |count 2
+step
+goto westwealdoverland_base 4.64,26.30
+'Enter _West Weald_ |q In Memory Of/.*Repair the Reality Tears.* |count 2
+|tip Manually skip to the next step.
+step
+goto 73.64,17.41 |q In Memory Of/.*Repair the Reality Tears.* |count 2
+step
+goto 70.42,17.87
+'Use _Valente Vineyards_
+'Travel to _Great Arm_ in Telvanni Peninsula |q In Memory Of/.*Repair the Reality Tears.* |count 2
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 61.15,45.86
+'Open _Dalam's Cavern_ |q In Memory Of/.*Repair the Reality Tears.* |count 2
+|tip Manually skip to the next step.
+step
+goto U42_EPL_TELVault_base 55.15,69.36
+.'Place _Abolisher_
+.'Use _Spell Scroll_ |q In Memory Of/.*Repair the Reality Tears.* |count 2
+step
+goto 47.28,9.50
+'Enter _Telvanni Peninsula_ |q In Memory Of/.*Repair the Reality Tears.* |count 3
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 63.78,38.93
+'Use _Great Arm_
+'Travel to _Forlorn Palisades_ in Apocrypha |q In Memory Of/.*Repair the Reality Tears.* |count 3
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 41.56,25.89 |q In Memory Of/.*Repair the Reality Tears.* |count 3
+step
+goto 45.57,25.64 |q In Memory Of/.*Repair the Reality Tears.* |count 3
+step
+goto 45.05,27.11
+'Enter _Watchling Grotto_ |q In Memory Of/.*Repair the Reality Tears.* |count 3
+|tip Manually skip to the next step.
+step
+goto u42_epl_apc_vlt_base 27.03,56.91 |q In Memory Of/.*Repair the Reality Tears.* |count 3
+step
+goto 19.48,34.71
+.'Place _Skein of Secrets_
+.'Use _Spell Scroll_ |q In Memory Of/.*Repair the Reality Tears.* |count 3
+step
+'Open _West Weald_ Map
+'Travel to _Skingrad City_ |q In Memory Of/Return to Beragon's Townhouse
+|tip Manually skip to the next step.
+step
+goto u42_Skingrad_base 43.99,68.94 |q In Memory Of/Return to Beragon's Townhouse
+step
+goto 41.76,72.18 |q In Memory Of/Return to Beragon's Townhouse
+step
+goto 42.55,72.50
+'Open _Beragon's Townhouse_ |q In Memory Of/Return to Beragon's Townhouse
+step
+goto 43.44,73.36
+|tip Go upstairs.
+'Open _Beragon's Townhouse Balcony_ |q In Memory Of/Talk to Beragon
+|tip Manually skip to the next step.
+step
+goto 42.34,74.01
+talk Beragon |q In Memory Of/Talk to Beragon
+step
+goto 42.14,73.59
+talk Scuut |q In Memory Of/Talk to Scruut
+step
+goto 41.92,73.16
+'Enter _Portal to Apocrypha_ |q In Memory Of/Enter the Portal |future
+|tip Manually skip to the next step.
+step
+goto UI_Maps_U42_Capper3_Sanctum 46.64,61.57
+'Listen _Exchange_ |q In Memory Of/Listen to the Exchange |future
+step
+goto 46.64,61.57
+talk Hermaeus Mora |q In Memory Of/Talk to Hermaeus Mora
+step
+goto 46.43,49.15
+'Use _West Weald_ |q In Memory Of/Return to Beragon's Townhouse |future
+|tip Manually skip to the next step.
+step
+goto u42_Skingrad_base 41.96,74.57
+talk Curate Gadayn |q In Memory Of/Talk to Curate Gadayn |future
+step
+goto 41.96,74.57
+talk Leramil the Wise
+turnin In Memory Of
 ]])
