@@ -49811,12 +49811,14 @@ goto 80.56,67.21
 talk Tribune Alea Idolus 
 turnin The Missing Cohort
 step
-goto 80.15,64.34 |q When the Ground Shook |future
+goto 80.15,64.34 |q Flocking Together |future
 step
 goto 83.10,62.98
 wayshrine Trader's Luck
 step
-goto 80.12,64.40 |q When the Ground Shook |future
+goto 80.12,64.40 |q Flocking Together |future
+step
+goto 81.69,65.67 |q Flocking Together |future
 step
 goto 78.25,69.06
 'Examine _Trapper's Offer_
@@ -49825,15 +49827,47 @@ step
 goto 78.14,69.03
 'Gather _Old Guzzard_ |q Flocking Together/Gather Old Guzzard
 step
-goto 80.12,64.40 |q When the Ground Shook |future
+goto 71.99,69.94
+talk Belienne
+accept Self-Preservation
 step
-goto u42_Skingrad_base 77.93,56.15 |q When the Ground Shook |future
+goto 69.30,64.98 |q Self-Preservation/Search for Belienne's Despair
 step
-goto westwealdoverland_base 65.42,66.70
+goto 65.42,66.70
 wayshrine Wildburn's Edge
 step
+goto 65.42,66.70
+'Use _Wildburn's Edge_
+'Travel to _Trader's Luck_ |q Self-Preservation/Search for Belienne's Despair
+|tip Manually skip to the next step.
+step
+goto 81.69,62.43
+talk Belienne's Despair |q Self-Preservation/Talk to Belienne's Despair |future
+step
+goto 80.12,64.44 |q Self-Preservation/.*Gather River Flowers.*
+step
+goto 79.14,63.52
+'Gather _River Flower_ |q Self-Preservation/.*Gather River Flowers.* |count 1
+step
+goto 78.30,63.34
+'Gather _River Flower_ |q Self-Preservation/.*Gather River Flowers.* |count 2
+step
+goto 78.79,62.48
+'Gather _River Flower_ |q Self-Preservation/.*Gather River Flowers.* |count 3
+step
+goto 81.69,62.43
+talk Belienne's Despair |q Self-Preservation/Talk to Belienne's Despair
+step
+goto 81.70,62.42
+talk Belienne |q Self-Preservation/Talk to Belienne
+step
+goto 83.11,63.00
+'Use _Trader's Luck_
+'Travel to _Wildburn's Edge_ |q Burnt Biscuits |future
+|tip Manually skip to the next step.
+step
 goto 63.23,64.73
-'Use _Skyshard_ |q When the Ground Shook |future
+'Use _Skyshard_ |q Burnt Biscuits |future
 |tip Manually skip to the next step.
 step
 goto 63.29,63.31
@@ -49841,7 +49875,7 @@ talk Legionary Luther
 accept Burnt Biscuits
 step
 goto 59.77,59.68
-'Search _Slashed Basket_ |q Burnt Biscuits/.*Search the Wreckage.* |count 1
+'Search _Slashed Basket_ |q Burnt Biscuits/.*Search the Wreckage.* |count 1 |future
 step
 goto 59.75,59.59
 'Search _Smashed Crate_ |q Burnt Biscuits/.*Search the Wreckage.* |count 2
@@ -49858,7 +49892,7 @@ step
 goto 59.68,61.16 |q Burnt Biscuits/Return to Legionary Luther
 step
 goto 60.08,59.90
-talk Legionary Luther |q Burnt Biscuits/Talk to Legionary Luther
+talk Legionary Luther |q Burnt Biscuits/Talk to Legionary Luther |future
 step
 'Open _West Weald_ Map
 'Travel _Wildburn's Edge_ |q When the Ground Shook |future
@@ -49970,10 +50004,7 @@ talk Danel Telleno
 accept Crafting Certification
 step
 goto 55.64,64.04
-talk Danel Telleno |q Crafting Certification/Talk to Danel Telleno
-step
-goto 55.30,65.64
-talk Millenith
+talk Danel Telleno
 turnin Crafting Certification
 step
 goto 61.64,61.94
@@ -49986,6 +50017,12 @@ goto 58.99,61.53
 |tip Watch the dialogue.
 talk Count Calantius
 turnin Burnt Biscuits
+step
+goto 59.41,61.29
+'Open _Skingrad City_ |q Paths of Chaos/Meet at Beragon's Townhouse
+|tip Manually skip to the next step.
+step
+goto 55.50,55.06 |q Paths of Chaos/Meet at Beragon's Townhouse
 step
 goto 46.21,64.21 |q Paths of Chaos/Meet at Beragon's Townhouse
 step
@@ -50027,30 +50064,30 @@ goto 45.91,57.95
 'Travel to _Ostumir_ |q Seeds of Suspicion/Go to Vashabar
 |tip Manually skip to the next step,
 step
-goto westwealdoverland_base 47.42,77.72 |q Seeds of Suspicion/Go to Vashabar
+goto westwealdoverland_base 47.42,77.72 |q The Voice of the Village |future
 step
 goto 48.43,79.12
-'Use _Skyshard_ |q Seeds of Suspicion/Go to Vashabar
+'Use _Skyshard_ |q The Voice of the Village |future
 |tip Manually skip to the next step.
 step
-goto 47.42,77.72 |q Seeds of Suspicion/Go to Vashabar
+goto 47.42,77.72 |q The Voice of the Village |future
 step
-goto 45.15,78.36 |q Seeds of Suspicion/Go to Vashabar
+goto 45.15,78.36 |q The Voice of the Village |future
 step
-goto 41.91,73.87 |q Seeds of Suspicion/Go to Vashabar
+goto 41.91,73.87 |q The Voice of the Village |future
 step
 goto u42_Vashabar_base 81.92,70.22
 wayshrine Vashabar
 step
-goto 46.97,71.31 |q Seeds of Suspicion/Go to Vashabar
+goto westwealdoverland_base 46.97,71.31 |q The Voice of the Village |future
 step
-goto 48.61,70.70 |q Seeds of Suspicion/Go to Vashabar |tip Go upstairs.
+goto 48.61,70.70 |q The Voice of the Village |future |tip Go upstairs.
 step
 goto 48.48,71.21
-'Use _Skyshard_ |q Seeds of Suspicion/Go to Vashabar
+'Use _Skyshard_ |q The Voice of the Village |future
 |tip Manually skip to the next step.
 step
-goto 46.97,71.31 |q Seeds of Suspicion/Go to Vashabar
+goto 46.97,71.31 |q The Voice of the Village |future
 step
 goto u42_Vashabar_base 66.66,71.81
 talk Laeni
@@ -50228,7 +50265,7 @@ kill Second Wave of Daedra
 kill Third Wave of Daedra |q Hold the Line/Operate the Ballista
 step
 goto 77.92,05.92
-|tip Kill Daedric Attackers.
+kill Daedric Attackers
 'Open _Felagard Keep Barracks_ |q Hold the Line/Enter the Keep's Barracks |future
 step
 goto U42_UI_Maps_FeldagardKeep_02 63.58,14.74
@@ -50240,7 +50277,7 @@ goto 27.55,45.85 |q Hold the Line/Search the Keep's Barracks
 step
 goto 16.48,36.69 |q Hold the Line/Search the Keep's Barracks
 step
-goto 15.57,61.64 |q Hold the Line/Search the Keep's Barracks
+goto 17.11,55.63 |q Hold the Line/Search the Keep's Barracks
 step
 goto 49.65,73.73 |q Hold the Line/Search the Keep's Barracks
 step
@@ -50288,12 +50325,15 @@ goto 20.74,85.45
 talk Tribune Alea Idolus
 turnin Hold the Line
 step
-'_WALK OUT DONT TELEPORT_
-'Open _West Weald_ Map
-'Travel to _Feldagard Keep_
+goto 38.00,87.43
+'Open _Feldagard Keep_ |q Found Family |future
 |tip Manually skip to the next step.
 step
-goto westwealdoverland_base 43.96,67.22 |q Seeds of Suspicion/Find the Wildburn Seed
+goto 73.46,89.09
+'Open _West Weald_ |q Found Family |future
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 43.96,67.22 |q Found Family |future
 step
 goto 48.25,64.42
 'Examine _Marcien's Message_
@@ -50330,6 +50370,7 @@ goto 45.31,78.69 |q Faded Scarlets/Recruit Valenia
 step
 goto 41.91,73.76 |q Faded Scarlets/Recruit Valenia
 step
+goto u42_Vashabar_base 81.92,70.22
 'Use _Vashabar_
 'Travel to _Feldagard Keep_ |q Seeds of Suspicion/Find the Wildburn Seed
 |tip Manually skip to the next step.
@@ -50345,7 +50386,7 @@ step
 goto 40.37,85.63 |q The Voice of the Village/Retrieve an Ayleid Mosaic with Clendagal
 step
 goto 61.42,66.73
-'Take _Ayleid Mosaic |q The Voice of the Village/Retrieve an Ayleid Mosaic with Clendagal
+'Take _Ayleid Mosaic_ |q The Voice of the Village/Retrieve an Ayleid Mosaic with Clendagal
 step
 'Open _West Weald_ Map
 'Travel to _Vashabar_ |q The Voice of the Village/Find Agawen Ciiril
@@ -50356,7 +50397,6 @@ step
 goto 24.68,34.51 |q Faded Scarlets/Recruit Valenia
 step
 goto 35.41,33.19
-|tip Persuade.
 talk Valenia |q Faded Scarlets/Recruit Valenia
 step
 goto 30.52,35.31 |q The Voice of the Village/Find Agawen Ciiril
@@ -50365,10 +50405,11 @@ goto 24.34,47.96
 talk Greenspeaker Nedolir |q The Voice of the Village/Talk to Greenspeaker Nedolir |future
 step
 goto 21.96,47.73
-'Place _Ayleid Mosaic_ |q The Voice of the Village/Listen to the Rite or Propagation
+'Place _Ayleid Mosaic_ |q The Voice of the Village/Place Clendagal's Symbol
 step
 goto 22.13,46.29
-'Place _Dormant Seedpod_ |q The Voice of the Village/Listen to the Rite or Propagation
+'Place _Dormant Seedpod_
+'Listen to the _Rite of Propagation_ |q The Voice of the Village/Listen to the Rite of Propagation
 step
 goto 21.43,47.19
 talk Laeni
@@ -50384,6 +50425,8 @@ step
 goto 49.98,62.99 |q The Deserter |future
 step
 goto 49.24,59.41 |q The Deserter |future
+step
+goto 48.80,57.56 |q The Deserter |future
 step
 goto 48.76,57.23
 'Use _Skyshard_ |q The Deserter |future
@@ -50437,8 +50480,8 @@ talk Maerenah
 accept Terror of the Weald
 step
 goto 16.98,61.40
-|tip Persuade him.
 talk Big Urm |q Faded Scarlets/Recruit Big Urm |future
+'Tell her "_[Persuade]The ring is just a ring. Your actions are proof to the Divines._"
 step
 goto 16.14,65.17 |q Terror of the Weald/Enter Tham's Tavern
 step
@@ -50538,6 +50581,7 @@ step
 goto 57.63,33.98 |q Terror of the Weald/Search for a Second Bloodfiend Den
 step
 goto 16.91,34.11
+|tip Watch the dialogue.
 'Place _Combustion Canister_ |q Terror of the Weald/Destroy the Second Bloodfiend Den |future
 step
 goto 17.95,33.69
@@ -50554,7 +50598,8 @@ step
 goto 68.12,64.98 |q Terror of the Weald/Exit the Mine
 step
 goto 75.15,44.77
-'Open _West Weald_ |q Terror of the Weald/Exit the Mine
+'Open _West Weald_ |q Terror of the Weald/Exit the Mine |future
+|tip Manually skip to the next step.
 step
 goto westwealdoverland_base 21.58,64.86
 talk Tham |q Terror of the Weald/Talk to Tham
@@ -50614,7 +50659,7 @@ step
 goto 35.63,33.43 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 3
 step
 goto UI_Maps_U42_VarensWall_Ext 50.49,39.98
-|tip Go all te way upstairs.
+|tip Go all the way upstairs.
 'Use _Skyshard_ |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 3
 |tip Manually skip to the next step.
 step
@@ -50648,7 +50693,7 @@ goto 68.15,40.98
 'Ignite _Watch Fire_ |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 4
 step
 'Open _West Weald_ Map
-'Travel to _Sutch_ |q Cold Fires on the Watch/Leave Varen's Watch
+'Travel to _Sutch_ |q Cold Fires on the Watch/Leave Varen's Watch |future
 |tip Manually skip to the next step.
 step
 goto westwealdoverland_base 16.83,55.91
@@ -50675,6 +50720,9 @@ goto 45.25,46.61
 talk Beragon |q Seeds of Suspicion/Talk to Beragon
 step
 goto 50.63,49.15 |q Seeds of Suspicion/Rendezvous Near Hoperoot
+step
+goto 56.18,51.04
+'Rendezvous Near Hoperoot |q Seeds of Suspicion/Rendezvous Near Hoperoot
 step
 goto 56.18,51.04
 talk Beragon |q Seeds of Suspicion/Talk to Beragon |future
@@ -50745,9 +50793,10 @@ step
 goto 64.37,79.27
 'Burn _Wildburn Seed_ |q Seeds of Suspicion/Destroy the Wildburn Seed
 step
-goto 56.49,76.40 |q Seeds of Suspicion/Escape Hoperoot |future |tip Watch the dialogue.
+goto 56.49,76.40 |q Seeds of Suspicion/Escape Hoperoot |future
 step
 goto 59.89,90.29
+|tip Watch the dialogue.
 'Use _West Weald_ |q Seeds of Suspicion/Escape Hoperoot |future
 |tip Manually skip to the next step.
 step
@@ -50787,13 +50836,31 @@ goto 53.54,53.34
 'Open _Stonechip Tavern_ |q Faded Scarlets/Recruit Fallen-Knives
 |tip Manually skip to the next step.
 step
+goto 51.28,53.10
+talk Belienne's Delight |q Self-Preservation/Talk to Belienne's Delight
+step
+goto 51.57,53.70
+'Steal _West Weald Wallop_ |q Self-Preservation/Steal a Cask of West Weald Wallop
+'_OR_
+talk Server Tsaxol |q Self-Preservation/Buy a Cask of West Weald Wallop
+step
+goto 51.31,53.12
+'Pour _Empty Mugs_ |q Self-Preservation/Pour Drinks for Belienne's Delight
+step
+goto 51.31,53.12
+'Drink _West Weald Wallop_ |q Self-Preservation/Drink with Belienne's Delight
+step
+goto 50.30,54.01
+talk Belienne |q Self-Preservation/Talk to Belienne
+step
 goto 51.54,52.94
+|tip Go downstairs.
 talk Fallen-Knives |q Faded Scarlets/Recruit Fallen-Knives
 'Tell him "_Tell me more about destroying the record of your debt instead of paying._"
 |tip Manually skip to the next step.
 step
 goto 49.84,54.40
-'Open _Ontus_ |q Found Family/Find Star-Gazer Sariyaah
+'Open _Ontus_ |q Found Family/Find Star-Gazer Sariyaah |future
 |tip Manually skip to the next step.
 step
 goto 46.91,53.44
@@ -50810,6 +50877,7 @@ goto 50.47,46.38
 'Examine _Constable Ulbren's Notebook_ |lorebook Constable Ulbren's Notebook/3/50/21
 step
 goto 50.71,46.46
+|tip Go downstairs.
 'Open _Ontus_ |q Another Death in Ontus/.*Talk to Ontus Townsfolk.*
 |tip Manually skip to the next step.
 step
@@ -50829,10 +50897,12 @@ goto 52.26,44.89
 |tip Manually skip to the next step.
 step
 goto 51.17,44.27
+|tip Go upstairs.
 'Examine _Laurina's Ledger_ |q Faded Scarlets/Recruit Fallen-Knives
 |tip Manually skip to the next step.
 step
 goto 52.31,44.48
+|tip Go downstairs.
 'Open _Ontus_ |q Another Death in Ontus/Investigate the Murders
 |tip Manually skip to the next step.
 step
@@ -50872,11 +50942,11 @@ goto 51.56,52.93
 talk Fallen-Knives |q Faded Scarlets/Recruit Fallen-Knives
 step
 goto 51.27,54.21
-'Open _Stonechip Gambling Den_ |q Another Death in Ontus/Talk to Constable Yabren
+'Open _Stonechip Gambling Den_ |q Another Death in Ontus/Talk to Constable Yabren |future
 |tip Manually skip to the next step.
 step
 goto 54.37,52.82
-talk Ghrakug |q Another Death in Ontus/Talk to Ghrakug
+talk Ghrakug |q Another Death in Ontus/Talk to Ghrakug |future
 step
 goto 54.99,54.03
 'Open _Ontus_ |q Another Death in Ontus/.*Search Carvain Manor.*
@@ -50892,7 +50962,7 @@ goto 16.11,70.27
 step
 goto 44.80,73.02 |q Another Death in Ontus/.*Search Carvain Manor.*
 step
-goto 59.97,83.94
+goto 50.11,84.04
 'Open _Carvain Manor_ |q Another Death in Ontus/.*Search Carvain Manor.*
 |tip Manually skip to the next step.
 step
@@ -50917,7 +50987,7 @@ step
 goto 51.12,9.27 |q Another Death in Ontus/.*Search Lady Raxalee's Tower.*
 step
 goto 37.77,17.25
-'Open _Raxalee's Tower |q Another Death in Ontus/.*Search Lady Raxalee's Tower.*
+'Open _Raxalee's Tower_ |q Another Death in Ontus/.*Search Lady Raxalee's Tower.*
 |tip Manually skip to the next step.
 step
 goto 37.09,16.77
@@ -50929,7 +50999,6 @@ goto 35.28,15.91
 step
 goto 37.34,16.82
 |tip Go downstairs.
-goto 37.34,16.82
 'Open _Ontus_ |q Another Death in Ontus/Investigate Zeggar's Blind
 |tip Manually skip to the next step.
 step
@@ -50937,9 +51006,8 @@ goto 54.59,10.96 |q Another Death in Ontus/Investigate Zeggar's Blind
 step
 goto westwealdoverland_base 59.49,39.88
 'Open _Zeggar's Blind_ |q Another Death in Ontus/Investigate Zeggar's Blind
-|tip Manually skip to the next step.
 step
-goto U42_UI_Maps_FornDortis_01 27.84,54.37 |q Another Death in Ontus/Investigate Zeggar's Blind
+goto U42_UI_Maps_FornDortis_01 27.84,54.37 |q Another Death in Ontus/Search Zeggar's Blind
 step
 goto 74.22,81.80
 'Take _Desk Key_ |q Another Death in Ontus/Take the Key |future
@@ -50948,19 +51016,25 @@ goto 76.58,53.91
 'Unlock _Alchemist Surius's Desk_ |q Another Death in Ontus/Use the Desk Key |future
 step
 goto 74.73,53.03
-'Destroy _Alchemical Equipment |q Another Death in Ontus/Destroy Alchemical Equipment
+'Destroy _Alchemical Equipment_ |q Another Death in Ontus/Destroy Alchemical Equipment |future
 step
 goto 47.90,41.00
 'Destroy _Alchemical Scale_ |q Another Death in Ontus/Destroy Alchemical Scale
 step
 goto 62.28,62.53
-'Destroy _Alchemical Apparatus |q Another Death in Ontus/Destroy Alchemical Apparatus
+'Destroy _Alchemical Apparatus_ |q Another Death in Ontus/Destroy Alchemical Apparatus
 step
-'Open _West Weald_ Map
-'Travel to _Ontus_ |q Another Death in Ontus/Meet Yabren at Stonechip Gambling Den
+goto 44.74,71.49 |q Another Death in Ontus/Meet Yabren at Stonechip Gambling Den
+step
+goto 27.71,47.43 |q Another Death in Ontus/Meet Yabren at Stonechip Gambling Den
+step
+goto 26.58,14.09
+'Enter _West Weald_ |q Another Death in Ontus/Meet Yabren at Stonechip Gambling Den
 |tip Manually skip to the next step.
 step
-goto u42_ontus_city_base 53.69,54.20
+goto u42_ontus_city_base 47.04,55.31 |q Another Death in Ontus/Meet Yabren at Stonechip Gambling Den
+step
+goto 53.69,54.20
 'Open _Stonechip Gambling Den_ |q Another Death in Ontus/Meet Yabren at Stonechip Gambling Den
 step
 goto 54.02,53.52
@@ -50979,7 +51053,7 @@ goto 61.66,19.72
 |tip Manually skip to the next step.
 step
 goto 65.88,17.69
-'Untie _Yabren's Bonds_ |q Another Death in Ontus/Free Constable Yabren
+'Untie _Yabren's Bonds_ |q Another Death in Ontus/Free Constable Yabren |future
 step
 goto 65.56,17.01
 'Listen to _Baron Carvain and Lady Raxalee_ |q Another Death in Ontus/Listen to Baron Carvain and Lady Raxalee
@@ -50995,6 +51069,91 @@ step
 goto 63.63,29.40
 talk Constable Yabren
 turnin Another Death in Ontus
+step
+goto westwealdoverland_base 51.34,52.10
+talk Priest Faric Velain
+accept Unfinished Business
+step
+goto 51.12,51.99
+'Open _Nonungalo_ |q Unfinished Business/Enter Nonungalo |future
+|tip Manually skip to the next step.
+step
+goto u42_base_nonungalo 64.71,83.08 |q Unfinished Business/.*Gather the Ritual Items.* |future
+step
+goto 57.48,78.88 |q Unfinished Business/.*Gather the Ritual Items.*
+step
+goto 51.84,73.52 |q Unfinished Business/.*Gather the Ritual Items.*
+step
+goto 61.98,72.77
+'Take _Ritual Bowl_ |q Unfinished Business/.*Gather the Ritual Items.* |count 1
+step
+goto 41.04,71.18 |q Unfinished Business/.*Burn the Corrupted Corpses.* |count 1
+step
+goto 33.32,76.87 |q Unfinished Business/.*Burn the Corrupted Corpses.* |count 1
+step
+goto 30.87,86.81 |q Unfinished Business/.*Burn the Corrupted Corpses.* |count 1
+step
+goto 25.69,72.50
+'Burn _Corrupted Corpse_ |q Unfinished Business/.*Burn the Corrupted Corpses.* |count 1
+step
+goto 31.89,55.15 |q Unfinished Business/.*Gather the Ritual Items.*
+step
+goto 12.73,51.13 |q Unfinished Business/.*Gather the Ritual Items.*
+step
+goto 17.54,40.61
+'Destroy _Spider Web_ |q Self-Preservation/Rescue Belienne's Fear |future
+step
+goto 17.54,40.61
+talk Belienne's Fear |q Self-Preservation/Talk to Belienne's Fear
+step
+goto 18.18,40.74
+talk Belienne |q Self-Preservation/Talk to Belienne
+step
+goto 36.76,38.92 |q Unfinished Business/.*Gather the Ritual Items.*
+step
+goto 36.67,32.64
+'Take _Ritual Dagger_ |q Unfinished Business/.*Gather the Ritual Items.* |count 2
+step
+goto 32.53,37.08 |q Unfinished Business/.*Burn the Corrupted Corpses.*
+step
+goto 36.48,26.40 |q Unfinished Business/.*Burn the Corrupted Corpses.*
+step
+goto 41.08,26.35
+'Burn _Corrupted Corpse_ |q Unfinished Business/.*Burn the Corrupted Corpses.* |count 2
+step
+goto 36.60,19.40 |q Unfinished Business/.*Burn the Corrupted Corpses.*
+step
+goto 61.57,18.88 |q Unfinished Business/.*Burn the Corrupted Corpses.*
+step
+goto 60.02,30.93 |q Unfinished Business/.*Burn the Corrupted Corpses.*
+step
+goto 44.00,30.04
+'Use _Skyshard_ |q Unfinished Business/.*Burn the Corrupted Corpses.*
+|tip Manually skip to the next step.
+step
+goto 60.02,30.93 |q Unfinished Business/.*Burn the Corrupted Corpses.*
+step
+goto 61.57,18.88 |q Unfinished Business/.*Burn the Corrupted Corpses.*
+step
+goto 80.39,18.62 |q Unfinished Business/.*Burn the Corrupted Corpses.*
+step
+goto 83.56,23.11
+'Burn _Corrupted Corpse_ |q Unfinished Business/.*Burn the Corrupted Corpses.* |count 3
+step
+goto 79.52,41.45 |q Unfinished Business/.*Gather the Ritual Items.* |tip Go upstairs.
+step
+goto 73.42,45.49
+kill Shattered Shard |q Unfinished Business/.*Gather the Ritual Items.*
+|tip Manually skip to the next step.
+step
+goto 72.05,49.61
+'Examine _Ritual Scroll_ |q Unfinished Business/.*Gather the Ritual Items.* |count 3
+step
+goto 65.16,78.34 |q Unfinished Business/Meet Priest Faric Outside
+step
+goto westwealdoverland_base 51.86,51.99
+talk Priest Faric
+turnin Unfinished Business
 step
 goto westwealdoverland_base 59.76,44.07
 'Use _Ontus_
@@ -51103,29 +51262,32 @@ step
 goto 23.22,31.36 |q Faded Scarlets/Find the Meeting Site
 step
 goto 23.92,37.51
+|tip Watch the dialogue.
 'Examine _Naku_ |q Faded Scarlets/Examine Naku's Corpse |future
+step
+goto 23.51,31.42 |q A Matter of Propriety/.*Find Dowry Items.*
 step
 goto 28.93,58.24 |q A Matter of Propriety/.*Find Dowry Items.*
 step
 goto 41.51,60.62
 'Take _Grander's Silks_ |q A Matter of Propriety/.*Find Dowry Items.* |count 4
 step
-goto 52.28,60.45 |q A Matter of Propriety/Talk to Amaurel Verdulis
+goto 52.28,60.45 |q A Matter of Propriety/Look for Amaurel
 step
-goto 55.21,71.97 |q A Matter of Propriety/Talk to Amaurel Verdulis
+goto 55.21,71.97 |q A Matter of Propriety/Look for Amaurel
 step
-goto 59.96,75.67 |q A Matter of Propriety/Talk to Amaurel Verdulis
+goto 59.96,75.67 |q A Matter of Propriety/Look for Amaurel
 step
-goto 58.68,84.32 |q A Matter of Propriety/Talk to Amaurel Verdulis
+goto 58.68,84.32 |q A Matter of Propriety/Look for Amaurel
 step
-goto 72.66,89.65 |q A Matter of Propriety/Talk to Amaurel Verdulis
+goto 72.66,89.65 |q A Matter of Propriety/Look for Amaurel
 step
-goto 
-kill Scourgetail |q A Matter of Propriety/Talk to Amaurel Verdulis
+goto 77.49,71.16
+kill Scourgetail |q A Matter of Propriety/Look for Amaurel
 |tip Manually skip to the next step.
 step
 goto 77.29,57.76
-talk Amaurel Verdulis |q A Matter of Propriety/Talk to Amaurel Verdulis
+talk Amaurel Verdulis |q A Matter of Propriety/Talk to Amaurel Verdulis |future
 step
 goto 78.96,59.25
 'Open _West Weald_ |q A Matter of Propriety/Return to Grander Nemarcet
@@ -51152,9 +51314,11 @@ step
 '_At the Bar._
 talk Innkeeper Brynmir |q The Many Paths/Talk to Innkeeper Brynmir
 step
-goto 63.30,52.78
 '_The Next Room_
-|tip Go Out to the Courtyard.
+'Open _Outcast Inn Courtyard_ |q The Many Paths/Get a Bucket of Well Water
+|tip Manually skip to the next step.
+step
+goto 63.30,52.78
 'Take _Bucket of Well Water_ |q The Many Paths/Get a Bucket of Well Water
 step
 goto 63.34,53.50
@@ -51170,15 +51334,11 @@ step
 '_At the Bar._
 talk Innkeeper Brynmir |q The Many Paths/Talk to Innkeeper Brynmir
 step
-goto 62.48,52.42
 '_The Next Room_
-|tip Go Out to the Courtyard.
-'Examine _Old Monk's Diary_ |lorebook Old Monk's Diary/3/50/43
+'Open _Outcast Inn Courtyard_ |lorebook Old Monk's Diary/3/50/43
+|tip Manually skip to the next step.
 step
-goto 61.99,53.60 |lorebook Open Tabs: 2E 579/3/50/42
-step
-goto 62.63,54.22
-'Examine _Old Tabs: 2E 579_ |lorebook Open Tabs: 2E 579/3/50/42
+goto 63.78,52.76 |q The Many Paths/Search for the Recipe Book
 step
 goto 61.04,52.56
 'Open _Outcast Inn Outbuilding_ |q The Many Paths/Search for the Recipe Book
@@ -51356,13 +51516,12 @@ goto 45.74,58.01
 |tip Manually skip to the next step.
 step
 goto westwealdoverland_base 20.48,58.73
-|tip He moves around.
 talk Beragon |q Relics of the Three Princes/Talk to Beragon |future
 step
 goto 20.48,57.79
 'Scout _Defense_ |q Relics of the Three Princes/.*Scout the Defense.* |count 1
 step
-goto 18.29,57.39
+goto 18.62,57.29
 'Scout _Defense_ |q Relics of the Three Princes/.*Scout the Defense.* |count 2
 step
 goto 18.35,57.40
@@ -51423,6 +51582,8 @@ step
 goto 60.15,43.89 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 2
 step
 goto 38.44,44.77 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 2
+step
+goto 37.95,52.45 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 2
 step
 goto 29.93,50.93 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 2
 step
@@ -51506,6 +51667,7 @@ goto 42.72,75.74
 'Take _Skein of Secrets_ |q Relics of the Three Princes/Take the Skein of Secrets |future
 step
 goto 42.50,77.01
+|tip Watch the dialogue.
 'Use _Echonir_ |q Relics of the Three Princes/Use the Echonir
 step
 goto 42.29,76.81
@@ -51517,8 +51679,11 @@ step
 step
 goto westwealdoverland_base 43.44,54.70 |q Faded Scarlets/Go to Caelum Vineyard
 step
+goto 
+'Return to Hooke
+step
 goto 45.24,54.10
-'Examine _Tarnished Slag_ |q Faded Scarlets/.*Search for Signs.* |count 1
+'Examine _Tarnished Slag_ |q Faded Scarlets/.*Search for Signs.* |count 1 |future
 step
 goto 45.88,55.89
 'Examine _Handmade Gravestone_ |q Faded Scarlets/.*Search for Signs.* |count 2
@@ -51538,14 +51703,16 @@ goto 45.16,55.40
 talk Hooke |q Faded Scarlets/Talk to Hooke
 step
 goto 45.69,53.61
+|tip Go downstairs.
 'Open _Caelum Cellars_ |q Faded Scarlets/Enter the Caelm Cellars |future
 |tip Manually skip to the next step.
 step
-goto u42_ICQuest_base 47.87,64.36 |q Faded Scarlets/Find Marcan Caelum
+goto u42_ICQuest_base 47.87,64.36 |q Faded Scarlets/Find Marcan Caelum |future
 step
 goto 67.17,71.98
-'Examine _Weathered Journal_ |q Faded Scarlets/.*Search the Room.* |count 1
+'Examine _Weathered Journal_ |q Faded Scarlets/.*Search the Room.* |count 1 |future
 step
+goto 61.60,62.29
 'Examine _Dulled Knife_ |q Faded Scarlets/.*Search the Room.* |count 2
 step
 goto 75.23,66.53
@@ -51609,9 +51776,66 @@ goto 45.77,58.13
 'Travel to _Ontus_ |q King Nantharion's Gambit/Investigate Terthil Farm
 |tip Manually skip to the next step.
 step
-goto westwealdoverland_base 60.45,40.66 |q King Nantharion's Gambit/Investigate Terthil Farm
+goto westwealdoverland_base 67.26,37.18
+talk Orissa Dellinoi
+accept Spilled Wine
 step
-goto 64.85,34.92 |q King Nantharion's Gambit/Investigate Terthil Farm
+goto 68.01,37.73
+'Open _Legion's Rest_ |q Spilled Wine/Find Lazen
+|tip Manually skip to the next step.
+step
+goto u42_windcave_base 65.44,94.42 |q Spilled Wine/.*Find Blue Aedral.*
+step
+goto 79.99,73.69 |q Spilled Wine/.*Find Blue Aedral.*
+step
+goto 80.00,65.72
+'Take _Blue Aedral_ |q Spilled Wine/.*Find Blue Aedral.* |count 1
+step
+goto 68.88,70.77 |q Spilled Wine/.*Find Blue Aedral.*
+step
+goto 80.70,52.98 |q Spilled Wine/.*Find Blue Aedral.* |tip Go upstairs.
+step
+goto 68.29,40.37 |q Spilled Wine/.*Find Blue Aedral.*
+step
+goto 65.16,25.66
+'Take _Blue Aedral_ |q Spilled Wine/.*Find Blue Aedral.* |count 2
+step
+goto 59.03,07.39 |q Spilled Wine/.*Find Blue Aedral.*
+step
+goto 46.43,06.89 |q Spilled Wine/.*Find Blue Aedral.*
+step
+goto 21.57,30.59 |q Spilled Wine/.*Find Blue Aedral.*
+step
+goto 28.64,35.37
+'Take _Blue Aedral_ |q Spilled Wine/.*Find Blue Aedral.* |count 3
+step
+goto 45.45,28.74
+'Use _Skyshard_ |q Spilled Wine/.*Find Blue Aedral.*
+|tip Manually skip to the next step.
+step
+goto 32.26,37.89 |q Spilled Wine/.*Find Blue Aedral.*
+step
+goto 40.26,42.59 |q Spilled Wine/.*Find Blue Aedral.* |tip Drop down.
+step
+goto 37.30,50.04
+kill Gilroy Vassinus |q Spilled Wine/.*Find Blue Aedral.*
+|tip Manually skip to the next step.
+step
+goto 43.07,60.52
+'Examine _Blue Aedral Shipment Details_ |q Spilled Wine/Look for Evidence
+step
+goto 42.20,61.51
+'Take _Blue Aedral_ |q Spilled Wine/.*Find Blue Aedral.* |count 4
+step
+goto 39.85,74.89 |q Spilled Wine/Talk to Orissa Outside Legion's Rest |tip Go upstairs.
+step
+goto 30.78,69.69
+'Open _West Weald_ |q Spilled Wine/Talk to Orissa Outside Legion's Rest
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 67.51,37.29
+talk Orissa Dellinoi
+turnin Spilled Wine
 step
 goto 70.15,31.35
 wayshrine North Hook
@@ -51620,290 +51844,8 @@ goto 70.81,30.19
 talk Elfbetta the Shy
 accept Ayleid Altercations
 step
-goto 69.21,22.92 |q King Nantharion's Gambit/Investigate Terthil Farm
-step
-goto 70.37,17.89
-wayshrine Valente Vineyards
-step
-goto 68.82,18.83
-talk Fennorian
-accept Vesper Valente
-step
-goto 72.05,17.57 |q Mini Menagerie |future
-step
-goto 71.30,12.11 |q Mini Menagerie |future
-step
-goto 69.73,11.72
-'Examine _Trapper's Note_
-accept Mini Menagerie
-step
-goto 69.67,11.72
-'Gather _Adolescent Guzzard_ |q Mini Menagerie/Gather Adolescent Guzzard
-step
-goto 69.08,23.02
-step
-goto 65.95,19.03
-talk Field Hand Dro'vir |q Vesper Valente/.*Investigate Valente.* |count 1
-step
-goto 64.02,18.87
-'Investigate _Barn_ |q Vesper Valente/.*Investigate Valente.* |count 2
-step
-goto 64.57,18.12
-'Examine _Valente Vineyard Grapes_ |q Vesper Valente/.*Investigate Valente.* |count 3
-step
-goto 64.63,18.17
-talk Fennorian |q Vesper Valente/Talk to Fennorian
-step
-goto 64.59,16.89 |q Vesper Valente/Vesper Valente
-step
-goto 67.17,17.43
-'Open _Valente Vineyards Courtyard_ |q Vesper Valente/Attend the Auction
-step
-goto 67.49,17.40
-talk Fennorian |q Vesper Valente/Talk to Fennorian
-step
-goto 67.99,17.15
-talk Lord Farid at-Malik |q Vesper Valente/.*Talk to Party Attendees.* |count 1
-step
-goto 68.22,16.23
-talk LordGallio Valente |q Vesper Valente/.*Talk to Party Attendees.* |count 2
-step
-goto 67.67,16.06
-talk Lady Ursilia Valente |q Vesper Valente/.*Talk to Party Attendees.* |count 3
-step
-goto 67.56,17.35
-talk Servant Eira |q Vesper Valente/.*Talk to Party Attendees.* |count 4
-step
-goto 67.85,16.41
-talk Fennorian |q Vesper Valente/Talk to Fennorian
-|tip Manually skip to the next step.
-step
-goto 67.32,16.32
-'Open _Valente Vineyards_ |q Vesper Valente/Enter the Manor
-|tip Manually skip to the next step.
-step
-goto 66.08,16.54
-'Open _Valente Manor_ |q Vesper Valente/Enter the Manor
-step
-goto 66.01,16.48
-'Open _Lord Valente's Office_ |q Vesper Valente/Find Gallio's Office
-step
-goto 66.06,16.49
-'Examine _Lord Gallio Valente's Journal_ |q Vesper Valente/.*Investigae Lord Gallio Valente's Office.* |count 1
-step
-goto 66.05,16.48
-'Take _Winery Key_ |q Vesper Valente/.*Investigae Lord Gallio Valente's Office.* |count 2
-step
-goto 66.03,16.47
-'Examine _Bogvir's Letter_ |q Vesper Valente/.*Investigae Lord Gallio Valente's Office.* |count 3
-step
-goto 66.03,16.49
-talk Lady Ursilia Valente |q Vesper Valente/Talk to Lady Ursilia Valente
-step
-goto 66.02,16.49
-talk Fennorian |q Vesper Valente/Talk to Fennorian
-step
-goto 66.01,16.49
-'Open _Valente Manor_ |q Vesper Valente/Enter the Winery
-|tip Manually skip to the next step.
-step
-goto 66.02,16.52
-'Open _Valente Winery_ |q Vesper Valente/Enter the Windery
-step
-goto u42_vdvcellar_base 63.11,15.66 |q Vesper Valente/Search the Winery
-step
-goto 71.01,39.05 |q Vesper Valente/Search the Winery
-step
-goto 70.23,56.56
-talk Fennorian |q Vesper Valente/Talk to Fennorian
-step
-goto 50.72,54.26 |q Vesper Valente/.*Gather the Ingredients.*
-step
-goto 45.74,30.35 |q Vesper Valente/.*Gather the Ingredients.*
-step
-goto 36.97,18.84
-|tip Go downstairs.
-'Take _Grape Pulp_ |q Vesper Valente/.*Gather the Ingredients.* |count 1
-step
-goto 36.96,29.33 |q Vesper Valente/.*Gather the Ingredients.*
-step
-goto 45.85,29.15 |q Vesper Valente/.*Gather the Ingredients.*
-step
-goto 43.28,56.06 |q Vesper Valente/.*Gather the Ingredients.*
-step
-goto 22.01,56.19
-'Take _Imperial Oak Tannin_ |q Vesper Valente/.*Gather the Ingredients.* |count 2
-step
-goto 25.72,77.29 |q Vesper Valente/.*Gather the Ingredients.*
-step
-goto 50.50,76.86
-'Take _Waxflower Petals_ |q Vesper Valente/.*Gather the Ingredients.* |count 3
-step
-goto 50.82,54.80 |q Vesper Valente/Return to Fennorian
-step
-goto 70.53,55.77
-talk Fennorian |q Vesper Valente/Talk to Fennorian |future
-step
-goto 67.96,55.07
-|tip Watch the dialogue.
-'Take _Counteragent_ |q Vesper Valente/Take the Counteragent |future
-step
-goto 72.65,55.64
-'Pour _Vesper Valente Victim_ |q Vesper Valente/.*Administer the Counteragent.* |count 1
-step
-goto 70.31,58.39
-'Pour _Vesper Valente Victim_ |q Vesper Valente/.*Administer the Counteragent.* |count 2
-step
-goto 72.44,60.47
-'Pour _Vesper Valente Victim_ |q Vesper Valente/.*Administer the Counteragent.* |count 3
-step
-goto 70.31,58.45
-talk Trenton Calus |q Vesper Valente/Talk to Trenton Calus
-step
-goto 71.35,64.92
-'Open _Valente Winery Shipping Cavern_ |q Vesper Valente/Enter the Caverns
-|tip Manually skip to the next step.
-step
-goto u42_vdvsecretlab_base 24.65,52.79 |q Vesper Valente/Find Lord Gallio Valente's Laboratory
-step
-goto 37.57,66.96 |q Vesper Valente/Find Lord Gallio Valente's Laboratory
-step
-goto 41.94,49.86
-kill Lord Gallio Valente |q Vesper Valente/Find Lord Gallio Valente's Laboratory
-|tip Manually skip to the next step.
-step
-goto 71.78,48.00 |q Vesper Valente/Find Lord Gallio Valente's Laboratory
-step
-goto 73.42,60.95
-talk Fennorian |q Vesper Valente/Talk to Fennorian
-step
-goto 76.43,62.42
-'Turn _Flame Valve_ |q Vesper Valente/.*Destroy Laboratory Vats.* |count 1
-step
-goto 67.56,66.50
-'Turn _Flame Valve_ |q Vesper Valente/.*Destroy Laboratory Vats.* |count 2
-step
-goto 65.19,67.14
-'Turn _Flame Valve_ |q Vesper Valente/.*Destroy Laboratory Vats.* |count 3
-step
-goto 76.10,48.42
-'Burn _Mushroom Planter_ |q Vesper Valente/.*Burn the Mushroom Planters.* |count 1
-step
-goto 76.48,43.90
-'Burn _Mushroom Planter_ |q Vesper Valente/.*Burn the Mushroom Planters.* |count 2
-step
-goto 88.04,49.53
-'Open _West Weald_ |q Vesper Valente/Leave the Winery
-|tip Manually skip to the next step.
-step
-goto westwealdoverland_base 69.50,16.46
-talk Fennorian
-turnin Vesper Valente
-step
-goto 71.31,22.18
-step
-goto 75.94,21.45
-talk Capptain Dromius Terrus
-accept The Silent Bell
-step
-goto 76.61,20.71
-talk Legionary Calvo Dorso |q The Silent Bell/Enter the Side Passage
-|tip Manually skip to the next step.
-step
-goto 76.79,20.73
-'Open _Fort Colovia_ |q The Silent Bell/Enter the Side Passage
-|tip Manually skip to the next step.
-step
-goto u42_base_towerbelli 38.40,39.11 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
-step
-goto 47.57,21.10 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
-step
-goto 67.31,17.46
-'Search _Barrel_ |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.* |count 1
-step
-goto 52.98,30.71 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
-step
-goto 65.13,35.14 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
-step
-goto 58.51,57.02 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
-step
-goto 49.73,65.17
-'Use _Skyshard_ |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
-|tip Manually skip to the next step.
-step
-goto 58.51,57.02 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
-step
-goto 65.13,35.14 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
-step
-goto 74.99,36.56 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
-step
-goto 72.98,62.74 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
-step
-goto 69.44,68.50
-'Search _Ash Pile_ |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.* |count 2
-step
-goto 64.67,73.89 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
-step
-goto 49.65,67.40 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
-step
-goto 43.48,65.97 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
-step
-goto 45.06,68.58
-'Search _Hay Stack_ |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.* |count 3
-step
-goto 32.79,78.60 |q The Silent Bell/Enter the Bell Tower
-step
-goto 26.26,66.40
-kill Deserter Marius Gallo |q The Silent Bell/Enter the Bell Tower
-|tip Manually skip to the next step.
-step
-goto 22.23,62.19
-'Open _Fort Colovia Bell Tower_ |q The Silent Bell/Enter the Bell Tower
-step
-goto westwealdoverland_base 76.89,23.96
-'Use _Fort Colovia Bell_ |q The Silent Bell/Ring the Bell
-step
-goto 75.79,23.82 |q The Silent Bell/Talk to Captain Dromius Terrus |future |tip Drop down.
-step
-goto 75.89,21.51
-talk Captain Dromius Terrus
-turnin The Silent Bell
-step
-goto 70.36,17.88
-'Use _Valente Vineyards_
-'Travel to _Ontus_ |q Mini Menagerie/talk Star-Gazer Sariyaah
-|tip Manually skip to the next step.
-step
-goto u42_ontus_city_base 46.79,53.63
-talk Star-Gazer Sariyaah
-turnin Mini Menagerie
-accept Tracking the Trapper
-step
-goto westwealdoverland_base 59.71,44.04
-'Use _Ontus_
-'Travel to _Valente Vineyards_ |q Tracking the Trapper/Gather the Bait
-|tip Manually skip to the next step.
-step
-goto 63.94,27.30 |q Tracking the Trapper/Gather the Bait
-step
-goto 63.92,28.56
-'Search _Trapper Marcien_ |q Tracking the Trapper/Gather the Bait
-step
-goto 63.92,28.56
-'Use _Guzzard Bait_ |q Tracking the Trapper/Throw the Bait
-step
-goto 63.89,28.62
-'Lift _Nets_ |q Tracking the Trapper/Free Marcien
-step
-goto 63.89,28.62
-talk Trapper Marcien |q Tracking the Trapper/Talk to Trapper Marcien
-step
-goto 64.40,24.22
-'Use _Skyshard_ |q King Nantharion's Gambit/Investigate Terthil Farm
-|tip Manually skip to the next step.
-step
 goto 73.46,34.05
-talk Narsis Dren |q Ayleid Altercations/Talk to Narsis Dren
+talk Narsis Dren |q Ayleid Altercations/Talk to Narsis Dren |future
 step
 goto 73.21,33.36
 'Examine _Report From the Wendir Dig_ |q Ayleid Altercations/.*Investigate Recollection Activity.* |count 1
@@ -51914,15 +51856,19 @@ step
 goto 73.54,31.20
 'Examine _Notes on the Five Loyal Retainers_ |q Ayleid Altercations/.*Recover Narsis's Notes.* |count 2
 step
-goto 73.42,31.66
-'Examine _Letter to Vashabar_ |q Ayleid Altercations/.*Investigate Recollection Activity.* |count 
+goto 74.16,30.74 |q Ayleid Altercations/.*Investigate Recollection Activity.* |count 2
+step
+goto 74.11,31.14
+'Examine _Letter to Vashabar_ |q Ayleid Altercations/.*Investigate Recollection Activity.* |count 2
+step
+goto 74.52,31.33 |q Ayleid Altercations/Enter Wendir
 step
 goto 74.43,31.70
-'Open _Wendir_ |q Ayleid Altercations/Enter Wendir
+'Open _Wendir_ |q Ayleid Altercations/Enter Wendir |future
 |tip Manually skip to the next step.
 step
 goto u42_base_wendir 53.50,13.48
-talk Narsis Drean |q Ayleid Altercations/Talk to Narsis Dren
+talk Narsis Drean |q Ayleid Altercations/Talk to Narsis Dren |future
 step
 goto 53.47,22.27 |q Ayleid Altercations/.*Search for Altar Activation Items.*
 step
@@ -51978,40 +51924,332 @@ goto 51.75,51.07
 'Place _Altar_ |q Ayleid Altercations/Place the Items on the Altar
 step
 goto 51.74,51.13
-'Pour _Aromatic Wine_ |q Ayleid Altercations/Activate Altar
+'Pour _Aromatic Wine_ |q Ayleid Altercations/Activate the Altar
 step
 goto 53.50,50.21
-'Open _Wendir Vestibule_ |q Ayleid Altercations/Follow Dren
+'Open _Wendir Vestibule_ |q Ayleid Altercations/Follow Narsis Dren
 |tip Manually skip to the next step.
 step
 goto 52.35,33.59
 talk Narsis Dren |q Ayleid Altercations/Talk to Narsis Dren |future
 step
 goto 52.39,33.30
-'Examine _Epitaph_ for the Five Loyal Retainers_ |q Ayleid Altercations/Read the Epitaph
+'Examine _Epitaph for the Five Loyal Retainers_ |q Ayleid Altercations/Read the Epitaph
 step
 .'_Start on Blue title_
 '_Go to the Far Right_
 '_Up Three Over two Up One_ |q Ayleid Altercations/Solve the Puzzle of the Last King
 step
 goto 53.39,29.57
-'Let _Narsis Dren Proceed_ |q Ayleid Altercations/Let Narsis Dren Proceed
+'Let _Narsis Dren Proceed_ |q Ayleid Altercations/Let Narsis Dren Proceed |future
 '_OR_
-'Tell _Narsis Dren To Be Careful_ |q Ayleid Altercations/Tell Narsis Dren To Be Careful
+'Tell _Narsis Dren To Be Careful_ |q Ayleid Altercations/Tell Narsis Dren To Be Careful |future
 step
 goto 54.56,27.80
-'Use _Ayleid Switch_ |q Ayleid Altercations/Locate Mechanism and Disarm the Trap
+'Use _Ayleid Switch_ |q Ayleid Altercations/Locate the Mechanism and Disarm the Trap
 step
 goto 53.64,29.43
 'Take _Emblem of the Last King_ |q Ayleid Altercations/Take the Emblem of the Last King
 step
-'Open _West Weald_ Map
-'Travel to _North Hook_ |q King Nantharion's Gambit/Investigate Terthil Farm
+goto 63.09,27.66
+'Open _Wendir_ |q Ayleid Altercations/Meet Elfbetta in her Southern Camp
 |tip Manually skip to the next step.
 step
-goto westwealdoverland_base 
+goto 53.38,15.90 |q Ayleid Altercations/Meet Elfbetta in her Southern Camp
+step
+goto 53.46,07.15
+'Open _West Weald_ |q Ayleid Altercations/Meet Elfbetta in her Southern Camp
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 73.86,36.89
 talk Elfbetta
 turnin Ayleid Altercations
+step
+goto 69.21,22.92 |q Vesper Valente |future
+step
+goto 71.66,36.80 |q Vesper Valente |future
+step
+goto 70.37,17.89
+wayshrine Valente Vineyards
+step
+goto 68.82,18.83
+talk Fennorian
+accept Vesper Valente
+step
+goto 65.95,19.03
+talk Field Hand Dro'vir |q Vesper Valente/.*Investigate the Grounds.* |count 1
+step
+goto 64.02,18.87
+'Investigate _Death Hound_ |q Vesper Valente/.*Investigate the Grounds.* |count 2
+step
+goto 64.57,18.12
+'Examine _Valente Vineyard Grapes_ |q Vesper Valente/.*Investigate the Grounds.* |count 3
+step
+goto 64.63,18.17
+talk Fennorian |q Vesper Valente/Talk to Fennorian
+step
+goto 64.59,16.89 |q Vesper Valente/Go to the Auction
+step
+goto 67.17,17.43
+'Open _Valente Vineyards Courtyard_ |q Vesper Valente/Attend the Auction |future
+step
+goto 67.49,17.40
+talk Fennorian |q Vesper Valente/Talk to Fennorian
+step
+goto 67.99,17.15
+talk Lord Farid at-Malik |q Vesper Valente/.*Talk to Party Attendees.* |count 1
+step
+goto 68.22,16.23
+talk Lord Gallio Valente |q Vesper Valente/.*Talk to Party Attendees.* |count 2
+step
+goto 67.67,16.06
+talk Lady Ursilia Valente |q Vesper Valente/.*Talk to Party Attendees.* |count 3
+step
+goto 67.56,17.35
+talk Servant Eira |q Vesper Valente/.*Talk to Party Attendees.* |count 4
+step
+goto 67.85,16.41
+talk Fennorian |q Vesper Valente/Talk to Fennorian
+|tip Manually skip to the next step.
+step
+goto 67.32,16.32
+'Open _Valente Vineyards_ |q Vesper Valente/Enter the Manor
+|tip Manually skip to the next step.
+step
+goto 66.08,16.54
+'Open _Valente Manor_ |q Vesper Valente/Enter the Manor
+step
+goto 66.01,16.48
+'Open _Lord Valente's Office_ |q Vesper Valente/Find Gallio's Office
+step
+goto 66.06,16.49
+'Examine _Lord Gallio Valente's Journal_ |q Vesper Valente/.*Investigate Lord Gallio Valente's Office.* |count 1
+step
+goto 66.05,16.48
+'Take _Winery Key_ |q Vesper Valente/.*Investigate Lord Gallio Valente's Office.* |count 2
+step
+goto 66.03,16.47
+'Examine _Bogvir's Letter_ |q Vesper Valente/.*Investigate Lord Gallio Valente's Office.* |count 3
+step
+goto 66.03,16.49
+talk Lady Ursilia Valente |q Vesper Valente/Talk to Lady Ursilia Valente
+step
+goto 66.02,16.49
+|tip Watch the dialogue.
+talk Fennorian |q Vesper Valente/Talk to Fennorian
+step
+goto 66.01,16.49
+'Open _Valente Manor_ |q Vesper Valente/Enter the Winery
+|tip Manually skip to the next step.
+step
+goto 66.02,16.52
+|tip Go downstairs.
+'Open _Valente Winery_ |q Vesper Valente/Enter the Winery
+step
+goto u42_vdvcellar_base 63.11,15.66 |q Vesper Valente/Search the Winery
+step
+goto 71.01,39.05 |q Vesper Valente/Search the Winery
+step
+goto 70.23,56.56
+talk Fennorian |q Vesper Valente/Talk to Fennorian |future
+step
+goto 50.72,54.26 |q Vesper Valente/.*Gather the Ingredients.*
+step
+goto 45.74,30.35 |q Vesper Valente/.*Gather the Ingredients.*
+step
+goto 36.97,18.84
+|tip Go downstairs.
+'Take _Grape Pulp_ |q Vesper Valente/.*Gather the Ingredients.* |count 1
+step
+goto 36.96,29.33 |q Vesper Valente/.*Gather the Ingredients.*
+step
+goto 45.85,29.15 |q Vesper Valente/.*Gather the Ingredients.*
+step
+goto 43.28,56.06 |q Vesper Valente/.*Gather the Ingredients.*
+step
+goto 22.01,56.19
+'Take _Imperial Oak Tannin_ |q Vesper Valente/.*Gather the Ingredients.* |count 2
+step
+goto 25.72,77.29 |q Vesper Valente/.*Gather the Ingredients.*
+step
+goto 50.50,76.86
+'Take _Waxflower Petals_ |q Vesper Valente/.*Gather the Ingredients.* |count 3
+step
+goto 50.82,54.80 |q Vesper Valente/Return to Fennorian
+step
+goto 70.53,55.77
+talk Fennorian |q Vesper Valente/Talk to Fennorian |future
+step
+goto 67.96,55.07
+|tip Watch the dialogue.
+'Take _Counteragent_ |q Vesper Valente/Take the Counteragent |future
+step
+goto 72.65,55.64
+'Pour _Vesper Valente Victim_ |q Vesper Valente/.*Administer the Counteragent.* |count 1
+step
+goto 70.31,58.39
+'Pour _Vesper Valente Victim_ |q Vesper Valente/.*Administer the Counteragent.* |count 2
+step
+goto 72.44,60.47
+'Pour _Vesper Valente Victim_ |q Vesper Valente/.*Administer the Counteragent.* |count 3
+step
+goto 70.31,58.45
+talk Trenton Calus |q Vesper Valente/Talk to Trenton Calus
+step
+goto 71.35,64.92
+'Open _Valente Winery Shipping Cavern_ |q Vesper Valente/Enter the Caverns
+step
+goto u42_vdvsecretlab_base 24.65,52.79 |q Vesper Valente/Find Lord Gallio Valente's Laboratory |future
+step
+goto 37.57,66.96 |q Vesper Valente/Find Lord Gallio Valente's Laboratory
+step
+goto 41.94,49.86
+kill Lord Gallio Valente |q Vesper Valente/Find Lord Gallio Valente's Laboratory
+|tip Manually skip to the next step.
+step
+goto 71.78,48.00 |q Vesper Valente/Find Lord Gallio Valente's Laboratory
+step
+goto 73.42,60.95
+talk Fennorian |q Vesper Valente/Talk to Fennorian |future
+step
+goto 76.43,62.42
+'Turn _Flame Valve_ |q Vesper Valente/.*Destroy Laboratory Vats.* |count 1
+step
+goto 67.56,66.50
+'Turn _Flame Valve_ |q Vesper Valente/.*Destroy Laboratory Vats.* |count 2
+step
+goto 65.19,67.14
+'Turn _Flame Valve_ |q Vesper Valente/.*Destroy Laboratory Vats.* |count 3
+step
+goto 76.10,48.42
+'Burn _Mushroom Planter_ |q Vesper Valente/.*Burn the Mushroom Planters.* |count 1
+step
+goto 76.48,43.90
+'Burn _Mushroom Planter_ |q Vesper Valente/.*Burn the Mushroom Planters.* |count 2
+step
+goto 88.04,49.53
+'Open _West Weald_ |q Vesper Valente/Leave the Winery |future
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 69.50,16.46
+talk Fennorian
+turnin Vesper Valente
+step
+goto 69.96,22.33 |q The Silent Bell |future
+step
+goto 75.94,21.45
+talk Capptain Dromius Terrus
+accept The Silent Bell
+step
+goto 76.61,20.71
+talk Legionary Calvo Dorso |q The Silent Bell/Enter the Side Passage
+|tip Manually skip to the next step.
+step
+goto 76.79,20.73
+'Open _Fort Colovia_ |q The Silent Bell/Enter the Side Passage |future
+|tip Manually skip to the next step.
+step
+goto u42_base_towerbelli 38.40,39.11 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.* |future
+step
+goto 47.57,21.10 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 67.31,17.46
+'Search _Barrel_ |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.* |count 1
+step
+goto 52.98,30.71 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 65.13,35.14 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 58.51,57.02 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 49.73,65.17
+'Use _Skyshard_ |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+|tip Manually skip to the next step.
+step
+goto 58.51,57.02 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 65.13,35.14 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 74.99,36.56 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 72.98,62.74 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.* |tip Drop down.
+step
+goto 69.44,68.50
+'Search _Ash Pile_ |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.* |count 2
+step
+goto 64.67,73.89 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 49.65,67.40 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 43.48,65.97 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
+step
+goto 45.06,68.58
+'Search _Hay Stack_ |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.* |count 3
+step
+goto 32.79,78.60 |q The Silent Bell/Enter the Bell Tower
+step
+goto 26.26,66.40
+kill Deserter Marius Gallo |q The Silent Bell/Enter the Bell Tower
+|tip Manually skip to the next step.
+step
+goto 22.23,62.19
+'Open _Fort Colovia Bell Tower_ |q The Silent Bell/Enter the Bell Tower |future
+step
+goto westwealdoverland_base 76.89,23.96
+|tip Go all the way upstairs.
+'Use _Fort Colovia Bell_ |q The Silent Bell/Ring the Bell |future
+step
+goto 75.79,23.82 |q The Silent Bell/Talk to Captain Dromius Terrus |future |tip Drop down.
+step
+goto 75.89,21.51
+talk Captain Dromius Terrus
+turnin The Silent Bell
+step
+goto 70.41,21.39 |q Mini Menagerie |future
+step
+goto 69.73,11.72
+'Examine _Trapper's Note_
+accept Mini Menagerie
+step
+goto 69.67,11.72
+'Gather _Adolescent Guzzard_ |q Mini Menagerie/Gather Adolescent Guzzard
+step
+goto 70.36,17.88
+'Use _Valente Vineyards_
+'Travel to _Ontus_ |q Mini Menagerie/Find Star-Gazer Sariyaah
+|tip Manually skip to the next step.
+step
+goto u42_ontus_city_base 46.79,53.63
+talk Star-Gazer Sariyaah
+turnin Mini Menagerie
+accept Tracking the Trapper
+step
+goto westwealdoverland_base 59.71,44.04
+'Use _Ontus_
+'Travel to _Valente Vineyards_ |q Tracking the Trapper/Find Trapper Marcien's Camp
+|tip Manually skip to the next step.
+step
+goto 63.94,27.30 |q Tracking the Trapper/Find Trapper Marcien's Camp
+step
+goto 63.92,28.56
+'Search _Trapper Marcien_ |q Tracking the Trapper/Gather the Bait
+step
+goto 63.92,28.56
+'Use _Guzzard Bait_ |q Tracking the Trapper/Throw the Bait
+step
+goto 63.89,28.62
+'Lift _Nets_ |q Tracking the Trapper/Free Marcien
+step
+goto 63.89,28.62
+talk Trapper Marcien |q Tracking the Trapper/Talk to Trapper Marcien
+step
+goto 66.25,24.74 |q King Nantharion's Gambit/Investigate Terthil Farm
+step
+goto 64.40,24.22
+'Use _Skyshard_ |q King Nantharion's Gambit/Investigate Terthil Farm
+|tip Manually skip to the next step.
+step
+goto 68.79,23.77 |q King Nantharion's Gambit/Investigate Terthil Farm
 step
 goto 70.01,31.42 |q King Nantharion's Gambit/.*Explore Terthil Farm.* |count 1 |future
 step
@@ -52031,69 +52269,7 @@ goto 60.38,78.23
 'Burn _Wildburn Seed_ |q King Nantharion's Gambit/.*Explore the Cave.* |count 2
 step
 'Open _West Weald_ Map
-'Travel to _North Hook_ |q King Nantharion's Gambit/Investigate Hastrel Hollow
-|tip Manually skip to the next step.
-step
-goto 67.26,37.18
-talk Orissa Dellinoi
-accept Spilled Wine
-step
-goto 68.01,37.73
-'Open _Legion's Rest_ |q Spilled Wine/Find Lazen
-|tip Manually skip to the next step.
-step
-goto u42_windcave_base 65.44,94.42 |q Spilled Wine/.*Find Blue Aedral.*
-step
-goto 79.99,73.69 |q Spilled Wine/.*Find Blue Aedral.*
-step
-goto 80.00,65.72
-'Take _Blue Aedral_ |q Spilled Wine/.*Find Blue Aedral.* |count 1
-step
-goto 80.70,52.98 |q Spilled Wine/.*Find Blue Aedral.* |tip Go upstairs.
-step
-goto 68.29,40.37 |q Spilled Wine/.*Find Blue Aedral.*
-step
-goto 65.16,25.66
-'Take _Blue Aedral_ |q Spilled Wine/.*Find Blue Aedral.* |count 2
-step
-goto 46.43,06.89 |q Spilled Wine/.*Find Blue Aedral.*
-step
-goto 21.57,30.59 |q Spilled Wine/.*Find Blue Aedral.*
-step
-goto 28.64,35.37
-'Take _Blue Aedral_ |q Spilled Wine/.*Find Blue Aedral.* |count 3
-step
-goto 45.45,28.74
-'Use _Skyshard_ |q Spilled Wine/.*Find Blue Aedral.*
-|tip Manually skip to the next step.
-step
-goto 32.26,37.89 |q Spilled Wine/.*Find Blue Aedral.*
-step
-goto 40.26,42.59 |q Spilled Wine/.*Find Blue Aedral.* |tip Drop down.
-step
-goto 37.30,50.04
-kill Gilroy Vassinus |q Spilled Wine/.*Find Blue Aedral.*
-|tip Manually skip to the next step.
-step
-goto 42.20,61.51
-'Take _Blue Aedral_ |q Spilled Wine/.*Find Blue Aedral.* |count 4
-step
-goto 43.07,60.52
-'Examine _Blue Aedral Shipment Details_ |q Spilled Wine/Look for Evidence
-step
-goto 39.85,74.89 |q Spilled Wine/Talk to Orissa Outside Legion's Rest |tip Go upstairs.
-step
-goto 30.78,69.69
-'Open _West Weald_ |q Spilled Wine//Talk to Orissa Outside Legion's Rest
-|tip Manually skip to the next step.
-step
-goto westwealdoverland_base 67.51,37.29
-talk Orissa Dellinoi
-turnin Spilled Wine
-step
-goto 70.15,31.38
-'Use _North Hook_
-'Travel to _Ontus_
+'Travel to _Ontus_ |q Tracking the Trapper/Return to Star-Gazer Sariyaah
 |tip Manually skip to the next step.
 step
 goto u42_ontus_city_base 46.79,53.63
@@ -52156,6 +52332,7 @@ step
 goto westwealdoverland_base 63.43,49.36 |q King Nantharion's Gambit/Explore the Ruins |future
 step
 goto 62.84,48.98
+|tip Watch the dialogue.
 'Examine _Wildburn Spriggen Senche_ |q King Nantharion's Gambit/Explore the Ruins |future
 step
 goto 62.70,48.82
@@ -52188,7 +52365,21 @@ goto u42_Skingrad_base 32.47,42.25
 'Travel to _Vashabar_ |q King Nantharion's Gambit/Meet Beragon at Vashabar
 |tip Manually skip to the next step.
 step
-goto u42_Vashabar_base 49.51,44.62
+goto u42_Vashabar_base 57.74,52.77
+|tip Watch the dialogue.
+talk Belienne |q Self-Preservation/Talk to Belienne |future
+step
+goto 55.76,44.33
+|tip Inside tree.
+talk Belienne's Vanity |q Self-Preservation/Interrogate Belienne's Vanity
+step
+goto 57.12,46.13
+talk Belienne
+turnin Self-Preservation
+step
+goto 57.97,52.65 |q King Nantharion's Gambit/Meet Beragon at Vashabar
+step
+goto 49.51,44.62
 'Meet _Beragon_ |q King Nantharion's Gambit/Meet Beragon at Vashabar
 step
 goto 49.51,44.62
@@ -52210,7 +52401,7 @@ talk Tribune Alea Idolus |q King Nantharion's Gambit/Talk to Tribune Alea Idolus
 step
 goto 42.73,21.50
 'Use _Abolisher_
-'Use _Portal to Miscarcand Deep Halls_ |q King Nantharion's Gambit/Enter the Portal
+'Use _Portal to Miscarcand Deep Halls_ |q King Nantharion's Gambit/Enter the Portal |future
 step
 goto 20.59,19.45 |q King Nantharion's Gambit/Explore Miscarcand
 step
@@ -52456,10 +52647,6 @@ goto westwealdoverland_base 63.29,69.63 |q Ithelia's Fury/.*Restore the Daedric 
 step
 goto 66.90,72.23 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
 step
-goto 71.99,69.94
-talk Belienne
-accept Self-Preservation
-step
 goto 71.12,70.43 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
 step
 goto 71.75,73.34
@@ -52491,40 +52678,15 @@ goto 71.76,35.69
 kill Aggression of Root |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
 |tip Manually skip to the next step.
 step
-goto 
+goto 73.63,31.42
 'Examine _Haldain's Journal_
 accept Appointed Executor
 step
 goto 73.53,28.81
-'Take _Haldain's Belongings |q Appointed Executor/Take Haldain's Belongings
+'Take _Haldain's Belongings_ |q Appointed Executor/Take Haldain's Belongings
 step
-'Open _West Weald_ Map
-'Travel to _Trader's Luck_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
-|tip Manually skip to the next step.
-step
-goto westwealdoverland_base 81.69,62.43
-talk Belienne's Despair |q Self-Preservation/Talk to Belienne's Despair
-step
-goto 80.12,64.44 |q Self-Preservation/.*Gather River Flowers.*
-step
-goto 79.14,63.52
-'Gather _River Flower |q Self-Preservation/.*Gather River Flowers.* |count 1
-step
-goto 78.30,63.34
-'Gather _River Flower |q Self-Preservation/.*Gather River Flowers.* |count 2
-step
-goto 78.79,62.48
-'Gather _River Flower |q Self-Preservation/.*Gather River Flowers.* |count 3
-step
-goto 81.69,62.43
-talk Belienne's Despair |q Self-Preservation/Talk to Belienne's Despair
-step
-goto 81.70,62.42
-talk Belienne |q Self-Preservation/Talk to Belienne
-step
-goto 83.13,62.98
-'Use _Trader's Luck_
-'Travel to _Forlorn Palisades_ in Apocrypha |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
+'Open _Apocrypha_ Map
+'Travel to _Forlorn Palisades_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
 |tip Manually skip to the next step.
 step
 goto u38_apocrypha_base 38.39,20.71 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 2
@@ -52600,7 +52762,8 @@ goto 42.64,60.04
 'Open _Colovia Culinary Company_ |q Ithelia's Fury/Go to Beragon's Townhouse
 |tip Manually skip to the next step.
 step
-goto 42.69,63.36
+goto 42.18,57.76
+|tip Go downstairs.
 'Open _Skingrad_ |q Ithelia's Fury/Go to Beragon's Townhouse
 |tip Manually skip to the next step.
 step
@@ -52618,7 +52781,7 @@ goto 43.62,73.46
 'Use _Portal to Fargrave_ |q Ithelia's Fury/Go to Fargrave |future
 |tip Manually skip to the next step.
 step
-goto U42_PE5C1_FargraveIQ02_base 34.86,40.42 |q Ithelia's Fury/Return to the Loom of the Untraveled Road
+goto U42_PE5C1_FargraveIQ02_base 34.86,40.42 |q Ithelia's Fury/Return to the Loom of the Untraveled Road |future
 step
 goto 38.83,60.34 |q Ithelia's Fury/Return to the Loom of the Untraveled Road
 step
@@ -52687,6 +52850,7 @@ goto 83.11,33.03
 kill Primordial Shattered Titan |q Ithelia's Fury/Defeat the Primordial Shattered Titan |future
 step
 goto 83.45,33.93
+|tip Watch the dialogue.
 'Take _Primordial Shattered Titan Fragment_ |q Ithelia's Fury/Gather the Shattered Fragment
 step
 'Open _West Weald_ Map
@@ -52752,6 +52916,7 @@ step
 goto U42_UI_Maps_PEC2_HMSanctum_01 36.70,45.88 |q Fate of the Forgotten Prince/Explore the Whispered Path
 step
 goto 79.21,47.57
+|tip Watch the dialogue.
 'Use _Portal to the Mythos_ |q Fate of the Forgotten Prince/Enter the Mythos |future
 |tip Manually skip to the next step.
 step
@@ -52893,144 +53058,10 @@ goto 45.26,68.76 |q In Memory Of/.*Repair the Reality Tears.* |count 1
 step
 goto 45.77,58.13
 'Use _Skingrad City_
-'Travel to _Ontus_ |q In Memory Of/.*Repair the Reality Tears.* |count 1
-|tip Manually skip to the next step.
-step
-goto u42_ontus_city_base 48.88,55.20
-'Open _Stonechip Tavern_ |q Self-Preservation/Search for Belienne's Delight
-|tip Manually skip to the next step.
-step
-goto 51.28,53.10
-talk Belienne's Delight |q Self-Preservation/Talk to Belienne's Delight
-step
-goto 51.57,53.70
-'Steal _West Weald Wallop_ |q Self-Preservation/Steal a Cast of West Weald Wallop
-'_OR_
-talk Server Tsaxol |q Self-Preservation/Buy a Cast of West Weald Wallop
-step
-goto 51.31,53.12
-'Pour _Empty Mugs_ |q Self-Preservation/Pour Drinks for Belienne's Delight
-step
-goto 51.31,53.12
-'Drink _West Weald Wallop_ |q Self-Preservation/Drink with Belienne's Delight
-step
-goto 50.30,54.01
-talk Belienne |q Self-Preservation/Talk to Belienne
-step
-goto 49.84,54.42
-|tip Go downstairs.
-'Open _Ontus_ |q Self-Preservation/Search for Belienne's Fear
-|tip Manually skip to the next step.
-step
-goto westwealdoverland_base 51.34,52.10
-talk Priest Faric Velain
-accept Unfinished Business
-step
-goto 51.12,51.99
-'Open _Nonungalo_ |q Unfinished Business/Enter Nonungalo |future
-|tip Manually skip to the next step.
-step
-goto u42_base_nonungalo 64.71,83.08 |q Unfinished Business/.*Gather the Ritual Items.*
-step
-goto 57.48,78.88 |q Unfinished Business/.*Gather the Ritual Items.*
-step
-goto 51.84,73.52 |q Unfinished Business/.*Gather the Ritual Items.*
-step
-goto 61.98,72.77
-'Take _Ritual Bowl_ |q Unfinished Business/.*Gather the Ritual Items.* |count 1
-step
-goto 41.04,71.18 |q Unfinished Business/.*Burn the Corrupted Corpses.* |count 1
-step
-goto 33.32,76.87 |q Unfinished Business/.*Burn the Corrupted Corpses.* |count 1
-step
-goto 30.87,86.81 |q Unfinished Business/.*Burn the Corrupted Corpses.* |count 1
-step
-goto 25.69,72.50
-'Burn _Corrupted Corpse_ |q Unfinished Business/.*Burn the Corrupted Corpses.* |count 1
-step
-goto 31.89,55.15 |q Unfinished Business/.*Gather the Ritual Items.*
-step
-goto 12.73,51.13 |q Unfinished Business/.*Gather the Ritual Items.*
-step
-goto 17.54,40.61
-'Destroy _Spider Web_ |q Self-Preservation/Rescue Belienne's Fear
-step
-goto 17.54,40.61
-talk Belienne's Fear |q Self-Preservation/Talk to Belienne's Fear
-step
-goto 18.18,40.74
-talk Belienne |q Self-Preservation/Talk to Belienne
-step
-goto 20.87,40.30 |q Unfinished Business/.*Gather the Ritual Items.*
-step
-goto 36.76,38.92 |q Unfinished Business/.*Gather the Ritual Items.*
-step
-goto 36.67,32.64
-'Take _Ritual Dagger_ |q Unfinished Business/.*Gather the Ritual Items.* |count 2
-step
-goto 32.53,37.08 |q Unfinished Business/.*Burn the Corrupted Corpses.*
-step
-goto 36.48,26.40 |q Unfinished Business/.*Burn the Corrupted Corpses.*
-step
-goto 41.08,26.35
-'Burn _Corrupted Corpse_ |q Unfinished Business/.*Burn the Corrupted Corpses.* |count 2
-step
-goto 36.60,19.40 |q Unfinished Business/.*Burn the Corrupted Corpses.*
-step
-goto 61.57,18.88 |q Unfinished Business/.*Burn the Corrupted Corpses.*
-step
-goto 60.02,30.93 |q Unfinished Business/.*Burn the Corrupted Corpses.*
-step
-goto 44.00,30.04
-'Use _Skyshard_ |q Unfinished Business/.*Burn the Corrupted Corpses.*
-|tip Manually skip to the next step.
-step
-goto 60.02,30.93 |q Unfinished Business/.*Burn the Corrupted Corpses.*
-step
-goto 61.57,18.88 |q Unfinished Business/.*Burn the Corrupted Corpses.*
-step
-goto 80.39,18.62 |q Unfinished Business/.*Burn the Corrupted Corpses.*
-step
-goto 83.56,23.11
-'Burn _Corrupted Corpse_ |q Unfinished Business/.*Burn the Corrupted Corpses.* |count 3
-step
-goto 79.52,41.45 |q Unfinished Business/.*Gather the Ritual Items.* |tip Go upstairs.
-step
-goto 73.42,45.49
-kill Shattered Shard |q Unfinished Business/.*Gather the Ritual Items.*
-|tip Manually skip to the next step.
-step
-goto 72.05,49.61
-'Examine _Ritual Scroll_ |q Unfinished Business/.*Gather the Ritual Items.* |count 3
-step
-goto 65.16,78.34 |q Unfinished Business/Meet Priest Faric Outside
-step
-goto westwealdoverland_base 51.86,51.99
-talk Priest Faric
-turnin Unfinished Business
-step
-goto westwealdoverland_base 41.75,54.65
-'Use _Three Points_
-'Travel to _Vashabar_ |q Self-Preservation/Meet Belienne in Vashabar
-|tip Manually skip to the next step.
-step
-goto u42_Vashabar_base 57.74,52.77
-|tip Watch the dialogue.
-talk Belienne |q Self-Preservation/Talk to Belienne |future
-step
-goto 55.76,44.33
-talk Belienne's Vanity |q Self-Preservation/Interrogate Belienne's Vanity
-step
-goto 57.12,46.13
-talk Belienne
-turnin Self-Preservation
-step
-goto 82.29,70.42
-'Use _Ontus_
 'Travel to _Valente Vineyards_ |q In Memory Of/.*Repair the Reality Tears.* |count 1
 |tip Manually skip to the next step.
 step
-goto westwealdoverland_base  73.87,17.32 |q In Memory Of/.*Repair the Reality Tears.* |count 1
+goto westwealdoverland_base 73.87,17.32 |q In Memory Of/.*Repair the Reality Tears.* |count 1
 step
 goto 75.76,15.99
 'Enter _Faro's Cavern_ |q In Memory Of/.*Repair the Reality Tears.* |count 1
@@ -53044,11 +53075,11 @@ goto 51.97,74.69
 step
 goto 67.84,27.88 |q In Memory Of/.*Repair the Reality Tears.* |count 2
 step
-goto westwealdoverland_base 4.64,26.30
+goto 4.64,26.30
 'Enter _West Weald_ |q In Memory Of/.*Repair the Reality Tears.* |count 2
 |tip Manually skip to the next step.
 step
-goto 73.64,17.41 |q In Memory Of/.*Repair the Reality Tears.* |count 2
+goto westwealdoverland_base 73.64,17.41 |q In Memory Of/.*Repair the Reality Tears.* |count 2
 step
 goto 70.42,17.87
 'Use _Valente Vineyards_

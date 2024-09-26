@@ -3008,7 +3008,7 @@ CGV.MapData = {
     ["u42_base_towerbelli"]               = { name = "Fort Colovia",                            id = 1010, xoffset = 0.446982, yoffset = 0.444530, scale = 0.018335, },
     ["u42_base_wendir"]                   = { name = "Wendir",                                  id = 1011, xoffset = 0.440019, yoffset = 0.471353, scale = 0.012057, },
     ["U42_Farm_Well_base"]                = { name = "Terthil's Well Cave",                     id = 1012, xoffset = 0.415782, yoffset = 0.474184, scale = 0.004154, },
-    ["u42_windcave_base"]                 = { name = "Legion's Rest",                           id = 1013, xoffset = 0.415221, yoffset = 0.468010, scale = 0.011199, },
+    ["u42_windcave_base"]                 = { name = "Legion's Rest",                           id = 1013, xoffset = 0.430721, yoffset = 0.475910, scale = 0.011199, },
     ["U42_Wood_Elf_Camp_base"]            = { name = "Hastrel Hollow Shrine",                   id = 1014, xoffset = 0.366814, yoffset = 0.523538, scale = 0.004503, },
     ["U42_Colovian_Ruins_base"]           = { name = "Fort Dirich Dungeons",                    id = 1015, xoffset = 0.422853, yoffset = 0.503135, scale = 0.002160, },
     ["u42_miscarcand1_base"]              = { name = "Miscarcand",                              id = 1016, xoffset = 0.376338, yoffset = 0.543396, scale = 0.009292, },

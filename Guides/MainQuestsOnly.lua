@@ -46711,6 +46711,147 @@ step
 goto 41.13,64.56
 wayshrine Feldagard Keep
 step
+goto westwealdoverland_base 41.46,64.26
+talk Tribune Alea Idolus
+accept Hold the Line
+step
+goto 42.17,62.26 |q Hold the Line/Go to the Marketplace Overlook
+step
+goto 41.80,61.56
+talk Tribune Alea Idolus |q Hold the Line/Talk to Tribune Alea Idolus |future
+step
+goto 40.68,62.67
+'Open _Feldagard Keep_ |q Hold the Line/Enter Feldagard Keep |future
+|tip Manually skip to the next step.
+step
+goto U42_UI_Maps_FeldagardKeep_01 60.30,69.96
+|tip Look above wall.
+talk Commander Merian |q Hold the Line/Talk to Commander Merian |future
+step
+goto 64.61,70.14
+'Reset _Foothold Trap_ |q Hold the Line/.*Slow the Daedric Assault.* |count 1
+step
+goto 89.32,69.64
+'Burn _Rope_ |q Hold the Line/.*Slow the Daedric Assault.* |count 2
+step
+goto 79.73,63.18
+'Reset _Foothold Trap_ |q Hold the Line/.*Slow the Daedric Assault.* |count 3
+step
+goto 90.09,51.67
+'Burn _Rope_ |q Hold the Line/.*Slow the Daedric Assault.* |count 4
+step
+goto 47.16,59.70
+'Reset _Foothold Trap_ |q Hold the Line/.*Slow the Daedric Assault.* |count 5
+step
+goto 46.09,75.67
+'Burn _Rope_ |q Hold the Line/.*Slow the Daedric Assault.* |count 6
+step
+goto 20.11,68.21 |q Hold the Line/Reach the Courtyard
+step
+goto 38.69,32.14
+'Open _Feldagard Keep Courtyard_ |q Hold the Line/Reach the Courtyard
+|tip Manually skip to the next step.
+step
+goto 70.51,28.71
+talk Commander Merian |q Hold the Line/Talk to Commander Merian |future
+step
+goto 59.34,36.69
+'Take _Bucket of Oil_ |q Hold the Line/Take the Bucket of Oil
+step
+goto 83.16,33.22
+'Pour _Bucket of Oil_ |q Hold the Line/.*Pour Oil Around the Barricade.* |count 1
+step
+goto 82.30,27.71
+'Pour _Bucket of Oil_ |q Hold the Line/.*Pour Oil Around the Barricade.* |count 2
+step
+goto 82.90,20.89
+'Pour _Bucket of Oil_ |q Hold the Line/.*Pour Oil Around the Barricade.* |count 3
+step
+goto 57.69,20.57
+'Take _Ballista Parts_ |q Hold the Line/Repair the Ballista
+|tip Manually skip to the next step.
+step
+goto 83.16,33.22
+.'Repair _Broken Ballista_ |q Hold the Line/Repair the Ballista
+step
+goto 70.10,26.50
+.'Use _ Repaired Ballista_
+.'Ignite _Wall_
+kill First Wave of Daedra
+kill Second Wave of Daedra
+kill Third Wave of Daedra |q Hold the Line/Operate the Ballista
+step
+goto 77.92,05.92
+kill Daedric Attackers
+'Open _Felagard Keep Barracks_ |q Hold the Line/Enter the Keep's Barracks |future
+step
+goto U42_UI_Maps_FeldagardKeep_02 63.58,14.74
+talk Tribune Alea Idolus |q Hold the Line/Talk to Tribune Alea Idolus
+step
+goto 49.72,12.43 |q Hold the Line/Search the Keep's Barracks
+step
+goto 27.55,45.85 |q Hold the Line/Search the Keep's Barracks
+step
+goto 16.48,36.69 |q Hold the Line/Search the Keep's Barracks
+step
+goto 15.57,61.64 |q Hold the Line/Search the Keep's Barracks
+step
+goto 49.65,73.73 |q Hold the Line/Search the Keep's Barracks
+step
+goto 73.85,86.87 |q Hold the Line/Search the Keep's Barracks
+step
+goto 74.98,45.99 |q Hold the Line/Search the Keep's Barracks
+step
+goto U42_UI_Maps_FeldagardKeep_03 51.35,12.00 |q Hold the Line/Search the Keep's Barracks
+step
+goto 64.10,09.35 |q Hold the Line/Search the Keep's Barracks
+step
+goto 50.50,10.22 |q Hold the Line/Search the Keep's Barracks
+step
+goto 50.93,41.26
+'Open _Feldgard Barracks Amrory_ |q Hold the Line/Enter the Barracks Armory |future
+step
+goto 50.40,55.02
+'Observe _Daedric Commander_ |q Hold the Line/Observe the Daedric Commander
+step
+goto 52.39,53.84
+talk Tribune Alea Idolus |q Hold the Line/Talk to Tribune Alea Idolus
+step
+goto 33.16,53.16 |q Hold the Line/Get in Position at the Gateway
+step
+goto 34.04,90.95 |q Hold the Line/Get in Position at the Gateway
+step
+goto 51.17,86.98 |q Hold the Line/Get in Position at the Gateway |future
+step
+goto 48.86,68.79
+'Enter _Portal to Mirrormoor_ |q Hold the Line/Enter the Portal
+step
+goto U42_feldagard_mirrormoor_base 44.51,48.01
+kill Shardborn |q Hold the Line/Defeat the Shardborn
+step
+goto 41.96,50.47
+'Take _Abolisher_ |q Hold the Line/Take Abolisher
+step
+'Use _Abolisher_
+'Enter _Portal to Feldagard Keep_ |q Hold the Line/Return to Feldagard Keep |future
+step
+goto U42_UI_Maps_FeldagardKeep_01 22.41,86.21
+talk Commander Merian |q Hold the Line/Talk to Commander Merian
+step
+goto 20.74,85.45
+talk Tribune Alea Idolus
+turnin Hold the Line
+step
+goto 38.00,87.43
+'Open _Feldagard Keep_ |q Found Family |future
+|tip Manually skip to the next step.
+step
+goto 73.46,89.09
+'Open _West Weald_ |q Found Family |future
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 41.46,64.26 |q Seeds of Suspicion/Find the Wildburn Seed
+step
 goto 43.96,67.22 |q Seeds of Suspicion/Find the Wildburn Seed
 step
 goto 49.98,62.99 |q Seeds of Suspicion/Find the Wildburn Seed
@@ -46827,9 +46968,10 @@ step
 goto 64.37,79.27
 'Burn _Wildburn Seed_ |q Seeds of Suspicion/Destroy the Wildburn Seed
 step
-goto 56.49,76.40 |q Seeds of Suspicion/Escape Hoperoot |future |tip Watch the dialogue.
+goto 56.49,76.40 |q Seeds of Suspicion/Escape Hoperoot |future
 step
 goto 59.89,90.29
+|tip Watch the dialogue.
 'Use _West Weald_ |q Seeds of Suspicion/Escape Hoperoot |future
 |tip Manually skip to the next step.
 step
@@ -46879,9 +47021,11 @@ step
 '_At the Bar._
 talk Innkeeper Brynmir |q The Many Paths/Talk to Innkeeper Brynmir
 step
-goto 63.30,52.78
 '_The Next Room_
-|tip Go Out to the Courtyard.
+'Open _Outcast Inn Courtyard_ |q The Many Paths/Get a Bucket of Well Water
+|tip Manually skip to the next step.
+step
+goto 63.30,52.78
 'Take _Bucket of Well Water_ |q The Many Paths/Get a Bucket of Well Water
 step
 goto 63.34,53.50
@@ -46897,13 +47041,11 @@ step
 '_At the Bar._
 talk Innkeeper Brynmir |q The Many Paths/Talk to Innkeeper Brynmir
 step
-goto 62.48,52.42
 '_The Next Room_
-|tip Go Out to the Courtyard.
-'Examine _Old Monk's Diary_ |lorebook Old Monk's Diary/3/50/43
+'Open _Outcast Inn Courtyard_ |lorebook Old Monk's Diary/3/50/43
+|tip Manually skip to the next step.
 step
-goto 62.63,54.22
-'Examine _Old Tabs: 2E 579_ |lorebook Open Tabs: 2E 579/3/50/42
+goto 63.78,52.76 |q The Many Paths/Search for the Recipe Book
 step
 goto 61.04,52.56
 'Open _Outcast Inn Outbuilding_ |q The Many Paths/Search for the Recipe Book
@@ -47035,142 +47177,6 @@ goto westwealdoverland_base 63.92,54.11
 talk Leramil the Wise
 turnin The Many Paths
 step
-goto u42_Skingrad_base 32.44,42.55
-'Use _Skingrad Vineyards_
-'Travel to _Feldagard Keep_ |q Relics of the Three Princes |future
-|tip Manually skip to the next step.
-step
-goto westwealdoverland_base 41.46,64.26
-talk Tribune Alea Idolus
-accept Hold the Line
-step
-goto 42.17,62.26 |q Hold the Line/Go to the Marketplace Overlook
-step
-goto 41.80,61.56
-talk Tribune Alea Idolus |q Hold the Line/Talk to Tribune Alea Idolus |future
-step
-goto 40.68,62.67
-'Open _Feldagard Keep_ |q Hold the Line/Enter Feldagard Keep |future
-|tip Manually skip to the next step.
-step
-goto U42_UI_Maps_FeldagardKeep_01 60.30,69.96
-|tip Look above wall.
-talk Commander Merian |q Hold the Line/Talk to Commander Merian |future
-step
-goto 64.61,70.14
-'Reset _Foothold Trap_ |q Hold the Line/.*Slow the Daedric Assault.* |count 1
-step
-goto 89.32,69.64
-'Burn _Rope_ |q Hold the Line/.*Slow the Daedric Assault.* |count 2
-step
-goto 79.73,63.18
-'Reset _Foothold Trap_ |q Hold the Line/.*Slow the Daedric Assault.* |count 3
-step
-goto 90.09,51.67
-'Burn _Rope_ |q Hold the Line/.*Slow the Daedric Assault.* |count 4
-step
-goto 47.16,59.70
-'Reset _Foothold Trap_ |q Hold the Line/.*Slow the Daedric Assault.* |count 5
-step
-goto 46.09,75.67
-'Burn _Rope_ |q Hold the Line/.*Slow the Daedric Assault.* |count 6
-step
-goto 20.11,68.21 |q Hold the Line/Reach the Courtyard
-step
-goto 38.69,32.14
-'Open _Feldagard Keep Courtyard_ |q Hold the Line/Reach the Courtyard
-|tip Manually skip to the next step.
-step
-goto 70.51,28.71
-talk Commander Merian |q Hold the Line/Talk to Commander Merian |future
-step
-goto 59.34,36.69
-'Take _Bucket of Oil_ |q Hold the Line/Take the Bucket of Oil
-step
-goto 83.16,33.22
-'Pour _Bucket of Oil_ |q Hold the Line/.*Pour Oil Around the Barricade.* |count 1
-step
-goto 82.30,27.71
-'Pour _Bucket of Oil_ |q Hold the Line/.*Pour Oil Around the Barricade.* |count 2
-step
-goto 82.90,20.89
-'Pour _Bucket of Oil_ |q Hold the Line/.*Pour Oil Around the Barricade.* |count 3
-step
-goto 57.69,20.57
-'Take _Ballista Parts_ |q Hold the Line/Repair the Ballista
-|tip Manually skip to the next step.
-step
-goto 83.16,33.22
-.'Repair _Broken Ballista_ |q Hold the Line/Repair the Ballista
-step
-goto 70.10,26.50
-.'Use _ Repaired Ballista_
-.'Ignite _Wall_
-kill First Wave of Daedra
-kill Second Wave of Daedra
-kill Third Wave of Daedra |q Hold the Line/Operate the Ballista
-step
-goto 77.92,05.92
-|tip Kill Daedric Attackers.
-'Open _Felagard Keep Barracks_ |q Hold the Line/Enter the Keep's Barracks |future
-step
-goto U42_UI_Maps_FeldagardKeep_02 63.58,14.74
-talk Tribune Alea Idolus |q Hold the Line/Talk to Tribune Alea Idolus
-step
-goto 49.72,12.43 |q Hold the Line/Search the Keep's Barracks
-step
-goto 27.55,45.85 |q Hold the Line/Search the Keep's Barracks
-step
-goto 16.48,36.69 |q Hold the Line/Search the Keep's Barracks
-step
-goto 15.57,61.64 |q Hold the Line/Search the Keep's Barracks
-step
-goto 49.65,73.73 |q Hold the Line/Search the Keep's Barracks
-step
-goto 73.85,86.87 |q Hold the Line/Search the Keep's Barracks
-step
-goto 74.98,45.99 |q Hold the Line/Search the Keep's Barracks
-step
-goto U42_UI_Maps_FeldagardKeep_03 51.35,12.00 |q Hold the Line/Search the Keep's Barracks
-step
-goto 64.10,09.35 |q Hold the Line/Search the Keep's Barracks
-step
-goto 50.50,10.22 |q Hold the Line/Search the Keep's Barracks
-step
-goto 50.93,41.26
-'Open _Feldgard Barracks Amrory_ |q Hold the Line/Enter the Barracks Armory |future
-step
-goto 50.40,55.02
-'Observe _Daedric Commander_ |q Hold the Line/Observe the Daedric Commander
-step
-goto 52.39,53.84
-talk Tribune Alea Idolus |q Hold the Line/Talk to Tribune Alea Idolus
-step
-goto 33.16,53.16 |q Hold the Line/Get in Position at the Gateway
-step
-goto 34.04,90.95 |q Hold the Line/Get in Position at the Gateway
-step
-goto 51.17,86.98 |q Hold the Line/Get in Position at the Gateway |future
-step
-goto 48.86,68.79
-'Enter _Portal to Mirrormoor_ |q Hold the Line/Enter the Portal
-step
-goto U42_feldagard_mirrormoor_base 44.51,48.01
-kill Shardborn |q Hold the Line/Defeat the Shardborn
-step
-goto 41.96,50.47
-'Take _Abolisher_ |q Hold the Line/Take Abolisher
-step
-'Use _Abolisher_
-'Enter _Portal to Feldagard Keep_ |q Hold the Line/Return to Feldagard Keep |future
-step
-goto U42_UI_Maps_FeldagardKeep_01 22.41,86.21
-talk Commander Merian |q Hold the Line/Talk to Commander Merian
-step
-goto 20.74,85.45
-talk Tribune Alea Idolus
-turnin Hold the Line
-step
 'Open _West Weald_ Map
 'Travel to _Skingrad City_ |q Relics of the Three Princes/Return to Beragon's Townhouse
 tip Manally skip to the next step.
@@ -47201,13 +47207,12 @@ goto 45.74,58.01
 |tip Manually skip to the next step.
 step
 goto westwealdoverland_base 20.48,58.73
-|tip He moves around.
 talk Beragon |q Relics of the Three Princes/Talk to Beragon |future
 step
 goto 20.48,57.79
 'Scout _Defense_ |q Relics of the Three Princes/.*Scout the Defense.* |count 1
 step
-goto 18.29,57.39
+goto 18.62,57.29
 'Scout _Defense_ |q Relics of the Three Princes/.*Scout the Defense.* |count 2
 step
 goto 18.35,57.40
@@ -47268,6 +47273,8 @@ step
 goto 60.15,43.89 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 2
 step
 goto 38.44,44.77 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 2
+step
+goto 37.95,52.45 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 2
 step
 goto 29.93,50.93 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 2
 step
@@ -47351,6 +47358,7 @@ goto 42.72,75.74
 'Take _Skein of Secrets_ |q Relics of the Three Princes/Take the Skein of Secrets |future
 step
 goto 42.50,77.01
+|tip Watch the dialogue.
 'Use _Echonir_ |q Relics of the Three Princes/Use the Echonir
 step
 goto 42.29,76.81
@@ -47476,6 +47484,7 @@ step
 goto westwealdoverland_base 63.43,49.36 |q King Nantharion's Gambit/Explore the Ruins |future
 step
 goto 62.84,48.98
+|tip Watch the dialogue.
 'Examine _Wildburn Spriggen Senche_ |q King Nantharion's Gambit/Explore the Ruins |future
 step
 goto 62.70,48.82
@@ -47935,6 +47944,7 @@ goto 83.11,33.03
 kill Primordial Shattered Titan |q Ithelia's Fury/Defeat the Primordial Shattered Titan |future
 step
 goto 83.45,33.93
+|tip Watch the dialogue.
 'Take _Primordial Shattered Titan Fragment_ |q Ithelia's Fury/Gather the Shattered Fragment
 step
 'Open _West Weald_ Map
@@ -48000,6 +48010,7 @@ step
 goto U42_UI_Maps_PEC2_HMSanctum_01 36.70,45.88 |q Fate of the Forgotten Prince/Explore the Whispered Path
 step
 goto 79.21,47.57
+|tip Watch the dialogue.
 'Use _Portal to the Mythos_ |q Fate of the Forgotten Prince/Enter the Mythos |future
 |tip Manually skip to the next step.
 step
@@ -48158,11 +48169,11 @@ goto 51.97,74.69
 step
 goto 67.84,27.88 |q In Memory Of/.*Repair the Reality Tears.* |count 2
 step
-goto westwealdoverland_base 4.64,26.30
+goto 4.64,26.30
 'Enter _West Weald_ |q In Memory Of/.*Repair the Reality Tears.* |count 2
 |tip Manually skip to the next step.
 step
-goto 73.64,17.41 |q In Memory Of/.*Repair the Reality Tears.* |count 2
+goto westwealdoverland_base 73.64,17.41 |q In Memory Of/.*Repair the Reality Tears.* |count 2
 step
 goto 70.42,17.87
 'Use _Valente Vineyards_
