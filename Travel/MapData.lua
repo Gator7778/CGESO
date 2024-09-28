@@ -2990,7 +2990,7 @@ CGV.MapData = {
     ["u42_base_nonungalo"]                = { name = "Nonungalo",                               id =  996, xoffset = 0.389966, yoffset = 0.499647, scale = 0.015004, },
     ["u42_hoperoot1_base"]                = { name = "Hoperoot",                                id =  997, xoffset = 0.402654, yoffset = 0.511014, scale = 0.014594, },
     ["u42_hoperoot2_base"]                = { name = "Hoperoot",                                id =  997, xoffset = 0.402654, yoffset = 0.511014, scale = 0.014594, },
-    ["u42_hoperoot3_base"]                = { name = "Hoperoot",                                id =  997, xoffset = 0.402654, yoffset = 0.511014, scale = 0.014594, },
+    ["u42_hoperoot3_base"]                = { name = "Hoperoot",                                id =  997, xoffset = 0.402654, yoffset = 0.514324, scale = 0.009601, },
     ["u42_ontus_city_base"]               = { name = "Ontus",                                   id =  998, xoffset = 0.397811, yoffset = 0.479702, scale = 0.023866, },
     ["U42_UI_Maps_FornDortis_01"]         = { name = "Zeggar's Blind",                          id =  999, xoffset = 0.417520, yoffset = 0.487646, scale = 0.003851, },
     ["u42_skingrad_or_base"]              = { name = "Skingrad Outlaws Refuge",                 id = 1000, xoffset = 0.444486, yoffset = 0.523245, scale = 0.009667, },

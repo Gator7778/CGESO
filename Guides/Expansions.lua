@@ -48824,7 +48824,7 @@ description The West Weald is an open countryside of the Colovia region in south
 -- START: ALDMERI DOMINION FACTION PROLOGUE GUIDE
 step
 'Open _Grahtwood_ Map
-'Travel to _Elden Root_ in Grahtwood |q Prisoner of Fate |future
+'Travel to _Elden Root_ |q Prisoner of Fate |future
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -48834,6 +48834,7 @@ accept Prisoner of Fate
 |only Aldmeri Dominion
 step
 goto 73.54,48.34 |q Prisoner of Fate/Talk to Leramil the Wise
+|only Aldmeri Dominion
 step
 goto 74.20,44.88
 'Open _Elden Root Outlaws Refuge_ |q Prisoner of Fate/Talk to Leramil the Wise
@@ -48856,7 +48857,7 @@ step
 
 -- START: DAGGERFALL COVENANT FACTION
 'Open _Stormhaven_ Map
-'Travel to _Wayrest_ in Stormhaven |q Prisoner of Fate |future
+'Travel to _Wayrest_ |q Prisoner of Fate |future
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -48883,7 +48884,7 @@ step
 
 -- START: EBONHEART PACT FACTION
 'Open _Deshaan_ Map
-'Travel to _Mournhold_ in Deshaan |q Prisoner of Fate |future
+'Travel to _Mournhold_ |q Prisoner of Fate |future
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -48934,15 +48935,9 @@ goto 71.18,31.51
 'Examine _A Dance Along the Webs_ |lorebook A Dance Along the Webs/3/3/108
 step
 goto 71.59,42.82
-'Use _Echonir_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
-|tip Manually skip to the next step.
-step
-goto 71.18,48.13
-'Activate _Ritual Circle_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
-|tip Manually skip to the next step.
-step
-goto 71.18,48.13
-'Use _Portal to Sanctuary of Whispers_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
+.'Use _Echonir_
+.'Activate _Ritual Circle_
+.'Use _Portal to Sanctuary of Whispers_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
 |tip Manually skip to the next step.
 step
 goto u41_shrineofmephala_base 19.43,45.57
@@ -48950,7 +48945,6 @@ talk Torvesard |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.
 |tip Manually skip to the next step.
 step
 goto 26.60,43.82
-|tip Choose Reaper's March Option in dialogue.
 talk Leramil the Wise |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 1
 step
 goto 31.80,48.54
@@ -48968,12 +48962,20 @@ step
 goto 60.10,59.72
 'Use _Shrine of Jone_ |q Prisoner of Fate/Obtain the Blessing of Jone
 step
+goto 60.16,60.37
+'Open _Dune_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+|tip Manually skip to the next step.
+step
 goto 45.04,73.83
 'Open _Shrine of Jode_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
 |tip Manually skip to the next step.
 step
 goto 43.93,73.71
 'Use _Shrine of Jode_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
+|tip Manually skip to the next step.
+step
+goto 44.61,73.68
+'Open _Dune_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 2
 |tip Manually skip to the next step.
 step
 goto 57.37,70.91
@@ -49191,6 +49193,7 @@ goto 50.02,89.05
 'Open _Ithelia's Prison_ |q Prisoner of Fate/Follow Torvesard
 step
 goto u41_pro_ithpri_base 52.86,51.14
+|tip Watch the dialogue.
 talk Torvesard |q Prisoner of Fate/Talk to Torvesard
 step
 goto 71.37,30.50
@@ -49223,6 +49226,10 @@ talk Leramil the Wise
 accept Paths of Chaos
 step
 goto 40.93,39.65 |q Seeking Armistice |future
+step
+goto 42.26,49.09
+'Open _West Weald_ |q Seeking Armistice |future
+|tip Manually skip to the next step.
 step
 goto 45.90,57.97
 wayshrine Skingrad City
@@ -50007,7 +50014,7 @@ goto 55.64,64.04
 talk Danel Telleno
 turnin Crafting Certification
 step
-goto 61.64,61.94
+goto 61.64,61.94 |q Burnt Biscuits/Go to Count Calantius's Office in Skingrad
 step
 goto 60.26,61.00
 'Open _Count Calantius's Office_ |q Burnt Biscuits/Go to Count Calantius's Office in Skingrad
@@ -50081,9 +50088,10 @@ wayshrine Vashabar
 step
 goto westwealdoverland_base 46.97,71.31 |q The Voice of the Village |future
 step
-goto 48.61,70.70 |q The Voice of the Village |future |tip Go upstairs.
+goto 48.61,70.70 |q The Voice of the Village |future
 step
 goto 48.48,71.21
+|tip Go upstairs.
 'Use _Skyshard_ |q The Voice of the Village |future
 |tip Manually skip to the next step.
 step
@@ -50259,7 +50267,7 @@ goto 83.16,33.22
 step
 goto 70.10,26.50
 .'Use _ Repaired Ballista_
-.'Ignite _Wall_
+.'Ignite _Barricade Wall_
 kill First Wave of Daedra
 kill Second Wave of Daedra
 kill Third Wave of Daedra |q Hold the Line/Operate the Ballista
@@ -50270,8 +50278,6 @@ kill Daedric Attackers
 step
 goto U42_UI_Maps_FeldagardKeep_02 63.58,14.74
 talk Tribune Alea Idolus |q Hold the Line/Talk to Tribune Alea Idolus
-step
-goto 49.72,12.43 |q Hold the Line/Search the Keep's Barracks
 step
 goto 27.55,45.85 |q Hold the Line/Search the Keep's Barracks
 step
@@ -50405,7 +50411,8 @@ goto 24.34,47.96
 talk Greenspeaker Nedolir |q The Voice of the Village/Talk to Greenspeaker Nedolir |future
 step
 goto 21.96,47.73
-'Place _Ayleid Mosaic_ |q The Voice of the Village/Place Clendagal's Symbol
+'Place _Ayleid Mosaic_ |q The Voice of the Village/Place Clendagal's Symbol |future
+|tip Watch the dialogue.
 step
 goto 22.13,46.29
 'Place _Dormant Seedpod_
@@ -50431,6 +50438,8 @@ step
 goto 48.76,57.23
 'Use _Skyshard_ |q The Deserter |future
 |tip Manually skip to the next step.
+step
+goto 48.52,57.65 |q The Deserter |future
 step
 goto 41.77,54.78
 wayshrine Three Points
@@ -50498,6 +50507,7 @@ goto 16.78,63.56
 'Examine _Tham's Note_ |q Terror of the Weald/.*Search Tham's Tavern.* |count 3
 step
 goto 16.79,63.57
+|tip Watch the dialogue.
 talk Maerenah |q Terror of the Weald/Talk to Maerenah
 step
 goto 17.42,64.15
@@ -50515,6 +50525,7 @@ goto 18.87,63.41
 'Open _Sutch Depository Vault_ |q Terror of the Weald/Enter the Vault
 step
 goto 18.87,63.60
+|tip Watch the dialogue.
 talk Rosalyn Metrick |q Terror of the Weald/Talk to Rosalyn
 step
 goto 18.84,63.45
@@ -50602,7 +50613,7 @@ goto 75.15,44.77
 |tip Manually skip to the next step.
 step
 goto westwealdoverland_base 21.58,64.86
-talk Tham |q Terror of the Weald/Talk to Tham
+talk Tham |q Terror of the Weald/Talk to Tham |future
 step
 goto 21.67,64.90
 talk Maerenah
@@ -50678,6 +50689,8 @@ goto U42_VarensWatch_int_base 69.08,11.13 |q Cold Fires on the Watch/.*Ignite th
 step
 goto 37.33,32.62 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 4
 step
+goto 21.28,44.83 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 4
+step
 goto 37.92,71.64 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 4
 step
 goto 64.01,58.38 |q Cold Fires on the Watch/.*Ignite the Signal Fires.* |count 4
@@ -50722,10 +50735,8 @@ step
 goto 50.63,49.15 |q Seeds of Suspicion/Rendezvous Near Hoperoot
 step
 goto 56.18,51.04
-'Rendezvous Near Hoperoot |q Seeds of Suspicion/Rendezvous Near Hoperoot
-step
-goto 56.18,51.04
-talk Beragon |q Seeds of Suspicion/Talk to Beragon |future
+talk Beragon |q Seeds of Suspicion |future
+|tip Manually skip to the next step.
 step
 goto 57.22,55.46
 'Enter _Hoperoot_ |q Seeds of Suspicion/Enter Hoperoot |future
@@ -50754,7 +50765,7 @@ goto 73.06,71.13 |q Seeds of Suspicion/Continue to Explore Hoperoot
 step
 goto 86.37,77.89 |q Seeds of Suspicion/Continue to Explore Hoperoot
 step
-goto 78.36,71.93 |q Seeds of Suspicion/Continue to Explore Hoperoot
+goto u42_hoperoot2_base 78.36,71.93 |q Seeds of Suspicion/Continue to Explore Hoperoot
 step
 goto 61.50,68.82 |q Seeds of Suspicion/Continue to Explore Hoperoot
 step
@@ -50773,7 +50784,7 @@ goto 13.29,43.21 |q Seeds of Suspicion/Search for King Nantharion
 step
 goto 17.43,34.76 |q Seeds of Suspicion/Search for King Nantharion
 step
-goto 35.32,35.71 |q Seeds of Suspicion/Search for King Nantharion
+goto u42_hoperoot3_base 35.32,35.71 |q Seeds of Suspicion/Search for King Nantharion
 step
 goto 31.57,51.10 |q Seeds of Suspicion/Enter the Throne Room |future
 step
@@ -50833,7 +50844,7 @@ goto 54.42,52.84
 talk Ghrakug |q Another Death in Ontus/.*Talk to Ontus Townsfolk.* |count 1
 step
 goto 53.54,53.34
-'Open _Stonechip Tavern_ |q Faded Scarlets/Recruit Fallen-Knives
+'Open _Stonechip Tavern_ |q Self-Preservation/Talk to Belienne's Delight
 |tip Manually skip to the next step.
 step
 goto 51.28,53.10
@@ -50856,7 +50867,6 @@ step
 goto 51.54,52.94
 |tip Go downstairs.
 talk Fallen-Knives |q Faded Scarlets/Recruit Fallen-Knives
-'Tell him "_Tell me more about destroying the record of your debt instead of paying._"
 |tip Manually skip to the next step.
 step
 goto 49.84,54.40
@@ -51032,7 +51042,7 @@ goto 26.58,14.09
 'Enter _West Weald_ |q Another Death in Ontus/Meet Yabren at Stonechip Gambling Den
 |tip Manually skip to the next step.
 step
-goto u42_ontus_city_base 47.04,55.31 |q Another Death in Ontus/Meet Yabren at Stonechip Gambling Den
+goto u42_ontus_city_base 58.04,61.91 |q Another Death in Ontus/Meet Yabren at Stonechip Gambling Den
 step
 goto 53.69,54.20
 'Open _Stonechip Gambling Den_ |q Another Death in Ontus/Meet Yabren at Stonechip Gambling Den
@@ -51107,6 +51117,7 @@ goto 17.54,40.61
 talk Belienne's Fear |q Self-Preservation/Talk to Belienne's Fear
 step
 goto 18.18,40.74
+|tip Watch the dialogue.
 talk Belienne |q Self-Preservation/Talk to Belienne
 step
 goto 36.76,38.92 |q Unfinished Business/.*Gather the Ritual Items.*
@@ -51150,6 +51161,10 @@ goto 72.05,49.61
 'Examine _Ritual Scroll_ |q Unfinished Business/.*Gather the Ritual Items.* |count 3
 step
 goto 65.16,78.34 |q Unfinished Business/Meet Priest Faric Outside
+step
+goto 78.42,76.10
+'Open _West Weald_ |q Unfinished Business/Meet Priest Faric Outside |future
+|tip Manually skip to the next step.
 step
 goto westwealdoverland_base 51.86,51.99
 talk Priest Faric
@@ -51280,11 +51295,13 @@ goto 59.96,75.67 |q A Matter of Propriety/Look for Amaurel
 step
 goto 58.68,84.32 |q A Matter of Propriety/Look for Amaurel
 step
-goto 72.66,89.65 |q A Matter of Propriety/Look for Amaurel
+goto 77.41,89.84 |q A Matter of Propriety/Look for Amaurel
 step
 goto 77.49,71.16
 kill Scourgetail |q A Matter of Propriety/Look for Amaurel
 |tip Manually skip to the next step.
+step
+goto 76.02,64.57 |q A Matter of Propriety/Talk to Amaurel Verdulis |future
 step
 goto 77.29,57.76
 talk Amaurel Verdulis |q A Matter of Propriety/Talk to Amaurel Verdulis |future
@@ -51325,41 +51342,44 @@ goto 63.34,53.50
 'Open _The Outcast Inn_ |q The Many Paths/Bring Water to Innkeeper Brynmir
 |tip Manually skip to the next step.
 step
-'_At the Bar_
-'Bring _Water to Innkeeper Brynmir_ |q The Many Paths/Bring Water to Innkeeper Brynmir
-step
-'_Right of the Bar_
-talk Ithelia |q The Many Paths/Talk to Ithelia
+'_At the Fireplace_
+talk Ithelia |q The Many Paths/Talk to Ithelia |future
 step
 '_At the Bar._
 talk Innkeeper Brynmir |q The Many Paths/Talk to Innkeeper Brynmir
 step
 '_The Next Room_
-'Open _Outcast Inn Courtyard_ |lorebook Old Monk's Diary/3/50/43
+'Open _Outcast Inn Courtyard_ |q The Many Paths/Search for the Recipe Book
 |tip Manually skip to the next step.
 step
-goto 63.78,52.76 |q The Many Paths/Search for the Recipe Book
+goto 62.48,52.42
+|tip Go Out to the Courtyard.
+'Examine _Old Monk's Diary_ |lorebook Old Monk's Diary/3/50/43
+step
+goto 62.63,54.22
+'Examine _Old Tabs: 2E 579_ |lorebook Open Tabs: 2E 579/3/50/42
 step
 goto 61.04,52.56
 'Open _Outcast Inn Outbuilding_ |q The Many Paths/Search for the Recipe Book
 |tip Manually skip to the next step.
 step
-goto 61.34,52.43
+goto 61.35,52.43
 |tip Go upstairs.
-'Examine _Gilraedal's Book of Obscure and Ancient Spirits_ |q The Many Paths/Search for the Recipe Book
+'Examine_ Gilraedal's Book of Obscure and Ancient Spirits_ |q The Many Paths/Search for the Recipe Book
 step
 goto 61.24,52.46
 'Open _Outcast Inn Courtyard_ |q The Many Paths/Return to Innkeeper Brynmir
 |tip Manually skip to the next step.
 step
 goto 62.61,53.33
-'Open _Outcast Inn_ |q The Many Paths/Return to Innkeeper Brynmir
+'Open _The  Outcast Inn_ |q The Many Paths/Return to Innkeeper Brynmir
 |tip Manually skip to the next step.
 step
 '_At the Bar._
 talk Innkeeper Brynmir |q The Many Paths/Talk to Innkeeper Brynmir |future
 step
 '_Go Downstairs_
+|tip Follow Left wall in the next room.
 'Open _Outcast Inn Cellar_ |q The Many Paths/Enter the Outcast Inn Cellar |future
 |tip Manually skip to the next step.
 step
@@ -51379,13 +51399,14 @@ goto U42_UI_Maps_InnBetween_02 25.04,48.82
 talk Ithelia |q The Many Paths/Talk to Ithelia |future
 step
 goto 16.07,56.18
-'Take _Tirum Wood_ |q The Many Paths/Take the Tirum Weed
+'Take _Tirum Weed_ |q The Many Paths/Take the Tirum Weed
 step
 goto 18.70,55.67
 'Enter _Portal to the Outcast Inn_ |q The Many Paths/Return to the Cellar
 step
 goto U42_UI_Maps_InnBetween_01 49.08,12.93
-'Use _Lamp of Clarity_ |q The Many Paths/Use the Lamp
+talk Ithelia (Optional)
+'Use _Lamp of Clarity_ |q The Many Paths/Use the Lamp |future
 step
 goto 49.08,12.93
 'Enter _Portal to the Many Paths_ |q The Many Paths/Enter the Many Paths
@@ -51408,6 +51429,7 @@ goto 18.54,27.35
 'Enter _Portal to the Outcast Inn_ |q The Many Paths/Return to the Cellar
 step
 goto U42_UI_Maps_InnBetween_01 64.10,13.54
+talk Ithelia (Optional)
 'Use _Lamp of Clarity_ |q The Many Paths/Use the Lamp
 step
 goto 64.10,13.54
@@ -51420,7 +51442,7 @@ goto 65.81,57.28 |q The Many Paths/Explore This Path
 step
 goto 42.93,57.44 |q The Many Paths/Explore This Path
 step
-goto 38.72,65.25 |q The Many Paths/Explore This Path
+goto 38.46,62.34 |q The Many Paths/Explore This Path
 step
 goto 38.35,29.59 |q The Many Paths/Explore This Path
 step
@@ -51440,19 +51462,26 @@ goto 52.93,29.36
 |tip Listen to Brynmir Directions.
 .'Place _Tirum Weed_
 .'Ignite _Heating Element_
-.'Open _Valve_ Add Heat
-.'Close _Valve_ Reduce Heat
+.'Open _Valve_ (3)
+.'Close _Valve_ (1) |q The Many Paths/Properly Mix a Sage's Dream
+|tip Manually skip to the next step.
+step
 .'Place _Harkfruit_
 .'Ignite _Heat Element_
-.'Open _Valve_  to Add Heat
-.'Close _Valve_ Reduce Heat
+.'Open _Valve_ (4)
+.'Close _Valve_ (1) |q The Many Paths/Properly Mix a Sage's Dream
+|tip Manually skip to the next step.
+step
 .'Place _Lute Berries_
 .'Activate _Cooling Elements_
-.'Open _Valve_ Add Cold
-.'Close _Valve_ Reduce Cold
-.'Mix _Pot of Steeped Tirum Weed_ four times
-.'Mix _Dish of Chilled Lute Berries_ two times
-.'Mix _Break of Harkfruit Juice_ four times
+.'Open _Valve_ (2)
+.'Close _Valve_ (1) |q The Many Paths/Properly Mix a Sage's Dream
+|tip Manually skip to the next step.
+step
+|tip Manually skip to the next step.
+.'Mix _Pot of Steeped Tirum Weed_ (4)
+.'Mix _Dish of Chilled Lute Berries_ (2)
+.'Mix _Break of Harkfruit Juice_ (4)
 .'Pour _Drinkmaker Valve_
 .'Take _Sage's Dream_ |q The Many Paths/Properly Mix a Sage's Dream
 step
@@ -51460,7 +51489,7 @@ goto 49.34,88.30
 'Open _Outcast Inn_ |q The Many Paths/Return to the Outcast Inn |future
 |tip Manually skip to the next step.
 step
-'Go back to the _Fireplace next to the Bar_
+'_At the Fireplace_
 'Place _Sage's Dream_ |q The Many Paths/Give the Sage's Dream to Ithelia |future
 step
 talk Ithelia |q The Many Paths/Talk to Ithelia
@@ -51679,8 +51708,8 @@ step
 step
 goto westwealdoverland_base 43.44,54.70 |q Faded Scarlets/Go to Caelum Vineyard
 step
-goto 
-'Return to Hooke
+goto 44.89,53.33
+'Go _Caelum Vineyard_ |q Faded Scarlets/Go to Caelum Vineyard
 step
 goto 45.24,54.10
 'Examine _Tarnished Slag_ |q Faded Scarlets/.*Search for Signs.* |count 1 |future
@@ -51690,20 +51719,16 @@ goto 45.88,55.89
 step
 goto 46.68,53.53 |q Faded Scarlets/.*Search for Signs.* |count 3
 step
-goto 46.72,51.39 |q Faded Scarlets/.*Search for Signs.* |count 3
-step
 goto 47.21,51.95
 'Examine _Sewer Pipe_ |q Faded Scarlets/.*Search for Signs.* |count 3
 step
 goto 46.92,51.30 |q Faded Scarlets/Talk to Hooke
 step
-goto 45.60,53.35 |q Faded Scarlets/Talk to Hooke
-step
 goto 45.16,55.40
 talk Hooke |q Faded Scarlets/Talk to Hooke
 step
 goto 45.69,53.61
-|tip Go downstairs.
+|tip Drop down.
 'Open _Caelum Cellars_ |q Faded Scarlets/Enter the Caelm Cellars |future
 |tip Manually skip to the next step.
 step
@@ -51719,6 +51744,7 @@ goto 75.23,66.53
 'Examine _Scarlets List_ |q Faded Scarlets/.*Search the Room.* |count 3
 step
 goto 66.53,57.68
+|tip Watch the dialogue.
 'Open _Caelum Cellars Inner Vaults_ |q Faded Scarlets/Confront Marcan Caelum
 |tip Manually skip to the next step.
 step
@@ -51894,7 +51920,7 @@ goto 38.22,81.42 |q Ayleid Altercations/.*Search for Altar Activation Items.*
 step
 goto 47.80,82.58 |q Ayleid Altercations/.*Search for Altar Activation Items.*
 step
-goto 62.66,76.31 |q Ayleid Altercations/.*Search for Altar Activation Items.*
+goto 62.84,76.54 |q Ayleid Altercations/.*Search for Altar Activation Items.*
 step
 goto 62.78,54.81 |q Ayleid Altercations/.*Search for Altar Activation Items.*
 step
@@ -51937,8 +51963,10 @@ goto 52.39,33.30
 'Examine _Epitaph for the Five Loyal Retainers_ |q Ayleid Altercations/Read the Epitaph
 step
 .'_Start on Blue title_
-'_Go to the Far Right_
-'_Up Three Over two Up One_ |q Ayleid Altercations/Solve the Puzzle of the Last King
+.'_Over Four_
+.'_Up Three_
+.'_Over two_
+.'_Up One_ |q Ayleid Altercations/Solve the Puzzle of the Last King
 step
 goto 53.39,29.57
 'Let _Narsis Dren Proceed_ |q Ayleid Altercations/Let Narsis Dren Proceed |future
@@ -51965,9 +51993,9 @@ goto westwealdoverland_base 73.86,36.89
 talk Elfbetta
 turnin Ayleid Altercations
 step
-goto 69.21,22.92 |q Vesper Valente |future
-step
 goto 71.66,36.80 |q Vesper Valente |future
+step
+goto 69.21,22.92 |q Vesper Valente |future
 step
 goto 70.37,17.89
 wayshrine Valente Vineyards
@@ -52194,6 +52222,7 @@ kill Deserter Marius Gallo |q The Silent Bell/Enter the Bell Tower
 step
 goto 22.23,62.19
 'Open _Fort Colovia Bell Tower_ |q The Silent Bell/Enter the Bell Tower |future
+|tip Manually skip to the next step.
 step
 goto westwealdoverland_base 76.89,23.96
 |tip Go all the way upstairs.
@@ -52232,7 +52261,7 @@ step
 goto 63.94,27.30 |q Tracking the Trapper/Find Trapper Marcien's Camp
 step
 goto 63.92,28.56
-'Search _Trapper Marcien_ |q Tracking the Trapper/Gather the Bait
+'Search _Trapper Marcien_ |q Tracking the Trapper/Gather the Bait |future
 step
 goto 63.92,28.56
 'Use _Guzzard Bait_ |q Tracking the Trapper/Throw the Bait
@@ -52248,6 +52277,8 @@ step
 goto 64.40,24.22
 'Use _Skyshard_ |q King Nantharion's Gambit/Investigate Terthil Farm
 |tip Manually skip to the next step.
+step
+goto 64.89,24.97 |q King Nantharion's Gambit/Investigate Terthil Farm
 step
 goto 68.79,23.77 |q King Nantharion's Gambit/Investigate Terthil Farm
 step
@@ -52370,7 +52401,7 @@ goto u42_Vashabar_base 57.74,52.77
 talk Belienne |q Self-Preservation/Talk to Belienne |future
 step
 goto 55.76,44.33
-|tip Inside tree.
+|tip Watch the dialogue.
 talk Belienne's Vanity |q Self-Preservation/Interrogate Belienne's Vanity
 step
 goto 57.12,46.13
@@ -52394,6 +52425,7 @@ step
 goto 49.69,21.75 |q King Nantharion's Gambit/Explore Miscarcand
 step
 goto 46.87,13.49
+|tip Watch the dialogue.
 'Use _Abolisher_ |q King Nantharion's Gambit/Close the Portal |future
 step
 goto 44.06,15.29
@@ -52432,9 +52464,10 @@ step
 goto 68.19,65.98 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
 step
 goto 67.82,49.33
-'Use _Abolisher_
-'Use _Portal to Darkened Home_ |q King Nantharion's Gambit/Explore Miscarcand Deep Halls |future
-|tip Manually skip to the next step.
+'Use _Abolisher_ |q King Nantharion's Gambit/Use Abolisher
+step
+goto 67.82,49.33
+'Use _Portal to Darkened Home_ |q King Nantharion's Gambit/Enter the Portal
 step
 goto u42_miscarcand2_base 74.72,33.53 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
 step
@@ -52597,7 +52630,8 @@ goto 52.42,39.29
 step
 goto 50.40,38.91
 |tip Watch the dialogue.
-'Use _Portal to Skingrad_ |q The Untraveled Road/Exit the Loom
+'Use _Portal to Skingrad_ |q The Untraveled Road/Exit the Loom |future
+|tip Manually skip to the next step.
 step
 goto u42_Skingrad_base 43.80,73.85
 |tip Go upstairs.
@@ -52762,7 +52796,7 @@ goto 42.64,60.04
 'Open _Colovia Culinary Company_ |q Ithelia's Fury/Go to Beragon's Townhouse
 |tip Manually skip to the next step.
 step
-goto 42.18,57.76
+goto 42.69,63.36
 |tip Go downstairs.
 'Open _Skingrad_ |q Ithelia's Fury/Go to Beragon's Townhouse
 |tip Manually skip to the next step.
@@ -52830,7 +52864,7 @@ goto westwealdoverland_base 44.09,62.57
 'Open _Ceyond_ |q Ithelia's Fury/Go to Ceyond |future
 |tip Manually skip to the next step.
 step
-goto u42_C1_Ceyond_base 32.49,57.39 |q Ithelia's Fury/Find the Primordial Shattered Titan
+goto u42_C1_Ceyond_base 32.49,57.39 |q Ithelia's Fury/Find the Primordial Shattered Titan |future
 step
 goto 23.55,19.15 |q Ithelia's Fury/Find the Primordial Shattered Titan
 step
@@ -53011,7 +53045,10 @@ kill Ithelia
 |tip Manually skip to the next step.
 step
 goto 50.17,50.36
-'Observe _Ithelia_ |q Fate of the Forgotten Prince/Observe Ithelia |future
+talk Ithelia |q Fate of the Forgotten Prince/Talk to Ithelia
+step
+goto 50.17,50.36
+'Observe Ithelia |q Fate of the Forgotten Prince/Observe Ithelia |future
 step
 goto 50.17,50.36
 |tip Use Portals.
@@ -53034,7 +53071,9 @@ goto 57.46,44.59
 'Witness _Ithelia Leave Reality_ |q Fate of the Forgotten Prince/Witness Ithelia Leave Reality
 step
 goto 53.98,49.63
-'Use _Abolisher on Portal_
+'Use _Abolisher on Portal_  |q Fate of the Forgotten Prince/Use Abolisher to Seal the Portal
+step
+goto 47.82,46.39
 'Use _Portal to Beragon's Townhouse_ |q Fate of the Forgotten Prince/Return to Beragon's Townhouse |future
 |tip Manually skip to the next step.
 step

@@ -46776,7 +46776,7 @@ goto 83.16,33.22
 step
 goto 70.10,26.50
 .'Use _ Repaired Ballista_
-.'Ignite _Wall_
+.'Ignite _Barricade Wall_
 kill First Wave of Daedra
 kill Second Wave of Daedra
 kill Third Wave of Daedra |q Hold the Line/Operate the Ballista
@@ -46787,8 +46787,6 @@ kill Daedric Attackers
 step
 goto U42_UI_Maps_FeldagardKeep_02 63.58,14.74
 talk Tribune Alea Idolus |q Hold the Line/Talk to Tribune Alea Idolus
-step
-goto 49.72,12.43 |q Hold the Line/Search the Keep's Barracks
 step
 goto 27.55,45.85 |q Hold the Line/Search the Keep's Barracks
 step
@@ -47032,17 +47030,14 @@ goto 63.34,53.50
 'Open _The Outcast Inn_ |q The Many Paths/Bring Water to Innkeeper Brynmir
 |tip Manually skip to the next step.
 step
-'_At the Bar_
-'Bring _Water to Innkeeper Brynmir_ |q The Many Paths/Bring Water to Innkeeper Brynmir
-step
-'_Right of the Bar_
-talk Ithelia |q The Many Paths/Talk to Ithelia
+'_At the Fireplace_
+talk Ithelia |q The Many Paths/Talk to Ithelia |future
 step
 '_At the Bar._
 talk Innkeeper Brynmir |q The Many Paths/Talk to Innkeeper Brynmir
 step
 '_The Next Room_
-'Open _Outcast Inn Courtyard_ |lorebook Old Monk's Diary/3/50/43
+'Open _Outcast Inn Courtyard_ |q The Many Paths/Search for the Recipe Book
 |tip Manually skip to the next step.
 step
 goto 63.78,52.76 |q The Many Paths/Search for the Recipe Book
@@ -47051,22 +47046,23 @@ goto 61.04,52.56
 'Open _Outcast Inn Outbuilding_ |q The Many Paths/Search for the Recipe Book
 |tip Manually skip to the next step.
 step
-goto 61.34,52.43
+goto 61.35,52.43
 |tip Go upstairs.
-'Examine _Gilraedal's Book of Obscure and Ancient Spirits_ |q The Many Paths/Search for the Recipe Book
+'Examine_ Gilraedal's Book of Obscure and Ancient Spirits_ |q The Many Paths/Search for the Recipe Book
 step
 goto 61.24,52.46
 'Open _Outcast Inn Courtyard_ |q The Many Paths/Return to Innkeeper Brynmir
 |tip Manually skip to the next step.
 step
 goto 62.61,53.33
-'Open _Outcast Inn_ |q The Many Paths/Return to Innkeeper Brynmir
+'Open _The  Outcast Inn_ |q The Many Paths/Return to Innkeeper Brynmir
 |tip Manually skip to the next step.
 step
 '_At the Bar._
 talk Innkeeper Brynmir |q The Many Paths/Talk to Innkeeper Brynmir |future
 step
 '_Go Downstairs_
+|tip Follow Left wall in the next room.
 'Open _Outcast Inn Cellar_ |q The Many Paths/Enter the Outcast Inn Cellar |future
 |tip Manually skip to the next step.
 step
@@ -47086,13 +47082,14 @@ goto U42_UI_Maps_InnBetween_02 25.04,48.82
 talk Ithelia |q The Many Paths/Talk to Ithelia |future
 step
 goto 16.07,56.18
-'Take _Tirum Wood_ |q The Many Paths/Take the Tirum Weed
+'Take _Tirum Weed_ |q The Many Paths/Take the Tirum Weed
 step
 goto 18.70,55.67
 'Enter _Portal to the Outcast Inn_ |q The Many Paths/Return to the Cellar
 step
 goto U42_UI_Maps_InnBetween_01 49.08,12.93
-'Use _Lamp of Clarity_ |q The Many Paths/Use the Lamp
+talk Ithelia (Optional)
+'Use _Lamp of Clarity_ |q The Many Paths/Use the Lamp |future
 step
 goto 49.08,12.93
 'Enter _Portal to the Many Paths_ |q The Many Paths/Enter the Many Paths
@@ -47115,19 +47112,20 @@ goto 18.54,27.35
 'Enter _Portal to the Outcast Inn_ |q The Many Paths/Return to the Cellar
 step
 goto U42_UI_Maps_InnBetween_01 64.10,13.54
+talk Ithelia (Optional)
 'Use _Lamp of Clarity_ |q The Many Paths/Use the Lamp
 step
 goto 64.10,13.54
 'Enter _Portal to the Many Paths_ |q The Many Paths/Enter the Many Paths
 |tip Manually skip to the next step.
 step
-goto U42_UI_Maps_InnBetween_04 66.42,80.13 |q The Many Paths
+goto U42_UI_Maps_InnBetween_04 66.42,80.13 |q The Many Paths/Explore This Path |future
 step
 goto 65.81,57.28 |q The Many Paths/Explore This Path
 step
 goto 42.93,57.44 |q The Many Paths/Explore This Path
 step
-goto 38.72,65.25 |q The Many Paths/Explore This Path
+goto 38.46,62.34 |q The Many Paths/Explore This Path
 step
 goto 38.35,29.59 |q The Many Paths/Explore This Path
 step
@@ -47147,19 +47145,26 @@ goto 52.93,29.36
 |tip Listen to Brynmir Directions.
 .'Place _Tirum Weed_
 .'Ignite _Heating Element_
-.'Open _Valve_ Add Heat
-.'Close _Valve_ Reduce Heat
+.'Open _Valve_ (3)
+.'Close _Valve_ (1) |q The Many Paths/Properly Mix a Sage's Dream
+|tip Manually skip to the next step.
+step
 .'Place _Harkfruit_
 .'Ignite _Heat Element_
-.'Open _Valve_  to Add Heat
-.'Close _Valve_ Reduce Heat
+.'Open _Valve_ (4)
+.'Close _Valve_ (1) |q The Many Paths/Properly Mix a Sage's Dream
+|tip Manually skip to the next step.
+step
 .'Place _Lute Berries_
 .'Activate _Cooling Elements_
-.'Open _Valve_ Add Cold
-.'Close _Valve_ Reduce Cold
-.'Mix _Pot of Steeped Tirum Weed_ four times
-.'Mix _Dish of Chilled Lute Berries_ two times
-.'Mix _Break of Harkfruit Juice_ four times
+.'Open _Valve_ (2)
+.'Close _Valve_ (1) |q The Many Paths/Properly Mix a Sage's Dream
+|tip Manually skip to the next step.
+step
+|tip Manually skip to the next step.
+.'Mix _Pot of Steeped Tirum Weed_ (4)
+.'Mix _Dish of Chilled Lute Berries_ (2)
+.'Mix _Break of Harkfruit Juice_ (4)
 .'Pour _Drinkmaker Valve_
 .'Take _Sage's Dream_ |q The Many Paths/Properly Mix a Sage's Dream
 step
@@ -47167,7 +47172,7 @@ goto 49.34,88.30
 'Open _Outcast Inn_ |q The Many Paths/Return to the Outcast Inn |future
 |tip Manually skip to the next step.
 step
-'Go back to the _Fireplace next to the Bar_
+'_At the Fireplace_
 'Place _Sage's Dream_ |q The Many Paths/Give the Sage's Dream to Ithelia |future
 step
 talk Ithelia |q The Many Paths/Talk to Ithelia
@@ -47924,7 +47929,7 @@ goto westwealdoverland_base 44.09,62.57
 'Open _Ceyond_ |q Ithelia's Fury/Go to Ceyond |future
 |tip Manually skip to the next step.
 step
-goto u42_C1_Ceyond_base 32.49,57.39 |q Ithelia's Fury/Find the Primordial Shattered Titan
+goto u42_C1_Ceyond_base 32.49,57.39 |q Ithelia's Fury/Find the Primordial Shattered Titan |future
 step
 goto 23.55,19.15 |q Ithelia's Fury/Find the Primordial Shattered Titan
 step
