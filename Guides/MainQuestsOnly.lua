@@ -46927,7 +46927,7 @@ goto 73.06,71.13 |q Seeds of Suspicion/Continue to Explore Hoperoot
 step
 goto 86.37,77.89 |q Seeds of Suspicion/Continue to Explore Hoperoot
 step
-goto 78.36,71.93 |q Seeds of Suspicion/Continue to Explore Hoperoot
+goto u42_hoperoot2_base 78.36,71.93 |q Seeds of Suspicion/Continue to Explore Hoperoot
 step
 goto 61.50,68.82 |q Seeds of Suspicion/Continue to Explore Hoperoot
 step
@@ -46946,7 +46946,7 @@ goto 13.29,43.21 |q Seeds of Suspicion/Search for King Nantharion
 step
 goto 17.43,34.76 |q Seeds of Suspicion/Search for King Nantharion
 step
-goto 35.32,35.71 |q Seeds of Suspicion/Search for King Nantharion
+goto u42_hoperoot3_base 35.32,35.71 |q Seeds of Suspicion/Search for King Nantharion
 step
 goto 31.57,51.10 |q Seeds of Suspicion/Enter the Throne Room |future
 step
@@ -47051,6 +47051,7 @@ goto 61.35,52.43
 'Examine_ Gilraedal's Book of Obscure and Ancient Spirits_ |q The Many Paths/Search for the Recipe Book
 step
 goto 61.24,52.46
+|tip Go downstairs.
 'Open _Outcast Inn Courtyard_ |q The Many Paths/Return to Innkeeper Brynmir
 |tip Manually skip to the next step.
 step
@@ -47177,8 +47178,10 @@ step
 step
 talk Ithelia |q The Many Paths/Talk to Ithelia
 step
+'Open _West Weald_ |q The Many Paths/Talk to Leramil the Wise
+|tip Manually skip to the next step.
+step
 goto westwealdoverland_base 63.92,54.11
-|tip Outside.
 talk Leramil the Wise
 turnin The Many Paths
 step
@@ -47563,7 +47566,7 @@ step
 goto 35.64,86.95 |q King Nantharion's Gambit/Escape the Memory
 step
 goto 41.95,71.97
-'Use _Abolisher_7
+'Use _Abolisher_
 'Use _Portal to Miscarcand Deep Halls_ |q King Nantharion's Gambit/Enter the Portal |future
 step
 goto 61.59,66.54
@@ -47575,8 +47578,10 @@ step
 goto 68.19,65.98 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
 step
 goto 67.82,49.33
-'Use _Abolisher_
-'Use _Portal to Darkened Home_ |q King Nantharion's Gambit/Explore Miscarcand Deep Halls |future
+'Use _Abolisher_ |q King Nantharion's Gambit/Use Abolisher
+step
+goto 67.82,49.33
+'Use _Portal to Darkened Home_ |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
 |tip Manually skip to the next step.
 step
 goto u42_miscarcand2_base 74.72,33.53 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
@@ -47681,6 +47686,7 @@ step
 goto u42_PE5_LoomRoad_base 39.05,27.26 |q The Untraveled Road/Explore the Loom |future
 step
 goto 41.67,38.53
+|tip Watch the dialogue.
 'Use _Echonir_ |q The Untraveled Road/Use the Echonir |future
 step
 goto 60.48,36.63 |q The Untraveled Road/Find the Loom's Core
@@ -47699,6 +47705,7 @@ goto 32.07,46.78
 'Use _Portal to The Loom of Untraveled Road_ |q The Untraveled Road/Enter the Portal
 step
 goto u42_pe5_ithpri_copy_base 58.90,45.22
+|tip Watch the dialogue.
 'Use _Echonir_ |q The Untraveled Road/Use the Echonir |future
 step
 goto 45.22,39.78
@@ -48030,7 +48037,7 @@ goto 42.54,39.95
 'Use _Lamp of Clarity_ |q Fate of the Forgotten Prince |future
 |tip Manually skip to the next step.
 step
-goto 43.37,24.88 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum
+goto 43.37,24.88 |q Fate of the Forgotten Prince |future
 step
 goto 56.79,25.12 |q Fate of the Forgotten Prince/Reach Mora's Private Sanctum
 step
@@ -48110,6 +48117,9 @@ kill Ithelia
 |tip Manually skip to the next step.
 step
 goto 50.17,50.36
+talk Ithelia |q Fate of the Forgotten Prince/Talk to Ithelia
+step
+goto 50.17,50.36
 'Observe _Ithelia_ |q Fate of the Forgotten Prince/Observe Ithelia |future
 step
 goto 50.17,50.36
@@ -48124,6 +48134,7 @@ goto 56.28,50.55
 |tip Manually skip to the next step.
 step
 goto u42_pc2_ithpri_copy_base 56.59,43.03
+|tip Watch the dialogue.
 talk Ithelia |q Fate of the Forgotten Prince/Talk to Ithelia |future
 step
 goto 58.96,50.93
