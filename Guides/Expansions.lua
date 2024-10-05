@@ -49059,7 +49059,7 @@ goto dune_base 52.58,44.87 |q Prisoner of Fate/.*Investigate Locations Visited b
 step
 goto 33.15,25.82
 'Use _Dune_
-'Travel to _Moonmount_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 3
+'Travel to _Moonmont_ |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 3
 tip Manually skip to the next step.
 step
 goto reapersmarch_base 30.01,69.75 |q Prisoner of Fate/.*Investigate Locations Visited by Torvesard.* |count 3
@@ -49086,6 +49086,7 @@ talk Leramil the Wise |q Prisoner of Fate/Talk to Leramil the Wise |future
 step
 goto 32.34,32.02
 'Use _Portal to Vvardenfell_ |q Prisoner of Fate/Meet Leramil in Vvardenfell |future
+|tip Manually skip to the next step.
 step
 goto vvardenfell_base 87.28,78.12
 talk Curate Gadayn |q Prisoner of Fate/Talk to Curate Gadayn |future
@@ -49721,6 +49722,7 @@ goto 77.47,66.04
 |tip Manually skip to the next step.
 step
 goto 77.45,66.50
+|tip Watch the dialogue.
 'Examine _Letter to Captain Leronus_ |q The Missing Cohort/Examine the Letter |future
 step
 goto 77.45,66.50
@@ -49772,7 +49774,7 @@ goto 31.62,66.84
 talk Legionary Caepio |q The Missing Cohort/Talk to Legionary Caepio |future
 step
 goto 64.07,55.96
-'Climb Down _Ruins_ |q The Missing Cohort/Find the Daedric Portal
+'Drop Down _Ruins_ |q The Missing Cohort/Find the Daedric Portal
 step
 goto U42_Rustwall_Crypt_02_base 38.10,11.29 |q The Missing Cohort/Search the Ruins
 step
@@ -50110,9 +50112,7 @@ goto u42_Vashabar_base 66.66,71.81
 talk Laeni
 accept The Voice of the Village
 step
-goto 41.86,73.71 |q Seeds of Suspicion/Talk to Greenspeaker Darolith
-step
-goto 15.20,52.04 |q Seeds of Suspicion/Talk to Greenspeaker Darolith
+goto 15.51,66.68 |q Seeds of Suspicion/Talk to Greenspeaker Darolith
 step
 goto 16.21,46.43
 talk Greenspeaker Darolith |q Seeds of Suspicion/Talk to Greenspeaker Darolith
@@ -50120,7 +50120,7 @@ step
 goto 16.47,47.30
 talk Beragon |q Seeds of Suspicion/Talk to Beragon
 step
-goto 16.80,54.51 |q The Voice of the Village/Find Agawen Ciiril
+goto 16.80,54.51 |q The Voice of the Village/Find Agawen Ciiril |future
 step
 goto 28.13,46.66
 talk Agawen Ciiril |q The Voice of the Village/Talk to Agawen Ciiril |future
@@ -50128,7 +50128,7 @@ step
 goto 25.33,59.81
 talk Greenspeaker Nedolir |q The Voice of the Village/.*Talk to the Fathers.* |count 1
 step
-goto 47.11,44.61 |q Faded Scarlets/Recruit Valenia
+goto 40.73,47.21 |q Faded Scarlets/Recruit Valenia
 step
 goto 26.54,32.66
 talk Valenia |q Faded Scarlets/Recruit Valenia
@@ -50188,7 +50188,7 @@ goto 57.40,20.89
 'Examine _Rite to Propagation_|lorebook Rite of Propagation/3/50/54
 step
 goto 46.79,90.46
-'Enter _Vashabar_ |q The Voice of the Village/Talk to Agawen Ciiril
+'Enter _Vashabar_ |q The Voice of the Village/Talk to Agawen Ciiril |future
 |tip Manually skip to the next step.
 step
 goto Vashabar 60.92,64.12 |q The Voice of the Village/Talk to Agawen Ciiril
@@ -50334,7 +50334,7 @@ step
 goto 51.17,86.98 |q Hold the Line/Get in Position at the Gateway |future
 step
 goto 48.86,68.79
-'Enter _Portal to Mirrormoor_ |q Hold the Line/Enter the Portal
+'Enter _Portal to Mirrormoor_ |q Hold the Line/Enter the Portal |future
 step
 goto U42_feldagard_mirrormoor_base 44.51,48.01
 kill Shardborn |q Hold the Line/Defeat the Shardborn
@@ -51348,6 +51348,8 @@ step
 goto 62.48,52.42
 'Examine _Old Monk's Diary_ |lorebook Old Monk's Diary/3/50/43
 step
+goto 61.97,53.48 |lorebook Open Tabs: 2E 579/3/50/42
+step
 goto 62.63,54.22
 'Examine _Old Tabs: 2E 579_ |lorebook Open Tabs: 2E 579/3/50/42
 step
@@ -51494,7 +51496,8 @@ goto westwealdoverland_base 63.92,54.11
 talk Leramil the Wise
 turnin The Many Paths
 step
-'Open _West Weald_ Map
+goto 32.55,42.27
+'Use _Skingrad Vineyards_
 'Travel to _Skingrad City_ |q Relics of the Three Princes/Return to Beragon's Townhouse
 tip Manally skip to the next step.
 step
@@ -51729,11 +51732,12 @@ goto 45.69,53.61
 step
 goto u42_ICQuest_base 47.87,64.36 |q Faded Scarlets/Find Marcan Caelum |future
 step
-goto 67.17,71.98
-'Examine _Weathered Journal_ |q Faded Scarlets/.*Search the Room.* |count 1 |future
-step
 goto 61.60,62.29
-'Examine _Dulled Knife_ |q Faded Scarlets/.*Search the Room.* |count 2
+|tip Watch the dialogue.
+'Examine _Dulled Knife_ |q Faded Scarlets/.*Search the Room.* |count 1 |future
+step
+goto 67.17,71.98
+'Examine _Weathered Journal_ |q Faded Scarlets/.*Search the Room.* |count 2
 step
 goto 75.23,66.53
 'Examine _Scarlets List_ |q Faded Scarlets/.*Search the Room.* |count 3
@@ -51963,7 +51967,9 @@ goto 53.39,29.57
 'Tell _Narsis Dren To Be Careful_ |q Ayleid Altercations/Tell Narsis Dren To Be Careful |future
 step
 goto 54.56,27.80
-'Use _Ayleid Switch_ |q Ayleid Altercations/Locate Mechanism and Disarm the Trap
+'Use _Ayleid Switch_ |q Ayleid Altercations/Locate Mechanism and Disarm the Trap |or |future
+'_OR_
+'Use _Ayleid Switch_ |q Ayleid Altercations/Locate the Mechanism and Disarm the Trap |or |future
 step
 goto 53.64,29.43
 'Take _Emblem of the Last King_ |q Ayleid Altercations/Take the Emblem of the Last King
@@ -52032,6 +52038,8 @@ step
 goto 67.32,16.32
 'Open _Valente Vineyards_ |q Vesper Valente/Enter the Manor
 |tip Manually skip to the next step.
+step
+goto 66.52,17.23 |q Vesper Valente/Enter the Manor
 step
 goto 66.08,16.54
 'Open _Valente Manor_ |q Vesper Valente/Enter the Manor
@@ -52449,9 +52457,7 @@ step
 goto 68.19,65.98 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
 step
 goto 67.82,49.33
-'Use _Abolisher_ |q King Nantharion's Gambit/Use Abolisher
-step
-goto 67.82,49.33
+'Use _Abolisher_ 
 'Use _Portal to Darkened Home_ |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
 |tip Manually skip to the next step.
 step
@@ -52677,7 +52683,9 @@ goto 71.79,73.41
 'Open _Haladin Lumber Camp_ |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
 |tip Manually skip to the next step.
 step
-goto u42_base_haldain 20.83,31.56 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
+goto u42_base_haldain 39.22,28.50 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
+step
+goto 20.83,31.56 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
 step
 goto 23.25,70.22 |q Ithelia's Fury/.*Restore the Daedric Relics.* |count 1
 step
@@ -52768,7 +52776,6 @@ goto 42.12,63.26
 step
 goto 42.52,59.16
 'Open _Lepida Russus's Room_ |q Appointed Executor/Find Lepida Russus in Skingrad
-|tip Manally skip to the next step.
 step
 goto 43.22,59.87
 talk Lepida Russus

@@ -1,6 +1,706 @@
 local CGV = _G.CGV
 CGV.GuideMenuTier = "TAM"
 
+
+
+CGV:RegisterGuide("Extras\\Extras\\Companions\\Azandar Al-Cybiades",[[
+loadingimage loadscreen_underweave_01.dds
+description Azandar Al-Cybiades Unlock quest and Rapport Quests.
+step
+'Open _Telvanni Peninsula_ Map
+'Travel to _Necrom Outskirts_ |q The Fateweaver Key |future
+|tip Manually skip to the next step.
+step
+goto u38_telvannipeninsula_base 79.97,41.83 |q The Fateweaver Key |future
+step
+goto 81.53,37.97 |q The Fateweaver Key |future
+step
+goto u38_Necrom_base 49.01,64.45
+'Open _Necrom_ |q The Fateweaver Key |future
+|tip Manually skip to the next step.
+step
+goto 48.65,49.58
+wayshrine Necrom
+step
+goto 48.65,49.58 |q The Fateweaver Key |future
+step
+goto 55.82,52.48 |q The Fateweaver Key |future
+step
+goto 60.30,52.39
+'Open _Necrom Bindery_ |q The Fateweaver Key |future
+|tip Manually skip to the next step.
+step
+goto 59.12,58.71
+'Use _Portal to Apocrypha: The Endless Library_ |q The Fateweaver Key |future
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 71.43,78.87 |q The Fateweaver Key |future
+step
+goto 67.73,71.45
+wayshrine Tranquil Catalog
+step
+goto 62.00,57.86
+talk Azandar
+accept The Fateweaver Key
+step
+goto u38_ciphersmidden_city_base 73.26,55.19
+wayshrine Cipher's Midden
+step
+goto 52.64,37.16
+talk Azandar |q The Fateweaver Key/Talk to Azandar |future
+step
+goto 42.45,32.75
+|tip Follow Green Orb.
+'Examine _Book Pile_ |q The Fateweaver Key/Find the Book with Azandar
+step
+goto u38_apocrypha_base 57.50,52.53
+'Chase _Tomeshell_ |q The Fateweaver Key/Chase the Tomeshell
+step
+goto 57.50,52.53
+'Examine _Predestination and Paradox: A Treatise_ |q The Fateweaver Key/Take the Book
+step
+goto 57.43,52.50
+talk Azandar |q The Fateweaver Key/Talk to Azandar
+step
+goto u38_ciphersmidden_city_base 22.76,71.82
+|tip Go upstairs.
+'Open _Ciphers Repository_ |q The Fateweaver Key/Search for Tomedust from a Daedric Spell
+|tip Manually skip to the next step.
+step
+goto 10.17,77.73
+'Examine _Expunged Daedric Tomedust_ |q The Fateweaver Key/Search for Tomedust from a Daedric Spell
+step
+goto 22.15,69.47 |q The Fateweaver Key/Find a Seeker Talon |future
+step
+goto 36.21,72.40 |q The Fateweaver Key/Find a Seeker Talon
+step
+goto 29.94,92.44 |q The Fateweaver Key/Find a Seeker Talon
+step
+goto u38_apocrypha_base 52.25,66.71 |q The Fateweaver Key/Find a Seeker Talon
+step
+goto 50.39,65.45
+'Take _Embedded Seeker Talon_ |q The Fateweaver Key/Find a Seeker Talon
+step
+goto 51.61,67.11 |q The Fateweaver Key/Meet Azandar at the Ritual Altar
+step
+goto 44.86,68.50 |q The Fateweaver Key/Meet Azandar at the Ritual Altar
+step
+goto 41.71,59.79
+talk Azandar |q The Fateweaver Key/Talk to Azandar |future
+step
+goto 41.14,60.28
+|tip Watch the dialogue.
+'Place _Summoning Font_ |q The Fateweaver Key/Present Expunged Tomedust |future
+step
+goto 40.83,60.03
+|tip Watch the dialogue.
+'Place _Summoning Font_ |q The Fateweaver Key/Offer Seeker's Talon
+step
+goto 41.13,59.73
+|tip Watch the dialogue.
+'Pour _Summoning Font_ |q The Fateweaver Key/Pour Ichor in the Font
+step
+goto 41.10,59.93
+talk Tem |q The Fateweaver Key/Talk to Tem, the Omen of Destiny
+step
+goto 41.30,59.96
+talk Azandar |q The Fateweaver Key/Talk to Azandar |future
+|tip Manually skip to the next step.
+step
+goto 39.47,52.73 |q The Fateweaver Key/Meet Azandar in the Underweave
+step
+goto 41.88,51.42 |q The Fateweaver Key/Meet Azandar in the Underweave
+step
+goto 41.40,49.74 |q The Fateweaver Key/Meet Azandar in the Underweave |future
+step
+goto 40.36,49.96
+|tip Recommended to get a group. This is a public dungeon.
+'Enter _The Underweave_ |q The Fateweaver Key/Meet Azandar in the Underweave |future
+|tip Manually skip to the next step.
+step
+goto U38_underweave_central_base 26.93,79.58
+talk Azandar |q The Fateweaver Key/Talk to Azandar |future
+step
+goto 28.12,34.23 |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
+step
+goto 49.69,35.03
+'Open _Underweave Nullifactory_ |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
+|tip Manually skip to the next step.
+step
+goto U38_underweave_process01_base 73.69,55.92 |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
+step
+goto 73.93,43.54 |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
+step
+goto 81.26,43.66 |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
+step
+goto 89.61,90.57
+'Open _Underweave Courtyard_ |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
+|tip Manually skip to the next step.
+step
+goto U38_underweave_central_base 90.02,50.14 |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
+step
+goto 86.37,62.24
+'Open _Underweave Heart_ |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
+|tip Manually skip to the next step.
+step
+goto U38_underweave_heart_base 67.46,73.49 |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
+step
+goto 18.46,49.82
+'Open _Martina's Sanctum_ |q The Fateweaver Key/Search Martina's Sanctum |future
+|tip Manually skip to the next step.
+step
+goto U38_underweave_secretlab_base 56.51,66.41
+'Examine _Mysterious Experiment_ |q The Fateweaver Key/Unknown Experiment |future
+step
+goto 29.95,83.85
+'Examine _The Never-Woven_ |lorebook The Never-Woven/3/49/71
+step
+goto 47.14,58.59
+'Examine _Martina Abor_ |q The Fateweaver Key/Examine Corpse
+step
+goto 43.49,56.51
+talk Azandar |q The Fateweaver Key/Talk to Azandar
+step
+'Open _Apocrypha_ Map
+'Travel to _Cipher's Midden_ |q The Fateweaver Key/Meet Azandar in His Cipher's Midden Chambers
+|tip Manually skip to the next step.
+step
+goto u38_ciphersmidden_city_base 81.85,63.62
+'Open _Azandar's Lodgings_ |q The Fateweaver Key/Meet Azandar in His Cipher's Midden Chambers
+step
+goto 80.84,64.23
+talk Azandar |q The Fateweaver Key/Talk to Azandar
+step
+goto 81.86,64.40
+'Activate _Scrying Beacon_ |q The Fateweaver Key/Light Scry Beacon 4 |future
+step
+goto 83.20,65.38
+'Activate _Scrying Beacon_ |q The Fateweaver Key/Light Scry Beacon 1
+step
+goto 82.27,67.55
+'Activate _Scrying Beacon_ |q The Fateweaver Key/Light Scry Beacon 2
+step
+goto 80.66,67.02
+|tip Watch the dialogue.
+'Activate _Scrying Beacon_ |q The Fateweaver Key/Help Azandar With A Fate Scrying Ritual
+step
+goto 50.65,35.16 |q The Fateweaver Key/Meet Azandar Near Fathoms Drift
+step
+goto u38_apocrypha_base 54.60,52.35
+'Open _Central Orphic Tunnels_ |q The Fateweaver Key/Meet Azandar Near Fathoms Drift
+|tip Manually skip to the next step.
+step
+goto u38_Tunnel2_base 59.04,33.23 |q The Fateweaver Key/Meet Azandar Near Fathoms Drift
+step
+goto 41.02,37.74
+'Open _Apocrypha: Chroma Incognito_ |q The Fateweaver Key/Meet Azandar Near Fathoms Drift
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 42.50,42.35 |q The Fateweaver Key/Meet Azandar Near Fathoms Drift
+step
+goto 45.35,32.22 |q The Fateweaver Key/Meet Azandar Near Fathoms Drift
+step
+goto 41.17,24.01
+wayshrine Forlorn Palisades
+step
+goto 37.63,20.52
+talk Azandar |q The Fateweaver Key/Talk to Azandar |future
+step
+goto 39.05,19.07
+'Enter _Fathoms Drift_ |q The Fateweaver Key/Enter Fathom's Drift
+step
+goto U38_CorpuscleBight_01_Base 33.35,74.61
+'Untie _Fate Thread_ |q The Fateweaver Key/Seek Threads of Fate
+|tip Manually skip to the next step.
+step
+goto 18.84,67.14
+'Untie _Fate Thread_ |q The Fateweaver Key/Seek Threads of Fate
+|tip Manually skip to the next step.
+step
+goto 25.70,58.11
+'Untie _Fate Thread_ |q The Fateweaver Key/Seek Threads of Fate
+|tip Manually skip to the next step.
+step
+goto U38_CorpuscleBight_02_Base 25.73,49.68
+|tip Go upstairs.
+'Untie _Fate Thread_ |q The Fateweaver Key/Seek Threads of Fate
+|tip Manually skip to the next step.
+step
+goto 28.69,40.25
+'Untie _Fate Thread_ |q The Fateweaver Key/Seek Threads of Fate
+|tip Manually skip to the next step.
+step
+goto 31.26,36.80
+'Open _Fathom Drift Wreckage_ |q The Fateweaver Key/Seek Threads of Fate
+|tip Manually skip to the next step.
+step
+goto 41.41,29.70
+'Observe _Azandar's Frayed Fate_ |q The Fateweaver Key/Observe Azandar's Frayed Fate |future
+step
+goto 41.83,28.88
+'Activate _Fatebinding Rune Alpha_ |q The Fateweaver Key/Hit Fate Button
+step
+goto 42.57,29.09
+'Activate _Fatebinding Rune Zeta_ |q The Fateweaver Key/Fate Button B
+step
+goto 41.64,29.26
+talk Azandar |q The Fateweaver Key/Talk to Azandar
+step
+'Open _Apocrypha_ Map
+'Travel to _Cipher's Midden_ |q The Fateweaver Key/Meet Azandar in His Cipher's Midden Chambers
+|tip Manually skip to the next step.
+step
+goto u38_ciphersmidden_city_base 81.27,63.12
+'Open _Azandar's Lodgings_ |q The Fateweaver Key/Meet Azandar in His Cipher's Midden Chambers
+step
+goto 82.61,66.54
+talk Azandar
+turnin The Fateweaver Key
+step
+'_Next to you_
+|tip Reach Friendly rapport with Azandar Al-Cybiades
+talk Azandar
+accept Paths Unwalked
+step
+'Open _Auridon_ Map
+'Travel to _Skywatch_ |q Paths Unwalked/Reach Azandar's Sanctum
+|tip Manually skip to the next step.
+step
+goto skywatch_base 50.83,47.13
+'Open _Sanctum Sanctorum_ |q Paths Unwalked/Reach Azandar's Sanctum
+|tip Manually skip to the next step.
+step
+goto u38_compskywatchsanct_base 80.40,35.42
+talk Azandar |q Paths Unwalked/Talk to Azandar |future
+step
+goto 89.12,24.79
+'Open _Rummage Bin_ |q Paths Unwalked/Collect the Arcane Stencil
+step
+goto 89.40,41.89
+'Use _Magicka Font_ |q Paths Unwalked/Charge Azandar's Stencil
+step
+goto 84.81,30.20
+'Use _Gubbins_ |q Paths Unwalked/Use the Stencil on Gubbins
+step
+goto 84.81,30.20
+'Take _Gubbins Goop_ |q Paths Unwalked/Collect the Arcane Bobbin
+step
+goto 84.96,30.23
+talk Azandar |q Paths Unwalked/Talk to Azandar
+step
+goto 80.59,49.77
+'Open _Inner Sanctum_ |q Paths Unwalked/Scry for Frayed Fates
+|tip Manually skip to the next step.
+step
+goto 64.80,67.18
+'Activate _Scrying Beacon_ |q Paths Unwalked/Scry for Frayed Fates
+|tip Manually skip to the next step.
+step
+goto 68.90,71.24
+'Activate _Scrying Beacon_ |q Paths Unwalked/Scry for Frayed Fates
+|tip Manually skip to the next step.
+step
+goto 64.74,76.77
+'Activate _Scrying Beacon_ |q Paths Unwalked/Scry for Frayed Fates
+|tip Manually skip to the next step.
+step
+goto 58.96,73.12
+'Activate _Scrying Beacon_ |q Paths Unwalked/Scry for Frayed Fates
+step
+goto 58.96,73.12
+talk Azandar |q Paths Unwalked/Talk to Azandar
+step
+'Open _Alik'r Desert_ Map
+'Travel to _HoonDing's Watch_ |q Paths Unwalked/Go to Kozanset
+|tip Manually skip to the next step.
+step
+goto kozanset_base 58.97,40.68
+'Untie _Fate Thread_ |q Paths Unwalked/.*Find and Untie the Frayed Fates.* |future
+|tip Manually skip to the next step.
+step
+goto 57.54,28.90 
+'Untie _Fate Thread_ |q Paths Unwalked/.*Find and Untie the Frayed Fates.*
+|tip Manually skip to the next step.
+step
+goto 46.92,41.97
+|tip Watch the dialogue.
+'Untie _Frayed Fate_ |q Paths Unwalked/.*Find and Untie the Frayed Fates.* |count 1
+step
+goto 51.20,46.69
+'Untie _Fate Thread_ |q Paths Unwalked/.*Find and Untie the Frayed Fates.*
+|tip Manually skip to the next step.
+step
+goto 39.63,50.42
+'Untie _Fate Thread_ |q Paths Unwalked/.*Find and Untie the Frayed Fates.*
+|tip Manually skip to the next step.
+step
+goto 39.66,38.57
+|tip Watch the dialogue.
+'Untie _Frayed Fate_ |q Paths Unwalked/.*Find and Untie the Frayed Fates.* |count 2f
+step
+goto 39.54,38.39
+talk Azandar |q Paths Unwalked/Follow Threads Out of Kozanset |future
+|tip Manually skip to the next step.
+step
+goto 34.20,24.79
+'Untie _Fate Thread_ |q Paths Unwalked/Follow Threads Out of Kozanset
+|tip Manually skip to the next step.
+step
+goto alikr_base 72.96,40.64
+'Untie _Fate Thread_ |q Paths Unwalked/Follow Threads Out of Kozanset
+|tip Manually skip to the next step.
+step
+goto 72.09,39.82
+'Untie _Fate Thread_ |q Paths Unwalked/Follow Threads Out of Kozanset
+|tip Manually skip to the next step.
+step
+goto 70.52,38.91
+|tip Recommended to get a group. This is a public dungeon.
+'Open _Lost City of Na-Totambu_ |q Paths Unwalked/Enter the Lost City of Na-Totambu |future
+|tip Manually skip to the next step.
+step
+goto lostcity_base 46.86,90.74
+'Untie _Fate Thread_ |q Paths Unwalked/Find the Adversary |future
+|tip Manually skip to the next step.
+step
+goto 48.13,71.47
+'Untie _Fate Thread_ |q Paths Unwalked/Find the Adversary
+|tip Manually skip to the next step.
+step
+goto 61.11,68.96
+'Untie _Fate Thread_ |q Paths Unwalked/Find the Adversary
+|tip Manually skip to the next step.
+step
+goto 68.19,67.99 |q Paths Unwalked/Find the Adversary
+step
+goto 66.26,57.37
+'Untie _Fate Thread_ |q Paths Unwalked/Find the Adversary
+|tip Manually skip to the next step.
+step
+goto 68.44,43.66
+|tip Watch the dialogue.
+'Untie _Frayed Fate_ |q Paths Unwalked/Stop the Adversary |future
+|tip Manually skip to the next step.
+step
+goto 69.32,45.72
+'Open _Alik'r Desert_ |q Paths Unwalked/Leave the Lost City of Na-Totambu |future
+step
+'_Next to you_
+talk Azandar
+turnin Paths Unwalked
+step
+'_Next to you_
+|tip Reach Close rapport with Azandar Al-Cybiades
+talk Azandar
+accept Adversarial Adventures
+step
+'Open _Auridon_ Map
+'Travel to _Skywatch_ |q Adversarial Adventures/Go to Azandar's Sanctum
+|tip Manually skip to the next step.
+step
+goto skywatch_base 50.83,47.13
+'Open _Sanctum Sanctorum_ |q Adversarial Adventures/Go to Azandar's Sanctum
+|tip Manually skip to the next step.
+step
+goto u38_compskywatchsanct_base 80.40,35.42
+talk Azandar |q Adversarial Adventures/Talk to Azandar |future
+step 
+goto 80.59,49.77
+'Open _Inner Sanctum_ |q Adversarial Adventures/Locate a Frayed Fate
+|tip Manually skip to the next step.
+step
+goto 64.80,67.18
+'Activate _Scrying Beacon_ |q Adversarial Adventures/Locate a Frayed Fate
+|tip Manually skip to the next step.
+step
+goto 68.90,71.24
+'Activate _Scrying Beacon_ |q Adversarial Adventures/Locate a Frayed Fate
+|tip Manually skip to the next step.
+step
+goto 64.74,76.77
+'Activate _Scrying Beacon_ |q Adversarial Adventures/Locate a Frayed Fate
+|tip Manually skip to the next step.
+step
+goto 58.96,73.12
+|tip Watch the dialogue.
+'Activate _Scrying Beacon_ |q Adversarial Adventures/Locate a Frayed Fate
+step
+goto 58.96,73.12
+talk Azandar |q Adversarial Adventures/Talk to Azandar
+step
+'Open _Stonefalls_ Map
+'Travel to _Ebonheart_ |q Adversarial Adventures/Go to Ebonheart |future
+|tip Manually skip to the next step.
+step
+goto ebonheart_base 52.07,64.96 |q Adversarial Adventures/Track the Frayed Fate |future
+step
+goto 51.91,79.56
+'Untie _Fate of Thread_ |q Adversarial Adventures/Track the Frayed Fate |future
+|tip Manually skip to the next step.
+step
+goto 34.56,81.49
+'Untie _Fate of Thread_ |q Adversarial Adventures/Track the Frayed Fate
+|tip Manually skip to the next step.
+step
+goto stonefalls_base 48.49,54.68
+'Untie _Fate of Thread_ |q Adversarial Adventures/Track the Frayed Fate
+|tip Manually skip to the next step.
+step
+goto 47.20,52.66
+'Untie _Fate of Thread_ |q Adversarial Adventures/Track the Frayed Fate
+|tip Manually skip to the next step.
+step
+goto 44.49,51.43
+'Untie _Fate of Thread_ |q Adversarial Adventures/Track the Frayed Fate
+|tip Manually skip to the next step.
+step
+goto 43.31,54.45 |q Adversarial Adventures/Track the Frayed Fate
+step
+goto 43.40,53.29
+'Untie _Frayed Fate_ |q Adversarial Adventures/Examine the Frayed Fate |future
+step
+goto 43.41,53.28
+talk Azandar |q Adversarial Adventures/Talk to Azandar
+step
+'Open _Malabal Tor_ Map
+'Travel to _Ilayas_ |q Adversarial Adventures/Go to Ilayas
+|tip Manually skip to the next step.
+step
+goto malabaltor_base 22.54,52.09
+'Untie _Fate of Thread_ |q Adversarial Adventures/Search the Area |future
+|tip Manually skip to the next step.
+step
+goto 22.64,49.17
+'Untie _Fate of Thread_ |q Adversarial Adventures/Search the Area
+|tip Manually skip to the next step.
+step
+goto 22.55,47.89 |q Adversarial Adventures/Search the Area
+step
+goto 21.98,47.91
+|tip Watch the dialogue.
+'Untie _Frayed Fate_ |q Adversarial Adventures/Examine the Frayed Fate |future
+step
+goto 21.93,47.98
+'Use _Portal_ |q Adversarial Adventures/Enter the Portal |future
+|tip Manually skip to the next step.
+step
+goto vvardenfell_base 67.10,65.72
+talk Azandar |q Adversarial Adventures/Talk to Azandar |future
+|tip Manually skip to the next step.
+step
+goto 67.31,65.93
+|tip Recommended to get a group. This is a public dungeon.
+'Open _Nchuleftingth_ |q Adversarial Adventures/Enter Nchuleftingth |future
+|tip Manually skip to the next step.
+step
+goto nchuleftingth1_base 46.45,63.42 |q Adversarial Adventures/Reach the Ametric Interval Chamber |future
+step
+goto 67.14,49.15 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto 55.30,35.01 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto nchuleftingth3_base 32.40,28.68 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto 45.20,29.23 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto 42.95,48.01 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto 49.65,54.38 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto nchuleftingth2_base 44.63,66.20 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto 83.41,36.96 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto nchuleftingth3_base 86.40,67.46 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto 90.11,44.43
+'Open _Nchuleftingth Bailey_ |q Adversarial Adventures/Reach the Ametric Interval Chamber
+|tip Manually skip to the next step.
+step
+goto nchuleftingth4_base 31.78,53.95
+'Open _Nchuleftingth Ruins_ |q Adversarial Adventures/Reach the Ametric Interval Chamber
+|tip Manually skip to the next step.
+step
+goto 53.57,53.57 |q Adversarial Adventures/Reach the Ametric Interval Chamber
+step
+goto 59.53,73.25
+'Open _Ametric Interval Chamber_ |q Adversarial Adventures/Reach the Ametric Interval Chamber |future
+step
+'_Northwest_
+'Untie _Frayed Fate_ |q Adversarial Adventures/Dispel the Frayed Fates |future
+|tip Manually skip to the next step.
+step
+'_Northeast_
+'Untie _Frayed Fate_ |q Adversarial Adventures/Dispel the Frayed Fates
+step
+'_West and Upstairs_
+'Open _Vvardenfell_ |q Adversarial Adventures/Leave Nchuleftingth
+step
+goto vvardenfell_base 66.49,66.80
+talk Azandar
+turnin Adversarial Adventures
+step
+'_Next to you_
+|tip Reach Allied rapport with Azandar Al-Cybiades
+talk Azandar
+accept Tempting Fates
+step
+'Open _Apocrypha_ Map
+'Travel to _Soundless Bight_ |q Tempting Fates/Go to Quires Wind
+|tip Manually skip to the next step.
+step
+goto u38_apocrypha_base 85.77,70.58 |q Tempting Fates/Go to Quires Wind
+step
+goto 90.99,68.30 |q Tempting Fates/Go to Quires Wind
+step
+goto 89.56,67.16 |q Tempting Fates/Go to Quires Wind
+step
+goto 90.37,66.55
+'Open _Quires Wind_ |q Tempting Fates/Go to Quires Wind |future
+|tip Manually skip to the next step.
+step
+goto u38_quires_wind_base 39.82,76.43 |q Tempting Fates/Find the Unraveling Palimpsest |future
+step
+goto 40.53,44.01 |q Tempting Fates/Find the Unraveling Palimpsest |future
+step
+goto 70.35,44.05 |q Tempting Fates/Find the Unraveling Palimpsest |future
+step
+goto 69.07,38.26
+'Examine _Unraveling Palimpsest_ |q Tempting Fates/Find the Unraveling Palimpsest |future
+step
+goto 68.98,37.88
+talk Azandar |q Tempting Fates/Talk to Azandar |future
+step
+'Open _Vvardenfell_
+'Travel to _Balmora_ |q Tempting Fates/Obtain a Bloodstone from Balmora |future
+|tip Manually skip to the next step.
+step
+goto balmora_base 55.62,57.07 |q Tempting Fates/Obtain a Bloodstone from Balmora |future
+step
+goto 40.77,46.90
+'Open _The Randy Netch Inn_ |q Tempting Fates/Obtain a Bloodstone from Balmora |future
+|tip Manually skip to the next step.
+step
+goto 35.24,53.20
+|tip Go upstairs.
+talk Spellwright Nilvon |q Tempting Fates/Obtain a Bloodstone from Balmora |future
+|tip Manually skip to the next step.
+step
+goto 35.24,53.20
+'Take _Bloodstone_ |q Tempting Fates/Obtain a Bloodstone from Balmora |future
+step
+goto 35.19,53.21
+'Open _Craglorn_ Map
+'Travel to _Belkarth_ |q Tempting Fates/Obtain Rubric Near Belkarth |future
+|tip Manually skip to the next step.
+step
+goto belkarth_base 25.10,68.97 |q Tempting Fates/Obtain Rubric Near Belkarth |future
+step
+goto 24.97,57.11
+'Open _Star-Gazers' Observatory_ |q Tempting Fates/Obtain Rubric Near Belkarth |future
+|tip Manually skip to the next step.
+step
+goto 20.68,46.42
+|tip Go upstairs.
+'Search _Star-Gazer Coffer_ |q Tempting Fates/Obtain Rubric Near Belkarth |future
+step
+'Open _Deshaan_ Map
+'Travel to _Shad Astula_ |q Tempting Fates/Obtain Nathriin's Commentaries at Shad Astula |future
+|tip Manually skip to the next step.
+step
+goto deshaan_base 59.89,33.27
+'Open _Arch-Mage's Office_ |q Tempting Fates/Obtain Nathriin's Commentaries at Shad Astula |future
+|tip Manually skip to the next step.
+step
+goto 59.42,32.98
+talk Elydrina Nathriin |q Tempting Fates/Obtain Nathriin's Commentaries at Shad Astula |future
+|tip Manually skip to the next step.
+step
+goto 59.42,32.98
+talk Azandar |q Tempting Fates/Talk to Azandar |future
+|tip Manually skip to the next step.
+step
+goto 59.48,33.14
+|tip Watch the dialogue.
+'Examine _Commentary on Fate Dialectics_ |q Tempting Fates/Obtain Nathriin's Commentaries at Shad Astula |future
+step
+goto 59.48,33.14
+talk Azandar |q Tempting Fates/Talk to Azandar |future
+step
+'Open _The Rift_ Map
+'Travel to _Riften_ |q Tempting Fates/Reach the Riften Guild Hall Ritual |future
+|tip Manually skip to the next step.
+step
+goto riften_base 72.71,60.96
+'Open _Mage Guild_ |q Tempting Fates/Reach the Riften Guild Hall Ritual |future
+|tip Manually skip to the next step.
+step
+goto 78.89,61.81
+'Open _Ritual Room_ |q Tempting Fates/Reach the Riften Guild Hall Ritual |future
+|tip Manually skip to the next step.
+step
+goto 80.85,60.43
+|tip Watch the dialogue.
+'Use _Warded Ritual Room_ |q Tempting Fates/Wait for Azandar to Summon Tem |future
+|tip Manually skip to the next step.
+step
+goto 78.53,61.90
+|tip Watch the dialogue.
+'Place _Ritual Flames_ |q Tempting Fates/Place the Anchors in the Ritual Flames |future
+step
+'Open _Auridon_ Map
+'Travel to _Skywatch_ |q Tempting Fates/Go to Azandar's Sanctum |future
+|tip Manually skip to the next step.
+step
+goto skywatch_base 50.01,47.12
+|tip Watch the dialogue.
+talk Azandar |q Tempting Fates/Talk to Azandar |future
+step
+goto 18.35,42.01
+'Use _Skywatch_ Wayshrine
+'Travel to _Mathiisen_ |q Tempting Fates/Go to Entila's Folly |future
+|tip Manually skip to the next step.
+step
+goto auridon_base 55.75,58.91 |q Tempting Fates/Go to Entila's Folly |future
+step
+goto 56.05,55.80
+'Open _Entila's Folly_ |q Tempting Fates/Go to Entila's Folly |future
+|tip Manually skip to the next step.
+step
+goto entilasfolly_base 61.79,54.14 |q Tempting Fates/Find the Sanctum Sanctorum Passage |future
+step
+goto 62.14,74.16 |q Tempting Fates/Find the Sanctum Sanctorum Passage |future
+step
+goto 79.29,78.71 |q Tempting Fates/Find the Sanctum Sanctorum Passage |future
+step
+goto 87.22,66.87
+'Open _Sanctum Santorum Passage_ |q Tempting Fates/Find the Sanctum Sanctorum Passage |future
+step
+goto u38_compskywatchsanct_base 47.80,49.58
+'Open _Inner Sanctum_ |q Tempting Fates/Get to Azandar's Inner Sanctum |future
+|tip Manually skip to the next step.
+step
+goto 68.33,77.09
+|tip Watch the dialogue.
+kill The Adversary |q Tempting Fates/Defeat the Adversary |future
+step
+goto 68.33,77.09
+'Use _Rune of Unmaking_ |q Tempting Fates/Trigger the Rune of Unmaking |future
+step
+goto 67.55,82.12
+'Open _Magicka Font_ |q Tempting Fates/Burn Out the Fateweaver Key |future
+step
+goto 66.36,74.49
+'Use _Portal_ |q Tempting Fates/Use Azandar's Portal |future
+step
+goto skywatch_base 73.72,19.09
+'Throw _Cliff Edge_ |q Tempting Fates/Throw the Fateweaver Key from the Cliff |future
+step
+goto 73.19,19.75
+talk Azandar
+turnin Tempting Fates
+]])
+
 CGV:RegisterGuide("Extras\\Extras\\Companions\\Bastian Hallix",[[
 loadingimage loadscreen_u30_blackwood_zone_01.dds
 description Bastian Hallix Unlock quest and Rapport Quests.
@@ -2012,700 +2712,12 @@ talk Sharp-at-Night
 turnin Light the Way to Freedom
 ]])
 
-CGV:RegisterGuide("Extras\\Extras\\Companions\\Azandar Al-Cybiades",[[
-loadingimage loadscreen_underweave_01.dds
-description Azandar Al-Cybiades Unlock quest and Rapport Quests.
-step
-'Open _Telvanni Peninsula_ Map
-'Travel to _Necrom Outskirts_ |q The Fateweaver Key |future
-|tip Manually skip to the next step.
-step
-goto u38_telvannipeninsula_base 79.97,41.83 |q The Fateweaver Key |future
-step
-goto 81.53,37.97 |q The Fateweaver Key |future
-step
-goto u38_Necrom_base 49.01,64.45
-'Open _Necrom_ |q The Fateweaver Key |future
-|tip Manually skip to the next step.
-step
-goto 48.65,49.58
-wayshrine Necrom
-step
-goto 48.65,49.58 |q The Fateweaver Key |future
-step
-goto 55.82,52.48 |q The Fateweaver Key |future
-step
-goto 60.30,52.39
-'Open _Necrom Bindery_ |q The Fateweaver Key |future
-|tip Manually skip to the next step.
-step
-goto 59.12,58.71
-'Use _Portal to Apocrypha: The Endless Library_ |q The Fateweaver Key |future
-|tip Manually skip to the next step.
-step
-goto u38_apocrypha_base 71.43,78.87 |q The Fateweaver Key |future
-step
-goto 67.73,71.45
-wayshrine Tranquil Catalog
-step
-goto 62.00,57.86
-talk Azandar
-accept The Fateweaver Key
-step
-goto u38_ciphersmidden_city_base 73.26,55.19
-wayshrine Cipher's Midden
-step
-goto 52.64,37.16
-talk Azandar |q The Fateweaver Key/Talk to Azandar |future
-step
-goto 42.45,32.75
-|tip Follow Green Orb.
-'Examine _Book Pile_ |q The Fateweaver Key/Find the Book with Azandar
-step
-goto u38_apocrypha_base 57.50,52.53
-'Chase _Tomeshell_ |q The Fateweaver Key/Chase the Tomeshell
-step
-goto 57.50,52.53
-'Examine _Predestination and Paradox: A Treatise_ |q The Fateweaver Key/Take the Book
-step
-goto 57.43,52.50
-talk Azandar |q The Fateweaver Key/Talk to Azandar
-step
-goto u38_ciphersmidden_city_base 22.76,71.82
-|tip Go upstairs.
-'Open _Ciphers Repository_ |q The Fateweaver Key/Search for Tomedust from a Daedric Spell
-|tip Manually skip to the next step.
-step
-goto 10.17,77.73
-'Examine _Expunged Daedric Tomedust_ |q The Fateweaver Key/Search for Tomedust from a Daedric Spell
-step
-goto 22.15,69.47 |q The Fateweaver Key/Find a Seeker Talon |future
-step
-goto 36.21,72.40 |q The Fateweaver Key/Find a Seeker Talon
-step
-goto 29.94,92.44 |q The Fateweaver Key/Find a Seeker Talon
-step
-goto u38_apocrypha_base 52.25,66.71 |q The Fateweaver Key/Find a Seeker Talon
-step
-goto 50.39,65.45
-'Take _Embedded Seeker Talon_ |q The Fateweaver Key/Find a Seeker Talon
-step
-goto 51.61,67.11 |q The Fateweaver Key/Meet Azandar at the Ritual Altar
-step
-goto 44.86,68.50 |q The Fateweaver Key/Meet Azandar at the Ritual Altar
-step
-goto 41.71,59.79
-talk Azandar |q The Fateweaver Key/Talk to Azandar |future
-step
-goto 41.14,60.28
-|tip Watch the dialogue.
-'Place _Summoning Font_ |q The Fateweaver Key/Present Expunged Tomedust |future
-step
-goto 40.83,60.03
-|tip Watch the dialogue.
-'Place _Summoning Font_ |q The Fateweaver Key/Offer Seeker's Talon
-step
-goto 41.13,59.73
-|tip Watch the dialogue.
-'Pour _Summoning Font_ |q The Fateweaver Key/Pour Ichor in the Font
-step
-goto 41.10,59.93
-talk Tem |q The Fateweaver Key/Talk to Tem, the Omen of Destiny
-step
-goto 41.30,59.96
-talk Azandar |q The Fateweaver Key/Talk to Azandar |future
-|tip Manually skip to the next step.
-step
-goto 39.47,52.73 |q The Fateweaver Key/Meet Azandar in the Underweave
-step
-goto 41.88,51.42 |q The Fateweaver Key/Meet Azandar in the Underweave
-step
-goto 41.40,49.74 |q The Fateweaver Key/Meet Azandar in the Underweave |future
-step
-goto 40.36,49.96
-|tip Recommended to get a group. This is a public dungeon.
-'Enter _The Underweave_ |q The Fateweaver Key/Meet Azandar in the Underweave |future
-|tip Manually skip to the next step.
-step
-goto U38_underweave_central_base 26.93,79.58
-talk Azandar |q The Fateweaver Key/Talk to Azandar |future
-step
-goto 28.12,34.23 |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
-step
-goto 49.69,35.03
-'Open _Underweave Nullifactory_ |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
-|tip Manually skip to the next step.
-step
-goto U38_underweave_process01_base 73.69,55.92 |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
-step
-goto 73.93,43.54 |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
-step
-goto 81.26,43.66 |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
-step
-goto 89.61,90.57
-'Open _Underweave Courtyard_ |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
-|tip Manually skip to the next step.
-step
-goto U38_underweave_central_base 90.02,50.14 |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
-step
-goto 86.37,62.24
-'Open _Underweave Heart_ |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
-|tip Manually skip to the next step.
-step
-goto U38_underweave_heart_base 67.46,73.49 |q The Fateweaver Key/Find Martina's Sanctum in the Underweave's Heart
-step
-goto 18.46,49.82
-'Open _Martina's Sanctum_ |q The Fateweaver Key/Search Martina's Sanctum |future
-|tip Manually skip to the next step.
-step
-goto U38_underweave_secretlab_base 56.51,66.41
-'Examine _Mysterious Experiment_ |q The Fateweaver Key/Unknown Experiment |future
-step
-goto 29.95,83.85
-'Examine _The Never-Woven_ |lorebook The Never-Woven/3/49/71
-step
-goto 47.14,58.59
-'Examine _Martina Abor_ |q The Fateweaver Key/Examine Corpse
-step
-goto 43.49,56.51
-talk Azandar |q The Fateweaver Key/Talk to Azandar
-step
-'Open _Apocrypha_ Map
-'Travel to _Cipher's Midden_ |q The Fateweaver Key/Meet Azandar in His Cipher's Midden Chambers
-|tip Manually skip to the next step.
-step
-goto u38_ciphersmidden_city_base 81.85,63.62
-'Open _Azandar's Lodgings_ |q The Fateweaver Key/Meet Azandar in His Cipher's Midden Chambers
-step
-goto 80.84,64.23
-talk Azandar |q The Fateweaver Key/Talk to Azandar
-step
-goto 81.86,64.40
-'Activate _Scrying Beacon_ |q The Fateweaver Key/Light Scry Beacon 4 |future
-step
-goto 83.20,65.38
-'Activate _Scrying Beacon_ |q The Fateweaver Key/Light Scry Beacon 1
-step
-goto 82.27,67.55
-'Activate _Scrying Beacon_ |q The Fateweaver Key/Light Scry Beacon 2
-step
-goto 80.66,67.02
-|tip Watch the dialogue.
-'Activate _Scrying Beacon_ |q The Fateweaver Key/Help Azandar With A Fate Scrying Ritual
-step
-goto 50.65,35.16 |q The Fateweaver Key/Meet Azandar Near Fathoms Drift
-step
-goto u38_apocrypha_base 54.60,52.35
-'Open _Central Orphic Tunnels_ |q The Fateweaver Key/Meet Azandar Near Fathoms Drift
-|tip Manually skip to the next step.
-step
-goto u38_Tunnel2_base 59.04,33.23 |q The Fateweaver Key/Meet Azandar Near Fathoms Drift
-step
-goto 41.02,37.74
-'Open _Apocrypha: Chroma Incognito_ |q The Fateweaver Key/Meet Azandar Near Fathoms Drift
-|tip Manually skip to the next step.
-step
-goto u38_apocrypha_base 42.50,42.35 |q The Fateweaver Key/Meet Azandar Near Fathoms Drift
-step
-goto 45.35,32.22 |q The Fateweaver Key/Meet Azandar Near Fathoms Drift
-step
-goto 41.17,24.01
-wayshrine Forlorn Palisades
-step
-goto 37.63,20.52
-talk Azandar |q The Fateweaver Key/Talk to Azandar |future
-step
-goto 39.05,19.07
-'Enter _Fathoms Drift_ |q The Fateweaver Key/Enter Fathom's Drift
-step
-goto U38_CorpuscleBight_01_Base 33.35,74.61
-'Untie _Fate Thread_ |q The Fateweaver Key/Seek Threads of Fate
-|tip Manually skip to the next step.
-step
-goto 18.84,67.14
-'Untie _Fate Thread_ |q The Fateweaver Key/Seek Threads of Fate
-|tip Manually skip to the next step.
-step
-goto 25.70,58.11
-'Untie _Fate Thread_ |q The Fateweaver Key/Seek Threads of Fate
-|tip Manually skip to the next step.
-step
-goto U38_CorpuscleBight_02_Base 25.73,49.68
-|tip Go upstairs.
-'Untie _Fate Thread_ |q The Fateweaver Key/Seek Threads of Fate
-|tip Manually skip to the next step.
-step
-goto 28.69,40.25
-'Untie _Fate Thread_ |q The Fateweaver Key/Seek Threads of Fate
-|tip Manually skip to the next step.
-step
-goto 31.26,36.80
-'Open _Fathom Drift Wreckage_ |q The Fateweaver Key/Seek Threads of Fate
-|tip Manually skip to the next step.
-step
-goto 41.41,29.70
-'Observe _Azandar's Frayed Fate_ |q The Fateweaver Key/Observe Azandar's Frayed Fate |future
-step
-goto 41.83,28.88
-'Activate _Fatebinding Rune Alpha_ |q The Fateweaver Key/Hit Fate Button
-step
-goto 42.57,29.09
-'Activate _Fatebinding Rune Zeta_ |q The Fateweaver Key/Fate Button B
-step
-goto 41.64,29.26
-talk Azandar |q The Fateweaver Key/Talk to Azandar
-step
-'Open _Apocrypha_ Map
-'Travel to _Cipher's Midden_ |q The Fateweaver Key/Meet Azandar in His Cipher's Midden Chambers
-|tip Manually skip to the next step.
-step
-goto u38_ciphersmidden_city_base 81.27,63.12
-'Open _Azandar's Lodgings_ |q The Fateweaver Key/Meet Azandar in His Cipher's Midden Chambers
-step
-goto 82.61,66.54
-talk Azandar
-turnin The Fateweaver Key
-step
-'_Next to you_
-|tip Reach Friendly rapport with Azandar Al-Cybiades
-talk Azandar
-accept Paths Unwalked
-step
-'Open _Auridon_ Map
-'Travel to _Skywatch_ |q Paths Unwalked/Reach Azandar's Sanctum
-|tip Manually skip to the next step.
-step
-goto skywatch_base 50.83,47.13
-'Open _Sanctum Sanctorum_ |q Paths Unwalked/Reach Azandar's Sanctum
-|tip Manually skip to the next step.
-step
-goto u38_compskywatchsanct_base 80.40,35.42
-talk Azandar |q Paths Unwalked/Talk to Azandar |future
-step
-goto 89.12,24.79
-'Open _Rummage Bin_ |q Paths Unwalked/Collect the Arcane Stencil
-step
-goto 89.40,41.89
-'Use _Magicka Font_ |q Paths Unwalked/Charge Azandar's Stencil
-step
-goto 84.81,30.20
-'Use _Gubbins_ |q Paths Unwalked/Use the Stencil on Gubbins
-step
-goto 84.81,30.20
-'Take _Gubbins Goop_ |q Paths Unwalked/Collect the Arcane Bobbin
-step
-goto 84.96,30.23
-talk Azandar |q Paths Unwalked/Talk to Azandar
-step
-goto 80.59,49.77
-'Open _Inner Sanctum_ |q Paths Unwalked/Scry for Frayed Fates
-|tip Manually skip to the next step.
-step
-goto 64.80,67.18
-'Activate _Scrying Beacon_ |q Paths Unwalked/Scry for Frayed Fates
-|tip Manually skip to the next step.
-step
-goto 68.90,71.24
-'Activate _Scrying Beacon_ |q Paths Unwalked/Scry for Frayed Fates
-|tip Manually skip to the next step.
-step
-goto 64.74,76.77
-'Activate _Scrying Beacon_ |q Paths Unwalked/Scry for Frayed Fates
-|tip Manually skip to the next step.
-step
-goto 58.96,73.12
-'Activate _Scrying Beacon_ |q Paths Unwalked/Scry for Frayed Fates
-step
-goto 58.96,73.12
-talk Azandar |q Paths Unwalked/Talk to Azandar
-step
-'Open _Alik'r Desert_ Map
-'Travel to _HoonDing's Watch_ |q Paths Unwalked/Go to Kozanset
-|tip Manually skip to the next step.
-step
-goto kozanset_base 58.97,40.68
-'Untie _Fate Thread_ |q Paths Unwalked/.*Find and Untie the Frayed Fates.* |future
-|tip Manually skip to the next step.
-step
-goto 57.54,28.90 
-'Untie _Fate Thread_ |q Paths Unwalked/.*Find and Untie the Frayed Fates.*
-|tip Manually skip to the next step.
-step
-goto 46.92,41.97
-|tip Watch the dialogue.
-'Untie _Frayed Fate_ |q Paths Unwalked/.*Find and Untie the Frayed Fates.* |count 1
-step
-goto 51.20,46.69
-'Untie _Fate Thread_ |q Paths Unwalked/.*Find and Untie the Frayed Fates.*
-|tip Manually skip to the next step.
-step
-goto 39.63,50.42
-'Untie _Fate Thread_ |q Paths Unwalked/.*Find and Untie the Frayed Fates.*
-|tip Manually skip to the next step.
-step
-goto 39.66,38.57
-|tip Watch the dialogue.
-'Untie _Frayed Fate_ |q Paths Unwalked/.*Find and Untie the Frayed Fates.* |count 2f
-step
-goto 39.54,38.39
-talk Azandar |q Paths Unwalked/Follow Threads Out of Kozanset |future
-|tip Manually skip to the next step.
-step
-goto 34.20,24.79
-'Untie _Fate Thread_ |q Paths Unwalked/Follow Threads Out of Kozanset
-|tip Manually skip to the next step.
-step
-goto alikr_base 72.96,40.64
-'Untie _Fate Thread_ |q Paths Unwalked/Follow Threads Out of Kozanset
-|tip Manually skip to the next step.
-step
-goto 72.09,39.82
-'Untie _Fate Thread_ |q Paths Unwalked/Follow Threads Out of Kozanset
-|tip Manually skip to the next step.
-step
-goto 70.52,38.91
-|tip Recommended to get a group. This is a public dungeon.
-'Open _Lost City of Na-Totambu_ |q Paths Unwalked/Enter the Lost City of Na-Totambu |future
-|tip Manually skip to the next step.
-step
-goto lostcity_base 46.86,90.74
-'Untie _Fate Thread_ |q Paths Unwalked/Find the Adversary |future
-|tip Manually skip to the next step.
-step
-goto 48.13,71.47
-'Untie _Fate Thread_ |q Paths Unwalked/Find the Adversary
-|tip Manually skip to the next step.
-step
-goto 61.11,68.96
-'Untie _Fate Thread_ |q Paths Unwalked/Find the Adversary
-|tip Manually skip to the next step.
-step
-goto 68.19,67.99 |q Paths Unwalked/Find the Adversary
-step
-goto 66.26,57.37
-'Untie _Fate Thread_ |q Paths Unwalked/Find the Adversary
-|tip Manually skip to the next step.
-step
-goto 68.44,43.66
-|tip Watch the dialogue.
-'Untie _Frayed Fate_ |q Paths Unwalked/Stop the Adversary |future
-|tip Manually skip to the next step.
-step
-goto 69.32,45.72
-'Open _Alik'r Desert_ |q Paths Unwalked/Leave the Lost City of Na-Totambu |future
-step
-'_Next to you_
-talk Azandar
-turnin Paths Unwalked
-step
-'_Next to you_
-|tip Reach Close rapport with Azandar Al-Cybiades
-talk Azandar
-accept Adversarial Adventures
-step
-'Open _Auridon_ Map
-'Travel to _Skywatch_ |q Adversarial Adventures/Go to Azandar's Sanctum
-|tip Manually skip to the next step.
-step
-goto skywatch_base 50.83,47.13
-'Open _Sanctum Sanctorum_ |q Adversarial Adventures/Go to Azandar's Sanctum
-|tip Manually skip to the next step.
-step
-goto u38_compskywatchsanct_base 80.40,35.42
-talk Azandar |q Adversarial Adventures/Talk to Azandar |future
-step 
-goto 80.59,49.77
-'Open _Inner Sanctum_ |q Adversarial Adventures/Locate a Frayed Fate
-|tip Manually skip to the next step.
-step
-goto 64.80,67.18
-'Activate _Scrying Beacon_ |q Adversarial Adventures/Locate a Frayed Fate
-|tip Manually skip to the next step.
-step
-goto 68.90,71.24
-'Activate _Scrying Beacon_ |q Adversarial Adventures/Locate a Frayed Fate
-|tip Manually skip to the next step.
-step
-goto 64.74,76.77
-'Activate _Scrying Beacon_ |q Adversarial Adventures/Locate a Frayed Fate
-|tip Manually skip to the next step.
-step
-goto 58.96,73.12
-|tip Watch the dialogue.
-'Activate _Scrying Beacon_ |q Adversarial Adventures/Locate a Frayed Fate
-step
-goto 58.96,73.12
-talk Azandar |q Adversarial Adventures/Talk to Azandar
-step
-'Open _Stonefalls_ Map
-'Travel to _Ebonheart_ |q Adversarial Adventures/Go to Ebonheart |future
-|tip Manually skip to the next step.
-step
-goto ebonheart_base 52.07,64.96 |q Adversarial Adventures/Track the Frayed Fate |future
-step
-goto 51.91,79.56
-'Untie _Fate of Thread_ |q Adversarial Adventures/Track the Frayed Fate |future
-|tip Manually skip to the next step.
-step
-goto 34.56,81.49
-'Untie _Fate of Thread_ |q Adversarial Adventures/Track the Frayed Fate
-|tip Manually skip to the next step.
-step
-goto stonefalls_base 48.49,54.68
-'Untie _Fate of Thread_ |q Adversarial Adventures/Track the Frayed Fate
-|tip Manually skip to the next step.
-step
-goto 47.20,52.66
-'Untie _Fate of Thread_ |q Adversarial Adventures/Track the Frayed Fate
-|tip Manually skip to the next step.
-step
-goto 44.49,51.43
-'Untie _Fate of Thread_ |q Adversarial Adventures/Track the Frayed Fate
-|tip Manually skip to the next step.
-step
-goto 43.31,54.45 |q Adversarial Adventures/Track the Frayed Fate
-step
-goto 43.40,53.29
-'Untie _Frayed Fate_ |q Adversarial Adventures/Examine the Frayed Fate |future
-step
-goto 43.41,53.28
-talk Azandar |q Adversarial Adventures/Talk to Azandar
-step
-'Open _Malabal Tor_ Map
-'Travel to _Ilayas_ |q Adversarial Adventures/Go to Ilayas
-|tip Manually skip to the next step.
-step
-goto malabaltor_base 22.54,52.09
-'Untie _Fate of Thread_ |q Adversarial Adventures/Search the Area |future
-|tip Manually skip to the next step.
-step
-goto 22.64,49.17
-'Untie _Fate of Thread_ |q Adversarial Adventures/Search the Area
-|tip Manually skip to the next step.
-step
-goto 22.55,47.89 |q Adversarial Adventures/Search the Area
-step
-goto 21.98,47.91
-|tip Watch the dialogue.
-'Untie _Frayed Fate_ |q Adversarial Adventures/Examine the Frayed Fate |future
-step
-goto 21.93,47.98
-'Use _Portal_ |q Adversarial Adventures/Enter the Portal |future
-|tip Manually skip to the next step.
-step
-goto vvardenfell_base 67.10,65.72
-talk Azandar |q Adversarial Adventures/Talk to Azandar |future
-|tip Manually skip to the next step.
-step
-goto 67.31,65.93
-|tip Recommended to get a group. This is a public dungeon.
-'Open _Nchuleftingth_ |q Adversarial Adventures/Enter Nchuleftingth |future
-|tip Manually skip to the next step.
-step
-goto nchuleftingth1_base 46.45,63.42 |q Adversarial Adventures/Reach the Ametric Interval Chamber |future
-step
-goto 67.14,49.15 |q Adversarial Adventures/Reach the Ametric Interval Chamber
-step
-goto 55.30,35.01 |q Adversarial Adventures/Reach the Ametric Interval Chamber
-step
-goto nchuleftingth3_base 32.40,28.68 |q Adversarial Adventures/Reach the Ametric Interval Chamber
-step
-goto 45.20,29.23 |q Adversarial Adventures/Reach the Ametric Interval Chamber
-step
-goto 42.95,48.01 |q Adversarial Adventures/Reach the Ametric Interval Chamber
-step
-goto 49.65,54.38 |q Adversarial Adventures/Reach the Ametric Interval Chamber
-step
-goto nchuleftingth2_base 44.63,66.20 |q Adversarial Adventures/Reach the Ametric Interval Chamber
-step
-goto 83.41,36.96 |q Adversarial Adventures/Reach the Ametric Interval Chamber
-step
-goto nchuleftingth3_base 86.40,67.46 |q Adversarial Adventures/Reach the Ametric Interval Chamber
-step
-goto 90.11,44.43
-'Open _Nchuleftingth Bailey_ |q Adversarial Adventures/Reach the Ametric Interval Chamber
-|tip Manually skip to the next step.
-step
-goto nchuleftingth4_base 31.78,53.95
-'Open _Nchuleftingth Ruins_ |q Adversarial Adventures/Reach the Ametric Interval Chamber
-|tip Manually skip to the next step.
-step
-goto 53.57,53.57 |q Adversarial Adventures/Reach the Ametric Interval Chamber
-step
-goto 59.53,73.25
-'Open _Ametric Interval Chamber_ |q Adversarial Adventures/Reach the Ametric Interval Chamber |future
-step
-'_Northwest_
-'Untie _Frayed Fate_ |q Adversarial Adventures/Dispel the Frayed Fates |future
-|tip Manually skip to the next step.
-step
-'_Northeast_
-'Untie _Frayed Fate_ |q Adversarial Adventures/Dispel the Frayed Fates
-step
-'_West and Upstairs_
-'Open _Vvardenfell_ |q Adversarial Adventures/Leave Nchuleftingth
-step
-goto vvardenfell_base 66.49,66.80
-talk Azandar
-turnin Adversarial Adventures
-step
-'_Next to you_
-|tip Reach Allied rapport with Azandar Al-Cybiades
-talk Azandar
-accept Tempting Fates
-step
-'Open _Apocrypha_ Map
-'Travel to _Soundless Bight_ |q Tempting Fates/Go to Quires Wind
-|tip Manually skip to the next step.
-step
-goto u38_apocrypha_base 85.77,70.58 |q Tempting Fates/Go to Quires Wind
-step
-goto 90.99,68.30 |q Tempting Fates/Go to Quires Wind
-step
-goto 89.56,67.16 |q Tempting Fates/Go to Quires Wind
-step
-goto 90.37,66.55
-'Open _Quires Wind_ |q Tempting Fates/Go to Quires Wind |future
-|tip Manually skip to the next step.
-step
-goto u38_quires_wind_base 39.82,76.43 |q Tempting Fates/Find the Unraveling Palimpsest |future
-step
-goto 40.53,44.01 |q Tempting Fates/Find the Unraveling Palimpsest |future
-step
-goto 70.35,44.05 |q Tempting Fates/Find the Unraveling Palimpsest |future
-step
-goto 69.07,38.26
-'Examine _Unraveling Palimpsest_ |q Tempting Fates/Find the Unraveling Palimpsest |future
-step
-goto 68.98,37.88
-talk Azandar |q Tempting Fates/Talk to Azandar |future
-step
-'Open _Vvardenfell_
-'Travel to _Balmora_ |q Tempting Fates/Obtain a Bloodstone from Balmora |future
-|tip Manually skip to the next step.
-step
-goto balmora_base 55.62,57.07 |q Tempting Fates/Obtain a Bloodstone from Balmora |future
-step
-goto 40.77,46.90
-'Open _The Randy Netch Inn_ |q Tempting Fates/Obtain a Bloodstone from Balmora |future
-|tip Manually skip to the next step.
-step
-goto 35.24,53.20
-|tip Go upstairs.
-talk Spellwright Nilvon |q Tempting Fates/Obtain a Bloodstone from Balmora |future
-|tip Manually skip to the next step.
-step
-goto 35.24,53.20
-'Take _Bloodstone_ |q Tempting Fates/Obtain a Bloodstone from Balmora |future
-step
-goto 35.19,53.21
-'Open _Craglorn_ Map
-'Travel to _Belkarth_ |q Tempting Fates/Obtain Rubric Near Belkarth |future
-|tip Manually skip to the next step.
-step
-goto belkarth_base 25.10,68.97 |q Tempting Fates/Obtain Rubric Near Belkarth |future
-step
-goto 24.97,57.11
-'Open _Star-Gazers' Observatory_ |q Tempting Fates/Obtain Rubric Near Belkarth |future
-|tip Manually skip to the next step.
-step
-goto 20.68,46.42
-|tip Go upstairs.
-'Search _Star-Gazer Coffer_ |q Tempting Fates/Obtain Rubric Near Belkarth |future
-step
-'Open _Deshaan_ Map
-'Travel to _Shad Astula_ |q Tempting Fates/Obtain Nathriin's Commentaries at Shad Astula |future
-|tip Manually skip to the next step.
-step
-goto deshaan_base 59.89,33.27
-'Open _Arch-Mage's Office_ |q Tempting Fates/Obtain Nathriin's Commentaries at Shad Astula |future
-|tip Manually skip to the next step.
-step
-goto 59.42,32.98
-talk Elydrina Nathriin |q Tempting Fates/Obtain Nathriin's Commentaries at Shad Astula |future
-|tip Manually skip to the next step.
-step
-goto 59.42,32.98
-talk Azandar |q Tempting Fates/Talk to Azandar |future
-|tip Manually skip to the next step.
-step
-goto 59.48,33.14
-|tip Watch the dialogue.
-'Examine _Commentary on Fate Dialectics_ |q Tempting Fates/Obtain Nathriin's Commentaries at Shad Astula |future
-step
-goto 59.48,33.14
-talk Azandar |q Tempting Fates/Talk to Azandar |future
-step
-'Open _The Rift_ Map
-'Travel to _Riften_ |q Tempting Fates/Reach the Riften Guild Hall Ritual |future
-|tip Manually skip to the next step.
-step
-goto riften_base 72.71,60.96
-'Open _Mage Guild_ |q Tempting Fates/Reach the Riften Guild Hall Ritual |future
-|tip Manually skip to the next step.
-step
-goto 78.89,61.81
-'Open _Ritual Room_ |q Tempting Fates/Reach the Riften Guild Hall Ritual |future
-|tip Manually skip to the next step.
-step
-goto 80.85,60.43
-|tip Watch the dialogue.
-'Use _Warded Ritual Room_ |q Tempting Fates/Wait for Azandar to Summon Tem |future
-|tip Manually skip to the next step.
-step
-goto 78.53,61.90
-|tip Watch the dialogue.
-'Place _Ritual Flames_ |q Tempting Fates/Place the Anchors in the Ritual Flames |future
-step
-'Open _Auridon_ Map
-'Travel to _Skywatch_ |q Tempting Fates/Go to Azandar's Sanctum |future
-|tip Manually skip to the next step.
-step
-goto skywatch_base 50.01,47.12
-|tip Watch the dialogue.
-talk Azandar |q Tempting Fates/Talk to Azandar |future
-step
-goto 18.35,42.01
-'Use _Skywatch_ Wayshrine
-'Travel to _Mathiisen_ |q Tempting Fates/Go to Entila's Folly |future
-|tip Manually skip to the next step.
-step
-goto auridon_base 55.75,58.91 |q Tempting Fates/Go to Entila's Folly |future
-step
-goto 56.05,55.80
-'Open _Entila's Folly_ |q Tempting Fates/Go to Entila's Folly |future
-|tip Manually skip to the next step.
-step
-goto entilasfolly_base 61.79,54.14 |q Tempting Fates/Find the Sanctum Sanctorum Passage |future
-step
-goto 62.14,74.16 |q Tempting Fates/Find the Sanctum Sanctorum Passage |future
-step
-goto 79.29,78.71 |q Tempting Fates/Find the Sanctum Sanctorum Passage |future
-step
-goto 87.22,66.87
-'Open _Sanctum Santorum Passage_ |q Tempting Fates/Find the Sanctum Sanctorum Passage |future
-step
-goto u38_compskywatchsanct_base 47.80,49.58
-'Open _Inner Sanctum_ |q Tempting Fates/Get to Azandar's Inner Sanctum |future
-|tip Manually skip to the next step.
-step
-goto 68.33,77.09
-|tip Watch the dialogue.
-kill The Adversary |q Tempting Fates/Defeat the Adversary |future
-step
-goto 68.33,77.09
-'Use _Rune of Unmaking_ |q Tempting Fates/Trigger the Rune of Unmaking |future
-step
-goto 67.55,82.12
-'Open _Magicka Font_ |q Tempting Fates/Burn Out the Fateweaver Key |future
-step
-goto 66.36,74.49
-'Use _Portal_ |q Tempting Fates/Use Azandar's Portal |future
-step
-goto skywatch_base 73.72,19.09
-'Throw _Cliff Edge_ |q Tempting Fates/Throw the Fateweaver Key from the Cliff |future
-step
-goto 73.19,19.75
-talk Azandar
-turnin Tempting Fates
+CGV:RegisterGuide("Extras\\Extras\\Companions\\Tanlorin",[[
+loadingimage loadscreen_hi_systres_zone_01.dds
+description Ember Unlock quest and Rapport Quests.
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Companions\\Zerith-var",[[
+loadingimage loadscreen_hi_systres_zone_01.dds
+description Ember Unlock quest and Rapport Quests.
 ]])

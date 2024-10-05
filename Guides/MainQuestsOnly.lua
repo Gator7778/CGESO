@@ -46443,6 +46443,7 @@ goto 77.47,66.04
 |tip Manually skip to the next step.
 step
 goto 77.45,66.50
+|tip Watch the dialogue.
 'Examine _Letter to Captain Leronus_ |q The Missing Cohort/Examine the Letter |future
 step
 goto 77.45,66.50
@@ -46493,7 +46494,7 @@ goto 31.62,66.84
 talk Legionary Caepio |q The Missing Cohort/Talk to Legionary Caepio |future
 step
 goto 64.07,55.96
-'Climb Down _Ruins_ |q The Missing Cohort/Find the Daedric Portal
+'Drop Down |q The Missing Cohort/Find the Daedric Portal
 step
 goto U42_Rustwall_Crypt_02_base 38.10,11.29 |q The Missing Cohort/Search the Ruins
 step
@@ -47578,10 +47579,8 @@ step
 goto 68.19,65.98 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
 step
 goto 67.82,49.33
-'Use _Abolisher_ |q King Nantharion's Gambit/Use Abolisher
-step
-goto 67.82,49.33
-'Use _Portal to Darkened Home_ |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
+'Use _Abolisher_
+'Use _Portal to Darkened Home_ |q King Nantharion's Gambit/Explore Miscarcand Deep Halls |future
 |tip Manually skip to the next step.
 step
 goto u42_miscarcand2_base 74.72,33.53 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
