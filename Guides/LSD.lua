@@ -9977,16 +9977,405 @@ goto 89.37,56.63
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\West Weald",[[
 loadingimage loadscreen_west_weald_01.dds
-description West Weald Coming Soon.
+description The West Weald is an open countryside of the Colovia region in southern Cyrodiil, well known for its vineyards and tomato farms.
 step
-Coming Soon.
+'Open _West Weald_ Map
+'Travel to _Skingrad Vineyards_
+|tip Manually skip to the next step.
 step
-'_Congradulations All Skyshards and Delves Complete_
+goto u42_Skingrad_base 56.83,28.04
 step
-]])
-
-CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\West Weald",[[
-loadingimage loadscreen_west_weald_01.dds
-description Telvanni Peninsula Skyshards and Delves.
+goto westwealdoverland_base 76.59,55.96
+step
+goto 77.88,57.39
+step
+goto 77.14,59.90
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 83.10,62.98
+step
+goto 81.69,65.67
+step
+goto 71.79,73.41
+'Open _Haladin Lumber Camp_
+|tip Manually skip to the next step.
+step
+goto u42_base_haldain 39.22,28.50
+step
+goto 20.83,31.56
+step
+goto 23.25,70.22
+step
+goto 26.78,74.88
+step
+goto 50.96,75.64
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 62.71,76.77
+step
+goto 77.82,57.07
+step
+goto 88.37,58.54
+step
+goto 71.76,35.69
+kill Aggression of Root
+|tip Manually skip to the next step.
+step
+'Open _West Weald_ Map
+'Travel to _Wildburn's Edge_
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base  63.23,64.73
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 65.42,66.70
+'Use _Wildburn's Edge_
+'Travel to _Ostumir_
+|tip Manually skip to the next step.
+step
+goto 53.46,72.87
+'Open _Fyrelight Cave_
+|tip Manually skip to the next step.
+step
+goto u42_base_clawcave 75.68,48.14
+step
+goto 64.15,44.96
+step
+goto 60.55,34.07
+step
+goto 48.37,24.71
+step
+goto 55.65,23.91
+step
+goto 44.28,08.73
+step
+goto 30.63,14.40
+step
+goto 21.40,19.17|tip Cross the Bridge.
+step
+goto 24.50,25.38
+step
+goto 31.29,22.12
+step
+goto 32.19,38.04
+step
+goto 33.30,42.26
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 32.19,38.04
+step
+goto 31.29,22.12
+step
+goto 24.25,25.05
+step
+goto 23.22,31.36
+step
+goto 23.51,31.42
+step
+goto 28.93,58.24
+step
+goto 41.51,60.62
+step
+goto 52.28,60.45
+step
+goto 55.21,71.97
+step
+goto 59.96,75.67
+step
+goto 58.68,84.32
+step
+goto 77.41,89.84
+step
+goto 77.49,71.16
+kill Scourgetail
+|tip Manually skip to the next step.
+step
+'Open _West Weald_
+'Travel to _Ostumir_
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 47.42,77.72
+step
+goto 48.43,79.12
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 47.42,77.72
+step
+goto 54.33,74.62
+'Use Ostumir_
+'Travel to _Vashabar_
+|tip Manually skip to the next step.
+step
+goto 46.97,71.31
+step
+goto 48.61,70.70
+step
+goto 48.48,71.21
+|tip Go upstairs.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 46.97,71.31
+step
+goto u42_Vashabar_base 81.92,70.22
+'Use _Vashabar_
+'Travel to _Fall's Path_
+|tip Manually skip to the next step.
+step
+goto 49.98,62.99
+step
+goto 49.24,59.41
+step
+goto 48.80,57.56
+step
+goto 48.76,57.23
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 48.52,57.65
+step
+goto 41.77,54.78
+step
+goto 39.15,54.14
+step
+goto 38.42,52.07
+step
+goto 39.51,50.45
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 41.77,54.78
+'Use _Three Points_
+'Travel to _Sutch_
+|tip Manually skip to the next step.
+step
+goto 15.51,56.15
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 16.98,58.00
+step
+goto 16.67,62.19
+step
+goto 14.07,61.27
+'Open _Varen's Watch_
+|tip Manually skip to the next step.
+step
+goto UI_Maps_U42_VarensWall_Ext 59.70,75.74
+step
+goto 41.81,71.62
+step
+goto 35.31,76.71
+step
+goto 31.07,69.87
+step
+goto 44.44,64.14
+step
+goto 63.11,60.95
+step
+goto 57.02,49.48
+step
+goto U42_VarensWatch_int_base 64.02,58.41
+step
+goto 34.50,71.13
+step
+goto 21.71,42.78
+step
+goto 35.63,33.43
+step
+goto UI_Maps_U42_VarensWall_Ext 50.49,39.98
+|tip Go all the way upstairs.
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto U42_VarensWatch_int_base 57.97,36.08 |tip Go downstairs.
+step
+goto 71.34,12.84
+step
+goto UI_Maps_U42_VarensWall_Ext 63.58,31.87
+kill Vralkuun
+kill Commander Hanhael
+|tip Manually skip to the next step.
+step
+'Open _West Weald_
+'Travel _Ontus_
+|tip Manually skip to the next step.
+step
+goto u42_ontus_city_base  29.62,71.58
+step
+goto 24.12,58.15
+step
+goto 16.11,70.27
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto westwealdoverland_base 51.12,51.99
+'Open _Nonungalo_
+|tip Manually skip to the next step.
+step
+goto u42_base_nonungalo
+step
+goto 57.48,78.88
+step
+goto 51.84,73.52
+step
+goto 61.98,72.77
+step
+goto 41.04,71.18
+step
+goto 33.32,76.87
+step
+goto 30.87,86.81
+step
+goto 25.69,72.50
+step
+goto 31.89,55.15
+step
+goto 12.73,51.13
+step
+goto 36.76,38.92
+step
+goto 36.67,32.64
+step
+goto 32.53,37.08
+step
+goto 36.48,26.40
+step
+goto 41.08,26.35
+step
+goto 36.60,19.40
+step
+goto 61.57,18.88
+step
+goto 60.02,30.93
+step
+goto 44.00,30.04
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 60.02,30.93
+step
+goto 61.57,18.88
+step
+goto 80.39,18.62
+step
+goto 83.56,23.11
+step
+goto 79.52,41.45 |tip Go upstairs.
+step
+goto 73.42,45.49
+kill Shattered Shard
+|tip Manually skip to the next step.
+step
+'Open _West Weald_ Map
+'Travel to _Ontus_
+|tip Manually skip to the next step.
+step
+goto 70.97,41.36
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 68.01,37.73
+'Open _Legion's Rest_
+|tip Manually skip to the next step.
+step
+goto u42_windcave_base 65.44,94.42
+step
+goto 79.99,73.69
+step
+goto 80.00,65.72
+step
+goto 68.88,70.77
+step
+goto 80.70,52.98 |tip Go upstairs.
+step
+goto 68.29,40.37
+step
+goto 65.16,25.66
+step
+goto 59.03,07.39
+step
+goto 46.43,06.89
+step
+goto 21.57,30.59
+step
+goto 28.64,35.37
+step
+goto 45.45,28.74
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 32.26,37.89
+step
+goto 40.26,42.59 |tip Drop down.
+step
+goto 37.30,50.04
+kill Gilroy Vassinus
+|tip Manually skip to the next step.
+step
+'Open _West Weald_ Map
+'Travel to _Valente Vineyard_
+step
+goto 69.96,22.33
+step
+goto 76.79,20.73
+'Open _Fort Colovia_
+|tip Manually skip to the next step.
+step
+goto u42_base_towerbelli 38.40,39.11
+step
+goto 47.57,21.10
+step
+goto 67.31,17.46
+'Search _Barrel_
+step
+goto 52.98,30.71
+step
+goto 65.13,35.14
+step
+goto 58.51,57.02
+step
+goto 49.73,65.17
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 58.51,57.02
+step
+goto 65.13,35.14
+step
+goto 74.99,36.56
+step
+goto 72.98,62.74 |tip Drop down.
+step
+goto 69.44,68.50
+'Search _Ash Pile_
+step
+goto 64.67,73.89
+step
+goto 49.65,67.40
+step
+goto 43.48,65.97
+step
+goto 45.06,68.58
+'Search _Hay Stack_
+step
+goto 32.79,78.60
+step
+goto 26.26,66.40
+kill Deserter Marius Gallo
+|tip Manually skip to the next step.
+step
+'Open _West Weald_ Map
+'Travel to _North Hook_
+|tip Manually skip to the next step.
+step
+goto 64.40,24.22
+'Use _Skyshard_
+|tip Manually skip to the next step.
 step
 ]])
