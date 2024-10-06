@@ -2715,9 +2715,29 @@ turnin Light the Way to Freedom
 CGV:RegisterGuide("Extras\\Extras\\Companions\\Tanlorin",[[
 loadingimage loadscreen_hi_systres_zone_01.dds
 description Ember Unlock quest and Rapport Quests.
+step
+'Open _Auridon_ Map
+'Travel to _Vulkhel Guard_ |q The Garland Ring |future
+|tip Manually skip to the next step.
+step
+goto vulkhelguard_base 58.00,30.08 |q The Garland Ring |future
+step
+goto 50.55,28.26
+talk Tanlorin
+accept The Garland Ring
+step
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Companions\\Zerith-var",[[
 loadingimage loadscreen_hi_systres_zone_01.dds
 description Ember Unlock quest and Rapport Quests.
+step
+'Open _Reaper's March_
+'Travel to _Moonmont_ |q A Moonlit Shadow |future
+|tip Manually skip to the next step.
+step
+goto reapersmarch_base 31.84,79.69
+talk Cantor Krin'ze
+accept A Moonlit Shadow
+step
 ]])

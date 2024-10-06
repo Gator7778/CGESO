@@ -10027,7 +10027,7 @@ step
 'Travel to _Wildburn's Edge_
 |tip Manually skip to the next step.
 step
-goto westwealdoverland_base  63.23,64.73
+goto westwealdoverland_base 63.23,64.73
 'Use _Skyshard_
 |tip Manually skip to the next step.
 step
@@ -10050,11 +10050,13 @@ goto 48.37,24.71
 step
 goto 55.65,23.91
 step
+goto 57.49,11.84
+step
 goto 44.28,08.73
 step
 goto 30.63,14.40
 step
-goto 21.40,19.17|tip Cross the Bridge.
+goto 21.40,19.17 |tip Cross the Bridge.
 step
 goto 24.50,25.38
 step
@@ -10107,7 +10109,7 @@ step
 goto 47.42,77.72
 step
 goto 54.33,74.62
-'Use Ostumir_
+'Use _Ostumir_
 'Travel to _Vashabar_
 |tip Manually skip to the next step.
 step
@@ -10127,7 +10129,7 @@ goto u42_Vashabar_base 81.92,70.22
 'Travel to _Fall's Path_
 |tip Manually skip to the next step.
 step
-goto 49.98,62.99
+goto westwealdoverland_base 49.98,62.99
 step
 goto 49.24,59.41
 step
@@ -10166,15 +10168,7 @@ goto 14.07,61.27
 'Open _Varen's Watch_
 |tip Manually skip to the next step.
 step
-goto UI_Maps_U42_VarensWall_Ext 59.70,75.74
-step
-goto 41.81,71.62
-step
-goto 35.31,76.71
-step
-goto 31.07,69.87
-step
-goto 44.44,64.14
+goto UI_Maps_U42_VarensWall_Ext 71.41,67.82
 step
 goto 63.11,60.95
 step
@@ -10206,7 +10200,7 @@ step
 'Travel _Ontus_
 |tip Manually skip to the next step.
 step
-goto u42_ontus_city_base  29.62,71.58
+goto u42_ontus_city_base 29.62,71.58
 step
 goto 24.12,58.15
 step
@@ -10218,35 +10212,19 @@ goto westwealdoverland_base 51.12,51.99
 'Open _Nonungalo_
 |tip Manually skip to the next step.
 step
-goto u42_base_nonungalo
-step
-goto 57.48,78.88
-step
-goto 51.84,73.52
-step
-goto 61.98,72.77
-step
-goto 41.04,71.18
+goto u42_base_nonungalo 57.48,78.88
 step
 goto 33.32,76.87
 step
 goto 30.87,86.81
 step
-goto 25.69,72.50
-step
 goto 31.89,55.15
 step
 goto 12.73,51.13
 step
-goto 36.76,38.92
+goto 19.86,40.22
 step
-goto 36.67,32.64
-step
-goto 32.53,37.08
-step
-goto 36.48,26.40
-step
-goto 41.08,26.35
+goto 33.09,40.17
 step
 goto 36.60,19.40
 step
@@ -10264,8 +10242,6 @@ goto 61.57,18.88
 step
 goto 80.39,18.62
 step
-goto 83.56,23.11
-step
 goto 79.52,41.45 |tip Go upstairs.
 step
 goto 73.42,45.49
@@ -10276,9 +10252,13 @@ step
 'Travel to _Ontus_
 |tip Manually skip to the next step.
 step
+goto westwealdoverland_base 61.77,42.05
+step
 goto 70.97,41.36
 'Use _Skyshard_
 |tip Manually skip to the next step.
+step
+goto 66.01,38.55
 step
 goto 68.01,37.73
 'Open _Legion's Rest_
@@ -10288,15 +10268,9 @@ goto u42_windcave_base 65.44,94.42
 step
 goto 79.99,73.69
 step
-goto 80.00,65.72
-step
 goto 68.88,70.77
 step
 goto 80.70,52.98 |tip Go upstairs.
-step
-goto 68.29,40.37
-step
-goto 65.16,25.66
 step
 goto 59.03,07.39
 step
@@ -10320,23 +10294,17 @@ kill Gilroy Vassinus
 step
 'Open _West Weald_ Map
 'Travel to _Valente Vineyard_
+|tip Manually skip to the next step.
 step
-goto 69.96,22.33
+goto westwealdoverland_base 69.96,22.33
 step
 goto 76.79,20.73
 'Open _Fort Colovia_
 |tip Manually skip to the next step.
 step
-goto u42_base_towerbelli 38.40,39.11
+goto u42_base_towerbelli 42.02,45.72
 step
-goto 47.57,21.10
-step
-goto 67.31,17.46
-'Search _Barrel_
-step
-goto 52.98,30.71
-step
-goto 65.13,35.14
+goto 54.19,51.27
 step
 goto 58.51,57.02
 step
@@ -10346,23 +10314,7 @@ goto 49.73,65.17
 step
 goto 58.51,57.02
 step
-goto 65.13,35.14
-step
-goto 74.99,36.56
-step
-goto 72.98,62.74 |tip Drop down.
-step
-goto 69.44,68.50
-'Search _Ash Pile_
-step
 goto 64.67,73.89
-step
-goto 49.65,67.40
-step
-goto 43.48,65.97
-step
-goto 45.06,68.58
-'Search _Hay Stack_
 step
 goto 32.79,78.60
 step
@@ -10373,6 +10325,8 @@ step
 'Open _West Weald_ Map
 'Travel to _North Hook_
 |tip Manually skip to the next step.
+step
+goto westwealdoverland_base 68.48,24.14
 step
 goto 64.40,24.22
 'Use _Skyshard_
