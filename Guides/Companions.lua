@@ -2726,6 +2726,217 @@ goto 50.55,28.26
 talk Tanlorin
 accept The Garland Ring
 step
+goto 50.55,28.26
+'Destroy _Ice Trap_ |q The Garland Ring/Destroy the Ice Trap
+step
+goto 50.55,28.26
+talk Tanlorin |q The Garland Ring/Talk to the High Elf
+step
+'Open _Auridon_ Map
+'Travel to _Windy Glade_ |q The Garland Ring/.*Search Monkey's Rest.* |count 1 |future
+|tip Manually skip to the next step.
+step
+goto auridon_base 54.01,79.94
+'Examine _Scrap of Paper_ |q The Garland Ring/.*Search Monkey's Rest.* |count 1 |future
+step
+goto 53.94,79.84
+'Examine _Scarf_ |q The Garland Ring/.*Search Monkey's Rest.* |count 2
+step
+goto 53.97,79.58
+'Examine _Crystal Charm_ |q The Garland Ring/.*Search Monkey's Rest.* |count 3
+step
+goto 54.06,79.71
+talk Tanlorin |q The Garland Ring/Talk to Tanlorin
+step
+goto 54.11,79.63
+|tip Watch the dialogue.
+talk Hyacinth |q The Garland Ring/Talk to Hyacinth
+step
+goto 54.07,79.61
+talk Tanlorin |q The Garland Ring/Talk to Tanlorin
+step
+goto 53.90,82.13
+'Use _Windy Glade_
+'Travel to _Tanzwil_ |q The Garland Ring/Find River Lilies near Phaer
+|tip Manually skip to the next step.
+step
+goto 55.86,71.86 |q The Garland Ring/Find River Lilies near Phaer
+step
+goto 55.95,71.00
+'Take _River Lily_ |q The Garland Ring/Find River Lilies near Phaer
+step
+goto 52.39,72.95
+'Use _Tanzil_
+'Travel to _Mathiisen_ |q The Garland Ring/Talk to Chirrabi at Mathiisen
+|tip Manually skip to the next step.
+step
+goto 54.26,61.40 |q The Garland Ring/Talk to Chirrabi at Mathiisen
+step
+goto 56.92,61.48 |q The Garland Ring/Talk to Chirrabi at Mathiisen
+step
+goto 57.45,62.22
+talk Chirrabi |q The Garland Ring/Talk to Chirrabi at Mathiisen
+step
+goto 56.92,61.48 |q The Garland Ring/Meet Tanlorin West of Skywatch
+step
+goto 54.26,61.40 |q The Garland Ring/Meet Tanlorin West of Skywatch
+step
+goto 51.90,54.82
+talk Tanlorin |q The Garland Ring |future
+|tip Manually skip to the next step.
+step
+goto 51.90,54.63
+|tip Watch the dialogue.
+'Take _Resonating Fluid_ |q The Garland Ring/Take the Resonating Fluid |future
+step
+goto 54.26,61.40 |q The Garland Ring/Meet Tanlorin Outside Toothmaul Gully
+step
+goto 50.63,64.00 |q The Garland Ring/Meet Tanlorin Outside Toothmaul Gully
+step
+goto 39.95,65.38 |q The Garland Ring/Meet Tanlorin Outside Toothmaul Gully
+step
+goto 39.70,67.15 |q The Garland Ring/Meet Tanlorin Outside Toothmaul Gully
+step
+goto 41.38,67.06
+talk Tanlorin |q The Garland Ring/Talk to Tanlorin |future
+step
+goto 41.96,67.56
+|tip This is a public dungeon might need a group. (No Dungeon Boss)
+'Open _Toothmaul Gully_ |q The Garland Ring/Enter Toothmaul Gully |future
+|tip Manually skip to the next step.
+step
+goto toothmaulgully_base 43.71,10.25 |q The Garland Ring/Find a Spot to Activate the Tracker Fly |future
+step
+goto 44.56,19.73
+|tip Watch the dialogue.
+'Pour _Tracker Fly_ |q The Garland Ring/Pour Resonating Fluid into the Tracker Fly |future
+step
+goto 43.90,34.06 |q The Garland Ring/Search Toothmaul Gully
+step
+goto 48.31,52.44 |q The Garland Ring/Search Toothmaul Gully
+step
+goto 53.94,58.39 |q The Garland Ring/Search Toothmaul Gully
+step
+goto 59.22,57.49
+|tip Go up the ramp.
+'Open _Gully Side Chamber_ |q The Garland Ring/Search the Side Chamber in Toothmaul Gully |future
+|tip Manually skip to the next step.
+step
+goto u44_ToothmaulAddon_base 27.34,23.32
+'Examine _Scrawled Ceythalmore Orders_ |q The Garland Ring/Search the Side Chamber in Toothmaul Gully
+step
+goto 66.87,71.39
+'Open _Interrogation Chamber_ |q The Garland Ring/Continue the Search
+step
+goto 78.92,66.95
+talk Wisteria |q The Garland Ring/Talk to Wisteria
+step
+goto 66.87,71.39
+'Open _Gully Side Chamber_ |q The Garland Ring/Exit Toothmaul Gully
+|tip Manually skip to the next step.
+step
+goto 09.77,27.72
+'Open _Toothmaul Gully_ |q The Garland Ring/Exit Toothmaul Gully
+|tip Manually skip to the next step.
+step
+goto toothmaulgully_base 53.94,58.39 |q The Garland Ring/Exit Toothmaul Gully
+step
+goto 48.31,52.44 |q The Garland Ring/Exit Toothmaul Gully
+step
+goto 43.71,10.25 |q The Garland Ring/Exit Toothmaul Gully
+step
+goto 58.97,10.24
+'Open _Auridon_ |q The Garland Ring/Exit Toothmaul Gully |future
+|tip Manually skip to the next step.
+step
+goto auridon_base 41.73,65.82 |q The Garland Ring/Talk to Tanlorin |future
+step
+goto 43.57,66.42
+talk Tanlorin |q The Garland Ring/Talk to Tanlorin
+step
+'Open _Greenshade_ Map
+'Travel to _Serpent's Grotto_ |q The Garland Ring/Go to the Greenshade Hideout Near Serpent's Grotto
+|tip Manaually skip to the next step.
+step 
+goto greenshade_base 28.17,52.84
+'Go to the _Greenshade Hideout_ Near Serpent's Grotto |q The Garland Ring/Go to the Greenshade Hideout Near Serpent's Grotto
+step
+goto 26.32,51.40
+'Enter _Hyacinth's Greenhouse_ |q The Garland Ring/Enter the Greenshade Greenhouse
+|tip Manually skip to the next step.
+step
+goto u44GSGreenhouse_base 62.35,74.90
+|tip Watch the dialogue.
+talk Tanlorin |q The Garland Ring/Talk to Tanlorin |future
+step
+goto 58.56,69.75
+'Examine _Pheromone Bottles_ |q The Garland Ring/Investigate the Greenhouse
+|tip Manually skip to the next step.
+step
+goto 57.75,59.95
+'Examine _Spore Pods_ |q The Garland Ring/Investigate the Greenhouse
+|tip Manually skip to the next step.
+step
+goto 57.32,51.26
+'Examine _Pocket Ballista Design Document_ |lorebook Pocket Ballista Design Document/3/53/7
+step
+goto 43.61,54.61
+'Examine _Ceythalmore Agent Corpse_ |q The Garland Ring/Investigate the Greenhouse
+step
+goto 39.66,45.62
+talk Tanlorin |q The Garland Ring/Talk to Tanlorin
+step
+goto 67.58,88.23
+'Enter _Greenshade_ |q The Garland Ring/Go to Rulanyil's Fall
+|tip Manually skip to the next step.
+step
+goto greenshade_base 31.52,49.61 |q The Garland Ring/Go to Rulanyil's Fall
+step
+goto 37.51,49.53 |q The Garland Ring/Go to Rulanyil's Fall
+step
+goto 41.34,47.88 |q The Garland Ring/Go to Rulanyil's Fall
+step
+goto 38.76,44.86
+'Open _Rulyanil's Fall_ |q The Garland Ring/Go to Rulanyil's Fall |future
+|tip Manually skip to the next step.
+step
+goto rulanyilsfall_base 53.24,22.43 |q The Garland Ring/Search Rulanyil's Fall for the Ceythalmor Hideout
+step
+goto 36.41,21.96 |q The Garland Ring/Search Rulanyil's Fall for the Ceythalmor Hideout |future
+step
+goto 20.36,29.23 |q The Garland Ring/Search Rulanyil's Fall for the Ceythalmor Hideout
+step
+goto 21.26,38.85 |q The Garland Ring/Search Rulanyil's Fall for the Ceythalmor Hideout
+step
+goto 31.16,44.61 |q The Garland Ring/Search Rulanyil's Fall for the Ceythalmor Hideout
+step
+goto 31.24,62.38
+'Open _Ceythalmore Hideout_ |q The Garland Ring/Find Hyacinth |future
+|tip Manually skip to the next step.
+step
+goto u44_RulanyilAddon_base 50.68,42.38
+'Open _Interrogation Chamber_ |q The Garland Ring/Find Hyacinth
+step
+goto 57.43,67.96
+kill Interrogator Cainthel
+kill Ceythalmor Chemist
+kill Ceythalmor Sea Mage |q The Garland Ring/Defeat the Ceythalmor Agents
+step
+goto 49.17,84.11
+'Use _Control Pillar Button_ |q The Garland Ring/.*Deactivate the Control Pillars.* |count 1
+step
+goto 55.59,75.61
+'Use _Control Pillar Button_ |q The Garland Ring/.*Deactivate the Control Pillars.* |count 2
+step
+goto 64.45,86.64
+'Use _Control Pillar Button_ |q The Garland Ring/.*Deactivate the Control Pillars.* |count 3
+step
+goto 49.48,83.19
+talk Hyacinth_ |q The Garland Ring/Talk to Hyacinth
+step
+goto 48.70,81.52
+talk Tanlorin
+turnin The Garland Ring
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Companions\\Zerith-var",[[
@@ -2740,4 +2951,192 @@ goto reapersmarch_base 31.84,79.69
 talk Cantor Krin'ze
 accept A Moonlit Shadow
 step
+goto 31.42,82.59 |q A Moonlit Shadow/Investigate the Fallen Star
+step
+goto 30.22,82.77
+'Pet _Ja'kh_ |q A Moonlit Shadow/Pet the Spirit Cat |future
+step
+goto 30.01,85.09 |q A Moonlit Shadow/Follow the Spirit Cat
+step
+goto 30.92,86.67
+'Enter _Tomb of Zerith-var_ |q A Moonlit Shadow/Enter the Tomb |future
+step
+goto zerthmoonmont_base 49.95,59.92
+talk Zerith-var |q A Moonlit Shadow/Talk to Zerith-var
+step
+goto 89.26,61.72
+'Search _Ancient Coffer_ |q A Moonlit Shadow/.*Search the Tomb.* |count 1
+step
+goto 49.89,80.86
+'Examine _In Memory Of Zerith-var_ |q A Moonlit Shadow/.*Search the Tomb.* |count 2
+step
+goto 12.09,52.06
+'Examine _Crescent Blade_ |q A Moonlit Shadow/.*Search the Tomb.* |count 3
+step
+goto 49.29,58.39
+talk Zerith-var |q A Moonlit Shadow/Talk to Zerith-var
+step
+goto 48.51,22.47
+'Enter _Reaper's March_ |q A Moonlit Shadow/Meet Zerith-var in Rawl'kha
+|tip Manually skip to the next step.
+step
+goto reapersmarch_base 31.65,79.31
+'Use _Reaper's March_
+'Travel to _Rawl'kha_ |q A Moonlit Shadow/Meet Zerith-var in Rawl'kha
+|tip Manually skip to the next step.
+step
+goto rawlkha_base 41.35,50.05
+talk Zerith-var |q A Moonlit Shadow/Talk to Zerith-var
+step
+goto 79.04,60.64 |q A Moonlit Shadow/Find the Hidden Moon Shrine
+step
+goto 78.68,56.23
+'Open _Shrine of the Hidden Moon_ |q A Moonlit Shadow/Enter the Hidden Moon Shrine
+step
+goto 79.22,56.16
+|tip Watch the dialogue.
+talk Zerith-var |q A Moonlit Shadow/Talk to Zerith-var
+step
+goto 79.34,56.02
+'Examine _Rites of the Order of the Hidden Moon_ |q A Moonlit Shadow/Examine the Prayer Book
+step
+goto 78.19,56.20
+'Climb _Rawl'kha_ |q A Moonlit Shadow/Retrieve Moon-Sugar Water
+|tip Manually skip to the next step.
+step
+goto 73.39,58.55 |q A Moonlit Shadow/Retrieve Moon-Sugar Water
+step
+goto 76.52,55.62
+'Take _Moon Sugar Water_ |q A Moonlit Shadow/Retrieve Moon-Sugar Water
+step
+goto 73.46,58.55 |q A Moonlit Shadow/Return to Zerith-var
+step
+goto 79.42,59.30 |q A Moonlit Shadow/Return to Zerith-var
+step
+goto 78.31,56.29
+'Open _Shrine of the Hidden Moon_ |q A Moonlit Shadow/Return to Zerith-var
+|tip Manually skip to the next step.
+step
+goto 79.47,56.16
+'Pour _Ritual Basin_ |q A Moonlit Shadow/Pour the Moon-Sugar Water
+step
+goto 79.44,56.22
+|tip Watch the dialogue.
+talk Zerith-var |q A Moonlit Shadow/Talk to Zerith-var |future
+step
+goto 78.19,56.20
+'Climb _Rawl'kha_ |q A Moonlit Shadow/Find the Rajaska at Claw's Strike
+|tip Manually skip to the next step.
+step
+goto 76.55,63.03 |q A Moonlit Shadow/Find the Rajaska at Claw's Strike
+step
+goto 64.46,62.37 |q A Moonlit Shadow/Find the Rajaska at Claw's Strike
+step
+goto reapersmarch_base 43.80,60.07 |q A Moonlit Shadow/Find the Rajaska at Claw's Strike
+step
+goto 31.93,64.17 |q A Moonlit Shadow/Find the Rajaska at Claw's Strike
+step
+goto 25.56,60.55 |q A Moonlit Shadow/Find the Rajaska at Claw's Strike
+step
+goto 23.82,60.64
+'Open _Claw's Strike_ |q A Moonlit Shadow/Find the Rajaska at Claw's Strike
+|tip Manually skip the next step.
+step
+goto clawsstrike_base 38.87,39.81 |q A Moonlit Shadow/Find the Rajaska at Claw's Strike
+step
+goto 71.49,38.53 |q A Moonlit Shadow/Find the Rajaska at Claw's Strike
+step
+goto 82.94,29.91
+'Open _Ruined Reliquary_ |q A Moonlit Shadow/Find the Rajaska at Claw's Strike
+|tip Manually skip to the next step.
+step
+goto zerithclawstriket_base 34.92,49.40
+talk Cantor Krin'ze |q A Moonlit Shadow/Talk to Cantor Krin'ze |future
+step
+goto 45.48,49.40
+'Open _Abandoned Altar_ |q A Moonlit Shadow/Find the Rejaska |future
+|tip Manually skip to the next step.
+step
+goto 80.97,49.50
+kill Ta'khida-morna |q A Moonlit Shadow/Defeat the Rajaska, Ta'khida-morna |future
+step
+goto 80.97,49.50
+talk Zerith-var |q A Moonlit Shadow/Talk to Zerith-var |future
+step
+goto 85.15,48.93
+'Use _Portal Khenarthi's Roost_ |q A Moonlit Shadow/Enter the Portal |future
+|tip Manually skip to the next step.
+step
+goto khenarthisroost_base 33.12,55.73
+|tip Watch the dialogue.
+talk Zerith-var |q A Moonlit Shadow/Talk to Zerith-var |future
+step
+goto 31.25,59.00 |q A Moonlit Shadow/Search the Ruins for a Moon-Blessed Object
+step
+goto 30.33,55.84 |q A Moonlit Shadow/Search the Ruins for a Moon-Blessed Object
+step
+goto shatteredshoals_base 25.55,43.29
+'Examine _Missive Grand Inquisitor Arsalan |lorebook Missive from Grand Inquisitor Arsalan/3/53/3
+step
+goto 83.47,50.31
+'Examine _Altar Ruins_ |q A Moonlit Shadow/Search the Ruins for a Moon-Blessed Object
+step
+goto 81.65,47.27
+talk Zerith-var |q A Moonlit Shadow/Talk to Zerith-var |future
+step
+goto 82.31,45.44
+'Open _Portal to Reaper's March_ |q A Moonlit Shadow/Enter Zerith-var's Portal
+|tip Manually skip to the next step.
+step
+goto reapersmarch_base 29.39,16.69
+talk Cantor Krin'ze |q A Moonlit Shadow/Talk to Cantor Krin'ze |future
+step
+goto 29.39,16.69
+talk Zerith-var |q A Moonlit Shadow/Talk to Zerith-var |future
+step
+goto 28.18,16.34
+'Open _Vile Manse_ |q A Moonlit Shadow/Enter the Vile Manse |future
+|tip Manually skip to the next step.
+step
+goto vilemansehouse01_base 46.86,18.13
+'Open _Cellar_ |q A Moonlit Shadow/Find the Missing Cantors |future
+|tip Manually skip to the next step.
+step
+goto thevilemansefirstfloor_base 58.41,41.48 |q A Moonlit Shadow/Find the Missing Cantors
+step
+goto 58.04,33.59 |q A Moonlit Shadow/Find the Missing Cantors
+step
+goto 52.38,32.16 |q A Moonlit Shadow/Find the Missing Cantors
+step
+goto 58.50,27.41 |q A Moonlit Shadow/Find the Missing Cantors
+step
+goto 58.43,13.92 |q A Moonlit Shadow/Find the Missing Cantors
+step
+goto 44.57,14.14 |q A Moonlit Shadow/Find the Missing Cantors
+step
+goto 41.88,19.73 |q A Moonlit Shadow/Find the Missing Cantors
+step
+goto 37.86,7.78 |q A Moonlit Shadow/Find the Missing Cantors
+step
+goto 31.46,8.11
+'Open _Vile Manse Undercroft_ |q A Moonlit Shadow/Find the Missing Cantors
+|tip Manually skip to the next step.
+step
+goto zerithvilemance_base 74.73,34.00 |q A Moonlit Shadow/Find the Missing Cantors
+step
+goto 74.36,49.69 |q A Moonlit Shadow/Find the Missing Cantors
+step
+goto 40.78,50.00
+'Open _Undercroft Prison_ |q A Moonlit Shadow/Enter the Undercroft Prison
+|tip Manually skip to the next step.
+step
+goto 20.94,50.55
+kill Zayabi-morna |q A Moonlit Shadow/Defeat Zayabi-morna |future
+step
+goto 22.16,46.21
+'Use _Portal to Reaper's March_ |q A Moonlit Shadow/Leave the Vile Manse Undercroft |future
+step
+goto reapersmarch_base 28.73,16.95
+talk Zerith-var
+turnin A Moonlit Shadow
 ]])

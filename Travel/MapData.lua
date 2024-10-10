@@ -1511,6 +1511,18 @@ CGV.MapData = {
     ["Hermaeus Mora's Sanctum"]            = [[U42_UI_Maps_PEC2_HMSanctum_03]],
     ["Watchling Grotto"]                   = [[u42_epl_apc_vlt_base]],
     ["Dalam's Cavern"]                     = [[U42_EPL_TELVault_base]],
+    
+    -- Tanlorin and Zerith-var
+    ["Toothmaul Gully"]                    = [["toothmaulgully_base]],
+    ["Gully Side Chamber"]                 = [[u44_ToothmaulAddon_base]],
+    ["Hyacinth's Greenhouse"]              = [[u44GSGreenhouse_base]],
+    ["Rulanyil's Fall"]                    = [[rulanyilsfall_base]],
+    ["Ceythalmor Hideout"]                 = [[u44_RulanyilAddon_base]],
+    ["Tomb of Zerith-var"]                 = [[zerthmoonmont_base]],
+    ["Ruined Reliquary"]                   = [[zerithclawstriket_base]],
+    ["The Vile Manse"]                     = [[vilemansehouse01_base]],
+    ["The Vile Manse"]                     = [[thevilemansefirstfloor_base]],
+    ["Vile Manse Undercroft"]              = [[zerithvilemance_base]],
 },
 
     ["Zones"] =
@@ -3027,6 +3039,18 @@ CGV.MapData = {
     ["U42_UI_Maps_PEC2_HMSanctum_03"]     = { name = "Hermaeus Mora's Sanctum",                 id = 1026, xoffset = 0.169283, yoffset = -0.014775, scale = 0.001277, },
     ["u42_epl_apc_vlt_base"]              = { name = "Watchling Grotto",                        id = 1027, xoffset = 0.138125, yoffset = -0.044430, scale = 0.001298, },
     ["U42_EPL_TELVault_base"]             = { name = "Dalam's Cavern",                          id = 1028, xoffset = 0.897363, yoffset = 0.410644, scale = 0.005655, },
+    
+    -- Tanlorin and Zerith-var
+    ["toothmaulgully_base"]               = { name = "Toothmaul Gully",                         id = 1029, xoffset = 0.198622, yoffset = 0.702702, scale = 0.008204, },
+    ["u44_ToothmaulAddon_base"]           = { name = "Gully Side Chamber",                      id = 1030, xoffset = 0.203396, yoffset = 0.706877, scale = 0.002036, },
+    ["u44GSGreenhouse_base"]              = { name = "Hyacinth's Greenhouse",                   id = 1031, xoffset = 0.300004, yoffset = 0.691908, scale = 0.004033, },
+    ["rulanyilsfall_base"]                = { name = "Rulanyil's Fall",                         id = 1032, xoffset = 0.311768, yoffset = 0.686385, scale = 0.010356, },
+    ["u44_RulanyilAddon_base"]            = { name = "Ceythalmor Hideout",                      id = 1033, xoffset = 0.313490, yoffset = 0.692758, scale = 0.002437, },
+    ["zerthmoonmont_base"]                = { name = "Tomb of Zerith-var",                      id = 1034, xoffset = 0.430305, yoffset = 0.658307, scale = 0.003333, },
+    ["zerithclawstriket_base"]            = { name = "Ruined Reliquary",                        id = 1035, xoffset = 0.424395, yoffset = 0.623307, scale = 0.003765, },
+    ["vilemansehouse01_base"]             = { name = "The Vile Manse",                          id = 1036, xoffset = 0.425883, yoffset = 0.564006, scale = 0.003223, },
+    ["thevilemansefirstfloor_base"]       = { name = "The Vile Mnase",                          id = 1036, xoffset = 0.419332, yoffset = 0.559980, scale = 0.011824, },
+    ["zerithvilemance_base"]              = { name = "Vile Manse Undercroft",                   id = 1037, xoffset = 0.417924, yoffset = 0.559046, scale = 0.005655, },
     },
 }
 
@@ -4060,4 +4084,13 @@ CGV.MapData.LocalizedMapNames	    ['en']={
   [1026] = "Hermaeus Mora's Sanctum",
   [1027] = "Watchling Grotto",
   [1028] = "Dalam's Cavern",
+  [1029] = "Toothmaul Gully",
+  [1030] = "Gully Side Chamber",
+  [1031] = "Hyacinth's Greenhouse",
+  [1032] = "Rulanyil's Fall",
+  [1033] = "Ceythalmor Hideout",
+  [1034] = "Tomb of Zerith-var",
+  [1035] = "Ruined Reliquary",
+  [1036] = "The Vile Manse",
+  [1037] = "Vile Manse Undercroft",
 }

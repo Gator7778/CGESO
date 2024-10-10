@@ -1141,6 +1141,17 @@ Data.MapIdsByName = {
    ["Hermaeus Mora's Sanctum"]             = 1026,
    ["Watchling Grotto"]                    = 1027,
    ["Dalam's Cavern"]                      = 1028,
+
+   -- Tanlorin and Zerith-var
+   ["Toothmaul Gully"]                     = 1029,
+   ["Gully Side Chamber"]                  = 1030,
+   ["Hyacinth's Greenhouse"]               = 1031,
+   ["Rulanyil's Fall"]                     = 1032,
+   ["Ceythalmor Hideout"]                  = 1033,
+   ["Tomb of Zerith-var"]                  = 1034,
+   ["Ruined Reliquary"]                    = 1035,
+   ["The Vile Manse"]                      = 1036,
+   ["Vile Manse Undercroft"]               = 1037,
 }
 
    -----------------------------------------
