@@ -2801,7 +2801,7 @@ goto 41.38,67.06
 talk Tanlorin |q The Garland Ring/Talk to Tanlorin |future
 step
 goto 41.96,67.56
-|tip This is a public dungeon might need a group. (No Dungeon Boss)
+|tip Recommended to get a group. This is a public dungeon.
 'Open _Toothmaul Gully_ |q The Garland Ring/Enter Toothmaul Gully |future
 |tip Manually skip to the next step.
 step
@@ -2897,12 +2897,13 @@ step
 goto 41.34,47.88 |q The Garland Ring/Go to Rulanyil's Fall
 step
 goto 38.76,44.86
+|tip Recommended to get a group. This is a public dungeon.
 'Open _Rulyanil's Fall_ |q The Garland Ring/Go to Rulanyil's Fall |future
 |tip Manually skip to the next step.
 step
-goto rulanyilsfall_base 53.24,22.43 |q The Garland Ring/Search Rulanyil's Fall for the Ceythalmor Hideout
+goto rulanyilsfall_base 53.24,22.43 |q The Garland Ring/Search Rulanyil's Fall for the Ceythalmor Hideout |future
 step
-goto 36.41,21.96 |q The Garland Ring/Search Rulanyil's Fall for the Ceythalmor Hideout |future
+goto 36.41,21.96 |q The Garland Ring/Search Rulanyil's Fall for the Ceythalmor Hideout
 step
 goto 20.36,29.23 |q The Garland Ring/Search Rulanyil's Fall for the Ceythalmor Hideout
 step
@@ -2932,11 +2933,492 @@ goto 64.45,86.64
 'Use _Control Pillar Button_ |q The Garland Ring/.*Deactivate the Control Pillars.* |count 3
 step
 goto 49.48,83.19
-talk Hyacinth_ |q The Garland Ring/Talk to Hyacinth
+talk Hyacinth |q The Garland Ring/Talk to Hyacinth
 step
 goto 48.70,81.52
 talk Tanlorin
 turnin The Garland Ring
+step
+'_Next to you_
+|tip Reach Friendly rapport with Tanlorin.
+talk Tanlorin
+accept Thorns and Blossoms
+step
+'Examine _Invitation from the Gardener_ |q Thorns and Blossoms/Examine the Gardener's Message
+step
+'_Next to you_
+talk Tanlorin |q Thorns and Blossoms/Talk to Tanlorin
+step
+'Open _Malabal Tor_ Map
+'Travel to _Bloodtoil_ |q Thorns and Blossoms/Go to Belarata in Malabal Tor
+|tip Manually skip to the next step.
+step
+goto malabaltor_base 60.32,70.20 |q Thorns and Blossoms/Go to Belarata in Malabal Tor
+step
+goto 62.72,69.48 |q Thorns and Blossoms/Go to Belarata in Malabal Tor
+step
+goto 64.44,71.16
+'Examine _Illusory Mushroom_ |q Thorns and Blossoms/Look for a Ring Near Belarata
+step
+goto 64.44,71.16
+'Examine _Sketch from the Gardener_ |q Thorns and Blossoms/Examine the Message
+step
+goto 64.43,71.06 
+talk Tanlorin |q Thorns and Blossoms/Talk to Tanlorin
+step
+'Open _Malabal Tor_ Map
+'Travel to _Ilayas Ruins_ |q Thorns and Blossoms/Find an Arch of Woven Branches at Deepwoods
+|tip Manually skip to the next step.
+step
+goto 22.55,54.34 |q Thorns and Blossoms/Find an Arch of Woven Branches at Deepwoods
+step
+goto 20.28,57.03 |q Thorns and Blossoms/Find an Arch of Woven Branches at Deepwoods
+step
+goto 22.83,58.07
+|tip Watch the dialogue.
+'Examine _Illusory Bird_ |q Thorns and Blossoms/Activate the Illusory Bird |future
+step
+goto 22.68,58.07
+talk Tanlorin |q Thorns and Blossoms/Talk To Tanlorin 
+step
+'Open _Malabal Tor_ Map
+'Travel to _Abamath_ |q Thorns and Blossoms/Go to the Ritual Mundus Stone in Malabal Tor
+|tip Manually skip to the next step.
+step
+goto 67.04,83.63
+'Take _Royal Lavender_ |q Thorns and Blossoms/.*Gather Royal Lavender.* |count 1
+step
+goto 67.36,83.14
+'Take _Royal Lavender_ |q Thorns and Blossoms/.*Gather Royal Lavender.* |count 2
+step
+goto 67.66,83.59
+'Take _Royal Lavender_ |q Thorns and Blossoms/.*Gather Royal Lavender.* |count 3
+step
+goto 67.70,83.45
+|tip Watch the dialogue.
+'Place _Ornate Bowl_ |q Thorns and Blossoms/Place the Royal Lavender in the Bowl
+step
+goto 68.06,83.53
+'Open _The Gardener's Greenhouse_ |q Thorns and Blossoms/Enter the Gardener's Greenhouse
+step
+goto u44_MBTGreenhouse_base 35.25,39.36
+talk The Gardener |q Thorns and Blossoms/Talk to the Gardener
+step
+'Open _Auridon_
+'Travel to _Skywatch_ |q Thorns and Blossoms/Find Snapdragon in Skywatch
+|tip Manually skip to the next step.
+step
+goto skywatch_base 23.82,47.09 |q Thorns and Blossoms/Find Snapdragon in Skywatch
+step
+goto 43.16,47.22 |q Thorns and Blossoms/Find Snapdragon in Skywatch
+step
+goto 45.91,41.35
+talk Adept Sethya Aloren |q Thorns and Blossoms/Talk to the Mages Guild Adepts |future
+step
+goto 53.20,41.69 |q Thorns and Blossoms/Search Reeve Nardarmor's Office in Skywatch Manor
+step
+goto 53.04,47.16 |q Thorns and Blossoms/Search Reeve Nardarmor's Office in Skywatch Manor
+step
+goto 60.07,47.03
+'Open _Skywatch Manor_ |q Thorns and Blossoms/Search Reeve Nardarmor's Office in Skywatch Manor
+|tip Manually skip to the next step.
+step
+goto 64.60,47.23 |q Thorns and Blossoms/Search Reeve Nardarmor's Office in Skywatch Manor
+step
+goto 63.70,41.93
+'Open _Reeve Nardarmor's Office_ |q Thorns and Blossoms/Search Reeve Nardarmor's Office in Skywatch Manor
+|tip Manually skip to the next step.
+step
+goto 64.37,40.62
+'Examine _Skywatch Guard Report_ |lorebook Skywatch Guard Report/3/53/12
+step
+goto 64.28,39.95
+'Examine _Bronze Cat Statuette |q Thorns and Blossoms |future
+|tip Manually skip to the next step.
+step
+goto 65.06,40.59
+'Examine _Loose Panel_
+'Search _Dislodged Panel_ |lorebook Reeve Nardarmor's Private Journal/3/53/13
+step
+goto 64.86,40.30
+talk Tanlorin |q Thorns and Blossoms/Talk to Tanlorin
+step
+goto 63.75,39.70
+|tip Watch the dialogue.
+talk Hyacinth |q Thorns and Blossoms/Talk to Hyacinth |future
+step
+'Open _Auridon_ Map
+'Travel to _Windy Glade_ |q Thorns and Blossoms/Meet Hyacinth on the Beach Near South Beacon
+|tip Manually skip to the next step.
+step
+goto auridon_base 49.71,88.73
+|tip Watch the dialogue.
+talk Hyacinth |q Thorns and Blossoms |future
+|tip Manually skip to the next step.
+step
+goto 49.25,89.12
+|tip Recommended to get a group. This is a public dungeon.
+|tip Watch the dialogue.
+'Travel _Boat to Sunhold_ |q Thorns and Blossoms/Take the Soul Magic Enhanced Boat to Sunhold |future
+|tip Manually skip to the next step.
+step
+goto sunhold_base 64.75,72.78 |q Thorns and Blossoms/Find the Ceythalmor Prison in Sunhold |future
+step
+goto 63.44,54.47 |q Thorns and Blossoms/Find the Ceythalmor Prison in Sunhold
+step
+goto 50.26,44.00 |q Thorns and Blossoms/Find the Ceythalmor Prison in Sunhold
+step
+goto 42.37,50.60 |q Thorns and Blossoms/Find the Ceythalmor Prison in Sunhold
+step
+goto 37.39,46.12 |q Thorns and Blossoms/Find the Ceythalmor Prison in Sunhold
+step
+goto 32.15,51.47 |q Thorns and Blossoms/Find the Ceythalmor Prison in Sunhold
+step
+goto 33.45,52.66
+'Open _Ceythalmor Prison_ |q Thorns and Blossoms/Find the Ceythalmor Prison in Sunhold
+step
+goto u44_SunholdPrisonF2 50.98,89.89
+'Examine _Ceythalmor Interrogation Log_ |q Thorns and Blossoms/Search the Ceythalmor Prison |future
+step
+goto 59.53,59.37 |q Thorns and Blossoms/Find Snapdragon's Cell
+step
+goto 71.80,61.92 |q Thorns and Blossoms/Find Snapdragon's Cell
+step
+goto u44_SunholdPrisonF1 68.62,87.03 |q Thorns and Blossoms/Find Snapdragon's Cell
+step
+goto 49.84,83.71
+'Open _Ceythalmor Dungeon Prison Cells_ |q Thorns and Blossoms/Find Snapdragon's Cell |future
+|tip Manually skip to the next step.
+step
+goto 49.51,60.55
+kill Prison Warden Harvithiel |q Thorns and Blossoms/Defeat Prison Warden Harvithiel |future
+step
+goto 49.88,47.86
+'Open _Prison interrogation Chamber_ |q Thorns and Blossoms/Enter the Interrogation Chamber
+|tip Manually skip to the next step.
+step
+goto 49.71,44.11
+'Take _Prison Warden's Key_ |q Thorns and Blossoms/Take the Prison Warden's Key |future
+step
+goto 50.24,39.77
+|tip Watch the dialogue.
+'Unlock _Prison Cell_ |q Thorns and Blossoms/Free Snapdragon
+step
+goto 51.26,42.48
+'Use _Portal to the Gardener's Greenhouse_ |q Thorns and Blossoms/Go to the Gardener's Greenhouse |future
+|tip Manually skip to the next step.
+step
+goto u44_MBTGreenhouse_base 68.99,63.09
+|tip Watch the dialogue.
+talk Snapdragon |q Thorns and Blossoms/Talk to Snapdragon |future
+step
+goto 71.85,49.74
+talk Wisteria |q Thorns and Blossoms/Talk to Wisteria
+step
+goto 72.46,52.44
+talk Tanlorin
+turnin Thorns and Blossoms
+step
+'_Next to you_
+|tip Reach Close rapport with Tanlorin.
+talk Tanlorin
+accept Uprooted
+step
+'Open _Auridon_ Map
+'Travel to _Firsthold_ |q Uprooted/Go to Snapdragon's Cottage in Firsthold
+|tip Manually skip to the next step.
+step
+goto auridon_base 36.49,21.03 |q Uprooted/Go to Snapdragon's Cottage in Firsthold
+step
+goto 34.92,20.35 |q Uprooted/Go to Snapdragon's Cottage in Firsthold
+step
+goto firsthold_base 64.10,64.85 |q Uprooted/Go to Snapdragon's Cottage in Firsthold
+step
+goto 66.26,57.42
+'Open _Snapdragon's College_ |q Uprooted/Search Snapdragon's Cottage |future
+step
+goto 66.76,58.43
+talk Tanlorin |q Uprooted/Talk to Tanlorin
+step
+goto 67.43,59.04
+'Examine _Burnt Paper_ |lorebook Snapdragon's Burnt Notes/3/53/20
+step
+goto 66.84,59.91
+'Examine _Blank Paper_ |q Uprooted/Look for Snapdragon's Notes
+step
+goto 67.12,59.59
+talk Tanlorin |q Uprooted/Talk to Tanlorin
+step
+goto 67.44,58.43
+'Take _Cruet of Alinor Oil_ |q Uprooted/Take Oil
+step
+goto 66.69,57.93
+'Take _Bluemoth Petals_ |q Uprooted/Take Bluemoth Petals
+step
+goto 68.05,59.58
+'Use _Alchemy Bench_ |q Uprooted/Mix the Ink Wash at the Alchemy Bench
+step
+goto 66.84,59.91
+'Pour _Blank Paper_
+'Examine _Snapdragon's Revealed Letter_ |q Uprooted/Confirm Tanlorin's Hunch
+step
+goto 67.16,59.70
+talk Tanlorin |q Uprooted/Talk to Tanlorin
+step
+'Open _Grahtwood_ Map
+'Travel to _Gray Mire_ |q Uprooted/Go to the Meeting Site Near the Bone Orchard
+|tip Manually skip to next step.
+step
+goto grahtwood_base 50.44,71.29
+'Examine _Blood-Spattered Plant_ |q Uprooted/Examine the Bloodstained Leaf |future
+step
+goto 50.67,71.61
+'Examine _Smoldering Ashes_ |q Uprooted/Examine the Smoldering Ashes
+step
+goto 50.63,71.91
+'Examine _Scattered Items_ |q Uprooted/Search the Meeting Site
+step
+goto 50.57,71.86
+talk Tanlorin |q Uprooted/Talk to Tanlorin
+step
+goto 47.77,71.97
+talk Snapdragon |q Uprooted/Talk to Snapdragon |future
+step
+goto 40.19,74.09 |q Uprooted/Find the Smuggler's Tunnels Beneath Southpoint
+step
+goto 39.11,78.72
+'Open _Smuggler's Tunnels_ |q Uprooted/Find the Smuggler's Tunnels Beneath Southpoint
+|tip Manually skip to the next step.
+step
+goto u44_SPSmugglerCave_base 82.65,61.27 |q Uprooted/Search the Southpoint Smuggler's Tunnels |future
+step
+goto 50.45,54.38 |q Uprooted/Search the Southpoint Smuggler's Tunnels
+step
+goto 33.09,64.23
+|tip Watch the dialogue.
+talk Agent Firinn |q Uprooted/Deal with the Injured Ceythalmor Agent |future
+step
+goto 32.09,60.21
+'Open _Captain's Quarters_ |q Uprooted/Search the Captain's Quarters
+|tip Manually skip to the next step.
+step
+goto 28.64,49.88
+'Examine _Etched Metal Disk_ |q Uprooted/Simple Metal Disk
+step
+goto 32.62,49.27
+'Examine _Ceythalmor Captain's Log Book_ |q Uprooted/Search the Captain's Quarters
+step
+goto 30.96,50.21
+talk Tanlorin |q Uprooted/Talk to Tanlorin
+step
+goto 32.88,50.42
+'Use _Fire_ |q Uprooted/Toss the Etched Disk into the Fire
+step
+goto 30.96,50.21
+talk Tanlorin |q Uprooted/Talk to Tanlorin
+step
+'Open _Malabal Tor_ Map
+'Travel to _Ilayas Ruins_ |q Uprooted/Go to Crimson Cove
+|tip Manually skip to the next step.
+step
+goto malabaltor_base 26.64,46.75 |q Uprooted/Go to Crimson Cove
+step
+goto 27.81,44.22 |q Uprooted/Go to Crimson Cove
+step
+goto 31.88,45.82 |q Uprooted/Go to Crimson Cove
+step
+goto 34.30,39.49 |q Uprooted/Go to Crimson Cove
+step
+goto 38.76,40.24 |q Uprooted/Go to Crimson Cove
+step
+goto 38.23,41.22
+|tip Recommended to get a group. This is a public dungeon.
+'Open _Crimson Cove_ |q Uprooted/Go to Crimson Cove |future
+|tip Manually skip to the next step.
+step
+goto crimsoncove_base 37.08,43.56 |q Uprooted/Search Crimson Cove for the Ceythalmor Base |future
+step
+goto 42.23,55.51 |q Uprooted/Search Crimson Cove for the Ceythalmor Base
+step
+goto 56.84,53.50 |q Uprooted/Search Crimson Cove for the Ceythalmor Base
+step
+goto 68.69,46.15
+'Open _Ceythalmor Base_ |q Uprooted/Search Crimson Cove for the Ceythalmor Base
+step
+goto malabaltor_base 36.19,41.45
+kill Captain Cynoric
+kill Ceythalmor Swashbuckler
+kill Ceythalmor Sea Mage |q Uprooted/Defeat the Ceythalmor Agents |future
+step
+goto 36.24,41.44
+|tip Ramp around behind platform.
+'Use _Control Lever_ |q Uprooted/Free Hyacinth
+|tip Manually skip to the next step.
+step
+goto 36.21,41.42
+'Use _Control Lever_ |q Uprooted/Free Hyacinth
+step
+goto 36.21,41.34
+'Enter _Malabal Tor_ |q Uprooted/Exit Crimson Cove |future
+step
+goto 36.10,40.04
+talk Hyacinth |q Uprooted/Talk to Hyacinth |future
+step
+'Open _Greenshade_ Map
+'Travel to _Serpent's Grotto_ |q Uprooted/Go to Hyacinth's Greenhouse in Greenshade
+|tip Manually skip to the next step.
+step
+goto greenshade_base 26.30,51.39
+'Enter _Hyacinth's Greenhouse_ |q Uprooted/Go to Hyacinth's Greenhouse in Greenshade
+step
+goto u44GSGreenhouse_base 58.87,52.63 |q Uprooted/Find Wisteria
+step
+goto 56.89,14.64
+|tip Watch the dialogue.
+talk Wisteria |q Uprooted/Talk to Wisteria |future
+step
+goto 55.07,17.78
+talk Tanlorin
+turnin Uprooted
+step
+'_Next to you_
+|tip Reach Allied rapport with Tanlorin.
+talk Tanlorin
+accept Of Crown and Flowers
+step
+'Open _Greenshade_ Map
+'Travel to _Marbruk_ |q Of Crown and Flowers/Go to the Foundation of Trust Bank in Marbruk
+|tip Manually skip to the next step.
+step
+goto marbruk_base 38.69,51.92 |q Of Crown and Flowers/Go to the Foundation of Trust Bank in Marbruk
+step
+goto 53.45,64.04
+'Open _Foundation of Trust_ |q Of Crown and Flowers/Go to the Foundation of Trust Bank in Marbruk
+step
+goto 53.27,65.51
+talk Lahathril |q Of Crown and Flowers/Talk to Lahathril
+step
+goto 52.66,66.79
+'Unlock _Snapdragon's Coffer_ |q Of Crown and Flowers/Open Snapdragon's Coffer
+step
+goto 52.99,66.58
+talk Tanlorin |q Of Crown and Flowers/Talk to Tanlorin
+step
+'Open _Greenshade_ Map
+'Travel to _Seaside Sanctuary_ |q Of Crown and Flowers/Investigate Southwest of Seaside Sanctuary
+|tip Manually skip to the next step.
+step
+goto greenshade_base 28.19,40.73 |q Of Crown and Flowers/Investigate Southwest of Seaside Sanctuary
+step
+goto 18.43,41.23
+'Examine _Ceythalmor Relocation Orders_ |q Of Crown and Flowers/Read Ceythalmor Orders |future
+step
+goto 16.42,42.16
+'Examine _Bottle of Shimmerene Rose_ |q Of Crown and Flowers/Search the Ceythalmor Encampment
+step
+goto 16.40,42.13
+'Wait _For Tanlorin_ |q Of Crown and Flowers/Wait for Tanlorin
+step
+goto 16.40,42.13
+talk Tanlorin |q Of Crown and Flowers/Talk to Tanlorin |future
+step
+'Open _Greenshade_ Map
+'Travel to _Labyrinth_ |q Of Crown and Flowers/Investigate the Labyrinth
+|tip Manually skip to the next step.
+step
+goto 57.97,72.85 |q Of Crown and Flowers/Investigate the Labyrinth
+step
+goto 56.69,77.17
+'Examine _Bottle of Shimmerene Rose_ |q Of Crown and Flowers/Search for Signs of Wisteria |future
+step
+goto 56.57,77.20
+'Wait _For Tanlorin_ |q Of Crown and Flowers/Wait for Tanlorin
+step
+goto 56.57,77.20
+talk Tanlorin |q Of Crown and Flowers/Talk to Tanlorin
+step
+'Open _Greenshade_ Map
+'Travel to _Fallinesti_ |q Of Crown and Flowers/Investigate Echo Pond
+|tip Manually skip to the next step.
+step
+goto 57.79,38.10 |q Of Crown and Flowers/Investigate Echo Pond
+step
+goto 62.62,34.78
+'Examine _Torn Out Journal Entry_ |q Of Crown and Flowers/Look for Thalmor Information |future
+step
+goto 63.14,34.80
+'Examine _Bottle of Shimmerene Rose_ |q Of Crown and Flowers/Look for Signs of Wisteria
+step
+goto 63.28,34.83 
+'Wait _For Tanlorin_ |q Of Crown and Flowers/Wait for Tanlorin
+step
+goto 63.28,34.83 
+talk Tanlorin |q Of Crown and Flowers/Talk to Tanlorin
+step
+'Open _Greenshade_ Map
+'Travel to _Serpent's Grotto_ |q Of Crown and Flowers/Go to Hyacinth's Greenhouse in Greenshade
+|tip Manually skip to the next step.
+step
+goto 26.32,51.37
+'Enter _Hyacinth's Greenhouse_ |q Of Crown and Flowers/Go to Hyacinth's Greenhouse in Greenshade
+step
+goto u44GSGreenhouse_base 57.86,72.19
+talk The Gardener |q Of Crown and Flowers/Talk to The Gardener
+step
+goto 60.61,71.11
+|tip Watch the dialogue.
+'Open _Portal to Wisteria_ |q Of Crown and Flowers/Reach Out with Tanlorin's Magic |future
+step
+goto u44_DuskKeep 44.77,59.25 |q Of Crown and Flowers/Search for Wisteria
+step
+goto 24.66,72.03 |q Of Crown and Flowers/Search for Wisteria
+step
+goto 22.59,26.85 |q Of Crown and Flowers/Search for Wisteria
+step
+goto 45.36,28.98
+'Open _Dusk Keep Great Hall_ |q Of Crown and Flowers/Search for Wisteria
+|tip Manually skip to the next step.
+step
+goto 55.82,40.92
+'Open _Ceythalmor Inner Chamber_ |q Of Crown and Flowers/Search for Wisteria
+step
+goto 79.18,40.98
+|tip Watch the dialogue.
+.'Activate _North Ritual Foci_
+.'Activate _East Ritual Foci_
+.'Activate _South Ritual Foci_ |q Of Crown and Flowers/Empower the Ceythalmor Ritual |future
+step
+goto 80.37,41.04
+'Activiate _Primary Ritual Foci_ |q Of Crown and Flowers/Activate the Primary Ritual Foci
+step
+goto alinorroyalpalace1_base 42.95,39.67
+kill Ceythalmor Berserker
+kill Ceythalmor Chemist
+kill Wisteria |q Of Crown and Flowers/Stop the Assassination
+step
+goto 42.95,39.67
+talk Tanlorin |q Of Crown and Flowers/Talk to Tanlorin
+step
+goto 41.46,33.99
+talk Proxy Queen Alwinarwe |q Of Crown and Flowers/Talk to the Proxy Queen |future
+|tip Manually skip to the next step.
+step
+goto 33.33,32.97
+'Use _Portal to the Gardener's Greenhouse_ |q Of Crown and Flowers/Return to the Gardener's Greenhouse |future
+|tip Manually skip to the next step.
+step
+goto u44_MBTGreenhouse_base 53.21,25.85
+talk The Gardener |q Of Crown and Flowers/Talk to The Gardener |future
+step
+goto 53.82,27.33
+'Take _Bouquet of Ceremonial Flowers_ |q Of Crown and Flowers/Take the Bouquet
+step
+goto 56.06,18.67
+'Burn _Ceremonial Brazier_ |q Of Crown and Flowers/Burn the Bouquet
+step
+goto 56.31,19.74
+talk Tanlorin
+turnin Of Crown and Flowers
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Companions\\Zerith-var",[[
@@ -3095,6 +3577,7 @@ goto 29.39,16.69
 talk Zerith-var |q A Moonlit Shadow/Talk to Zerith-var |future
 step
 goto 28.18,16.34
+|tip Recommended to get a group. This is a public dungeon.
 'Open _Vile Manse_ |q A Moonlit Shadow/Enter the Vile Manse |future
 |tip Manually skip to the next step.
 step
