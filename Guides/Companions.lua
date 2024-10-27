@@ -2757,7 +2757,7 @@ talk Tanlorin |q The Garland Ring/Talk to Tanlorin
 step
 goto 53.90,82.13
 'Use _Windy Glade_
-'Travel to _Tanzwil_ |q The Garland Ring/Find River Lilies near Phaer
+'Travel to _Tanzelwil_ |q The Garland Ring/Find River Lilies near Phaer
 |tip Manually skip to the next step.
 step
 goto 55.86,71.86 |q The Garland Ring/Find River Lilies near Phaer
@@ -2766,7 +2766,7 @@ goto 55.95,71.00
 'Take _River Lily_ |q The Garland Ring/Find River Lilies near Phaer
 step
 goto 52.39,72.95
-'Use _Tanzil_
+'Use _Tanzelwil_
 'Travel to _Mathiisen_ |q The Garland Ring/Talk to Chirrabi at Mathiisen
 |tip Manually skip to the next step.
 step
@@ -2956,7 +2956,7 @@ step
 goto 62.72,69.48 |q Thorns and Blossoms/Go to Belarata in Malabal Tor
 step
 goto 64.44,71.16
-'Examine _Illusory Mushroom_ |q Thorns and Blossoms/Look for a Ring Near Belarata
+'Examine _Illusory Mushroom_ |q Thorns and Blossoms/Look for a Ring Near Belarata |future
 step
 goto 64.44,71.16
 'Examine _Sketch from the Gardener_ |q Thorns and Blossoms/Examine the Message
@@ -3011,6 +3011,7 @@ step
 goto 43.16,47.22 |q Thorns and Blossoms/Find Snapdragon in Skywatch
 step
 goto 45.91,41.35
+|tip Watch the dialogue.
 talk Adept Sethya Aloren |q Thorns and Blossoms/Talk to the Mages Guild Adepts |future
 step
 goto 53.20,41.69 |q Thorns and Blossoms/Search Reeve Nardarmor's Office in Skywatch Manor
@@ -3031,7 +3032,7 @@ goto 64.37,40.62
 'Examine _Skywatch Guard Report_ |lorebook Skywatch Guard Report/3/53/12
 step
 goto 64.28,39.95
-'Examine _Bronze Cat Statuette |q Thorns and Blossoms |future
+'Examine _Bronze Cat Statuette_ |q Thorns and Blossoms |future
 |tip Manually skip to the next step.
 step
 goto 65.06,40.59
@@ -3039,7 +3040,7 @@ goto 65.06,40.59
 'Search _Dislodged Panel_ |lorebook Reeve Nardarmor's Private Journal/3/53/13
 step
 goto 64.86,40.30
-talk Tanlorin |q Thorns and Blossoms/Talk to Tanlorin
+talk Tanlorin |q Thorns and Blossoms/Talk to Tanlorin |future
 step
 goto 63.75,39.70
 |tip Watch the dialogue.
@@ -3210,6 +3211,7 @@ goto 30.96,50.21
 talk Tanlorin |q Uprooted/Talk to Tanlorin
 step
 goto 32.88,50.42
+|tip Watch the dialogue.
 'Use _Fire_ |q Uprooted/Toss the Etched Disk into the Fire
 step
 goto 30.96,50.21
@@ -3244,6 +3246,7 @@ goto 68.69,46.15
 'Open _Ceythalmor Base_ |q Uprooted/Search Crimson Cove for the Ceythalmor Base
 step
 goto malabaltor_base 36.19,41.45
+|tip Watch the dialogue.
 kill Captain Cynoric
 kill Ceythalmor Swashbuckler
 kill Ceythalmor Sea Mage |q Uprooted/Defeat the Ceythalmor Agents |future
@@ -3315,7 +3318,7 @@ goto 16.42,42.16
 'Examine _Bottle of Shimmerene Rose_ |q Of Crown and Flowers/Search the Ceythalmor Encampment
 step
 goto 16.40,42.13
-'Wait _For Tanlorin_ |q Of Crown and Flowers/Wait for Tanlorin
+'Wait _for Tanlorin_ |q Of Crown and Flowers/Wait for Tanlorin
 step
 goto 16.40,42.13
 talk Tanlorin |q Of Crown and Flowers/Talk to Tanlorin |future
@@ -3330,7 +3333,7 @@ goto 56.69,77.17
 'Examine _Bottle of Shimmerene Rose_ |q Of Crown and Flowers/Search for Signs of Wisteria |future
 step
 goto 56.57,77.20
-'Wait _For Tanlorin_ |q Of Crown and Flowers/Wait for Tanlorin
+'Wait _for Tanlorin_ |q Of Crown and Flowers/Wait for Tanlorin
 step
 goto 56.57,77.20
 talk Tanlorin |q Of Crown and Flowers/Talk to Tanlorin
@@ -3348,7 +3351,7 @@ goto 63.14,34.80
 'Examine _Bottle of Shimmerene Rose_ |q Of Crown and Flowers/Look for Signs of Wisteria
 step
 goto 63.28,34.83 
-'Wait _For Tanlorin_ |q Of Crown and Flowers/Wait for Tanlorin
+'Wait _for Tanlorin_ |q Of Crown and Flowers/Wait for Tanlorin
 step
 goto 63.28,34.83 
 talk Tanlorin |q Of Crown and Flowers/Talk to Tanlorin
@@ -3398,6 +3401,7 @@ goto 42.95,39.67
 talk Tanlorin |q Of Crown and Flowers/Talk to Tanlorin
 step
 goto 41.46,33.99
+|tip Watch the dialogue.
 talk Proxy Queen Alwinarwe |q Of Crown and Flowers/Talk to the Proxy Queen |future
 |tip Manually skip to the next step.
 step
@@ -3406,6 +3410,7 @@ goto 33.33,32.97
 |tip Manually skip to the next step.
 step
 goto u44_MBTGreenhouse_base 53.21,25.85
+|tip Watch the dialogue.
 talk The Gardener |q Of Crown and Flowers/Talk to The Gardener |future
 step
 goto 53.82,27.33
@@ -3428,6 +3433,7 @@ step
 |tip Manually skip to the next step.
 step
 goto reapersmarch_base 31.84,79.69
+|tip Watch the dialogue.
 talk Cantor Krin'ze
 accept A Moonlit Shadow
 step
@@ -3463,7 +3469,6 @@ step
 goto reapersmarch_base 31.65,79.31
 'Use _Reaper's March_
 'Travel to _Rawl'kha_ |q A Moonlit Shadow/Meet Zerith-var in Rawl'kha
-|tip Manually skip to the next step.
 step
 goto rawlkha_base 41.35,50.05
 talk Zerith-var |q A Moonlit Shadow/Talk to Zerith-var
@@ -3615,6 +3620,7 @@ goto 20.94,50.55
 kill Zayabi-morna |q A Moonlit Shadow/Defeat Zayabi-morna |future
 step
 goto 22.16,46.21
+|tip Watch the dialogue.
 'Use _Portal to Reaper's March_ |q A Moonlit Shadow/Leave the Vile Manse Undercroft |future
 step
 goto reapersmarch_base 28.73,16.95
@@ -3856,6 +3862,7 @@ goto 59.21,35.96
 talk Zerith-Var |q Paths Out Of Darkness/Talk to Zerith-var |future
 step
 goto 59.17,35.97
+|tip Recommended to get a group. This is a public dungeon.
 'Use _Portal to Orcrest_ |q Paths Out Of Darkness/Go to Orcrest |future
 |tip Manually skip to the next step.
 step
