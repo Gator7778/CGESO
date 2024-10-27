@@ -2832,16 +2832,14 @@ goto 78.92,66.95
 talk Wisteria |q The Garland Ring/Talk to Wisteria
 step
 goto 66.87,71.39
-'Open _Gully Side Chamber_ |q The Garland Ring/Exit Toothmaul Gully
+'Open _Gully Sidechamber_ |q The Garland Ring/Exit Toothmaul Gully
 |tip Manually skip to the next step.
 step
 goto 09.77,27.72
 'Open _Toothmaul Gully_ |q The Garland Ring/Exit Toothmaul Gully
 |tip Manually skip to the next step.
 step
-goto toothmaulgully_base 53.94,58.39 |q The Garland Ring/Exit Toothmaul Gully
-step
-goto 48.31,52.44 |q The Garland Ring/Exit Toothmaul Gully
+goto toothmaulgully_base 48.31,52.44 |q The Garland Ring/Exit Toothmaul Gully
 step
 goto 43.71,10.25 |q The Garland Ring/Exit Toothmaul Gully
 step
@@ -3473,7 +3471,7 @@ step
 goto 79.04,60.64 |q A Moonlit Shadow/Find the Hidden Moon Shrine
 step
 goto 78.68,56.23
-'Open _Shrine of the Hidden Moon_ |q A Moonlit Shadow/Enter the Hidden Moon Shrine
+'Open _Shrine of the Hidden Moon_ |q A Moonlit Shadow/Enter the Hidden Moon Shrine |future
 step
 goto 79.22,56.16
 |tip Watch the dialogue.
@@ -3500,7 +3498,7 @@ goto 78.31,56.29
 |tip Manually skip to the next step.
 step
 goto 79.47,56.16
-'Pour _Ritual Basin_ |q A Moonlit Shadow/Pour the Moon-Sugar Water
+'Pour _Ritual Basin_ |q A Moonlit Shadow/Pour the Moon-Sugar Water |future
 step
 goto 79.44,56.22
 |tip Watch the dialogue.
@@ -3558,7 +3556,7 @@ step
 goto 30.33,55.84 |q A Moonlit Shadow/Search the Ruins for a Moon-Blessed Object
 step
 goto shatteredshoals_base 25.55,43.29
-'Examine _Missive Grand Inquisitor Arsalan |lorebook Missive from Grand Inquisitor Arsalan/3/53/3
+'Examine _Missive Grand Inquisitor Arsalan_ |lorebook Missive from Grand Inquisitor Arsalan/3/53/3
 step
 goto 83.47,50.31
 'Examine _Altar Ruins_ |q A Moonlit Shadow/Search the Ruins for a Moon-Blessed Object
@@ -3610,7 +3608,7 @@ step
 goto 74.36,49.69 |q A Moonlit Shadow/Find the Missing Cantors
 step
 goto 40.78,50.00
-'Open _Undercroft Prison_ |q A Moonlit Shadow/Enter the Undercroft Prison
+'Open _Undercroft Prison_ |q A Moonlit Shadow/Enter the Undercroft Prison |future
 |tip Manually skip to the next step.
 step
 goto 20.94,50.55
@@ -3622,4 +3620,513 @@ step
 goto reapersmarch_base 28.73,16.95
 talk Zerith-var
 turnin A Moonlit Shadow
+step
+'_Next to you_
+|tip Reach Friendly rapport with Zerith-var.
+talk Zerith-var
+accept Beyond a Veil of Twilight
+step
+'Open _Grahtwood_ Map
+'Travel to _Redfur Trading Post_ |q Beyond a Veil of Twilight/Meet Cantor Krin'ze at Redfur Trading Post
+|tip Manually skip to the next step.
+step
+goto redfurtradingpost_base 58.61,68.10
+talk Cantor Krin'ze |q Beyond a Veil of Twilight/Talk to Cantor Krin'ze |future
+step
+goto 60.96,58.04
+talk Tashar |q Beyond a Veil of Twilight/Talk to the Residents of Redfur Trading Post
+step
+goto 40.95,75.11
+'Use _Redfur Trading Post_
+'Travel to _Gil-Var-Delle_ |q Beyond a Veil of Twilight/Go to Goldfolly
+|tip Manually skip to the next step.
+step
+goto grahtwood_base 32.56,32.26 |q Beyond a Veil of Twilight |future
+step
+goto 35.71,32.45 |q Beyond a Veil of Twilight |future
+step
+goto 37.54,31.47 |q Beyond a Veil of Twilight |future
+step
+goto 37.67,31.51
+|tip Behind Blacksmith.
+|tip Watch the dialogue.
+talk Inquistitor Sumanji |q Beyond a Veil of Twilight/Talk to the Spirit |future
+step
+goto 34.18,31.12
+|tip Go Behind Stables.
+'Open _Abandoned Mining Tunnel_ |q Beyond a Veil of Twilight/Search the Abandoned Mining Tunnel |future
+|tip Manually skip to the next step.
+step
+goto zerithgoldfollly_base 48.99,38.52 |q Beyond a Veil of Twilight/Search the Abandoned Mining Tunnel
+step
+goto 35.66,60.95
+'Examine _Cantor Izalgo's Journal_ |q Beyond a Veil of Twilight/Search the Abandoned Mining Tunnel
+step
+'Open _Grahtwood_ Map
+'Travel to _Redfur Trading Post_ |q Beyond a Veil of Twilight/Meet Cantor Krin'ze at Redfur Trading Post
+|tip Manually skip to the next step.
+step
+goto redfurtradingpost_base 42.02,50.04 |q Beyond a Veil of Twilight/Meet Cantor Krin'ze at Redfur Trading Post
+step
+goto 29.05,40.19
+|tip Go upstairs around behind the temple.
+talk Cantor Krin'ze |q Beyond a Veil of Twilight/Talk to Cantor Krin'ze |future
+step
+goto 28.22,40.14
+talk Zerith-var |q Beyond a Veil of Twilight/Talk to Zerith-var
+step
+goto 40.95,75.11
+'Use _Redfur Trading Post_
+'Travel to _Dune_ in Reaper's March |q Beyond a Veil of Twilight/Go to Jode's Light
+|tip Manually skip to the next step.
+step
+goto dune_base 14.05,50.98 |q Beyond a Veil of Twilight/Go to Jode's Light
+step
+goto reapersmarch_base 64.74,37.00 |q Beyond a Veil of Twilight/Go to Jode's Light
+step
+goto 63.31,38.25 |q Beyond a Veil of Twilight/Go to Jode's Light
+step
+goto 63.37,39.53
+'Open _Jode's Light_ |q Beyond a Veil of Twilight/Go to Jode's Light
+step
+goto jodeslight_base 49.38,33.57 |q Beyond a Veil of Twilight/Enter the Ritual Chamber
+step
+goto 14.58,34.13 |q Beyond a Veil of Twilight/Enter the Ritual Chamber
+step
+goto 14.88,13.35
+'Open _Ritual Chamber_ |q Beyond a Veil of Twilight/Enter the Ritual Chamber
+step
+goto zerithjodeslight_Base 30.08,32.14
+'Ignite _Ritual Brazier_ |q Beyond a Veil of Twilight/.*Ignite the Braziers.* |count 1
+step
+goto 68.98,29.89
+'Ignite _Ritual Brazier_ |q Beyond a Veil of Twilight/.*Ignite the Braziers.* |count 2
+step
+goto 48.87,60.34
+'Kneel _Meditation Altar_ |q Beyond a Veil of Twilight/Kneel Before the Altar and Meditate |future
+|tip Manually skip to the next step.
+step
+goto zerithhiddenmoon_base 48.74,46.02
+'Touch _Zerith's Light of Memory_ |q Beyond a Veil of Twilight/Explore the First Memory |future
+|tip Manually skip to the next step.
+step
+goto 43.50,38.83
+|tip Watch the dialogue.
+'Touch _Zerith's Light of Memory_ |q Beyond a Veil of Twilight/Explore the First Memory
+|tip Manually skip to the next step.
+step
+goto 47.18,43.01
+|tip Watch the dialogue.
+talk Zerith-Var |q Beyond a Veil of Twilight/Explore the First Memory |future
+step
+goto zerithdesertwind_base 62.41,49.64
+'Touch _Zerith's Light of Memory_ |q Beyond a Veil of Twilight/Explore the Second Memory |future
+|tip Manually skip to the next step.
+step
+goto 67.15,50.00
+|tip Watch the dialogue.
+'Touch _Zerith's Light of Memory_ |q Beyond a Veil of Twilight/Explore the Second Memory
+|tip Manually skip to the next step.
+step
+goto 67.15,50.00
+|tip Watch the dialogue.
+'Touch _Zerith's Light of Memory_ |q Beyond a Veil of Twilight/Explore the Second Memory
+|tip Manually skip to the next step.
+step
+goto 63.14,49.64
+|tip Watch the dialogue.
+talk Zerith-Var |q Beyond a Veil of Twilight/Explore the Second Memory |future
+step
+goto UIMapstarhavenadeptor_base 50.85,68.45
+'Touch _Zerith's Light of Memory_ |q Beyond a Veil of Twilight/Explore the Third Memory |future
+|tip Manually skip to the next step.
+step
+goto 50.93,68.09
+|tip Watch the dialogue.
+'Touch _Zerith's Light of Memory_ |q Beyond a Veil of Twilight/Explore the Third Memory
+|tip Manually skip to the next step.
+step
+goto 50.54,68.48
+|tip Watch the dialogue.
+talk Zerith-Var |q Beyond a Veil of Twilight/Explore the Third Memory |future
+step
+goto zerithjodeslight_Base 53.01,59.77
+|tip Watch the dialogue.
+talk Cantor Krin'ze |q Beyond a Veil of Twilight/Talk to Cantor Krin'ze |future
+step
+'Open _Northern Elsweyr_
+'Travel to _Hakoshae_ |q Beyond a Veil of Twilight/Go to Rimmen Necropolis
+|tip Manually skip to the next step.
+step
+goto elsweyr_base 68.35,45.70 |q Beyond a Veil of Twilight/Go to Rimmen Necropolis
+step
+goto 67.79,39.19 |q Beyond a Veil of Twilight/Go to Rimmen Necropolis
+step
+goto 70.20,39.05 |q Beyond a Veil of Twilight/Go to Rimmen Necropolis
+step
+goto 70.41,38.15
+|tip Recommended to get a group. This is a public dungeon.
+'Open _Rimmen Necropolis_ |q Beyond a Veil of Twilight/Go to Rimmen Necropolis
+|tip Manually skip to the next step.
+step
+goto RimmenNecropolis_Base 52.84,84.67 |q Beyond a Veil of Twilight |future
+step
+goto 49.32,76.19 |q Beyond a Veil of Twilight/Find the Tomb of the Moon-Singers |future
+step
+goto 56.72,73.94 |q Beyond a Veil of Twilight/Find the Tomb of the Moon-Singers
+step
+goto 66.46,66.46 |q Beyond a Veil of Twilight/Find the Tomb of the Moon-Singers
+step
+goto 75.29,74.66 |q Beyond a Veil of Twilight/Find the Tomb of the Moon-Singers
+step
+goto 85.75,75.92
+'Open _Tomb of the Moon-Singers_ |q Beyond a Veil of Twilight/Find the Tomb of the Moon-Singers
+step
+goto zerithrimmennecro_base 40.25,48.30 |q Beyond a Veil of Twilight/Search for Moon-Singer Talbira's Resting Place
+step
+goto 47.06,37.77 |q Beyond a Veil of Twilight/Search for Moon-Singer Talbira's Resting Place
+step
+goto 47.37,52.32 |q Beyond a Veil of Twilight/Search for Moon-Singer Talbira's Resting Place
+step
+goto 56.66,51.70
+'Open _Moon-Singer's Cinerarium_ |q Beyond a Veil of Twilight/Search for Moon-Singer Talbira's Resting Place
+|tip Manually skip to the next step.
+step
+goto 68.42,51.39
+'Examine _Moon-Singer Talbira's Urn_ |q Beyond a Veil of Twilight/Examine Moon-Singer Talbira's Remains |future
+step
+goto 68.42,51.39
+talk Cantor Krin'ze |q Beyond a Veil of Twilight/Talk to Cantor Krin'ze
+step
+goto 80.19,51.39
+kill Izalgo-morna |q Beyond a Veil of Twilight/Defeat Izalgo-morna
+step
+goto 78.02,59.75
+'Open _Portal to the Tomb Zerith-var_ |q Beyond a Veil of Twilight/Follow Cantor Krin'ze Through the Portal
+step
+goto zerthmoonmont_base 49.74,70.84
+talk Cantor Krin'ze |q Beyond a Veil of Twilight/Talk to Cantor Krin'ze
+step
+goto 49.74,70.84
+talk Zerith-var
+turnin Beyond a Veil of Twilight
+step
+'_Next to you_
+|tip Reach Close rapport with Zerith-var.
+talk Zerith-var
+accept Paths Out Of Darkness
+step
+'Open _Reaper's March_
+'Travel to _Dune_ |q Paths Out Of Darkness/Meet Cantor Krin'ze Near Dune
+|tip Manually skip to the next step.
+step
+goto dune_base 40.60,23.77
+talk Cantor Krin'ze |q Paths Out Of Darkness/Talk to Cantor Krin'ze |future
+step
+goto dune_base 14.05,50.98 |q Paths Out Of Darkness/Go to Pa'alat
+step
+goto reapersmarch_base 64.74,37.00 |q Paths Out Of Darkness/Go to Pa'alat
+step
+goto 64.97,34.82 |q Paths Out Of Darkness/Go to Pa'alat
+step
+goto 62.68,33.17 |q Paths Out Of Darkness/.*Talk to Townsfolk in Pa'alat.* |count 1 |future
+step
+goto 63.77,32.37
+talk Uzernji |q Paths Out Of Darkness/.*Talk to Townsfolk in Pa'alat.* |count 1
+step
+goto 64.18,31.19
+talk Felaga |q Paths Out Of Darkness/.*Talk to Townsfolk in Pa'alat.* |count 2
+step
+goto 62.77,32.34
+talk Dalzzo |q Paths Out Of Darkness/.*Talk to Townsfolk in Pa'alat.* |count 3
+step
+goto 58.57,30.99 |q Paths Out Of Darkness/Go to the Meeting Spot
+step
+goto 56.31,36.23 |q Paths Out Of Darkness/Go to the Meeting Spot
+step
+goto 58.96,35.86
+'Hide _Hiding Spot_ |q Paths Out Of Darkness/Find a Hiding Spot |future
+step
+goto 59.21,35.96
+|tip Exit hiding spot.
+talk High Cantor Viti |q Paths Out Of Darkness/Talk to High Cantor Viti |future
+step
+goto 59.21,35.96
+|tip Watch the dialogue.
+talk Zerith-Var |q Paths Out Of Darkness/Talk to Zerith-var |future
+step
+goto 59.17,35.97
+'Use _Portal to Orcrest_ |q Paths Out Of Darkness/Go to Orcrest |future
+|tip Manually skip to the next step.
+step
+goto orcrest_Base 26.70,73.87 |q Paths Out Of Darkness/Find the Cellar |future
+step
+goto 33.38,72.29
+'Open _Red Senche Allley_ |q Paths Out Of Darkness/Find the Cellar
+|tip Manually skip to the next step.
+step
+goto orcrest2_Base 42.29,65.51 |q Paths Out Of Darkness/Find the Cellar
+step
+goto 62.11,49.28 |q Paths Out Of Darkness/Find the Cellar
+step
+goto 64.88,53.81 |q Paths Out Of Darkness/Find the Cellar
+step
+goto 77.60,46.07 |q Paths Out Of Darkness/Find the Cellar
+step
+goto 83.76,37.13 |q Paths Out Of Darkness/Find the Cellar
+step
+goto 80.81,34.11
+'Open _Town Hall Cellar_ |q Paths Out Of Darkness/Find the Cellar
+step
+goto zerithorcrest_base 40.00,45.45 |q Paths Out Of Darkness |future
+step
+goto 59.09,56.36 |q Paths Out Of Darkness |future
+step
+goto 39.70,78.48 |q Paths Out Of Darkness |future
+step
+goto 55.15,78.48
+'Open _Inner Cellar_ |q Paths Out Of Darkness |future
+|tip Manually skip to the next step.
+step
+goto 76.97,80.91
+talk High Cantor Viti |q Paths Out Of Darkness/Talk to High Cantor Viti |future
+step
+goto 75.15,83.64
+|tip Watch the dialogue.
+'Dispel _Corrupted Soul Energy_ |q Paths Out Of Darkness/Assist Zerith with the Ritual
+|tip Manually skip to the next step.
+step
+goto 75.45,74.24
+'Dispel _Corrupted Soul Energy_ |q Paths Out Of Darkness/Assist Zerith with the Ritual
+|tip Manually skip to the next step.
+step
+goto 82.12,78.79
+|tip Watch the dialogue.
+'Dispel _Corrupted Soul Energy_ |q Paths Out Of Darkness/Assist Zerith with the Ritual
+step
+goto 75.76,78.79
+kill Grand Inquisitor Arsalan |q Paths Out Of Darkness/Defeat Grand Inquisitor Arsalan
+step
+goto 81.21,79.39
+talk High Cantor Viti |q Paths Out Of Darkness/Talk to High Cantor Viti |future
+step
+goto 82.42,78.79
+talk Eifa |q Paths Out Of Darkness/Talk to Eifa
+step
+goto 78.79,75.45
+'Use _Portal to Predator Mesa_ |q Paths Out Of Darkness/Go to Predator Mesa
+step
+goto predatorrise_base 46.20,62.72 |q Paths Out Of Darkness/Find the Shrine to Namiira
+step
+goto 62.54,69.33 |q Paths Out Of Darkness/Find the Shrine to Namiira
+step
+goto 72.89,58.93 |q Paths Out Of Darkness/Find the Shrine to Namiira
+step
+goto 80.14,43.88
+talk Zerith-var |q Paths Out Of Darkness  |future
+|tip Manually skip to the next step.
+step
+goto 80.45,43.69
+'Open _Shrine to Namilira_ |q Paths Out Of Darkness/Enter the Shrine to Namiira
+step
+goto zerithpredatormasa_base 73.83,27.01 |q Paths Out Of Darkness/Search for Ravith-morna
+step
+goto 41.18,31.19 |q Paths Out Of Darkness/Search for Ravith-morna
+step
+goto 19.02,31.77 |q Paths Out Of Darkness/Search for Ravith-morna
+step
+goto 21.03,51.98 |q Paths Out Of Darkness/Search for Ravith-morna
+step
+goto 6.94,52.79 |q Paths Out Of Darkness/Search for Ravith-morna
+step
+goto 10.17,66.02
+'Open _Inner Shrine_ |q Paths Out Of Darkness/Search for Ravith-morna
+|tip Manually skip to the next step.
+step
+goto 36.72,66.74
+|tip Watch the dialogue.
+kill Ravenous Sa-m'Athra |q Paths Out Of Darkness/Stop the Ritual |future
+step
+goto 37.15,64.05
+'Dispel _Void Energy_ |q Paths Out Of Darkness/Deal with Ravith-morna
+|tip Manually skip to the next step.
+step
+goto 36.85,68.34
+|tip Watch the dialogue.
+'Dispel _Void Energy_ |q Paths Out Of Darkness/Deal with Ravith-morna
+step
+goto 37.10,64.56
+|tip Watch the dialogue.
+'Use _Portal to Reaper's March_ |q Paths Out Of Darkness/Leave Predator Mesa
+|tip Manually skip to the next step.
+step
+goto reapersmarch_base 58.74,35.71
+talk Zerith-var
+turnin Paths Out Of Darkness
+step
+'_Next to you_
+|tip Reach Allied rapport with Zerith-var.
+talk Zerith-var
+accept The Dark Behind the World
+step
+'Open _Reaper's March_
+'Travel to _Willowgrove_ |q The Dark Behind the World/Search Weeping Wind Cave
+|tip Manually skip to the next step.
+step
+goto 48.79,75.29 |q The Dark Behind the World/Search Weeping Wind Cave
+step
+goto 50.45,75.44
+'Open _Weeping Wind Cave_ |q The Dark Behind the World/Search Weeping Wind Cave
+|tip Manually skip to the next step.
+step
+goto weepingwindcave_base 77.79,49.14 |q The Dark Behind the World/Search Weeping Wind Cave
+step
+goto 46.64,53.59 |q The Dark Behind the World/Search Weeping Wind Cave
+step
+goto 42.85,34.34 |q The Dark Behind the World/Search Weeping Wind Cave
+step
+goto 46.31,13.46 |q The Dark Behind the World/Search Weeping Wind Cave
+step
+goto 56.08,11.60 |q The Dark Behind the World/Search Weeping Wind Cave
+step
+goto 70.68,20.94
+'Enter _Khenarthi's Rise_ |q The Dark Behind the World/Go to Khenarthi's Rise |future
+|tip Manually skip to the next step.
+step
+goto reapersmarch_base 52.76,79.32 |q The Dark Behind the World/Search for Cantor Krin'ze |future
+step
+goto 53.63,80.36
+|tip Watch the dialogue.
+'Examine _Cantor Krin'ze_ |q The Dark Behind the World/Examine Cantor Krin'ze |future
+step
+goto 53.66,80.32
+talk Zerith-var |q The Dark Behind the World/Talk to Zerith-var
+step
+goto 52.38,78.90 |q The Dark Behind the World/.*Restore Khenarthi's Rise.*
+step
+goto 52.70,76.89
+'Take _Ancient Remains_ |q The Dark Behind the World/.*Restore Khenarthi's Rise.*
+|tip Manually skip to the next step.
+step
+goto 52.45,76.68
+'Take _Ancient Remains_ |q The Dark Behind the World/.*Restore Khenarthi's Rise.*
+|tip Manually skip to the next step.
+step
+goto 52.38,76.96
+'Take _Ancient Remains_ |q The Dark Behind the World/.*Restore Khenarthi's Rise.* 
+|tip Manually skip to the next step.
+step
+goto 52.63,76.80
+.'Place _Grave Site_
+.'Dig _Grave Site_ |q The Dark Behind the World/.*Restore Khenarthi's Rise.*
+|tip Manually skip to the next step.
+step
+goto 52.59,76.82
+talk Zerith-var |q The Dark Behind the World/.*Restore Khenarthi's Rise.* |count 1
+step
+goto 53.45,77.98 |q The Dark Behind the World/.*Restore Khenarthi's Rise.*
+step
+goto 52.27,77.50
+'Examine _Empty Jug_ |q The Dark Behind the World/.*Restore Khenarthi's Rise.*
+|tip Manually skip to the next step.
+step
+goto 52.21,77.38
+'Examine _Sealed Decanter_ |q The Dark Behind the World/.*Restore Khenarthi's Rise.*
+|tip Manually skip to the next step.
+step
+goto 53.52,77.97
+'Anoint _Ancient Weapons_ |q The Dark Behind the World/.*Restore Khenarthi's Rise.*
+|tip Manually skip to the next step.
+step
+goto 53.46,77.97
+talk Zerith-var |q The Dark Behind the World/.*Restore Khenarthi's Rise.* |count 2
+step
+goto 52.48,79.57
+'Examine _Scroll of Evensong_ |lorebook Scroll of Evensong/3/53/18
+step
+goto 52.57,79.61
+'Examine _Scroll of the Crescent Blade_ |lorebook Scroll of the Crescent Blade/3/53/17
+step
+goto 52.50,79.68
+'Place _Scroll Stand_ |q The Dark Behind the World/.*Restore Khenarthi's Rise.*
+|tip Manually skip to the next step.
+step
+goto 52.51,79.59
+talk Zerith-var |q The Dark Behind the World/.*Restore Khenarthi's Rise.* |count 3
+step
+goto 52.39,78.91 |q The Dark Behind the World/Talk to Cantor Krin'ze
+step
+goto 53.63,80.37
+|tip Watch the dialogue.
+talk Cantor Krin'ze |q The Dark Behind the World/Talk to Cantor Krin'ze
+step
+goto 53.68,80.30
+talk Zerith-var |q The Dark Behind the World/Talk to Zerith-var
+step
+goto 53.66,80.35
+'Pour _Ritual Basin_ |q The Dark Behind the World/Pour the Moon-Sugar Water
+step
+goto 53.82,80.31
+|tip Watch the dialogue.
+'Open _Portal to Star Haven Adeptorium_ |q The Dark Behind the World/Go to Star Haven Adeptorium |future
+step
+goto UIMapstarhavenadeptor_base 68.87,14.94
+talk Cantor Krin'ze |q The Dark Behind the World/Talk to Cantor Krin'ze
+step
+goto 60.03,15.30 |q The Dark Behind the World/Search for the Twilight Cantors
+step
+goto 48.76,20.25 |q The Dark Behind the World/Search for the Twilight Cantors
+step
+goto 47.08,22.70
+talk High Cantor Viti |q The Dark Behind the World/Talk to High Cantor Viti |future
+step
+goto 47.03,26.08 |q The Dark Behind the World/.*Save the Twilight Cantors.* |count 1
+step
+goto 40.23,23.91
+talk Cantor Nari |q The Dark Behind the World/.*Save the Twilight Cantors.* |count 1
+step
+goto 40.13,35.08
+talk Cantor Cer'enza |q The Dark Behind the World/.*Save the Twilight Cantors.* |count 2
+step
+goto 48.42,34.84 |q The Dark Behind the World/.*Save the Twilight Cantors.*
+step
+goto 49.75,31.70 |q The Dark Behind the World/.*Save the Twilight Cantors.*
+step
+goto 54.25,37.51 |q The Dark Behind the World/.*Save the Twilight Cantors.*
+step
+goto 57.42,32.75 |q The Dark Behind the World/.*Save the Twilight Cantors.*
+step
+goto 55.66,32.33
+talk Cantor Tharis-jo |q The Dark Behind the World/.*Save the Twilight Cantors.* |count 3
+step
+goto 54.25,37.51 |q The Dark Behind the World/Search for Ravith-morna
+step
+goto 50.33,42.01 |q The Dark Behind the World/Search for Ravith-morna
+step
+goto 50.82,50.64
+talk Zerith-var |q The Dark Behind the World/Talk to Zerith-var |future
+step
+goto 50.98,67.88
+'Open _Portal to the Great Darkness_ |q The Dark Behind the World/Enter the Portal to the Great Darkness |future
+step
+goto zerithgreatdarkness_base 50.46,75.79 |q The Dark Behind the World/Find Ravith-morna
+step
+goto 24.77,47.99 |q The Dark Behind the World/Find Ravith-morna
+step
+goto 30.84,27.45
+|tip Watch the dialogue.
+kill Ravith-morna |q The Dark Behind the World/Defeat Ravith-morna |future
+step
+goto 30.84,27.45
+'Use _Zerith's Moonclaw_ |q The Dark Behind the World/Banish the Moon Beast
+step
+goto 30.84,27.45
+'Listen _Zerith and Ravith_ |q The Dark Behind the World/Listen to Zerith and Ravith
+step
+goto 34.86,23.01
+'Use _Portal to Reaper's March_ |q The Dark Behind the World/Enter the Portal to Return to Reaper's March |future
+step
+goto zerthmoonmont_base 40.08,49.44
+talk Zerith-var
+turnin The Dark Behind the World
 ]])

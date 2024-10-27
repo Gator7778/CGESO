@@ -51016,7 +51016,7 @@ step
 goto westwealdoverland_base 59.49,39.88
 'Open _Zeggar's Blind_ |q Another Death in Ontus/Investigate Zeggar's Blind
 step
-goto U42_UI_Maps_FornDortis_01 27.84,54.37 |q Another Death in Ontus/Search Zeggar's Blind
+goto U42_UI_Maps_Ontus_ZeggarsBlind 27.84,54.37 |q Another Death in Ontus/Search Zeggar's Blind
 step
 goto 74.22,81.80
 'Take _Desk Key_ |q Another Death in Ontus/Take the Key |future
@@ -51229,7 +51229,7 @@ goto 53.46,72.87
 'Open _Fyrelight Cave_ |q A Matter of Propriety |future
 |tip Manually skip to the next step.
 step
-goto u42_base_clawcave 75.68,48.14 |q A Matter of Propriety/.*Find Dowry Items.*
+goto u42_fyrelightcave_base 75.68,48.14 |q A Matter of Propriety/.*Find Dowry Items.*
 step
 goto 64.15,44.96 |q A Matter of Propriety/.*Find Dowry Items.*
 step
