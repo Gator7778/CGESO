@@ -1,6 +1,6 @@
 # CGESO
 
-<img src="https://i.imgur.com/ESqsvse.png">
+<img src="https://imgur.com/vui1dpi.jpg">
 
 A Public Domain leveling guide produced by Zygor Guides, updated and maintained by Hydra9268. The purpose of this project is to add leveling guides for new content and extend the life for as long as ESO is available.
 
@@ -24,42 +24,42 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 ### Recent Updates
 ### 10/28/2024
 ### Gold Road
-* - Updated Tutorial to Wailing Caverns for Update 44
-* - Gold Road Main Quest Only
-* - Gold Road Full Guide
-* - Gold Road Skyshard & Delves Guide
-* - Tanlorin Companion and Rapport Guide
-* - Zerith-var Companion and Rapport Guide
+* Updated Tutorial to Wailing Caverns for Update 44
+* Gold Road Main Quest Only
+* Gold Road Full Guide
+* Gold Road Skyshard & Delves Guide
+* Tanlorin Companion and Rapport Guide
+* Zerith-var Companion and Rapport Guide
 
 ### 01/13/2024
 ### Southern Elsweyr Full Guide
-* - Highlight Objectives
-* - Minor Fixes
+* Highlight Objectives
+* Minor Fixes
 ### Southern Elsweyr Main Quest Only
-* - Highlight Objectives
-* - Minor Fixes
+* Highlight Objectives
+* Minor Fixes
 ### Imperial City Full Guide
-* - Highlight Objectives
-* - Major and Minor Fixes
-* - Completely Revamped
+* Highlight Objectives
+* Major and Minor Fixes
+* Completely Revamped
 ### Southern Elsweyr Main Quest Only
-* - Highlight Objectives
-* - Major and Minor Fixes
-* - Completely Revamped
+* Highlight Objectives
+* Major and Minor Fixes
+* Completely Revamped
 
 ### 01/06/2024
 ### Full Guide
-* - Major & Minor Changes
-* - Highlight Objectives
-* - Major and Minor Fixes
-* - More Dialogue Options
-* - Broken Zones Completely Revamped
+* Major & Minor Changes
+* Highlight Objectives
+* Major and Minor Fixes
+* More Dialogue Options
+* Broken Zones Completely Revamped
 ### Main Quest Only
-* - Major & Minor Changes
-* - Highlight Objectives
-* - Major and Minor Fixes
-* - More Dialogue Options
-* - Broken Zones Completely Revamped
+* Major & Minor Changes
+* Highlight Objectives
+* Major and Minor Fixes
+* More Dialogue Options
+* Broken Zones Completely Revamped
 
 ### 09/17/2023
 * Map Revamp
@@ -76,7 +76,6 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 * Fixed Wayshrine name change made by Zenimax from Baandari Trading Post Wayshrine to Baandari Market Wayshrine.
 
 ### 06/04/2023 Necrom: Shadows Over Morrowind
-<img src="https://i.imgur.com/ESqsvse.png">
 
 * Change ZGESO > CGESO
 * Removed Old Un-used Coding
