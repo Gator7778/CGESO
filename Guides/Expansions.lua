@@ -49138,8 +49138,7 @@ step
 goto 29.10,52.02 |q Prisoner of Fate/Find the Shrine of Inevitable Secrets
 step
 goto 91.40,38.40
-'Use _Portal to Shrine of Inevitable Secrets_ |q Prisoner of Fate/Use the Portals |future
-|tip Manually skip to the next step.
+'Use _Portal to Shrine of Inevitable Secrets_ |q Prisoner of Fate/Use the Portal |future
 step
 goto u41_shrineofmora_base 46.21,44.47 |q Prisoner of Fate/Find Torvesard |future
 step
@@ -49808,9 +49807,10 @@ step
 goto 81.36,21.31 |q The Missing Cohort/Escape the Ruins
 step
 goto 53.38,20.98
-'Open _Rustwall Estate_ |q The Missing Cohort/Escape the Ruins
+'Open _Rustwall Estate_ |q The Missing Cohort/Escape the Ruins |future
+|tip Manually skip to the next step.
 step
-goto westwealdoverland_base 79.62,65.69 |q The Missing Cohort/Talk to Tribune Alea Idolus
+goto westwealdoverland_base 79.62,65.69 |q The Missing Cohort/Talk to Tribune Alea Idolus |future
 step
 goto 80.69,64.74 |q The Missing Cohort/Talk to Tribune Alea Idolus
 step
@@ -51496,12 +51496,12 @@ goto westwealdoverland_base 63.92,54.11
 talk Leramil the Wise
 turnin The Many Paths
 step
-goto 32.55,42.27
+goto u42_Skingrad_base 32.55,42.27
 'Use _Skingrad Vineyards_
 'Travel to _Skingrad City_ |q Relics of the Three Princes/Return to Beragon's Townhouse
 tip Manally skip to the next step.
 step
-goto u42_Skingrad_base 43.99,68.94 |q Relics of the Three Princes/Return to Beragon's Townhouse
+goto 43.99,68.94 |q Relics of the Three Princes/Return to Beragon's Townhouse
 step
 goto 41.76,72.18 |q Relics of the Three Princes/Return to Beragon's Townhouse |future
 step
@@ -51653,7 +51653,7 @@ goto 86.89,60.66 |q Relics of the Three Princes/.*Take the Remaining Lesser Ston
 step
 goto 72.34,56.73 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 3
 step
-goto 83.83,52.60 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 3
+goto 82.91,56.64 |q Relics of the Three Princes/.*Take the Remaining Lesser Stones.* |count 3
 step
 goto 79.25,52.66
 'Use _Lamp of Clarity_
@@ -51985,7 +51985,7 @@ goto 53.46,07.15
 |tip Manually skip to the next step.
 step
 goto westwealdoverland_base 73.86,36.89
-talk Elfbetta
+talk Elfbetta the Shy
 turnin Ayleid Altercations
 step
 goto 71.66,36.80 |q Vesper Valente |future
@@ -52033,7 +52033,6 @@ talk Servant Eira |q Vesper Valente/.*Talk to Party Attendees.* |count 4
 step
 goto 67.85,16.41
 talk Fennorian |q Vesper Valente/Talk to Fennorian
-|tip Manually skip to the next step.
 step
 goto 67.32,16.32
 'Open _Valente Vineyards_ |q Vesper Valente/Enter the Manor
@@ -52189,11 +52188,7 @@ goto 49.73,65.17
 step
 goto 58.51,57.02 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
 step
-goto 65.13,35.14 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
-step
-goto 74.99,36.56 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
-step
-goto 72.98,62.74 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.* |tip Drop down.
+goto 63.90,62.20 |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.*
 step
 goto 69.44,68.50
 'Search _Ash Pile_ |q The Silent Bell/.*Acquire the Communique, Tower Key, and Payroll.* |count 2
@@ -52457,15 +52452,15 @@ step
 goto 68.19,65.98 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
 step
 goto 67.82,49.33
-'Use _Abolisher_ 
-'Use _Portal to Darkened Home_ |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
+'Use _Abolisher_
+'Use _Portal to Darkened Home_ |q King Nantharion's Gambit |future
 |tip Manually skip to the next step.
 step
-goto u42_miscarcand2_base 74.72,33.53 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
+goto u42_miscarcand2_base 74.72,33.53 |q King Nantharion's Gambit |future
 step
-goto 89.39,34.36 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
+goto 89.39,34.36 |q King Nantharion's Gambit |future
 step
-goto 89.53,15.29 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
+goto 89.53,15.29 |q King Nantharion's Gambit |future
 step
 goto 67.79,16.15
 'Use _Abolisher_

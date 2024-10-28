@@ -46448,7 +46448,7 @@ goto 77.45,66.50
 step
 goto 77.45,66.50
 talk Tribune Alea Idolus |q The Missing Cohort/Talk to Tribune Alea
-step.
+step
 'Open _Rustwall Estate_ |q The Missing Cohort/Find Groundskeeper Gaius
 |tip Manually skip to the next step.
 step
