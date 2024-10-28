@@ -46299,9 +46299,14 @@ accept Paths of Chaos
 step
 goto 40.93,39.65 |q Paths of Chaos/Investigate Elenglynn
 step
+goto 42.43,48.96
+'Open _Skingrad_ |q Paths of Chaos/Investigate Elenglynn
+|tip Manually skip to the next step.
+step
 goto 45.90,57.97
 wayshrine Skingrad City
 step
+goto 45.90,57.97
 'Use _Skingrad City_
 'Travel to _Skingrad Vineyards_ |q Paths of Chaos/Investigate Elenglynn
 |tip Manually skip to the next step.
@@ -46398,7 +46403,7 @@ step
 goto westwealdoverland_base 76.46,45.47
 talk Leramil the Wise |q Paths of Chaos/Investigate Elenglynn
 step
-goto 70.86,44.37 |q Paths of Chaos/Investigate Rustwall Estate
+goto 70.92,44.52 |q Paths of Chaos/Investigate Rustwall Estate
 step
 goto 68.96,47.59 |q Paths of Chaos/Investigate Rustwall Estate
 step
@@ -46410,14 +46415,9 @@ goto westwealdoverland_base 74.52,57.61 |q Paths of Chaos/Investigate Rustwall E
 step
 goto 76.26,65.88 |q Paths of Chaos/Investigate Rustwall Estate
 step
-goto 77.25,63.19
-talk Sergeant Tegula
-accept The Missing Cohort
-step
-goto 75.89,65.62 |q The Missing Cohort/Find Tribune Alea Idolus
-step
 goto 77.07,65.54
-talk Tribune Alea Idolus |q The Missing Cohort/Talk to Tribune Alea Idolus |future
+talk Tribune Alea Idolus 
+accept The Missing Cohort
 step
 goto 76.94,65.05
 'Open _Rustwall Manor_ |q The Missing Cohort/Enter the Manor House |future
@@ -46449,6 +46449,7 @@ step
 goto 77.45,66.50
 talk Tribune Alea Idolus |q The Missing Cohort/Talk to Tribune Alea
 step
+goto 77.50,65.99
 'Open _Rustwall Estate_ |q The Missing Cohort/Find Groundskeeper Gaius
 |tip Manually skip to the next step.
 step
@@ -46494,7 +46495,7 @@ goto 31.62,66.84
 talk Legionary Caepio |q The Missing Cohort/Talk to Legionary Caepio |future
 step
 goto 64.07,55.96
-'Drop Down |q The Missing Cohort/Find the Daedric Portal
+'Drop Down _Ruins_ |q The Missing Cohort/Find the Daedric Portal
 step
 goto U42_Rustwall_Crypt_02_base 38.10,11.29 |q The Missing Cohort/Search the Ruins
 step
@@ -46528,9 +46529,10 @@ step
 goto 81.36,21.31 |q The Missing Cohort/Escape the Ruins
 step
 goto 53.38,20.98
-'Open _Rustwall Estate_ |q The Missing Cohort/Escape the Ruins
+'Open _Rustwall Estate_ |q The Missing Cohort/Escape the Ruins |future
+|tip Manually skip to the next step.
 step
-goto westwealdoverland_base 79.62,65.69 |q The Missing Cohort/Talk to Tribune Alea Idolus
+goto westwealdoverland_base 79.62,65.69 |q The Missing Cohort/Talk to Tribune Alea Idolus |future
 step
 goto 80.69,64.74 |q The Missing Cohort/Talk to Tribune Alea Idolus
 step
@@ -46793,11 +46795,11 @@ goto 27.55,45.85 |q Hold the Line/Search the Keep's Barracks
 step
 goto 16.48,36.69 |q Hold the Line/Search the Keep's Barracks
 step
-goto 15.57,61.64 |q Hold the Line/Search the Keep's Barracks
+goto 17.11,55.63 |q Hold the Line/Search the Keep's Barracks
 step
 goto 49.65,73.73 |q Hold the Line/Search the Keep's Barracks
 step
-goto 73.85,86.87 |q Hold the Line/Search the Keep's Barracks
+goto 74.71,79.01 |q Hold the Line/Search the Keep's Barracks
 step
 goto 74.98,45.99 |q Hold the Line/Search the Keep's Barracks
 step
@@ -46808,7 +46810,7 @@ step
 goto 50.50,10.22 |q Hold the Line/Search the Keep's Barracks
 step
 goto 50.93,41.26
-'Open _Feldgard Barracks Amrory_ |q Hold the Line/Enter the Barracks Armory |future
+'Open _Barracks Amrory_ |q Hold the Line/Enter the Barracks Armory |future
 step
 goto 50.40,55.02
 'Observe _Daedric Commander_ |q Hold the Line/Observe the Daedric Commander
@@ -46823,7 +46825,7 @@ step
 goto 51.17,86.98 |q Hold the Line/Get in Position at the Gateway |future
 step
 goto 48.86,68.79
-'Enter _Portal to Mirrormoor_ |q Hold the Line/Enter the Portal
+'Enter _Portal to Mirrormoor_ |q Hold the Line/Enter the Portal |future
 step
 goto U42_feldagard_mirrormoor_base 44.51,48.01
 kill Shardborn |q Hold the Line/Defeat the Shardborn
@@ -46842,11 +46844,11 @@ talk Tribune Alea Idolus
 turnin Hold the Line
 step
 goto 38.00,87.43
-'Open _Feldagard Keep_ |q Found Family |future
+'Open _Feldagard Keep_ |q Seeds of Suspicion/Find the Wildburn Seed
 |tip Manually skip to the next step.
 step
 goto 73.46,89.09
-'Open _West Weald_ |q Found Family |future
+'Open _West Weald_ |q Seeds of Suspicion/Find the Wildburn Seed
 |tip Manually skip to the next step.
 step
 goto westwealdoverland_base 41.46,64.26 |q Seeds of Suspicion/Find the Wildburn Seed
@@ -46895,11 +46897,11 @@ step
 goto 52.03,51.84 |q Seeds of Suspicion/Rendezvous Near Hoperoot
 step
 goto 56.18,51.04
-'Rendezvous _Near Hoperoot_ |q Seeds of Suspicion/Rendezvous Near Hoperoot |future
+talk Beragon |q Seeds of Suspicion |future
 |tip Manually skip to the next step.
 step
-goto 56.18,51.04
-talk Beragon |q Seeds of Suspicion/Talk to Beragon |future
+goto 57.38,54.79
+'Go to _Hoperoot_ |q Seeds of Suspicion/Go to Hoperoot
 step
 goto 57.22,55.46
 'Enter _Hoperoot_ |q Seeds of Suspicion/Enter Hoperoot |future
@@ -46911,7 +46913,7 @@ goto 37.11,61.19 |q Seeds of Suspicion/Search Hoperoot
 step
 goto 33.52,53.69 |q Seeds of Suspicion/Find King Nantharion |future
 step
-goto 41.96,33.60 |q Seeds of Suspicion/Find King Nantharion
+goto 41.96,33.60 |q Seeds of Suspicion/Find King Nantharion |future
 step
 goto 67.28,37.41 |q Seeds of Suspicion/Find King Nantharion
 step
@@ -47541,6 +47543,7 @@ step
 goto 49.69,21.75 |q King Nantharion's Gambit/Explore Miscarcand
 step
 goto 46.87,13.49
+|tip Watch the dialogue.
 'Use _Abolisher_ |q King Nantharion's Gambit/Close the Portal |future
 step
 goto 44.06,15.29
@@ -47580,14 +47583,14 @@ goto 68.19,65.98 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
 step
 goto 67.82,49.33
 'Use _Abolisher_
-'Use _Portal to Darkened Home_ |q King Nantharion's Gambit/Explore Miscarcand Deep Halls |future
+'Use _Portal to Darkened Home_ |q King Nantharion's Gambit |future
 |tip Manually skip to the next step.
 step
-goto u42_miscarcand2_base 74.72,33.53 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
+goto u42_miscarcand2_base 74.72,33.53 |q King Nantharion's Gambit |future
 step
-goto 89.39,34.36 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
+goto 89.39,34.36 |q King Nantharion's Gambit |future
 step
-goto 89.53,15.29 |q King Nantharion's Gambit/Explore Miscarcand Deep Halls
+goto 89.53,15.29 |q King Nantharion's Gambit |future
 step
 goto 67.79,16.15
 'Use _Abolisher_
@@ -47886,7 +47889,7 @@ goto 43.62,73.46
 'Use _Portal to Fargrave_ |q Ithelia's Fury/Go to Fargrave |future
 |tip Manually skip to the next step.
 step
-goto U42_PE5C1_FargraveIQ02_base 34.86,40.42 |q Ithelia's Fury/Return to the Loom of the Untraveled Road
+goto U42_PE5C1_FargraveIQ02_base 34.86,40.42 |q Ithelia's Fury/Return to the Loom of the Untraveled Road |future
 step
 goto 38.83,60.34 |q Ithelia's Fury/Return to the Loom of the Untraveled Road
 step
@@ -48259,7 +48262,7 @@ goto 46.64,61.57
 talk Hermaeus Mora |q In Memory Of/Talk to Hermaeus Mora
 step
 goto 46.43,49.15
-'Use _West Weald_ |q In Memory Of/Return to Beragon's Townhouse |future
+'Use _Portal to West Weald_ |q In Memory Of/Return to Beragon's Townhouse |future
 |tip Manually skip to the next step.
 step
 goto u42_Skingrad_base 41.96,74.57

@@ -9972,7 +9972,7 @@ goto 87.58,57.96
 step
 goto 89.37,56.63
 'Use _Skyshard_
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Expansion\\West Weald
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\West Weald",[[
@@ -9997,6 +9997,10 @@ goto 83.10,62.98
 step
 goto 81.69,65.67
 step
+goto 73.86,69.76
+step
+goto 71.06,69.91
+step
 goto 71.79,73.41
 'Open _Haladin Lumber Camp_
 |tip Manually skip to the next step.
@@ -10017,8 +10021,6 @@ goto 62.71,76.77
 step
 goto 77.82,57.07
 step
-goto 88.37,58.54
-step
 goto 71.76,35.69
 kill Aggression of Root
 |tip Manually skip to the next step.
@@ -10036,11 +10038,13 @@ goto 65.42,66.70
 'Travel to _Ostumir_
 |tip Manually skip to the next step.
 step
+goto 54.69,73.35
+step
 goto 53.46,72.87
 'Open _Fyrelight Cave_
 |tip Manually skip to the next step.
 step
-goto u42_base_clawcave 75.68,48.14
+goto u42_fyrelightcave_base 75.68,48.14
 step
 goto 64.15,44.96
 step

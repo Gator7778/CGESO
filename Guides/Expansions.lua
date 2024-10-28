@@ -49224,15 +49224,16 @@ goto u42_Skingrad_base 34.64,41.92
 talk Leramil the Wise
 accept Paths of Chaos
 step
-goto 40.93,39.65 |q Seeking Armistice |future
+goto 40.93,39.65 |q Paths of Chaos/Investigate Elenglynn
 step
-goto 42.26,49.09
-'Open _West Weald_ |q Seeking Armistice |future
+goto 42.43,48.96
+'Open _Skingrad_ |q Paths of Chaos/Investigate Elenglynn
 |tip Manually skip to the next step.
 step
 goto 45.90,57.97
 wayshrine Skingrad City
 step
+goto 45.90,57.97
 'Use _Skingrad City_
 'Travel to _Skingrad Vineyards_ |q Seeking Armistice |future
 |tip Manually skip to the next step.
@@ -50308,7 +50309,7 @@ goto 17.11,55.63 |q Hold the Line/Search the Keep's Barracks
 step
 goto 49.65,73.73 |q Hold the Line/Search the Keep's Barracks
 step
-goto 73.85,86.87 |q Hold the Line/Search the Keep's Barracks
+goto 74.71,79.01 |q Hold the Line/Search the Keep's Barracks
 step
 goto 74.98,45.99 |q Hold the Line/Search the Keep's Barracks
 step
@@ -50736,6 +50737,9 @@ goto 56.18,51.04
 talk Beragon |q Seeds of Suspicion |future
 |tip Manually skip to the next step.
 step
+goto 57.38,54.79
+'Go to _Hoperoot_ |q Seeds of Suspicion/Go to Hoperoot
+step
 goto 57.22,55.46
 'Enter _Hoperoot_ |q Seeds of Suspicion/Enter Hoperoot |future
 |tip Manually skip to the next step.
@@ -50746,7 +50750,7 @@ goto 37.11,61.19 |q Seeds of Suspicion/Search Hoperoot
 step
 goto 33.52,53.69 |q Seeds of Suspicion/Find King Nantharion |future
 step
-goto 41.96,33.60 |q Seeds of Suspicion/Find King Nantharion
+goto 41.96,33.60 |q Seeds of Suspicion/Find King Nantharion |future
 step
 goto 67.28,37.41 |q Seeds of Suspicion/Find King Nantharion
 step
@@ -51391,6 +51395,7 @@ goto 34.67,13.80
 'Enter _Portal to the Many Paths_ |q The Many Paths/Enter the Many Paths
 step
 goto U42_UI_Maps_InnBetween_02 25.04,48.82
+|tip Watch the dialogue.
 talk Ithelia |q The Many Paths/Talk to Ithelia |future
 step
 goto 16.07,56.18

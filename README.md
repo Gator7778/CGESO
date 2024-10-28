@@ -22,6 +22,15 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 <br/>
 
 ### Recent Updates
+### 10/28/2024
+### Gold Road
+* - Updated Tutorial to Wailing Caverns for Update 44
+* - Gold Road Main Quest Only
+* - Gold Road Full Guide
+* - Gold Road Skyshard & Delves Guide
+* - Tanlorin Companion and Rapport Guide
+* - Zerith-var Companion and Rapport Guide
+
 ### 01/13/2024
 ### Southern Elsweyr Full Guide
 * - Highlight Objectives
@@ -38,7 +47,6 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 * - Major and Minor Fixes
 * - Completely Revamped
 
-### Recent Updates
 ### 01/06/2024
 ### Full Guide
 * - Major & Minor Changes
