@@ -6,86 +6,29 @@ CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\The Wailing Prison",[[
 loadingimage loadscreen_chapter1_01.dds
 description Brave The Wailing Prison, a prisoner stronghold in Coldharbour.
 step
-'Open _Auridon_ Map
-'Travel to _Vulkhel Guard_ |q Soul Shriven in Coldharbour |future
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
+goto wailingprison1_base 14.30,33.22
+talk The Prophet |q Soul Shriven in Coldharbour/Talk to the Prophet |future
 step
-goto vulkhelguard_base 55.29,38.95
-talk The Hooded Figure |q Soul Shriven in Coldharbour/Talk to the Hooded Figure |future
-|only Aldmeri Dominion
-step
-goto 59.70,68.01
-'Open _The Interim Suitor_ |q Soul Shriven in Coldharbour/Talk to the Benefactor
-|tip Manually skip to the next step.
-|only Aldmeri Dominion
-step
-goto 60.96,67.81
-|tip Go downstairs in the ship.
-talk The Benefactor |q Soul Shriven in Coldharbour/Talk to the Benefactor
-|only Aldmeri Dominion
-step
-'Open _Glenumbra_ Map
-'Travel to _Daggerfall_ |q Soul Shriven in Coldharbour |future
-|tip Manually skip to the next step
-|only Daggerfall Covenant
-step
-goto daggerfall_base 48.59,21.51
-talk Hooded Figure |q Soul Shriven in Coldharbour/Talk to the Hooded Figure
-|only Daggerfall Covenant
-step
-goto 57.80,32.91 |q Soul Shriven in Coldharbour/Talk to the Benefactor
-|only Daggerfall Covenant
-step
-goto 57.06,58.32 |q Soul Shriven in Coldharbour/Talk to the Benefactor
-|only Daggerfall Covenant
-step
-goto 68.91,60.61
-|tip Inside Patheirry House
-talk Benefactor |q Soul Shriven in Coldharbour/Talk to the Benefactor
-|only Daggerfall Covenant
-step
-'Open _Stonesfalls_ Map
-'Travel to _Davon's Watch_ |q Soul Shriven in Coldharbour |future
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
-goto davonswatch_base 56.25,76.25
-talk Hooded Figure |q Soul Shriven in Coldharbour/Talk to the Hooded Figure |future
-|only Ebonheart Pact
-step
-goto 48.72,72.08 |q Soul Shriven in Coldharbour/Talk to the Benefactor
-|only Ebonheart Pact
-step
-goto 50.57,64.87 |q Soul Shriven in Coldharbour/Talk to the Benefactor
-|only Ebonheart Pact
-step
-goto 58.59,66.17
-|tip Inside Sadreno House.
-talk Benefactor |q Soul Shriven in Coldharbour/Talk to the Benefactor
-|only Ebonheart Pact
-step
-goto wailingprison1_base 16.86,33.72
+goto 16.86,33.72
 |tip Watch the dialogue
-'Open _The Wailing Prison_ |q Soul Shriven in Coldharbour/Find a Way to Escape Coldharbour
+'Open _The Wailing Prison_ |q Soul Shriven in Coldharbour/Leave the Cell
 step
-goto 39.60,33.57
-'Join _Lyris Titanborn_ |q Soul Shriven in Coldharbour/Join Lyris
+goto 28.40,37.37
+'Search _Dremora Churl_ |q Soul Shriven in Coldharbour/Loot a Weapon from the Dremora
 step
-goto 39.60,33.57
-'Follow _Lyris Titanborn_ |q Soul Shriven in Coldharbour/Follow Lyris
+goto 39.60,33.57 |q Soul Shriven in Coldharbour/Follow Lyris
 step
 goto 49.37,36.61
-kill Dremora Churl |q Soul Shriven in Coldharbour/Defeat the Prison Guard
+kill Dremora Churl |q Soul Shriven in Coldharbour/Defeat the Prison Guard |future
 step
-goto 82.90,71.95
-'Follow _Lyris Titanborn_ |q Soul Shriven in Coldharbour/Follow Lyris
+goto 64.71,72.95 |q Soul Shriven in Coldharbour/Follow Lyris |tip Follow Lyris.
+step
+goto 82.90,71.95 |q Soul Shriven in Coldharbour/Follow Lyris |tip Follow Lyris.
 step
 goto 85.88,65.96
-|tip Watch the dialogue
-'Follow _Lyris Titanborn_ |q Soul Shriven in Coldharbour/Follow Lyris 
+'Defeat _Prison Guards_ |q Soul Shriven in Coldharbour/Defeat the Prison Guards |future
 step
-goto 85.08,66.34
+goto 82.56,69.63
 |tip Watch the dialogue.
 talk Lyris Titanborn |q Soul Shriven in Coldharbour/Talk to Lyris |future
 step
@@ -95,17 +38,25 @@ step
 goto wailingprison2_base 25.36,55.66
 kill Vaekar the Forgemaster |q Soul Shriven in Coldharbour/Defeat Vaekar the Forgemaster
 step
-goto 85.19,45.73
+goto 92.55,49.76
 'Open _The Towers of Eyes_ |q Soul Shriven in Coldharbour/Reach the Towers of Eyes
 step
-goto wailingprison4_base 51.07,52.48 |q Soul Shriven in Coldharbour/Destroy a Coldharbour Sentinel
+goto wailingprison4_base 51.07,52.48 |q Soul Shriven in Coldharbour/Destroy the Coldharbour Sentinel
 step
-goto 58.84,43.84 |q Soul Shriven in Coldharbour/Destroy a Coldharbour Sentinel
+goto 58.87,33.01 |q Soul Shriven in Coldharbour/Destroy the Coldharbour Sentinel
+step
+goto 60.82,46.42 |q Soul Shriven in Coldharbour/Destroy the Coldharbour Sentinel
 step
 goto 69.86,60.98
-kill Coldharbour Sentinel |q Soul Shriven in Coldharbour/Destroy a Coldharbour Sentinel
+kill Coldharbour Sentinel |q Soul Shriven in Coldharbour/Destroy the Coldharbour Sentinel
 step
-goto 58.84,43.84 |q Soul Shriven in Coldharbour/Reach the Prophet's Cell
+goto 68.08,50.35 |q Soul Shriven in Coldharbour/Reach the Prophet's Cell
+step
+goto 60.82,46.42 |q Soul Shriven in Coldharbour/Reach the Prophet's Cell
+step
+goto 58.87,33.01 |q Soul Shriven in Coldharbour/Reach the Prophet's Cell
+step
+goto 51.07,52.48 |q Soul Shriven in Coldharbour/Reach the Prophet's Cell
 step
 goto 46.62,68.11
 'Reach _The Prophet's Cell_ |q Soul Shriven in Coldharbour/Reach the Prophet's Cell
@@ -121,7 +72,13 @@ step
 goto 51.94,88.99
 'Unlock _The Undercroft_ |q Soul Shriven in Coldharbour/Enter the Undercroft
 step
-goto wailingprison5_base 14.42,47.27 |q Soul Shriven in Coldharbour/Find the Prophet's Cell
+goto wailingprison5_base 28.64,30.16 |q Soul Shriven in Coldharbour/Find the Prophet's Cell
+step
+goto 42.70,37.82 |q Soul Shriven in Coldharbour/Find the Prophet's Cell
+step
+goto 14.42,47.27 |q Soul Shriven in Coldharbour/Find the Prophet's Cell
+step
+goto 18.83,82.92 |q Soul Shriven in Coldharbour/Find the Prophet's Cell
 step
 goto 34.26,83.13
 'Open _The Prophet's Cell_ |q Soul Shriven in Coldharbour/Find the Prophet's Cell
@@ -152,12 +109,9 @@ step
 goto 86.53,41.34 
 'Open _The Anchor Mooring_ |q Soul Shriven in Coldharbour/Enter the Anchor Mooring
 step
-goto wailingprison7_base 49.29,67.08
-'Get to the _Anchor Base_ |q Soul Shriven in Coldharbour/Get to the Anchor Base
-step
-goto 49.55,61.85
+goto wailingprison7_base 49.55,61.85
 |tip Watch the dialogue
-kill Child of Bones |q Soul Shriven in Coldharbour/Defeat the Child of Bones
+kill Child of Bones |q Soul Shriven in Coldharbour/Defeat the Child of Bones |future
 step
 goto 49.81,61.15
 talk The Prophet |q Soul Shriven in Coldharbour/Talk to The Prophet
@@ -380,9 +334,16 @@ goto 23.66,55.89
 |tip She's at the top of the ship.
 talk Captain Jimila |q Cast Adrift/Talk to the Prowler's Captain
 step
+goto 23.56,56.01
+'Open _The Prowler_ |q Cast Adrift/Talk to Mastengwe
+|tip Manually skip to the next step.
+step
 goto 23.48,56.30
-|tip Go downstairs in the ship, in a side room.
 talk Mastengwe |q Cast Adrift/Talk to Mastengwe
+step
+goto 23.57,55.72
+'Open _Shattered Shoals_ |q Cast Adrift/Take Lodestone from Sea Vipers
+|tip Manually skip to the next step.
 step
 goto 17.04,53.88
 kill Sea Viper enemies
@@ -436,6 +397,7 @@ goto 48.68,25.68
 talk The Silvenar |q The Perils of Diplomacy/Investigate the Chancery
 step
 goto 41.50,35.50
+|tip Go outside.
 talk Razum-dar |q The Perils of Diplomacy/Talk to Razum-dar
 step
 goto 37.63,47.03 |q The Perils of Diplomacy/Sneak into the Maormer Embassy's Private Quarters
@@ -465,6 +427,7 @@ goto 16.10,38.43
 'Examine _Treaty of Khenarthi's Roost_ |q The Perils of Diplomacy/Take the Treaty of Khenarthi's Roost from the Maormer Embassy
 step
 goto 47.46,47.73
+|tip Go outside.
 talk Razum-dar |q The Perils of Diplomacy/Bring the Treaty to Razum-dar
 step
 goto 57.50,33.98
@@ -500,12 +463,20 @@ goto 74.97,58.91
 talk Captain Irinwe |q The Perils of Diplomacy/Continue Harrani's Investigation in Mistral
 |tip Manually skip to the next step.
 step
+goto 76.60,55.95
+'Open _Serpent's Kiss_ |q The Perils of Diplomacy/Continue Harrani's Investigation in Mistral
+|tip Manually skip to the next step.
+step
 goto 72.37,63.80
 |tip Go downstairs.
 'Search _Loose Hatch_ |q The Perils of Diplomacy/Continue Harrani's Investigation in Mistral
 step
+goto 77.00,55.86
+|tip Go upstairs.
+'Open _Mistral_ |q The Perils of Diplomacy/Bring Evidence to Razum-dar
+|tip Manually skip to the next step.
+step
 goto 52.67,46.97
-|tip Go outside.
 talk Razum-dar |q The Perils of Diplomacy/Bring Evidence to Razum-dar
 step
 goto 58.88,35.88
@@ -7277,8 +7248,7 @@ step
 goto 47.54,44.50
 'Unlock _Cell Door_ |q Innocent Scoundrel/Free Jakarn
 step
-goto 32.36,44.23
-'Follow _Jakarn_ |q Innocent Scoundrel/Follow Jakarn
+goto 32.36,44.23 |q Innocent Scoundrel/Follow Jakarn
 step
 goto 32.45,21.26 |q Innocent Scoundrel/Exit the Grave
 step
@@ -7291,6 +7261,8 @@ goto 35.22,81.06
 step
 goto 34.03,85.02
 talk Jakarn |q Innocent Scoundrel/Talk to Jakarn
+step
+goto 36.86,66.29 |q Innocent Scoundrel/Use the Side Exit
 step
 goto 67.13,71.04
 'Climb _Stros M'Kai_ |q Innocent Scoundrel/Use the Side Exit
@@ -7316,6 +7288,8 @@ goto 12.54,63.98
 step
 goto goblinminesend_base 94.10,49.30 |q Innocent Scoundrel/Talk to Jakarn
 step
+goto 76.37,33.69 |q Innocent Scoundrel/Talk to Jakarn
+step
 goto 38.57,32.08
 talk Jakarn |q Innocent Scoundrel/Talk to Jakarn
 step
@@ -7329,11 +7303,8 @@ goto 49.00,73.52
 'Open _Stros M'Kai_ |q Innocent Scoundrel/Find Jakarn
 |tip Manually skip to the next step.
 step
-goto porthunding_base 37.99,7.61
-'Find _Jakarn_ |q Innocent Scoundrel/Find Jakarn
-step
-goto 38.03,8.24
-talk Moglurkgul |q Innocent Scoundrel/Talk to Moglurkgul
+goto porthunding_base 38.03,8.24
+talk Moglurkgul |q Innocent Scoundrel/Talk to Moglurkgul |future
 step
 goto strosmkai_base 40.79,45.03
 talk Andrilion
