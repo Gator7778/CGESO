@@ -2,142 +2,6 @@ local CGV = _G.CGV
 if CGV:DoMutex("MainQuestsOnly") then return end
 CGV.GuideMenuTier = "MOR"
 
-CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\The Wailing Prison",[[
-loadingimage loadscreen_chapter1_01.dds
-description Brave The Wailing Prison, a prisoner stronghold in Coldharbour.
-step
-goto wailingprison1_base 14.30,33.22
-talk The Prophet |q Soul Shriven in Coldharbour/Talk to the Prophet |future
-step
-goto 16.86,33.72
-|tip Watch the dialogue
-'Open _The Wailing Prison_ |q Soul Shriven in Coldharbour/Leave the Cell
-step
-goto 28.40,37.37
-'Search _Dremora Churl_ |q Soul Shriven in Coldharbour/Loot a Weapon from the Dremora
-step
-goto 39.60,33.57 |q Soul Shriven in Coldharbour/Follow Lyris
-step
-goto 49.37,36.61
-kill Dremora Churl |q Soul Shriven in Coldharbour/Defeat the Prison Guard |future
-step
-goto 64.71,72.95 |q Soul Shriven in Coldharbour/Follow Lyris |tip Follow Lyris.
-step
-goto 82.90,71.95 |q Soul Shriven in Coldharbour/Follow Lyris |tip Follow Lyris.
-step
-goto 85.88,65.96
-'Defeat _Prison Guards_ |q Soul Shriven in Coldharbour/Defeat the Prison Guards |future
-step
-goto 82.56,69.63
-|tip Watch the dialogue.
-talk Lyris Titanborn |q Soul Shriven in Coldharbour/Talk to Lyris |future
-step
-goto 87.92,61.39
-'Open _The Bleeding Forge_ |q Soul Shriven in Coldharbour/Continue through the Bleeding Forge
-step
-goto wailingprison2_base 25.36,55.66
-kill Vaekar the Forgemaster |q Soul Shriven in Coldharbour/Defeat Vaekar the Forgemaster
-step
-goto 92.55,49.76
-'Open _The Towers of Eyes_ |q Soul Shriven in Coldharbour/Reach the Towers of Eyes
-step
-goto wailingprison4_base 51.07,52.48 |q Soul Shriven in Coldharbour/Destroy the Coldharbour Sentinel
-step
-goto 58.87,33.01 |q Soul Shriven in Coldharbour/Destroy the Coldharbour Sentinel
-step
-goto 60.82,46.42 |q Soul Shriven in Coldharbour/Destroy the Coldharbour Sentinel
-step
-goto 69.86,60.98
-kill Coldharbour Sentinel |q Soul Shriven in Coldharbour/Destroy the Coldharbour Sentinel
-step
-goto 68.08,50.35 |q Soul Shriven in Coldharbour/Reach the Prophet's Cell
-step
-goto 60.82,46.42 |q Soul Shriven in Coldharbour/Reach the Prophet's Cell
-step
-goto 58.87,33.01 |q Soul Shriven in Coldharbour/Reach the Prophet's Cell
-step
-goto 51.07,52.48 |q Soul Shriven in Coldharbour/Reach the Prophet's Cell
-step
-goto 46.62,68.11
-'Reach _The Prophet's Cell_ |q Soul Shriven in Coldharbour/Reach the Prophet's Cell
-step
-goto 46.62,68.11
-talk Lyris Titanborn |q Soul Shriven in Coldharbour/Talk to Lyris
-step
-goto 57.96,72.37
-talk Cadwell |q Soul Shriven in Coldharbour/Talk to Cadwell
-step
-goto 66.16,78.65 |q Soul Shriven in Coldharbour/Enter the Undercroft
-step
-goto 51.94,88.99
-'Unlock _The Undercroft_ |q Soul Shriven in Coldharbour/Enter the Undercroft
-step
-goto wailingprison5_base 28.64,30.16 |q Soul Shriven in Coldharbour/Find the Prophet's Cell
-step
-goto 42.70,37.82 |q Soul Shriven in Coldharbour/Find the Prophet's Cell
-step
-goto 14.42,47.27 |q Soul Shriven in Coldharbour/Find the Prophet's Cell
-step
-goto 18.83,82.92 |q Soul Shriven in Coldharbour/Find the Prophet's Cell
-step
-goto 34.26,83.13
-'Open _The Prophet's Cell_ |q Soul Shriven in Coldharbour/Find the Prophet's Cell
-step
-goto wailingprison6_base 38.66,56.51
-'Follow _Lyris Titanborn_ |q Soul Shriven in Coldharbour/Follow Lyris
-step
-goto 38.66,56.51
-talk Lyris Titanborn |q Soul Shriven in Coldharbour/Talk to Lyris
-step
-goto 38.66,56.51
-'Defend _Lyris Titanborn_ |q Soul Shriven in Coldharbour/Defend Lyris
-step
-goto 43.92,54.52
-'Activate _Dark Pinion_ |q Soul Shriven in Coldharbour/.*Activate the Pinions.* |count 1
-step
-goto 44.13,58.78
-'Activate _Dark Pinion_ |q Soul Shriven in Coldharbour/.*Activate the Pinions.* |count 2
-step
-goto 43.09,57.31
-'Wait for _Exchange_ |q Soul Shriven in Coldharbour/Wait for the Exchange
-step
-goto 43.09,57.31
-talk The Prophet |q Soul Shriven in Coldharbour/Talk to the Prophet
-step
-goto 68.85,57.37 |q Soul Shriven in Coldharbour/Enter the Anchor Mooring
-step
-goto 86.53,41.34 
-'Open _The Anchor Mooring_ |q Soul Shriven in Coldharbour/Enter the Anchor Mooring
-step
-goto wailingprison7_base 49.55,61.85
-|tip Watch the dialogue
-kill Child of Bones |q Soul Shriven in Coldharbour/Defeat the Child of Bones |future
-step
-goto 49.81,61.15
-talk The Prophet |q Soul Shriven in Coldharbour/Talk to The Prophet
-step
-goto 49.35,56.86
-'Use _Skyshard_ |q Soul Shriven in Coldharbour/Collect the Skyshard
-step
-goto 49.40,51.56
-'Approach the _Portal_ |q Soul Shriven in Coldharbour/Approach the Portal |future
-step
-goto khenarthisroost_base 55.70,75.41
-talk The Prophet
-turnin Soul Shriven in Coldharbour |next Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Khenarthi's Roost
-|only Aldmeri Dominion
-step
-goto porthunding_base 36.16,87.59
-talk The Prophet
-turnin Soul Shriven in Coldharbour |next Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Stros M'Kai
-|only Daggerfall Covenant
-step
-goto bleakrockvillage_base 78.54,47.49
-talk The Prophet
-turnin Soul Shriven in Coldharbour |next Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Bleakrock Isle
-|only Ebonheart Pact
-]])
-
 CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Khenarthi's Roost",[[
 loadingimage loadscreen_kenathis_roost_01.dds
 description This island off the south coast of Elsweyr is named after the Khajiiti goddess of weather and the sky, who is usually represented as a great hawk. She finds many worshipers among the cat-folk's sailors and farmers, especially those who grow moon-sugar cane.
@@ -334,18 +198,12 @@ goto 23.66,55.89
 |tip She's at the top of the ship.
 talk Captain Jimila |q Cast Adrift/Talk to the Prowler's Captain
 step
-goto 23.56,56.01
-'Open _The Prowler_ |q Cast Adrift/Talk to Mastengwe
-|tip Manually skip to the next step.
-step
 goto 23.48,56.30
+|tip Go downstairs in the ship, in a side room.
 talk Mastengwe |q Cast Adrift/Talk to Mastengwe
 step
-goto 23.57,55.72
-'Open _Shattered Shoals_ |q Cast Adrift/Take Lodestone from Sea Vipers
-|tip Manually skip to the next step.
-step
 goto 17.04,53.88
+|tip Leave the ship.
 kill Sea Viper enemies
 'Collect _Lodestone_ |q Cast Adrift/Take Lodestone from Sea Vipers
 step
@@ -397,7 +255,6 @@ goto 48.68,25.68
 talk The Silvenar |q The Perils of Diplomacy/Investigate the Chancery
 step
 goto 41.50,35.50
-|tip Go outside.
 talk Razum-dar |q The Perils of Diplomacy/Talk to Razum-dar
 step
 goto 37.63,47.03 |q The Perils of Diplomacy/Sneak into the Maormer Embassy's Private Quarters
@@ -427,7 +284,7 @@ goto 16.10,38.43
 'Examine _Treaty of Khenarthi's Roost_ |q The Perils of Diplomacy/Take the Treaty of Khenarthi's Roost from the Maormer Embassy
 step
 goto 47.46,47.73
-|tip Go outside.
+|tip Leave the building.
 talk Razum-dar |q The Perils of Diplomacy/Bring the Treaty to Razum-dar
 step
 goto 57.50,33.98
@@ -463,20 +320,12 @@ goto 74.97,58.91
 talk Captain Irinwe |q The Perils of Diplomacy/Continue Harrani's Investigation in Mistral
 |tip Manually skip to the next step.
 step
-goto 76.60,55.95
-'Open _Serpent's Kiss_ |q The Perils of Diplomacy/Continue Harrani's Investigation in Mistral
-|tip Manually skip to the next step.
-step
 goto 72.37,63.80
 |tip Go downstairs.
 'Search _Loose Hatch_ |q The Perils of Diplomacy/Continue Harrani's Investigation in Mistral
 step
-goto 77.00,55.86
-|tip Go upstairs.
-'Open _Mistral_ |q The Perils of Diplomacy/Bring Evidence to Razum-dar
-|tip Manually skip to the next step.
-step
 goto 52.67,46.97
+|tip Go outside.
 talk Razum-dar |q The Perils of Diplomacy/Bring Evidence to Razum-dar
 step
 goto 58.88,35.88
@@ -1005,7 +854,7 @@ goto 44.72,68.27
 'Examine _Boethiah's Proving_ |lorebook Boethiah's Proving/1/8/2
 |only Aldmeri Dominion
 step
-goto 46.10,70.85 |lorebook The Lunar Lorkhan/1/10/2
+goto 46.77,69.62 |lorebook The Lunar Lorkhan/1/10/2
 |only Aldmeri Dominion
 step
 goto 48.20,69.46 |lorebook The Lunar Lorkhan/1/10/2
@@ -1048,7 +897,6 @@ goto vulkhelguard_base 22.98,53.34
 |only Aldmeri Dominion
 step
 goto 21.50,49.26
-|tip She's inside the Mages Guild building.
 talk Valaste |q Long Lost Lore/Talk to Valaste
 |only Aldmeri Dominion
 step
@@ -1148,6 +996,7 @@ goto 57.19,63.08
 'Search _Fistalle_ |q Putting the Pieces Together/Search Fistalle's Body
 step
 goto 56.69,63.79
+|tip Outside the house.
 'Examine _The Anuad Paraphrased_ |lorebook The Anuad Paraphrased/1/10/1
 |only Aldmeri Dominion
 step
@@ -1478,7 +1327,7 @@ goto 60.27,30.68
 |only Aldmeri Dominion
 step
 goto foundryofwoe_base 7.68,32.73
-talk Lyris Titanborn |q Daughter of Giants/Talk to Lyris |future
+talk Lyris Titanborn |q Daughter of Giants/Talk to Lyris Titanborn |future
 |only Aldmeri Dominion
 step
 goto 9.68,43.50
@@ -1536,7 +1385,7 @@ goto 39.68,69.44
 |only Aldmeri Dominion
 step
 goto 39.68,69.44
-talk Lyris Titanborn |q Daughter of Giants/Talk to Lyris
+talk Lyris Titanborn |q Daughter of Giants/Talk to Lyris Titanborn
 |only Aldmeri Dominion
 step
 goto 42.35,65.35
@@ -2188,7 +2037,7 @@ talk Valaste |q Simply Misplaced/Talk to Valaste
 step
 goto 63.15,49.05
 talk Arch-Mage Shalidor
-'Wait for _Shalidor to Open the Portal_ |q Simply Misplaced/Wait for Shalidor to Open the Portal
+talk Shalidor |q Simply Misplaced/Talk to Shalidor
 |only Aldmeri Dominion
 step
 goto eldenrootmagesguilddown_base 62.43,45.67
@@ -3220,7 +3069,7 @@ goto 61.41,34.34
 talk Abnur Tharn |q Castle of the Worm/Talk to Abnur Tharn
 |only Aldmeri Dominion
 step
-goto 60.30,31.13
+goto 56.44,36.67
 'Use _Portal to Coldharbour_ |q Castle of the Worm/Talk to Abnur |future
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
@@ -3230,7 +3079,7 @@ talk Abnur Tharn |q Castle of the Worm/Talk to Abnur Tharn |future
 |only Aldmeri Dominion
 step
 goto 45.03,75.02
-talk Lyris Titanborn |q Castle of the Worm/Talk to Lyris
+talk Lyris Titanborn |q Castle of the Worm/Talk to Lyris Titanborn
 |only Aldmeri Dominion
 step
 goto 59.24,41.20
@@ -3418,8 +3267,7 @@ talk Captain Sarandil |q The Staff of Magnus/Enter the Inner Vault |future
 |tip Manually skip to the next step.
 step
 goto 66.48,47.68
-'Open _Inner Vault_ |q The Staff of Magnus/Secure the Staff of Magnus |future
-|tip Manually skip to the next step.
+'Open _Inner Vault_ |q The Staff of Magnus/Enter the Inner Vault  |future
 step
 goto 65.86,47.31
 'Take _Staff of Magnus_ |q The Staff of Magnus/Secure the Staff of Magnus |future
@@ -3492,12 +3340,21 @@ step
 goto 26.07,60.23
 |tip Watch the dialogue.
 talk Sheogorath |q Circus of Cheerful Slaughter/Find Sheogorath in Daggerwaymore
+|tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
 goto 22.87,65.45
-.'Save _Vanus Galerion_ |q Circus of Cheerful Slaughter/Save the Guild Members
-.'Save _Arch-Mage Shalidor_ |q Circus of Cheerful Slaughter/Save the Guild Members
-.'Save _Valaste_ |q Circus of Cheerful Slaughter/Save the Guild Members
+'Save _Vanus Galerion_ |q Circus of Cheerful Slaughter/Save the Guild Members
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 28.99,60.03
+'Save _Arch-Mage Shalidor_ |q Circus of Cheerful Slaughter/Save the Guild Members
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 28.32,67.71
+'Save _Valaste_ |q Circus of Cheerful Slaughter/Save the Guild Members
 |only Aldmeri Dominion
 step
 goto 26.95,63.40
@@ -3530,13 +3387,14 @@ talk Arch-Mage Shalidor
 accept Chateau of the Ravenous Rodent
 |only Aldmeri Dominion
 step
-goto 58.64,41.39 |q The Prismatic Core |future
+goto 73.02,40.00
+talk Bera Moorsmith
+accept The Prismatic Core
 |only Aldmeri Dominion
 step
 goto 68.05,28.33
 |tip Inside the Fighters Guild.
-talk Guildmaster Sees-All-Colors
-accept The Prismatic Core
+talk Guildmaster Sees-All-Colors |q The Prismatic Core/Talk to Guildmaster Sees-All-Colors
 |only Aldmeri Dominion
 step
 goto 68.80,29.27
@@ -3603,7 +3461,7 @@ talk Merric at-Aswala |q The Prismatic Core/Get Instructions from Merric
 step
 goto 37.63,24.31
 'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Small Fire
-|tip The Forge Valve to the left, then the Bellows on the right twice.
+'The _Forge Valve_ to the left, then the _Bellows_ on the right twice
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
@@ -3611,8 +3469,7 @@ goto 37.63,24.31
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
-'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Medium-Sized Fire
-|tip The Forge Valve to the left, the coals in the middle, and then the Bellows on the right three times.
+'The _Forge Valve_ to the left, the _Coals_ in the middle, and then the _Bellows_ on the right three times |q The Prismatic Core/Stoke a Medium-Sized Fire
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
@@ -3620,8 +3477,7 @@ goto 37.63,24.31
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
-'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Large Fire
-|tip The Forge Valve to the left three times, the coals in the middle, and then the Bellows on the right three times.
+'The _Forge Valve_ to the left three times, the _Coals_ in the middle, and then the _Bellows_ on the right three times |q The Prismatic Core/Stoke a Large Fire
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
@@ -3674,10 +3530,6 @@ talk Treethane Niriel |q Frighten the Fearsome/Talk to the Treethane
 step
 goto 71.13,64.93
 talk Aranias |q Frighten the Fearsome/Talk to Aranias |future
-step
-goto 71.16,64.88
-talk Andur |q Frighten the Fearsome/Gather Seeds
-|tip Manually skip to the next step.
 step
 goto 70.87,64.75
 'Search _Shimmering Kollopi Tree_ |q Frighten the Fearsome/Gather Seeds
@@ -4055,8 +3907,8 @@ goto 65.11,31.07
 'Take _Orders from Vicereeve Pelidil_ |lorebook Orders from Vicereeve Pelidil/3/14/49
 step
 goto 25.64,33.57
-talk Razum-dar |q Veil of Illusion/Talk to Razum-dar |future
 |tip Drop down.
+talk Razum-dar |q Veil of Illusion/Talk to Razum-dar |future
 step
 goto 11.04,35.15
 'Climb _Woodhearth_ |q Veil of Illusion/Talk to Treethane Fariel
@@ -4118,6 +3970,11 @@ goto 48.67,41.79 |q Before the Storm/Reach Serpent's Grotto
 step
 goto greenshade_base 28.89,50.39
 wayshrine Serpent's Grotto
+step
+'Use _Serpent's Grotto_
+'Travel to _Vulkhel Guard_ in Auridon |q The Tharn Speaks/Go to the Vulkhel Guard Mages Guild
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
 step
 goto vulkhelguard_base 22.98,53.34
 'Open _Mages Guild_ |q The Tharn Speaks/Go to the Vulkhel Guard Mages Guild
@@ -4475,7 +4332,7 @@ step
 goto 58.90,32.91
 kill Corrupted Tree Spirit |q The Blight of the Bosmer/Kill East Corrupted Tree Spirit
 step
-goto 59.25,32.04 |q The Blight of the Bosmer/Find Indaenir
+goto 60.04,30.91 |q The Blight of the Bosmer/Find Indaenir
 step
 goto 57.53,30.14
 'Find _Indaenir_ |q The Blight of the Bosmer/Find Indaenir
@@ -4950,7 +4807,7 @@ step
 goto vulkwasten_base 46.05,79.04
 wayshrine Vulkwasten
 step
-goto 57.64,64.50
+goto 59.98,67.85
 talk Bera Moorsmith
 accept Proving the Deed
 |only Aldmeri Dominion
@@ -5462,8 +5319,7 @@ talk Merric at-Aswala
 turnin Proving the Deed
 |only Aldmeri Dominion
 step
-goto 59.31,65.09
-|tip She runs up to you.
+goto 60.03,68.00
 talk Bera Moorsmith
 accept Will of the Council
 |only Aldmeri Dominion
@@ -5475,12 +5331,12 @@ accept The Mad God's Bargain
 step
 goto 46.04,79.02
 'Use _Vulkwasten_
-'Travel to _The Harborage_ in Auridon |q Valley of Blades/Enter The Harborage
+'Travel to _The Harborage_ in Auridon |q Valley of Blades/Enter the Harborage
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
 goto auridon_base 69.65,92.86
-'Open _The Harborage_ |q Valley of Blades/Enter The Harborage |future
+'Open _The Harborage_ |q Valley of Blades/Enter the Harborage |future
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -6381,7 +6237,7 @@ kill Mannimarco |q Shadow of Sancre Tor/Defeat Mannimarco
 |only Aldmeri Dominion
 step
 goto 23.53,50.60
-'Take _Amulet of Kings_ |q Shadow of Sancre Tor/Collect the Amulet of Kings
+'Take _Amulet of Kings_ |q Shadow of Sancre Tor/Take the Amulet of Kings
 |only Aldmeri Dominion
 step
 goto 18.72,50.49
@@ -6710,11 +6566,11 @@ goto 61.35,32.81
 |only Aldmeri Dominion
 step
 goto 62.78,33.10
-talk Lyris Titanborn |q Council of the Five Companions/Talk to Lyris
+talk Lyris Titanborn |q Council of the Five Companions/Talk to Lyris Titanborn
 |only Aldmeri Dominion
 step
 goto 62.78,33.10
-'Listen to _Lyris_ |q Council of the Five Companions/Listen to Lyris
+'Listen to _Lyris_ |q Council of the Five Companions/Listen to Lyris Titanborn
 |only Aldmeri Dominion
 step
 goto 52.85,34.58
@@ -6998,19 +6854,19 @@ goto 57.95,55.04
 |tip Follow The Silvenar and The Green Lady
 kill the emenies that appear |q The Moonlit Path/Defend the Silvenar and the Green Lady
 step
-goto 56.64,38.01
+goto 56.15,41.48
 talk The Green Lady |q The Moonlit Path/Talk to the Green Lady
 step
-goto 56.64,38.01
+goto 56.15,41.48
 'Wait for _The Silvenar_ |q The Moonlit Path/Wait for the Silvenar
 step
-goto 56.64,38.01
+goto 56.15,41.48
 kill The Silvenar |q The Moonlit Path/Kill the Silvenar
 step
-goto 56.76,38.22
+goto 56.15,41.48
 talk The Green Lady |q The Moonlit Path/Talk to the Green Lady
 step
-goto 58.40,38.96
+goto 58.05,42.06
 'Use _Portal_ |q The Moonlit Path/Return to the Temple
 step
 goto planeofjodehubhillbos_base 58.13,53.68
@@ -7248,7 +7104,8 @@ step
 goto 47.54,44.50
 'Unlock _Cell Door_ |q Innocent Scoundrel/Free Jakarn
 step
-goto 32.36,44.23 |q Innocent Scoundrel/Follow Jakarn
+goto 32.36,44.23
+'Follow _Jakarn_ |q Innocent Scoundrel/Follow Jakarn
 step
 goto 32.45,21.26 |q Innocent Scoundrel/Exit the Grave
 step
@@ -7261,8 +7118,6 @@ goto 35.22,81.06
 step
 goto 34.03,85.02
 talk Jakarn |q Innocent Scoundrel/Talk to Jakarn
-step
-goto 36.86,66.29 |q Innocent Scoundrel/Use the Side Exit
 step
 goto 67.13,71.04
 'Climb _Stros M'Kai_ |q Innocent Scoundrel/Use the Side Exit
@@ -7288,8 +7143,6 @@ goto 12.54,63.98
 step
 goto goblinminesend_base 94.10,49.30 |q Innocent Scoundrel/Talk to Jakarn
 step
-goto 76.37,33.69 |q Innocent Scoundrel/Talk to Jakarn
-step
 goto 38.57,32.08
 talk Jakarn |q Innocent Scoundrel/Talk to Jakarn
 step
@@ -7303,8 +7156,11 @@ goto 49.00,73.52
 'Open _Stros M'Kai_ |q Innocent Scoundrel/Find Jakarn
 |tip Manually skip to the next step.
 step
-goto porthunding_base 38.03,8.24
-talk Moglurkgul |q Innocent Scoundrel/Talk to Moglurkgul |future
+goto porthunding_base 37.99,7.61
+'Find _Jakarn_ |q Innocent Scoundrel/Find Jakarn
+step
+goto 38.03,8.24
+talk Moglurkgul |q Innocent Scoundrel/Talk to Moglurkgul
 step
 goto strosmkai_base 40.79,45.03
 talk Andrilion
@@ -8633,7 +8489,7 @@ goto 69.74,61.27
 |only Daggerfall Covenant
 step
 goto foundryofwoe_base 7.68,32.73
-talk Lyris Titanborn |q Daughter of Giants/Talk to Lyris |future
+talk Lyris Titanborn |q Daughter of Giants/Talk to Lyris Titanborn |future
 |only Daggerfall Covenant
 step
 goto 9.68,43.50
@@ -10269,7 +10125,7 @@ talk Valaste |q Simply Misplaced/Talk to Valaste
 step
 goto 59.67,51.94
 talk Arch-Mage Shalidor
-'Wait for _Shalidor to Open the Portal_ |q Simply Misplaced/Wait for Shalidor to Open the Portal
+talk Shalidor |q Simply Misplaced/Talk to Shalidor
 |only Daggerfall Covenant
 step
 goto 59.09,52.84
@@ -11398,12 +11254,21 @@ goto 26.07,60.23
 |tip Follow the path.
 |tip Watch the dialogue.
 talk Sheogorath |q Circus of Cheerful Slaughter/Find Sheogorath in Daggerwaymore
+|tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
 goto 22.87,65.45
-.'Save _Vanus Galerion_ |q Circus of Cheerful Slaughter/Save the Guild Members
-.'Save _Arch-Mage Shalidor_ |q Circus of Cheerful Slaughter/Save the Guild Members
-.'Save _Valaste_ |q Circus of Cheerful Slaughter/Save the Guild Members
+'Save _Vanus Galerion_ |q Circus of Cheerful Slaughter/Save the Guild Members
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto 28.99,60.03
+'Save _Arch-Mage Shalidor_ |q Circus of Cheerful Slaughter/Save the Guild Members
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto 28.32,67.71
+'Save _Valaste_ |q Circus of Cheerful Slaughter/Save the Guild Members
 |only Daggerfall Covenant
 step
 goto 26.95,63.40
@@ -13438,12 +13303,12 @@ wayshrine Eastern Evermore
 step
 goto 46.63,37.16
 'Use _Eastern Evermore_
-'Travel to _The Harborage_ in Glenumbra |q Valley of Blades/Enter The Harborage
+'Travel to _The Harborage_ in Glenumbra |q Valley of Blades/Enter the Harborage
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
 goto glenumbra_base 35.50,79.27
-'Open _The Harborage_ |q Valley of Blades/Enter The Harborage |future
+'Open _The Harborage_ |q Valley of Blades/Enter the Harborage |future
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -13720,7 +13585,7 @@ kill Mannimarco |q Shadow of Sancre Tor/Defeat Mannimarco
 |only Daggerfall Covenant
 step
 goto 23.53,50.60
-'Take _Amulet of Kings_ |q Shadow of Sancre Tor/Collect the Amulet of Kings
+'Take _Amulet of Kings_ |q Shadow of Sancre Tor/Take the Amulet of Kings
 |only Daggerfall Covenant
 step
 goto 18.72,50.49
@@ -14051,11 +13916,11 @@ goto 67.26,63.58
 |only Daggerfall Covenant
 step
 goto 70.30,62.52
-talk Lyris Titanborn |q Council of the Five Companions/Talk to Lyris
+talk Lyris Titanborn |q Council of the Five Companions/Talk to Lyris Titanborn
 |only Daggerfall Covenant
 step
 goto 70.30,62.52
-'Listen to _Lyris_ |q Council of the Five Companions/Listen to Lyris
+'Listen to _Lyris_ |q Council of the Five Companions/Listen to Lyris Titanborn
 |only Daggerfall Covenant
 step
 goto 65.39,62.12
@@ -16445,7 +16310,7 @@ goto 65.28,33.82
 |only Ebonheart Pact
 step
 goto foundryofwoe_base 7.68,32.73
-talk Lyris Titanborn |q Daughter of Giants/Talk to Lyris |future
+talk Lyris Titanborn |q Daughter of Giants/Talk to Lyris Titanborn |future
 |only Ebonheart Pact
 step
 goto 9.68,43.50
@@ -17618,7 +17483,7 @@ goto 32.45,60.49
 step
 goto 31.53,56.68
 talk Arch-Mage Shalidor
-'Wait for _Shalidor to Open the Portal_ |q Simply Misplaced/Wait for Shalidor to Open the Portal
+talk Shalidor |q Simply Misplaced/Talk to Shalidor
 |only Ebonheart Pact
 step
 goto 32.54,56.82
@@ -20980,7 +20845,7 @@ accept Will of the Council
 step
 goto 14.16,13.13
 'Use _Fort Amol_
-'Travel to _The Harborage_ in Stonefalls |q Valley of Blades/Enter The Harborage
+'Travel to _The Harborage_ in Stonefalls |q Valley of Blades/Enter the Harborage
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -22184,7 +22049,7 @@ kill Mannimarco |q Shadow of Sancre Tor/Defeat Mannimarco
 |only Ebonheart Pact
 step
 goto 23.53,50.60
-'Take _Amulet of Kings_ |q Shadow of Sancre Tor/Collect the Amulet of Kings
+'Take _Amulet of Kings_ |q Shadow of Sancre Tor/Take the Amulet of Kings
 |only Ebonheart Pact
 step
 goto 18.72,50.49
@@ -22370,11 +22235,11 @@ goto 64.59,33.74
 |only Ebonheart Pact
 step
 goto 66.93,34.52
-talk Lyris Titanborn |q Council of the Five Companions/Talk to Lyris
+talk Lyris Titanborn |q Council of the Five Companions/Talk to Lyris Titanborn
 |only Ebonheart Pact
 step
 goto 66.93,34.52
-'Listen to _Lyris_ |q Council of the Five Companions/Listen to Lyris
+'Listen to _Lyris_ |q Council of the Five Companions/Listen to Lyris Titanborn
 |only Ebonheart Pact
 step
 goto 62.92,39.81
@@ -23820,8 +23685,8 @@ goto 46.39,24.94
 'Open _Statue Room_ |q The Final Assault/Enter the Next Area
 step
 'On your _RIGHT_ after you enter:
-|tip Follow and Protect Gabrielle Benele
-talk Gabrielle Benele |q The Final Assault/Find a Path Through the Statue Room
+talk Gabrielle Benele
+'Follow and _Protect Gabrielle Benele_ |q The Final Assault/Find a Path Through the Statue Room
 step
 'Near you to the _SOUTHWEST_:
 'Open _The Endless Stair_ |q The Final Assault/Exit the Statue Room
@@ -24181,7 +24046,7 @@ step
 goto 47.06,55.73
 'Use _Eastern Elsweyr_
 'Travel to _Vulkhel Guard_ in Auridon |q The Harborage |future
-|tip Manually skip to the next step.
+|tip Manually skip to the next step.|next Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Auridon 
 |only Aldmeri Dominion
 step
 goto southhighrockgate_base 44.58,54.43
@@ -24284,7 +24149,7 @@ step
 goto northhighrockgate_base 62.70,47.55
 'Use _Northern High Rock Gate_ |q The Harborage |future
 'Travel to _Daggerfall_ in Glenumbra
-|tip Manually skip to the next step.
+|tip Manually skip to the next step.|next Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Glenumbra
 |only Daggerfall Covenant
 step
 goto northmorrowgate_base 47.80,47.71
@@ -24351,22 +24216,29 @@ accept Reporting for Duty
 |only Ebonheart Pact
 step
 goto 86.57,15.14 |q Reporting for Duty/Talk to Protector Galiel
+|only Ebonheart Pact
 step
-goto 85.02,17.47 |q Reporting for Duty/Talk to Protector Galiel
+goto 85.02,17.47 |q Reporting for Duty/Talk to Protector 
+|only Ebonheart Pact
 step
 goto 82.84,18.64 |q Reporting for Duty/Talk to Protector Galiel
+|only Ebonheart Pact
 step
 goto 81.26,17.99
 talk Protector Galiel |q Reporting for Duty/Talk to Protector Galiel
 |only Ebonheart Pact
 step
 goto 82.84,18.64 |q Reporting for Duty/Talk to Grand Warlord Zimmeron
+|only Ebonheart Pact
 step
 goto 85.02,17.47 |q Reporting for Duty/Talk to Grand Warlord Zimmeron
+|only Ebonheart Pact
 step
 goto 86.57,15.14 |q Reporting for Duty/Talk to Grand Warlord Zimmeron
+|only Ebonheart Pact
 step
-goto 85.98,14.12 |q Reporting for Duty/Talk to Grand Warlord Zimmeron
+goto 85.98,14.12 |q Reporting for Duty/Talk to Grand Warlord 
+|only Ebonheart Pact
 step
 goto northmorrowgate_base 73.78,72.90
 'Open _Northern Morrowind Gate_ |q Reporting for Duty/Talk to Grand Warlord Zimmeron
@@ -24389,6 +24261,7 @@ step
 goto northmorrowgate_base 56.88,45.03
 'Use _North Morrowind_
 'Travel to _Davon's Watch_ in Stonefalls |q The Harborage |future
+|tip Manually skip to the next step.|next Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Stonefalls
 |only Ebonheart Pact
 step
 ]])
@@ -38271,7 +38144,7 @@ step
 |tip Manually skip to the next step.
 step
 goto 52.66,58.89
-talk to Lyris |q The Gray Host/Investigate the Midland Camp
+talk Lyris Titanborn |q The Gray Host/Investigate the Midland Camp
 |tip Manually skip to the next step.
 step
 goto 51.60,59.20

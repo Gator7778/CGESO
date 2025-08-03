@@ -5,28 +5,93 @@ CGV:RegisterGuide("LEVELING\\The Wailing Prison",[[
 loadingimage loadscreen_chapter1_01.dds
 description Brave The Wailing Prison, a prisoner stronghold in Coldharbour.
 step
-goto wailingprison1_base 16.86,33.72
+|tip Skip to Talk to the Prophet if this is you chose Intro on character creation menu.
+'Open _Auridon_ Map
+'Travel to _Vulkhel Guard_ |q Soul Shriven in Coldharbour |future
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto vulkhelguard_base 52.60,40.69
+talk The Hooded Figure |q Soul Shriven in Coldharbour/Talk to the Hooded Figure |future
+|only Aldmeri Dominion
+step
+goto 59.70,68.01
+'Open _The Interim Suitor_ |q Soul Shriven in Coldharbour/Talk to the Benefactor
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 60.96,67.81
+|tip Go downstairs in the ship.
+talk The Benefactor |q Soul Shriven in Coldharbour/Talk to the Benefactor
+|only Aldmeri Dominion
+step
+|tip Skip to Talk to the Prophet if this is you chose Intro on character creation menu.
+'Open _Glenumbra_ Map
+'Travel to _Daggerfall_ |q Soul Shriven in Coldharbour |future
+|tip Manually skip to the next step
+|only Daggerfall Covenant
+step
+goto daggerfall_base 48.59,21.51
+talk Hooded Figure |q Soul Shriven in Coldharbour/Talk to the Hooded Figure
+|only Daggerfall Covenant
+step
+goto 57.80,32.91 |q Soul Shriven in Coldharbour/Talk to the Benefactor
+|only Daggerfall Covenant
+step
+goto 57.06,58.32 |q Soul Shriven in Coldharbour/Talk to the Benefactor
+|only Daggerfall Covenant
+step
+goto 68.91,60.61
+|tip Inside Patheirry House
+talk Benefactor |q Soul Shriven in Coldharbour/Talk to the Benefactor
+|only Daggerfall Covenant
+step
+'Open
+|tip Skip to Talk to the Prophet if this is you chose Intro on character creation menu. _Stonesfalls_ Map
+'Travel to _Davon's Watch_ |q Soul Shriven in Coldharbour |future
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto davonswatch_base 56.25,76.25
+talk Hooded Figure |q Soul Shriven in Coldharbour/Talk to the Hooded Figure |future
+|only Ebonheart Pact
+step
+goto 48.72,72.08 |q Soul Shriven in Coldharbour/Talk to the Benefactor
+|only Ebonheart Pact
+step
+goto 50.57,64.87 |q Soul Shriven in Coldharbour/Talk to the Benefactor
+|only Ebonheart Pact
+step
+goto 58.59,66.17
+|tip Inside Sadreno House.
+talk Benefactor |q Soul Shriven in Coldharbour/Talk to the Benefactor
+|only Ebonheart Pact
+step
+goto wailingprison1_base 14.56,32.85
+talk The Prophet |q Soul Shriven in Coldharbour/Talk to the Prophet |future
+step
+goto 16.86,33.72
 |tip Watch the dialogue
-'Open _The Wailing Prison_ |q Soul Shriven in Coldharbour/Find a Way to Escape Coldharbour
+'Open _The Wailing Prison_ |q Soul Shriven in Coldharbour/Leave the Cell
+step
+goto 28.36,35.96
+'Search _Dremora Churl_ |q Soul Shriven in Coldharbour/Loot a Weapon from the Dremora
 step
 goto 39.60,33.57
-'Join _Lyris Titanborn_ |q Soul Shriven in Coldharbour/Join Lyris
-step
-goto 39.60,33.57
-'Follow _Lyris Titanborn_ |q Soul Shriven in Coldharbour/Follow Lyris
+'Follow _Lyris Titanborn_ |q Soul Shriven in Coldharbour/Follow Lyris Titanborn
 step
 goto 49.37,36.61
 kill Dremora Churl |q Soul Shriven in Coldharbour/Defeat the Prison Guard
 step
 goto 82.90,71.95
-'Follow _Lyris Titanborn_ |q Soul Shriven in Coldharbour/Follow Lyris
+'Follow _Lyris Titanborn_ |q Soul Shriven in Coldharbour/Follow Lyris Titanborn
 step
-goto 85.88,65.96
-'Follow _Lyris Titanborn_ |q Soul Shriven in Coldharbour/Follow Lyris 
+goto 82.49,70.84
+kill Dremora Churl |q Soul Shriven in Coldharbour/Defeat the Prison Guards
 step
 goto 85.08,66.34
 |tip Watch the dialogue.
-talk Lyris Titanborn |q Soul Shriven in Coldharbour/Talk to Lyris |future
+talk Lyris Titanborn |q Soul Shriven in Coldharbour/Talk to Lyris Titanborn |future
 step
 goto 87.92,61.39
 'Open _The Bleeding Forge_ |q Soul Shriven in Coldharbour/Continue through the Bleeding Forge
@@ -37,12 +102,18 @@ step
 goto 85.19,45.73
 'Open _The Towers of Eyes_ |q Soul Shriven in Coldharbour/Reach the Towers of Eyes
 step
-goto wailingprison4_base 51.07,52.48 |q Soul Shriven in Coldharbour/Destroy a Coldharbour Sentinel
+goto wailingprison4_base 51.07,52.48 |q Soul Shriven in Coldharbour/Destroy the Coldharbour Sentinel
 step
-goto 58.84,43.84 |q Soul Shriven in Coldharbour/Destroy a Coldharbour Sentinel
+goto 58.84,43.84 |q Soul Shriven in Coldharbour/Destroy the Coldharbour Sentinel
+step
+goto 60.60,33.29 |q Soul Shriven in Coldharbour/Destroy the Coldharbour Sentinel
 step
 goto 69.86,60.98
-kill Coldharbour Sentinel |q Soul Shriven in Coldharbour/Destroy a Coldharbour Sentinel
+kill Coldharbour Sentinel |q Soul Shriven in Coldharbour/Destroy the Coldharbour Sentinel
+step
+goto 58.84,43.84 |q Soul Shriven in Coldharbour/Reach the Prophet's Cell
+step
+goto 60.60,33.29 |q Soul Shriven in Coldharbour/Reach the Prophet's Cell
 step
 goto 58.84,43.84 |q Soul Shriven in Coldharbour/Reach the Prophet's Cell
 step
@@ -50,7 +121,7 @@ goto 46.62,68.11
 'Reach _The Prophet's Cell_ |q Soul Shriven in Coldharbour/Reach the Prophet's Cell
 step
 goto 46.62,68.11
-talk Lyris Titanborn |q Soul Shriven in Coldharbour/Talk to Lyris
+talk Lyris Titanborn |q Soul Shriven in Coldharbour/Talk to Lyris Titanborn
 step
 goto 57.96,72.37
 talk Cadwell |q Soul Shriven in Coldharbour/Talk to Cadwell
@@ -60,19 +131,25 @@ step
 goto 51.94,88.99
 'Unlock _The Undercroft_ |q Soul Shriven in Coldharbour/Enter the Undercroft
 step
-goto wailingprison5_base 14.42,47.27 |q Soul Shriven in Coldharbour/Find the Prophet's Cell
+goto wailingprison5_base 27.49,18.97 |q Soul Shriven in Coldharbour/Find the Prophet's Cell
+step
+goto 43.69,37.81 |q Soul Shriven in Coldharbour/Find the Prophet's Cell
+step
+goto 15.73,44.74 |q Soul Shriven in Coldharbour/Find the Prophet's Cell
+step
+goto 19.23,63.50 |q Soul Shriven in Coldharbour/Find the Prophet's Cell
 step
 goto 34.26,83.13
 'Open _The Prophet's Cell_ |q Soul Shriven in Coldharbour/Find the Prophet's Cell
 step
 goto wailingprison6_base 38.66,56.51
-'Follow _Lyris Titanborn_ |q Soul Shriven in Coldharbour/Follow Lyris
+'Follow _Lyris Titanborn_ |q Soul Shriven in Coldharbour/Follow Lyris Titanborn
 step
 goto 38.66,56.51
-talk Lyris Titanborn |q Soul Shriven in Coldharbour/Talk to Lyris
+talk Lyris Titanborn |q Soul Shriven in Coldharbour/Talk to Lyris Titanborn
 step
 goto 38.66,56.51
-'Defend _Lyris Titanborn_ |q Soul Shriven in Coldharbour/Defend Lyris
+'Defend _Lyris Titanborn_ |q Soul Shriven in Coldharbour/Defend Lyris Titanborn
 step
 goto 43.92,54.52
 'Activate _Dark Pinion_ |q Soul Shriven in Coldharbour/.*Activate the Pinions.* |count 1
@@ -91,35 +168,39 @@ step
 goto 86.53,41.34 
 'Open _The Anchor Mooring_ |q Soul Shriven in Coldharbour/Enter the Anchor Mooring
 step
-goto wailingprison7_base 49.29,67.08
-'Get to the _Anchor Base_ |q Soul Shriven in Coldharbour/Get to the Anchor Base
-step
-goto 49.55,61.85
+goto wailingprison7_base 49.55,61.85
 |tip Watch the dialogue
-kill Child of Bones |q Soul Shriven in Coldharbour/Defeat the Child of Bones
+kill Child of Bones |q Soul Shriven in Coldharbour/Defeat the Child of Bones |future
 step
 goto 49.81,61.15
 talk The Prophet |q Soul Shriven in Coldharbour/Talk to The Prophet
 step
 goto 49.35,56.86
-'Use _Skyshard_ |q Soul Shriven in Coldharbour/Collect the Skyshard
+'Use _Skyshard_ |q Soul Shriven in Coldharbour/Take the Skyshard
 step
 goto 49.40,51.56
-'Approach the _Portal_ |q Soul Shriven in Coldharbour/Approach the Portal |future
+'Approach the _Portal_ |q Soul Shriven in Coldharbour/Wait for the Prophet |future
+|tip Manually skip to the next step.
 step
-goto khenarthisroost_base 55.70,75.41
-talk The Prophet
-turnin Soul Shriven in Coldharbour |next Aldmeri Dominion Leveling Guides\\Khenarthi's Roost
+'Click _Here_ for Full Guide |confirm |nextreload Aldmeri Dominion Leveling Guides\\Khenarthi's Roost
+'_OR_
+'Click _Here_ for Main Quest Only |confirm |nextreload Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Khenarthi's Roost
 |only Aldmeri Dominion
 step
 goto porthunding_base 36.16,87.59
 talk The Prophet
-turnin Soul Shriven in Coldharbour |next Daggerfall Covenant Leveling Guides\\Stros M'Kai
+turnin Soul Shriven in Coldharbour
+'Click _Here_ for Full Guide |confirm |nextreload Daggerfall Covenant Leveling Guides\\Stros M'Kai
+'_OR_
+'Click _Here_ for Main Quest Only |confirm |nextreload Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Stros M'Kai
 |only Daggerfall Covenant
 step
 goto bleakrockvillage_base 78.54,47.49
 talk The Prophet
-turnin Soul Shriven in Coldharbour |next Ebonheart Pact Leveling Guides\\Bleakrock Isle
+turnin Soul Shriven in Coldharbour 
+'Click _Here_ for Full Guide |confirm |nextreload Ebonheart Pact Leveling Guides\\Bleakrock Isle
+'_OR_
+'Click _Here_ for Main Quest Only |confirm |nextreload Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Bleakrock Isle
 |only Ebonheart Pact
 ]])
 

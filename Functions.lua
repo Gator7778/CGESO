@@ -677,6 +677,7 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 			    GetCurrentMapIndex() == Enums.CyrodiilMap or
 				GetCurrentMapIndex() == Enums.DeshaanMap or
 				GetCurrentMapIndex() == Enums.EastmarchMap or
+				GetCurrentMapIndex() == Enums.Eyevea or
 				GetCurrentMapIndex() == Enums.GoldCoastMap or
 				GetCurrentMapIndex() == Enums.HewsBaneMap or
 				GetCurrentMapIndex() == Enums.MurkmireMap or
@@ -741,6 +742,7 @@ function Utils.DistanceOffsetForIsComplete()
 			    GetCurrentMapIndex() == Enums.CyrodiilMap or
 				GetCurrentMapIndex() == Enums.DeshaanMap or
 				GetCurrentMapIndex() == Enums.EastmarchMap or
+				GetCurrentMapIndex() == Enums.Eyevea or
 				GetCurrentMapIndex() == Enums.GoldCoastMap or
 				GetCurrentMapIndex() == Enums.HewsBaneMap or
 				GetCurrentMapIndex() == Enums.MurkmireMap or

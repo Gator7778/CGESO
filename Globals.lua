@@ -25,6 +25,7 @@ Enums = {
 	CyrodiilMap = 14,
 	DeshaanMap = 10,
 	EastmarchMap = 13,
+	Eyevea = 52,
 	FargraveMap = 47,
 	GalenMap = 48,
 	GlenumbraMap = 2,
