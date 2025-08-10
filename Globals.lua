@@ -44,6 +44,7 @@ Enums = {
 	ReapersMarchMap = 17,
 	RivenspireMap = 3,
 	ShadowfenMap = 9,
+	SolsticeMap = 53,
 	SouthernElsweyrMap = 37,
 	StonefallsMap = 11,
 	StormhaveMap = 4,

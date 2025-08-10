@@ -51998,7 +51998,8 @@ step
 goto 69.21,22.92 |q Vesper Valente |future
 step
 goto 70.37,17.89
-wayshrine Valente Vineyards
+'Discover _Valente Vineyards_ |q Vesper Valente |future
+|tip Manually skip to the next step.
 step
 goto 68.82,18.83
 talk Fennorian
@@ -53191,5 +53192,1982 @@ talk Curate Gadayn |q In Memory Of/Talk to Curate Gadayn |future
 step
 goto 41.96,74.57
 talk Leramil the Wise
-turnin In Memory Of
+turnin In Memory Of |next LEVELING\\Solstice
+]])
+
+CGV:RegisterGuide("LEVELING\\Solstice",[[
+loadingimage loadscreen_solstice_zone_01.dds
+description The western part of Solstice will is a tropical paradise from where the Stirk Fellowship will make their base of operations, as they attempt to breach past the massive Writing Wall, into the eastern half of Solstice from where the Worm Cult has the bulk of their operations.
+step
+-- START: ALDMERI DOMINION FACTION PROLOGUE GUIDE
+
+-- END: ALDMERI DOMINION FACTION PROLOGUE GUIDE
+
+-- START: DAGGERFALL COVENANT FACTION
+
+-- END: DAGGERFALL COVENANT FACTION
+
+-- START: EBONHEART PACT FACTION
+
+-- END: EBONHEART PACT FACTION
+
+-- BEGIN: MERGED PROLOGUE FOR ALL FACTIONS
+
+-- END: MERGED PROLOGUE GUIDE
+
+-- BEGIN SOLSTICE GUIDE
+'Open _Solstice_ Map
+'Travel to _Sunport Docks_ |q The Stirk Fellowship |future
+|tip Manually skip to the next step.
+step
+goto u46_Sunport_base 21.59,51.71
+talk Midconjuror Mirmal
+accept The Stirk Fellowship
+step
+goto 24.06,60.67
+talk Prince Azah |q The Stirk Fellowship/Talk to Prince Azah
+step
+goto 25.04,61.39
+'Place _Portal Anchor_ |q The Stirk Fellowship/.*Place Portal Anchors.* |count 1
+step
+goto 25.41,62.26
+'Place _Portal Anchor_ |q The Stirk Fellowship/.*Place Portal Anchors.* |count 2
+step
+goto 25.07,63.14
+'Place _Portal Anchor_ |q The Stirk Fellowship/.*Place Portal Anchors.* |count 3
+step
+goto 24.23,62.37
+'Place _Portal Anchor_ |q The Stirk Fellowship/.*Place Portal Anchors.* |count 4
+step
+goto 24.09,61.51
+talk Mage Farinor |q The Stirk Fellowship/Talk to Mage Farinor
+step
+goto 24.09,61.51
+'Welcome the _Alliance Representatives_ |q The Stirk Fellowship/Welcome the Alliance Representatives
+step
+goto 24.09,61.51
+talk Midconjuror Mirmal |q The Stirk Fellowship/Talk to Midconjuror Mirmal
+step
+goto 24.39,60.88
+talk Prince Azah |q The Stirk Fellowship |future
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 46.94,52.76 |q Ghosthunters |future
+step
+goto 50.30,55.75 |q Ghosthunters |future
+step
+goto 47.52,56.14
+'Use _Skyshard_ |q Ghosthunters |future
+|tip Manually skip to the next step.
+step
+goto 50.30,55.75 |q Ghosthunters |future
+step
+goto 49.34,60.43 |q Ghosthunters |future
+step
+goto 43.25,63.87
+'Discover _Corelanya Manor_ |q Ghosthunters |future
+|tip Manually skip to the next step.
+step
+goto 48.87,60.91
+talk Oorbesh
+accept Ghosthunters
+step
+goto 48.79,62.04
+talk Gahz |q Ghosthunters/Talk to Gahz
+step
+goto 48.79,62.25
+'Open _Corelanya Manor_ |q Ghosthunters/Enter Corelanya Manor
+|tip Manually skip to the next step.
+step
+goto u46_base_CorelanyaManor 56.55,54.31
+'Take _Soul Cage_ |q Ghosthunters/Explore the Foyer
+step
+goto 56.55,51.31
+talk Gahz |q Ghosthunters/Talk to Gahz
+step
+goto u46_base_CorelanyaManor 71.54,49.44
+'Open _Dining Hall_ |q Ghosthunters/Follow Wisp 
+|tip Manually skip to the next step.
+step
+goto 80.90,65.17
+'Examine _Basket_ |q Ghosthunters/Search the Dining Hall
+step
+goto 80.90,65.17
+talk Valendir |q Ghosthunters/Talk to Valendir |future
+step
+goto 80.90,65.17
+'Use _Soul Cage_ |q Ghosthunters/Reclaim Valendir's Wisp
+step
+goto 85.77,74.53
+'Open _Reanimatorium_ |q Ghosthunters |future
+|tip Manually skip to the next step.
+step
+goto u46_base_CorelanyaReanim 27.53,59.22
+talk Valendir |q Ghosthunters/Talk to Valendir |future
+step
+goto 32.73,58.18
+'Use _Soul Cage_ |q Ghosthunters/Put Valendir Inside the Armor
+step
+goto 46.49,63.64
+'Mark _Valve_ |q Ghosthunters/Direct Valendir to the Valve
+step
+goto 51.95,59.48
+'Examine _Fleshcrafting Tools_ |q Ghosthunters/.*Search the Reanimatorium.* |count 1
+step
+goto 44.68,25.45
+'Use _Soul Cage_ |q Ghosthunters/.*Search the Reanimatorium.* |count 2
+|tip Manually skip to the next step.
+step
+goto 50.91,25.19
+'Mark _Candle_
+'Mark _Valve_ |q Ghosthunters/.*Search the Reanimatorium.* |count 2
+step
+goto 60.78,34.03
+'Examine _Letter from Ilhidel of Clan Corelanya_ |lorebook Letter from Ilhidel of Clan Corelanya/3/55/25
+step
+goto 57.40,42.34
+'Use _Soul Cage_ |q Ghosthunters/.*Search the Reanimatorium.* |count 3
+|tip Manually skip to the next step.
+step
+goto 58.44,44.42
+'Mark _Bone Pile_
+'Mark _Wheel_ |q Ghosthunters/.*Search the Reanimatorium.* |count 3
+|tip Manually skip to the next step.
+step
+goto 63.38,61.56
+talk Glendaval |q Ghosthunters/.*Search the Reanimatorium.* |count 3
+step
+goto 79.48,68.57
+talk Valendir |q Ghosthunters/Talk to Valendir
+step
+goto 87.79,74.03
+'Climb _Dining Hall_ |q Ghosthunters/Enter the Wailing Gardens
+|tip Manually skip to the next step.
+step
+goto u46_base_CorelanyaManor 73.78,82.40
+'Open _Wailing Gardens_ |q Ghosthunters/Enter the Wailing Gardens
+step
+goto u46_base_CorelanyaCY 80.00,40.54
+talk Valendir |q Ghosthunters/Talk to Valendir |future
+step
+goto 76.76,39.19
+'Use _Soul Cage_ |q Ghosthunters/Put Valendir in the Statue
+step
+goto 75.95,42.16
+'Mark _Overgrown Hedge_ |q Ghosthunters/Direct Valendir to the Overgrown Hedge
+step
+goto 68.38,53.78 |q Ghosthunters/Find the Source of the Music
+step
+goto 53.24,54.05 |q Ghosthunters/Find the Source of the Music
+step
+goto 61.89,70.27 |q Ghosthunters/Find the Source of the Music
+step
+goto 61.35,57.57
+'Use _Soul Cage_ |q Ghosthunters/Find the Source of the Music
+|tip Manually skip to the next step.
+step
+goto 64.05,71.08
+'Mark _Overgrown Hedge_ |q Ghosthunters/Find the Source of the Music
+|tip Manually skip to the next step.
+step
+goto 69.19,82.97 |q Ghosthunters/Find the Source of the Music
+step
+goto 37.03,79.19
+'Use _Soul Cage_ |q Ghosthunters/Find the Source of the Music
+|tip Manually skip to the next step.
+step
+goto 36.49,82.16
+'Mark _Overgrown Hedge_ |q Ghosthunters/Find the Source of the Music
+|tip Manually skip to the next step.
+step
+goto 31.08,51.62 |q Ghosthunters/Find the Source of the Music
+step
+goto 37.57,47.03 |q Ghosthunters/Find the Source of the Music
+step
+goto 30.27,30.27
+talk Virwarde |q Ghosthunters/.*Talk to the Party Guests.* |count 1 |future
+step
+goto 34.86,26.22
+talk Nirallad |q Ghosthunters/.*Talk to the Party Guests.* |count 2
+step
+goto 31.89,23.51
+talk Lirianew |q Ghosthunters/.*Talk to the Party Guests.* |count 3
+step
+goto 38.92,19.73
+talk Valendir |q Ghosthunters/Talk to Valendir
+step
+goto 51.89,18.38
+'Open _Manor Foyer_ |q Ghosthunters/Go to Valendir's Quarters
+|tip Manually skip to the next step.
+step
+goto u46_base_CorelanyaManor_F2 25.47,66.29
+|tip Go upstairs.
+'Open _Valendir's Quarters_ |q Ghosthunters/Go to Valendir's Quarters
+step
+goto 16.85,63.30
+'Examine _Siluran's Journal_ |lorebook Siluran's Journal/3/55/26
+step
+goto 14.61,69.29
+'Examine _Tarnished Cup_ |q Ghosthunters/.*Search Valendir's Quarters.* |count 2
+step
+goto 10.49,73.03
+'Examine _Broken Harp_ |q Ghosthunters/.*Search Valendir's Quarters.* |count 3
+step
+goto 10.49,74.53
+talk Lirianew |q Ghosthunters/Talk to Lirianwe
+step
+goto 11.24,73.78
+talk Valendir |q Ghosthunters/Talk to Valendir
+step
+goto 13.48,75.66
+'Examine _Bookcase_ |q Ghosthunters/Investigate the Bookcase
+step
+goto 13.48,75.28
+'Open _Manor Grotto_ |q Ghosthunters/Enter the Bookcase
+step
+goto u46_base_CorelanyaSC 45.31,28.91 |q Ghosthunters/Find Oorbesh
+step
+goto 62.70,31.64 |q Ghosthunters/Find Oorbesh
+step
+goto 53.71,35.35
+'Take _Fog Lantern_ 45.31,28.91 |q Ghosthunters/.*Search the Manor Grotto.* |count 1 |future
+step
+goto 58.20,35.74
+'Take _Clothing Scrap_ |q Ghosthunters/.*Search the Manor Grotto.* |count 2
+step
+goto 56.84,36.91
+talk Valendir |q Ghosthunters/Talk to Valendir
+step
+goto 60.16,35.35
+'Use _Soul Cage_ |q Ghosthunters/Put Valendir Inside the Armor
+step
+goto 62.11,80.08
+|tip Follow Valendir stay inside shield.
+'Open _Manor Catacombs_ |q Ghosthunters/Find Oorbesh |future
+step
+goto u46_base_CorelanyaBoss 60.44,69.04
+talk Siluran |q Ghosthunters/Talk to Siluran
+step
+goto 56.27,79.85
+'Open _Manor Ossuarium_ |q Ghosthunters/Find a Way to Siluran
+|tip Manually skip to the next step.
+step
+goto 39.80,67.57 |q Ghosthunters/Find a Way to Siluran
+step
+goto 45.95,57.25
+kill Siluran |q Ghosthunters/Defeat Siluran |future
+step
+goto 45.95,57.25
+'Use _Soul Cage_ |q Ghosthunters/Capture Siluran in the Soul Cage
+step
+talk Valendir |q Ghosthunters/Talk to Valendir
+step
+goto 50.37,62.65
+talk Oorbesh |q Ghosthunters/Check on Oorbesh
+step
+goto 51.35,47.67
+'Open _Corelanya Treasury_ |q Ghosthunters/Talk to Gahz |future
+|tip Manually skip to the next step.
+step
+talk Gahz
+turnin Ghosthunters
+step
+'Open _Solstice_ Map
+'Travel to _Corelanya Manor_ |q A Pirate's Debt |future
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 44.48,65.88
+talk Cirwynia
+accept A Pirate's Debt
+step
+goto 44.48,65.88
+talk Cirwynia |q A Pirate's Debt/talk to Cirwynuia |future
+|tip Manually skip to the next step.
+step
+goto 45.58,72.62 |q Party Pains |future
+step
+goto 41.95,72.69
+'Discover _Vale of Revelry_ |q Party Pains |future
+|tip Manually skip to the next step.
+step
+goto 45.58,72.62 |q Party Pains |future
+step
+goto 47.19,70.94
+talk High Priest Caroril
+accept Party Pains
+step
+goto 47.52,70.98
+'Enter _Vale of Revelry_ |q Party Pains/Enter the Vale of Revelry |future
+|tip Manually skip to the next step.
+step
+goto u46_base_SanguineHDLV 41.36,33.91 |q Party Pains/.*Find the Missing Acolytes.* |future
+step
+goto 49.09,23.59 |q Party Pains/.*Find the Missing Acolytes.*
+step
+goto 63.71,25.02
+talk Hraewin |q Party Pains/.*Find the Missing Acolytes.* |count 1
+step
+goto 80.04,43.27 |q Party Pains/.*Find the Missing Acolytes.*
+step
+goto 75.93,52.53
+talk Mornabeth |q Party Pains/.*Find the Missing Acolytes.* |count 2
+step
+goto 72.30,55.78 |q Party Pains/.*Find the Missing Acolytes.*
+step
+goto 63.32,52.33 |q Party Pains/.*Find the Missing Acolytes.*
+step
+goto 58.64,53.10 |q Party Pains/.*Find the Missing Acolytes.*
+step
+goto 61.99,58.55
+talk Rakamin |q Party Pains/.*Find the Missing Acolytes.* |count 3
+step
+goto 56.92,63.13
+kill The Wine Sommelier
+kill Reveler Bouncer |q Party Pains/Talk to High Priest Caroril
+|tip Manually skip to the next step.
+step
+goto 59.31,44.22 |q Party Pains/Talk to High Priest Caroril
+step
+goto 70.49,52.44 |q Party Pains/Talk to High Priest Caroril
+step
+goto 76.31,48.14 |q Party Pains/Talk to High Priest Caroril
+step
+goto 72.30,55.68 |q Party Pains/Talk to High Priest Caroril
+step
+goto 64.66,52.72 |q Party Pains/Talk to High Priest Caroril |tip Cross Bridge.
+step
+goto 55.11,51.67 |q Party Pains/Talk to High Priest Caroril
+step
+goto 46.14,55.01 |q Party Pains/Talk to High Priest Caroril
+step
+goto 46.51,60.27
+'Use _Skyshard_ |q Party Pains/Talk to High Priest Caroril
+|tip Manually skip to the next step.
+step
+goto 43.84,53.49 |q Party Pains/Talk to High Priest Caroril |tip Drop down carefully.
+step
+goto 21.87,55.87
+'Enter _Solstice_ |q Party Pains/Talk to High Priest Caroril
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 47.26,70.96
+talk High Priest Caroril
+turnin Party Pains
+step
+goto 46.24,72.66
+talk Teerad
+accept A Death-Dancer's Duty
+step
+goto 43.10,73.52 |q A Death-Dancer's Duty/.*Recover the Tidal Votives.*
+step
+goto 42.60,75.40
+'Use _Sacred Scalloped Shell_ |q A Death-Dancer's Duty/Summon Drunee |future
+|tip Manually skip to the next step.
+step
+goto 42.60,75.40
+talk Drunee |q A Death-Dancer's Duty/Talk to Drunee |future
+|tip Manually skip to the next step.
+step
+'Open _Solstice_ Map
+'Travel to _Shell-Tide Village_ |q A Death-Dancer's Duty/.*Recover the Tidal Votives.*
+|tip Manually skip to the next step.
+step
+goto 50.06,67.97
+'Use _Sacred Scalloped Shell_ |q A Death-Dancer's Duty/Summon Vutraka |future
+|tip Manually skip to the next step.
+step
+goto 50.06,67.97
+talk Vutraka |q A Death-Dancer's Duty/Talk to Vutraka |future
+|tip Manually skip to the next step.
+step
+goto 52.23,69.05
+'Use _Shell-Tide Village_
+'Travel to _Corelanya Manor_ |q A Death-Dancer's Duty/.*Recover the Tidal Votives.*
+|tip Manually skip to the next step.
+step
+goto 43.86,61.28
+'Use _Sacred Scalloped Shell_ |q A Death-Dancer's Duty/Summon Laras-Eil |future
+|tip Manually skip to the next step.
+step
+goto 43.89,61.24
+talk Laras-Eil |q A Death-Dancer's Duty/Talk to Laras-Eil |future
+|tip Manually skip to the next step.
+step
+goto 43.25,63.88
+'Use _Corelanya Manor_
+'Travel to _Shell-Tide Village_ |q A Death-Dancer's Duty/.*Recover the Tidal Votives.*
+|tip Manually skip to the next step.
+step
+goto u46_Shelltide_base 41.05,29.71 |q A Death-Dancer's Duty/.*Recover the Tidal Votives.*
+step
+goto 45.41,29.49
+'Take _Laras-Eil Tidal Votive_ |q A Death-Dancer's Duty/.*Recover the Tidal Votives.* |count 1
+step
+goto 51.88,55.14
+'Take _Vutraka's Tidal Votive_ |q A Death-Dancer's Duty/.*Recover the Tidal Votives.* |count 2
+step
+goto 54.34,49.79 |q A Death-Dancer's Duty/.*Recover the Tidal Votives.* |count 3
+step
+goto u48_overland_base 52.95,75.05
+'Take _Drunee's Tidal Votive_ |q A Death-Dancer's Duty/.*Recover the Tidal Votives.* |count 3
+step
+goto 50.36,70.49 |q A Death-Dancer's Duty/Meet Teerad
+step
+goto 54.99,70.54
+talk Teerad |q A Death-Dancer's Duty/Talk to Teerad |future
+step
+goto 55.00,70.55
+'Place _Votive_ |q A Death-Dancer's Duty/Place Laras-Eil's Votive
+step
+goto 55.06,70.55
+'Place _Votive_ |q A Death-Dancer's Duty/Place Drunee's Votive
+step
+goto 55.12,70.53
+'Place _Votive_ |q A Death-Dancer's Duty/Place Vutraka's Votive
+step
+goto 54.99,70.54
+talk Teerad
+turnin A Death-Dancer's Duty
+step
+goto 41.95,72.69 |q A Pirate's Debt |future
+step
+goto 36.21,73.07
+'Examine _Worm Cult Coffer_ |q A Pirate's Debt/Rob the Worm Cult Camp |future
+step
+goto 36.18,73.02
+'Examine _The Order of the Black Worm_ |lorebook The Order of the Black Worm/1/19/8
+step
+goto 34.36,70.22
+talk Aderus Juven
+accept The Everlasting Fair
+step
+goto 35.52,69.90 |q The Everlasting Fair |future
+step
+goto 35.22,69.34
+'Use _Skyshard_ |q The Everlasting Fair |future
+|tip Manually skip to the next step.
+step
+goto 35.52,69.90 |q The Everlasting Fair |future
+step
+goto 34.38,70.72 |q The Everlasting Fair |future
+step
+goto 32.49,67.62
+talk Sergeant Alydine |q The Everlasting Fair/Talk to Sergeant Alydine
+step
+goto 30.92,67.31
+talk Everald Gardet |q The Everlasting Fair/Talk to the Wardrobe
+step
+goto 30.11,67.80
+talk Goat |q The Everlasting Fair/Talk to the Goat |future
+step
+goto 30.16,68.79
+talk Azasotl |q The Everlasting Fair/Talk to the Gate Worker |future
+|tip Manually skip to the next step.
+step
+goto 30.11,68.85
+'Open _Bristleback Extravaganza_ |q The Everlasting Fair/Search the Bristleback Extravaganza
+|tip Manually skip to the next step.
+step
+goto 28.27,70.23
+talk Sashii |q The Everlasting Fair/Talk to Sashii |future
+step
+goto 28.94,68.28
+'Open _Everlasting Fair_ |q The Everlasting Fair/Get Sashii to Safety
+step
+goto 28.76,68.05
+talk Goat |q The Everlasting Fair/Talk to the Goat
+step
+goto 28.76,68.05
+talk Sashii |q The Everlasting Fair/Talk to Sashii |future
+|tip Manually skip to the next step.
+step
+goto 29.06,67.73
+talk Madame Mysterra |q The Everlasting Fair/Talk to Madame Mysterra |future
+|tip Manually skip to the next step.
+step
+goto 29.06,67.687
+'Enter _Misfortune Teller's Garden_ |q The Everlasting Fair/Go to the Misfortune Teller
+step
+goto u46_base_sel_grove 56.38,43.23
+'Use _Orb of Fates_ |q The Everlasting Fair/Try the Orb of Fates |future
+|tip Manually skip to the next step.
+step
+goto 79.50,47.00
+'Use _Orb of Happenstance_ |q The Everlasting Fair/Try the Orb of Happenstance |future
+|tip Manually skip to the next step.
+step
+goto 80.56,57.45
+'Use _Orb of Shadows_ |q The Everlasting Fair/Try the Orb of Shadows |future
+|tip Manually skip to the next step.
+step
+goto 92.55,50.77
+'Use _Orb of Consequences_ |q The Everlasting Fair/Try the Orb of Consequences
+step
+goto u46_base_sel_groveboss 62.85,58.37
+kill The Misfortune Teller |q The Everlasting Fair/Kill the Misfortune Teller |future
+|tip Manually skip to the next step.
+step
+goto 63.90,17.26
+|tip Go upstairs.
+'Search _Prize Chest_ |q The Everlasting Fair/Claim a Prize |future
+step
+goto 66.27,13.70
+'Open _Everlasting Fair_ |q The Everlasting Fair/Go to the Ogrim Parade
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 27.97,68.54
+'Open _Ogrim Parade_ |q The Everlasting Fair/Go to the Ogrim Parade
+step
+goto 27.57,69.68 |q The Everlasting Fair/Earn a Prize Ticket at the Ogrim Parade
+step
+goto 26.97,69.57 |q The Everlasting Fair/Earn a Prize Ticket at the Ogrim Parade
+step
+goto 27.28,68.85
+'Open _Prize Room_ |q The Everlasting Fair/Earn a Prize Ticket at the Ogrim Parade
+|tip Manually skip to the next step.
+step
+goto 27.37,68.57
+'Examine _Prize Ticket_ |q The Everlasting Fair/Earn a Prize Ticket at the Ogrim Parade
+step
+goto 27.55,68.59
+'Search _Prize Chest_ |q The Everlasting Fair/Claim the Prize Chest
+step
+goto 27.84,68.15
+|tip Droop down.
+talk Goat |q The Everlasting Fair/Talk to the Goat |future
+step
+goto 26.53,68.16
+talk Sashii |q The Everlasting Fair/Talk to Sashii |future
+step
+goto 28.34,66.64 |q The Everlasting Fair/Find Brunnduhl 
+step
+goto 27.29,65.65
+|tip Watch the dialogue.
+talk Brunnduhl |q The Everlasting Fair/Talk to the Monkey |future
+step
+goto 27.95,65.00
+talk Goat |q The Everlasting Fair/Talk to the Goat |future
+step
+goto 28.30,65.54
+'Open _Blood 'n' Baubles_ |q The Everlasting Fair/Enter Blood 'N' Baubles
+step
+goto u46_base_sel_bauble 71.45,88.43
+talk to Lervent Penoit |q The Everlasting Fair |future
+|tip Manually skip to the next step.
+step
+goto 37.35,36.57
+|tip They jump around have to chase them.
+'Examine _Jelly_ |q The Everlasting Fair/Find the Rod in Blood 'N Baubles |future
+|tip Manually skip to the next step.
+step
+goto 41.36,12.65
+'Open _Everlasting Fair_ |q The Everlasting Fair/Go to the Fountain of Roses
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 28.97,66.70
+talk Goat |q The Everlasting Fair/Talk to the Goat |future
+step
+goto 28.97,66.70
+|tip Wait for the Goat.
+'Take _Rod of Revels_ |q The Everlasting Fair/Take the Rod of Revels |future
+step
+goto 29.57,66.50
+'Use _Rod of Revels on Lady of Riot_ |q The Everlasting Fair/Dispel Magic with the Rod of Revels
+step
+goto 29.57,66.50
+'Enter _Tent of Dark Joy_ |q The Everlasting Fair/Enter the Tent of Dark Joy
+step
+goto u46_base_sel_boss 76.45,52.37 |q The Everlasting Fair/Defeat the Lady of Riot
+step
+goto 54.63,26.28
+'Open _Tent of Dark Joy_ |q The Everlasting Fair/Defeat the Lady of Riot
+|tip Manually skip to the next step.
+step
+goto 38.08,25.44
+kill Lady of Riot |q The Everlasting Fair/Defeat the Lady of Riot
+step
+goto 32.38,24.44
+|tip Go upstairs.
+'Place _Rod of Revels Pedestal_ |q The Everlasting Fair/Restore the Everlasting Fair
+step
+goto 31.67,25.86
+talk Goat |q The Everlasting Fair/Talk to the Goat
+step
+goto 22.24,13.05
+'Open _Everlasting Fair_ |q The Everlasting Fair/Find Sashii and Her Friends
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 30.56,67.33
+|tip Watch the dialogue.
+talk Sashii
+turnin The Everlasting Fair
+step
+goto 31.97,67.65 |q The Roughest Pearl |future
+step
+goto 32.30,64.54
+'Examine _Storm Getting Closer_
+accept The Roughest Pearl
+step
+goto 32.30,64.54
+'Take _Volcanic Pearls_ |q The Roughest Pearl/Gather the Volcanic Pearls
+step
+'Open _Solstice_ Map
+'Travel to _Corelanya Manor_ |q A Pirate's Debt/Meet Cirwynia at Wankeen's Shop
+|tip Manually skip to the next step.
+step
+goto 44.64,65.73 |q A Pirate's Debt/Meet Cirwynia at Wankeen's Shop
+step
+goto 44.48,66.02
+'Open _Wankeen's Shop_ |q A Pirate's Debt/Meet Cirwynia at Wankeen's Shop
+|tip Manually skip to the next step.
+step
+goto 44.79,66.22
+talk Cirwynia |q A Pirate's Debt/Talk to Cirwynia |future
+step
+goto 44.84,66.10
+'Open _Back Room_ |q A Pirate's Debt/Meet Captain Artellas in the Back Room
+step
+goto 45.09,65.76
+kill Captain Artellas |q A Pirate's Debt/Defend Cirwynia
+step
+goto 45.09,65.76
+talk Cirwynia
+turnin A Pirate's Debt
+step
+'Open _Solstice_ Map
+'Travel to _Corelanya Manor_ |q A Pirate's Debt/Meet Cirwynia at Wankeen's Shop
+|tip Manually skip to the next step.
+step
+goto 44.51,67.64 |q Tides of the Heart |future
+step
+goto 49.01,68.74 |q Tides of the Heart |future
+step
+goto 50.24,70.14 |q Tides of the Heart |future
+step
+goto 52.24,69.04
+'Discover _Shell-Tide Village_ |q Tides of the Heart |future
+|tip Manually skip to the next step.
+step
+goto 52.58,68.97
+talk Keshu the Black Fin
+accept Tides of the Heart
+step
+goto 50.42,70.72 |q Tides of the Heart |future
+step
+goto u46_Shelltide_base 41.25,29.77 |q Tides of the Heart |future
+step
+goto 42.04,46.33 |q Tides of the Heart |future
+step
+goto 36.51,52.08
+'Open _Tide-Reader's Hut_ |q Tides of the Heart/Go to the Tide-Reader's Hut |future
+|tip Manually skip to the next step.
+step
+goto 34.61,56.51
+talk Tide-Reader Suhath |q Tides of the Heart/Talk to Tide-Reader Suhath
+step
+goto 69.40,37.73
+talk Senik-Haas |q Tides of the Heart/Talk to Senik-Haas
+step
+goto u48_overland_base 54.46,74.05
+talk Tlali-Haas |q Tides of the Heart/Talk to Tlali-Haas
+step
+goto 51.36,72.19
+talk Keshu the Black Fin |q Tides of the Heart/Talk to Keshu the Black Fin |future
+step
+goto 51.95,72.04
+'Mark _Burial Site_ |q Tides of the Heart/.*Clear the Burial Sites.* |count 1
+step
+goto 52.37,70.74
+'Mark _Burial Site_ |q Tides of the Heart/.*Clear the Burial Sites.* |count 2
+step
+goto 53.29,70.09
+'Examine _Notes on Exhumation_ |q Tides of the Heart/.*Investigate the Worm Cult's Presence.* |count 1
+step
+goto 54.39,70.70
+'Mark _Burial Site_ |q Tides of the Heart/.*Clear the Burial Sites.* |count 3
+step
+goto 55.56,70.60
+'Examine _Tide-Born Corpses_ |q Tides of the Heart/.*Investigate the Worm Cult's Presence.* |count 2
+step
+goto 56.10,70.19
+'Mark _Burial Site_ |q Tides of the Heart/.*Clear the Burial Sites.* |count 4
+step
+goto 56.80,70.64
+talk Keshu the Black Fin |q Tides of the Heart/Talk to Keshu |future
+step
+goto 57.12,71.54 |q Tides of the Heart/Gather Fanik Goc Root
+step
+goto 59.54,72.42
+'Examine _Worm Cultists Musing |lorebook Worm Cultist Musings/3/55/12
+step
+goto 59.53,71.85
+'Take _Fanik Goc Root_ |q Tides of the Heart/Gather Fanik Goc Root
+step
+goto 58.90,72.82 |q Tides of the Heart/Meet at the Ritual Site
+step
+goto 59.36,73.55 |q Tides of the Heart/Meet at the Ritual Site
+step
+goto 58.14,73.02 |q Tides of the Heart/Meet at the Ritual Site
+step
+goto 57.11,73.30 |q Tides of the Heart/Meet at the Ritual Site
+step
+goto 56.23,74.31
+talk Tlali-Haas |q Tides of the Heart/Talk to Tlali-Haas
+step
+goto 56.10,74.36
+talk Keshu the Black Fin |q Tides of the Heart/Talk to Keshu the Black Fin
+step
+goto 56.17,74.46
+'Enter _Senik-Haas's Dream Wallow_ |q Tides of the Heart/Enter the Dream with Senik-Haas |future
+|tip Manually skip to the next step.
+step
+goto u46_base_ShelltideDream1 53.68,58.54 |q Tides of the Heart/Explore the Dream
+step
+goto 48.20,25.63
+'Open _Center of the Dream_ |q Tides of the Heart/Explore the Dream
+|tip Manually skip to the next step.
+step
+goto 46.94,13.55
+kill Dark Adept Senik-Haas |q Tides of the Heart/Defeat Dark Adept Senik-Haas |future
+step
+goto 45.95,9.76
+'Enter _Tlali-Haas's Dream-Wallow_ |q Tides of the Heart/Enter the Dream with Tlali-Haas
+|tip Manually skip to the next step.
+step
+goto u46_base_ShelltideDream2 61.07,72.94 |q Tides of the Heart/Explore the Dream |future
+step
+goto 44.94,65.224 |q Tides of the Heart/Explore the Dream
+step
+goto 54.34,57.724 |q Tides of the Heart/Explore the Dream
+step
+goto 50.77,52.71
+'Open _Center of the Dream_ |q Tides of the Heart/Explore the Dream
+|tip Manually skip to the next step.
+step
+goto 50.54,31.93
+kill Dark Adept Tlali-Haas |q Tides of the Heart/Defeat Dark Adept Tlali-Haas |future
+step
+goto 52.44,27.28
+'Use _Portal to Solstice_ |q Tides of the Heart/Exit the Dream-Wallow |future
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 56.31,74.51
+talk Senik-Haas |q Tides of the Heart/Talk to Senik-Haas |future
+step
+goto 56.38,74.46
+talk Tlali-Haas |q Tides of the Heart/Talk to Tlali-Haas
+step
+goto 56.77,73.59 |q Tides of the Heart/Meet at the Southern Shores of Solstice
+step
+goto 54.38,75.66 |q Tides of the Heart/Meet at the Southern Shores of Solstice
+step
+goto 56.22,75.53
+talk Keshu the Black Fin |q Tides of the Heart/Talk to Keshu the Black Fin |future
+step
+goto 56.07,75.38
+'Enter _Shrine of Sithis_ |q Tides of the Heart/Dive into the Whirlpool |future
+|tip Manually skip to the next step.
+step
+goto u46_base_ShelltideSithis 65.99,52.20
+kill The Worm Cult |q Tides of the Heart/Defeat the Worm Cult |future
+step
+goto 52.79,52.73
+'Enter _Tide-Born Shrine_ |q Tides of the Heart/Reach the Shrine
+|tip Manually skip to the next step.
+step
+goto 29.70,54.39
+talk Keshu the Black Fin |q Tides of the Heart/Talk to Keshu the Black Fin |future
+step
+goto 26.83,54.71
+'Use _Shrine of Sithis_ |q Tides of the Heart/Approach the Shrine to Sithis
+step
+goto 19.82,54.85
+'Enter _Solstice_ |q Tides of the Heart/Return to the Hatchery
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 53.02,74.81
+talk Tlali-Haas |q Tides of the Heart/Talk to Tlali-Haas |future
+|tip Manually skip to the next step.
+step
+goto 53.02,74.81
+talk Senik-Haas |q Tides of the Heart/Talk to Senik-Haas |future
+|tip Manually skip to the next step.
+step
+goto 52.97,74.82
+talk Tide-Reader Suhath |q Tides of the Heart/Talk to Tide-Reader Suhath
+step
+goto 52.98,74.87
+talk Keshu the Black Fin
+turnin Tides of the Heart
+step
+goto 52.69,65.90 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 54.78,63.46 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 56.80,63.62 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 57.51,62.43 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 56.79,62.16 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 55.85,61.75 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 55.31,61.65
+'Examine _Exegesis of Merid-Nunda_ |lorebook Exegesis of Merid-Nunda/1/29/1
+step
+goto 56.98,61.61
+'Use _Skyshard_ |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
+step
+goto 56.79,62.16 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 57.28,62.01 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 57.95,61.76
+'Open _Abandoned Hut_ |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
+step
+goto 58.04,61.82
+talk Skordo the Knife |q The Stirk Fellowship/Talk to Skordo the Knife |future
+|tip Manually skip to the next step.
+step
+goto 58.00,61.63
+'Examine _Partially Burned Missive_ |lorebook Partially Burned Missive/3/55/19
+step
+goto 58.11,61.73
+'Examine _Writhing Wall_ |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
+step
+goto 58.09,61.79
+talk Skordo the Knife |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.* |count 1
+step
+'Open _Solstice_ Map
+'Travel to _Corelanya Manor_ |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.* |count 2
+|tip Manually skip to the next step.
+step
+goto 39.92,63.14 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 36.59,62.11 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 38.28,55.41
+'Discover _Western Bay_ |q Honor Bound |future
+|tip Manually skip to the next step
+step
+goto 44.54,53.17 |q Honor Bound |future
+step
+goto 42.79,50.77
+talk Squire Albec
+accept Honor Bound
+step
+goto 41.97,49.40
+'Follow _Honor's Tracks_ |q Honor Bound/Follow Honor's Tracks
+step
+goto 41.97,49.40
+talk Squire Albec |q Honor Bound/Talk to Squire Albec
+step
+goto 40.62,48.71
+'Follow _Honor's Tracks_ |q Honor Bound/Follow Honor's Tracks
+step
+goto 40.62,48.71
+|tip Watch the dialogue.
+talk Squire Albec |q Honor Bound/Talk to Squire Albec |future
+step
+goto 40.59,48.71
+'Place _Honor's Fruit Blend Snack_ |q Honor Bound/Place Snack
+step
+goto 40.59,48.71
+talk Honor |q Honor Bound/Talk to Honor |future
+step
+goto 39.55,48.64
+'Knock _Stone Door_ |q Honor Bound/Knock on the Stone Door |future
+step
+goto 39.65,48.65
+talk Honor |q Honor Bound/Talk to Honor
+step
+goto 39.27,49.24 |q Honor Bound/Explore the Narrow Passage
+step
+goto 38.92,49.00 |q Honor Bound/Explore the Narrow Passage
+step
+goto 39.10,48.66
+'Use _Lever_ |q Honor Bound/Unlock the Door |future
+step
+goto 39.55,48.64
+'Open _Hillside Refuge_ |q Honor Bound/Enter Cave
+step
+goto 38.80,49.21
+'Open _Inner Shrine_ |q Honor Bound/Rescue Squire Albec
+|tip Manually skip to the next step.
+step
+goto 38.47,49.57
+kill Deathbringer Zara-Vyln |q Honor Bound/Defeat Deathbringer Zara-Vyln |future
+|tip Manually skip to the next step.
+step
+goto 38.39,49.55
+talk Squire Albec |q Honor Bound/Rescue Squire Albec
+step
+goto 37.50,49.94
+'Open _Solstice_ |q Honor Bound/Meet Squire Albec Outside
+|tip Manually skip to the next step.
+step
+goto 37.93,48.22
+talk Squire Albec
+turnin Honor Bound
+step
+step
+goto 32.83,54.91 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 28.78,56.34
+talk Rigurt the Brash |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
+step
+goto 28.78,56.31
+talk Walks-In-Ashes |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.* |count 2
+step
+goto 31.29,57.71
+'Examine _Beware the Wandering Spirit_
+accept Secrets in the Sand
+step
+goto 31.27,59.70
+|tip He walks around this area.
+talk Wandering Spirit |q Secrets in the Sand/Talk to the Wandering Spirit
+step
+goto 31.14,59.55
+'Travel _Boat to Tainted Leet_ |q Secrets in the Sand/Enter Tainted Leel |future
+|tip Manually skip to the next step.
+step
+goto u46_base_lostvillage 91.27,47.05
+'Take _Rusted Dagger_ |q Secrets in the Sand/Retrieve the Dagger |future
+step
+goto 91.00,45.39
+talk Akech-Chun |q Secrets in the Sand/Talk to Akech-Chun
+step
+goto 81.44,44.75 |q Secrets in the Sand/.*Search Tainted Leel for Missing Memories.*
+step
+goto 71.95,49.35 |q Secrets in the Sand/.*Search Tainted Leel for Missing Memories.*
+step
+goto 62.63,67.28 |q Secrets in the Sand/.*Search Tainted Leel for Missing Memories.*
+step
+goto 45.93,79.33
+'Examine _Ceremonial Bowl_ |q Secrets in the Sand/.*Search Tainted Leel for Missing Memories.* |count 1
+step
+goto 46.05,51.65 |q Secrets in the Sand/.*Search Tainted Leel for Missing Memories.* |tip Go upstairs.
+step
+goto 34.16,51.16 |q Secrets in the Sand/.*Search Tainted Leel for Missing Memories.*
+step
+goto 37.39,30.99 |q Secrets in the Sand/.*Search Tainted Leel for Missing Memories.*
+step
+goto 45.56,35.51
+'Examine _Argonian Wind Chimes_ |q Secrets in the Sand/.*Search Tainted Leel for Missing Memories.* |count 2
+step
+goto 55.05,28.10 |q Secrets in the Sand/.*Search Tainted Leel for Missing Memories.*
+step
+goto 54.93,20.18 |q Secrets in the Sand/.*Search Tainted Leel for Missing Memories.*
+step
+goto 85.57,22.60 |q Secrets in the Sand/.*Search Tainted Leel for Missing Memories.*
+step
+goto 86.84,31.62
+kill Nardirin Death-hand |q Secrets in the Sand/.*Search Tainted Leel for Missing Memories.*
+|tip Manually skip to the next step.
+step
+goto 90.49,31.94
+'Examine _Ceremonial Headdress_ |q Secrets in the Sand/.*Search Tainted Leel for Missing Memories.* |count 3
+step
+goto 86.16,39.81 |q Secrets in the Sand/Return To Akech-Chun's Corpse |future
+step
+goto 90.68,52.09 |q Secrets in the Sand/Return To Akech-Chun's Corpse |future
+step
+goto 84.01,46.42 |q Secrets in the Sand/Return To Akech-Chun's Corpse |future
+step
+goto 86.43,46.32
+'Use _Skyshard_ |q Secrets in the Sand/Talk to Akech-Chun
+|tip Manually skip to the next step.
+step
+goto 91.76,46.44
+|tip Drop down.
+talk Akech-Chun |q Secrets in the Sand/Talk to Akech-Chun
+step
+'Place _Corpse_ |q Secrets in the Sand/Place Akech-Chun's Items |future
+'_OR_
+'Burn _Corpse_ |q Secrets in the Sand/Burn Akech-Chun's Corpse |future
+step
+goto 91.76,46.44
+talk Akech-Chun
+turnin Secrets in the Sand
+step
+goto 95.48,45.41
+'Travel _Boat to Solstice_ |q The Skull of Gandelec |future
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 27.83,50.24
+'Use _Skyshard_ |q The Skull of Gandelec |future
+|tip Manually skip to the next step.
+step
+goto 29.21,47.41 |q The Skull of Gandelec |future
+step
+goto 26.80,46.37 |q The Skull of Gandelec |future
+step
+goto 27.48,45.82
+talk Loraviel
+accept The Skull of Gandelec
+step
+goto 27.61,45.72
+'Open _Carapace Caverns_ |q The Skull of Gandelec/Enter Carapace Caverns |future
+|tip Manually skip to the next step.
+step
+goto u46_carapacecaverns_base 11.53,14.19 |q The Skull of Gandelec/.*Attune the Dampening Orb at Altars.* |future
+step
+goto 34.15,13.53
+'Attune _Altar of Necrotic Energy_ |q The Skull of Gandelec/.*Attune the Dampening Orb at Altars.* |count 1
+step
+goto 57.21,15.08 |q The Skull of Gandelec/.*Attune the Dampening Orb at Altars.*
+step
+goto 57.21,28.16 |q The Skull of Gandelec/.*Attune the Dampening Orb at Altars.*
+step
+goto 71.62,29.05 |q The Skull of Gandelec/.*Attune the Dampening Orb at Altars.*
+step
+goto 74.94,48.34
+'Attune _Altar of Necrotic Energy_ |q The Skull of Gandelec/.*Attune the Dampening Orb at Altars.* |count 2
+step
+goto 86.03,49.45 |q The Skull of Gandelec/.*Attune the Dampening Orb at Altars.*
+step
+goto 92.24,69.40 |q The Skull of Gandelec/.*Attune the Dampening Orb at Altars.*
+step
+goto 89.90,76.94
+'Attune _Altar of Necrotic Energy_ |q The Skull of Gandelec/.*Attune the Dampening Orb at Altars.* |count 3
+step
+goto 88.47,64.94 |q The Skull of Gandelec/Find the Skull of Gandelec
+step
+goto 69.62,69.84 |q The Skull of Gandelec/Find the Skull of Gandelec
+step
+goto 50.11,65.63 |q The Skull of Gandelec/Find the Skull of Gandelec
+step
+goto 58.09,76.94 |q The Skull of Gandelec/Find the Skull of Gandelec |tip Go up top.
+step
+goto 57.65,76.94 |q The Skull of Gandelec/Find the Skull of Gandelec
+step
+goto 70.51,77.38
+'Use _Skyshard_ |q The Skull of Gandelec/Find the Skull of Gandelec
+|tip Manually skip to the next step.
+step
+goto 58.09,76.94 |q The Skull of Gandelec/Find the Skull of Gandelec
+step
+goto 29.93,62.31 |q The Skull of Gandelec/Find the Skull of Gandelec
+step
+goto 34.15,51.22
+kill Headcracker |q The Skull of Gandelec/Find the Skull of Gandelec
+|tip Manually skip to the next step.
+step
+goto 25.28,65.19 |q The Skull of Gandelec/Find the Skull of Gandelec
+step
+goto 20.62,62.31 |q The Skull of Gandelec/Find the Skull of Gandelec
+step
+goto 24.61,56.76
+'Take _Skull of Gandelec_
+'Place _Pedestal of the Skull_ |q The Skull of Gandelec/Place the Attuned Dampening Orb |future
+step
+goto 15.08,56.98 |q The Skull of Gandelec/Return to Loraviel
+step
+goto 11.09,52.33
+'Enter _Solstice_ |q The Skull of Gandelec/Return to Loraviel
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 27.51,45.83
+talk Loraviel
+turnin The Skull of Gandelec
+step
+goto 27.35,45.16 |q Slime Pickings |future
+step
+goto 29.24,43.28
+'Examine _The Won't Last_
+accept Slime Pickings
+step
+goto 29.24,43.28
+'Take _Sload Slime_ |q Slime Pickings/Gather Sload Slime
+step
+goto 26.96,46.61 |q The Stubbornness of Nords |future
+step
+goto u46_base_shoresstand 30.71,16.34 |q The Stubbornness of Nords |future
+step
+goto 40.47,18.93
+talk Ysmaair
+accept The Stubbornness of Nords
+step
+goto 67.78,33.53
+'Discover _Shor's Stand_ |q The Stubbornness of Nords/Talk to Britt the Bold |future
+|tip Manually skip to the next step.
+step
+goto 71.84,41.45 |q The Stubbornness of Nords/Talk to Britt the Bold |future
+step
+goto 61.86,55.03
+talk Britt the Bold |q The Stubbornness of Nords/Talk to Britt the Bold |future
+step
+goto 56.20,59.47
+talk Captain Genevé Delitian
+turnin Slime Pickings
+turnin The Roughest Pearl
+step
+goto 63.73,48.37
+'Open _Bear Hall_ |q The Stubbornness of Nords/Talk to Speaker Hialf
+|tip Manually sksip to the next step.
+step
+goto 61.07,48.57
+talk Speaker Hialf |q The Stubbornness of Nords/Talk to Speaker Hialf
+step
+goto 63.07,47.93
+'Open _Shor's Stand_ |q The Stubbornness of Nords/Meet Britt the Bold Outside the Village
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 36.34,52.57
+talk Britt the Bold |q The Stubbornness of Nords/Talk to Britt the Bold |future
+step
+goto 38.21,52.44
+talk Jal |q The Stubbornness of Nords/Talk to the Injured Warrior |future
+step
+goto 38.28,51.90 |q The Stubbornness of Nords/Follow the Path of Destruction
+step
+goto 37.88,50.07
+'Enter _Glittering Cave_ |q The Stubbornness of Nords/Catch the Beast |future
+|tip Manually skip to the next step.
+step
+goto 37.80,51.11 |q The Stubbornness of Nords/Catch the Beast
+step
+goto 37.33,50.72 |q The Stubbornness of Nords/Catch the Beast
+step
+goto 37.05,50.98
+'Take _Magicap_ |q The Stubbornness of Nords/Take the Hat |future
+step
+goto 37.05,50.98
+talk Britt the Bold |q The Stubbornness of Nords/Talk to Britt the Bold
+step
+'Open _Solstice_ Map
+'Travel to _Shor's Stand_ |q The Stubbornness of Nords/Go to Shor's Stand Bear Hall
+|tip Manually skip to the next step.
+step
+goto u46_base_shoresstand 72.74,41.56 |q The Stubbornness of Nords/Go to Shor's Stand Bear Hall
+step
+goto 63.78,48.47
+'Open _Bear Hall_ |q The Stubbornness of Nords/Go to Shor's Stand Bear Hall |future
+|tip Manually skip to the next step.
+step
+goto 61.97,45.99
+talk Speaker Hialf |q The Stubbornness of Nords/Talk to Speaker Hialf |future
+step
+goto 62.81,47.08
+talk Britt the Bold |q The Stubbornness of Nords/Talk to Britt the Bold
+step
+goto 63.66,47.94
+'Open _Shor's Stand_ |q The Stubbornness of Nords/Talk to Speaker Frogirde
+|tip Manually skip to the next step.
+step
+goto 65.43,54.76
+'Open _Hall of Feathers_ |q The Stubbornness of Nords/Talk to Speaker Frogirde
+|tip Manually skip to the next step.
+step
+goto 67.74,55.32
+talk Speaker Frogirde |q The Stubbornness of Nords/Talk to Speaker Frogirde
+step
+goto 68.57,54.87
+'Examine _On the Tradition of Brawls_ |lorebook On the Tradition of Brawls/3/55/24
+step
+goto 67.44,54.07
+'Examine _Praise for the Fourteen_ |lorebook Praise for the Fourteen/3/55/27
+step
+goto 65.97,52.35
+'Examine _Together Stew Recipe_ |lorebook Together Stew Recipe/3/55/23
+step
+goto 65.32,55.49
+'Open _Shor's Stand_ |q The Stubbornness of Nords/Talk to Britt the Bold
+|tip Manually skip to the next step.
+step
+goto 63.59,55.44
+talk Britt the Bold |q The Stubbornness of Nords/Talk to Britt the Bold
+step 
+goto 65.22,63.41 |q The Stubbornness of Nords/.*Gather the Ingredients.*
+step
+goto 59.07,66.49
+talk Kjar |q The Stubbornness of Nords/Gather "Buzzers' Treasure" |future
+|tip Manually skip to the next step.
+step
+goto 58.51,66.66
+'Drink _Spiced Mead_ |q The Stubbornness of Nords/.*Help the Meadmaker with Mead Tasting.* |count 1
+step
+goto 58.51,66.66
+'Drink _Berry Mead_ |q The Stubbornness of Nords/.*Help the Meadmaker with Mead Tasting.* |count 2
+step
+goto 58.51,66.66
+'Drink _Wildflower Mead_ |q The Stubbornness of Nords/.*Gather the Ingredients.* |count 1
+|tip Manually skip to the next step.
+step
+goto 59.07,66.49
+talk Kjar |q The Stubbornness of Nords/.*Gather the Ingredients.* |count 1
+step
+goto 14.02,53.55
+talk Barogar |q The Stubbornness of Nords/Gather "Swimmer's Scales" |future
+|tip Manually skip to the next step.
+step
+goto 43.82,54.74 |q The Stubbornness of Nords/Gather "Spuds from the Deep" |future
+step
+goto 46.36,35.83
+talk Farmer |q The Stubbornness of Nords/Gather "Spuds from the Deep"
+step
+goto 42.25,33.56
+kill Colossal Coral Crabs
+'Search _Crabs_ |q The Stubbornness of Nords/Gather Crab Meat for Bait
+step
+goto 43.54,32.98
+'Examine _Loose Fertilizer_ |q The Stubbornness of Nords/Investigate the Farm |future
+|tip Manually skip to the next step.
+step
+goto 42.17,55.95
+kill Colossal Coral Crabs |q The Stubbornness of Nords/Gather Crab Meat for Bait |future
+|tip Manually skip to the next step.
+step
+goto 42.73,59.38
+'Take _Fertilizer_ |q The Stubbornness of Nords/Retrieve Fertilizer |future
+|tip Manually skip to the next step.
+step
+goto 46.36,35.83
+talk Farmer |q The Stubbornness of Nords/.*Gather the Ingredients.* |count 2
+step
+goto 41.49,55.39 |q The Stubbornness of Nords/.*Gather the Ingredients.*
+step
+goto 30.44,65.62 |q The Stubbornness of Nords/.*Gather the Ingredients.*
+step
+goto 14.15,53.25
+'Use _Lake Fishing Hole_ |q The Stubbornness of Nords/.*Gather the Ingredients.* |count 3
+step
+goto 54.38,64.37 |q The Stubbornness of Nords/Meet Britt the Bold Behind the Bear Hall
+step
+goto 62.76,43.04
+talk Britt the Bold |q The Stubbornness of Nords/Talk to Britt the Bold |future
+step
+goto 63.70,44.16
+.'Use _Crab Meat_
+.'Use _Potatoes_
+.'Use _Herbs_
+.'Use _Fish_
+.'Use _Honey_ |q The Stubbornness of Nords/Cook the Feast
+step
+goto 63.94,44.08
+'Take _Cook Pot_ |q The Stubbornness of Nords/Take Stew
+step
+goto 59.39,43.62 |q The Stubbornness of Nords/.*Serve the Feast.*
+step
+goto 56.65,55.58
+'Place _Together Stew_ |q The Stubbornness of Nords/.*Serve the Feast.* |count 1
+step
+goto 57.60,56.88
+'Place _Together Stew_ |q The Stubbornness of Nords/.*Serve the Feast.* |count 2
+step
+goto 56.80,57.50
+'Place _Together Stew_ |q The Stubbornness of Nords/.*Serve the Feast.* |count 3
+step
+goto 56.19,55.95
+talk Speaker Frogirde |q The Stubbornness of Nords/Talk to Speaker Frogirde
+step
+goto 56.59,57.45
+talk Speaker Sogrard |q The Stubbornness of Nords/Talk to Speaker Sogrard
+step
+goto 58.63,55.87
+talk Britt the Bold |q The Stubbornness of Nords/Talk to Britt the Bold
+step
+|tip All around this area.
+.'Mark _Tankard_
+.'Mark _Barrell_
+.'Mark _Bow_
+.'Mark _Cheese_ |q The Stubbornness of Nords/Aid Britt the Bold's Speech
+step
+goto 56.83,56.72
+talk Britt the Bold |q The Stubbornness of Nords/Talk to Britt the Bold
+step
+goto 55.50,57.12
+'Open _whale Splash Inn_ |q The Stubbornness of Nords/Go to the Whale Splash Inn
+step
+goto 52.99,58.30
+'Join _Brawl_ |q The Stubbornness of Nords/Join the Brawl
+step
+goto 55.76,57.00
+'Open _Shor's Stand_ |q The Stubbornness of Nords/Talk to Speaker Sogrard
+|tip Manually skip to the next step.
+step
+goto 56.78,56.65
+talk Speaker Sogrard |q The Stubbornness of Nords/Talk to Speaker Sogrard
+step
+goto 57.16,56.14
+talk Britt the Bold
+turnin The Stubbornness of Nords
+step
+goto u48_overland_base 40.27,44.50 |q Mystery of the Broken Temple/Talk to High Priest Eraamine
+step
+goto 39.87,42.87
+talk Acolyte Duria
+accept Mystery of the Broken Temple
+step
+goto 40.79,41.01 |q Mystery of the Broken Temple/Find High Priest Eraamine
+step
+goto 40.80,40.71
+talk High Priest Eraamine |q Mystery of the Broken Temple/Talk to High Priest Eraamine |future
+step
+goto 42.39,39.81
+'Search _Rubble Pile_ |q Mystery of the Broken Temple/Search Rubble for Lucent Shard
+step
+goto 42.85,39.58
+talk High Priest Eraamine |q Mystery of the Broken Temple/Talk to High Priest Eraamine
+step
+goto 42.33,36.72
+'Use _Skyshard_ |q Mystery of the Broken Temple/Use the Rod to Collect Rubble
+|tip Manually skip to the next step.
+step
+goto 42.85,39.58 |q Mystery of the Broken Temple/Use the Rod to Collect Rubble
+step
+goto 42.59,40.00
+'Use _Large Rubble Pile_ |q Mystery of the Broken Temple/Use the Rod to Collect Rubble
+step
+goto 42.33,39.80
+'Use _Walkway Gap_ |q Mystery of the Broken Temple/Use the Rod to Place Rubble
+step
+goto 41.86,39.34
+'Open _Broken Light Temple_ |q Mystery of the Broken Temple/Enter Broken Light Temple |future
+|tip Manually skip to the next step.
+step
+goto u46_brokenlight_int1_base 45.04,75.19
+'Examine _Our Final Act_ |lorebook Our Final Act/3/55/13
+step
+goto 46.79,70.00
+|tip Start in Purity Wing.
+talk High Priest Eraamine |q Mystery of the Broken Temple/Talk to Eraamine
+step
+goto 39.39,72.98
+'Open _Purity Wing_ |q Mystery of the Broken Temple/Enter the Purity Wing
+step
+goto u46_brokenlight_int2_base 22.97,71.32
+'Use _Large Rubble Pile_ |q Mystery of the Broken Temple/Search for the Ritual Site
+|tip Manually skip to the next step.
+step
+goto 30.64,76.57 |q Mystery of the Broken Temple/Search for the Ritual Site
+step
+goto 17.25,75.94 |q Mystery of the Broken Temple/Search for the Ritual Site |tip Go up the ramp.
+step
+goto 22.68,69.82
+'Use _Walkway Gap_ |q Mystery of the Broken Temple/Search for the Ritual Site
+|tip Manually skip to the next step.
+step
+goto 39.53,73.11
+|tip Watch the dialogue.
+talk Tomarion |q Mystery of the Broken Temple/Talk to Tomarion |future
+step
+goto 37.39,64.17 |q Mystery of the Broken Temple/Search for the Ritual Site
+step
+goto 25.97,59.84
+'Open _Path of Catharsis_ |q Mystery of the Broken Temple/Search for the Ritual Site
+|tip Manually skip to the next step.
+step
+goto 18.75,54.76 |q Mystery of the Broken Temple/Search for the Ritual Site
+step
+goto u46_brokenlight_int3_base 32.29,49.87
+'Use _Large Rubble Pile_ |q Mystery of the Broken Temple/Search for the Ritual Site
+|tip Manually skip to the next step.
+step
+goto u46_brokenlight_int2_base 26.02,52.45
+'Use _Walkway Gap_ |q Mystery of the Broken Temple/Search for the Ritual Site
+|tip Manually skip to the next step.
+step
+goto u46_brokenlight_int3_base 31.86,57.69 |q Mystery of the Broken Temple/Search for the Ritual Site
+step
+goto 31.95,40.02 |q Mystery of the Broken Temple/Search for the Ritual Site
+step
+goto 76.55,39.93 |q Mystery of the Broken Temple/Search for the Ritual Site
+step
+goto 76.64,58.11 |q Mystery of the Broken Temple/Search for the Ritual Site
+step
+goto 63.30,58.54
+'Use _Large Rubble Pile_ |q Mystery of the Broken Temple/Search for the Ritual Site
+|tip Manually skip to the next step.
+step
+goto 62.11,71.71 |q Mystery of the Broken Temple/Search for the Ritual Site
+step
+goto u46_brokenlight_int2_base 26.14,53.72 |q Mystery of the Broken Temple/Search for the Ritual Site |tip Drop down.
+step
+goto 25.97,40.05
+'Use _Walkway Gap_ |q Mystery of the Broken Temple/Search for the Ritual Site
+|tip Manually skip to the next step.
+step
+goto 25.97,29.37
+'Open _Purity Ritual Site_ |q Mystery of the Broken Temple/Search for the Ritual Site
+|tip Manually skip to the next step.
+step
+goto 22.79,15.46
+talk Tomarion |q Mystery of the Broken Temple/Talk to Tomarion |future
+step
+goto 28.97,21.06
+talk High Priest Eraamine |q Mystery of the Broken Temple/Talk to High Priest Eraamine
+step
+goto 26.60,21.29
+|tip Follow High Priest Eraamine's Commands for reference she is the east point.
+'Activate _Central Ritual Tile_ |q Mystery of the Broken Temple/Complete the Ritual
+step
+goto 25.91,14.25
+'Use _Portal to the Great Hall_ |q Mystery of the Broken Temple/Return to the Great Hall
+step
+goto u46_brokenlight_int1_base 54.50,72.75
+'Open _Dawn Wing_ |q Mystery of the Broken Temple/Enter the Dawn Wing
+step
+goto 60.42,73.92
+|tip Watch the dialogue.
+'Examine _Gleaming Amulet of Faith_ |q Mystery of the Broken Temple/Search for Information on the Dawn Wing
+step
+goto 60.07,73.86
+talk Sentinel Carisea |q Mystery of the Broken Temple/Talk to Carisea
+step
+goto 65.55,79.11 |q Mystery of the Broken Temple/Use a Rod to Make a Path Across the Bridge
+step
+goto 64.45,72.94
+'Use _Large Rubble Pile_ |q Mystery of the Broken Temple/Use a Rod to Make a Path Across the Bridge
+|tip Manually skip to the next step.
+step
+goto 62.15,73.11
+|tip Go upstairs.
+'Place _Walkway Gap_ |q Mystery of the Broken Temple/Use a Rod to Make a Path Across the Bridge
+|tip Manually skip to the next step.
+step
+goto 69.71,73.23 |q Mystery of the Broken Temple/Search For the Ritual Site |future
+step
+goto 75.01,72.30 |q Mystery of the Broken Temple/Search For the Ritual Site
+step
+goto 65.26,57.47 |q Mystery of the Broken Temple/Search For the Ritual Site
+step
+goto 67.51,46.86
+'Use _Large Rubble Pile_ |q Mystery of the Broken Temple/Search For the Ritual Site
+|tip Manually skip to the next step.
+step
+goto 65.26,57.47 |q Mystery of the Broken Temple/Search For the Ritual Site
+step
+goto 77.67,64.22 |q Mystery of the Broken Temple/Search For the Ritual Site
+step
+goto 77.55,61.68
+'Place _Walkway Gap_ |q Mystery of the Broken Temple/Search For the Ritual Site
+|tip Manually skip to the next step.
+step
+goto 89.61,58.40 |q Mystery of the Broken Temple/Search For the Ritual Site
+step
+goto 87.25,44.32
+'Use _Large Rubble Pile_ |q Mystery of the Broken Temple/Search For the Ritual Site
+|tip Manually skip to the next step.
+step
+goto 89.61,58.40 |q Mystery of the Broken Temple/Search For the Ritual Site
+step
+goto 83.70,58.45 |q Mystery of the Broken Temple/Search For the Ritual Site
+step
+goto 77.50,64.45 |q Mystery of the Broken Temple/Search For the Ritual Site
+step
+goto 77.61,36.99
+'Place _Walkway Gap_ |q Mystery of the Broken Temple/Search For the Ritual Site
+|tip Manually skip to the next step.
+step
+goto 77.73,28.45
+talk Sentinel Carisea |q Mystery of the Broken Temple/Talk To Sentinel Carisea
+step
+goto 77.67,26.66
+'Open _Dawn Ritual Site_ |q Mystery of the Broken Temple/Enter the Ritual Site
+step
+goto 77.61,18.70
+kill Sentinel Carisea |q Mystery of the Broken Temple/Defeat Sentinel Carisea
+step
+goto 77.84,21.00
+talk High Priest Eraamine |q Mystery of the Broken Temple/Talk to High Priest Eraamine
+step
+goto 77.84,21.00
+|tip Follow High Priest Eraamine's Commands for reference she is the south point.
+'Activate _Ritual Panel_ |q Mystery of the Broken Temple/Complete the Ritual
+step
+goto 77.50,11.54
+'Use _Portal to the Great Hall_ |q Mystery of the Broken Temple/Return to the Great Hall
+step
+goto u46_brokenlight_int1_base 47.79,71.37
+talk High Priest Eraamine |q Mystery of the Broken Temple/Talk to High Priest Eraamine
+step
+goto 47.02,68.63
+'Open _Temple Cynosure_ |q Mystery of the Broken Temple/Enter the Cynosure |future
+|tip Manually skip to the next step.
+step
+goto u46_brokenlight_int5_base 56.25,67.31
+'Use _Large Rubble Pile_ |q Mystery of the Broken Temple/Find a Way to Cross the Bridge |future
+|tip Manually skip to the next step.
+step
+goto 52.40,62.50
+'Place _Walkway Gap_ |q Mystery of the Broken Temple/Find a Way to Cross the Bridge |future
+|tip Manually skip to the next step.
+step
+goto 52.08,28.04
+|tip Watch the dialogue.
+kill Sentinel Tomarion |q Mystery of the Broken Temple/Defeat Sentinel Tomarion
+step
+goto 44.87,22.76
+'Destroy _Cynosure Orb_ |q Mystery of the Broken Temple/.*Use the Rod to Destroy the Cynosure Orbs.* |count 1
+step
+goto 59.46,21.79
+'Destroy _Cynosure Orb_ |q Mystery of the Broken Temple/.*Use the Rod to Destroy the Cynosure Orbs.* |count 2
+step
+goto 45.83,36.38
+'Destroy _Cynosure Orb_ |q Mystery of the Broken Temple/.*Use the Rod to Destroy the Cynosure Orbs.* |count 3
+step
+goto 58.97,36.38
+'Destroy _Cynosure Orb_ |q Mystery of the Broken Temple/.*Use the Rod to Destroy the Cynosure Orbs.* |count 4
+step
+goto 51.76,20.35
+'Destroy _Cynosure Orb_ |q Mystery of the Broken Temple/.*Use the Rod to Destroy the Cynosure Orbs.* |count 5
+step
+goto 53.04,77.88
+'Open _Temple Great Hall_ |q Mystery of the Broken Temple/Meet Eraamine in the Great Hall
+|tip Manually skip to the next step.
+step
+goto u46_brokenlight_int1_base 45.65,76.18
+talk High Priest Eraamine
+turnin Mystery of the Broken Temple
+step
+goto 49.69,92.21
+'Open _Solstice_ |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 40.78,41.05 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 39.85,39.93
+'Open _Broken Light Courtyard_ |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
+step
+goto 40.17,39.64
+talk Gabrielle Benele |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.* |future
+|tip Manually skip to the next step.
+step
+goto 40.44,39.39
+'Examine _The Bell and the Hymn_ |lorebook The Bell and the Hymn/3/55/18
+step
+goto 40.00,39.27 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 39.798,39.64
+'Search _Rubble_ |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
+step
+goto 40.56,39.76 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 40.36,39.94
+'Search _Rubble_ |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
+step
+goto 40.22,39.64
+talk Gabrielle Benele |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.* |count 3
+step
+'Open _Solstice_ Map
+'Travel to _Sunport Docks_ |q Sunport Seeks Adventurers! |future
+|tip Manually skip to the next step.
+step
+goto u46_Sunport_base 31.08,50.96
+'Open _Sunport_ |q Sunport Seeks Adventurers! |future
+|tip Manually skip to the next step.
+step
+goto 37.37,52.71
+'Examine _Sunport Seeks Adventurers!_
+accept Sunport Seeks Adventurers!
+step
+goto 52.22,57.67 |q Sunport Seeks Adventurers!/Talk to Korasephina
+step
+goto 56.39,67.08
+talk Korasephina
+turnin Sunport Seeks Adventurers!
+step
+goto 52.22,57.67 |q The Stirk Fellowship/Meet Prince Azah |future
+step
+goto 44.53,56.87 |q The Stirk Fellowship/Meet Prince Azah |future
+step
+goto 40.44,60.06
+talk Prince Azah
+turnin The Stirk Fellowship
+accept The Regent of Sunport
+step
+goto 44.39,45.99 |q The Regent of Sunport/Go to Vinutilmo Palace
+step
+goto 62.03,44.00 |q The Regent of Sunport/Go to Vinutilmo Palace
+step
+goto 58.04,50.16
+'Discover _Sunport_ Wayshrine |q The Regent of Sunport/Go to Vinutilmo Palace
+|tip Manually skip to the next step.
+step
+goto 61.34,49.61
+'Open _Palace District_ |q The Regent of Sunport/Go to Vinutilmo Palace
+|tip Manually skip to the next step.
+step
+goto 74.19,51.74
+'Open _Vinutilmo Palace_ |q The Regent of Sunport/Go to Vinutilmo Palace
+|tip Manually skip to the next step.
+step
+goto 76.23,50.85
+'Examine _Crumpled Note_ |lorebook Crumpled Note/3/55/20
+step
+goto 75.65,51.20
+'Examine _Palace Door_ |q The Regent of Sunport/.*Look for Clues.* |count 2
+step
+goto 76.17,51.36
+'Examine _Stained Carpet_ |q The Regent of Sunport/.*Look for Clues.* |count 3
+step
+goto 76.13,51.33
+|tip Go upstairs.
+talk Viniama |q The Regent of Sunport/Talk to the Palace Servant |future
+step
+'Open _Solstice Map_
+'Travel to _Western Bay_ |q The Regent of Sunport/Go to Swencoast Cottage
+|tip Manually skip to the next step.
+step
+goto 37.86,60.04
+'Go to _Swencoast Cottage_ |q The Regent of Sunport/Go to Swencoast Cottage
+step
+goto u48_overland_base 38.09,59.73
+talk Razum-dar |q The Regent of Sunport/Talk to Razum-dar |future
+step
+goto u48_overland_base 38.03,61.14
+'Open _Swencoast Cottage_ |q The Regent of Sunport/Rescue Regent Karinwe
+|tip Manually skip to the next step.
+step
+goto 38.26,61.07
+|tip Go upstairs.
+'Open _Cottage Study_ |q The Regent of Sunport/Rescue Regent Karinwe
+|tip Manually skip to the next step.
+step
+goto 38.36,61.00
+'Untie _Lady Karinwe_ |q The Regent of Sunport/Rescue Regent Karinwe
+step
+goto 38.36,61.00
+talk Regent Karinwe |q The Regent of Sunport/Talk to Regent Karinwe
+step
+'Open _Solstice_ Map
+'Travel to _Sunport Docks_ |q The Regent of Sunport/Return to Sunport
+|tip Manually skip to the next step.
+step
+goto u46_Sunport_base 31.08,50.92
+'Open _Sunport_ |q The Regent of Sunport/Return to Sunport
+step
+goto 44.76,56.39 |q The Regent of Sunport/Talk to Prince Azah
+step
+goto 39.38,61.56
+talk Prince Azah |q The Regent of Sunport/Talk to Prince Azah
+step
+goto 39.74,61.82
+talk Regent Karinwe |q The Regent of Sunport/Talk to Regent Karinwe |future
+|tip Manually skip to the next step.
+step
+goto 44.39,45.99 |q The Regent of Sunport/Enter the Palace District
+step
+goto 62.03,44.00 |q The Regent of Sunport/Enter the Palace District
+step
+goto 60.97,51.85
+'Open _Adrard's Luxury Goods_ |q The Regent of Sunport/Enter the Palace District
+|tip Manually skip to the next step.
+step
+goto 62.20,53.11
+'Open _Adrard's Townhouse_ |q The Regent of Sunport/Enter the Palace District
+|tip Manually skip to the next step.
+step
+goto 64.47,52.73
+|tip Go downstairs then Go upstairs.
+'Open _Palace District_ |q The Regent of Sunport/Enter the Palace District |future
+|tip Manually skip to the next step.
+step
+goto u46_SunportPalaceDistrict_base 73.81,70.17 |q The Regent of Sunport/.*Destroy Soul Reapers.* |future
+step
+goto 72.43,78.47
+'Destroy _Soul Reaper_ |q The Regent of Sunport/.*Destroy Soul Reapers.* |count 1
+step
+goto 82.96,81.04 |q The Regent of Sunport/.*Destroy Soul Reapers.* |count 2
+step
+goto 83.17,69.96
+'Destroy _Soul Reaper_ |q The Regent of Sunport/.*Destroy Soul Reapers.* |count 2
+step
+goto 73.11,60.35 |q The Regent of Sunport/.*Destroy Soul Reapers.* |count 3
+step
+goto 77.77,60.92
+'Destroy _Soul Reaper_ |q The Regent of Sunport/.*Destroy Soul Reapers.* |count 3
+step
+goto 74.09,51.84
+'Open _Vinutilmo Palace_ |q The Regent of Sunport/Go to Vinutilmo Palace
+|tip Manually skip to the next step.
+step
+goto 77.90,49.39
+kill Tidemuck |q The Regent of Sunport/Defeat Tidemuck |future
+step
+goto 78.01,49.62
+'Open _Regent's Study_ |q The Regent of Sunport/Search the Regent's Study
+|tip Manually skip to the next step.
+step
+goto 78.23,49.89
+'Examine _Wormblood's Orders_ |lorebook Wormblood's Orders/3/55/21
+step
+goto 78.02,49.86
+'Open _Vinutilmo Palace_ |q The Regent of Sunport/Find Prince Azah |future
+|tip Manually skip to the next step.
+step
+goto 77.65,49.65
+'Open _Palace District_ |q The Regent of Sunport/Find Prince Azah |future
+step
+goto u46_Sunport_base 71.36,54.76
+talk Prince Azah
+turnin The Regent of Sunport
+accept The Passages Beneath
+step
+goto 71.67,54.88
+talk Walks-In-Ashes |q The Passages Beneath/Talk to Walks-In-Ashes |future
+|tip Manually skip to the next step.
+step
+goto 65.67,49.73
+'Open _Central Square_ |q The Passages Beneath/Go to the Sunport Guard House
+|tip Manually skip to the next step.
+step
+goto 57.95,41.06 |q The Passages Beneath/Go to the Sunport Guard House
+step
+goto 43.97,47.54 |q The Passages Beneath/Go to the Sunport Guard House
+step
+goto 40.02,39.845
+'Open _Guard House_ |q The Passages Beneath/Go to the Sunport Guard House
+|tip Manually skip to the next step.
+step
+goto 39.26,39.23
+talk Bonelord Kagazal |q The Passages Beneath/Talk to Bonelord Kagazal |future
+|tip Persuade or Intimidate him.
+step
+goto 39.27,39.35
+talk Walks-In-Ashes |q The Passages Beneath/Talk to Walks-In-Ashes |future
+|tip Manually skip to the next step.
+step
+'Open _Solstice_ Map
+'Travel to _Shell-Tide Village_ |q The Passages Beneath/Go to Tarnur Mine
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 57.96,69.29 |q The Passages Beneath/Go to Tarnur Mine
+step
+goto 57.37,68.14
+'Open _Tarnur Mine_ |q The Passages Beneath |future
+|tip Manually skip to the next step.
+step
+goto U46_ZQ2_abandonedtun_01_base 24.41,27.26
+'Open _Abandoned Tunnels_ |q The Passages Beneath |future
+|tip Manually skip to the next step.
+step
+goto 59.95,31.44 |q The Passages Beneath/Explore the Mine
+step
+goto 70.44,36.77 |q The Passages Beneath/Explore the Mine
+step
+goto 62.47,44.83 |q The Passages Beneath/Explore the Mine |tip Go downstairs.
+step
+goto 33.26,64.00 |q The Passages Beneath/Explore the Mine
+step
+goto 55.10,74.97 |q The Passages Beneath/Explore the Mine
+step
+goto 68.82,72.07 |q The Passages Beneath/Explore the Mine
+step
+goto 68.04,75.65
+|tip Watch the dialogue.
+'Examine _Sarcophagus_ |q The Passages Beneath/Search the Barge 
+step
+goto 40.19,79.07
+talk Walks-In-Ashes |q The Passages Beneath/Talk to Walks-In-Ashes |future
+|tip Manually skip to the next step.
+step
+goto 38.34,81.78
+'Open _Solstice_ Map
+'Travel to _Sunport_ |q The Passages Beneath/Return to Prince Azah
+|tip Manually skip to the next step.
+step
+goto u46_Sunport_base 61.34,49.57
+'Open _Palace District_ |q The Passages Beneath/Return to Prince Azah
+|tip Manually skip to the next step.
+step
+goto 74.19,51.74
+'Open _Vinutilmo Palace_ |q The Passages Beneath/Return to Prince Azah
+|tip Manually skip to the next step.
+step
+goto 76.08,51.00
+talk Prince Azah |q The Passages Beneath/Talk to Prince Azah |future
+step
+goto 75.80,50.96
+|tip Watch the dialogue.
+talk Gabrielle Benele
+turnin The Passages Beneath
+accept The Writhing Wall
+step
+goto 75.70,51.41
+'Open _Palace District_ |q The Writhing Wall/Go to Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 65.67,49.76
+'Open _Central Square_ |q The Writhing Wall/Go to Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 58.33,49.96
+'Use _Sunport_
+'Travel to _Sunport Docks_ |q The Writhing Wall/Go to Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 49.65,45.93 |q The Writhing Wall/Go to Li-Xal Pass
+step
+goto 48.73,45.28
+'Examine _Storm Coming In_
+accept Wealth from the Sea
+step
+goto 48.73,45.28
+'Take _Dried Snow Truffles_ |q Wealth from the Sea/Gather the Crate of Truffles
+step
+goto 50.55,43.69 |q The Writhing Wall/Go to Li-Xal Pass
+step
+goto 48.88,41.89 |q The Writhing Wall/Go to Li-Xal Pass
+step
+goto 48.15,40.19
+'Open _Li-Xal Pass_ |q The Writhing Wall/Go to Li-Xal Pass |future
+|tip Manually skip to the next step.
+step
+goto U46_ZQ2_lixalpass_01_base 51.40,89.88
+talk Gabrielle Benele |q The Writhing Wall |future
+|tip Manually skip to the next step.
+step
+goto 38.78,80.89 |q The Writhing Wall/Climb Li-Xal Pass |future
+step
+goto 38.37,61.79
+'Use _Grapple Point_ |q The Writhing Wall/Use Grapple Post |future
+|tip Manually skip to the next step.
+step
+goto 42.59,46.80
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 46.27,53.65
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 55.40,57.31 |q The Writhing Wall/Climb Li-Xal Pass
+step
+goto 62.59,49.48
+talk Vanus Galerion |q The Writhing Wall/Talk to Vanus Galerion |future
+step
+goto 50.06,41.22 |q The Writhing Wall/Climb Li-Xal Pass
+step
+goto 43.13,27.56
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 39.98,33.87
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 49.79,33.69
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 66.58,29.57
+talk Vanus Galerion |q The Writhing Wall/Talk to Vanus Galerion |future
+step
+goto 53.18,16.37
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 59.80,12.64
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 58.78,18.82
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 56.12,23.26
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 61.73,17.51
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 55.41,11.70
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 46.13,7.55
+'Open _Li-Xal Cove_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 47.12,32.25
+talk Vanus Galerion |q The Writhing Wall/Talk to Vanus Galerion |future
+step
+goto 47.12,32.25
+talk Gabrielle Benele |q The Writhing Wall/Talk to Gabrielle Benele
+step
+'Open _Solstice_ Map
+'Travel to _Shor's Stand_ |q The Writhing Wall/Go to Vosgah Shrine
+|tip Manually skip to the next step.
+step
+goto u46_base_shoresstand 73.01,41.10 |q Wealth from the Sea/Find Captain Genevé Delitian
+step
+goto 56.20,59.47
+talk Captain Genevé Delitian
+turnin Wealth from the Sea
+accept Striking the Deal
+step
+goto 73.01,41.10 |q Striking the Deal/Meet Captain Genevé Delitian
+step
+goto 67.71,33.50
+'Use _Shor's Stand_
+'Travel to _Vale of Revelry_ |q The Writhing Wall/Go to Vosgah Shrine
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 41.68,70.64 |q The Writhing Wall/Go to Vosgah Shrine
+step
+goto 40.97,70.59 |q The Writhing Wall/Go to Vosgah Shrine
+step
+goto 41.00,70.20
+'Open _Vosgah Shrine_ |q The Writhing Wall/Go to Vosgah Shrine |future
+|tip Manually skip to the next step.
+step
+goto U46_ZQ2_gamecourt_01_base 70.51,84.57
+talk Razum-dar |q The Writhing Wall/Talk to Razum-dar |future
+step
+goto 44.40,64.69 |q The Writhing Wall/Reach the Ritual Altar
+step
+goto 56.74,54.51 |q The Writhing Wall/Reach the Ritual Altar
+step
+goto 52.11,42.23 |q The Writhing Wall/Reach the Ritual Altar
+step
+goto 47.66,30.34
+'Open _Teeba-Hatsei Ritual Altar_ |q The Writhing Wall/Reach the Ritual Altar
+|tip Manually skip to the next step.
+step
+goto 47.60,15.03
+kill Wormblood |q The Writhing Wall/Defeat Wormblood |future
+step
+goto 47.60,15.03
+'Search _Stone Coffer_ |q The Writhing Wall/Take the Gift of Death
+step
+goto 44.11,19.54
+'Break _Weakened Column_ |q The Writhing Wall/Collapse the Shrine |future
+|tip Manually skip to the next step.
+step
+goto 50.97,19.54
+'Break _Weakened Column_ |q The Writhing Wall/Collapse the Shrine
+step
+'Open _Solstice_ Map
+'Travel to _Sunport_ |q The Writhing Wall/Return to Vinutilmo Palace
+|tip Manually skip to the next step.
+steep
+goto u46_Sunport_base 64.50,57.43
+talk Captain Genevé Delitian
+turnin Striking the Deal
+step
+goto 61.34,49.57
+'Open _Palace District_ |q The Writhing Wall/Return to Vinutilmo Palace
+|tip Manually skip to the next step.
+step
+goto 74.19,51.74
+'Open _Vinutilmo Palace_ |q The Writhing Wall/Return to Vinutilmo Palace
+|tip Manually skip to the next step.
+step
+goto 75.88,51.05
+talk Prince Azah
+turnin The Writhing Wall
+step
+'Congraulations Guide Complete.
+step
 ]])

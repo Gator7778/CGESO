@@ -48114,5 +48114,537 @@ talk Curate Gadayn |q In Memory Of/Talk to Curate Gadayn |future
 step
 goto 41.96,74.57
 talk Leramil the Wise
-turnin In Memory Of
+turnin In Memory Of |next Extras\\Extras\\Main Quests Only\\DLC\\Solstice
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Solstice",[[
+loadingimage loadscreen_solstice_zone_01.dds
+description The western part of Solstice will is a tropical paradise from where the Stirk Fellowship will make their base of operations, as they attempt to breach past the massive Writing Wall, into the eastern half of Solstice from where the Worm Cult has the bulk of their operations.
+step
+'Open _Solstice_ Map
+'Travel to _Sunport Docks_ |q The Stirk Fellowship |future
+|tip Manually skip to the next step.
+step
+goto u46_Sunport_base 21.59,51.71
+talk Midconjuror Mirmal
+accept The Stirk Fellowship
+step
+goto 24.06,60.67
+talk Prince Azah |q The Stirk Fellowship/Talk to Prince Azah
+step
+goto 25.04,61.39
+'Place _Portal Anchor_ |q The Stirk Fellowship/.*Place Portal Anchors.* |count 1
+step
+goto 25.41,62.26
+'Place _Portal Anchor_ |q The Stirk Fellowship/.*Place Portal Anchors.* |count 2
+step
+goto 25.07,63.14
+'Place _Portal Anchor_ |q The Stirk Fellowship/.*Place Portal Anchors.* |count 3
+step
+goto 24.23,62.37
+'Place _Portal Anchor_ |q The Stirk Fellowship/.*Place Portal Anchors.* |count 4
+step
+goto 24.09,61.51
+talk Mage Farinor |q The Stirk Fellowship/Talk to Mage Farinor
+step
+goto 24.09,61.51
+'Welcome the _Alliance Representatives_ |q The Stirk Fellowship/Welcome the Alliance Representatives
+step
+goto 24.09,61.51
+talk Midconjuror Mirmal |q The Stirk Fellowship/Talk to Midconjuror Mirmal
+step
+goto 24.39,60.88
+talk Prince Azah |q The Stirk Fellowship |future
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 46.94,52.76 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 50.55,57.44 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 49.34,60.43 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 43.25,63.87
+wayshrine Corelanya Manor
+step
+goto 44.55,69.08 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 45.58,72.62 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 41.95,72.69
+wayshrine Vale of Revelry
+step
+goto 41.95,72.69
+'Use _Vale of Revelry_
+'Travel to _Corelanya Manor_ |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
+step
+goto 44.51,67.64 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 49.01,68.74 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 50.24,70.14 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 52.24,69.04
+wayshrine Shell-Tide Village
+step
+goto 52.69,65.90 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 54.78,63.46 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 56.80,63.62 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 57.51,62.43 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 56.79,62.16 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 57.28,62.01 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 57.95,61.76
+'Open _Abandoned Hut_ |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
+step
+goto 58.04,61.82
+talk Skordo the Knife |q The Stirk Fellowship/Talk to Skordo the Knife |future
+|tip Manually skip to the next step.
+step
+goto 58.00,61.63
+'Examine _Partially Burned Missive_ |lorebook Partially Burned Missive/3/55/19
+step
+goto 58.11,61.73
+'Examine _Writhing Wall_ |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
+step
+goto 58.09,61.79
+talk Skordo the Knife |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.* |count 1
+step
+'Open _Solstice_ Map
+'Travel to _Corelanya Manor_ |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.* |count 2
+|tip Manually skip to the next step.
+step
+goto 39.92,63.14 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 36.59,62.11 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 38.28,55.41
+wayshrine Western Bay
+step
+goto 32.83,54.91 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 28.78,56.34
+talk Rigurt the Brash |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
+step
+goto 28.78,56.31
+talk Walks-In-Ashes |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.* |count 2
+step
+'Open _Solstice_ Map
+'Travel to _Western Bay_ |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
+step
+goto u46_base_shoresstand 67.78,33.53
+wayshrine Shor's Stand
+step
+goto u48_overland_base 40.27,44.50 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 40.79,41.01 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 39.85,39.93
+'Open _Broken Light Courtyard_ |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
+step
+goto 40.17,39.64
+talk Gabrielle Benele |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.* |future
+|tip Manually skip to the next step.
+step
+goto 40.44,39.39
+'Examine _The Bell and the Hymn_ |lorebook The Bell and the Hymn/3/55/18
+step
+goto 40.00,39.27 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 39.798,39.64
+'Search _Rubble_ |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
+step
+goto 40.56,39.76 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+step
+goto 40.36,39.94
+'Search _Rubble_ |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
+step
+goto 40.22,39.64
+talk Gabrielle Benele |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.* |count 3
+step
+'Open _Solstice_ Map
+'Travel to _Sunport Docks_ |q The Stirk Fellowship |future
+|tip Manually skip to the next step.
+step
+goto u46_Sunport_base 31.08,50.96
+'Open _Sunport_ |q The Stirk Fellowship |future
+|tip Manually skip to the next step.
+step
+goto 44.53,56.87 |q The Stirk Fellowship/Meet Prince Azah |future
+step
+goto 40.44,60.06
+talk Prince Azah
+turnin The Stirk Fellowship
+accept The Regent of Sunport
+step
+goto 44.39,45.99 |q The Regent of Sunport/Go to Vinutilmo Palace
+step
+goto 62.03,44.00 |q The Regent of Sunport/Go to Vinutilmo Palace
+step
+goto 58.04,50.16
+wayshrine Sunport
+step
+goto 61.34,49.61
+'Open _Palace District_ |q The Regent of Sunport/Go to Vinutilmo Palace
+|tip Manually skip to the next step.
+step
+goto 74.19,51.74
+'Open _Vinutilmo Palace_ |q The Regent of Sunport/Go to Vinutilmo Palace
+|tip Manually skip to the next step.
+step
+goto 76.23,50.85
+'Examine _Crumpled Note_ |lorebook Crumpled Note/3/55/20
+step
+goto 75.65,51.20
+'Examine _Palace Door_ |q The Regent of Sunport/.*Look for Clues.* |count 2
+step
+goto 76.17,51.36
+'Examine _Stained Carpet_ |q The Regent of Sunport/.*Look for Clues.* |count 3
+step
+goto 76.13,51.33
+|tip Go upstairs.
+talk Viniama |q The Regent of Sunport/Talk to the Palace Servant |future
+step
+'Open _Solstice Map_
+'Travel to _Western Bay_ |q The Regent of Sunport/Go to Swencoast Cottage
+|tip Manually skip to the next step.
+step
+goto 37.86,60.04
+'Go to _Swencoast Cottage_ |q The Regent of Sunport/Go to Swencoast Cottage
+step
+goto u48_overland_base 38.09,59.73
+talk Razum-dar |q The Regent of Sunport/Talk to Razum-dar |future
+step
+goto u48_overland_base 38.03,61.14
+'Open _Swencoast Cottage_ |q The Regent of Sunport/Rescue Regent Karinwe
+|tip Manually skip to the next step.
+step
+goto 38.26,61.07
+|tip Go upstairs.
+'Open _Cottage Study_ |q The Regent of Sunport/Rescue Regent Karinwe
+|tip Manually skip to the next step.
+step
+goto 38.36,61.00
+'Untie _Lady Karinwe_ |q The Regent of Sunport/Rescue Regent Karinwe
+step
+goto 38.36,61.00
+talk Regent Karinwe |q The Regent of Sunport/Talk to Regent Karinwe
+step
+'Open _Solstice_ Map
+'Travel to _Sunport Docks_ |q The Regent of Sunport/Return to Sunport
+|tip Manually skip to the next step.
+step
+goto u46_Sunport_base 31.08,50.92
+'Open _Sunport_ |q The Regent of Sunport/Return to Sunport
+step
+goto 44.76,56.39 |q The Regent of Sunport/Talk to Prince Azah
+step
+goto 39.38,61.56
+talk Prince Azah |q The Regent of Sunport/Talk to Prince Azah
+step
+goto 39.74,61.82
+talk Regent Karinwe |q The Regent of Sunport/Talk to Regent Karinwe |future
+|tip Manually skip to the next step.
+step
+goto 44.39,45.99 |q The Regent of Sunport/Enter the Palace District
+step
+goto 62.03,44.00 |q The Regent of Sunport/Enter the Palace District
+step
+goto 60.97,51.85
+'Open _Adrard's Luxury Goods_ |q The Regent of Sunport/Enter the Palace District
+|tip Manually skip to the next step.
+step
+goto 62.20,53.11
+'Open _Adrard's Townhouse_ |q The Regent of Sunport/Enter the Palace District
+|tip Manually skip to the next step.
+step
+goto 64.47,52.73
+|tip Go downstairs then Go upstairs.
+'Open _Palace District_ |q The Regent of Sunport/Enter the Palace District |future
+|tip Manually skip to the next step.
+step
+goto u46_SunportPalaceDistrict_base 73.81,70.17 |q The Regent of Sunport/.*Destroy Soul Reapers.* |future
+step
+goto 72.43,78.47
+'Destroy _Soul Reaper_ |q The Regent of Sunport/.*Destroy Soul Reapers.* |count 1
+step
+goto 82.96,81.04 |q The Regent of Sunport/.*Destroy Soul Reapers.* |count 2
+step
+goto 83.17,69.96
+'Destroy _Soul Reaper_ |q The Regent of Sunport/.*Destroy Soul Reapers.* |count 2
+step
+goto 73.11,60.35 |q The Regent of Sunport/.*Destroy Soul Reapers.* |count 3
+step
+goto 77.77,60.92
+'Destroy _Soul Reaper_ |q The Regent of Sunport/.*Destroy Soul Reapers.* |count 3
+step
+goto 74.09,51.84
+'Open _Vinutilmo Palace_ |q The Regent of Sunport/Go to Vinutilmo Palace
+|tip Manually skip to the next step.
+step
+goto 77.90,49.39
+kill Tidemuck |q The Regent of Sunport/Defeat Tidemuck |future
+step
+goto 78.01,49.62
+'Open _Regent's Study_ |q The Regent of Sunport/Search the Regent's Study
+|tip Manually skip to the next step.
+step
+goto 78.23,49.89
+'Examine _Wormblood's Orders_ |lorebook Wormblood's Orders/3/55/21
+step
+goto 78.02,49.86
+'Open _Vinutilmo Palace_ |q The Regent of Sunport/Find Prince Azah |future
+|tip Manually skip to the next step.
+step
+goto 77.65,49.65
+'Open _Palace District_ |q The Regent of Sunport/Find Prince Azah |future
+step
+goto u46_Sunport_base 71.36,54.76
+talk Prince Azah
+turnin The Regent of Sunport
+accept The Passages Beneath
+step
+goto 71.67,54.88
+talk Walks-In-Ashes |q The Passages Beneath/Talk to Walks-In-Ashes |future
+|tip Manually skip to the next step.
+step
+goto 65.67,49.73
+'Open _Central Square_ |q The Passages Beneath/Go to the Sunport Guard House
+|tip Manually skip to the next step.
+step
+goto 57.95,41.06 |q The Passages Beneath/Go to the Sunport Guard House
+step
+goto 43.97,47.54 |q The Passages Beneath/Go to the Sunport Guard House
+step
+goto 40.02,39.845
+'Open _Guard House_ |q The Passages Beneath/Go to the Sunport Guard House
+|tip Manually skip to the next step.
+step
+goto 39.26,39.23
+talk Bonelord Kagazal |q The Passages Beneath/Talk to Bonelord Kagazal |future
+|tip Persuade or Intimidate him.
+step
+goto 39.27,39.35
+talk Walks-In-Ashes |q The Passages Beneath/Talk to Walks-In-Ashes |future
+|tip Manually skip to the next step.
+step
+'Open _Solstice_ Map
+'Travel to _Shell-Tide Village_ |q The Passages Beneath/Go to Tarnur Mine
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 57.96,69.29 |q The Passages Beneath/Go to Tarnur Mine
+step
+goto 57.37,68.14
+'Open _Tarnur Mine_ |q The Passages Beneath |future
+|tip Manually skip to the next step.
+step
+goto U46_ZQ2_abandonedtun_01_base 24.41,27.26
+'Open _Abandoned Tunnels_ |q The Passages Beneath |future
+|tip Manually skip to the next step.
+step
+goto 59.95,31.44 |q The Passages Beneath/Explore the Mine
+step
+goto 70.44,36.77 |q The Passages Beneath/Explore the Mine
+step
+goto 62.47,44.83 |q The Passages Beneath/Explore the Mine |tip Go downstairs.
+step
+goto 33.26,64.00 |q The Passages Beneath/Explore the Mine
+step
+goto 55.10,74.97 |q The Passages Beneath/Explore the Mine
+step
+goto 68.82,72.07 |q The Passages Beneath/Explore the Mine
+step
+goto 68.04,75.65
+|tip Watch the dialogue.
+'Examine _Sarcophagus_ |q The Passages Beneath/Search the Barge 
+step
+goto 40.19,79.07
+talk Walks-In-Ashes |q The Passages Beneath/Talk to Walks-In-Ashes |future
+|tip Manually skip to the next step.
+step
+goto 38.34,81.78
+'Open _Solstice_ Map
+'Travel to _Sunport_ |q The Passages Beneath/Return to Prince Azah
+|tip Manually skip to the next step.
+step
+goto u46_Sunport_base 61.34,49.57
+'Open _Palace District_ |q The Passages Beneath/Return to Prince Azah
+|tip Manually skip to the next step.
+step
+goto 74.19,51.74
+'Open _Vinutilmo Palace_ |q The Passages Beneath/Return to Prince Azah
+|tip Manually skip to the next step.
+step
+goto 76.08,51.00
+talk Prince Azah |q The Passages Beneath/Talk to Prince Azah |future
+step
+goto 75.80,50.96
+|tip Watch the dialogue.
+talk Gabrielle Benele
+turnin The Passages Beneath
+accept The Writhing Wall
+step
+goto 75.70,51.41
+'Open _Palace District_ |q The Writhing Wall/Go to Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 65.67,49.76
+'Open _Central Square_ |q The Writhing Wall/Go to Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 58.33,49.96
+'Use _Sunport_
+'Travel to _Sunport Docks_ |q The Writhing Wall/Go to Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 49.65,45.93 |q The Writhing Wall/Go to Li-Xal Pass
+step
+goto 50.55,43.69 |q The Writhing Wall/Go to Li-Xal Pass
+step
+goto 48.88,41.89 |q The Writhing Wall/Go to Li-Xal Pass
+step
+goto 48.15,40.19
+'Open _Li-Xal Pass_ |q The Writhing Wall/Go to Li-Xal Pass |future
+|tip Manually skip to the next step.
+step
+goto U46_ZQ2_lixalpass_01_base 51.40,89.88
+talk Gabrielle Benele |q The Writhing Wall |future
+|tip Manually skip to the next step.
+step
+goto 38.78,80.89 |q The Writhing Wall/Climb Li-Xal Pass |future
+step
+goto 38.37,61.79
+'Use _Grapple Point_ |q The Writhing Wall/Use Grapple Post |future
+|tip Manually skip to the next step.
+step
+goto 42.59,46.80
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 46.27,53.65
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 55.40,57.31 |q The Writhing Wall/Climb Li-Xal Pass
+step
+goto 62.59,49.48
+talk Vanus Galerion |q The Writhing Wall/Talk to Vanus Galerion |future
+step
+goto 50.06,41.22 |q The Writhing Wall/Climb Li-Xal Pass
+step
+goto 43.13,27.56
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 39.98,33.87
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 49.79,33.69
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 66.58,29.57
+talk Vanus Galerion |q The Writhing Wall/Talk to Vanus Galerion |future
+step
+goto 53.18,16.37
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 59.80,12.64
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 58.78,18.82
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 56.12,23.26
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 61.73,17.51
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 55.41,11.70
+'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto 46.13,7.55
+'Open _Li-Xal Cove_ |q The Writhing Wall/Climb Li-Xal Pass
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 47.12,32.25
+talk Vanus Galerion |q The Writhing Wall/Talk to Vanus Galerion |future
+step
+goto 47.12,32.25
+talk Gabrielle Benele |q The Writhing Wall/Talk to Gabrielle Benele
+step
+'Open _Solstice_ Map
+'Travel to _Vale of Revelry_ |q The Writhing Wall/Go to Vosgah Shrine
+|tip Manually skip to the next step.
+step
+goto 41.68,70.64 |q The Writhing Wall/Go to Vosgah Shrine
+step
+goto 40.97,70.59 |q The Writhing Wall/Go to Vosgah Shrine
+step
+goto 41.00,70.20
+'Open _Vosgah Shrine_ |q The Writhing Wall/Go to Vosgah Shrine |future
+|tip Manually skip to the next step.
+step
+goto U46_ZQ2_gamecourt_01_base 70.51,84.57
+talk Razum-dar |q The Writhing Wall/Talk to Razum-dar |future
+step
+goto 44.40,64.69 |q The Writhing Wall/Reach the Ritual Altar
+step
+goto 56.74,54.51 |q The Writhing Wall/Reach the Ritual Altar
+step
+goto 52.11,42.23 |q The Writhing Wall/Reach the Ritual Altar
+step
+goto 47.66,30.34
+'Open _Teeba-Hatsei Ritual Altar_ |q The Writhing Wall/Reach the Ritual Altar
+|tip Manually skip to the next step.
+step
+goto 47.60,15.03
+kill Wormblood |q The Writhing Wall/Defeat Wormblood |future
+step
+goto 47.60,15.03
+'Search _Stone Coffer_ |q The Writhing Wall/Take the Gift of Death
+step
+goto 44.11,19.54
+'Break _Weakened Column_ |q The Writhing Wall/Collapse the Shrine |future
+|tip Manually skip to the next step.
+step
+goto 50.97,19.54
+'Break _Weakened Column_ |q The Writhing Wall/Collapse the Shrine
+step
+'Open _Solstice_ Map
+'Travel to _Sunport_ |q The Writhing Wall/Return to Vinutilmo Palace
+|tip Manually skip to the next step.
+step
+goto u46_Sunport_base 61.34,49.57
+'Open _Palace District_ |q The Writhing Wall/Return to Vinutilmo Palace
+|tip Manually skip to the next step.
+step
+goto 74.19,51.74
+'Open _Vinutilmo Palace_ |q The Writhing Wall/Return to Vinutilmo Palace
+|tip Manually skip to the next step.
+step
+goto 75.88,51.05
+talk Prince Azah
+turnin The Writhing Wall
+step
 ]])

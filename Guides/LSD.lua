@@ -1703,6 +1703,30 @@ goto u38_ciphersmidden_city_base 43.10,47.03
 step
 goto 44.02,46.08
 'Examine _Fragmentae Abyssum Hermaeus Morus_ |lorebook Fragmentae Abyssum Hermaeus Morus/1/8/9
+step
+'Open _Solstice_ Map
+'Travel to _Vale of Revelry_ |lorebook The Order of the Black Worm/1/19/8
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 36.75,72.53 |lorebook The Order of the Black Worm/1/19/8
+step
+goto 36.18,73.02
+'Examine _The Order of the Black Worm_ |lorebook The Order of the Black Worm/1/19/8
+step
+goto 41.91,72.68
+'Use _Vale of Revelry_
+'Travel to _Shell-Tide Village_ |lorebook Exegesis of Merid-Nunda/1/29/1
+|tip Manually skip to the next step.
+step
+goto 55.33,63.34 |lorebook Exegesis of Merid-Nunda/1/29/1
+step
+goto 55.07,61.32 |lorebook Exegesis of Merid-Nunda/1/29/1
+step
+goto 56.45,61.96 |lorebook Exegesis of Merid-Nunda/1/29/1
+step
+goto 55.31,61.64
+'Examine _Exegesis of Merid-Nunda_ |lorebook Exegesis of Merid-Nunda/1/29/1
+step
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Aldmeri Dominion\\Khenarthi's Roost",[[
@@ -10334,6 +10358,12 @@ goto westwealdoverland_base 68.48,24.14
 step
 goto 64.40,24.22
 'Use _Skyshard_
-|tip Manually skip to the next step.
+|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Expansion\\Solstice
+step
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Solstice",[[
+loadingimage loadscreen_west_weald_01.dds
+description The West Weald is an open countryside of the Colovia region in southern Cyrodiil, well known for its vineyards and tomato farms.
 step
 ]])

@@ -1542,6 +1542,10 @@ CGV.MapData = {
     ["Orcrest Town Hall Cellar"]           = [[zerithorcrest_base]],
     ["Shrine of Namiira"]                  = [[zerithpredatormasa_base]],
     ["The Great Darkness"]                 = [[zerithgreatdarkness_base]],
+
+    -- Solstice
+    ["Sunport"]                            = [[u46_Sunport_base]],
+    ["Solstice"]                           = [[u48_overland_base]],
 },
 
     ["Zones"] =
@@ -3089,6 +3093,38 @@ CGV.MapData = {
     ["zerithorcrest_base"]                = { name = "Orcrest Town Hall Cellar",                id = 1052, xoffset = 0.538548, yoffset = 0.640120, scale = 0.005132, },
     ["zerithpredatormasa_base"]           = { name = "Shrine of Namiira",                       id = 1053, xoffset = 0.495101, yoffset = 0.633843, scale = 0.006280, },
     ["zerithgreatdarkness_base"]          = { name = "The Great Darkness",                      id = 1054, xoffset = 0.471761, yoffset = 0.590574, scale = 0.005567, },
+
+    -- Solstice
+    ["u46_Sunport_base"]                  = { name = "Sunport",                                 id = 1055, xoffset = 0.677227, yoffset = 0.913993, scale = 0.009395, },
+    ["u48_overland_base"]                 = { name = "Solstice",                                id = 1056, xoffset = 0.628768, yoffset = 0.867680, scale = 0.102891, },
+    ["u46_base_CorelanyaManor"]           = { name = "Corelanya Manor",                         id = 1057, xoffset = 0.676269, yoffset = 0.931054, scale = 0.005107, },
+    ["u46_base_CorelanyaManor_F2"]        = { name = "Corelanya Manor",                         id = 1057, xoffset = 0.676269, yoffset = 0.931054, scale = 0.005107, },
+    ["u46_base_CorelanyaReanim"]          = { name = "Corelanya Manor Reanimatorium",           id = 1058, xoffset = 0.680096, yoffset = 0.931840, scale = 0.005154, }, 
+    ["u46_base_CorelanyaCY"]              = { name = "Wailing Garden",                          id = 1059, xoffset = 0.675644, yoffset = 0.932166, scale = 0.005148, },
+    ["u46_base_CorelanyaSC"]              = { name = "Corelanya Manor Vaults",                  id = 1060, xoffset = 0.674414, yoffset = 0.934201, scale = 0.005204, },
+    ["u46_base_CorelanyaBoss"]            = { name = "Corelanya Manor Ossuarium",               id = 1061, xoffset = 0.674279, yoffset = 0.934514, scale = 0.005162, },
+    ["u46_base_SanguineHDLV"]             = { name = "Vale of Revelry",                         id = 1062, xoffset = 0.673241, yoffset = 0.929300, scale = 0.020418, },
+    ["u46_base_sel_grove"]                = { name = "Misfortune Teller's Garden",              id = 1063, xoffset = 0.657403, yoffset = 0.934608, scale = 0.005414, },
+    ["u46_base_sel_groveboss"]            = { name = "Misfortune Teller's Garden",              id = 1063, xoffset = 0.723926, yoffset = 0.918511, scale = 0.002303, },
+    ["u46_base_sel_bauble"]               = { name = "Blood 'n' Baubles",                       id = 1064, xoffset = 0.655971, yoffset = 0.933036, scale = 0.002259, },
+    ["u46_base_sel_boss"]                 = { name = "Tent of Dark Joy",                        id = 1065, xoffset = 0.657348, yoffset = 0.933536, scale = 0.002674, },
+    ["u46_Shelltide_base"]                = { name = "Shell-Tide Village",                      id = 1066, xoffset = 0.677797, yoffset = 0.941496, scale = 0.006144, },
+    ["u46_base_ShelltideDream1"]          = { name = "Senik-Haas's Dream-Wallow",               id = 1067, xoffset = 0.684649, yoffset = 0.941090, scale = 0.004086, },
+    ["u46_base_ShelltideDream2"]          = { name = "Tlali-Haas's Dream-Wallow",               id = 1068, xoffset = 0.684031, yoffset = 0.937083, scale = 0.004886, },
+    ["u46_base_ShelltideSithis"]          = { name = "Shrine of Sithis",                        id = 1069, xoffset = 0.682412, yoffset = 0.943062, scale = 0.004493, },
+    ["u46_base_lostvillage"]              = { name = "Tainted Leel",                            id = 1070, xoffset = 0.652519, yoffset = 0.925027, scale = 0.008636, },
+    ["u46_carapacecaverns_base"]          = { name = "Carapace Cavern",                         id = 1071, xoffset = 0.655808, yoffset = 0.908359, scale = 0.012180, },
+    ["u46_base_shoresstand"]              = { name = "Shor's Stand",                            id = 1072, xoffset = 0.657190, yoffset = 0.915642, scale = 0.008874, },
+    ["u46_brokenlight_int1_base"]         = { name = "Broken Light Temple",                     id = 1073, xoffset = 0.668045, yoffset = 0.901140, scale = 0.007524, },
+    ["u46_brokenlight_int2_base"]         = { name = "Broken Light Temple",                     id = 1073, xoffset = 0.667957, yoffset = 0.900986, scale = 0.007693, },
+    ["u46_brokenlight_int3_base"]         = { name = "Broken Light Temple",                     id = 1073, xoffset = 0.666274, yoffset = 0.900242, scale = 0.007470, },
+    ["u46_brokenlight_int4_base"]         = { name = "Broken Light Temple",                     id = 1073, xoffset = 0.667957, yoffset = 0.900986, scale = 0.007693, },
+    ["u46_brokenlight_int5_base"]         = { name = "Broken Light Temple",                     id = 1073, xoffset = 0.667772, yoffset = 0.900644, scale = 0.007249, },
+    ["u46_brokenlight_int6_base"]         = { name = "Broken Light Temple",                     id = 1073, xoffset = 0.667957, yoffset = 0.900986, scale = 0.007693, },
+    ["u46_SunportPalaceDistrict_base"]    = { name = "Sunport",                                 id = 1074, xoffset = 0.666706, yoffset = 0.905440, scale = 0.025546, },
+    ["U46_ZQ2_abandonedtun_01_base"]      = { name = "Tarnur Mine",                             id = 1075, xoffset = 0.685965, yoffset = 0.934808, scale = 0.014299, },
+    ["U46_ZQ2_lixalpass_01_base"]         = { name = "Li-Xal Pass",                             id = 1076, xoffset = 0.674621, yoffset = 0.902556, scale = 0.007181, },
+    ["U46_ZQ2_gamecourt_01_base"]         = { name = "Vosgah Shrine",                           id = 1077, xoffset = 0.665911, yoffset = 0.932939, scale = 0.007700, },
     },
 }
 

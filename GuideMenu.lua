@@ -563,8 +563,8 @@ function GuideMenu:RefreshUI()
 		end
 	else
 		frame.GuideTitle:SetText("Welcome to the Community Leveling Guides for ESO")
-		frame.GuideImage:SetTexture(CGV.DIR.."/Viewer/Skins/Stealth/cgeso-gold.dds")
-		frame.GuideData:SetText("Imperial City, Craglorn, Southern Elsweyr, Dark Heart of Skyrim, Blackwood, The Deadlands, Legacy of the Breton, Shadow Over Morrowind, Gold Coast guides authored by |cffaa00snichols7778|r\nSummerset, Murkmire and Elsweyr guides authored by |cffaa00Hydra9268|r\nAdditional support by |cffaa00Sharlikran|r, |cffaa00Krandor1|r\n|c999999Original guide and Addon created by Zygor Guides|r")
+		frame.GuideImage:SetTexture(CGV.DIR.."/Viewer/Skins/Stealth/cgeso-SOTWC.dds")
+		frame.GuideData:SetText("Imperial City, Craglorn, Southern Elsweyr, Dark Heart of Skyrim, Blackwood, The Deadlands, Legacy of the Breton, Shadow Over Morrowind, Gold Coast, Season of the Worm Cult guides authored by |cffaa00snichols7778|r\nSummerset, Murkmire and Elsweyr guides authored by |cffaa00Hydra9268|r\nAdditional support by |cffaa00Sharlikran|r, |cffaa00Krandor1|r\n|c999999Original guide and Addon created by Zygor Guides|r")
 		frame.GuideData:SetPoint(TOPLEFT,frame.GuideImage,0,265)
 		frame.GuideImage:Show()
 		frame.OkButton:Hide()

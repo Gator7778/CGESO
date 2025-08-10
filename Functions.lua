@@ -666,7 +666,8 @@ function Utils.DistanceOffsetForGoto(dist,selfdist)
 				GetCurrentMapIndex() == Enums.GalenMap or
 			    GetCurrentMapIndex() == Enums.HighIsleMap or
 				GetCurrentMapIndex() == Enums.ImperialCityMap or
-			    GetCurrentMapIndex() == Enums.KhenarthisRoostMap then return 2
+			    GetCurrentMapIndex() == Enums.KhenarthisRoostMap or
+				GetCurrentMapIndex() == Enums.SolsticeMap then return 2
 			
 		elseif 	GetCurrentMapIndex() == Enums.AzkthzandCavernMap or
 				GetCurrentMapIndex() == Enums.BalFoyenMap or
@@ -731,7 +732,8 @@ function Utils.DistanceOffsetForIsComplete()
 				GetCurrentMapIndex() == Enums.GalenMap or
 			    GetCurrentMapIndex() == Enums.HighIsleMap or
 				GetCurrentMapIndex() == Enums.ImperialCityMap or
-			    GetCurrentMapIndex() == Enums.KhenarthisRoostMap then return 2
+			    GetCurrentMapIndex() == Enums.KhenarthisRoostMap or 
+				GetCurrentMapIndex() == Enums.SolsticeMap then return 2
 			
 		elseif 	GetCurrentMapIndex() == Enums.AzkthzandCavernMap or
 				GetCurrentMapIndex() == Enums.BalFoyenMap or			    
