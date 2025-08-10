@@ -3095,6 +3095,9 @@ CGV.MapData = {
     ["zerithgreatdarkness_base"]          = { name = "The Great Darkness",                      id = 1054, xoffset = 0.471761, yoffset = 0.590574, scale = 0.005567, },
 
     -- Solstice
+    ["u45_base_Shorn_MGBasement"]         = { name = "Underground Sanctum",                     id = 1055, xoffset = 0.165251, yoffset = 0.250149, scale = 0.004396, },
+    ["u45_base_RIV_WC"]                   = { name = "Worm Cult Nest",                          id = 1056, xoffset = 0.187045, yoffset = 0.206209, scale = 0.006492, },
+    ["stirk__u47_base"]                   = { name = "Stirk",                                   id = 1057, xoffset = 0.186311, yoffset = 0.204254, scale = 0.010245, },
     ["u46_Sunport_base"]                  = { name = "Sunport",                                 id = 1055, xoffset = 0.677227, yoffset = 0.913993, scale = 0.009395, },
     ["u48_overland_base"]                 = { name = "Solstice",                                id = 1056, xoffset = 0.628768, yoffset = 0.867680, scale = 0.102891, },
     ["u46_base_CorelanyaManor"]           = { name = "Corelanya Manor",                         id = 1057, xoffset = 0.676269, yoffset = 0.931054, scale = 0.005107, },

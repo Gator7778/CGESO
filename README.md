@@ -22,6 +22,14 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 <br/>
 
 ### Recent Updates
+### 08/12/2025
+### Solstice
+* Revamped Tutorial
+* Solstice Main Quest Only
+* Solstice Full guide
+* Solstice Skyshard and Delves Guide
+* Solstice New Lore Books
+
 ### 10/28/2024
 ### Gold Road
 * Updated Tutorial to Wailing Caverns for Update 44

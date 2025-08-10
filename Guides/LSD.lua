@@ -10363,7 +10363,7 @@ step
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Solstice",[[
-loadingimage loadscreen_west_weald_01.dds
-description The West Weald is an open countryside of the Colovia region in southern Cyrodiil, well known for its vineyards and tomato farms.
+loadingimage loadscreen_solstice_zone_01.dds
+description The western part of Solstice will is a tropical paradise from where the Stirk Fellowship will make their base of operations, as they attempt to breach past the massive Writing Wall, into the eastern half of Solstice from where the Worm Cult has the bulk of their operations.
 step
 ]])

@@ -53200,19 +53200,332 @@ loadingimage loadscreen_solstice_zone_01.dds
 description The western part of Solstice will is a tropical paradise from where the Stirk Fellowship will make their base of operations, as they attempt to breach past the massive Writing Wall, into the eastern half of Solstice from where the Worm Cult has the bulk of their operations.
 step
 -- START: ALDMERI DOMINION FACTION PROLOGUE GUIDE
-
+'Open _Auridon_ Map
+'Travel to _Vulkhel Guard_ |q A Guild in Crisis |future
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto vulkhelguard_base 54.75,55.63 |q A Guild in Crisis |future
+|only Aldmeri Dominion
+step
+goto 59.27,55.19
+|tip Choose Malabal Tor
+talk Prince Azah
+accept A Guild in Crisis
+|only Aldmeri Dominion
+step 
+goto 54.75,55.63 |q A Guild in Crisis/Rendezvous with Guild Scout in Malabal Tor
+|only Aldmeri Dominion
+step
+goto 54.99,40.95
+'Use _Vulkhel Guard_
+'Travel to _Vulkwasten_ in Malabal Tor |q A Guild in Crisis/Rendezvous with Guild Scout in Malabal Tor
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
 -- END: ALDMERI DOMINION FACTION PROLOGUE GUIDE
 
 -- START: DAGGERFALL COVENANT FACTION
-
+'Open _Glenumbra_ Map
+'Travel to _Daggerfall Covenant_ |q A Guild in Crisis |future
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto daggerfall_base 59.27,55.19
+|tip Choose Malabal Tor
+talk Prince Azah
+accept A Guild in Crisis
+|only Daggerfall Covenant
+step
+goto 49.05,20.71
+'Use _Daggerfall_
+'Travel to _Vulkwasten_ in Malabal Tor |q A Guild in Crisis/Rendezvous with Guild Scout in Malabal Tor |future
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step 
 -- END: DAGGERFALL COVENANT FACTION
 
 -- START: EBONHEART PACT FACTION
-
+'Open _Stonefalls_ Map
+'Travel to _Daven's Watch_ |q A Guild in Crisis |future
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto davonswatch_base 70.40,70.09 |q A Guild in Crisis |future
+|only Ebonheart Pact
+step
+goto 68.19,62.41
+|tip Choose Malabal Tor
+talk Prince Azah
+accept A Guild in Crisis
+|only Ebonheart Pact
+step 
+goto 70.40,70.09 |q A Guild in Crisis |q A Guild in Crisis/Rendezvous with Guild Scout in Malabal Tor |future
+|only Ebonheart Pact
+step
+goto 58.06,77.77
+'Use _Davon's Watch_
+'Travel to _Vulkwasten_ in Malabal Tor |q A Guild in Crisis/Rendezvous with Guild Scout in Malabal Tor |future
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
 -- END: EBONHEART PACT FACTION
 
 -- BEGIN: MERGED PROLOGUE FOR ALL FACTIONS
-
+goto malabaltor_base 57.93,55.31 |q A Guild in Crisis/Rendezvous with Guild Scout in Malabal Tor
+step
+goto 62.83,51.52 |q A Guild in Crisis/Rendezvous with Guild Scout in Malabal Tor
+step
+goto 61.79,47.56 |q A Guild in Crisis/Rendezvous with Guild Scout in Malabal Tor
+step
+goto 58.66,45.71
+talk Skordo the Knife |q A Guild in Crisis/Rendezvous with Guild Scout in Malabal Tor
+step
+goto 59.62,42.70
+'Examine _Guildmaster Merric's Notes_ |lorebook Guildmaster Merric's Notes/3/10/106
+step
+goto 55.89,42.41 |q A Guild in Crisis/Find the Attackers' Camp |future
+step
+goto 54.42,40.34
+|tip Persuade him.
+talk Razawir |q A Guild in Crisis/Talk to Razawir |future
+step
+goto 54.45,40.45
+talk Skordo the Knife |q A Guild in Crisis/Talk to Skordo the Knife |future
+step
+'Open _Malabal Tor_ Map
+'Travel to _Vulkwasten_ |q A Guild in Crisis/Go to the Tall Trunk Tavern in Vulkwasten
+|tip Manally skip to the next step.
+step
+goto vulkwasten_base 53.42,62.94 |q A Guild in Crisis/Go to the Tall Trunk Tavern in Vulkwasten
+step
+goto 44.41,64.85
+|tip Watch dialogue from outside to prevent it from glitching.
+talk Magister Andrelo |q A Guild in Crisis/Talk to Magister Andrelo |future
+step
+goto 51.38,65.00
+talk Skordo the Knife |q A Guild in Crisis/Talk to Skordo the Knife
+step
+goto 50.80,64.79
+'Travel _Wimi_ |q A Guild in Crisis/Go to the Shornhelm Mages Guild
+|tip Manually skip to the next step.
+step
+goto shornhelm_base 31.30,72.51
+talk Gabrielle Benele |q A Guild in Crisis/Talk to Gabrielle Benele |future
+step
+goto 27.19,71.58
+'Open _Underground Sanctum_ |q A Guild in Crisis/Enter the Underground Sanctum |future
+|tip Manually skip to the next step.
+step
+goto u45_base_Shorn_MGBasement 43.74,66.46 |q A Guild in Crisis/Search the Underground Sanctum |future
+step
+goto 51.62,91.01 |q A Guild in Crisis/Search the Underground Sanctum
+step
+goto 55.35,66.46 |q A Guild in Crisis/Search the Underground Sanctum
+step
+goto 87.58,37.07 |q A Guild in Crisis/Search the Underground Sanctum
+step
+goto 68.28,37.07
+'Open _Meeting Chambers_ |q A Guild in Crisis/Search the Underground Sanctum
+|tip Manually skip to the next step.
+step
+goto 52.83,36.06
+'Watch _Dialog_ |q A Guild in Crisis |future
+|tip Manaully skip to the next step.
+step
+goto 56.46,20.71
+'Open _Reading Hall_ |q A Guild in Crisis/Follow Prince Azah |future
+|tip Manually skip to the next step.
+step
+goto 35.25,17.58
+'Open _Meeting Chambers_ |q A Guild in Crisis/Follow Prince Azah
+|tip Manually skip to the next step.
+step
+goto 36.97,36.57
+|tip Watch the dialogue.
+'Examine _Summons to the Remnant_ |lorebook Summons to the Remnant/3/3/118
+step
+goto 38.89,37.58
+'Examine _Soul Reaper_ |q A Guild in Crisis/Search the Area
+|tip Manually skip to the next step.
+step
+goto 42.93,37.98
+'Take _Guildmaster Merric's Shield_ |q A Guild in Crisis/Search the Area
+|tip Manually skip to the next step.
+step
+goto 43.74,36.06
+'Take _Guildmaster Merric's Sword_ |q A Guild in Crisis/Search the Area
+|tip Manually skip to the next step.
+step
+goto 41.72,34.65
+talk Prince Azah |q A Guild in Crisis/Talk to Prince Azah
+step
+goto 35.45,41.41
+'Open _Underground Sanctum_ |q A Guild in Crisis/Go to the Shornhelm Fighters Guild
+|tip Manually skip to the next step.
+step
+goto 30.51,66.67 |q A Guild in Crisis/Go to the Shornhelm Fighters Guild |tip Drop down.
+step
+goto 24.14,66.87
+'Open _Shornhelm_ |q A Guild in Crisis/Go to the Shornhelm Fighters Guild
+|tip Manually skip to the next step.
+step
+goto shornhelm_base 77.68,67.60
+'Open _Fighters Guild_ |q A Guild in Crisis/Go to the Shornhelm Fighters Guild
+|tip Manually skip to the next step.
+step
+goto 79.74,67.18
+|tip Watch the dialogue.
+talk Skordo the Knife |q A Guild in Crisis/Talk to Skordo the Knife |future
+step
+goto 79.83,67.39
+talk Prince Azah
+turnin A Guild in Crisis
+accept Justice for the Fallen
+step
+goto 77.80,68.03
+'Open _Shornhelm_ |q Justice for the Fallen/Talk to Vanus Galerion
+|tip Manually skip to the next step.
+step
+goto 74.21,68.28
+talk Vanus Galerion |q Justice for the Fallen/Talk to Vanus Galerion
+step
+'Open _Rivenspire_ Map
+'Travel to _Northpoint_ |q Justice for the Fallen/Find the Worm Cult Nest
+|tip Manually skip to the next step.
+step
+goto northpoint_base 14.41,26.20 |q Justice for the Fallen/Find the Worm Cult Nest
+step
+goto rivenspire_base 61.31,18.49 |q Justice for the Fallen/Find the Worm Cult Nest
+step
+goto 58.55,23.23
+'Open _Worm Cult Nst_ |q Justice for the Fallen/Enter the Worm Cult Nest |future
+|tip Manually skip to the next step.
+step
+goto u45_base_RIV_WC 43.89,36.44 |q Justice for the Fallen/Find the Illusion Magic's Source |future
+step
+goto 43.35,28.27 |q Justice for the Fallen/Find the Illusion Magic's Source |future
+step
+goto 46.09,6.97
+|tip Watch the dialogue.
+'Examine _Worm Cult Journal_ |lorebook Worm Cult Journal/3/3/119
+step
+goto 22.54,22.65 |q Justice for the Fallen/Search the Worm Cult Nest
+step
+goto 22.86,49.91 |q Justice for the Fallen/Search the Worm Cult Nest
+step
+goto 5.22,54.97 |q Justice for the Fallen/Search the Worm Cult Nest
+step
+goto 20.68,53.94
+'Destroy _Soul Reaper_ |q Justice for the Fallen/Search the Worm Cult Nest
+step
+goto 20.26,54.84
+talk Vanus Galerion |q Justice for the Fallen/Talk to Vanus Galerion
+step
+goto 24.34,60.68
+'Examine _Resurrection and Revelation_ |lorebook Resurrection and Revelation/3/3/120
+step
+goto 40.07,67.76 |q Justice for the Fallen/Search Deeper into the Worm Cult Nest
+step
+goto 40.31,83.98 |q Justice for the Fallen/Search Deeper into the Worm Cult Nest
+step
+goto 45.53,84.04
+'Take _Skordo's Sword_ |q Justice for the Fallen/Pick Up Skordo's Sword |future
+step
+goto 44.98,84.03
+talk Vanus Galerion |q Justice for the Fallen/Talk to Vanus Galerion
+step
+goto 52.05,66.85 |q Justice for the Fallen/Rescue Skordo the Knife
+step
+goto 63.77,66.93 |q Justice for the Fallen/Rescue Skordo the Knife
+step
+goto 92.55,77.89 |q Justice for the Fallen/Rescue Skordo the Knife
+step
+goto 91.80,66.48 |q Justice for the Fallen/Rescue Skordo the Knife
+step
+goto 85.36,66.22
+|tip Watch the dialogue.
+talk Skordo the Knife |q Justice for the Fallen/Talk to Skordo the Knife |future
+step
+goto 85.54,67.57
+'Use _Portal to Shornhelm Mages Guild_ |q Justice for the Fallen/Go to the Shornhelm Mages Guild
+|tip Manually skip to the next step.
+step
+goto shornhelm_base 25.90,67.72
+talk Prince Azah |q Justice for the Fallen/Talk to Prince Azah |future
+step
+goto 24.21,68.31
+'Use _Portal to the Earth Forge_ |q Justice for the Fallen/Go to the Earth Forge |future
+|tip Manually skip to the next step.
+step
+goto theearthforge_base 65.17,73.07
+talk Skordo the Knife |q Justice for the Fallen/Talk to Skordo the Knife |future
+step
+goto 66.61,66.13
+'Destroy _Soul Reaper_ |q Justice for the Fallen/.*Destroy Soul Reapers.*
+|tip Manually skip to the next step.
+step
+goto 66.47,57.67
+'Destroy _Soul Reaper_ |q Justice for the Fallen/.*Destroy Soul Reapers.*
+|tip Manually skip to the next step.
+step
+goto 72.04,54.75
+'Destroy _Soul Reaper_ |q Justice for the Fallen/.*Destroy Soul Reapers.*
+|tip Manually skip to the next step.
+step
+goto 72.26,50.62
+'Destroy _Soul Reaper_ |q Justice for the Fallen/.*Destroy Soul Reapers.*
+|tip Manually skip to the next step.
+step
+goto 73.76,37.99
+'Destroy _Soul Reaper_ |q Justice for the Fallen/.*Destroy Soul Reapers.*
+|tip Manually skip to the next step.
+step
+goto 70.58,24.17
+'Destroy _Soul Reaper_ |q Justice for the Fallen/.*Destroy Soul Reapers.*
+|tip Manually skip to the next step.
+step
+goto 46.43,22.29
+'Destroy _Soul Reaper_ |q Justice for the Fallen/.*Destroy Soul Reapers.*
+|tip Manually skip to the next step.
+step
+goto 39.84,24.29
+kill Mezamma |q Justice for the Fallen/Destroy Mezamma |future
+step
+goto 42.42,23.75
+talk Gabrielle Benele |q Justice for the Fallen/Talk to Gabrielle Benele
+step
+goto 43.14,24.61
+'Use _Portal to Stirk_ |q Justice for the Fallen/Go to Stirk
+|tip Manually skip to the next step.
+step
+goto stirk__u47_base 46.94,55.44 |q Justice for the Fallen/Find the Ambassadors on Stirk |future
+step
+goto 47.48,54.94
+|tip Watch the dialogue.
+talk Ambassador Telnintor |q Justice for the Fallen/Talk to Ambassador |future
+|only Aldmeri Dominion
+step
+goto 47.26,55.26
+|tip Watch the dialogue.
+talk Ambassador Geonette |q Justice for the Fallen/Talk to Ambassador |future
+|only Daggerfall Covenant
+step
+goto 47.57,56.03
+|tip Watch the dialogue.
+talk Ambassador Elsrenn |q Justice for the Fallen/Talk to Ambassador |future
+|only Ebonheart Pact
+step
+goto 46.99,55.59
+'Examine _Vanus Galerion's Staff_ |q Justice for the Fallen/Examine Vanus Galerion's Staff
+step
+goto 47.09,55.39
+talk Vanus Galerion |q Justice for the Fallen/Talk to Vanus Galerion
+step
+goto 47.10,56.12
+talk Prince Azah
+turnin Justice for the Fallen
+step
 -- END: MERGED PROLOGUE GUIDE
 
 -- BEGIN SOLSTICE GUIDE
@@ -54112,7 +54425,6 @@ step
 goto 37.93,48.22
 talk Squire Albec
 turnin Honor Bound
-step
 step
 goto 32.83,54.91 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 step
@@ -55151,7 +55463,7 @@ step
 'Open _Solstice_ Map
 'Travel to _Sunport_ |q The Writhing Wall/Return to Vinutilmo Palace
 |tip Manually skip to the next step.
-steep
+step
 goto u46_Sunport_base 64.50,57.43
 talk Captain Genevé Delitian
 turnin Striking the Deal
