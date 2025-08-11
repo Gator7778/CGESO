@@ -53593,7 +53593,7 @@ goto 48.79,62.25
 |tip Manually skip to the next step.
 step
 goto u46_base_CorelanyaManor 56.55,54.31
-'Take _Soul Cage_ |q Ghosthunters/Explore the Foyer
+'Take _Soul Cage_ |q Ghosthunters/Explore the Foyer |future
 step
 goto 56.55,51.31
 talk Gahz |q Ghosthunters/Talk to Gahz
@@ -53603,10 +53603,11 @@ goto u46_base_CorelanyaManor 71.54,49.44
 |tip Manually skip to the next step.
 step
 goto 80.90,65.17
-'Examine _Basket_ |q Ghosthunters/Search the Dining Hall
+'Examine _Basket_ |q Ghosthunters/Search the Dining Hall |future
 step
 goto 80.90,65.17
 talk Valendir |q Ghosthunters/Talk to Valendir |future
+|tip Manually skip to the next step.
 step
 goto 80.90,65.17
 'Use _Soul Cage_ |q Ghosthunters/Reclaim Valendir's Wisp
@@ -53634,6 +53635,7 @@ step
 goto 50.91,25.19
 'Mark _Candle_
 'Mark _Valve_ |q Ghosthunters/.*Search the Reanimatorium.* |count 2
+|tip Manually skip to the next step.
 step
 goto 60.78,34.03
 'Examine _Letter from Ilhidel of Clan Corelanya_ |lorebook Letter from Ilhidel of Clan Corelanya/3/55/25
@@ -53743,7 +53745,7 @@ step
 goto 62.70,31.64 |q Ghosthunters/Find Oorbesh
 step
 goto 53.71,35.35
-'Take _Fog Lantern_ 45.31,28.91 |q Ghosthunters/.*Search the Manor Grotto.* |count 1 |future
+'Take _Fog Lantern_ |q Ghosthunters/.*Search the Manor Grotto.* |count 1 |future
 step
 goto 58.20,35.74
 'Take _Clothing Scrap_ |q Ghosthunters/.*Search the Manor Grotto.* |count 2
@@ -53759,6 +53761,7 @@ goto 62.11,80.08
 'Open _Manor Catacombs_ |q Ghosthunters/Find Oorbesh |future
 step
 goto u46_base_CorelanyaBoss 60.44,69.04
+|tip Watch the dialogue.
 talk Siluran |q Ghosthunters/Talk to Siluran
 step
 goto 56.27,79.85
@@ -53773,7 +53776,8 @@ step
 goto 45.95,57.25
 'Use _Soul Cage_ |q Ghosthunters/Capture Siluran in the Soul Cage
 step
-talk Valendir |q Ghosthunters/Talk to Valendir
+goto 47.91,56.27
+talk Valendir |q Ghosthunters/Talk To Valendir
 step
 goto 50.37,62.65
 talk Oorbesh |q Ghosthunters/Check on Oorbesh
@@ -53782,6 +53786,7 @@ goto 51.35,47.67
 'Open _Corelanya Treasury_ |q Ghosthunters/Talk to Gahz |future
 |tip Manually skip to the next step.
 step
+goto 46.93,43.73
 talk Gahz
 turnin Ghosthunters
 step
@@ -53867,6 +53872,10 @@ goto u48_overland_base 47.26,70.96
 talk High Priest Caroril
 turnin Party Pains
 step
+goto 52.24,69.04
+'Discover _Shell-Tide Village_ |q Tides of the Heart |future
+|tip Manually skip to the next step.
+step
 goto 46.24,72.66
 talk Teerad
 accept A Death-Dancer's Duty
@@ -53905,44 +53914,15 @@ step
 goto 43.89,61.24
 talk Laras-Eil |q A Death-Dancer's Duty/Talk to Laras-Eil |future
 |tip Manually skip to the next step.
-step
-goto 43.25,63.88
+stepgoto 43.25,63.88
 'Use _Corelanya Manor_
 'Travel to _Shell-Tide Village_ |q A Death-Dancer's Duty/.*Recover the Tidal Votives.*
 |tip Manually skip to the next step.
 step
-goto u46_Shelltide_base 41.05,29.71 |q A Death-Dancer's Duty/.*Recover the Tidal Votives.*
-step
-goto 45.41,29.49
-'Take _Laras-Eil Tidal Votive_ |q A Death-Dancer's Duty/.*Recover the Tidal Votives.* |count 1
-step
-goto 51.88,55.14
-'Take _Vutraka's Tidal Votive_ |q A Death-Dancer's Duty/.*Recover the Tidal Votives.* |count 2
-step
-goto 54.34,49.79 |q A Death-Dancer's Duty/.*Recover the Tidal Votives.* |count 3
-step
-goto u48_overland_base 52.95,75.05
-'Take _Drunee's Tidal Votive_ |q A Death-Dancer's Duty/.*Recover the Tidal Votives.* |count 3
-step
-goto 50.36,70.49 |q A Death-Dancer's Duty/Meet Teerad
-step
-goto 54.99,70.54
-talk Teerad |q A Death-Dancer's Duty/Talk to Teerad |future
-step
-goto 55.00,70.55
-'Place _Votive_ |q A Death-Dancer's Duty/Place Laras-Eil's Votive
-step
-goto 55.06,70.55
-'Place _Votive_ |q A Death-Dancer's Duty/Place Drunee's Votive
-step
-goto 55.12,70.53
-'Place _Votive_ |q A Death-Dancer's Duty/Place Vutraka's Votive
-step
-goto 54.99,70.54
-talk Teerad
-turnin A Death-Dancer's Duty
-step
-goto 41.95,72.69 |q A Pirate's Debt |future
+goto 43.25,63.88
+'Use _Corelanya Manor_
+'Travel to _Vale of Revelry_ |q A Death-Dancer's Duty/.*Recover the Tidal Votives.*
+|tip Manually skip to the next step.
 step
 goto 36.21,73.07
 'Examine _Worm Cult Coffer_ |q A Pirate's Debt/Rob the Worm Cult Camp |future
@@ -54148,7 +54128,7 @@ talk Cirwynia
 turnin A Pirate's Debt
 step
 'Open _Solstice_ Map
-'Travel to _Corelanya Manor_ |q A Pirate's Debt/Meet Cirwynia at Wankeen's Shop
+'Travel to _Corelanya Manor_ |q Tides of the Heart |future
 |tip Manually skip to the next step.
 step
 goto 44.51,67.64 |q Tides of the Heart |future
@@ -54157,31 +54137,32 @@ goto 49.01,68.74 |q Tides of the Heart |future
 step
 goto 50.24,70.14 |q Tides of the Heart |future
 step
-goto 52.24,69.04
-'Discover _Shell-Tide Village_ |q Tides of the Heart |future
-|tip Manually skip to the next step.
-step
 goto 52.58,68.97
 talk Keshu the Black Fin
 accept Tides of the Heart
 step
-goto 50.42,70.72 |q Tides of the Heart |future
+goto u46_Shelltide_base 41.05,29.71 |q A Death-Dancer's Duty/.*Recover the Tidal Votives.*
 step
-goto u46_Shelltide_base 41.25,29.77 |q Tides of the Heart |future
-step
-goto 42.04,46.33 |q Tides of the Heart |future
+goto 45.41,29.49
+'Take _Laras-Eil Tidal Votive_ |q A Death-Dancer's Duty/.*Recover the Tidal Votives.* |count 1
 step
 goto 36.51,52.08
 'Open _Tide-Reader's Hut_ |q Tides of the Heart/Go to the Tide-Reader's Hut |future
 |tip Manually skip to the next step.
 step
 goto 34.61,56.51
-talk Tide-Reader Suhath |q Tides of the Heart/Talk to Tide-Reader Suhath
+talk Tide-Reader Suhath |q Tides of the Heart/Talk to Tide-Reader Suhath |future
+step
+goto 51.88,55.14
+'Take _Vutraka's Tidal Votive_ |q A Death-Dancer's Duty/.*Recover the Tidal Votives.* |count 2
 step
 goto 69.40,37.73
 talk Senik-Haas |q Tides of the Heart/Talk to Senik-Haas
 step
-goto u48_overland_base 54.46,74.05
+goto u48_overland_base 52.95,75.05
+'Take _Drunee's Tidal Votive_ |q A Death-Dancer's Duty/.*Recover the Tidal Votives.* |count 3
+step
+goto 54.46,74.05
 talk Tlali-Haas |q Tides of the Heart/Talk to Tlali-Haas
 step
 goto 51.36,72.19
@@ -54199,6 +54180,22 @@ step
 goto 54.39,70.70
 'Mark _Burial Site_ |q Tides of the Heart/.*Clear the Burial Sites.* |count 3
 step
+goto 54.99,70.54
+talk Teerad |q A Death-Dancer's Duty/Talk to Teerad |future
+step
+goto 55.00,70.55
+'Place _Votive_ |q A Death-Dancer's Duty/Place Laras-Eil's Votive
+step
+goto 55.06,70.55
+'Place _Votive_ |q A Death-Dancer's Duty/Place Drunee's Votive
+step
+goto 55.12,70.53
+'Place _Votive_ |q A Death-Dancer's Duty/Place Vutraka's Votive
+step
+goto 54.99,70.54
+talk Teerad
+turnin A Death-Dancer's Duty
+step
 goto 55.56,70.60
 'Examine _Tide-Born Corpses_ |q Tides of the Heart/.*Investigate the Worm Cult's Presence.* |count 2
 step
@@ -54211,7 +54208,7 @@ step
 goto 57.12,71.54 |q Tides of the Heart/Gather Fanik Goc Root
 step
 goto 59.54,72.42
-'Examine _Worm Cultists Musing |lorebook Worm Cultist Musings/3/55/12
+'Examine _Worm Cultists Musing_ |lorebook Worm Cultist Musings/3/55/12
 step
 goto 59.53,71.85
 'Take _Fanik Goc Root_ |q Tides of the Heart/Gather Fanik Goc Root
@@ -54225,7 +54222,7 @@ step
 goto 57.11,73.30 |q Tides of the Heart/Meet at the Ritual Site
 step
 goto 56.23,74.31
-talk Tlali-Haas |q Tides of the Heart/Talk to Tlali-Haas
+talk Tlali-Haas |q Tides of the Heart/Talk to Tlali-Haas |future
 step
 goto 56.10,74.36
 talk Keshu the Black Fin |q Tides of the Heart/Talk to Keshu the Black Fin
@@ -54234,7 +54231,7 @@ goto 56.17,74.46
 'Enter _Senik-Haas's Dream Wallow_ |q Tides of the Heart/Enter the Dream with Senik-Haas |future
 |tip Manually skip to the next step.
 step
-goto u46_base_ShelltideDream1 53.68,58.54 |q Tides of the Heart/Explore the Dream
+goto u46_base_ShelltideDream1 53.68,58.54 |q Tides of the Heart/Explore the Dream |future
 step
 goto 48.20,25.63
 'Open _Center of the Dream_ |q Tides of the Heart/Explore the Dream
@@ -54270,7 +54267,7 @@ step
 goto 56.38,74.46
 talk Tlali-Haas |q Tides of the Heart/Talk to Tlali-Haas
 step
-goto 56.77,73.59 |q Tides of the Heart/Meet at the Southern Shores of Solstice
+goto 56.44,73.32 |q Tides of the Heart/Meet at the Southern Shores of Solstice
 step
 goto 54.38,75.66 |q Tides of the Heart/Meet at the Southern Shores of Solstice
 step
@@ -54329,6 +54326,7 @@ goto 55.31,61.65
 'Examine _Exegesis of Merid-Nunda_ |lorebook Exegesis of Merid-Nunda/1/29/1
 step
 goto 56.98,61.61
+|tip Under the platform.
 'Use _Skyshard_ |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 |tip Manually skip to the next step.
 step
@@ -54366,11 +54364,12 @@ goto 38.28,55.41
 'Discover _Western Bay_ |q Honor Bound |future
 |tip Manually skip to the next step
 step
-goto 44.54,53.17 |q Honor Bound |future
+goto 43.14,51.55
+'Examine _Reward for Missing Steed!_
+accept Honor Bound
 step
 goto 42.79,50.77
-talk Squire Albec
-accept Honor Bound
+talk Squire Albec |q Honor Bound/Talk to Squire Albec
 step
 goto 41.97,49.40
 'Follow _Honor's Tracks_ |q Honor Bound/Follow Honor's Tracks
@@ -54498,9 +54497,9 @@ goto 91.76,46.44
 |tip Drop down.
 talk Akech-Chun |q Secrets in the Sand/Talk to Akech-Chun
 step
-'Place _Corpse_ |q Secrets in the Sand/Place Akech-Chun's Items |future
+'Place _Corpse_ |q Secrets in the Sand/Place Akech-Chun's Items |or |future
 '_OR_
-'Burn _Corpse_ |q Secrets in the Sand/Burn Akech-Chun's Corpse |future
+'Burn _Corpse_ |q Secrets in the Sand/Burn Akech-Chun's Corpse |or |future
 step
 goto 91.76,46.44
 talk Akech-Chun
@@ -54720,11 +54719,13 @@ step
 goto 43.82,54.74 |q The Stubbornness of Nords/Gather "Spuds from the Deep" |future
 step
 goto 46.36,35.83
-talk Farmer |q The Stubbornness of Nords/Gather "Spuds from the Deep"
+talk Farmer |q The Stubbornness of Nords/Gather "Spuds from the Deep" |future
+|tip Manaually skip to the next step.
 step
 goto 42.25,33.56
 kill Colossal Coral Crabs
-'Search _Crabs_ |q The Stubbornness of Nords/Gather Crab Meat for Bait
+'Search _Crabs_ |q The Stubbornness of Nords/Gather Crab Meat for Bait |future
+|tip Manually skip to the next step.
 step
 goto 43.54,32.98
 'Examine _Loose Fertilizer_ |q The Stubbornness of Nords/Investigate the Farm |future
@@ -54809,7 +54810,7 @@ goto 57.16,56.14
 talk Britt the Bold
 turnin The Stubbornness of Nords
 step
-goto u48_overland_base 40.27,44.50 |q Mystery of the Broken Temple/Talk to High Priest Eraamine
+goto u48_overland_base 40.27,44.50 |q Mystery of the Broken Temple |future
 step
 goto 39.87,42.87
 talk Acolyte Duria
@@ -54909,7 +54910,8 @@ goto 25.97,29.37
 |tip Manually skip to the next step.
 step
 goto 22.79,15.46
-talk Tomarion |q Mystery of the Broken Temple/Talk to Tomarion |future
+talk Tomarion |q Mystery of the Broken Temple/Talk to High Priest Eraamine |future
+|tip Manually skip to the next step.
 step
 goto 28.97,21.06
 talk High Priest Eraamine |q Mystery of the Broken Temple/Talk to High Priest Eraamine
@@ -54944,7 +54946,7 @@ goto 62.15,73.11
 step
 goto 69.71,73.23 |q Mystery of the Broken Temple/Search For the Ritual Site |future
 step
-goto 75.01,72.30 |q Mystery of the Broken Temple/Search For the Ritual Site
+goto 75.01,72.30 |q Mystery of the Broken Temple/Search For the Ritual Site |future
 step
 goto 65.26,57.47 |q Mystery of the Broken Temple/Search For the Ritual Site
 step
@@ -54977,7 +54979,7 @@ goto 77.61,36.99
 |tip Manually skip to the next step.
 step
 goto 77.73,28.45
-talk Sentinel Carisea |q Mystery of the Broken Temple/Talk To Sentinel Carisea
+talk Sentinel Carisea |q Mystery of the Broken Temple/Talk To Sentinel Carisea |future
 step
 goto 77.67,26.66
 'Open _Dawn Ritual Site_ |q Mystery of the Broken Temple/Enter the Ritual Site
@@ -55012,7 +55014,7 @@ goto 52.40,62.50
 step
 goto 52.08,28.04
 |tip Watch the dialogue.
-kill Sentinel Tomarion |q Mystery of the Broken Temple/Defeat Sentinel Tomarion
+kill Sentinel Tomarion |q Mystery of the Broken Temple/Defeat Sentinel Tomarion |future
 step
 goto 44.87,22.76
 'Destroy _Cynosure Orb_ |q Mystery of the Broken Temple/.*Use the Rod to Destroy the Cynosure Orbs.* |count 1
@@ -55129,10 +55131,10 @@ step
 'Travel to _Western Bay_ |q The Regent of Sunport/Go to Swencoast Cottage
 |tip Manually skip to the next step.
 step
-goto 37.86,60.04
+goto u48_overland_base 37.86,60.04
 'Go to _Swencoast Cottage_ |q The Regent of Sunport/Go to Swencoast Cottage
 step
-goto u48_overland_base 38.09,59.73
+goto 38.09,59.73
 talk Razum-dar |q The Regent of Sunport/Talk to Razum-dar |future
 step
 goto u48_overland_base 38.03,61.14
@@ -55218,6 +55220,7 @@ goto 78.02,49.86
 step
 goto 77.65,49.65
 'Open _Palace District_ |q The Regent of Sunport/Find Prince Azah |future
+|tip Manually skip to the next step.
 step
 goto u46_Sunport_base 71.36,54.76
 talk Prince Azah
@@ -55372,7 +55375,8 @@ goto 49.79,33.69
 |tip Manually skip to the next step.
 step
 goto 66.58,29.57
-talk Vanus Galerion |q The Writhing Wall/Talk to Vanus Galerion |future
+talk Vanus Galerion |q The Writhing Wall/Climb Li-Xal Pass |future
+|tip Manually skip to the next step.
 step
 goto 53.18,16.37
 'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
@@ -55403,7 +55407,8 @@ goto 46.13,7.55
 |tip Manually skip to the next step.
 step
 goto u48_overland_base 47.12,32.25
-talk Vanus Galerion |q The Writhing Wall/Talk to Vanus Galerion |future
+talk Vanus Galerion |q The Writhing Wall |future
+|tip Manually skip to the next step.
 step
 goto 47.12,32.25
 talk Gabrielle Benele |q The Writhing Wall/Talk to Gabrielle Benele
