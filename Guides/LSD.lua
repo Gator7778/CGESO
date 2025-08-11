@@ -10366,4 +10366,179 @@ CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Solstice",[[
 loadingimage loadscreen_solstice_zone_01.dds
 description The western part of Solstice will is a tropical paradise from where the Stirk Fellowship will make their base of operations, as they attempt to breach past the massive Writing Wall, into the eastern half of Solstice from where the Worm Cult has the bulk of their operations.
 step
+goto u48_overland_base 46.94,52.76
+step
+goto 50.30,55.75
+step
+goto 47.52,56.14
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Solstice_ Map
+'Travel to _Shell-Tide Village_
+|tip Manually skip to the next step.
+step
+goto 54.52,63.63
+step
+goto 57.60,62.27
+step
+goto 56.63,51.87
+step
+goto 56.96,61.65
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Solstice_ Map
+'Travel to _Vale of Revelry_
+|tip Manually skip to the next step.
+step
+goto 34.07,68.65
+step
+goto 35.45,69.20
+step
+goto 35.18,69.35
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 35.45,69.20
+step
+goto 34.07,68.65
+step
+goto 41.91,72.67
+step
+goto 47.52,70.98
+'Enter _Vale of Revelry_
+|tip Manually skip to the next step.
+step
+goto u46_base_SanguineHDLV 53.20,77.65
+step
+goto 69.44,58.07
+step
+goto 61.51,44.89
+step
+goto 56.92,63.13
+kill The Wine Sommelier
+kill Reveler Bouncer
+|tip Manually skip to the next step.
+step
+goto 59.31,44.22
+step
+goto 70.49,52.44
+step
+goto 76.31,48.14
+step
+goto 72.30,55.68
+step
+goto 64.66,52.72 |tip Cross Bridge.
+step
+goto 55.11,51.67
+step
+goto 46.14,55.01
+step
+goto 46.51,60.27
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Open _Solstice_ Map
+'Travel to _Western Bay_
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 36.29,61.40
+step
+goto 35.82,63.02
+step
+goto 31.14,59.55
+'Travel _Boat to Tainted Leet_
+|tip Manually skip to the next step.
+step
+goto u46_base_lostvillage 80.97,44.95
+step
+goto 70.19,49.28
+step
+goto 48.40,40.01
+step
+goto 56.27,36.88
+step
+goto 55.56,19.96
+step
+goto 85.62,23.26
+step
+goto 86.84,31.62
+kill Nardirin Death-hand
+|tip Manually skip to the next step.
+step
+goto 90.93,52.14
+step
+goto 84.01,46.42
+step
+goto 86.43,46.32
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 95.48,45.41
+|tip Drop down.
+'Travel _Boat to Solstice_
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 27.83,50.24
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 27.61,45.72
+'Open _Carapace Caverns_
+|tip Manually skip to the next step.
+step
+goto u46_carapacecaverns_base 11.53,14.19
+step
+goto 34.15,13.53
+step
+goto 57.21,15.08
+step
+goto 57.21,28.16
+step
+goto 71.62,29.05
+step
+goto 74.94,48.34
+step
+goto 86.03,49.45
+step
+goto 92.24,69.40
+step
+goto 88.47,64.94
+step
+goto 69.62,69.84
+step
+goto 50.11,65.63
+step
+goto 58.09,76.94 |tip Go up top.
+step
+goto 57.65,76.94
+step
+goto 70.51,77.38
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+goto 58.09,76.94
+step
+goto 29.93,62.31
+step
+goto 34.15,51.22
+kill Headcracker 
+|tip Manually skip to the next step.
+step
+'Open _Solstice_ Map
+'Travel to _Shor's Stand_
+|tip Manually skip to the next step.
+step
+goto u48_overland_base 40.23,43.82
+step
+goto 41.21,40.38
+step
+goto 43.14,38.67
+step
+goto 42.33,36.72
+'Use _Skyshard_
+|tip Manually skip to the next step.
+step
+'Congradualations _Guild is Now Complete._
 ]])
