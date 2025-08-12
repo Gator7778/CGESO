@@ -9,7 +9,7 @@ A Public Domain leveling guide produced by Zygor Guides, updated and maintained 
 <br/>
 
 ----
-<img src="https://i.imgur.com/27kT29T.png">
+<img src="https://imgur.com/vui1dpi.jpg">
 
 Install through the excellent add-on manager <a href="https://minion.mmoui.com/" target="blank">Minion</a>
 

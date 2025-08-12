@@ -10380,9 +10380,9 @@ step
 step
 goto 54.52,63.63
 step
-goto 57.60,62.27
+goto 57.48,62.43
 step
-goto 56.63,51.87
+goto 56.42,61.95
 step
 goto 56.96,61.65
 'Use _Skyshard_
@@ -10402,7 +10402,9 @@ goto 35.18,69.35
 step
 goto 35.45,69.20
 step
-goto 34.07,68.65
+goto 33.38,69.35
+step
+goto 36.69,71.98
 step
 goto 41.91,72.67
 step
@@ -10502,8 +10504,6 @@ goto 74.94,48.34
 step
 goto 86.03,49.45
 step
-goto 92.24,69.40
-step
 goto 88.47,64.94
 step
 goto 69.62,69.84
@@ -10523,6 +10523,7 @@ step
 goto 29.93,62.31
 step
 goto 34.15,51.22
+|tip Kill 3 groups of mobs.
 kill Headcracker 
 |tip Manually skip to the next step.
 step

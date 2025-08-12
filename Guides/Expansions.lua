@@ -53570,7 +53570,7 @@ goto u46_base_CorelanyaManor 56.55,54.31
 |tip Follow Gahz to prevent glitching.
 'Take _Soul Cage_ |q Ghosthunters/Explore the Foyer |future
 step
-goto 56.55,51.31
+goto 52.06,42.70
 talk Gahz |q Ghosthunters/Talk to Gahz
 step
 goto u46_base_CorelanyaManor 71.54,49.44
@@ -54542,6 +54542,7 @@ step
 goto 29.93,62.31 |q The Skull of Gandelec/Find the Skull of Gandelec
 step
 goto 34.15,51.22
+|tip Kill 3 groups of mobs.
 kill Headcracker |q The Skull of Gandelec/Find the Skull of Gandelec
 |tip Manually skip to the next step.
 step

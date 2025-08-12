@@ -1,7 +1,7 @@
-## Title: |cfd5b02Community Leveling Guides|r v1121
+## Title: |cfd5b02Community Leveling Guides|r v1129
 ## Description: A Zygor addon updated by snichols7778, Hydra9268, Krandor1, and Sharlikran for the Gold Road DLC.
 ## Author: snichols7778, Hydra9268
-## Version: 1126
+## Version: 1129
 ## APIVersion: 101046 101047
 ## DependsOn: LibGPS>=73
 ## SavedVariables: CGESOSettings
