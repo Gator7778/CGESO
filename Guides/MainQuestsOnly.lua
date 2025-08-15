@@ -48321,10 +48321,10 @@ step
 'Travel to _Western Bay_ |q The Regent of Sunport/Go to Swencoast Cottage
 |tip Manually skip to the next step.
 step
-goto 37.86,60.04
+goto u48_overland_base 37.86,60.04
 'Go to _Swencoast Cottage_ |q The Regent of Sunport/Go to Swencoast Cottage
 step
-goto u48_overland_base 38.09,59.73
+goto 38.09,59.73
 talk Razum-dar |q The Regent of Sunport/Talk to Razum-dar |future
 step
 goto u48_overland_base 38.03,61.14
@@ -48353,10 +48353,6 @@ goto 44.76,56.39 |q The Regent of Sunport/Talk to Prince Azah
 step
 goto 39.38,61.56
 talk Prince Azah |q The Regent of Sunport/Talk to Prince Azah
-step
-goto 39.74,61.82
-talk Regent Karinwe |q The Regent of Sunport/Talk to Regent Karinwe |future
-|tip Manually skip to the next step.
 step
 goto 44.39,45.99 |q The Regent of Sunport/Enter the Palace District
 step
@@ -48397,7 +48393,7 @@ step
 goto 77.90,49.39
 kill Tidemuck |q The Regent of Sunport/Defeat Tidemuck |future
 step
-goto 78.01,49.62
+goto 78.01,49.83
 'Open _Regent's Study_ |q The Regent of Sunport/Search the Regent's Study
 |tip Manually skip to the next step.
 step
@@ -48410,6 +48406,7 @@ goto 78.02,49.86
 step
 goto 77.65,49.65
 'Open _Palace District_ |q The Regent of Sunport/Find Prince Azah |future
+|tip Manually skip to the next step.
 step
 goto u46_Sunport_base 71.36,54.76
 talk Prince Azah
@@ -48418,6 +48415,8 @@ accept The Passages Beneath
 step
 goto 71.67,54.88
 talk Walks-In-Ashes |q The Passages Beneath/Talk to Walks-In-Ashes |future
+'Tell her _Prince Azah wants us to find the Worm Cult's Passage Beneath, but we don't have much to go on._
+'Tell her _Where's this worm cult prisoner now?_
 |tip Manually skip to the next step.
 step
 goto 65.67,49.73
@@ -48454,7 +48453,7 @@ goto U46_ZQ2_abandonedtun_01_base 24.41,27.26
 'Open _Abandoned Tunnels_ |q The Passages Beneath |future
 |tip Manually skip to the next step.
 step
-goto 59.95,31.44 |q The Passages Beneath/Explore the Mine
+goto 59.95,31.44 |q The Passages Beneath/Explore the Mine |future
 step
 goto 70.44,36.77 |q The Passages Beneath/Explore the Mine
 step
@@ -48487,7 +48486,7 @@ goto 74.19,51.74
 'Open _Vinutilmo Palace_ |q The Passages Beneath/Return to Prince Azah
 |tip Manually skip to the next step.
 step
-goto 76.08,51.00
+goto 75.78,51.01
 talk Prince Azah |q The Passages Beneath/Talk to Prince Azah |future
 step
 goto 75.80,50.96
@@ -48511,7 +48510,7 @@ goto 58.33,49.96
 step
 goto u48_overland_base 49.65,45.93 |q The Writhing Wall/Go to Li-Xal Pass
 step
-goto 50.55,43.69 |q The Writhing Wall/Go to Li-Xal Pass
+goto 50.55,43.69 |q The Writhing Wall/Go to Li-Xal Pass |tip Go around the mountain.
 step
 goto 48.88,41.89 |q The Writhing Wall/Go to Li-Xal Pass
 step
@@ -48557,7 +48556,8 @@ goto 49.79,33.69
 |tip Manually skip to the next step.
 step
 goto 66.58,29.57
-talk Vanus Galerion |q The Writhing Wall/Talk to Vanus Galerion |future
+talk Vanus Galerion |q The Writhing Wall |future
+|tip Manually skip to the next step.
 step
 goto 53.18,16.37
 'Use _Grapple Point_ |q The Writhing Wall/Climb Li-Xal Pass
@@ -48588,7 +48588,8 @@ goto 46.13,7.55
 |tip Manually skip to the next step.
 step
 goto u48_overland_base 47.12,32.25
-talk Vanus Galerion |q The Writhing Wall/Talk to Vanus Galerion |future
+talk Vanus Galerion |q The Writhing Wall |future
+|tip Manually skip to the next step.
 step
 goto 47.12,32.25
 talk Gabrielle Benele |q The Writhing Wall/Talk to Gabrielle Benele
@@ -48635,7 +48636,11 @@ step
 'Travel to _Sunport_ |q The Writhing Wall/Return to Vinutilmo Palace
 |tip Manually skip to the next step.
 step
-goto u46_Sunport_base 61.34,49.57
+goto u46_Sunport_base 64.50,57.43
+talk Captain Genevé Delitian
+turnin Striking the Deal
+step
+goto 61.34,49.57
 'Open _Palace District_ |q The Writhing Wall/Return to Vinutilmo Palace
 |tip Manually skip to the next step.
 step
@@ -48646,5 +48651,7 @@ step
 goto 75.88,51.05
 talk Prince Azah
 turnin The Writhing Wall
+step
+'Congraulations Guide Complete.
 step
 ]])

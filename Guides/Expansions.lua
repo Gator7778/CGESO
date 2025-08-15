@@ -53214,7 +53214,7 @@ talk Prince Azah
 accept A Guild in Crisis
 |only Aldmeri Dominion
 step 
-goto 54.75,55.63 |q A Guild in Crisis/Rendezvous with Guild Scout in Malabal Tor
+goto 54.75,55.63 |q A Guild in Crisis/Rendezvous with Guild Scout in Malabal Tor |future
 |only Aldmeri Dominion
 step
 goto 54.99,40.95
@@ -53287,8 +53287,15 @@ step
 goto 55.89,42.41 |q A Guild in Crisis/Find the Attackers' Camp |future
 step
 goto 54.42,40.34
-|tip Persuade him.
 talk Razawir |q A Guild in Crisis/Talk to Razawir |future
+step
+goto 51.77,35.83 |q A Guild in Crisis/Gather Mistscrub Leaves |future
+step
+goto 49.99,35.61
+'Take _Mistscrub Leaves_ |q A Guild in Crisis/Gather Mistscrub Leaves |future
+step
+goto 54.42,40.34
+talk Razawir |q A Guild in Crisis/Talk to Razawir
 step
 goto 54.45,40.45
 talk Skordo the Knife |q A Guild in Crisis/Talk to Skordo the Knife |future
@@ -53330,8 +53337,7 @@ goto 68.28,37.07
 |tip Manually skip to the next step.
 step
 goto 52.83,36.06
-'Watch _Dialogue_ |q A Guild in Crisis |future
-|tip Manaully skip to the next step.
+'Watch the _Fate of Merrick_ |q A Guild in Crisis/Search the Underground Sanctum
 step
 goto 56.46,20.71
 'Open _Reading Hall_ |q A Guild in Crisis/Follow Prince Azah |future
@@ -53410,7 +53416,7 @@ goto 46.09,6.97
 |tip Watch the dialogue.
 'Examine _Worm Cult Journal_ |lorebook Worm Cult Journal/3/3/119
 step
-goto 22.54,22.65 |q Justice for the Fallen/Search the Worm Cult Nest
+goto 22.54,22.65 |q Justice for the Fallen/Search the Worm Cult Nest |future
 step
 goto 22.86,49.91 |q Justice for the Fallen/Search the Worm Cult Nest
 step
@@ -53425,7 +53431,7 @@ step
 goto 24.34,60.68
 'Examine _Resurrection and Revelation_ |lorebook Resurrection and Revelation/3/3/120
 step
-goto 40.07,67.76 |q Justice for the Fallen/Search Deeper into the Worm Cult Nest
+goto 40.07,67.76 |q Justice for the Fallen/Search Deeper into the Worm Cult Nest |future
 step
 goto 40.31,83.98 |q Justice for the Fallen/Search Deeper into the Worm Cult Nest
 step
@@ -53439,6 +53445,8 @@ goto 52.05,66.85 |q Justice for the Fallen/Rescue Skordo the Knife
 step
 goto 63.77,66.93 |q Justice for the Fallen/Rescue Skordo the Knife
 step
+goto 66.53,78.63 |q Justice for the Fallen/Rescue Skordo the Knife
+step
 goto 92.55,77.89 |q Justice for the Fallen/Rescue Skordo the Knife
 step
 goto 91.80,66.48 |q Justice for the Fallen/Rescue Skordo the Knife
@@ -53451,7 +53459,7 @@ goto 85.54,67.57
 'Use _Portal to Shornhelm Mages Guild_ |q Justice for the Fallen/Go to the Shornhelm Mages Guild
 |tip Manually skip to the next step.
 step
-goto shornhelm_base 25.90,67.72
+goto shornhelm_base 25.87,67.13
 talk Prince Azah |q Justice for the Fallen/Talk to Prince Azah |future
 step
 goto 24.21,68.31
@@ -53473,7 +53481,8 @@ goto 43.14,24.61
 'Use _Portal to Stirk_ |q Justice for the Fallen/Go to Stirk
 |tip Manually skip to the next step.
 step
-goto stirk__u47_base 46.94,55.44 |q Justice for the Fallen/Find the Ambassadors on Stirk |future
+goto stirk__u47_base 46.94,55.44
+'Listen to the _Conversation_ |q Justice for the Fallen/Find the Ambassadors on Stirk |future
 step
 goto 47.48,54.94
 |tip Watch the dialogue.
@@ -53597,7 +53606,7 @@ step
 goto 32.73,58.18
 'Use _Soul Cage_ |q Ghosthunters/Put Valendir Inside the Armor
 step
-goto 46.49,63.64
+goto 36.10,58.44
 'Mark _Valve_ |q Ghosthunters/Direct Valendir to the Valve
 step
 goto 51.95,59.48
@@ -53619,7 +53628,7 @@ goto 57.40,42.34
 'Use _Soul Cage_ |q Ghosthunters/.*Search the Reanimatorium.* |count 3
 |tip Manually skip to the next step.
 step
-goto 58.44,44.42
+goto 58.70,44.16
 'Mark _Bone Pile_
 'Mark _Valve_ |q Ghosthunters/.*Search the Reanimatorium.* |count 3
 |tip Manually skip to the next step.
@@ -53774,10 +53783,13 @@ talk Cirwynia
 accept A Pirate's Debt
 step
 goto 44.48,65.88
-talk Cirwynia |q A Pirate's Debt/talk to Cirwynuia |future
-|tip Manually skip to the next step.
+talk Cirwynia |q A Pirate's Debt/Talk to Cirwynia
 step
-goto 45.58,72.62 |q Party Pains |future
+goto 44.31,65.10 |q Party Pains |future
+step
+goto 43.65,65.11 |q Party Pains |future
+step
+goto 44.25,66.92 |q Party Pains |future
 step
 goto 41.95,72.69
 'Discover _Vale of Revelry_ |q Party Pains |future
@@ -53915,7 +53927,7 @@ goto 28.94,68.28
 'Open _Everlasting Fair_ |q The Everlasting Fair/Get Sashii to Safety
 step
 goto 28.76,68.05
-talk Goat |q The Everlasting Fair/Talk to the Goat
+talk Goat |q The Everlasting Fair/Talk to the Goat |future
 step
 goto 28.76,68.05
 talk Sashii |q The Everlasting Fair/Talk to Sashii |future
@@ -54050,19 +54062,6 @@ goto 32.30,64.54
 'Take _Volcanic Pearls_ |q The Roughest Pearl/Gather the Volcanic Pearls
 step
 'Open _Solstice_ Map
-'Travel to _Shell-Tide Village_ |q A Death-Dancer's Duty/.*Recover the Tidal Votives.*
-|tip Manually skip to the next step.
-step
-goto 50.06,67.97
-'Use _Sacred Scalloped Shell_ |q A Death-Dancer's Duty/Summon Vutraka |future
-|tip Manually skip to the next step.
-step
-goto 50.06,67.97
-talk Vutraka |q A Death-Dancer's Duty/Talk to Vutraka |future
-|tip Manually skip to the next step.
-step
-goto 52.23,69.05
-'Use _Shell-Tide Village_
 'Travel to _Corelanya Manor_ |q A Death-Dancer's Duty/.*Recover the Tidal Votives.*
 |tip Manually skip to the next step.
 step
@@ -54104,6 +54103,14 @@ step
 goto 43.25,63.88
 'Use _Corelanya Manor_
 'Travel to _Shell-Tide Village_ |q A Death-Dancer's Duty/.*Recover the Tidal Votives.*
+|tip Manually skip to the next step.
+step
+goto 50.06,67.97
+'Use _Sacred Scalloped Shell_ |q A Death-Dancer's Duty/Summon Vutraka |future
+|tip Manually skip to the next step.
+step
+goto 50.06,67.97
+talk Vutraka |q A Death-Dancer's Duty/Talk to Vutraka |future
 |tip Manually skip to the next step.
 step
 goto u46_Shelltide_base 41.05,29.71 |q A Death-Dancer's Duty/.*Recover the Tidal Votives.*
@@ -54258,22 +54265,16 @@ goto 29.70,54.39
 talk Keshu the Black Fin |q Tides of the Heart/Talk to Keshu the Black Fin |future
 step
 goto 26.83,54.71
-'Use _Shrine of Sithis_ |q Tides of the Heart/Approach the Shrine to Sithis
+'Use _Shrine to Sithis_ |q Tides of the Heart/Approach the Shrine to Sithis
 step
 goto 19.82,54.85
 'Enter _Solstice_ |q Tides of the Heart/Return to the Hatchery
 |tip Manually skip to the next step.
 step
 goto u48_overland_base 53.02,74.81
-talk Tlali-Haas |q Tides of the Heart/Talk to Tlali-Haas |future
-|tip Manually skip to the next step.
-step
-goto 53.02,74.81
-talk Senik-Haas |q Tides of the Heart/Talk to Senik-Haas |future
-|tip Manually skip to the next step.
-step
-goto 52.97,74.82
-talk Tide-Reader Suhath |q Tides of the Heart/Talk to Tide-Reader Suhath
+talk Tlali-Haas
+talk Senik-Haas
+talk Tide-Reader Suhath |q Tides of the Heart/Talk to Tide-Reader Suhath |future
 step
 goto 52.98,74.87
 talk Keshu the Black Fin
@@ -54352,13 +54353,13 @@ goto 40.62,48.71
 'Follow _Honor's Tracks_ |q Honor Bound/Follow Honor's Tracks
 step
 goto 40.62,48.71
-|tip Watch the dialogue.
 talk Squire Albec |q Honor Bound/Talk to Squire Albec |future
 step
 goto 40.59,48.71
 'Place _Honor's Fruit Blend Snack_ |q Honor Bound/Place Snack
 step
 goto 40.59,48.71
+|tip Watch the dialogue.
 talk Honor |q Honor Bound/Talk to Honor |future
 step
 goto 39.55,48.64
@@ -54543,12 +54544,12 @@ goto 29.93,62.31 |q The Skull of Gandelec/Find the Skull of Gandelec
 step
 goto 34.15,51.22
 |tip Kill 3 groups of mobs.
-kill Headcracker |q The Skull of Gandelec/Find the Skull of Gandelec
+kill Headcracker |q The Skull of Gandelec/Find the Skull of Gandelec |future
 |tip Manually skip to the next step.
 step
-goto 25.28,65.19 |q The Skull of Gandelec/Find the Skull of Gandelec
+goto 25.28,65.19 |q The Skull of Gandelec/Find the Skull of Gandelec |future
 step
-goto 20.62,62.31 |q The Skull of Gandelec/Find the Skull of Gandelec
+goto 20.62,62.31 |q The Skull of Gandelec/Find the Skull of Gandelec |future
 step
 goto 24.61,56.76
 'Take _Skull of Gandelec_
@@ -54557,7 +54558,7 @@ step
 goto 15.08,56.98 |q The Skull of Gandelec/Return to Loraviel
 step
 goto 11.09,52.33
-'Enter _Solstice_ |q The Skull of Gandelec/Return to Loraviel
+'Enter _Solstice_ |q The Skull of Gandelec/Return to Loraviel |future
 |tip Manually skip to the next step.
 step
 goto u48_overland_base 27.51,45.83
@@ -54698,7 +54699,7 @@ step
 goto 43.82,54.74 |q The Stubbornness of Nords/Gather "Spuds from the Deep" |future
 step
 goto 46.36,35.83
-talk Farmer |q The Stubbornness of Nords/Gather "Spuds from the Deep" |future
+talk Farmer Hrolf |q The Stubbornness of Nords/Gather "Spuds from the Deep" |future
 |tip Manaually skip to the next step.
 step
 goto 42.25,33.56
@@ -54719,7 +54720,7 @@ goto 42.73,59.38
 |tip Manually skip to the next step.
 step
 goto 46.36,35.83
-talk Farmer |q The Stubbornness of Nords/.*Gather the Ingredients.* |count 2
+talk Farmer Hrolf |q The Stubbornness of Nords/.*Gather the Ingredients.* |count 2
 step
 goto 41.49,55.39 |q The Stubbornness of Nords/.*Gather the Ingredients.*
 step
@@ -54761,13 +54762,23 @@ goto 56.59,57.45
 talk Speaker Sogrard |q The Stubbornness of Nords/Talk to Speaker Sogrard
 step
 goto 58.63,55.87
-talk Britt the Bold |q The Stubbornness of Nords/Talk to Britt the Bold
+talk Britt the Bold |q The Stubbornness of Nords/Talk to Britt the Bold |future
+|tip Manually skip to the next step.
 step
-|tip All around this area.
-.'Mark _Tankard_
-.'Mark _Barrell_
-.'Mark _Bow_
-.'Mark _Cheese_ |q The Stubbornness of Nords/Aid Britt the Bold's Speech
+goto 56.22,54.74
+'Mark _Tankard_ |q The Stubbornness of Nords/Aid Britt the Bold's Speech |future
+|tip Manually skip to the next step.
+step
+goto 59.03,57.18
+'Mark _Barrell_ |q The Stubbornness of Nords/Aid Britt the Bold's Speech
+|tip Manually skip to the next step.
+step
+goto 58.48,54.93
+'Mark _Bow_ |q The Stubbornness of Nords/Aid Britt the Bold's Speech
+|tip Manually skip to the next step.
+step
+goto 56.74,57.45
+'Mark _Cheese_ |q The Stubbornness of Nords/Aid Britt the Bold's Speech
 step
 goto 56.83,56.72
 talk Britt the Bold |q The Stubbornness of Nords/Talk to Britt the Bold
@@ -54828,13 +54839,14 @@ goto u46_brokenlight_int1_base 45.04,75.19
 step
 goto 46.79,70.00
 |tip Start in Purity Wing.
-talk High Priest Eraamine |q Mystery of the Broken Temple/Talk to Eraamine
+talk High Priest Eraamine |q Mystery of the Broken Temple/Talk to Eraamine |future
 step
 goto 39.39,72.98
-'Open _Purity Wing_ |q Mystery of the Broken Temple/Enter the Purity Wing
+'Open _Purity Wing_ |q Mystery of the Broken Temple/Enter the Purity Wing |future
+|tip Manually skip to the next step.
 step
 goto u46_brokenlight_int2_base 22.97,71.32
-'Use _Large Rubble Pile_ |q Mystery of the Broken Temple/Search for the Ritual Site
+'Use _Large Rubble Pile_ |q Mystery of the Broken Temple/Search for the Ritual Site |future
 |tip Manually skip to the next step.
 step
 goto 30.64,76.57 |q Mystery of the Broken Temple/Search for the Ritual Site
@@ -54928,7 +54940,9 @@ goto 62.15,73.11
 step
 goto 69.71,73.23 |q Mystery of the Broken Temple/Search For the Ritual Site |future
 step
-goto 75.01,72.30 |q Mystery of the Broken Temple/Search For the Ritual Site |future
+goto 78.30,69.59 |q Mystery of the Broken Temple/Search For the Ritual Site |future
+step
+goto 77.38,62.09 |q Mystery of the Broken Temple/Search For the Ritual Site |future
 step
 goto 65.26,57.47 |q Mystery of the Broken Temple/Search For the Ritual Site
 step
@@ -54972,7 +54986,7 @@ step
 goto 77.84,21.00
 talk High Priest Eraamine |q Mystery of the Broken Temple/Talk to High Priest Eraamine
 step
-goto 77.84,21.00
+goto 77.50,18.18
 .'Activate _Ritual Panel_
 .'_West Tile_
 .'_East Tile_
@@ -55016,7 +55030,7 @@ goto 51.76,20.35
 'Destroy _Cynosure Orb_ |q Mystery of the Broken Temple/.*Use the Rod to Destroy the Cynosure Orbs.* |count 5
 step
 goto 53.04,77.88
-'Open _Temple Great Hall_ |q Mystery of the Broken Temple/Meet Eraamine in the Great Hall
+'Open _Temple Great Hall_ |q Mystery of the Broken Temple/Meet Eraamine in the Great Hall |future
 |tip Manually skip to the next step.
 step
 goto u46_brokenlight_int1_base 45.65,76.18
@@ -55209,6 +55223,8 @@ accept The Passages Beneath
 step
 goto 71.67,54.88
 talk Walks-In-Ashes |q The Passages Beneath/Talk to Walks-In-Ashes |future
+'Tell her _Prince Azah wants us to find the Worm Cult's Passage Beneath, but we don't have much to go on._
+'Tell her _Where's this worm cult prisoner now?_
 |tip Manually skip to the next step.
 step
 goto 65.67,49.73
@@ -55225,7 +55241,6 @@ goto 40.02,39.845
 step
 goto 39.26,39.23
 talk Bonelord Kagazal |q The Passages Beneath/Talk to Bonelord Kagazal |future
-|tip Persuade or Intimidate him.
 step
 goto 39.27,39.35
 talk Walks-In-Ashes |q The Passages Beneath/Talk to Walks-In-Ashes |future
@@ -55278,7 +55293,7 @@ goto 74.19,51.74
 'Open _Vinutilmo Palace_ |q The Passages Beneath/Return to Prince Azah
 |tip Manually skip to the next step.
 step
-goto 76.08,51.00
+goto 75.78,51.01
 talk Prince Azah |q The Passages Beneath/Talk to Prince Azah |future
 step
 goto 75.80,50.96

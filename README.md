@@ -1,15 +1,15 @@
 # CGESO
 
-<img src="https://imgur.com/vui1dpi.jpg">
+<img src="https://i.imgur.com/8bU2Q51.jpeg">
 
-A Public Domain leveling guide produced by Zygor Guides, updated and maintained by Hydra9268. The purpose of this project is to add leveling guides for new content and extend the life for as long as ESO is available.
+A Public Domain leveling guide produced by Zygor Guides, updated and maintained by snichols7778. The purpose of this project is to add leveling guides for new content and extend the life for as long as ESO is available.
 
 * Zygor's Discontinued support announcement: https://zygorguides.com/blog/zygor-guides-elder-scrolls-online-guides-going-free-use/
 * Zygor staff okaying community development: http://zygorguides.com/forum/showthread.php?21769-Summerset-Question&p=121501&viewfull=1#post121501
 <br/>
 
 ----
-<img src="https://imgur.com/vui1dpi.jpg">
+<img src="https://i.imgur.com/8bU2Q51.jpeg">
 
 Install through the excellent add-on manager <a href="https://minion.mmoui.com/" target="blank">Minion</a>
 
@@ -22,7 +22,7 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 <br/>
 
 ### Recent Updates
-### 08/12/2025
+### 08/16/2025
 ### Solstice
 * Revamped Tutorial
 * Solstice Main Quest Only
@@ -187,6 +187,12 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 * 7/27/20: Northern Elsweyr Guide Out Now!
 
 # Development Guide
+
+### Dev Mode
+* /cgv dev
+
+### Creator Mode
+* /cgv creator
 
 ### Development HOW-TO
 
