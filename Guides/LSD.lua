@@ -1727,6 +1727,7 @@ step
 goto 55.31,61.64
 'Examine _Exegesis of Merid-Nunda_ |lorebook Exegesis of Merid-Nunda/1/29/1
 step
+'Congradualations _Guild is Now Complete._
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Aldmeri Dominion\\Khenarthi's Roost",[[
@@ -10358,13 +10359,18 @@ goto westwealdoverland_base 68.48,24.14
 step
 goto 64.40,24.22
 'Use _Skyshard_
-|tip Manually skip to the next step. |next Extras\\Extras\\Skyshards and Delves\\Expansion\\Solstice
+|tip Manually skip to the next step.
 step
+'Congradualations _Guild is Now Complete._ |next Extras\\Extras\\Skyshards and Delves\\Expansion\\Solstice
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Skyshards and Delves\\Expansion\\Solstice",[[
 loadingimage loadscreen_solstice_zone_01.dds
 description The western part of Solstice will is a tropical paradise from where the Stirk Fellowship will make their base of operations, as they attempt to breach past the massive Writing Wall, into the eastern half of Solstice from where the Worm Cult has the bulk of their operations.
+step
+'Open _Solstice_ Map
+'Travel to _Sunport Docks_
+|tip Manually skip to the next step.
 step
 goto u48_overland_base 46.94,52.76
 step

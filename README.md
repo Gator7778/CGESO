@@ -24,11 +24,11 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 ### Recent Updates
 ### 08/16/2025
 ### Solstice
-* Revamped Tutorial
+* Reworked Tutorial
 * Solstice Main Quest Only
 * Solstice Full guide
 * Solstice Skyshard and Delves Guide
-* Solstice New Lore Books
+* Solstice Lorebooks
 
 ### 10/28/2024
 ### Gold Road

@@ -48164,14 +48164,16 @@ step
 goto 49.34,60.43 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 step
 goto 43.25,63.87
-wayshrine Corelanya Manor
+'Discover _Corelanya Manor_ Wayshrine |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
 step
 goto 44.55,69.08 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 step
 goto 45.58,72.62 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 step
 goto 41.95,72.69
-wayshrine Vale of Revelry
+'Discover _Vale of Revelry_ Wayshrine |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
 step
 goto 41.95,72.69
 'Use _Vale of Revelry_
@@ -48185,7 +48187,8 @@ step
 goto 50.24,70.14 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 step
 goto 52.24,69.04
-wayshrine Shell-Tide Village
+'Discover _Shell-Tide Village_ Wayshrine |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
 step
 goto 52.69,65.90 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 step
@@ -48226,7 +48229,8 @@ step
 goto 36.59,62.11 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 step
 goto 38.28,55.41
-wayshrine Western Bay
+'Discover _Western Bay_ Wayshrine |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
 step
 goto 32.83,54.91 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 step
@@ -48242,7 +48246,8 @@ step
 |tip Manually skip to the next step.
 step
 goto u46_base_shoresstand 67.78,33.53
-wayshrine Shor's Stand
+'Discover _Shor's Stand_ Wayshrine |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+|tip Manually skip to the next step.
 step
 goto u48_overland_base 40.27,44.50 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 step
@@ -48294,7 +48299,8 @@ step
 goto 62.03,44.00 |q The Regent of Sunport/Go to Vinutilmo Palace
 step
 goto 58.04,50.16
-wayshrine Sunport
+'Discover _Sunport_ Wasyrhine |q The Regent of Sunport/Go to Vinutilmo Palace
+|tip Manually skip to the next step.
 step
 goto 61.34,49.61
 'Open _Palace District_ |q The Regent of Sunport/Go to Vinutilmo Palace
@@ -48636,11 +48642,7 @@ step
 'Travel to _Sunport_ |q The Writhing Wall/Return to Vinutilmo Palace
 |tip Manually skip to the next step.
 step
-goto u46_Sunport_base 64.50,57.43
-talk Captain Genevé Delitian
-turnin Striking the Deal
-step
-goto 61.34,49.57
+goto u46_Sunport_base 61.34,49.57
 'Open _Palace District_ |q The Writhing Wall/Return to Vinutilmo Palace
 |tip Manually skip to the next step.
 step
