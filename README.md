@@ -1,6 +1,6 @@
 # CGESO
 
-<img src="https://i.imgur.com/8bU2Q51.jpeg">
+<img src="https://imgur.com/817R4SR.png">
 
 A Public Domain leveling guide produced by Zygor Guides, updated and maintained by snichols7778. The purpose of this project is to add leveling guides for new content and extend the life for as long as ESO is available.
 
@@ -9,7 +9,7 @@ A Public Domain leveling guide produced by Zygor Guides, updated and maintained 
 <br/>
 
 ----
-<img src="https://i.imgur.com/8bU2Q51.jpeg">
+<img src="https://imgur.com/817R4SR.png">
 
 Install through the excellent add-on manager <a href="https://minion.mmoui.com/" target="blank">Minion</a>
 
@@ -22,6 +22,32 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 <br/>
 
 ### Recent Updates
+### Date Undetermined
+###
+* Main Quest Rework
+* Aldmeri Dominion Base Game
+* Dagger Fall Covenant Base Game
+* Ebonheart Pact Base Game
+* Imperial City
+* Craglorn
+* Wrothgar
+* Thieves Guild
+* Dark Brotherhood
+* Vvardenfell
+* Clockwork City
+* Summerset
+* Murkmire
+* Northern Elsweyr
+* Southern Elsweyr
+* Western Skyrim
+* The Reach
+* Blackwood
+* The Deadlands
+* High Isle
+* Firesong
+* Telvanni Peninsula
+* West Weald
+
 ### 08/16/2025
 ### Solstice
 * Reworked Tutorial

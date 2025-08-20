@@ -93,7 +93,7 @@ goto khenarthisroost_base 77.41,56.02
 talk Rurelion |q Tears of the Two Moons/Find Rurelion
 step
 goto khenarthisroost_base 77.00,57.16
-|tip Gathwen will destroy the bone pile, but you must protect her. Do this for the other 3 bone piles around this area.
+|tip Gathwen will destroy the four bone pile, but you must protect her.
 'Disrupt _Uldor's Summoning Ritual_ |q Tears of the Two Moons/Disrupt Uldor's Summoning Ritual
 step
 goto 77.60,55.94 |q Tears of the Two Moons/Confront Uldor
@@ -156,15 +156,18 @@ talk Sergeant Firion
 accept Cast Adrift
 step
 goto 33.79,72.03
-|tip Take Torchbug Treacle. They look like small glass bottles on the ground.
+|tip They look like small glass bottles on the ground.
+'Take _Torchbug Treacle_
 talk Edhelas |q Cast Adrift/Find Edhelas
 step
 goto 31.13,67.64
-|tip Take Torchbug Treacle. They look like small glass bottles on the ground.
+|tip They look like small glass bottles on the ground.
+'Take _Torchbug Treacle_
 talk Nistel |q Cast Adrift/Find Nistel
 step
 goto 26.34,63.19
-|tip Take Torchbug Treacle. They look like small glass bottles on the ground.
+|tip They look like small glass bottles on the ground.
+'Take _Torchbug Treacle_
 talk Onglorn |q Cast Adrift/Find Onglorn
 step
 goto 31.75,55.87 |q Cast Adrift/Go to the Cave
@@ -1805,7 +1808,7 @@ goto 27.17,17.31
 step
 goto vulkhelguard_base 55.08,41.05
 'Use _Vulkhel Guard_
-'Travel to _The Harborage_ |q Chasing Shadows/Return to the Harborage
+'Travel to _The Harborage_ |q Chasing Shadows/Return to the Harborage |future
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -3344,12 +3347,12 @@ talk Sheogorath |q Circus of Cheerful Slaughter/Find Sheogorath in Daggerwaymore
 |only Aldmeri Dominion
 step
 goto 22.87,65.45
-'Save _Vanus Galerion_ |q Circus of Cheerful Slaughter/Save the Guild Members
+'Save _Vanus Galerion_ |q Circus of Cheerful Slaughter/Save the Guild Members |future
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
 goto 28.99,60.03
-'Save _Arch-Mage Shalidor_ |q Circus of Cheerful Slaughter/Save the Guild Members
+'Save _Arch-Mage Shalidor_ |q Circus of Cheerful Slaughter/Save the Guild Members |future
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -3460,8 +3463,8 @@ talk Merric at-Aswala |q The Prismatic Core/Get Instructions from Merric
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
-'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Small Fire
-'The _Forge Valve_ to the left, then the _Bellows_ on the right twice
+'Use _Forge Tools_
+'Use _Bellows_ twice |q The Prismatic Core/Stoke a Small Fire
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
@@ -3469,7 +3472,9 @@ goto 37.63,24.31
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
-'The _Forge Valve_ to the left, the _Coals_ in the middle, and then the _Bellows_ on the right three times |q The Prismatic Core/Stoke a Medium-Sized Fire
+'Use _Forge Tools_
+'Use _Coals_
+'Use _Bellows_ Three times |q The Prismatic Core/Stoke a Medium-Sized Fire
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
@@ -3477,7 +3482,9 @@ goto 37.63,24.31
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
-'The _Forge Valve_ to the left three times, the _Coals_ in the middle, and then the _Bellows_ on the right three times |q The Prismatic Core/Stoke a Large Fire
+'Use _Forge Tools_ Three times
+'Use _Coals_
+'Use _Bellows_ Three Times |q The Prismatic Core/Stoke a Large Fire
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
@@ -3516,8 +3523,7 @@ step
 goto 73.84,42.67 |q Frighten the Fearsome/Talk to Hazazi
 |only Aldmeri Dominion
 step
-goto 33.72,60.89
-wayshrine Marbruk
+goto 33.72,60.89 |q Frighten the Fearsome/Talk to Hazazi
 step
 goto 27.99,71.50 |q Frighten the Fearsome/Talk to Hazazi
 step
@@ -3737,13 +3743,12 @@ step
 goto 59.81,79.34
 talk Sumiril |q A Tangled Knot/Talk to Sumiril
 step
-'Read _Sumiril's Book_ |q A Tangled Knot/Read Sumiril's Book
+'Use _Sumiril's Book, Passage 1_ |q A Tangled Knot/Read Sumiril's Book
 step
 goto 58.01,80.75
 'Stand on the _Gray Stone Square_ |q A Tangled Knot/Follow Words
 step
-goto 58.09,77.88
-'Read the _Next Passage_ |q A Tangled Knot/Read the Next Passage
+'Use _Sumiril's Book, Passage Passage 2_ |q A Tangled Knot/Read the Next Passage
 step
 goto 59.78,78.60 |q A Tangled Knot/Follow Words
 step
@@ -3753,25 +3758,25 @@ goto 56.80,78.54
 'Stand on the _Gray Stone Square_ |q A Tangled Knot/Follow Words
 step
 goto 56.45,79.12
-'Read _Sumiril's Book_ |q A Tangled Knot/Read Sumiril's Book
+'Use _Sumiril's Book, Passage Passage 3_ |q A Tangled Knot/Read Sumiril's Book
 step
 goto 56.28,80.26
 'Stand on the _Gray Stone Square_ |q A Tangled Knot/Follow Words
 step
 goto 57.05,80.23
-'Read _Sumiril's Book_ |q A Tangled Knot/Read Sumiril's Book
+'Use _Sumiril's Book, Passage Passage 4_ |q A Tangled Knot/Read Sumiril's Book
 step
 goto 58.03,79.13
 'Follow the _Words_ |q A Tangled Knot/Follow Words
 step
 goto 58.03,79.13
-'Read _Sumiril's Book_ |q A Tangled Knot/Read Sumiril's Book
+'Use _Sumiril's Book, Passage Passage 5_ |q A Tangled Knot/Read Sumiril's Book
 step
 goto 58.84,79.59
 'Stand on the _Gray Stone Square_ |q A Tangled Knot/Follow Words
 step
 goto 58.64,80.94
-'Read _Sumiril's Book_ |q A Tangled Knot/Read Sumiril's Book
+'Use _Sumiril's Book, Passage Passage 6_ |q A Tangled Knot/Read Sumiril's Book
 step
 goto 56.60,81.29
 talk Sumiril
@@ -3955,6 +3960,7 @@ goto 52.03,63.54
 talk Laryaril |q Double Jeopardy/Talk to Laryaril
 step
 goto 6.34,59.62
+|tip Drop down.
 'Open _Woodhearth_ |q Double Jeopardy/Talk to Treethane Fariel |future
 |tip Manually skip to the next step.
 step
@@ -3971,6 +3977,7 @@ step
 goto greenshade_base 28.89,50.39
 wayshrine Serpent's Grotto
 step
+goto 28.89,50.39
 'Use _Serpent's Grotto_
 'Travel to _Vulkhel Guard_ in Auridon |q The Tharn Speaks/Go to the Vulkhel Guard Mages Guild
 |tip Manually skip to the next step.
@@ -4617,9 +4624,6 @@ accept House and Home
 step
 goto 33.05,67.99 |q House and Home/.*Rescue Civilians.* |count 1
 step
-goto 26.70,74.53
-wayshrine Velyn Harbor
-step
 goto 28.41,49.29
 |tip Inside the building.
 talk Imriel |q House and Home/.*Rescue Civilians.* |count 1
@@ -4631,6 +4635,10 @@ step
 goto 39.27,44.48
 |tip Inside the Mages Guild.
 talk Parmbarel |q House and Home/.*Rescue Civilians.* |count 3
+step
+goto 34.61,42.48
+'Open _Upstairs_ |q House and Home/.*Rescue Civilians.* |count 4
+|tip Manually skip to the next step.
 step
 goto 37.74,42.39
 |tip Go upstairs in the Mages Guild.
@@ -4644,10 +4652,7 @@ talk Lieutenant Ehran |q House and Home/Talk to Lieutenant Ehran
 step
 goto 68.63,62.32
 kill the forces
-'Sound _Lieutenant Ehran's Horn when the Upper Gate is Clear_ |q House and Home/Sound Lieutenant Ehran's Horn When the Upper Gate Is Clear
-step
-goto 66.21,50.27
-'Locate _Lieutenant Ehran's Headquarters_ |q House and Home/Locate Lieutenant Ehran's Headquarters
+'Use _Lieutenant Ehran's Horn_ |q House and Home/Sound Lieutenant Ehran's Horn When the Upper Gate Is Clear
 step
 goto 69.20,50.33
 talk Lieutenant Ehran
@@ -4683,11 +4688,10 @@ goto 60.07,17.95
 |tip Go upstairs in the building.
 'Burn _Ra Gada Supplies_ |q One Fell Swoop/.*Burn Ra Gada Supplies.* |count 3
 step
-goto 45.79,20.39
-'Go to the _Docks_ |q One Fell Swoop/Get to the Docks
+goto 45.79,20.39 |q One Fell Swoop/Get to the Docks
 step
 goto 34.05,15.17
-talk Sergeant Linaarie |q One Fell Swoop/Talk to Sergeant Linaarie
+talk Sergeant Linaarie |q One Fell Swoop/Talk to Sergeant Linaarie |future
 step
 goto 35.38,15.86
 'Open _Lighthouse_ |q One Fell Swoop/Enter the Lighthouse
@@ -4735,7 +4739,6 @@ accept Reap What Is Sown
 step
 goto 40.60,54.21
 kill Drublog enemies
-|tip Loot what you kill.
 'Obtain a _Drublog Lock of Hair_ |q Reap What Is Sown/Obtain a Drublog Lock of Hair
 step
 goto 37.57,48.41
@@ -4786,7 +4789,7 @@ step
 '_Inside the Arena:_
 'Confront the _Hound_ |q Reap What Is Sown/Confront the Hound
 step
-'_Inside the Arena:_
+goto 39.61,48.90
 'Open _Dra'bul_ |q Reap What Is Sown/Leave the Arena |future
 step
 goto 42.25,48.87
@@ -4794,7 +4797,6 @@ talk The Green Lady
 turnin Reap What Is Sown
 step
 goto 42.78,48.89
-|tip He walks to this spot.
 talk Shaman Glazulg
 accept The Hound's Plan
 step
@@ -4994,6 +4996,7 @@ talk Varen Aquilarios |q Halls of Torment/Talk to Varen Aquilarios |future
 step
 goto 65.41,33.77
 talk Lyris Titanborn |q Halls of Torment/Choose Your Companion
+'_OR_
 talk Abnur Tharn |q Halls of Torment/Choose Your Companion
 |only Aldmeri Dominion
 step
@@ -5128,7 +5131,7 @@ goto 31.73,38.62
 'Open _Chateau Guesthouse_ |q Chateau of the Ravenous Rodent/Enter the Chateau Guesthouse
 |only Aldmeri Dominion
 step
-goto 37.12,39.97
+goto 31.33,44.26
 |tip Random Door.
 'Listen _Door_ |q Chateau of the Ravenous Rodent/Evict the Guest That Doesn't Belong
 |only Aldmeri Dominion
@@ -5227,7 +5230,6 @@ talk Aelif |q Proving the Deed/Meet Aelif to Travel to Ragnthar
 |only Aldmeri Dominion
 step
 goto malabaltor_base 85.99,25.04
-|tip Stay with her or she will stop following you.
 'Follow _Aelif to Ragnthar_ |q Proving the Deed/Follow Aelif to Ragnthar
 |only Aldmeri Dominion
 step
@@ -6526,7 +6528,6 @@ turnin The Mad God's Bargain
 |only Aldmeri Dominion
 step
 goto 52.70,48.52
-|tip Go outside.
 talk Arch-Mage Shalidor
 accept The Arch-Mage's Boon
 |only Aldmeri Dominion
@@ -6839,7 +6840,7 @@ goto 43.50,43.83
 'Use _Crystal_ |q The Moonlit Path/Align the Final Reflector
 step
 goto 58.57,49.76
-'Enter _Portal to The Demi-Plane of Jode_ |q The Moonlit Path/Enter the Portal
+'Enter _Portal to The Demiplane of Jode_ |q The Moonlit Path/Enter the Portal
 step
 goto planeofjodehubhillbos_base 50.99,52.76
 talk Champion |q The Moonlit Path/Talk to the Champion
@@ -7002,7 +7003,7 @@ talk Vanus Galerion |q Messages Across Tamriel/Talk to Vanus Galerion
 |only Aldmeri Dominion
 step
 '_Run back towards the place you came in:_
-'Open _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal |future
+'Use _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal |future
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -11017,8 +11018,8 @@ talk Merric at-Aswala |q The Prismatic Core/Get Instructions from Merric
 |only Daggerfall Covenant
 step
 goto 37.63,24.31
-'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Small Fire
-|tip The Forge Valve to the left, then the Bellows on the right twice.
+'Use _Forge Tools_
+'Use _Bellows_ twice |q The Prismatic Core/Stoke a Small Fire
 |only Daggerfall Covenant
 step
 goto 37.63,24.31
@@ -11026,8 +11027,9 @@ goto 37.63,24.31
 |only Daggerfall Covenant
 step
 goto 37.63,24.31
-'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Medium-Sized Fire
-|tip The Forge Valve to the left, the coals in the middle, and then the Bellows on the right three times.
+'Use _Forge Tools_
+'Use _Coals_
+'Use _Bellows_ Three times |q The Prismatic Core/Stoke a Medium-Sized Fire
 |only Daggerfall Covenant
 step
 goto 37.63,24.31
@@ -11035,8 +11037,9 @@ goto 37.63,24.31
 |only Daggerfall Covenant
 step
 goto 37.63,24.31
-'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Large Fire
-|tip The Forge Valve to the left three times, the coals in the middle, and then the Bellows on the right three times.
+'Use _Forge Tools_ Three times
+'Use _Coals_
+'Use _Bellows_ Three Times |q The Prismatic Core/Stoke a Large Fire
 |only Daggerfall Covenant
 step
 goto 37.63,24.31
@@ -12783,7 +12786,7 @@ goto 31.73,38.62
 'Open _Chateau Guesthouse_ |q Chateau of the Ravenous Rodent/Enter the Chateau Guesthouse
 |only Daggerfall Covenant
 step
-goto 36.97,45.96
+goto 34.56,41.78
 |tip Random Door.
 'Listen _Door_ |q Chateau of the Ravenous Rodent/Evict the Guest That Doesn't Belong
 |only Daggerfall Covenant
@@ -18694,8 +18697,8 @@ talk Merric at-Aswala |q The Prismatic Core/Get Instructions from Merric
 |only Ebonheart Pact
 step
 goto 37.63,24.31
-'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Small Fire
-|tip The Forge Valve to the left, then the Bellows on the right twice.
+'Use _Forge Tools_
+'Use _Bellows_ twice |q The Prismatic Core/Stoke a Small Fire
 |only Ebonheart Pact
 step
 goto 37.63,24.31
@@ -18703,8 +18706,9 @@ goto 37.63,24.31
 |only Ebonheart Pact
 step
 goto 37.63,24.31
-'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Medium-Sized Fire
-|tip The Forge Valve to the left, the coals in the middle, and then the Bellows on the right three times.
+'Use _Forge Tools_
+'Use _Coals_
+'Use _Bellows_ Three times |q The Prismatic Core/Stoke a Medium-Sized Fire
 |only Ebonheart Pact
 step
 goto 37.63,24.31
@@ -18712,8 +18716,9 @@ goto 37.63,24.31
 |only Ebonheart Pact
 step
 goto 37.63,24.31
-'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Large Fire
-|tip The Forge Valve to the left three times, the coals in the middle, and then the Bellows on the right three times.
+'Use _Forge Tools_ Three times
+'Use _Coals_
+'Use _Bellows_ Three Times |q The Prismatic Core/Stoke a Large Fire
 |only Ebonheart Pact
 step
 goto 37.63,24.31
@@ -19643,7 +19648,7 @@ goto 31.73,38.62
 'Open _Chateau Guesthouse_ |q Chateau of the Ravenous Rodent/Enter the Chateau Guesthouse
 |only Ebonheart Pact
 step
-goto 31.45,44.15
+goto 34.56,41.78
 |tip Random Door.
 'Listen _Door_ |q Chateau of the Ravenous Rodent/Evict the Guest That Doesn't Belong
 |only Ebonheart Pact
@@ -20752,7 +20757,6 @@ talk Aelif |q Proving the Deed/Meet Aelif to Travel to Ragnthar
 |only Ebonheart Pact
 step
 goto 52.92,39.01
-|tip Stay with her or she will stop following you.
 'Follow _Aelif to Ragnthar_ |q Proving the Deed/Follow Aelif to Ragnthar
 |only Ebonheart Pact
 step
@@ -22607,9 +22611,6 @@ goto 53.63,61.94 |q Truth, Lies, and Prisoners |future
 step
 goto 52.60,33.55 |q Truth, Lies, and Prisoners |future
 step
-goto 19.97,41.13
-wayshrine Hollow City
-step
 goto 31.47,32.71 |q Truth, Lies, and Prisoners |future
 step
 goto coldharbour_base 43.21,62.56
@@ -22805,15 +22806,11 @@ goto 89.08,24.49
 'Use _Portal to Mysterious Power Source_ |q The Library of Dusk/Enter the Library Vault Portal |future
 |tip Manually skip to the next step.
 step
-goto coldharbour_base 36.91,71.07
-|tip Follow the path up.
-'Find the _Source of Power_ |q The Library of Dusk/Find the Source of Power |future
-step
-goto 36.79,70.93
-'Take _Light of Meridia_ |q The Library of Dusk/Take the Light of Meridia
+goto coldharbour_base 36.79,70.93
+'Take _Light of Meridia_ |q The Library of Dusk/Take the Light of Meridia |future
 step
 goto 35.70,67.97
-|tip Drop down you won't die.
+|tip Drop down.
 talk Telenger the Artificer
 turnin The Library of Dusk
 step
@@ -22848,10 +22845,6 @@ step
 goto 27.01,66.19
 talk Faraniel |q Into the Woods/Bring the Spriggan Bark to Faraniel
 step
-goto 29.36,65.02
-'Cross the _Ayleid Bridge_ |q Into the Woods/Follow a Shadow Runner
-|tip Manually skip to the next step.
-step
 goto 22.20,65.10
 kill Shadow Runners |q Into the Woods/Follow a Shadow Runner
 step
@@ -22878,11 +22871,8 @@ talk Faraniel
 turnin Into the Woods
 accept The Shadow's Embrace
 step
-goto 28.16,67.16
-'Meet _Faraniel at the Bridge_ |q The Shadow's Embrace/Meet Faraniel at the Bridge
-step
 goto 28.04,67.11
-talk Faraniel |q The Shadow's Embrace/Talk to Faraniel
+talk Faraniel |q The Shadow's Embrace/Talk to Faraniel |future
 |tip Persuade her.
 step
 goto 28.75,72.49 |q The Shadow's Embrace/Defeat the Lamia Champion
@@ -23025,15 +23015,15 @@ goto lightlesscell_base 15.32,16.27
 |tip Manually skip to the next step.
 step
 goto 17.33,13.88
-'Rotate _Crystal Prism once_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 19.82,13.99
-'Rotate _Crystal Prism twice_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ 2 Times |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 20.04,16.29
-'Rotate _Crystal Prism twice_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ 2 Times |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 20.04,18.71
@@ -23061,11 +23051,11 @@ goto 25.18,13.87
 |tip Manually skip to the next step.
 step
 goto 22.61,13.86
-'Rotate _Crystal Prism twice_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ 2 Times |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 22.60,16.25
-'Rotate _Crystal Prism twice_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ 2 Times |q Light from the Darkness/Set King Laloriaran Dynar Free
 step
 goto 22.73,18.69
 |tip Go upstairs.
@@ -23205,14 +23195,10 @@ goto 78.93,82.26
 'Open _Boiler_ |q Vanus Unleashed/Find Vanus Galerion
 |tip Manually skip to the next step.
 step
-goto 89.25,82.89
-'Find _Vanus Galerion_ |q Vanus Unleashed/Find Vanus Galerion
-step
 goto 89.71,78.40
 .'Use _Health Conduit_
 .'Use _Magicka Conduit_
-.'Use _Stamina Conduit_
-.'Release _Vanus Galerion_ |q Vanus Unleashed/Release Vanus Galerion
+.'Use _Stamina Conduit_ |q Vanus Unleashed/Release Vanus Galerion |future
 step
 goto 89.22,74.10
 'Open _The Shackle Bridge_ |q Vanus Unleashed/Follow Vanus Galerion |future
@@ -23229,11 +23215,9 @@ step
 goto 24.05,64.28
 talk Vanus Galerion |q Breaking the Shackle/Talk to Vanus Galerion
 step
-goto 38.63,61.35
-'Follow _Vanus Galerion_ |q Breaking the Shackle/Follow Vanus Galerion
-step
 goto 41.68,60.52
-'Open _The Great Shackle_ |q Breaking the Shackle/Enter the Great Shackle
+|tip Watch the dialogue.
+'Open _The Great Shackle_ |q Breaking the Shackle/Enter the Great Shackle |future
 step
 goto 55.76,60.46 |q Breaking the Shackle/Explore the Great Shackle
 step
@@ -23369,7 +23353,7 @@ step
 goto 53.03,59.53 |q Crossing the Chasm/Close the East Portal
 step
 goto 54.00,58.21
-kill the waves of enemies |q Crossing the Chasm/Close the East Portal
+kill Oztuk the Crude |q Crossing the Chasm/Close the East Portal
 step
 goto 51.84,59.68 |q Crossing the Chasm/Close the West Portal
 step
@@ -23511,9 +23495,6 @@ goto 51.77,45.41
 'Destroy _Binding Totem_ |q The Harvest Heart/Help Virgar and Vanus Complete the Ritual
 |tip Manually skip to the next step.
 step
-goto 51.31,46.72
-'Help _Virgar and Vanus Complete the Ritual_ |q The Harvest Heart/Help Virgar and Vanus Complete the Ritual
-step
 goto 51.06,46.73
 talk Virgar the Red
 turnin The Harvest Heart
@@ -23654,11 +23635,8 @@ step
 goto 51.85,27.88
 'Close _Reinforcement Portal_ |q The Final Assault/Close the Reinforcement Portal
 step
-goto 49.58,25.87
-'Open _Labyrinth_ |q The Final Assault/Open the Labyrinth
-step
 goto 49.59,25.77
-talk Vanus Galerion |q The Final Assault/Talk to Vanus Galerion
+talk Vanus Galerion |q The Final Assault/Talk to Vanus Galerion |future
 step
 goto 49.63,24.97
 'Open _Labyrinth_ |q The Final Assault/Enter the Labyrinth |future

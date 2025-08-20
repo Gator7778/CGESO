@@ -5,7 +5,7 @@ CGV:RegisterGuide("LEVELING\\The Wailing Prison",[[
 loadingimage loadscreen_chapter1_01.dds
 description Brave The Wailing Prison, a prisoner stronghold in Coldharbour.
 step
-|tip Skip to Talk to the Prophet if this is you chose Intro on character creation menu.
+|tip Skip to next 4 steps if you chose Intro on character creation menu.
 'Open _Auridon_ Map
 'Travel to _Vulkhel Guard_ |q Soul Shriven in Coldharbour |future
 |tip Manually skip to the next step.
@@ -25,7 +25,7 @@ goto 60.96,67.81
 talk The Benefactor |q Soul Shriven in Coldharbour/Talk to the Benefactor
 |only Aldmeri Dominion
 step
-|tip Skip to Talk to the Prophet if this is you chose Intro on character creation menu.
+|tip Skip to next 4 steps if you chose Intro on character creation menu.
 'Open _Glenumbra_ Map
 'Travel to _Daggerfall_ |q Soul Shriven in Coldharbour |future
 |tip Manually skip to the next step
@@ -47,7 +47,8 @@ talk Benefactor |q Soul Shriven in Coldharbour/Talk to the Benefactor
 |only Daggerfall Covenant
 step
 'Open
-|tip Skip to Talk to the Prophet if this is you chose Intro on character creation menu. _Stonesfalls_ Map
+|tip Skip to next 4 steps if you chose Intro on character creation menu.
+'Open _Stonesfalls_ Map
 'Travel to _Davon's Watch_ |q Soul Shriven in Coldharbour |future
 |tip Manually skip to the next step.
 |only Ebonheart Pact
@@ -89,7 +90,7 @@ step
 goto 82.49,70.84
 kill Dremora Churl |q Soul Shriven in Coldharbour/Defeat the Prison Guards
 step
-goto 85.08,66.34
+goto 83.12,68.95
 |tip Watch the dialogue.
 talk Lyris Titanborn |q Soul Shriven in Coldharbour/Talk to Lyris Titanborn |future
 step
@@ -182,6 +183,11 @@ goto 49.40,51.56
 'Approach the _Portal_ |q Soul Shriven in Coldharbour/Wait for the Prophet |future
 |tip Manually skip to the next step.
 step
+goto khenarthisroost_base 55.67,75.39
+talk The Prophet
+turnin Soul Shriven in Coldharbour
+|only Aldmeri Dominion
+step
 'Click _Here_ for Full Guide |confirm |nextreload Aldmeri Dominion Leveling Guides\\Khenarthi's Roost
 '_OR_
 'Click _Here_ for Main Quest Only |confirm |nextreload Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Khenarthi's Roost
@@ -190,6 +196,8 @@ step
 goto porthunding_base 36.16,87.59
 talk The Prophet
 turnin Soul Shriven in Coldharbour
+|only Daggerfall Covenant
+step
 'Click _Here_ for Full Guide |confirm |nextreload Daggerfall Covenant Leveling Guides\\Stros M'Kai
 '_OR_
 'Click _Here_ for Main Quest Only |confirm |nextreload Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Stros M'Kai
@@ -197,7 +205,9 @@ turnin Soul Shriven in Coldharbour
 step
 goto bleakrockvillage_base 78.54,47.49
 talk The Prophet
-turnin Soul Shriven in Coldharbour 
+turnin Soul Shriven in Coldharbour
+|only Ebonheart Pact
+step
 'Click _Here_ for Full Guide |confirm |nextreload Ebonheart Pact Leveling Guides\\Bleakrock Isle
 '_OR_
 'Click _Here_ for Main Quest Only |confirm |nextreload Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Bleakrock Isle
@@ -473,15 +483,18 @@ talk Sergeant Firion
 accept Cast Adrift
 step
 goto 33.79,72.03
-|tip Take Torchbug Treacle. They look like small glass bottles on the ground.
+|tip They look like small glass bottles on the ground.
+'Take _Torchbug Treacle_
 talk Edhelas |q Cast Adrift/Find Edhelas
 step
 goto 31.13,67.64
-|tip Take Torchbug Treacle. They look like small glass bottles on the ground.
+|tip They look like small glass bottles on the ground.
+'Take _Torchbug Treacle_
 talk Nistel |q Cast Adrift/Find Nistel
 step
 goto 26.34,63.19
-|tip Take Torchbug Treacle. They look like small glass bottles on the ground.
+|tip They look like small glass bottles on the ground.
+'Take _Torchbug Treacle_
 talk Onglorn |q Cast Adrift/Find Onglorn
 step
 goto 31.75,55.87 |q Cast Adrift/Go to the Cave
@@ -9086,6 +9099,10 @@ goto 39.27,44.48
 |tip Inside the Mages Guild.
 talk Parmbarel |q House and Home/.*Rescue Civilians.* |count 3
 step
+goto 34.61,42.48
+'Open _Upstairs_ |q House and Home/.*Rescue Civilians.* |count 4
+|tip Manually skip to the next step.
+step
 goto 37.74,42.39
 |tip Go upstairs in the Mages Guild.
 talk Muramil |q House and Home/.*Rescue Civilians.* |count 4
@@ -9108,11 +9125,8 @@ kill Drublog
 'Recover _Angardil's Work Tools_ |q The Unkindest Cut/.*Recover Angardil's Work Tools.*
 step
 goto 68.63,62.32
-kill the Drublog
-'Sound _Lieutenant Ehran's Horn_ when the Upper Gate is Clear |q House and Home/Sound Lieutenant Ehran's Horn When the Upper Gate Is Clear
-step
-goto 66.21,50.27
-'Locate _Lieutenant Ehran's Headquarters_ |q House and Home/Locate Lieutenant Ehran's Headquarters
+kill the forces
+'Use _Lieutenant Ehran's Horn_ |q House and Home/Sound Lieutenant Ehran's Horn When the Upper Gate Is Clear
 step
 goto 69.20,50.33
 talk Lieutenant Ehran
@@ -9161,11 +9175,10 @@ goto 60.07,17.95
 |tip Go upstairs in the building.
 'Burn _Ra Gada Supplies_ |q One Fell Swoop/.*Burn Ra Gada Supplies.* |count 3
 step
-goto 45.79,20.39
-'Go to the _Docks_ |q One Fell Swoop/Get to the Docks
+goto 45.79,20.39 |q One Fell Swoop/Get to the Docks
 step
 goto 34.05,15.17
-talk Sergeant Linaarie |q One Fell Swoop/Talk to Sergeant Linaarie
+talk Sergeant Linaarie |q One Fell Swoop/Talk to Sergeant Linaarie |future
 step
 goto 35.38,15.86
 'Open _Lighthouse_ |q One Fell Swoop/Enter the Lighthouse
@@ -9631,7 +9644,6 @@ accept Reap What Is Sown
 step
 goto 40.60,54.21
 |tip Loot what you kill.
-kill Drublog enemies
 'Obtain a _Drublog Lock of Hair_ |q Reap What Is Sown/Obtain a Drublog Lock of Hair
 step
 goto 37.57,48.41
@@ -9681,7 +9693,7 @@ step
 '_Inside the Arena:_
 'Confront the _Hound_ |q Reap What Is Sown/Confront the Hound
 step
-'_Inside the Arena:_
+goto 39.61,48.90
 'Open _Dra'bul_ |q Reap What Is Sown/Leave the Arena
 |tip Manually skip to the next step.
 step
@@ -9690,7 +9702,6 @@ talk The Green Lady
 turnin Reap What Is Sown
 step
 goto 42.78,48.89
-|tip He walks to this spot.
 talk Shaman Glazulg
 accept The Hound's Plan
 step
@@ -10834,6 +10845,7 @@ talk Varen Aquilarios |q Halls of Torment/Talk to Varen Aquilarios |future
 step
 goto 65.41,33.77
 talk Lyris Titanborn |q Halls of Torment/Choose Your Companion
+'_OR_
 talk Abnur Tharn |q Halls of Torment/Choose Your Companion
 |only Aldmeri Dominion
 step
@@ -10967,7 +10979,7 @@ goto 31.73,38.62
 'Open _Chateau Guesthouse_ |q Chateau of the Ravenous Rodent/Enter the Chateau Guesthouse
 |only Aldmeri Dominion
 step
-goto 37.12,39.97
+goto 31.33,44.26
 |tip Random Door.
 'Listen _Door_ |q Chateau of the Ravenous Rodent/Evict the Guest That Doesn't Belong
 |only Aldmeri Dominion
@@ -11066,7 +11078,6 @@ talk Aelif |q Proving the Deed/Meet Aelif to Travel to Ragnthar
 |only Aldmeri Dominion
 step
 goto malabaltor_base 85.99,25.04
-|tip Stay with her or she will stop following you.
 'Follow _Aelif to Ragnthar_ |q Proving the Deed/Follow Aelif to Ragnthar
 |only Aldmeri Dominion
 step
@@ -14999,7 +15010,7 @@ talk Vanus Galerion |q Messages Across Tamriel/Talk to Vanus Galerion
 |only Aldmeri Dominion
 step
 '_Run back towards the place you came in:_
-'Open _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal |future
+'Use _Portal to Alliance Capital_ |q Messages Across Tamriel/Enter Vanus Galerion's Portal |future
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -25435,7 +25446,7 @@ goto 31.73,38.62
 'Open _Chateau Guesthouse_ |q Chateau of the Ravenous Rodent/Enter the Chateau Guesthouse
 |only Daggerfall Covenant
 step
-goto 36.97,45.96
+goto 34.56,41.78
 |tip Random Door.
 'Listen _Door_ |q Chateau of the Ravenous Rodent/Evict the Guest That Doesn't Belong
 |only Daggerfall Covenant
@@ -39484,7 +39495,7 @@ goto 31.73,38.62
 'Open _Chateau Guesthouse_ |q Chateau of the Ravenous Rodent/Enter the Chateau Guesthouse
 |only Ebonheart Pact
 step
-goto 31.45,44.15
+goto 34.56,41.78
 |tip Random Door.
 'Listen _Door_ |q Chateau of the Ravenous Rodent/Evict the Guest That Doesn't Belong
 |only Ebonheart Pact
@@ -41866,7 +41877,6 @@ talk Aelif |q Proving the Deed/Meet Aelif to Travel to Ragnthar
 |only Ebonheart Pact
 step
 goto 52.92,39.01
-|tip Stay with her or she will stop following you.
 'Follow _Aelif to Ragnthar_ |q Proving the Deed/Follow Aelif to Ragnthar
 |only Ebonheart Pact
 step
@@ -45307,11 +45317,10 @@ step
 goto stirk_base 23.56,30.64
 talk Vanus Galerion |q The Weight of Three Crowns/Talk to Vanus Galerion
 step
-goto 45.72,55.42
-'Go to _Summit Point_ |q The Weight of Three Crowns/Go to Summit Point
+goto 45.72,55.42 |q The Weight of Three Crowns/Go to Summit Point
 step
 goto 47.00,55.34
-'Listen to the _Alliance Leaders_ |q The Weight of Three Crowns/Listen to the Alliance Leaders
+'Listen to the _Alliance Leaders_ |q The Weight of Three Crowns/Listen to the Alliance Leaders |future
 step
 goto 46.52,55.91
 talk Vanus Galerion |q The Weight of Three Crowns/Talk to Vanus Galerion
@@ -45362,11 +45371,8 @@ goto 78.60,68.38
 talk Vanus Galerion |q The Weight of Three Crowns/Wait for Portal |future
 |tip Manually skip to the next step.
 step
-goto 78.60,68.38
-'Wait for the _Portal_ |q The Weight of Three Crowns/Wait for Portal |future
-step
 goto 80.01,68.59
-'Use _Portal to Coldharbour_ |q The Weight of Three Crowns/Take Portal to Coldharbour
+'Use _Portal to Coldharbour_ |q The Weight of Three Crowns/Take Portal to Coldharbour |future
 step
 goto coldharbour_base 52.29,77.06
 talk Cadwell
@@ -45805,10 +45811,6 @@ step
 goto 27.01,66.19
 talk Faraniel |q Into the Woods/Bring the Spriggan Bark to Faraniel
 step
-goto 29.36,65.02
-'Cross the _Ayleid Bridge_ |q Into the Woods/Follow a Shadow Runner
-|tip Manually skip to the next step.
-step
 goto 22.20,65.10
 kill Shadow Runners |q Into the Woods/Follow a Shadow Runner
 step
@@ -45827,11 +45829,8 @@ talk Faraniel
 turnin Into the Woods
 accept The Shadow's Embrace
 step
-goto 28.16,67.16
-'Meet _Faraniel at the Bridge_ |q The Shadow's Embrace/Meet Faraniel at the Bridge
-step
 goto 28.04,67.11
-talk Faraniel |q The Shadow's Embrace/Talk to Faraniel
+talk Faraniel |q The Shadow's Embrace/Talk to Faraniel |future
 |tip Persaude her.
 step
 goto 28.75,72.49 |q The Shadow's Embrace/Defeat the Lamia Champion
@@ -45968,31 +45967,31 @@ goto 44.99,56.65
 |tip Manually skip to the next step.
 step
 goto lightlesscell_base 15.32,16.27
-'Take _Light of Meridia_ |q Light from the Darkness/Set King Laloriaran Dynar Free |future
+'Place _Light of Meridia_ |q Light from the Darkness/Set King Laloriaran Dynar Free |future
 |tip Manually skip to the next step.
 step
 goto 17.33,13.88
-'Rotate _Crystal Prism once_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 19.82,13.99
-'Rotate _Crystal Prism twice_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ 2 Times |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 20.04,16.29
-'Rotate _Crystal Prism twice_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ 2 Times |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 20.04,18.71
-'Rotate _Crystal Prism three times_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ 3 Times |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 17.81,18.72
-'Rotate _Crystal Prism twice_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ 2 Times |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 17.69,20.87
-'Rotate _Crystal Prism once_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 27.41,25.76
@@ -46000,19 +45999,19 @@ goto 27.41,25.76
 |tip Manually skip to the next step.
 step
 goto 27.67,20.94
-'Rotate _Crystal Prism three times_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ 3 Times |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 25.18,13.87
-'Rotate _Crystal Prism three times_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ 3 Times |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 22.61,13.86
-'Rotate _Crystal Prism twice_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ 2 Times |q Light from the Darkness/Set King Laloriaran Dynar Free
 |tip Manually skip to the next step.
 step
 goto 22.60,16.25
-'Rotate _Crystal Prism twice_ |q Light from the Darkness/Set King Laloriaran Dynar Free
+'Rotate _Crystal Prism_ 2 Times |q Light from the Darkness/Set King Laloriaran Dynar Free
 step
 goto 22.73,18.69
 |tip Go upstairs.
@@ -46835,14 +46834,10 @@ kill Kothutuilk
 'Open _Boiler_ |q Vanus Unleashed/Find Vanus Galerion
 |tip Manually skip to the next step.
 step
-goto 89.25,82.89
-'Find _Vanus Galerion_ |q Vanus Unleashed/Find Vanus Galerion
-step
 goto 89.71,78.40
 .'Use _Health Conduit_
 .'Use _Magicka Conduit_
-.'Use _Stamina Conduit_
-.'Release _Vanus Galerion_ |q Vanus Unleashed/Release Vanus Galerion
+.'Use _Stamina Conduit_ |q Vanus Unleashed/Release Vanus Galerion |future
 step
 goto 89.22,74.10
 'Open _The Shackle Bridge_ |q Vanus Unleashed/Follow Vanus Galerion
@@ -46859,11 +46854,9 @@ step
 goto 24.05,64.28
 talk Vanus Galerion |q Breaking the Shackle/Talk to Vanus Galerion
 step
-goto 38.63,61.35
-'Follow _Vanus Galerion_ |q Breaking the Shackle/Follow Vanus Galerion
-step
 goto 41.68,60.52
-'Open _The Great Shackle_ |q Breaking the Shackle/Enter the Great Shackle
+|tip Watch the dialogue.
+'Open _The Great Shackle_ |q Breaking the Shackle/Enter the Great Shackle |future
 step
 goto 55.76,60.46 |q Breaking the Shackle/Explore the Great Shackle
 step
@@ -47149,9 +47142,6 @@ step
 goto 51.77,45.41
 'Destroy _Binding Totem_ |q The Harvest Heart/Help Virgar and Vanus Complete the Ritual
 |tip Manually skip to the next step.
-step
-goto 51.31,46.72
-'Help _Virgar and Vanus Complete the Ritual_ |q The Harvest Heart/Help Virgar and Vanus Complete the Ritual
 step
 goto 51.06,46.73
 talk Virgar the Red
@@ -47636,11 +47626,8 @@ step
 goto 51.85,27.88
 'Close _Reinforcement Portal_ |q The Final Assault/Close the Reinforcement Portal
 step
-goto 49.58,25.87
-'Open the _Labyrinth_ |q The Final Assault/Open the Labyrinth
-step
 goto 49.59,25.77
-talk Vanus Galerion |q The Final Assault/Talk to Vanus Galerion
+talk Vanus Galerion |q The Final Assault/Talk to Vanus Galerion |future
 step
 goto 49.63,24.97
 'Open _Labyrinth_ |q The Final Assault/Enter the Labyrinth |future
