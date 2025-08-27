@@ -6594,7 +6594,7 @@ accept Circus of Cheerful Slaughter
 |only Aldmeri Dominion
 step
 goto 30.40,24.97
-'Examine _Circus of Cheerful Slaughter_ |q Circus of Cheerful Slaughter/Talk to Sheogorath |future
+'Examine _Circus of Cheerful Slaughter_ |q Circus of Cheerful Slaughter/Talk to Sheogorath
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -6639,9 +6639,17 @@ talk Sheogorath |q Circus of Cheerful Slaughter/Find Sheogorath in Daggerwaymore
 |only Aldmeri Dominion
 step
 goto 22.87,65.45
-.'Save _Vanus Galerion_ |q Circus of Cheerful Slaughter/Save the Guild Members
-.'Save _Arch-Mage Shalidor_ |q Circus of Cheerful Slaughter/Save the Guild Members
-.'Save _Valaste_ |q Circus of Cheerful Slaughter/Save the Guild Members
+'Save _Vanus Galerion_ |q Circus of Cheerful Slaughter/Save the Guild Members |future
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 28.99,60.03
+'Save _Arch-Mage Shalidor_ |q Circus of Cheerful Slaughter/Save the Guild Members
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
+step
+goto 28.32,67.71
+'Save _Valaste_ |q Circus of Cheerful Slaughter/Save the Guild Members
 |only Aldmeri Dominion
 step
 goto 26.95,63.40
@@ -6785,8 +6793,8 @@ talk Merric at-Aswala |q The Prismatic Core/Get Instructions from Merric
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
-'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Small Fire
-|tip The Forge Valve to the left, then the Bellows on the right twice.
+'Use _Forge Valve_
+'Use _Bellows_ twice |q The Prismatic Core/Stoke a Small Fire
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
@@ -6794,8 +6802,9 @@ goto 37.63,24.31
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
-'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Medium-Sized Fire
-|tip The Forge Valve to the left, the coals in the middle, and then the Bellows on the right three times.
+'Use _Forge Valve_
+'Use _Coals_
+'Use _Bellows_ Three times |q The Prismatic Core/Stoke a Medium-Sized Fire
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
@@ -6803,8 +6812,9 @@ goto 37.63,24.31
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
-'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Large Fire
-|tip The Forge Valve to the left three times, the coals in the middle, and then the Bellows on the right three times.
+'Use _Forge Valve_ Three times
+'Use _Coals_
+'Use _Bellows_ Three Times |q The Prismatic Core/Stoke a Large Fire
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
@@ -12895,12 +12905,8 @@ goto 60.28,29.93
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
-goto sancretor1_base 50.06,57.11
-'Explore _Sancre Tor_ |q Shadow of Sancre Tor/Explore Sancre Tor |future
-|only Aldmeri Dominion
-step
-goto 45.16,65.23
-'Confront _Mannimarco_ |q Shadow of Sancre Tor/Confront Mannimarco
+goto sancretor1_base 45.16,65.23
+'Confront _Mannimarco_ |q Shadow of Sancre Tor/Confront Mannimarco |future
 |only Aldmeri Dominion
 step
 goto 44.88,67.60
@@ -15063,7 +15069,7 @@ goto stonefalls_base 77.45,36.57
 step
 goto the_ebonheart_harborage_base 70.90,32.79
 talk Cadwell
-turnin Cadwell's Gold |next LEVELING\\Craglorn
+turnin Cadwell's Gold |next LEVELING\\Imperial City
 |only Ebonheart Pact
 ]])
 
@@ -15639,20 +15645,14 @@ goto betnihk_base 52.05,59.78
 'Activate _Vision Totem_ |q Into the Hills/Use the Vision Totem
 step
 goto 61.20,61.67
-'Learn the _Bloodthorn Plot_ |q Into the Hills/Learn the Bloodthorn Plot
-step
-goto 61.20,61.67
-'Listen to the _Bloodthorn Cultists_ |q Into the Hills/Listen to Bloodthorn Cultists
+'Listen to the _Bloodthorn Cultists_ |q Into the Hills/Listen to Bloodthorn Cultists |future
 step
 goto 61.84,60.50
 'Use _Skyshard_ |q Into the Hills/Reach Ayleid Site
 |tip Manually skip to the next step.
 step
 goto 52.82,69.85
-'Reach the _Ayleid Site_ |q Into the Hills/Reach Ayleid Site
-step
-goto 52.82,69.85
-'Listen to the _Bloodthorn Leader_ |q Into the Hills/Listen to Bloodthorn Leader
+'Listen to the _Bloodthorn Leader_ |q Into the Hills/Listen to Bloodthorn Leader |future
 step
 goto 57.14,73.15
 talk Magula
@@ -15884,28 +15884,37 @@ step
 goto 58.53,36.22 |q Carzog's Demise/.*Activate Doorway Crystal.* |count 1
 step
 goto 58.67,32.21
-'Activate _Welkynd Stone_
+'Activate _Welkynd Stone_ |q Carzog's Demise/.*Activate Doorway Crystal.* |count 1
+|tip Manually skip to the next step.
+step
+goto 59.01,32.75
 talk Ayleid Spirit |q Carzog's Demise/.*Activate Doorway Crystal.* |count 1
 |tip Manually skip to the next step.
 step
 goto 66.06,28.03
-'Activate _Doorway Crystal_ |q Carzog's Demise/.*Activate Doorway Crystal.* |count 1
+'Watch the _Spirit Activate the Doorway Crystal_  |q Carzog's Demise/.*Activate Doorway Crystal.* |count 1
 step
 goto 60.80,27.48
-'Activate _Welkynd Stone_
+'Activate _Welkynd Stone_ |q Carzog's Demise/.*Activate Doorway Crystal.* |count 2
+|tip Manually skip to the next step.
+step
+goto 61.42,27.70
 talk Ayleid Spirit |q Carzog's Demise/.*Activate Doorway Crystal.* |count 2
 |tip Manually skip to the next step.
 step
 goto 65.42,27.77
-'Activate _Doorway Crystal_ |q Carzog's Demise/.*Activate Doorway Crystal.* |count 2
+'Watch the _Spirit Activate the Doorway Crystal_  |q Carzog's Demise/.*Activate Doorway Crystal.* |count 2
 step
 goto 64.01,32.58
-'Activate _Welkynd Stone_
+'Activate _Welkynd Stone_ |q Carzog's Demise/.*Activate Doorway Crystal.* |count 3
+|tip Manually skip to the next step.
+step
+goto 63.90,32.25
 talk Ayleid Spirit |q Carzog's Demise/.*Activate Doorway Crystal.* |count 3
 |tip Manually skip to the next step.
 step
 goto 65.42,27.77
-'Activate _Doorway Crystal_ |q Carzog's Demise/.*Activate Doorway Crystal.* |count 3
+'Watch the _Spirit Activate the Doorway Crystal_ |q Carzog's Demise/.*Activate Doorway Crystal.* |count 3
 step
 goto 66.71,27.63
 |tip Watch the dialogue
@@ -17417,15 +17426,16 @@ goto 64.17,51.18
 'Examine _The Illusion of Death_ |lorebook The Illusion of Death/1/9/3
 step
 'Open _Glenumbra_ Map
-'Travel to _Aldcroft_ |q Lineage of Tooth and Claw/Talk to Duke Sebastien
+'Travel to _Aldcroft_ |q Lineage of Tooth and Claw/Talk to Duke Sebastien |future
 |tip Manually skip to the next step.
 step
 goto aldcroft_base 31.90,58.50
-talk Duke Sebastien |q Lineage of Tooth and Claw/Talk to Duke Sebastien
-'Tell him _No. I can't risk it. But I won't kill you. Gloria, capture him!_
+|tip If you chose to kill Gloria Fausta he will be upstairs in the house.
+talk Duke Sebastien |q Lineage of Tooth and Claw/Talk to Duke Sebastien |future
 step
 goto 32.34,58.65
-talk Gloria Fausta
+|tip If you let Duke say goodbye follow him in and kill him.
+talk Gloria Fausta or Duke Sebastien
 turnin Lineage of Tooth and Claw
 accept The Glenumbra Moors
 step
@@ -17723,9 +17733,8 @@ goto 56.19,39.74
 |tip Manually skip to the next step.
 step
 goto 55.87,39.42
-|tip Follow her and help her kill werewolves. Let them attack her first.
-talk Shaza gra-Dasik
-'Help _Shaza Reclaim the Siege Camp_ |q Rally Cry/Help Shaza Reclaim the Siege Camp
+|tip Follow and Protect her Shaza gra-Dasik
+talk Shaza gra-Dasik |q Rally Cry/Help Shaza Reclaim the Siege Camp
 step
 goto 52.70,40.59
 'Open _West Barricade Gate_ |q Rally Cry/Talk to General Mandin
@@ -19570,7 +19579,7 @@ goto 45.49,35.47 |q Azura's Guardian/Use Scroll of Summoning Near Large Fire
 step
 goto 45.09,37.33
 |tip Go outside.
-'Use _Scroll of Summoning Near the Large Fire_ |q Azura's Guardian/Use Scroll of Summoning Near Large Fire
+'Use _Scroll of Summoning Near the_ |q Azura's Guardian/Use Scroll of Summoning Near Large Fire
 step
 goto 44.10,39.07
 talk Falice Menoit
@@ -20129,7 +20138,6 @@ turnin The Dangerous Past
 |only Daggerfall Covenant
 step
 goto 40.50,28.98
-|tip She runs up you.
 talk Bera Moorsmith
 accept The Prismatic Core
 |only Daggerfall Covenant
@@ -20166,25 +20174,17 @@ goto 49.48,57.57
 'Enter _Portal to Vuldngrav_ |q Simply Misplaced/Enter the Portal
 |only Daggerfall Covenant
 step
-goto gladeofthedivinevuldngrav_base 58.94,64.02
-'Explore _Vuldngrav_ |q Simply Misplaced/Explore Vuldngrav
-|only Daggerfall Covenant
-step
-goto 60.97,64.09
-'Search _Chest_ |q Simply Misplaced/Examine the Chest
+goto gladeofthedivinevuldngrav_base 60.97,64.09
+'Search _Chest_ |q Simply Misplaced/Examine the Chest |future
 |only Daggerfall Covenant
 step
 goto 53.75,64.08
 'Defeat the _Draugr_ |q Simply Misplaced/Defeat the Draugr
 |only Daggerfall Covenant
 step
-goto 49.65,31.47
-'Explore _Vuldngrav_ |q Simply Misplaced/Explore Vuldngrav
-|only Daggerfall Covenant
-step
 goto 50.06,25.32
 kill Korthor
-'Collect _Fork_ |q Simply Misplaced/Retrieve the Fork
+'Collect _Fork_ |q Simply Misplaced/Retrieve the Fork |future
 |only Daggerfall Covenant
 step
 goto 49.46,15.54
@@ -21128,7 +21128,7 @@ goto 31.03,51.84
 kill Sir Hughes
 'Search _Basket_ |q Vaermina's Gambit/Collect Key of the Knight
 step
-goto 48.98,61.12 |q Vaermina's Gambit/Collect Key of the Thief
+goto 49.77,58.94 |q Vaermina's Gambit/Collect Key of the Thief
 step
 goto 62.95,68.73
 kill General Godrun
@@ -21580,8 +21580,8 @@ talk Merric at-Aswala |q The Prismatic Core/Get Instructions from Merric
 |only Daggerfall Covenant
 step
 goto 37.63,24.31
-'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Small Fire
-|tip The Forge Valve to the left, then the Bellows on the right twice.
+'Use _Forge Valve_
+'Use _Bellows_ twice |q The Prismatic Core/Stoke a Small Fire
 |only Daggerfall Covenant
 step
 goto 37.63,24.31
@@ -21589,8 +21589,9 @@ goto 37.63,24.31
 |only Daggerfall Covenant
 step
 goto 37.63,24.31
-'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Medium-Sized Fire
-|tip The Forge Valve to the left, the coals in the middle, and then the Bellows on the right three times.
+'Use _Forge Valve_
+'Use _Coals_
+'Use _Bellows_ Three times |q The Prismatic Core/Stoke a Medium-Sized Fire
 |only Daggerfall Covenant
 step
 goto 37.63,24.31
@@ -21598,8 +21599,9 @@ goto 37.63,24.31
 |only Daggerfall Covenant
 step
 goto 37.63,24.31
-'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Large Fire
-|tip The Forge Valve to the left three times, the coals in the middle, and then the Bellows on the right three times.
+'Use _Forge Valve_ Three times
+'Use _Coals_
+'Use _Bellows_ Three Times |q The Prismatic Core/Stoke a Large Fire
 |only Daggerfall Covenant
 step
 goto 37.63,24.31
@@ -21698,9 +21700,8 @@ goto 40.03,47.27
 talk Baron Alard Dorell |q Shornhelm Divided/Report to Baron Dorell
 step
 goto 41.02,45.90
-|tip Watch the dialogue.
-talk Countess Eselde Tamrith |q Shornhelm Divided/Enter the Fevered Mews
 |tip Persuade her.
+talk Countess Eselde Tamrith |q Shornhelm Divided/Enter the Fevered Mews
 |tip Manually skip to the next step.
 step
 goto 29.10,52.84
@@ -21718,15 +21719,12 @@ step
 goto 38.69,58.08 |q Shornhelm Divided/Free Lady Aurine Tamrith
 step
 goto 44.43,68.23
-|tip Inside the small cave.
 'Open _Cell_ |q Shornhelm Divided/Free Lady Aurine Tamrith
 step
 goto 58.61,71.98
-|tip Inside the small cave.
 'Open _Cell_ |q Shornhelm Divided/Free Nilthin al-Bergama
 step
 goto 70.55,37.08
-|tip Inside the small cave.
 'Open _Cell_ |q Shornhelm Divided/Free Sir Estienn Guillon
 step
 '_Next to you:_
@@ -21780,12 +21778,12 @@ accept Circus of Cheerful Slaughter
 |only Daggerfall Covenant
 step
 goto 25.53,66.70
-'Examine _Circus of Cheerful Slaughter_ |q Circus of Cheerful Slaughter/Read "Circus of Cheerful Slaughter" |future
+'Examine _Circus of Cheerful Slaughter_ |q Circus of Cheerful Slaughter/Read "Circus of Cheerful Slaughter"
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
 goto circusofcheerfulslaughter_base 57.93,71.95
-talk Sheogorath |q Circus of Cheerful Slaughter/Talk to Sheogorath
+talk Sheogorath |q Circus of Cheerful Slaughter/Talk to Sheogorath |future
 |only Daggerfall Covenant
 step
 goto 75.00,61.97
@@ -21823,9 +21821,17 @@ talk Sheogorath |q Circus of Cheerful Slaughter/Find Sheogorath in Daggerwaymore
 |only Daggerfall Covenant
 step
 goto 22.87,65.45
-.'Save _Vanus Galerion_ |q Circus of Cheerful Slaughter/Save the Guild Members
-.'Save _Arch-Mage Shalidor_ |q Circus of Cheerful Slaughter/Save the Guild Members
-.'Save _Valaste_ |q Circus of Cheerful Slaughter/Save the Guild Members
+'Save _Vanus Galerion_ |q Circus of Cheerful Slaughter/Save the Guild Members |future
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto 28.99,60.03
+'Save _Arch-Mage Shalidor_ |q Circus of Cheerful Slaughter/Save the Guild Members
+|tip Manually skip to the next step.
+|only Daggerfall Covenant
+step
+goto 28.32,67.71
+'Save _Valaste_ |q Circus of Cheerful Slaughter/Save the Guild Members
 |only Daggerfall Covenant
 step
 goto 26.95,63.40
@@ -22197,20 +22203,14 @@ goto 26.27,65.10
 'Examine _The Doors of Oblivion, Part 1_ |lorebook The Doors of Oblivion, Part 1/1/17/3
 step
 goto 22.76,60.83
-'Find _Jonah Marose_ |q The Blood-Splattered Shield/Find Jonah Marose
-step
-goto 22.76,60.83
-'Defend _Tower_ |q The Blood-Splattered Shield/Defend the Tower
+'Defend _Tower_ |q The Blood-Splattered Shield/Defend the Tower |future
 step
 goto 21.58,61.25
 |tip At the top of the tower.
 talk Jonah Marose |q The Blood-Splattered Shield/Talk to Jonah Marose
-step
-goto 26.01,65.41
-'Return to _Camp Tamrith_ |q The Blood-Splattered Shield/Return to Camp Tamrith
-step
+
 goto 25.96,64.58
-talk Countess Eselde Tamrith |q The Blood-Splattered Shield/Talk to Countess Tamrith
+talk Countess Eselde Tamrith |q The Blood-Splattered Shield/Talk to Countess Tamrith |future
 step
 goto 25.37,64.54
 talk Abadi |q The Blood-Splattered Shield/Ask Guards About Captain Janeve
@@ -23836,7 +23836,7 @@ step
 goto 16.56,36.37
 'Activate _Portal Switch_ |q Puzzle of the Pass/Activate the Second Portal Chamber
 step
-goto 12.05,34.14
+goto 17.15,34.30
 talk Baron Alard Dorell |q Puzzle of the Pass/Talk to Baron Dorell
 step
 goto 18.58,26.65
@@ -23887,11 +23887,7 @@ goto 63.57,20.87 |q The Lightless Remnant/Follow Verandis Ravenwatch |tip Follow
 step
 goto 50.51,51.45
 |tip Watch the dialogue.
-'Follow _Verandis Ravenwatch_ |q The Lightless Remnant/Follow Verandis Ravenwatch
-step
-goto 50.51,51.45
-|tip Watch the dialogue.
-talk Count Verandis Ravenwatch |q The Lightless Remnant/Talk to Verandis Ravenwatch
+talk Count Verandis Ravenwatch |q The Lightless Remnant/Talk to Verandis Ravenwatch |future
 step
 goto 46.49,44.39
 |tip In order to kill the gargoyle, don't focus on damaging it, just focus on staying alive.  There are 4 statues in the room with a black spell chaneling from them toward the altar.  Run to each statue and position yourself so the statues are between you and the gargoyle.  When the gargoyle attacks you, it will destroy the statue.  Do this for all 4 statues to kill the gargoyle.
@@ -26550,8 +26546,7 @@ goto 81.07,25.29
 |tip Manually skip to the next step.
 step
 goto 81.27,24.52
-kill the enemies that attack in waves
-'Help _Farvad Cleanse the Ward_ |q Amputating the Hand/Help Farvad Cleanse the Ward
+kill the enemies that attack in waves |q Amputating the Hand/Help Farvad Cleanse the Ward
 step
 goto 81.34,23.52
 'Open _Motalion Necropolis_ |q Amputating the Hand/Exit Ward Chamber
@@ -26730,11 +26725,7 @@ goto 34.82,24.26 |q Valley of Blades/Enter the Abbey of Blades
 |only Daggerfall Covenant
 step
 goto 50.91,45.68
-'Find _Kasura_ |q Valley of Blades/Find Kasura
-|only Daggerfall Covenant
-step
-goto 50.91,45.68
-'Listen _Kasura_ |q Valley of Blades/Listen to Kasura
+'Listen _Kasura_ |q Valley of Blades/Listen to Kasura |future
 |only Daggerfall Covenant
 step
 goto 44.57,41.83
@@ -26832,12 +26823,8 @@ goto 69.05,59.73
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto sancretor1_base 50.06,57.11
-'Explore _Sancre Tor_ |q Shadow of Sancre Tor/Explore Sancre Tor |future
-|only Daggerfall Covenant
-step
-goto 45.16,65.23
-'Confront _Mannimarco_ |q Shadow of Sancre Tor/Confront Mannimarco
+goto sancretor1_base 45.16,65.23
+'Confront _Mannimarco_ |q Shadow of Sancre Tor/Confront Mannimarco |future
 |only Daggerfall Covenant
 step
 goto 44.88,67.60
@@ -27353,10 +27340,7 @@ goto 45.86,34.39
 talk Vanus Galerion |q Messages Across Tamriel/Talk to Vanus Galerion
 |only Daggerfall Covenant
 step
-goto evermore_base 67.22,24.51
-wayshrine Evermore
-step
-goto bangkorai_base 46.03,30.48
+ bangkorai_base 46.03,30.48
 talk Captain Eugien Gaercroft
 accept Beyond the Call
 step
@@ -27367,11 +27351,8 @@ step
 goto 48.13,25.31
 talk Hatmi |q Beyond the Call/Talk to Hatmi
 step
-goto 49.35,22.91
-'Find _Wyrd Camp_ |q Beyond the Call/Find the Wyrd Camp
-step
 goto 50.18,22.92
-talk Wyress Asteria |q Beyond the Call/Talk to Wyress Asteria
+talk Wyress Asteria |q Beyond the Call/Talk to Wyress Asteria |future
 step
 goto 50.20,23.25
 'Open _Ruins_ |q Beyond the Call/Talk to Wyress Delphique
@@ -29629,11 +29610,6 @@ step
 goto 54.94,36.54
 talk Ufa the Red Asp |q A Thirst for Revolution/Talk to Ufa the Red Asp
 step
-goto 57.87,56.76
-talk Arch-Mage Shalidor
-accept The Mad God's Bargain
-|only Daggerfall Covenant
-step
 goto 45.08,36.07
 |tip Go upstairs.
 talk Razin |q A Thirst for Revolution/Get a Sedative from Razin
@@ -30203,7 +30179,7 @@ goto auridon_base 69.65,92.87
 step
 goto the_aldmiri_harborage_map_base 73.98,22.34
 talk Cadwell
-turnin Cadwell's Gold |next LEVELING\\Craglorn
+turnin Cadwell's Gold |next LEVELING\\Imperial City
 |only Aldmeri Dominion
 step
 ]])
@@ -36654,8 +36630,8 @@ talk Merric at-Aswala |q The Prismatic Core/Get Instructions from Merric
 |only Ebonheart Pact
 step
 goto 37.63,24.31
-'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Small Fire
-|tip The Forge Valve to the left, then the Bellows on the right twice.
+'Use _Forge Valve_
+'Use _Bellows_ twice |q The Prismatic Core/Stoke a Small Fire
 |only Ebonheart Pact
 step
 goto 37.63,24.31
@@ -36663,8 +36639,9 @@ goto 37.63,24.31
 |only Ebonheart Pact
 step
 goto 37.63,24.31
-'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Medium-Sized Fire
-|tip The Forge Valve to the left, the coals in the middle, and then the Bellows on the right three times.
+'Use _Forge Valve_
+'Use _Coals_
+'Use _Bellows_ Three times |q The Prismatic Core/Stoke a Medium-Sized Fire
 |only Ebonheart Pact
 step
 goto 37.63,24.31
@@ -36672,8 +36649,9 @@ goto 37.63,24.31
 |only Ebonheart Pact
 step
 goto 37.63,24.31
-'Use _Forge Tools to Stoke the Fire_ |q The Prismatic Core/Stoke a Large Fire
-|tip The Forge Valve to the left three times, the coals in the middle, and then the Bellows on the right three times.
+'Use _Forge Valve_ Three times
+'Use _Coals_
+'Use _Bellows_ Three Times |q The Prismatic Core/Stoke a Large Fire
 |only Ebonheart Pact
 step
 goto 37.63,24.31
@@ -36730,7 +36708,7 @@ goto 30.61,68.00
 |only Ebonheart Pact
 step
 goto circusofcheerfulslaughter_base 57.93,71.95
-talk Sheogorath |q Circus of Cheerful Slaughter/Talk to Sheogorath
+talk Sheogorath |q Circus of Cheerful Slaughter/Talk to Sheogorath |future
 |only Ebonheart Pact
 step
 goto 75.00,61.97
@@ -36768,7 +36746,7 @@ talk Sheogorath |q Circus of Cheerful Slaughter/Find Sheogorath in Daggerwaymore
 |only Ebonheart Pact
 step
 goto 22.87,65.45
-'Save _Vanus Galerion_ |q Circus of Cheerful Slaughter/Save the Guild Members
+'Save _Vanus Galerion_ |q Circus of Cheerful Slaughter/Save the Guild Members |future
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -44034,12 +44012,8 @@ goto 61.86,31.86
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
-goto sancretor1_base 50.06,57.11
-'Explore _Sancre Tor_ |q Shadow of Sancre Tor/Explore Sancre Tor |future
-|only Ebonheart Pact
-step
-goto 45.16,65.23
-'Confront _Mannimarco_ |q Shadow of Sancre Tor/Confront Mannimarco
+goto sancretor1_base 45.16,65.23
+'Confront _Mannimarco_ |q Shadow of Sancre Tor/Confront Mannimarco |future
 |only Ebonheart Pact
 step
 goto 44.88,67.60
@@ -45306,7 +45280,7 @@ goto glenumbra_base 35.49,79.27
 step
 goto the_daggerfall_harborage 54.79,69.80
 talk Cadwell
-turnin Cadwell's Gold |next LEVELING\\Craglorn
+turnin Cadwell's Gold |next LEVELING\\Imperial City
 |only Daggerfall Covenant
 ]])
 
@@ -46992,12 +46966,12 @@ step
 goto 53.03,59.53 |q Crossing the Chasm/Close the East Portal
 step
 goto 54.00,58.21
-kill the waves of enemies |q Crossing the Chasm/Close the East Portal
+kill Oztuk the Crude |q Crossing the Chasm/Close the East Portal
 step
 goto 51.84,59.68 |q Crossing the Chasm/Close the West Portal
 step
 goto 47.67,58.68
-kill the waves of enemies |q Crossing the Chasm/Close the West Portal
+kill Murelda |q Crossing the Chasm/Close the West Portal
 step
 goto 47.97,58.28
 'Use _Skyshard_ |q Crossing the Chasm/Talk to Cadwell at the Gatehouse
@@ -47082,9 +47056,6 @@ step
 goto 48.91,47.32 |q The Harvest Heart/Locate the Harvest Heart
 step
 goto 50.10,47.24 |q The Harvest Heart/Locate the Harvest Heart
-step
-goto 50.85,46.78
-'Locate the _Harvest Heart_ |q The Harvest Heart/Locate the Harvest Heart
 step
 goto 51.06,46.69
 talk Virgar the Red |q The Harvest Heart/Talk to Virgar the Red |future
@@ -47579,7 +47550,7 @@ goto 48.27,34.01
 'Open _Reaver Citadel Pyramid_ |q The Citadel Must Fall/Enter the Pyramid |future
 |tip Manually skip to the next step.
 step
-goto reavercitadelpyramid_base 70.04,49.58
+goto reavercitadelpyramid_base 69.85,48.16
 kill Titan Djanax
 kill Valkynaz Seris |q The Citadel Must Fall/Defeat Enemies in the Stronghold |future
 step
@@ -47814,7 +47785,6 @@ step
 goto 53.10,13.85
 talk Abnur Tharn |q God of Schemes/Talk to Abnur Tharn
 step
-goto 55.23,15.12
 'Choose the _Sacrifice_ |q God of Schemes/Choose the Sacrifice
 step
 goto 54.19,12.88

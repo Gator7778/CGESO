@@ -23,8 +23,7 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 
 ### Recent Updates
 ### Date Undetermined
-###
-* Main Quest Rework
+### Main Quest Rework
 * Aldmeri Dominion Base Game
 * Dagger Fall Covenant Base Game
 * Ebonheart Pact Base Game
@@ -47,6 +46,8 @@ Install through the excellent add-on manager <a href="https://minion.mmoui.com/"
 * Firesong
 * Telvanni Peninsula
 * West Weald
+* Delves, Skyshard, Lorebooks
+* Companion Guide
 
 ### 08/16/2025
 ### Solstice

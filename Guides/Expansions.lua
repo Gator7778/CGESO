@@ -2,7 +2,7 @@ local CGV = _G.CGV
 if CGV:DoMutex("Expansions") then return end
 CGV.GuideMenuTier = "MOR"
 
-CGV:RegisterGuide("LEVELING\\Imperial Sewers",[[
+CGV:RegisterGuide("LEVELING\\Imperial City",[[
 loadingimage loadscreen_imperialcity_01.dds
 description Join with three other adventurers in a race to the top of the White-Gold Tower in pursuit of a stolen Elder Scroll.
 step

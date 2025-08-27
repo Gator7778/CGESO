@@ -3463,7 +3463,7 @@ talk Merric at-Aswala |q The Prismatic Core/Get Instructions from Merric
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
-'Use _Forge Tools_
+'Use _Forge Valve_
 'Use _Bellows_ twice |q The Prismatic Core/Stoke a Small Fire
 |only Aldmeri Dominion
 step
@@ -3472,7 +3472,7 @@ goto 37.63,24.31
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
-'Use _Forge Tools_
+'Use _Forge Valve_
 'Use _Coals_
 'Use _Bellows_ Three times |q The Prismatic Core/Stoke a Medium-Sized Fire
 |only Aldmeri Dominion
@@ -3482,7 +3482,7 @@ goto 37.63,24.31
 |only Aldmeri Dominion
 step
 goto 37.63,24.31
-'Use _Forge Tools_ Three times
+'Use _Forge Valve_ Three times
 'Use _Coals_
 'Use _Bellows_ Three Times |q The Prismatic Core/Stoke a Large Fire
 |only Aldmeri Dominion
@@ -7056,7 +7056,7 @@ goto stonefalls_base 77.45,36.57
 step
 goto the_ebonheart_harborage_base 70.90,32.79
 talk Cadwell
-turnin Cadwell's Gold |next Extras\\Extras\\Main Quests Only\\DLC\\Craglorn
+turnin Cadwell's Gold |next Extras\\Extras\\Main Quests Only\\DLC\\Imperial City
 |only Ebonheart Pact
 ]])
 
@@ -7378,12 +7378,9 @@ step
 goto 67.35,30.62
 'Open _Headman Bhosek's Palace_ |q Tip of the Spearhead/Enter the Palace
 step
-goto 67.57,31.08
-|tip Go upstairs.
-'Find _Bhosek's Lockbox_ |q Tip of the Spearhead/Find Bhosek's Lockbox
-step
 goto 67.48,30.96
-'Use _Dwemer Device on Helthar_ |q Tip of the Spearhead/Disable Bhosek's Guard
+|tip Go upstairs.
+'Use _Dwemer Device on Helthar_ |q Tip of the Spearhead/Disable Bhosek's Guard |future
 step
 goto 67.38,30.89
 'Open _Bhosek's Lockbox_ |q Tip of the Spearhead/Collect Shipping Logs
@@ -7435,16 +7432,10 @@ goto betnihk_base 52.05,59.78
 'Activate _Vision Totem_ |q Into the Hills/Use the Vision Totem
 step
 goto 61.20,61.67
-'Learn the _Bloodthorn Plot_ |q Into the Hills/Learn the Bloodthorn Plot
-step
-goto 61.20,61.67
-'Listen to the _Bloodthorn Cultists_ |q Into the Hills/Listen to Bloodthorn Cultists
+'Listen to the _Bloodthorn Cultists_ |q Into the Hills/Listen to Bloodthorn Cultists |future
 step
 goto 52.82,69.85
-'Reach the _Ayleid Site_ |q Into the Hills/Reach Ayleid Site
-step
-goto 52.82,69.85
-'Listen to the _Bloodthorn Leader_ |q Into the Hills/Listen to Bloodthorn Leader
+'Listen to the _Bloodthorn Leader_ |q Into the Hills/Listen to Bloodthorn Leader |future
 step
 goto 60.74,73.18 |q Into the Hills/Enter Bloodthorn Lair
 step
@@ -7646,8 +7637,7 @@ talk Ayleid Spirit |q Carzog's Demise/.*Activate Doorway Crystal.* |count 1
 |tip Manually skip to the next step.
 step
 goto 66.06,28.03
-'Watch the _Spirit cast the spell_
-'Activate the _Doorway Crystal_ |q Carzog's Demise/.*Activate Doorway Crystal.* |count 1
+'Watch the _Spirit Activate the Doorway Crystal_  |q Carzog's Demise/.*Activate Doorway Crystal.* |count 1
 step
 goto 60.80,27.48
 'Activate _Welkynd Stone_ |q Carzog's Demise/.*Activate Doorway Crystal.* |count 2
@@ -7658,8 +7648,7 @@ talk Ayleid Spirit |q Carzog's Demise/.*Activate Doorway Crystal.* |count 2
 |tip Manually skip to the next step.
 step
 goto 65.42,27.77
-'Watch the _Spirit cast the spell_
-'Activate the _Doorway Crystal_ |q Carzog's Demise/.*Activate Doorway Crystal.* |count 2
+'Watch the _Spirit Activate the Doorway Crystal_  |q Carzog's Demise/.*Activate Doorway Crystal.* |count 2
 step
 goto 64.01,32.58
 'Activate _Welkynd Stone_ |q Carzog's Demise/.*Activate Doorway Crystal.* |count 3
@@ -7670,8 +7659,7 @@ talk Ayleid Spirit |q Carzog's Demise/.*Activate Doorway Crystal.* |count 3
 |tip Manually skip to the next step.
 step
 goto 65.42,27.77
-'Watch the _Spirit cast the spell_
-'Activate the _Doorway Crystal_ |q Carzog's Demise/.*Activate Doorway Crystal.* |count 3
+'Watch the _Spirit Activate the Doorway Crystal_ |q Carzog's Demise/.*Activate Doorway Crystal.* |count 3
 step
 goto 66.71,27.63
 |tip Watch the dialogue
@@ -8052,7 +8040,7 @@ step
 goto 47.14,77.84
 talk Gailen Tramnil |q Ash and Reprieve/.*Rescue the Villagers.* |count 5
 step
-goto 44.22,79.78
+goto 44.44,79.69
 'Use _Wyress Torchbug_
 'Take _Essences of Aetherius_ |q Turning of the Trees/Collect the Essence of Aetherius for the Wyrd Ward
 step
@@ -8469,6 +8457,9 @@ talk Valaste
 turnin Long Lost Lore
 |only Daggerfall Covenant
 step
+goto 55.33,38.70 |q Daughter of Giants/Go to the Harborage
+|only Daggerfall Covenant
+step
 goto 48.91,20.77
 'Use _Daggerfall_
 'Travel to _The Harborage_ |q Daughter of Giants/Go to the Harborage
@@ -8556,7 +8547,7 @@ goto 39.68,69.44
 |only Daggerfall Covenant
 step
 goto 39.68,69.44
-talk Lyris Titanborn |q Daughter of Giants/Talk to Lyris
+talk Lyris Titanborn |q Daughter of Giants/Talk to Lyris Titanborn
 |only Daggerfall Covenant
 step
 goto 42.35,65.35
@@ -8736,6 +8727,7 @@ goto 66.81,51.07
 step
 goto 66.89,51.05
 talk Gloria Fausta |q Lineage of Tooth and Claw/Talk to Gloria Fausta
+'Tell her _No, not this way. We need you alive. I'll handle the Duke._
 step
 goto 61.77,50.95 |lorebook The Illusion of Death/1/9/3
 |only Daggerfall Covenant
@@ -8929,8 +8921,8 @@ goto 56.19,39.74
 |tip Manually skip to the next step.
 step
 goto 55.87,39.42
-talk Shaza gra-Dasik
-'Help _Shaza Reclaim the Siege Camp_ |q Rally Cry/Help Shaza Reclaim the Siege Camp
+|tip Follow and Protect her Shaza gra-Dasik
+talk Shaza gra-Dasik |q Rally Cry/Help Shaza Reclaim the Siege Camp
 step
 goto 52.70,40.59
 'Open _West Barricade Gate_ |q Rally Cry/Talk to General Mandin
@@ -9615,6 +9607,13 @@ goto 40.07,43.70
 |tip Go upstairs.
 talk Duchess Lakana |q Two Sides to Every Coin/Talk to Duchess Lakana in Her Room
 step
+goto 45.32,44.16
+|tip Drop down.
+'Open _Alcaire Castle_ |q Two Sides to Every Coin/.*Challenge Alik'r Soldiers.* |future
+|tip Manually skip to the next step.
+step
+goto 67.37,50.35 |q Two Sides to Every Coin/.*Challenge Alik'r Soldiers.* |future
+step
 goto 74.61,62.56
 'Challenge _Five Alik'r Soldiers_ |q Two Sides to Every Coin/.*Challenge Alik'r Soldiers.* |future
 |tip Manually skip to the next step.
@@ -9774,6 +9773,10 @@ talk Duke Nathaniel
 turnin Sir Hughes' Fate
 accept Unanswered Questions
 step
+goto 33.48,29.82
+'Open _Great Hall_ |q Unanswered Questions/Talk to Muran at Pariah Abbey
+|tip Manually skip to the next step.
+step
 goto 30.53,29.84 |q Unanswered Questions/Talk to Muran at Pariah Abbey |tip Go outside.
 step
 goto 27.54,33.33 |q Unanswered Questions/Talk to Muran at Pariah Abbey
@@ -9903,7 +9906,7 @@ talk Master Altien |q Azura's Guardian/Find Abbot Durak
 step
 goto 45.09,37.33
 |tip Go outside.
-'Use the _Scroll of Summoning Near the Large Fire_ |q Azura's Guardian/Use Scroll of Summoning Near Large Fire 
+'Use the _Scroll of Summoning_ |q Azura's Guardian/Use Scroll of Summoning Near Large Fire 
 step
 goto 44.10,39.07
 talk Falice Menoit
@@ -10105,7 +10108,6 @@ step
 goto 40.50,28.98
 talk Bera Moorsmith
 accept The Prismatic Core
-|tip She runs up to you.
 |only Daggerfall Covenant
 step
 goto 49.46,33.74 |lorebook Monomyth: Lorkhan and Satakal/1/10/4
@@ -10125,8 +10127,7 @@ talk Valaste |q Simply Misplaced/Talk to Valaste
 |only Daggerfall Covenant
 step
 goto 59.67,51.94
-talk Arch-Mage Shalidor
-talk Shalidor |q Simply Misplaced/Talk to Shalidor
+talk Arch-Mage Shalidor |q Simply Misplaced/Talk to Shalidor
 |only Daggerfall Covenant
 step
 goto 59.09,52.84
@@ -10142,25 +10143,17 @@ goto 49.48,57.57
 'Enter _Portal to Vuldngrav_ |q Simply Misplaced/Enter the Portal
 |only Daggerfall Covenant
 step
-goto gladeofthedivinevuldngrav_base 58.94,64.02
-'Explore _Vuldngrav_ |q Simply Misplaced/Explore Vuldngrav
-|only Daggerfall Covenant
-step
-goto 60.97,64.09
-'Search _Chest_ |q Simply Misplaced/Examine the Chest
+goto gladeofthedivinevuldngrav_base 60.97,64.09
+'Search _Chest_ |q Simply Misplaced/Examine the Chest |future
 |only Daggerfall Covenant
 step
 goto 53.75,64.08
 'Defeat the _Draugr_ |q Simply Misplaced/Defeat the Draugr
 |only Daggerfall Covenant
 step
-goto 49.65,31.47
-'Explore _Vuldngrav_ |q Simply Misplaced/Explore Vuldngrav
-|only Daggerfall Covenant
-step
 goto 50.06,25.32
 kill Korthor
-'Collect _Fork_ |q Simply Misplaced/Retrieve the Fork
+'Collect _Fork_ |q Simply Misplaced/Retrieve the Fork |future
 |only Daggerfall Covenant
 step
 goto 49.46,15.54
@@ -10680,7 +10673,7 @@ goto 31.03,51.84
 kill Sir Hughes
 'Search _Basket_ |q Vaermina's Gambit/Collect Key of the Knight
 step
-goto 49.56,60.67 |q Vaermina's Gambit/Collect Key of the Thief
+goto 49.77,58.94 |q Vaermina's Gambit/Collect Key of the Thief
 step
 goto 62.95,68.73
 kill General Godrun
@@ -10758,7 +10751,7 @@ talk Abnur Tharn |q Castle of the Worm/Talk to Abnur Tharn |future
 |only Daggerfall Covenant
 step
 goto 45.03,75.02
-talk Lyris Titanborn |q Castle of the Worm/Talk to Lyris
+talk Lyris Titanborn |q Castle of the Worm/Talk to Lyris Titanborn
 |only Daggerfall Covenant
 step
 goto 55.67,45.06
@@ -11018,7 +11011,7 @@ talk Merric at-Aswala |q The Prismatic Core/Get Instructions from Merric
 |only Daggerfall Covenant
 step
 goto 37.63,24.31
-'Use _Forge Tools_
+'Use _Forge Valve_
 'Use _Bellows_ twice |q The Prismatic Core/Stoke a Small Fire
 |only Daggerfall Covenant
 step
@@ -11027,7 +11020,7 @@ goto 37.63,24.31
 |only Daggerfall Covenant
 step
 goto 37.63,24.31
-'Use _Forge Tools_
+'Use _Forge Valve_
 'Use _Coals_
 'Use _Bellows_ Three times |q The Prismatic Core/Stoke a Medium-Sized Fire
 |only Daggerfall Covenant
@@ -11037,7 +11030,7 @@ goto 37.63,24.31
 |only Daggerfall Covenant
 step
 goto 37.63,24.31
-'Use _Forge Tools_ Three times
+'Use _Forge Valve_ Three times
 'Use _Coals_
 'Use _Bellows_ Three Times |q The Prismatic Core/Stoke a Large Fire
 |only Daggerfall Covenant
@@ -11132,9 +11125,8 @@ goto 40.03,47.27
 talk Baron Alard Dorell |q Shornhelm Divided/Report to Baron Dorell
 step
 goto 41.02,45.90
-|tip Watch the dialogue.
-talk Countess Eselde Tamrith |q Shornhelm Divided/Enter the Fevered Mews
 |tip Persuade her.
+talk Countess Eselde Tamrith |q Shornhelm Divided/Enter the Fevered Mews
 |tip Manually skip to the next step.
 step
 goto 29.10,52.84
@@ -11152,17 +11144,14 @@ step
 goto 38.69,58.08 |q Shornhelm Divided/Free Lady Aurine Tamrith
 step
 goto 44.43,68.23
-|tip Inside the small cave.
 'Open _Cell_ |q Shornhelm Divided/Free Lady Aurine Tamrith
 step
 goto 41.75,51.36 |q Shornhelm Divided/Free Nilthin al-Bergama
 step
 goto 58.61,71.98
-|tip Inside the small cave.
 'Open _Cell_ |q Shornhelm Divided/Free Nilthin al-Bergama
 step
 goto 70.55,37.08
-|tip Inside the small cave.
 'Open _Cell_ |q Shornhelm Divided/Free Sir Estienn Guillon
 step
 '_Next to you:_
@@ -11222,7 +11211,7 @@ goto 25.53,66.70
 |only Daggerfall Covenant
 step
 goto circusofcheerfulslaughter_base 57.93,71.95
-talk Sheogorath |q Circus of Cheerful Slaughter/Talk to Sheogorath
+talk Sheogorath |q Circus of Cheerful Slaughter/Talk to Sheogorath |future
 |only Daggerfall Covenant
 step
 goto 75.00,61.97
@@ -11261,7 +11250,7 @@ talk Sheogorath |q Circus of Cheerful Slaughter/Find Sheogorath in Daggerwaymore
 |only Daggerfall Covenant
 step
 goto 22.87,65.45
-'Save _Vanus Galerion_ |q Circus of Cheerful Slaughter/Save the Guild Members
+'Save _Vanus Galerion_ |q Circus of Cheerful Slaughter/Save the Guild Members |future
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
@@ -11441,21 +11430,15 @@ goto 25.85,64.72
 talk Captain Janeve |q The Blood-Splattered Shield/Talk to Captain Janeve
 step
 goto 22.76,60.83
-'Find _Jonah Marose_ |q The Blood-Splattered Shield/Find Jonah Marose
-step
-goto 22.76,60.83
-'Defend the _Tower_ |q The Blood-Splattered Shield/Defend the Tower
+'Defend the _Tower_ |q The Blood-Splattered Shield/Defend the Tower |future
 step
 goto 21.58,61.25
 |tip At the top of the tower.
 talk Jonah Marose |q The Blood-Splattered Shield/Talk to Jonah Marose
 step
-goto 26.01,65.41
-'Return to _Camp Tamrith_ |q The Blood-Splattered Shield/Return to Camp Tamrith
-step
 goto 25.96,64.58
 |tip She walks around.
-talk Countess Eselde Tamrith |q The Blood-Splattered Shield/Talk to Countess Tamrith
+talk Countess Eselde Tamrith |q The Blood-Splattered Shield/Talk to Countess Tamrith |future
 step
 goto 25.37,64.54
 talk Abadi |q The Blood-Splattered Shield/Ask Guards About Captain Janeve
@@ -11515,9 +11498,6 @@ goto 18.90,35.09
 |tip Manually skip to the next step.
 step
 goto rivenspire_base 21.52,64.70
-'Return to _Darien Gautier_ |q The Blood-Splattered Shield/Return to Darien Gautier
-step
-goto 21.52,64.70
 talk Countess Eselde Tamrith
 turnin The Blood-Splattered Shield
 step
@@ -11854,7 +11834,7 @@ step
 goto 16.56,36.37
 'Activate _Portal Switch_ |q Puzzle of the Pass/Activate the Second Portal Chamber
 step
-goto 12.05,34.14
+goto 17.15,34.30
 talk Baron Alard Dorell |q Puzzle of the Pass/Talk to Baron Dorell
 step
 goto 22.79,25.20
@@ -11896,11 +11876,7 @@ goto 50.14,81.76
 step
 goto doomcragmiddle_base 50.51,51.45
 |tip Watch the dialogue.
-'Follow _Count Verandis Ravenwatch_ |q The Lightless Remnant/Follow Verandis Ravenwatch
-step
-goto 50.51,51.45
-|tip Watch the dialogue.
-talk Count Verandis Ravenwatch |q The Lightless Remnant/Talk to Verandis Ravenwatch
+talk Count Verandis Ravenwatch |q The Lightless Remnant/Talk to Verandis Ravenwatch |future
 step
 goto 46.49,44.39
 |tip There are 4 statues in the room with a black spell chaneling from them toward the altar.  Run to each statue and position yourself so the statues are between you and the gargoyle.  When the gargoyle attacks you, it will destroy the statue.  Do this for all 4 statues to kill the gargoyle.
@@ -12255,10 +12231,7 @@ talk Aelif |q Proving the Deed/Report to Aelif
 step
 goto 21.76,54.16 |q Rise of the Dead/Talk to King Fahara'jad
 step
-goto 29.69,72.52
-wayshrine Sentinel
-step
-goto 43.23,67.74 |q Rise of the Dead/Talk to King Fahara'jad
+goto 32.33,54.60 |q Rise of the Dead/Talk to King Fahara'jad+
 step
 goto 59.53,56.72 |q Rise of the Dead/Talk to King Fahara'jad
 step
@@ -12625,7 +12598,7 @@ goto 52.07,47.23
 talk Justice Istah |q Gone Missing/Talk to Justice Istah
 step
 goto 52.14,47.15
-'Watch the _Magistrate put Ishtah in the Stocks_ |q Gone Missing/Watch the Magistrate Put Istah in the Stocks
+'Watch the _Dialogue._ |q Gone Missing/Watch the Magistrate Put Istah in the Stocks
 step
 goto 52.71,47.36
 talk Justice Istah |q Gone Missing/Talk to Justice Istah
@@ -13001,8 +12974,7 @@ turnin Shiri's Research
 step
 goto 73.75,52.23
 |tip All around this area.
-kill Nedic enemies
-'Collect _Nedic Ghost Essences_ |q March of the Ra Gada/.*Collect Nedic Ghost Essence.*
+kill Nedic enemies |q March of the Ra Gada/.*Collect Nedic Ghost Essence.*
 step
 goto 73.35,53.17
 kill Warchief Haakon |q March of the Ra Gada/Kill Warchief Haakon
@@ -13012,12 +12984,10 @@ talk Throne Keeper Farvad |q March of the Ra Gada/Talk to Throne Keeper Farvad
 step
 goto 75.53,53.10
 |tip All around this area.
-kill Flint-Tooth enemies
-'Collect _Goblin Ghost Essences_ |q March of the Ra Gada/.*Collect Goblin Ghost Essence.*
+kill Flint-Tooth enemies |q March of the Ra Gada/.*Collect Goblin Ghost Essence.*
 step
 goto 75.84,52.30
-kill Flint-Tooth Warchief
-kill the Goblin Chief |q March of the Ra Gada/Kill the Goblin Chief
+kill Flint-Tooth Warchief |q March of the Ra Gada/Kill the Goblin Chief
 step
 goto 76.19,53.26 |q March of the Ra Gada/Talk to Throne Keeper Farvad
 step
@@ -13025,8 +12995,7 @@ goto 77.16,55.19
 talk Throne Keeper Farvad |q March of the Ra Gada/Talk to Throne Keeper Farvad
 step
 goto 77.20,56.65
-kill Orsinium enemies
-'Collect _Orchish Ghost Essences_ |q March of the Ra Gada/.*Collect Orcish Ghost Essence.*
+kill Orsinium enemies |q March of the Ra Gada/.*Collect Orcish Ghost Essence.*
 step
 goto 77.93,56.87
 kill General Thesaga |q March of the Ra Gada/Kill General Theshaga
@@ -13164,11 +13133,8 @@ goto 82.49,34.02 |q Amputating the Hand/Find the Necropolis
 step
 goto 82.54,34.98 |q Amputating the Hand/Find the Necropolis
 step
-goto 80.35,35.42
-'Find the _Necropolis_ |q Amputating the Hand/Find the Necropolis
-step
 goto 80.20,35.41
-talk Talia at-Marimah |q Amputating the Hand/Talk to Talia
+talk Talia at-Marimah |q Amputating the Hand/Talk to Talia |future
 step
 goto 80.13,35.48
 'Open _Motalion Necropolis_ |q Amputating the Hand/Enter Motalion
@@ -13214,8 +13180,7 @@ goto 81.07,25.29
 |tip Manually skip to the next step.
 step
 goto 81.27,24.52
-kill the enemies that attack in waves
-'Help _Farvad Cleanse the Ward_ |q Amputating the Hand/Help Farvad Cleanse the Ward
+kill the enemies that attack in waves |q Amputating the Hand/Help Farvad Cleanse the Ward
 step
 goto 81.34,23.52
 'Open _Motalion Necropolis_ |q Amputating the Hand/Exit Ward Chamber
@@ -13438,11 +13403,7 @@ goto 69.05,59.73
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
 step
-goto sancretor1_base 50.06,57.11
-'Explore _Sancre Tor_ |q Shadow of Sancre Tor/Explore Sancre Tor |future
-|only Daggerfall Covenant
-step
-goto 45.16,65.23
+goto sancretor1_base 45.16,65.23
 'Confront _Mannimarco_ |q Shadow of Sancre Tor/Confront Mannimarco
 |only Daggerfall Covenant
 step
@@ -13763,9 +13724,6 @@ step
 goto 47.42,50.98 |q Will of the Council |future
 |only Daggerfall Covenant
 step
-goto 46.00,61.04 |q Will of the Council |future
-|only Daggerfall Covenant
-step
 goto 49.72,57.94
 |tip Go upstairs inside the Fighters Guild.
 talk Aelif
@@ -13952,10 +13910,7 @@ goto 45.86,34.39
 talk Vanus Galerion |q Messages Across Tamriel/Talk to Vanus Galerion
 |only Daggerfall Covenant
 step
-goto evermore_base 67.22,24.51
-wayshrine Evermore
-step
-goto 72.40,31.98 |q Beyond the Call |future
+goto evermore_base 72.40,31.98 |q Beyond the Call |future
 step
 goto bangkorai_base 46.03,30.48
 talk Captain Eugien Gaercroft
@@ -13968,12 +13923,8 @@ step
 goto 48.13,25.31
 talk Hatmi |q Beyond the Call/Talk to Hatmi
 step
-goto 49.35,22.91
-|tip Go outside.
-'Find the _Wyrd Camp_ |q Beyond the Call/Find the Wyrd Camp
-step
 goto 50.18,22.92
-talk Wyress Asteria |q Beyond the Call/Talk to Wyress Asteria
+talk Wyress Asteria |q Beyond the Call/Talk to Wyress Asteria |future
 step
 goto 50.20,23.25
 'Open the _Ruins_ |q Beyond the Call/Talk to Wyress Delphique
@@ -14038,10 +13989,8 @@ step
 goto 45.94,30.08
 talk Isabeth Gaercroft |q Beyond the Call/Talk to Isabeth Gaercroft
 step
-goto 45.94,30.08
-'Wait for _Isabeth Gaercroft to Deliver Her Decision_ |q Beyond the Call/Wait for Isabeth Gaercroft to Deliver Her Decision
-step
 goto 45.96,29.97
+|tip Watch the dialogue.
 talk Captain Eugien Gaercroft
 turnin Beyond the Call
 step
@@ -14107,11 +14056,8 @@ goto 44.71,47.14
 step
 goto 44.34,46.64 |q The Waking Darkness/Meet Dame Valyrie at the South Monument
 step
-goto 40.94,48.52
-'Meet _Dame Valyrie at the South Monument_ |q The Waking Darkness/Meet Dame Valyrie at the South Monument
-step
 goto 40.92,48.54
-talk Dame Valyrie Spenard |q The Waking Darkness/Talk to Dame Valyrie
+talk Dame Valyrie Spenard |q The Waking Darkness/Talk to Dame Valyrie |future
 step
 goto 40.96,48.73
 talk Father Quiston |q The Waking Darkness/Talk to the Priest
@@ -14124,11 +14070,8 @@ step
 goto 41.51,44.39
 kill Defiler Spirit |q The Waking Darkness/Defeat the Defiler at the North Monument
 step
-goto 39.69,46.08
-'Meet _Father Quiston at the Church_ |q The Waking Darkness/Meet Father Quiston at the Church
-step
 goto 39.58,46.01
-'Listen to _Prince Adrien_ |q The Waking Darkness/Listen to Prince Adrien
+'Listen to _Prince Adrien_ |q The Waking Darkness/Listen to Prince Adrien |future
 step
 goto 39.48,46.00
 talk Dame Valyrie Spenard |q The Waking Darkness/Talk to Dame Valyrie
@@ -14799,11 +14742,6 @@ step
 goto 54.94,36.54
 talk Ufa the Red Asp |q A Thirst for Revolution/Talk to Ufa the Red Asp
 step
-goto 57.87,56.76
-talk Arch-Mage Shalidor
-accept The Mad God's Bargain
-|only Daggerfall Covenant
-step
 goto 45.08,36.07
 |tip Go upstairs.
 talk Razin |q A Thirst for Revolution/Get a Sedative from Razin
@@ -15157,7 +15095,7 @@ goto auridon_base 69.65,92.87
 step
 goto the_aldmiri_harborage_map_base 73.98,22.34
 talk Cadwell
-turnin Cadwell's Gold |next Extras\\Extras\\Main Quests Only\\DLC\\Craglorn
+turnin Cadwell's Gold |next Extras\\Extras\\Main Quests Only\\DLC\\Imperial City
 |only Aldmeri Dominion
 step
 ]])
@@ -16379,7 +16317,7 @@ goto 39.68,69.44
 |only Ebonheart Pact
 step
 goto 39.68,69.44
-talk Lyris Titanborn |q Daughter of Giants/Talk to Lyris
+talk Lyris Titanborn |q Daughter of Giants/Talk to Lyris Tianborn
 |only Ebonheart Pact
 step
 goto 42.35,65.35
@@ -18462,7 +18400,7 @@ talk Abnur Tharn |q Castle of the Worm/Talk to Abnur Tharn |future
 |only Ebonheart Pact
 step
 goto 45.03,75.02
-talk Lyris Titanborn |q Castle of the Worm/Talk to Lyris
+talk Lyris Titanborn |q Castle of the Worm/Talk to Lyris Titanborn
 |only Ebonheart Pact
 step
 goto 55.67,45.06
@@ -18697,7 +18635,7 @@ talk Merric at-Aswala |q The Prismatic Core/Get Instructions from Merric
 |only Ebonheart Pact
 step
 goto 37.63,24.31
-'Use _Forge Tools_
+'Use _Forge Valve_
 'Use _Bellows_ twice |q The Prismatic Core/Stoke a Small Fire
 |only Ebonheart Pact
 step
@@ -18706,7 +18644,7 @@ goto 37.63,24.31
 |only Ebonheart Pact
 step
 goto 37.63,24.31
-'Use _Forge Tools_
+'Use _Forge Valve_
 'Use _Coals_
 'Use _Bellows_ Three times |q The Prismatic Core/Stoke a Medium-Sized Fire
 |only Ebonheart Pact
@@ -18716,7 +18654,7 @@ goto 37.63,24.31
 |only Ebonheart Pact
 step
 goto 37.63,24.31
-'Use _Forge Tools_ Three times
+'Use _Forge Valve_ Three times
 'Use _Coals_
 'Use _Bellows_ Three Times |q The Prismatic Core/Stoke a Large Fire
 |only Ebonheart Pact
@@ -18777,7 +18715,7 @@ goto 30.61,68.00
 |only Ebonheart Pact
 step
 goto circusofcheerfulslaughter_base 57.93,71.95
-talk Sheogorath |q Circus of Cheerful Slaughter/Talk to Sheogorath
+talk Sheogorath |q Circus of Cheerful Slaughter/Talk to Sheogorath |future
 |only Ebonheart Pact
 step
 goto 75.00,61.97
@@ -18815,7 +18753,7 @@ talk Sheogorath |q Circus of Cheerful Slaughter/Find Sheogorath in Daggerwaymore
 |only Ebonheart Pact
 step
 goto 22.87,65.45
-'Save _Vanus Galerion_ |q Circus of Cheerful Slaughter/Save the Guild Members
+'Save _Vanus Galerion_ |q Circus of Cheerful Slaughter/Save the Guild Members |future
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -22515,7 +22453,7 @@ goto glenumbra_base 35.49,79.27
 step
 goto the_daggerfall_harborage 54.79,69.80
 talk Cadwell
-turnin Cadwell's Gold |next Extras\\Extras\\Main Quests Only\\DLC\\Craglorn
+turnin Cadwell's Gold |next Extras\\Extras\\Main Quests Only\\DLC\\Imperial City
 |only Daggerfall Covenant
 ]])
 
@@ -22584,9 +22522,6 @@ step
 goto 78.60,68.38
 talk Vanus Galerion |q The Weight of Three Crowns/Wait for Portal |future
 |tip Manually skip to the next step.
-step
-goto 78.60,68.38
-'Wait for the _Portal_ |q The Weight of Three Crowns/Wait for Portal
 step
 goto 80.01,68.59
 'Use _Portal to Coldharbour_ |q The Weight of Three Crowns/Take Portal to Coldharbour |future
@@ -23358,7 +23293,7 @@ step
 goto 51.84,59.68 |q Crossing the Chasm/Close the West Portal
 step
 goto 47.67,58.68
-kill Merelda |q Crossing the Chasm/Close the West Portal
+kill Murelda |q Crossing the Chasm/Close the West Portal
 step
 goto 49.40,58.76 |q Crossing the Chasm/Talk to Cadwell at the Gatehouse
 step
@@ -23588,7 +23523,7 @@ goto 48.27,34.01
 'Open _Reaver Citadel Pyramid_ |q The Citadel Must Fall/Enter the Pyramid |future
 |tip Manually skip to the next step.
 step
-goto reavercitadelpyramid_base 39.89,58.35
+goto reavercitadelpyramid_base 69.85,48.16
 kill Titan Djanax |q The Citadel Must Fall/Defeat Enemies in the Stronghold |future
 kill Valkynaz Seris |q The Citadel Must Fall/Defeat Enemies in the Stronghold |future
 step
@@ -23823,7 +23758,6 @@ step
 goto 53.10,13.85
 talk Abnur Tharn |q God of Schemes/Talk to Abnur Tharn
 step
-goto 55.23,15.12
 'Choose the _Sacrifice_ |q God of Schemes/Choose the Sacrifice
 step
 goto 54.19,12.88
@@ -23939,13 +23873,12 @@ step
 |tip Manually skip to the next step.
 step
 goto westelsweyrgate_base 58.20,57.69
-|tip If in Eastern Elsweyr Gate travel to Western Elsweyr Gate for the guide to flow smooth.
+|tip If in Eastern Elsweyr Gate use Transitus Shrine to travel to Western Elsweyr Gate for the guide to flow smooth.
 talk Fangil
 accept Welcome to Cyrodiil
 |only Aldmeri Dominion
 step
 goto 46.20,54.35
-|tip It is the southeastern location.
 'Activate _Transitus Shrine_
 'Travel to _Eastern Elsweyr Gate_ |q Welcome to Cyrodiil/Travel to Eastern Elsweyr Gate
 |only Aldmeri Dominion
@@ -24028,12 +23961,12 @@ goto 47.06,55.73
 |only Aldmeri Dominion
 step
 goto southhighrockgate_base 44.58,54.43
+|tip If in Northern High Rock Gate use Transitus Shrine to travel to Southern High Rock Gate.
 talk Veronard Liancourt
 accept Welcome to Cyrodiil
 |only Daggerfall Covenant
 step
 goto 65.18,49.44
-|tip It is to the immediate north east of your current location.
 'Activate _Transitus Shrine_
 'Travel to _Northern High Rock Gate_ |q Welcome to Cyrodiil/Travel to Northern High Rock Gate
 |only Daggerfall Covenant
@@ -24106,7 +24039,7 @@ goto southhighrockgate_base 75.30,20.84
 |only Daggerfall Covenant
 step
 goto southhighrockgate_base 61.37,56.75
-talk _Grand Warlord Dortene_ |q Reporting for Duty/Talk to Grand Warlord Dortene
+talk Grand Warlord Dortene |q Reporting for Duty/Talk to Grand Warlord Dortene
 |only Daggerfall Covenant
 step
 goto 56.30,54.20
