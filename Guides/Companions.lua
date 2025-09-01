@@ -1031,6 +1031,10 @@ step
 goto 55.03,69.25
 talk Ember |q Tower Full of Trouble/Talk to Ember |future
 step
+goto 54.61,68.22
+'Use _Spoon of Undo on Enchanted Cow_ |q Tower Full of Trouble/.*Restore the Livestock.* |count 1
+|tip Manually skip to the next step.
+step
 goto 55.02,67.99
 'Use _Spoon of Undo on Enchanted Cow_ |q Tower Full of Trouble/.*Restore the Livestock.* |count 1
 step

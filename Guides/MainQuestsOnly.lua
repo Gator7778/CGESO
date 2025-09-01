@@ -5131,7 +5131,6 @@ goto 31.73,38.62
 'Open _Chateau Guesthouse_ |q Chateau of the Ravenous Rodent/Enter the Chateau Guesthouse
 |only Aldmeri Dominion
 step
-goto 31.33,44.26
 |tip Random Door.
 'Listen _Door_ |q Chateau of the Ravenous Rodent/Evict the Guest That Doesn't Belong
 |only Aldmeri Dominion
@@ -5177,12 +5176,8 @@ goto 65.90,75.97
 talk Sheogorath |q Chateau of the Ravenous Rodent/Talk to Sheogorath
 |only Aldmeri Dominion
 step
-goto 86.83,70.74
-'Explore _Manse_ |q Chateau of the Ravenous Rodent/Explore the Manse
-|only Aldmeri Dominion
-step
 goto 86.87,66.05
-'Channel _Crystals 1, 4, 2, 3, 1_ |q Chateau of the Ravenous Rodent/Light All the Heirlooms
+'Channel _Crystals 1, 4, 2, 3, 1_ |q Chateau of the Ravenous Rodent/Light All the Heirlooms |future
 |only Aldmeri Dominion
 step
 goto 86.03,64.01
@@ -12759,7 +12754,6 @@ goto 31.73,38.62
 'Open _Chateau Guesthouse_ |q Chateau of the Ravenous Rodent/Enter the Chateau Guesthouse
 |only Daggerfall Covenant
 step
-goto 34.56,41.78
 |tip Random Door.
 'Listen _Door_ |q Chateau of the Ravenous Rodent/Evict the Guest That Doesn't Belong
 |only Daggerfall Covenant
@@ -12805,12 +12799,8 @@ goto 65.90,75.97
 talk Sheogorath |q Chateau of the Ravenous Rodent/Talk to Sheogorath
 |only Daggerfall Covenant
 step
-goto 86.83,70.74
-'Explore _Manse_ |q Chateau of the Ravenous Rodent/Explore the Manse
-|only Daggerfall Covenant
-step
 goto 86.87,66.05
-'Channel _Crystals 1, 4, 2, 3, 1_ |q Chateau of the Ravenous Rodent/Light All the Heirlooms
+'Channel _Crystals 1, 4, 2, 3, 1_ |q Chateau of the Ravenous Rodent/Light All the Heirlooms |future
 |only Daggerfall Covenant
 step
 goto 86.03,64.01
@@ -15398,11 +15388,6 @@ description a region in Morrowind which has been settled by freed Argonian slave
 step
 goto dhalmora_base 57.35,53.11 |q If By Sea/Get to the Dhalmora Watchtower
 step
-goto balfoyen_base 63.36,70.58
-wayshrine Dhalmora
-step
-goto dhalmora_base 57.35,53.11 |q If By Sea/Get to the Dhalmora Watchtower
-step
 goto balfoyen_base 50.10,51.67 |q If By Sea/Get to the Dhalmora Watchtower
 step
 goto 53.55,45.39
@@ -15543,7 +15528,7 @@ accept Hilan's Invitation
 turnin Hilan's Invitation
 |only Ebonheart Pact
 step
-'Learn _Intimidating Presence_ Skill |q Legacy of the Ancestors/Meet Holgunn
+'Learn _Intimidating Presence_ Skill |q Anchors from the Harbour |future
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -15552,10 +15537,10 @@ talk Guildmaster Sees-All-Colors
 accept Anchors from the Harbour
 |only Ebonheart Pact
 step
-goto 61.64,53.24 |q Curinure's Invitation |future
+goto 61.64,53.24 |q The Harborage/Talk to the Prophet
 |only Ebonheart Pact
 step
-goto 55.88,56.12 |q Curinure's Invitation |future
+goto 55.88,56.12 |q Long Lost Lore |future
 |only Ebonheart Pact
 step
 goto 48.56,45.03
@@ -15579,7 +15564,11 @@ talk Valaste
 accept Long Lost Lore
 |only Ebonheart Pact
 step
-goto 68.23,54.30 |q Legacy of the Ancestors/Meet Holgunn |tip Go outside.
+goto 48.49,74.01
+|tip Go outside.
+talk Prophet |q The Harborage/Talk to the Prophet
+step
+goto 68.23,54.30 |q Legacy of the Ancestors/Meet Holgunn
 |only Ebonheart Pact
 step
 goto 71.64,58.35 |q Legacy of the Ancestors/Meet Holgunn
@@ -15982,42 +15971,7 @@ accept In With the Tide
 step
 goto 71.61,56.30 |q The Coral Heart |future
 step
-goto stonefalls_base 90.12,43.39
-talk Merric at-Aswala |q Anchors from the Harbour/Find Merric and Aelif
-|only Ebonheart Pact
-step
-goto 89.76,43.59
-'Search _Worm Cultists_ |q Anchors from the Harbour/.*Search Worm Cultists.*
-|only Ebonheart Pact
-step
-goto 90.27,43.43
-|tip Watch the dialogue.
-talk Aelif |q Anchors from the Harbour/Talk to Aelif
-|only Ebonheart Pact
-step
-goto 89.74,43.64
-'Examine _Jorunn the Skald-King_ |lorebook Jorunn the Skald-King/1/9/4
-|only Ebonheart Pact
-step
-goto davonswatch_base 68.89,68.85 |q Anchors from the Harbour/Return to Sees-All-Colors
-|only Ebonheart Pact
-step
-goto 70.00,52.12
-|tip Inside the Fighters Guild.
-talk Guildmaster Sees-All-Colors |q Anchors from the Harbour/Return to Sees-All-Colors
-|only Ebonheart Pact
-step
-goto stonefalls_base 85.75,40.54 |lorebook Varieties of Faith: The Dark Elves/1/20/8 |tip Go outside.
-|only Ebonheart Pact
-step
-goto davonswatch_base 58.46,78.19
-'Use _Davon's Watch_
-'Travel to _Othrenis_ |q The Coral Heart |future
-|tip Manually skip to the next step.
-|only Ebonheart Pact
-step
 goto stonefalls_base 71.83,59.16 |q The Coral Heart |future
-|only not Ebonheart Pact
 step
 goto stonefalls_base 64.55,62.51
 wayshrine Fort Arand
@@ -16079,12 +16033,8 @@ step
 goto 46.05,63.04
 wayshrine Ebonheart
 step
-goto stonefalls_base 54.12,37.76
-'Find the _Island Tower_ |q Anchors from the Harbour/Find the Island Tower
-|only Ebonheart Pact
-step
-goto 53.83,38.00
-talk Jofnir Iceblade |q Anchors from the Harbour/Speak with the Ghost
+goto stonefalls_base 53.83,38.00
+talk Jofnir Iceblade |q Anchors from the Harbour/Speak with the Ghost |future
 |only Ebonheart Pact
 step
 goto 52.78,36.24
@@ -16126,8 +16076,7 @@ step
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
-goto ebonheart_base 56.88,60.27
-|tip She runs up to you.
+goto ebonheart_base 59.13,59.47
 talk Bera Moorsmith
 accept The Dangerous Past
 |only Ebonheart Pact
@@ -16317,7 +16266,7 @@ goto 39.68,69.44
 |only Ebonheart Pact
 step
 goto 39.68,69.44
-talk Lyris Titanborn |q Daughter of Giants/Talk to Lyris Tianborn
+talk Lyris Titanborn |q Daughter of Giants/Talk to Lyris Titanborn
 |only Ebonheart Pact
 step
 goto 42.35,65.35
@@ -16367,10 +16316,156 @@ talk The Prophet
 turnin Daughter of Giants
 |only Ebonheart Pact
 step
+goto 12.91,84.91
+'Open _Stonefalls_ |q Long Lost Lore |future
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto stonefalls_base 72.52,37.36 |q Long Lost Lore |future
+|only Ebonheart Pact
+step
+goto 71.78,39.72
+'Open _Inner Sea Armature_ |q Long Lost Lore |future
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto innerseaarmature_base 80.98,37.58 |q Long Lost Lore |future
+|only Ebonheart Pact
+step
+goto 72.66,38.20 |q Long Lost Lore |future
+|only Ebonheart Pact
+step
+goto 71.17,24.09 |q Long Lost Lore |future
+|only Ebonheart Pact
+step
+goto 61.12,24.09
+'Take _The Winds of Change_ |q Long Lost Lore/.*Retrieve the Tomes.* |count 1
+|only Ebonheart Pact
+step
+goto 73.07,30.86 |q Long Lost Lore |future
+|only Ebonheart Pact
+step
+goto 52.32,52.61
+'Take _Untold Legends_ |q Long Lost Lore/.*Retrieve the Tomes.* |count 2
+|only Ebonheart Pact
+step
+goto 35.60,46.52 |q Long Lost Lore |future
+|only Ebonheart Pact
+step
+goto 19.83,59.47
+'Take _The Hidden Twilight_ |q Long Lost Lore/.*Retrieve the Tomes.* |count 3
+|only Ebonheart Pact
+step
+goto 24.84,60.96 |q Long Lost Lore |future
+|only Ebonheart Pact
+step
+goto 27.17,86.26
+'Examine _Summoning Rituals of the Arch-Mage_ |q Long Lost Lore/.*Retrieve the Tomes.* |count 4
+|only Ebonheart Pact
+step
 'Open _Stonefalls_ Map
+'Travel to _Davon's Watch_ |q Long Lost Lore/Return to the Mages Guild
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto davonswatch_base 48.86,71.11 |q Long Lost Lore/Return to the Mages Guild
+|only Ebonheart Pact
+step
+goto 48.91,49.39
+'Open _Mages Guild_ |q Long Lost Lore/Return to the Mages Guild
+|only Ebonheart Pact
+step
+goto 48.26,43.64
+|tip Drop down.
+talk Valaste |q Long Lost Lore/Talk to Valaste
+|only Ebonheart Pact
+step
+goto 48.93,39.53
+'Examine _Arcane Brazier_ |q Long Lost Lore/Place the Tome on the Arcane Brazier
+|only Ebonheart Pact
+step
+goto 48.26,43.64
+talk Valaste |q Long Lost Lore/Talk to Valaste
+|only Ebonheart Pact
+step
+goto 48.91,43.19
+'Attune _Ritual Orb_ |q Long Lost Lore/Summon Arch-Mage Shalidor
+|only Ebonheart Pact
+step
+goto 48.97,42.59
+talk Arch-Mage Shalidor |q Long Lost Lore/Talk to Arch-Mage Shalidor
+|only Ebonheart Pact
+step
+goto 48.90,41.16
+'Use _Portal to Cheesemonger's Hollow_ |q Long Lost Lore/Enter the Portal to Sheogorath's Shrine |future
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto cheesemongershollow_base 13.29,62.58
+talk Haskill |q Long Lost Lore/Talk to Haskill |future
+|only Ebonheart Pact
+step
+goto 13.40,56.50
+|tip kill the enemies that appear
+'Close _The Portal_ |q Long Lost Lore/Close the Portal
+|only Ebonheart Pact
+step
+goto 13.29,62.58
+talk Haskill |q Long Lost Lore/Talk to Haskill
+|only Ebonheart Pact
+step
+goto 13.80,67.68
+'Wait for _Haskill to Open the Door_ |q Long Lost Lore/Wait for Haskill to Open the Door
+|only Ebonheart Pact
+step
+goto 13.39,75.12 |q Long Lost Lore/Explore the Hollow
+|only Ebonheart Pact
+step
+goto 28.24,75.45 |q Long Lost Lore/Explore the Hollow
+|only Ebonheart Pact
+step
+goto 69.89,35.54
+'Explore _The Hollow_ |q Long Lost Lore/Explore the Hollow
+|only Ebonheart Pact
+step
+goto 78.72,25.73
+kill Gutsripper |q Long Lost Lore/Kill Gutsripper
+|only Ebonheart Pact
+step
+goto 79.59,25.44
+'Take _Tome_ |q Long Lost Lore/Take the Tomes
+|only Ebonheart Pact
+step
+goto 76.87,27.16
+talk Sheogorath |q Long Lost Lore/Talk to Sheogorath
+|only Ebonheart Pact
+step
+goto 77.35,27.49
+'Observe _The Conversation_ |q Long Lost Lore/Observe the Conversation
+|only Ebonheart Pact
+step
+goto 77.53,27.97
+talk Arch-Mage Shalidor |q Long Lost Lore/Talk to Arch-Mage Shalidor
+|only Ebonheart Pact
+step
+goto davonswatch_base 48.33,43.67
+talk Valaste
+turnin Long Lost Lore
+|only Ebonheart Pact
+step
+goto 48.81,69.15 |q To Fort Virak/Talk to Sergeant Gjorring |tip Go outside.
+|only Ebonheart Pact
+step
+goto 58.04,77.87
+'Use _Davon's Watch_
 'Travel to _Sulfur Pools_ |q To Fort Virak/Talk to Sergeant Gjorring
 |tip Manually skip to the next step.
 |only Ebonheart Pact
+step
+'Open _Stonefalls_ Map
+'Travel to _Sulfur Pools_ |q To Fort Virak/Talk to Sergeant Gjorring
+|tip Manually skip to the next step.
+|only not Ebonheart Pact
 step
 goto stonefalls_base 35.52,51.24
 |tip Inside building.
@@ -16436,7 +16531,7 @@ goto fortvirakruin_base 63.90,80.44
 talk Walks-in-Ash |q Breaking Fort Virak/Talk to Walks-in-Ash |future
 step
 goto 63.54,80.88
-'Use a _Transformation Potion_ |q Breaking Fort Virak/Use a Transformation Potion
+'Use _Transformation Potion_ |q Breaking Fort Virak/Use a Transformation Potion
 step
 goto 63.29,78.36
 'Use _Hole in the Wall_ |q Breaking Fort Virak/Pass through the Wall |future
@@ -16654,6 +16749,8 @@ step
 goto kragenmoor_base 33.85,47.63
 talk Sen Dres |q Saving the Son/Meet Sen Dres Outside the Daedric Tombs
 step
+goto 50.26,48.23 |q Saving the Son/Meet Sen Dres Outside the Daedric Tombs
+step
 goto 50.67,35.29
 talk Grandmaster Omin Dres
 turnin Saving the Son
@@ -16830,7 +16927,7 @@ accept A Letter for Deshaan
 step
 goto 32.95,61.07
 'Use _Ashen Road_
-'Travel to _The Harborage_ |q Chasing Shadows/Go to the Harborage
+'Travel to _The Harborage_ |q Chasing Shadows/Go to the Harborage |future
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -17440,25 +17537,17 @@ goto 49.48,57.57
 'Enter _Portal to Vuldngrav_ |q Simply Misplaced/Enter the Portal
 |only Ebonheart Pact
 step
-goto gladeofthedivinevuldngrav_base 58.94,64.02
-'Explore _Vuldngrav_ |q Simply Misplaced/Explore Vuldngrav
-|only Ebonheart Pact
-step
-goto 60.97,64.09
-'Search _Chest_ |q Simply Misplaced/Examine the Chest
+goto gladeofthedivinevuldngrav_base 60.97,64.09
+'Search _Chest_ |q Simply Misplaced/Examine the Chest |future
 |only Ebonheart Pact
 step
 goto 53.75,64.08
 'Defeat _Draugr_ |q Simply Misplaced/Defeat the Draugr
 |only Ebonheart Pact
 step
-goto 49.65,31.47
-'Explore _Vuldngrav_ |q Simply Misplaced/Explore Vuldngrav
-|only Ebonheart Pact
-step
 goto 50.06,25.32
 kill Korthor
-'Collect _Fork_ |q Simply Misplaced/Retrieve the Fork
+'Collect _Fork_ |q Simply Misplaced/Retrieve the Fork |future
 |only Ebonheart Pact
 step
 goto 49.46,15.54
@@ -17734,7 +17823,6 @@ turnin The Dangerous Past
 |only Ebonheart Pact
 step
 goto 49.21,68.92
-|tip She runs up to you once outside.
 talk Bera Moorsmith
 accept The Prismatic Core
 |only Ebonheart Pact
@@ -18386,7 +18474,7 @@ goto the_ebonheart_harborage_base 67.13,38.60
 talk The Prophet |q Castle of the Worm/Talk to the Prophet |future
 |only Ebonheart Pact
 step
-goto 67.35,35.59
+goto 60.05,40.73
 talk Abnur Tharn |q Castle of the Worm/Talk to Abnur Tharn
 |only Ebonheart Pact
 step
@@ -18403,14 +18491,9 @@ goto 45.03,75.02
 talk Lyris Titanborn |q Castle of the Worm/Talk to Lyris Titanborn
 |only Ebonheart Pact
 step
-goto 55.67,45.06
-|tip Inside the building.
-'Find a _Way into the Castle_ |q Castle of the Worm/Find a Way into the Castle
-|only Ebonheart Pact
-step
 goto 59.24,41.20
 kill Warden Cornexius
-talk Cadwell |q Castle of the Worm/Talk to Cadwell
+talk Cadwell |q Castle of the Worm/Talk to Cadwell |future
 |only Ebonheart Pact
 step
 goto 23.44,19.59
@@ -18523,7 +18606,7 @@ goto 15.41,77.99
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
-goto the_ebonheart_harborage_base 67.32,35.54
+goto the_ebonheart_harborage_base 63.29,37.65
 talk Abnur Tharn |q Castle of the Worm/Talk to Abnur Tharn |future
 |only Ebonheart Pact
 step
@@ -18601,12 +18684,8 @@ step
 goto 38.86,63.11 |q The Prismatic Core/Explore Abagarlas
 |only Ebonheart Pact
 step
-goto 39.11,70.49
-'Explore _Abagarlas_ |q The Prismatic Core/Explore Abagarlas
-|only Ebonheart Pact
-step
 goto 39.06,74.40
-kill Queen Palolel |q The Prismatic Core/Kill Queen Palolel
+kill Queen Palolel |q The Prismatic Core/Kill Queen Palolel |future
 |only Ebonheart Pact
 step
 goto 39.28,80.74
@@ -18719,6 +18798,7 @@ talk Sheogorath |q Circus of Cheerful Slaughter/Talk to Sheogorath |future
 |only Ebonheart Pact
 step
 goto 75.00,61.97
+|tip Watch the dialogue.
 talk Sheogorath |q Circus of Cheerful Slaughter/Find Sheogorath in Heartholdhelm
 |only Ebonheart Pact
 step
@@ -19335,9 +19415,6 @@ goto 47.58,65.72
 step
 goto 39.56,61.76
 |tip Drop down.
-'Go to the _Unsealed Door_ |q The Dominion's Alchemist/Go to the Unsealed Door
-step
-goto 39.56,61.76
 talk Vicecanon Heita-Meen
 turnin The Dominion's Alchemist
 accept The Dream of the Hist
@@ -19349,12 +19426,9 @@ step
 goto 39.25,46.45
 kill Ruuvitar |q The Dream of the Hist/Kill Ruuvitar
 step
-goto 40.14,21.29
-'Find the _Mnemic Egg_ |q The Dream of the Hist/Find the Mnemic Egg
-step
 goto 40.08,20.86
 |tip Watch the dialogue.
-talk Vicecanon Heita-Meen |q The Dream of the Hist/Help Vicecanon Heita-Meen Retrieve the Mnemic Egg
+talk Vicecanon Heita-Meen |q The Dream of the Hist/Help Vicecanon Heita-Meen Retrieve the Mnemic Egg |future
 step
 goto 39.08,20.26
 |tip She runs up to you.
@@ -19422,11 +19496,7 @@ goto 60.61,37.97
 |only Ebonheart Pact
 step
 goto hallsoftorment1_base 32.07,37.40
-'Explore _Halls of Torment_ |q Halls of Torment/Explore the Halls of Torment |future
-|only Ebonheart Pact
-step
-goto 32.07,37.40
-kill Tharn Doppelganger |q Halls of Torment/Defeat Tharn Doppelganger
+kill Tharn Doppelganger |q Halls of Torment/Defeat Tharn Doppelganger |future
 |only Ebonheart Pact
 step
 'Next to you:
@@ -19443,12 +19513,11 @@ goto 47.57,84.43
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
-goto 63.55,85.78
-'Continue through the _Halls of Torment_ |q Halls of Torment/Continue through Halls of Torment
+goto 63.55,85.78 |q Halls of Torment/Continue through Halls of Torment
 |only Ebonheart Pact
 step
 goto 66.97,90.70
-'Use _Shielding Stone_ |q Halls of Torment/Find a Way to Destroy Lyris's Shield
+'Use _Shielding Stone_ |q Halls of Torment/Find a Way to Destroy Lyris's Shield |future
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -19586,7 +19655,6 @@ goto 31.73,38.62
 'Open _Chateau Guesthouse_ |q Chateau of the Ravenous Rodent/Enter the Chateau Guesthouse
 |only Ebonheart Pact
 step
-goto 34.56,41.78
 |tip Random Door.
 'Listen _Door_ |q Chateau of the Ravenous Rodent/Evict the Guest That Doesn't Belong
 |only Ebonheart Pact
@@ -19632,12 +19700,8 @@ goto 65.90,75.97
 talk Sheogorath |q Chateau of the Ravenous Rodent/Talk to Sheogorath
 |only Ebonheart Pact
 step
-goto 86.83,70.74
-'Explore _Manse_ |q Chateau of the Ravenous Rodent/Explore the Manse
-|only Ebonheart Pact
-step
 goto 86.87,66.05
-'Channel _Crystals 1, 4, 2, 3, 1_ |q Chateau of the Ravenous Rodent/Light All the Heirlooms
+'Channel _Crystals 1, 4, 2, 3, 1_ |q Chateau of the Ravenous Rodent/Light All the Heirlooms |future
 |only Ebonheart Pact
 step
 goto 86.03,64.01
@@ -19850,14 +19914,8 @@ goto 32.05,36.69
 'Open _Fort Morvunskar_ |q Sleep for the Dead/Enter the Royal Tombs |future
 |tip Manually skip to the next step.
 step
-goto fortmorvunskar_base 52.91,21.57
-'Find the _First Burial Chamber_ |q Sleep for the Dead/Find the First Burial Chamber |future
-step
-goto 49.19,28.66
-'Use _Simple Altar_ |q Sleep for the Dead/Return the Old Nord Cup
-step
-goto 41.10,47.19
-'Find the _Second Burial Chamber_ |q Sleep for the Dead/Find the Second Burial Chamber
+goto fortmorvunskar_base 49.19,28.66
+'Use _Simple Altar_ |q Sleep for the Dead/Return the Old Nord Cup |future
 step
 goto 38.17,62.50
 'Take _Dry Page_ |lorebook Dry Page/3/21/3
@@ -19865,13 +19923,10 @@ step
 goto 41.12,52.37
 'Place _Book Pedestal_ |q Sleep for the Dead/Return the Nord Book
 step
-goto 41.36,65.09 |q Sleep for the Dead/Find the Final Burial Chamber
-step
-goto 37.48,77.75
-'Find the _Final Burial Chamber_ |q Sleep for the Dead/Find the Final Burial Chamber
+goto 41.36,65.09 |q Sleep for the Dead/Find the Final Burial Chamber |future
 step
 goto 37.54,87.25
-talk Queen Nurnhilde |q Sleep for the Dead/Talk to Queen Nurnhilde
+talk Queen Nurnhilde |q Sleep for the Dead/Talk to Queen Nurnhilde |future
 step
 goto 47.09,82.90 |q Sleep for the Dead/Exit the Tomb Via the Tunnel
 step
@@ -20096,7 +20151,7 @@ talk Runs-With-Quickness |q The Pride of a Prince/.*Talk to the Pact Delegates.*
 step
 goto 24.98,24.78
 |tip Inside the building
-'Use _Cat the Distract the Guard_ |q The Pride of a Prince/.*Talk to the Pact Delegates.* |count 1
+'Use _Cat_ |q The Pride of a Prince/.*Talk to the Pact Delegates.* |count 1
 |tip Manually skip to the next step.
 step
 goto 24.31,23.83
@@ -20780,7 +20835,6 @@ turnin Proving the Deed
 |only Ebonheart Pact
 step
 goto 59.12,29.23
-|tip She runs up to you.
 talk Bera Moorsmith
 accept Will of the Council
 |only Ebonheart Pact
@@ -20817,11 +20871,7 @@ goto 34.82,24.26 |q Valley of Blades/Enter the Abbey of Blades
 |only Ebonheart Pact
 step
 goto 50.91,45.68
-'Find _Kasura_ |q Valley of Blades/Find Kasura |future
-|only Ebonheart Pact
-step
-goto 50.91,45.68
-'Listen _Kasura_ |q Valley of Blades/Listen to Kasura
+'Listen _Kasura_ |q Valley of Blades/Listen to Kasura |future
 |only Ebonheart Pact
 step
 goto 44.57,41.83
@@ -21100,7 +21150,7 @@ goto 43.80,31.82
 'Use _Beating Heart on Worm Nightfrenzy_
 talk Worm Nightfrenzy |q Dangerous Union/Interrogate Cultist |future |or
 '_OR_
-talk Memory of Stral |q Dangerous Union/Talk to the Memory of Stral |future |or
+talk Stral Blackthroat |q Dangerous Union/Talk to the Memory of Stral |future |or
 step
 goto 43.63,30.84
 talk Dajaheel
@@ -21292,11 +21342,7 @@ goto nimaltenpart1_base 72.77,19.07
 |tip Manually skip to the next step.
 step
 goto nimaltenpart2_base 48.07,89.46
-talk Aera Earth-Turner |q Concealed Weapons/Talk to Aera Earth-Turner
-step
-goto 48.07,89.46
-talk Aera Earth-Turner |q Concealed Weapons/Exile Aera Earth-Turner |future
-|tip Manually skip to the next step.
+talk Aera Earth-Turner |q Concealed Weapons/Talk to Aera Earth-Turner |future
 step
 goto 48.48,87.02
 'Open _Nimalten Crypt_ |q Concealed Weapons/Kill Worm Cultist and Leave the Crypt |future
@@ -21907,7 +21953,7 @@ goto 14.61,49.27
 'Open _Dragonguard Tomb_ |q Shadow of Sancre Tor/Enter the Dragonguard Tomb
 |only Ebonheart Pact
 step
-goto sancretor6_base 54.61,35.96 |q Shadow of Sancre Tor/Consecrate the Shrine in the Dragonguard Tomb
+goto sancretor6_base 54.61,35.96 |q Shadow of Sancre Tor/Consecrate the Shrine in the Dragonguard Tomb |future
 |only Ebonheart Pact
 step
 goto 24.10,37.80 |q Shadow of Sancre Tor/Consecrate the Shrine in the Dragonguard Tomb
@@ -21995,7 +22041,7 @@ goto 23.53,50.60
 |only Ebonheart Pact
 step
 goto 18.72,50.49
-'Use _Portal to Harborage_ |q Shadow of Sancre Tor/Return to the Harborage
+'Use _Portal to Harborage_ |q Shadow of Sancre Tor/Return to the Harborage |future
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
@@ -22052,12 +22098,9 @@ goto eyevea_base 83.99,37.81
 talk Arch-Mage Shalidor |q The Mad God's Bargain/Talk to Shalidor |future
 |only Ebonheart Pact
 step
-goto 53.04,48.46
-'Find _Shalidor_ |q The Mad God's Bargain/Find Shalidor at the Guild Hall
-|only Ebonheart Pact
-step
 goto 52.45,48.39
-talk Sheogorath |q The Mad God's Bargain/Talk to Sheogorath
+|tip Watch the dialogue.
+talk Sheogorath |q The Mad God's Bargain/Talk to Sheogorath |future
 |only Ebonheart Pact
 step
 goto 52.98,47.93
@@ -22184,7 +22227,7 @@ goto 66.93,34.52
 'Listen to _Lyris_ |q Council of the Five Companions/Listen to Lyris Titanborn
 |only Ebonheart Pact
 step
-goto 62.92,39.81
+goto 60.05,40.73
 talk Abnur Tharn |q Council of the Five Companions/Talk to Abnur Tharn
 |only Ebonheart Pact
 step
@@ -22351,8 +22394,12 @@ goto 78.39,74.94
 |tip Manually skip to the next step.
 |only Ebonheart Pact
 step
-goto mournhold_base 34.97,55.51
-|tip Inside the Mages Guild.
+goto mournhold_base 34.71,58.16
+'Open _Mages Guild_ |q Messages Across Tamriel/Talk to Thrush in Mournhold
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
+goto 34.97,55.51
 talk Thrush |q Messages Across Tamriel/Talk to Thrush in Mournhold
 |only Ebonheart Pact
 step
@@ -23960,6 +24007,12 @@ goto 47.06,55.73
 |tip Manually skip to the next step.|next Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Auridon 
 |only Aldmeri Dominion
 step
+goto southhighrockgate_base 65.18,49.44
+|tip If already in Norther High Rock Gate skip this step.
+'Activate _Transitus Shrine_
+'Travel to _Northern High Rock Gate_ |q Welcome to Cyrodiil |future
+|only Daggerfall Covenant
+step
 goto southhighrockgate_base 44.58,54.43
 |tip If in Northern High Rock Gate use Transitus Shrine to travel to Southern High Rock Gate.
 talk Veronard Liancourt
@@ -23976,7 +24029,6 @@ talk Zahreh |q Welcome to Cyrodiil/Talk to Zahreh
 |only Daggerfall Covenant
 step
 goto 53.78,65.01
-|tip It is to the immediate south west of your current location.
 'Activate _Transitus Shrine_
 'Travel to _Southern High Rock Gate_ |q Welcome to Cyrodiil/Travel to Southern High Rock Gate
 |only Daggerfall Covenant
@@ -24063,14 +24115,21 @@ goto northhighrockgate_base 62.70,47.55
 |tip Manually skip to the next step.|next Extras\\Extras\\Main Quests Only\\Daggerfall Covenant\\Glenumbra
 |only Daggerfall Covenant
 step
+goto southmorrowgate_base 53.24,47.67
+|tip If already in Northern Morrowind Gate skip this step.
+'Activate _Transitus Shrine_
+'Travel to _Northern Morrowind Gate_ |q Welcome to Cyrodiil |future
+|tip Manually skip to the next step.
+|only Ebonheart Pact
+step
 goto northmorrowgate_base 47.80,47.71
 talk Olvyia Indaram
 accept Welcome to Cyrodiil
 |only Ebonheart Pact
 step
 goto 48.38,54.98
-|tip It is to the south east of your current location.
-'Activate _Transitus Shrine_ |q Welcome to Cyrodiil/Travel to Southern Morrowind Gate
+'Activate _Transitus Shrine_
+'Travel to _Southern Morrowind Gate_ |q Welcome to Cyrodiil/Travel to Southern Morrowind Gate
 |only Ebonheart Pact
 step
 goto southmorrowgate_base 48.01,50.50
@@ -24078,7 +24137,8 @@ talk Mirrored-Skin |q Welcome to Cyrodiil/Talk to Mirrored-Skin
 |only Ebonheart Pact
 step
 goto 52.72,47.57
-'Activate _Transitus Shrine_ |q Welcome to Cyrodiil/Travel to Northern Morrowind Gate
+'Activate _Transitus Shrine_
+'Travel to _Northern Morrowind Gate_ |q Welcome to Cyrodiil/Travel to Northern Morrowind Gate
 |only Ebonheart Pact
 step
 goto northmorrowgate_base 58.93,72.91 |q Welcome to Cyrodiil/Talk to Adalmor
@@ -24129,7 +24189,7 @@ step
 goto 86.57,15.14 |q Reporting for Duty/Talk to Protector Galiel
 |only Ebonheart Pact
 step
-goto 85.02,17.47 |q Reporting for Duty/Talk to Protector 
+goto 85.02,17.47 |q Reporting for Duty/Talk to Protector Galiel
 |only Ebonheart Pact
 step
 goto 82.84,18.64 |q Reporting for Duty/Talk to Protector Galiel
@@ -24148,7 +24208,7 @@ step
 goto 86.57,15.14 |q Reporting for Duty/Talk to Grand Warlord Zimmeron
 |only Ebonheart Pact
 step
-goto 85.98,14.12 |q Reporting for Duty/Talk to Grand Warlord 
+goto 85.98,14.12 |q Reporting for Duty/Talk to Grand Warlord Zimmeron
 |only Ebonheart Pact
 step
 goto northmorrowgate_base 73.78,72.90

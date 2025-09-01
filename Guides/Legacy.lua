@@ -32814,6 +32814,9 @@ goto 63.29,78.36
 step
 goto 53.00,41.09 |q Breaking Fort Virak/Sneak through Ruined Corridors
 step
+goto
+|tip Add new coords here. 
+step
 goto 32.40,75.69
 |tip Don't let the ghosts detect you, or you'll have to start over.
 'Use _Hole in the Wall_ |q Breaking Fort Virak/Sneak through Ruined Corridors
@@ -40592,7 +40595,7 @@ talk Runs-With-Quickness |q The Pride of a Prince/.*Talk to the Pact Delegates.*
 step
 goto 24.98,24.78
 |tip Inside the building
-'Use the _Cat the Distract the Guard_ |q The Pride of a Prince/.*Talk to the Pact Delegates.* |count 1
+'Use _Cat_ |q The Pride of a Prince/.*Talk to the Pact Delegates.* |count 1
 |tip Manually skip to the next step.
 step
 goto 24.31,23.83
