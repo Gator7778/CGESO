@@ -1,9 +1,5 @@
 # CGESO
 
-**UPDATED AND MAINTAINED THROUGH https://github.com/Gator7778/CGESO**
-
-----
-
 ![](https://imgur.com/817R4SR.png)
 
 A public domain leveling guide originally created by Zygor Guides, later discontinued and open-sourced. Now maintained by snichols7778 with contributions from Hydra9268, the project adds leveling, Lorebook, Skyshard, and Delve guides for new content while keeping it alive for as long as ESO exists.
