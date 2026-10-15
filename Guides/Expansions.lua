@@ -2,7 +2,7 @@ local CGV = _G.CGV
 if CGV:DoMutex("Expansions") then return end
 CGV.GuideMenuTier = "MOR"
 
-CGV:RegisterGuide("LEVELING\\Imperial City",[[
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Imperial City",[[
 loadingimage loadscreen_imperialcity_01.dds
 description Join with three other adventurers in a race to the top of the White-Gold Tower in pursuit of a stolen Elder Scroll.
 step
@@ -1255,6 +1255,7 @@ turnin City on the Brink
 |only Ebonheart Pact
 step
 goto 56.71,22.98 |q The Imperial Standard |future
+|only Ebonheart Pact
 step
 goto 52.56,22.67
 'Climb _Nobles District_ |q The Imperial Standard |future
@@ -1890,11 +1891,8 @@ step
 goto 45.12,30.72
 kill General Malivus |q The Sublime Brazier/Defend the Sublime Brazier
 step
-goto 44.59,24.65
-'Witness _Ritual_ |q The Sublime Brazier/Witness the Ritual
-step
 goto 44.47,24.31
-talk Drake of Blades |q The Sublime Brazier/Talk to The Drake of Blades
+talk Drake of Blades |q The Sublime Brazier/Talk to The Drake of Blades |future
 step
 goto 46.41,24.26
 'Use _Portal to Alliance Base_ |q The Sublime Brazier/Talk to Father Egnatius in the Alliance Base
@@ -1902,17 +1900,22 @@ goto 46.41,24.26
 step
 goto Imperialsewers_aldmeri1_base 85.09,72.03
 talk Father Egnatius
-turnin The Sublime Brazier |next LEVELING\\Craglorn
+turnin The Sublime Brazier
+|only Aldmeri Dominion
+step
+goto 84.99,73.25
+'Use _Exit_ |q The Star-Gazers |future
+|tip Manually skip to the next step. |next Extras\\Extras\\Main Quests Only\\DLC\\Craglorn
 |only Aldmeri Dominion
 step
 goto Imperialsewer_daggerfall1_base 6.06,62.87
 talk Father Egnatius
-turnin The Sublime Brazier |next LEVELING\\Craglorn
+turnin The Sublime Brazier |next Extras\\Extras\\Main Quests Only\\DLC\\Craglorn
 |only Daggerfall Covenant
 step
 goto Imperialsewers_ebon1_base 54.50,23.72
 talk Father Egnatius
-turnin The Sublime Brazier |next LEVELING\\Craglorn
+turnin The Sublime Brazier |next Extras\\Extras\\Main Quests Only\\DLC\\Craglorn
 |only Ebonheart Pact
 ]])
 
@@ -1920,18 +1923,20 @@ CGV:RegisterGuide("LEVELING\\Craglorn",[[
 loadingimage loadscreen_craglorn_01.dds
 description The constellations have disappeared. Ancient Yokudan warriors and deadly atronachs menace the rocky expanse of Craglorn.
 step
-'***TIP _ALTERNATIVELY YOU CAN CHOOSE TO DO IMPERIAL SEWERS GUIDE THE END OF IT WILL BRING YOU BACK TO CRAGLORN IT IS A PVP ZONE._*** |q The Star-Gazers |future
+'Open _Bangkorai_ Map
+'Travel to _Hallin's Stand_ |q The Star-Gazers |future
 |tip Manually skip to the next step.
 step
-'Open _Craglorn_ Map
-'Travel to _Belkarth_ |q The Star-Gazers |future
-|tip Manually skip to the next step.
-step
-goto belkarth_base 51.46,37.55
-'Examine _A Dire Warning_
+goto hallinsstand_base 75.47,58.98
+talk Star-Gazer Herald
 accept The Star-Gazers
 step
-goto 42.94,65.95 |q The Star-Gazers/Find Hara
+goto 75.73,59.29
+'Travel _Cart to Belkarth_ |q The Star-Gazers/Travel to Craglorn |future
+|tip Manually skip to the next
+step
+goto belkarth_base 45.46,63.82
+talk Slonn Clod-Kicker |q The Star-Gazers/Ask About Star-Gazers In Town
 step
 goto 25.07,57.11
 'Open _Star-Gazers' Observatory_ |q The Star-Gazers/Find Hara

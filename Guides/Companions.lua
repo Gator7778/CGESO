@@ -1,8 +1,5 @@
 local CGV = _G.CGV
 CGV.GuideMenuTier = "TAM"
-
-
-
 CGV:RegisterGuide("Extras\\Extras\\Companions\\Azandar Al-Cybiades",[[
 loadingimage loadscreen_underweave_01.dds
 description Azandar Al-Cybiades Unlock quest and Rapport Quests.
