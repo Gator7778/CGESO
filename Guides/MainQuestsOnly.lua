@@ -9041,7 +9041,8 @@ goto 65.11,65.99
 'Open _Abandoned Cellar_ |q Chasing Shadows/Enter the Cellar  |future
 |tip Manually skip to the next step.
 |only Daggerfall Covenant
-stepgoto thewormsretreat_base 52.08,87.16
+step
+thewormsretreat_base 52.08,87.16
 kill Aldimion
 'Take _Orb of Discourse_ |q Chasing Shadows/Search the Underground Chamber |future
 |only Daggerfall Covenant
@@ -12147,7 +12148,7 @@ goto 67.39,51.85 |q Proving the Deed/Talk to Merric at-Aswala
 |only Daggerfall Covenant
 step
 goto 71.93,50.23
-wayshrine HoonDing
+wayshrine HoonDing's Watch
 step
 goto 71.93,50.23
 'Use _HoonDing_
@@ -26573,6 +26574,7 @@ step
 goto 67.51,32.96 |q To Save a Chief/Meet Eveli at Fharun Stronghold |tip Cross the bridge
 step
 goto 65.40,27.99
+|tip Avoid detection and stay stealthed.
 talk Eveli Sharp-Arrow |q To Save a Chief/Talk to Eveli Sharp-Arrow |future
 step
 goto 67.13,26.82 |q To Save a Chief/Locate the Hidden Prison |tip Avoid detection and stay stealthed.
@@ -26662,6 +26664,7 @@ step
 goto 75.32,33.61
 wayshrine Two Rivers
 step
+goto 75.32,33.61
 'Use _Two Rivers_
 'Travel to _Orsinium_ |q The Anger of a King |future
 |tip Manually skip to the next step.
@@ -26801,8 +26804,9 @@ goto 75.33,39.45
 |tip Manually skip to the next step.
 step
 goto 75.04,68.80
+|tip Go upto Tablet in center of room to start the dialogue.
 |tip Watch dialogue
-kill  Vosh Rakh |q The Anger of a King/Kill the Vosh Rakh |future
+kill Vosh Rakh |q The Anger of a King/Kill the Vosh Rakh |future
 step
 goto 75.50,70.44
 'Examine _Vosh Rakh Orders_ |q The Anger of a King/Find the Information You Seek
@@ -26891,7 +26895,7 @@ step
 goto 51.83,35.18 |q The King's Gambit/Rescue Chief Bazrag and Eveli
 step
 goto 68.07,29.68
-|tip Go through doorway.
+|tip Go through doorway and downstairs.
 talk Chief Bazrag |q The King's Gambit/Rescue Chief Bazrag and Eveli
 step
 goto 55.37,39.56 |q The King's Gambit/Find the Path in the Throne Room |tip Go upstairs.
@@ -26965,11 +26969,13 @@ goto pathtothemoo_library_base 56.21,81.26
 |tip Manually skip to the next step.
 step
 goto 45.32,81.36
+|tip Point away from head.
 |tip Hammer symbol
 'Activate _Library Switch_ |q Blood on a King's Hands/Find the Secret Passage
 |tip Manually skip to the next step.
 step
 goto 39.58,57.36
+|tip Point towards head.
 |tip Go upstairs.
 |tip Owl symbol
 'Activate _Library Switch_ |q Blood on a King's Hands/Find the Secret Passage
@@ -27038,7 +27044,7 @@ goto 51.13,54.22
 |tip Go upstairs.
 talk Mulzah |q Long Live the King/.*Gather Your Allies for the Funeral.* |count 4
 step
-goto 35.45,43.81 |q Long Live the King/.*Gather Your Allies for the Funeral.* |count 6 |tip Go downstairs.
+goto 35.45,43.81 |q Long Live the King/.*Gather Your Allies for the Funeral.* |count 6 |tip Go Outside.
 step
 goto 30.83,50.24
 'Open the _Temple of Ire_ |q Long Live the King/.*Gather Your Allies for the Funeral.* |count 6
@@ -27092,6 +27098,7 @@ step
 goto scarpkeeplower_base 45.47,48.88 |q Long Live the King/Talk to King Bazrag |tip Go upstairs.
 step
 goto scarpkeepupper_base 41.35,40.23
+|tip Go upstairs.
 talk King Bazrag
 turnin Long Live the King |next Extras\\Extras\\Main Quests Only\\DLC\\Thieves Guild
 ]])
@@ -27119,7 +27126,7 @@ accept Partners in Crime
 |only Aldmeri Dominion
 step
 'Open _Greenshade_ Map
-'Travel to _Woodheart_ |q Partners in Crime/Meet Quen at the Woodhearth Docks 
+'Travel to _Woodhearth_ |q Partners in Crime/Meet Quen at the Woodhearth Docks 
 |tip Manually skip to the next step.
 |only Aldmeri Dominion
 step
@@ -27210,6 +27217,7 @@ step
 goto 51.96,68.01 |q Partners in Crime/Approach Fulstrom Homestead
 step
 goto 53.45,49.90
+|tip Watch the dialogue.
 'Open _Portcullis_ |q Partners in Crime/Approach Fulstrom Homestead
 step
 goto 58.83,44.80 |q Partners in Crime/Enter Fulstrom Manor
@@ -27363,7 +27371,7 @@ step
 'Walk to the _North_:
 talk Velsa |q Cleaning House/Talk to Velsa
 step
-'Use _Stink Apples_ |q Cleaning House/Distract Torkming
+'Use _Stink Apples_ on Torkming |q Cleaning House/Distract Torkming
 step
 'Go to the _Southeast_ corner of the building:
 |tip Go back the direction you came from go under the stairs and follow the wall and make a right in the doorway and follow steps up.
@@ -27543,7 +27551,7 @@ step
 goto 43.95,43.53
 talk Mamaea |q A Flawless Plan/Talk to Mamaea
 step
-goto 42.89,37.18
+goto 44.71,39.00
 'Find _Percius Loche's Trail_ |q A Flawless Plan/Find Percius Loche's Trail
 step
 goto 31.92,52.77 |q A Flawless Plan/Talk to Percius Loche |future
@@ -27591,12 +27599,9 @@ goto 20.60,59.96
 step
 goto 38.58,59.89 |q A Flawless Plan/Explore HoonDing's Passage
 step
-goto 40.61,60.05
-|tip Watch the dialogue.
-'Follow _Zeira's Lead_ |q A Flawless Plan/Follow Zeira's Lead |future
-step
 goto 39.06,56.50
-'Open _Malooc's Path_ |q A Flawless Plan/Walk Malooc's Path
+|tip Watch the dialogue.
+'Open _Malooc's Path_ |q A Flawless Plan/Walk Malooc's Path |future
 |tip Manually skip to the next step.
 step
 goto 31.87,44.40
@@ -27820,6 +27825,7 @@ goto 67.59,47.61
 'Open _Cosh's Bedchamber_ |q Forever Hold Your Peace/Sneak Into Magnifica Falorah's Room
 step
 goto 78.80,43.09
+|tip Watch the dialogue.
 talk Magnifica Falorah |q Forever Hold Your Peace/Talk to Magnifica Falorah |future
 step
 goto 71.86,39.63
@@ -27936,7 +27942,7 @@ step
 goto 69.62,69.55 |q Prison Break/Find Zeira's Cell Block |tip Follow Falorah as she walks
 step
 goto 69.59,69.37
-'Open _No Shira Prison_ |q Prison Break/Find Zeira's Cell Block
+'Open _Iron Wheel Headquarters_ |q Prison Break/Find Zeira's Cell Block
 |tip Manually skip to the next step.
 step
 goto hiradirgecitadeltg6_base 45.51,72.01 |q Prison Break/Find Zeira's Cell Block
@@ -27944,23 +27950,23 @@ step
 goto 51.83,69.93 |q Prison Break/Find Zeira's Cell Block
 step
 goto 75.62,53.57
-'Open _No Shira Prison Cellblock_ |q Prison Break/Find Zeira's Cell Block
+'Open _Iron Wheel Headquarters_ |q Prison Break/Find Zeira's Cell Block
 |tip Manually skip to the next step.
 step
 goto 55.93,48.09 |q Prison Break/Find Zeira's Cell Block
 step
 goto 56.49,50.16
-talk Nicolas |q Prison Break/Talk to Nicolas
+talk Nicolas |q Prison Break/Talk to Nicolas |future
 step
 goto 56.49,50.16
 |tip Watch dialogue
 |tip Give him lockpick.
 talk Nicolas |q Prison Break/Decide the Fate of Nicolas
 step
-goto 41.36,37.72 |q Prison Break/Find Zeira on the Prison Ship
+goto 41.36,37.72 |q Prison Break/Find Zeira on the Prison Ship |future
 step
 goto 90.53,21.16
-'Open _No Shira Harbor_ |q Prison Break/Find Zeira on the Prison Ship
+'Open _Hew's Bane_ |q Prison Break/Find Zeira on the Prison Ship |future
 |tip Manually skip to the next step.
 step
 goto hewsbane_base 74.08,73.28
@@ -28224,7 +28230,1260 @@ goto 47.21,38.02
 step
 goto 46.65,35.23
 talk Zeira
-turnin The One That Got Away |next Extras\\Extras\\Main Quests Only\\DLC\\Dark Brotherhood
+turnin The One That Got Away
+step
+goto 48.33,37.17
+'Open _Abah's Landing_ |q The Codex Caper |future
+|tip Manually skip to the next step.
+step
+goto 27.92,33.00
+|tip Go upstairs.
+'Open _Thieves Den_ |q The Codex Caper |future
+|tip Manually skip to the next step.
+step
+goto safehouse_base 35.60,41.89
+talk Quen
+accept The Codex Caper
+step
+'Open _Glenumbra_ Map
+'Travel to _Daggerfall_ |q The Codex Caper/Meet Quen in Daggerfall |future
+|tip Manually skip to the next step.
+step
+goto daggerfall_base 49.86,23.95
+|tip Watch the dialogue.
+talk Skeever Nivo |q The Codex Caper/Talk to Skeever Nivo |future
+step
+goto 49.22,22.93
+talk Captain Sansonne |q The Codex Caper/Talk to Captain Sansonne
+step
+goto 51.78,26.01
+|tip Go around to the other side of building.
+'Open _The Rosy Lion_ |q The Codex Caper/Find Quen in the Inn |future
+|tip Manually skip to the next step.
+step
+goto 48.55,27.84
+talk Quen |q The Codex Caper/Talk to Quen |future
+step
+goto 50.63,29.64
+|tip Go upstairs.
+'Search _Jewelry Box_ |q The Codex Caper/Find the Map for Quen
+step
+goto 48.55,27.84
+|tip Go downstairs.
+talk Basil Menant |q The Codex Caper/Talk to Basil Menant |future
+|tip Manually skip to the next step.
+step
+goto 57.56,15.43
+|tip Go Outside.
+talk Quen |q The Codex Caper/Talk to Quen |future
+step
+goto 57.43,14.91
+'Unlock _Yvierry Estate_
+'Open _Yvierry Estate_ |q The Codex Caper/Break into the Estate Courtyard
+|tip Manually skip to the next step.
+step
+goto 60.26,10.39 |q The Codex Caper/Enter the Larder |future
+step
+goto 63.18,17.58
+'Enter _Larder_ |q The Codex Caper/Enter the Larder |future
+|tip Manually skip to the next step.
+step
+goto U50_Maps_BrentEstate_F2_base 26.67,75.25
+|tip Watch the dialogue.
+talk Quen |q The Codex Caper/Talk to Quen |future
+step
+goto 31.82,65.04
+'Open _Yvierry Manor_ |q The Codex Caper/Enter Lord Yvierry's Bedchamber
+|tip Manually skip to the next
+step
+goto 32.10,51.77 |q The Codex Caper/Enter Lord Yvierry's Bedchamber
+step
+goto 27.75,44.53 |q The Codex Caper/Enter Lord Yvierry's Bedchamber |tip Go upstairs.
+step
+goto U50_Maps_BrentEstate_F2_base 59.21,20.33
+'Open _Lord's Bedchamber_ |q The Codex Caper/Enter Lord Yvierry's Bedchamber |future
+|tip Manually skip to the next step.
+step
+goto U50_Maps_BrentEstate_F1_base 59.84,6.06
+'Use _Jewelry Box_ |q The Codex Caper/Search For the Key |future
+step
+goto U50_Maps_BrentEstate_F2_base 59.33,19.67
+|tip Go Upstairs.
+'Open _Yvierry Manor_ |q The Codex Caper/Meet Quen
+|tip Manually skip to the next step.
+step
+goto 62.55,35.40
+'Unlock _Strongroom_
+'Open _Strongroom_ |q The Codex Caper/Enter the Strongroom |future
+|tip Manually skip to the next step.
+step
+goto 70.38,41.20
+'Search _Ornate Coffer_ |q The Codex Caper/.*Find Treasures in the Strongroom.* |count 1 |future
+step
+goto 74.04,30.74
+'Take _Codex Voernet_ |q The Codex Caper/.*Find Treasures in the Strongroom.* |count 2
+step
+goto 71.58,35.24
+talk Quen |q The Codex Caper/Talk to Quen
+step
+goto 73.80,42.18
+'Open _Side Passage_ |q The Codex Caper/Use Side Passage
+|tip Manually skip to the next
+step
+goto 67.35,52.29
+'Spy On _Meeting_ |q The Codex Caper/Spy On Meeting |future
+step
+goto 71.60,54.15
+'Open _Library_ |q The Codex Caper/Exit the Estate Before the Cartel Finds You
+|tip Manually skip to the next step.
+step
+goto 52.90,58.05
+'Open _Yvierry Manor_ |q The Codex Caper/Exit the Estate Before the Cartel Finds You
+|tip Manually skip to the next step.
+step
+goto 60.12,75.30
+|tip This step is only if you failed to escape in time.
+'Open _Yvierry Manor_ |q The Codex Caper/Escape Confinement |future
+|tip Manually skip to the next step.
+step
+goto 52.29,77.97
+'Open _Gallery_ |q The Codex Caper |future
+|tip Manually skip to the next step.
+step
+goto 52.78,88.48
+kill Enforcer Urfan |q The Codex Caper/Defeat Enforcer Urfan |future
+step
+goto 47.45,92.27
+'Open _Daggerfall_ |q The Codex Caper/Exit the Estate |future
+|tip Manually skip to the next step.
+step
+goto daggerfall_base 63.24,39.65 |q The Codex Caper/Go to the Thieves Den |future
+step
+goto 71.37,33.08 |q The Codex Caper/Go to the Thieves Den
+step
+goto 70.62,28.71
+'Open _Daggerfall Outlaws Refuge_ |q The Codex Caper/Go to the Thieves Den
+|tip Manually skip to the next step.
+step
+goto glenumbraoutlawrefuge_base 45.46,44.22
+'Open _Daggerfall Thieves Den_ |q The Codex Caper/Go to the Thieves Den
+|tip Manually skip to the next step.
+step
+goto 51.13,28.58
+talk Basil Menant |q The Codex Caper/Talk to Basil Menant |future
+step
+goto 51.31,28.27
+talk Quen
+turnin The Codex Caper
+accept Three Thieves in Daggerfall
+step
+goto 47.32,31.59
+talk Edwane the Hawk |q Three Thieves in Daggerfall/Talk to Edwane the Hawk
+step
+goto 42.18,24.59
+|tip Go up the ramp.
+talk Abrasia |q Three Thieves in Daggerfall/Talk to Abrasia
+step
+goto 33.85,26.27
+|tip Go back down the ramp.
+|tip Choose Meet at the bank.
+talk Seline Menant |q Three Thieves in Daggerfall/Talk to Seline Menant |future
+step
+'Open _Glenumbra_ Map
+'Travel to _Daggerfall_ |q Three Thieves in Daggerfall/Meet Seline at the Bank of Daggerfall |future
+|tip Manually skip to the next step.
+step
+goto daggerfall_base 60.60,40.30 |q Three Thieves in Daggerfall/Meet Seline at the Bank of Daggerfall |future
+step
+goto 59.81,63.82
+|tip Inside Bank.
+talk Seline Menant |q Three Thieves in Daggerfall/Talk to Seline Menant |future
+step
+goto 57.85,65.79
+|tip Go upstairs.
+'Trespass _Bank Office_ |q Three Thieves in Daggerfall/Sneak Past Patrolling Guards
+|tip Manually skip to the next step.
+step
+goto 59.90,64.02
+|tip Keep guard stunned with Somnal Powder.
+'Search _Safebox_ |q Three Thieves in Daggerfall/Sneak Past Patrolling Guards
+|tip Manually skip to the next step.
+step
+goto 56.96,64.91
+|tip Keep guard stunned with Somnal Powder.
+'Search _Safebox_ |q Three Thieves in Daggerfall/Sneak Past Patrolling Guards
+|tip Manually skip to the next step.
+step
+goto 57.82,65.80
+'Open _Bank of Daggerfall_ |q Three Thieves in Daggerfall/Sneak Past Patrolling Guards
+|tip Manually skip to the next step.
+step
+goto 58.82,65.66
+|tip Go downstairs below the main level.
+'Trespass _Bank Lower Level_ |q Three Thieves in Daggerfall/Sneak Past Patrolling Guards
+|tip Manually skip to the next step.
+step
+goto 57.41,66.11
+|tip Follow path around to the bank.
+'Open _Daggerfall Bank Vault_ |q Three Thieves in Daggerfall/Enter the Vault |future
+|tip Manually skip to the next step.
+step
+goto 57.95,67.51
+'Take _Nowhere Key_ |q Three Thieves in Daggerfall/Take the Nowhere Key |future
+step
+goto 59.29,66.58
+|tip Drop down down in hole in floor.
+'Open _Daggerfall_ |q Three Thieves in Daggerfall/Exit the Bank Vault
+step
+goto 66.66,75.49
+|tip Choose Abrasia Option.
+talk Seline Menant |q Three Thieves in Daggerfall/Talk to Seline Menant |future
+step
+'Open _Glenumbra_ Map
+'Travel to _Baelborne Rock_ |q Three Thieves in Daggerfall/Meet Abrasia in Ilessan Tower
+|tip Manually skip to the next step.
+step
+goto glenumbra_base 34.82,72.58
+'Open _Ilessan Tower_ |q Three Thieves in Daggerfall/Meet Abrasia in Ilessan Tower
+|tip Manually skip to the next step.
+step
+goto ilessantower_base 23.50,71.76 |q Three Thieves in Daggerfall/Meet Abrasia in Ilessan Tower
+step
+goto 30.47,37.33
+talk Abrasia |q Three Thieves in Daggerfall/Talk to Abrasia |future
+step
+goto 32.81,34.58
+'Open _Lower Dungeon_ |q Three Thieves in Daggerfall/.*Place Fake Notes.*
+|tip Manually skip to the next step.
+step
+goto U50_GR2_Ilessan_Tower_base 21.61,68.36
+|tip Go upstairs.
+'Place _Fake Mutinous Note_ |q Three Thieves in Daggerfall/.*Place Fake Notes.* |count 1
+step
+goto 61.18,68.50
+'Place _Fake Mutinous Note_ |q Three Thieves in Daggerfall/.*Place Fake Notes.* |count 2
+step
+goto 19.94,68.79 |q Three Thieves in Daggerfall/.*Place Fake Notes.*
+step
+goto 21.47,28.30
+'Place _Fake Mutinous Note_ |q Three Thieves in Daggerfall/.*Place Fake Notes.* |count 3
+step
+goto 59.40,36.15 |q Three Thieves in Daggerfall/Find Cartel Correspondence
+step
+goto 64.95,17.03
+'Examine _Koldane Cartel Missive_ |q Three Thieves in Daggerfall/Find Cartel Correspondence
+step
+'Open _Glenumbra_ Map
+'Travel to _Baelborne Rock_ |q Three Thieves in Daggerfall/Talk to Abrasia by the Daggerfall Gate
+|tip Manually skip to the next step.
+step
+goto daggerfall_base 68.64,37.65
+talk Abrasia |q Three Thieves in Daggerfall/Talk to Abrasia by the Daggerfall Gate
+step
+goto 46.83,43.31
+talk Edwane the Hawk |q Three Thieves in Daggerfall/Talk to Edwane the Hawk |future
+step
+goto 43.40,41.90
+'Use _Carso Distraction_ |q Three Thieves in Daggerfall/Eavesdrop on the Mages
+|tip Manually skip to the next step.
+step
+goto 42.70,37.10
+'Use _Drunkard Distraction_ |q Three Thieves in Daggerfall/Eavesdrop on the Mages
+|tip Manually skip to the next step.
+step
+goto 41.11,39.29
+'Use _Edwane Distraction_ |q Three Thieves in Daggerfall/Eavesdrop on the Mages
+|tip Manually skip to the next step.
+step
+goto 39.55,38.69
+|tip Eavesdrop on Mages.
+'Hide _Hiding Spot_ |q Three Thieves in Daggerfall/Eavesdrop on the Mages
+step
+goto 41.43,39.40
+talk Edwane the Hawk |q Three Thieves in Daggerfall/Talk to Edwane the Hawk |future
+|tip Manually skip to the next step.
+step
+goto 51.23,39.07
+'Open _Mages Guild_ |q Three Thieves in Daggerfall/Find Assistant Rozenn
+|tip Manually skip to the next step.
+step
+goto 48.92,41.14
+'Trespass _Mages Guild Repository_ |q Three Thieves in Daggerfall/Find Assistant Rozenn
+|tip Manually skip to the next step.
+step
+goto 49.55,38.86
+'Pickpocket _Assistant Rozenn_ |q Three Thieves in Daggerfall/Pickpocket the Research Notes |future
+step
+goto 49.82,41.18
+'Open _Mages Guild_ |q Three Thieves in Daggerfall/Talk to Edwane the Hawk
+|tip Manually skip to the next step.
+step
+goto 50.89,39.07
+'Open _Daggerfall_ |q Three Thieves in Daggerfall/Talk to Edwane the Hawk
+|tip Manually skip to the next step.
+step
+goto 54.43,39.88
+talk Edwane the Hawk |q Three Thieves in Daggerfall/Talk to Edwane the Hawk
+step
+goto 67.91,39.57 |q Three Thieves in Daggerfall/Return to the Thieves Den
+step
+goto 70.62,28.71
+'Open _Daggerfall Outlaws Refuge_ |q Three Thieves in Daggerfall/Return to the Thieves Den
+|tip Manually skip to the next step.
+step
+goto glenumbraoutlawrefuge_base 45.46,44.22
+'Open _Daggerfall Thieves Den_ |q Three Thieves in Daggerfall/Return to the Thieves Den
+|tip Manually skip to the next step.
+step
+goto 61.59,26.58
+'Open _Thieves Den Map Room_ |q Three Thieves in Daggerfall/Return to the Thieves Den
+|tip Manually skip to the next step.
+step
+goto 68.32,26.98
+talk Quen |q Three Thieves in Daggerfall/Talk to Quen |future
+step
+goto 63.54,27.03
+'Open _Daggerfall Thieves Den_ |q Three Thieves in Daggerfall/Talk to Quen
+step
+goto 57.02,25.17
+talk Quen
+turnin Three Thieves in Daggerfall
+accept Codex and Cartel
+step
+goto 61.59,26.58
+'Open _Thieves Den Map Room_ |q Codex and Cartel/Meet with the Gang Leaders
+|tip Manually skip to the next step.
+step
+goto 69.25,26.63
+|tip Watch the dialogue.
+talk Basil Menant |q Codex and Cartel/Talk to Basil Menant |future
+step
+goto 71.64,26.01
+talk Quen |q Codex and Cartel/Talk to Quen
+step
+'Open _Glenumbra_ Map
+'Travel to _Wyrd Tree_ |q Codex and Cartel/Meet Abrasia and Quen at Dresan Keep
+|tip Manually skip to the next step.
+step
+goto glenumbra_base 46.30,55.60
+|tip Watch the dialogue.
+talk Abrasia |q Codex and Cartel |future
+|tip Manually skip to the next step.
+step
+goto 46.29,53.77
+'Open _Dresan Keep Tower_ |q Codex and Cartel/Investigate the Area
+|tip Manually skip to the next step.
+step
+goto 46.54,53.53
+'Examine _Pile of Rubble_ |q Codex and Cartel/Investigate the Area
+|tip Manually skip to the next step.
+step
+goto 42.97,55.01
+'Examine _The Old Well_ |q Codex and Cartel/Investigate the Area
+step
+goto 42.97,55.01
+'Enter _The Old Well_ |q Codex and Cartel/Enter the Well |future
+|tip Manually skip to the next step.
+step
+goto dresankeep_base 59.18,50.95
+'Examine _Bookshelf_ |lorebook Mathiery: On the Nature of Mastery/3/59/6
+step
+goto 63.13,55.67
+'Examine _Bookshelf_ |q Codex and Cartel/.*Find Books Written by Mathiery.* |count 2
+step
+goto 78.62,63.60
+'Examine _Bookshelf_ |q Codex and Cartel/.*Find Books Written by Mathiery.* |count 3
+step
+goto 59.23,68.10
+.'_The Tale of a Prentice_
+.'_On the Nature of Mastery_
+.'_Archway and Flame_
+.'Place _Illusionary Bookstand_ |q Codex and Cartel/Find a Way Into the Hidden Library
+step
+goto 57.97,69.01
+'Open _Hidden Library_ |q Codex and Cartel/Enter the Hidden Library |future
+|tip Manually skip to the next step.
+step
+goto u50_dresan_keep_vault_base 48.17,82.66
+talk Zyax |q Codex and Cartel/Deal with the Skaafin |future
+step
+goto 66.41,76.99
+'Examine _Phynaster's Test_ |lorebook Phynaster's Test/3/59/10
+step
+goto 63.59,77.86
+.'Pour _Red Potion_
+.'Pour _Green Potion_
+.'Pour _Blue Potion_
+.'Drink _Mixed Potions_
+'Examine _Relics of Sage Voernet_ |q Codex and Cartel/.*Examine Librarian Henard's Collection.* |count 1
+step
+goto 50.38,92.22
+'Examine _Diabella's Test_ |lorebook Dibella's Test/3/59/9
+step
+goto 50.38,92.22
+'Emote _Clap_ |q Codex and Cartel/.*Examine Librarian Henard's Collection.* |count 2
+step
+goto 34.99,77.31
+'Examine _Zenithar's Test_ |lorebook Zenithar's Test/3/59/12
+step
+goto 34.99,77.31
+|tip Let lockpick timer to run out.
+|tip Use Force Unlock
+'Unlock _Locked Chest_ |q Codex and Cartel/.*Examine Librarian Henard's Collection.* |count 3
+step
+goto 51.74,27.15
+talk Abrasia |q Codex and Cartel/Talk to Abrasia |future
+step
+'Open _Glenumbra_ Map
+'Travel to _Lion Guard Redoubt_ |q Codex and Cartel/Meet Seline and Edwane at Lion Guard Redoubt
+|tip Manually skip to the next step.
+step
+goto glenumbra_base 61.64,27.26
+talk Edwane the Hawk |q Codex and Cartel/Talk to Edwane the Hawk |future
+step
+goto 61.68,27.30
+talk Seline Menant |q Codex and Cartel/Talk to Seline Menant
+step
+goto 62.59,25.39
+'Search _Soldier's Trunk_ |q Codex and Cartel/Find a Lion Guard Uniform |future
+|tip Manually skip to the next step.
+step
+goto 61.33,24.34
+'Unlock _Lion Guard Redoubt Dungeon_ |q Codex and Cartel/Sneak Past the Guard or Talk Your Way In
+step
+goto u50_LGR_prison_base 41.21,61.10
+'Examine _Captain Sansonne's Journal_ |q Codex and Cartel/.*Look Around the Area.* |count 1
+step
+goto 23.28,45.54
+'Examine _Arrest Report_ |lorebook Arrest Report/3/59/15
+step
+goto 62.35,52.22
+talk Marten Cogwine |q Codex and Cartel/Talk to Marten Cogwine
+step
+goto 48.22,40.70
+talk Seline Menant |q Codex and Cartel/Talk to Seline Menant
+step
+goto 20.20,66.50
+'Open _Glenumbra_ Map
+'Travel to _Baelborne Rock_ |q Codex and Cartel/Leave Lion Guard Redoubt
+step
+goto glenumbra_base 40.70,79.39
+'Enter _Menant Hideout_ |q Codex and Cartel/Go to the Menant Hideout |future
+|tip Manually skip to the next step.
+step
+goto u50_zonestory3_cave_base 33.53,56.18
+talk Basil Menant |q Codex and Cartel/Talk to Basil Menant |future
+step
+goto 30.38,58.54
+talk Captain Sansonne |q Codex and Cartel/Talk to Captain Sansonne
+step
+goto 86.98,18.75
+'Open _Glenumbra_ |q Codex and Cartel/Return to the Thieves Den
+|tip Manually skip to the next step.
+step
+goto daggerfall_base 70.62,28.71
+'Open _Daggerfall Outlaws Refuge_ |q Codex and Cartel/Return to the Thieves Den
+|tip Manually skip to the next step.
+step
+goto glenumbraoutlawrefuge_base 45.46,44.22
+'Open _Daggerfall Thieves Den_ |q Codex and Cartel/Return to the Thieves Den
+|tip Manually skip to the next step.
+step
+goto 61.59,26.58
+'Open _Thieves Den Map Room_ |q Codex and Cartel/Return to the Thieves Den
+|tip Manually skip to the next step.
+step
+goto 69.69,26.63
+'Place _Arrest Report and Captain Sansonne's Journal_ |q Codex and Cartel/Turn In the Documents
+step
+goto 69.69,26.63
+talk Quen
+turnin Codex and Cartel
+step
+goto 66.76,23.44
+talk Quen
+accept A Guild Grows In Glenumbra
+step
+goto 71.73,26.72
+talk Seline Menant |q A Guild Grows In Glenumbra/Talk to Seline
+step
+goto 63.54,26.72
+'Open _Daggerfall Thieves Den_ |q A Guild Grows In Glenumbra/Talk to Rols Boron
+|tip Manually skip to the next step.
+step
+goto 45.55,43.02
+'Open _Daggerfall Outlaws Refuge_ |q A Guild Grows In Glenumbra/Talk to Rols Boron
+|tip Manually skip to the next step.
+step
+goto 16.39,20.74
+'Climb _Daggerfall_ |q A Guild Grows In Glenumbra/Talk to Rols Boron
+|tip Manually skip to the next step.
+step
+goto daggerfall_base 12.82,22.05
+talk Rols Boron |q A Guild Grows In Glenumbra/Talk to Rols Boron
+step
+'Open _Alik'r Desert_
+'Travel to _Sentinel_ |q A Guild Grows In Glenumbra/.*Steal Valuable Items.*
+|tip Manually skip to the next step.
+step
+goto sentinel_base 35.35,52.97
+'Unlock _Ilkhas al-Azif's Home_ |q A Guild Grows In Glenumbra/.*Steal Valuable Items.*
+|tip Manually skip to the next step.
+step
+goto 34.96,51.99
+|tip Go upstairs.
+'Use _Locked Chest_ |q A Guild Grows In Glenumbra/.*Steal Valuable Items.* |count 1
+step
+'Open _Eastmarch_ Map
+'Travel to _Windhelm_ |q A Guild Grows In Glenumbra/.*Steal Valuable Items.*
+|tip Manually skip to the next step.
+step
+goto windhelm_base 45.79,62.06 |q A Guild Grows In Glenumbra/.*Steal Valuable Items.*
+step
+goto 22.97,53.95
+'Unlock _Thane Mara's House_ |q A Guild Grows In Glenumbra/.*Steal Valuable Items.*
+|tip Manually skip to the next step.
+step
+goto 25.64,52.43
+'Use _Lockbox_ |q A Guild Grows In Glenumbra/.*Steal Valuable Items.* |count 2
+step
+'Open _Glenumbra_ Map
+'Travel to _Daggerfall_ |q A Guild Grows In Glenumbra/Talk to Rols Boron
+|tip Manually skip to the next step.
+step
+goto daggerfall_base 44.88,30.84 |q A Guild Grows In Glenumbra/Talk to Rols Boron
+step
+goto 13.67,26.37 |q A Guild Grows In Glenumbra/Talk to Rols Boron
+step
+goto 12.84,22.02
+talk Rols Boron |q A Guild Grows In Glenumbra/Talk to Rols Boron
+step
+goto 13.47,23.55
+talk Quen |q A Guild Grows In Glenumbra/Talk to Quen
+step
+'Open _Glenumbra_ Map
+'Travel to _Baelborne Rock_ |q A Guild Grows In Glenumbra/Find Captain Sansonne
+|tip Manually skip to the next step.
+step
+goto glenumbra_base 40.03,71.82
+talk Captain Sansonne |q A Guild Grows In Glenumbra/Talk to Captain Sansonne |future
+step
+goto 37.48,72.97
+'Use _Baelborne Rock_
+'Travel to _Wyrd Tree_ |q A Guild Grows In Glenumbra/Find Edwane Along the Road to Aldcroft
+|tip Manually skip to the next step.
+step
+goto 48.86,59.16
+talk Edwane the Hawk |q A Guild Grows In Glenumbra/Talk to Edwane |future
+step
+goto 55.14,63.84
+'Climb _Birien Estate_ |q A Guild Grows In Glenumbra/Infiltrate the Birien Estate
+step
+goto 55.17,65.22 |q A Guild Grows In Glenumbra/Sneak Into Birien Manor
+step
+goto 52.98,65.48
+'Open _Birien Wine Cellar_ |q A Guild Grows In Glenumbra/Sneak Into Birien Manor
+step
+goto U50_GR4Manorbasement_base 28.58,59.84
+'Open _Birien Dungeon_ |q A Guild Grows In Glenumbra/Free Gorbert
+|tip Manually skip to the next step.
+step
+goto 25.45,47.26
+|tip Feel free to unlock other cell doors first.
+'Unlock _Prison Cell Door_
+talk Gorbert Madach |q A Guild Grows In Glenumbra/Talk to Gorbert |future
+step
+goto 28.28,31.07
+'Open _Birien Manor_ |q A Guild Grows In Glenumbra/Enter the Birien Kennels
+|tip Manually skip to the next step.
+step
+goto U50_GR4ManorF1_base 50.69,18.76 |q A Guild Grows In Glenumbra/Enter the Birien Kennels
+step
+goto U50_GR4ManorF2_base 65.49,11.83 |q A Guild Grows In Glenumbra/Enter the Birien Kennels |tip Go upstairs.
+step
+goto 51.80,63.35
+'Take _Pork Ribs_ |q A Guild Grows In Glenumbra/Find Treats for Dogs |future
+|tip Manually skip to the next step.
+step
+goto U50_GR4ManorF1_base 25.80,67.67 |q A Guild Grows In Glenumbra/Enter the Birien Kennels |tip Go downstairs.
+step
+goto 35.68,9.88 |q A Guild Grows In Glenumbra/Enter the Birien Kennels
+step
+goto 59.45,10.25
+|tip Go downstairs.
+'Open _Birien Kennels_ |q A Guild Grows In Glenumbra/Enter the Birien Kennels
+|tip Manually skip to the next step.
+step
+goto 76.56,11.13
+'Give _Dog_ |q A Guild Grows In Glenumbra/Placate the Kennel Dogs |future
+|tip Manually skip to the next step.
+step
+goto 74.98,15.91
+'Unlock _Kennel Door_ |q A Guild Grows In Glenumbra/Free Carso
+step
+goto 61.82,11.08
+'Open _Brien Manor_ |q A Guild Grows In Glenumbra/Lead Carso Out of the Estate
+|tip Manually skip to the next step.
+step
+goto U50_GR4Manorbasement_base 28.63,26.98
+'Open _Birien Dungeon_ |q A Guild Grows In Glenumbra/Lead Carso Out of the Estate
+|tip Manually skip to the next step.
+step
+goto 42.20,58.73
+'Open _Glenumbra_ |q A Guild Grows In Glenumbra/Lead Carso Out of the Estate |future
+|tip Manually skip to the next step.
+step
+goto glenumbra_base 53.88,66.94
+talk Gorbert Madach |q A Guild Grows In Glenumbra/Talk to Gorbert |future
+step
+goto 53.94,67.00
+talk Edwane the Hawk |q A Guild Grows In Glenumbra/Talk to Edwane
+step
+goto 53.97,66.88
+talk Abrasia |q A Guild Grows In Glenumbra/Talk to Abrasia
+step
+goto 53.62,70.94
+talk Abrasia |q A Guild Grows In Glenumbra |future
+|tip Manually skip to the next step.
+step
+goto 54.70,72.89
+'Pour _Koldane Cartel Supply Crates_ |q A Guild Grows In Glenumbra/Burn Koldane Cartel Supplies
+step
+goto 56.34,72.16
+|tip top of the tower.
+'Search _Daggerfall Auction House Lockbox_ |q A Guild Grows In Glenumbra/Steal the Wolf's Paw Sapphire
+step
+goto 55.95,74.62
+'Pour _Koldane Cartel Weapon Stores_ |q A Guild Grows In Glenumbra/Destroy Koldane Cartel Weapons
+step
+goto 53.38,71.01
+talk Abrasia |q A Guild Grows In Glenumbra/Talk to Abrasia
+step
+'Open _Glenumbra_ Map
+'Travel to _Baelborne Rock_ |q A Guild Grows In Glenumbra/Talk to Quen
+|tip Manually skip to the next step.
+step
+goto daggerfall_base 68.80,36.96 |q A Guild Grows In Glenumbra/Talk to Quen
+step
+goto 70.62,28.71
+'Open _Daggerfall Outlaws Refuge_ |q A Guild Grows In Glenumbra/Talk to Quen
+|tip Manually skip to the next step.
+step
+goto glenumbraoutlawrefuge_base 45.46,44.22
+'Open _Daggerfall Thieves Den_ |q A Guild Grows In Glenumbra/Talk to Quen
+|tip Manually skip to the next step.
+step
+goto 46.12,21.67
+talk Quen
+turnin A Guild Grows In Glenumbra
+accept Wolf Trap
+step
+'Open _Glenumbra_ Map
+'Travel to _Crosswych_ |q Wolf Trap/Find the Koldane Cartel Den
+|tip Manually skip to the next step.
+step
+goto crosswych_base 28.70,59.64
+|tip Other side of house.
+'Open _Koldane Cartel Den_ |q Wolf Trap/Enter the Koldane Cartel Den |future
+step
+goto 27.46,47.79
+'Open _Bryggid Silver-Eye's Office_ |q Wolf Trap/Find Bryggid Silver-Eye
+step
+goto 30.60,48.13
+talk Bryggid Silver-Eye |q Wolf Trap/Talk to Bryggid Silver-Eye
+step
+goto 31.69,49.58
+'Climb _Glenumbra_ |q Wolf Trap/Find Quen
+|tip Manually skip to the next step.
+step
+goto glenumbra_base 75.79,15.54
+'Use _Crosswych_
+'Travel to _Burial Tombs_ |q Wolf Trap/Find Quen
+|tip Manually skip to the next step.
+step
+goto 73.46,26.04
+talk Quen |q Wolf Trap/Talk to Quen |future
+step
+goto 75.30,30.05
+'Use _Burial Tombs_
+'Travel to _Eagle's Brook_ |q Wolf Trap/Find the Roadsworn Camp
+|tip Manually skip to the next step.
+step
+goto 57.49,38.22 |q Wolf Trap/Find the Roadsworn Camp
+step
+goto 58.00,37.52
+|tip Watch the dialogue.
+talk Captain Sansonne |q Wolf Trap/Talk to Captain Sansonne |future
+step
+goto 49.21,37.65 |q Wolf Trap/Go to Rols Boron's Warehouse
+step
+goto 45.95,32.01 |q Wolf Trap/Go to Rols Boron's Warehouse
+step
+goto 45.42,32.19
+talk Rennah Brel |q Wolf Trap/Talk to Rennah |future
+step
+goto 44.72,31.12
+|tip Follow Ramp around to stairs then climb on the boxes and make your way to the window at the top of warehouse.
+'Open _Rols Boron's Warehouse_ |q Wolf Trap/Find a Way Into the Warehouse |future
+|tip Manually skip to the next step.
+step
+goto u50_zs5_WarehouseUpper_base 78.96,68.28
+'Open _Warehouse Lower Storage_ |q Wolf Trap/Search for Allies |future
+|tip Manually skip to the next step.
+step
+goto 72.00,72.39
+'Open _Storage Room_ |q Wolf Trap/Free Edwane the Hawk |future
+|tip Manually skip to the next step.
+step
+goto 72.65,77.65
+'Unlock _Cell Door_ |q Wolf Trap/Free Edwane the Hawk
+step
+goto 72.24,77.39
+talk Edwane the Hawk |q Wolf Trap/Talk to Edwane the Hawk
+step
+goto 71.89,74.00
+'Open _Warehouse_ |q Wolf Trap/Find a Way into the Underground Caves
+|tip Manually skip to the next step.
+step
+goto 65.72,57.28
+kill Alcedo Natius
+'Collect _Rols Boron's Key to the Lower Store Rooms_ |q Wolf Trap/Find a Way into the Underground Caves
+|tip Manually skip to the next step.
+step
+goto 65.72,57.28
+'Open _Smuggler's Caves_ |q Wolf Trap/Enter the Underground Caves
+|tip Manually skip to the next step.
+step
+goto u50_zs5_WarehouseLower_base 75.25,26.06 |q Wolf Trap/Free Captain Sansonne |future
+step
+goto 65.81,31.28
+'Use _Grapple Point_ |q Wolf Trap/Free Captain Sansonne
+|tip Manually skip to the next step.
+step
+goto 68.22,28.24
+'Use _Grapple Point_ |q Wolf Trap/Free Captain Sansonne
+|tip Manually skip to the next step.
+step
+goto 67.98,33.64
+'Use _Grapple Point_ |q Wolf Trap/Free Captain Sansonne
+|tip Manually skip to the next step.
+step
+goto 66.69,40.50
+'Use _Trap Release_ |q Wolf Trap/Free Captain Sansonne
+step
+goto 66.16,41.66
+talk Captain Sansonne |q Wolf Trap/Talk to Captain Sansonne
+step
+goto 58.34,42.79
+'Enter _Warehouse Back Cave_ |q Wolf Trap/Pursue Gavin Koldane
+step
+goto 31.48,41.85
+|tip Watch the dialogue.
+'Use _Observation Point_ |q Wolf Trap/Assess the Situation
+step
+goto 25.25,45.92
+kill Bryggid Silver-Eye |q Wolf Trap/Kill Bryggid Silver-Eye
+step
+goto 23.42,45.30
+'Break _Chains_ |q Wolf Trap/Free Seline Menant
+step
+goto 24.25,46.09
+talk Gharelin the Fox |q Wolf Trap/Talk to Gharelin the Fox
+step
+goto 18.59,33.14
+'Enter _Glenumbra_ |q Wolf Trap/Leave the Underground Caves
+step
+goto glenumbra_base 45.32,28.01
+talk Seline Menant |q Wolf Trap/Talk to Seline Menant
+step
+'Open _Glenumbra_ Map
+'Travel to _Baelborne Rock_ |q Wolf Trap/Return to the Daggerfall Thieves Den
+|tip Manually skip to the next step.
+step
+goto daggerfall_base 68.80,36.96 |q Wolf Trap/Return to the Daggerfall Thieves Den
+step
+goto 70.62,28.71
+'Open _Daggerfall Outlaws Refuge_ |q Wolf Trap/Return to the Daggerfall Thieves Den
+|tip Manually skip to the next step.
+step
+goto glenumbraoutlawrefuge_base 45.46,44.22
+'Open _Daggerfall Thieves Den_ |q Wolf Trap/Return to the Daggerfall Thieves Den
+|tip Manually skip to the next step.
+step
+goto 49.09,27.60
+talk Quen
+turnin Wolf Trap
+step
+goto 49.09,27.60
+talk Quen
+|tip Watch the dialogue.
+accept The Nowhere Keys
+step
+'Open _Glenumbra_ Map
+'Travel to _Burial Tombs_ |q The Nowhere Keys/Meet Edwane the Hawk by the Dwynnarth Ruins
+|tip Manually skip to the next step.
+step
+goto glenumbra_base 72.38,31.39
+talk Edwane the Hawk |q The Nowhere Keys/Talk to Edwane the Hawk |future
+step
+goto 72.41,31.40
+|tip Equip Bloodthorn Cultist Outfit.
+'Take _Bloodthorn Disguise_ |q The Nowhere Keys/Aquire a Cultist Outfit |future
+|tip Manually skip to the next step.
+step
+goto 72.41,32.33 |q The Nowhere Keys/Find General Gavendier
+step
+goto 68.58,30.75 |q The Nowhere Keys/Find General Gavendier
+step
+goto 69.08,29.67
+talk General Gavendier |q The Nowhere Keys/Talk to General Gavendier |future
+step
+goto 70.09,29.30
+'Open _Dwynnarth Crypts_ |q The Nowhere Keys/Enter the Dwynnarth Crypts |future
+|tip Manually skip to the next step.
+step
+goto u50_dwynnarth_ruins_base 51.74,70.22 |q The Nowhere Keys/Find Branach Firstblood |future
+step
+goto 27.42,35.71 |q The Nowhere Keys/Find Branach Firstblood
+step
+|tip Try to pickpocket if you get caught get ready to run and fight all at same time he will escape if you dont.
+kill Branach Firstblood |q The Nowhere Keys/Kill Branach Firstblood |or |future
+'_OR_
+'Pickpocket _Nowhere Key_ |q The Nowhere Keys/Loot the Nowhere Key |or |future
+|tip Manually skip to the next step.
+step
+goto 51.55,92.68
+'Open _Dwynnarth Ruins_ |q The Nowhere Keys/Talk to Edwane the Hawk
+|tip Manually skip to the next step.
+step
+goto glenumbra_base 70.00,29.22
+talk Edwane the Hawk |q The Nowhere Keys/Talk to Edwane the Hawk
+step
+'Open _Glenumbra_ Map
+'Travel to _Daggerfall_ |q The Nowhere Keys/Find Seline in the Daggerfall Market District
+|tip Manually skip to the next step.
+step
+goto daggerfall_base 60.06,38.55 |q The Nowhere Keys/Find Seline in the Daggerfall Market District
+step
+goto 56.31,50.10
+talk Abrasia |q The Nowhere Keys/Talk to Abrasia |future
+step
+goto 53.94,65.30 |q The Nowhere Keys/Find Seline in the Daggerfall Market District |future
+step
+goto 42.50,66.72
+talk Seline Menant |q The Nowhere Keys/Talk to Seline Menant |future
+step
+goto 39.77,66.80
+'Open _Themond Mine_ |q The Nowhere Keys/Search Themond Mine
+|tip Manually skip to the next step.
+step
+goto themondmine_base 42.72,60.95
+'Climb _Rope to Upper Platform_ |q The Nowhere Keys/Find the Entrance to Ravik's Stash |future
+|tip Manually skip to the next step.
+step
+goto u50_themond_mine_exp_base 65.04,52.25
+|tip Watch the dialogue.
+'Open _Ravik's Stash_ |q The Nowhere Keys/Find Another Way into Ravik's Stash |future
+|tip Manually skip to the next step.
+step
+goto 56.68,48.14
+'Climb _Path to Lynen Falls_ |q The Nowhere Keys/Find Another Way into Ravik's Stash |future
+|tip Manually skip to the next step.
+step
+goto 27.93,50.03 |q The Nowhere Keys/Find Another Way into Ravik's Stash |future
+step
+goto 18.52,73.12
+'Enter _Suspicious Whirlpool_ |q The Nowhere Keys |future
+|tip Manually skip to the next step.
+step
+goto u50_ravikspool_base 27.59,62.23
+talk Seline Menant |q The Nowhere Keys/Talk to Seline Menant |future
+step
+goto 62.16,59.96 |q The Nowhere Keys/Find the Nowhere Key |tip Drop down.
+step
+goto 74.89,51.10
+'Open _Relic Room_ |q The Nowhere Keys/Find the Nowhere Key
+|tip Manually skip to the next step.
+step
+goto 80.25,51.71
+|tip Watch the dialogue.
+'Use _Sluice Lever_ |q The Nowhere Keys/.*Open the Sluice Gates.* |count 1 |future
+step
+goto 89.63,53.82
+'Use _Sluice Lever_ |q The Nowhere Keys/.*Open the Sluice Gates.* |count 2
+step
+goto 90.10,48.67
+'Use _Sluice Lever_ |q The Nowhere Keys/.*Open the Sluice Gates.* |count 3
+step
+goto 86.24,50.66
+'Search _Stash Chest_ |q The Nowhere Keys/Take the Nowhere Key
+step
+goto 91.09,51.02
+'Exit _Opened Sluice_ |q The Nowhere Keys/Escape Ravik's Stash
+step
+goto u50_daggerfallescape_base 64.86,79.67
+|tip Stay stealth.
+'Open _Daggerfall Outlaws Refuge_ |q The Nowhere Keys/Escape with the Nowhere Key
+|tip Manually skip to the next step.
+step
+goto glenumbraoutlawrefuge_base 45.28,44.35
+'Open _Daggerfall Thieves Den_ |q The Nowhere Keys/Return to the Thieves Den |future
+|tip Manually skip to the next step.
+step
+goto 52.77,26.89
+talk Seline Menant |q The Nowhere Keys/Talk to Seline Menant |or |future
+'_OR_
+talk Edwane the Hawk |q The Nowhere Keys/Talk to Edwane the Hawk |or |future
+step
+goto 51.17,17.82
+talk Quen
+turnin The Nowhere Keys
+accept Racing Into Nowhere
+step
+goto 53.39,25.34
+talk Edwane the Hawk
+talk Seline Menant |q Racing Into Nowhere/Talk to Your Allies |future
+|tip Manually skip to the next
+step
+'Open _Glenumbra_ Map
+'Travel to _Eagle's Brook_ |q Racing Into Nowhere/Find Skeel-Kasi
+|tip Manually skip to the next step.
+step
+goto glenumbra_base 33.62,33.35 |q Racing Into Nowhere/Find Skeel-Kasi
+step
+goto 37.36,30.91
+talk Captain Sansonne |q Racing Into Nowhere/Talk to Captain Sansonne |future
+step
+goto 37.31,30.77
+'Travel _Boat to Sage's Isle_ |q Racing Into Nowhere/Travel to Sage's Isle |future
+|tip Manually skip to the next step.
+step
+goto u50_SagesIsle_EXT_base 46.89,65.36 |q Racing Into Nowhere |future
+step
+goto 51.61,46.08 |q Racing Into Nowhere |future
+step
+goto 41.07,37.21 |q Racing Into Nowhere |future
+step
+goto 40.86,23.69
+'Open _Sage's Isle Ruins_ |q Racing Into Nowhere/Enter the Sage's Isle Ruins |future
+step
+goto u50_zs7_ruinCave_base 81.33,61.57
+'Open _Sage's Isle Ruins_ |q Racing Into Nowhere/Explore the Sage's Isle Ruins |future
+|tip Manually skip to the next step.
+step
+goto 73.72,48.08
+talk Seline Menant |q Racing Into Nowhere/Choose an Ally |or |future
+'_OR_
+talk Edwane the Hawk |q Racing Into Nowhere/Choose an Ally |or |future
+step
+goto 81.25,33.61
+'Enter _Sage's Isle Ruins_ |q Racing Into Nowhere/Find the Vault Entrance
+|tip Manually skip to the next step.
+step
+goto 46.15,17.19
+'Enter _Sage's Isle Ruins_ |q Racing Into Nowhere/Find the Vault Entrance
+|tip Manually skip to the next step.
+step
+goto 8.81,35.78 |q Racing Into Nowhere/Find the Vault Entrance
+step
+goto 12.80,46.44
+'Enter _Sage's Isle Ruins_ |q Racing Into Nowhere/Find the Vault Entrance
+step
+goto 25.68,47.58
+'Use _Nowhere Key_ |q Racing Into Nowhere/Present the Nowhere Key |future
+step
+|tip Ritual Order is 4,2,3,1
+'Use _Ritual Pedestal_ |q Racing Into Nowhere/.*Complete the Ritual.*
+step
+goto 35.18,48.60
+'Open _The Nowhere Vault_ |q Racing Into Nowhere/Enter the Nowhere Vault |future
+|tip Manually skip to the next step.
+step
+goto u50_zs7_VaultLobby_base 49.54,81.36
+talk Sage Voernet's Memorium |q Racing Into Nowhere/Talk to Sage Voernet's Memorium |future
+step
+goto 58.91,65.83
+'Enter _The Nowhere Vault_ |q Racing Into Nowhere/Explore the Nowhere Vault
+|tip Manually skip to the next step.
+step
+goto u50_zs7_dwarven_base 27.30,67.73
+talk Edwane the Hawk |q Racing Into Nowhere/Talk to Edwane the Hawk |future
+step
+goto 27.30,67.73
+'Use _Dwemer Device_ |q Racing Into Nowhere/Use the Dwemer Device
+step
+goto 28.08,68.68
+'Use _Dwemer Valve_ |q Racing Into Nowhere/Disable the Lightning Barrier
+step
+goto 27.30,67.73
+'Use _Dwemer Device_ |q Racing Into Nowhere/Use the Dwemer Device
+step
+goto 51.00,75.46 |q Racing Into Nowhere/Find the Next Dwemer Device
+step
+goto 51.07,67.83
+'Use _Dwemer Device_ |q Racing Into Nowhere |future
+|tip Manually skip to the next
+step
+goto 52.07,68.57
+'Use _Dwemer Valve_ |q Racing Into Nowhere/Disable the Whirling Blade Barrier |future
+step
+goto 51.07,67.83
+'Use _Dwemer Device_ |q Racing Into Nowhere/Use the Dwemer Device
+step
+goto 74.28,58.72
+kill Dwarven Centurion |q Racing Into Nowhere/Explore the Nowhere Vault
+step
+goto 51.64,24.19 |q Racing Into Nowhere/Find the Next Dwemer Device
+step
+goto 51.36,31.61
+'Use _Dwemer Device_ |q Racing Into Nowhere/Use the Dwemer Device |future
+step
+goto 52.16,30.05
+'Use _Dwemer Valve_ |q Racing Into Nowhere/Enable the Whirling Blade Barrier
+step
+goto 51.36,31.61
+'Use _Dwemer Device_ |q Racing Into Nowhere/Use the Dwemer Device
+step
+goto 19.25,24.28
+'Enter _The Nowhere Vault_ |q Racing Into Nowhere/Explore the Nowhere Vault
+|tip Manually skip to the next step.
+step
+goto u50_zs7_calisse_base 48.71,49.74
+|tip Watch the dialogue.
+talk Seline Menant |q Racing Into Nowhere/Talk to Seline Menant |future
+step
+goto 69.29,59.99
+'Examine _Staff_ |q Racing Into Nowhere/Find the True Staff
+step
+goto 32.64,55.64
+'Examine _Crown_ |q Racing Into Nowhere/Find the True Crown
+step
+goto 33.20,61.05
+'Examine _Tome_ |q Racing Into Nowhere/Find the True Tome
+step
+goto 50.31,50.09
+'Enter _Sage Vornet's Vault_ |q Racing Into Nowhere/Explore the Nowhere Vault
+|tip Manually skip to the next step.
+step
+goto u50_zs7_KHA_base 42.25,70.78
+talk Quen |q Racing Into Nowhere/Talk to Quen |future
+step
+goto 48.67,58.20
+|tip Watch the dialogue.
+'Turn _wheel_ |q Racing Into Nowhere/Open the First Gate
+step
+goto 47.09,43.42
+|tip Watch the dialogue.
+'Turn _wheel_ |q Racing Into Nowhere/Open the Second Gate
+step
+goto 43.33,29.14
+|tip Watch the dialogue.
+'Turn _wheel_ |q Racing Into Nowhere/Open the Third Gate
+step
+goto 45.86,13.72
+'Enter _Vault Nexus_ |q Racing Into Nowhere/Explore the Nowhere Vault
+step
+goto u50_zs7_VaultLobby_base 20.75,26.90
+'Enter _The Nowhere Vault Antechamber_ |q Racing Into Nowhere/Go Through the Portal
+step
+goto u50_zs7_NVStart_base 50.29,52.67
+kill Koldane Cartel Thugs |q Racing Into Nowhere/Defeat the Koldane Cartel Thugs
+step
+goto 48.26,54.43
+'Place _Nowhere Key_ |q Racing Into Nowhere/Escape the Koldane Cartel Ambush
+|tip Manually skip to the next step.
+step
+goto 53.24,54.18
+'Place _Nowhere Key_ |q Racing Into Nowhere/Escape the Koldane Cartel Ambush
+step
+goto u50_zs7_NVBoss_base 50.54,30.48
+kill Gavin Koldane |q Racing Into Nowhere/Defeat Gavin Koldane |future
+step
+goto 50.41,17.96
+'Catch _Thieves' Moon_ |q Racing Into Nowhere/Catch the Thieves' Moon
+step
+goto 50.41,17.96
+'Use _Thieves' Moon_ |q Racing Into Nowhere/Use the Thieves' Moon
+step
+goto 51.08,22.84
+talk Quen |q Racing Into Nowhere/Talk to Quen
+step
+goto 44.80,28.30
+talk Sage Voernet's Memorium |q Racing Into Nowhere/Talk to Sage Voernet's Memorium
+step
+goto 45.90,26.29
+'Enter _Portal to Sage's Isle_ |q Racing Into Nowhere/Exit the Vault of Sage Voernet |future
+|tip Manually skip to the next step.
+step
+goto u50_SagesIsle_EXT_base 55.50,81.95
+|tip Watch the dialogue.
+talk Captain Sansonne |q Racing Into Nowhere/Talk to Captain Sansonne |future
+step
+'Open _Glenumbra_ Map
+'Travel to _Baelborne Rock_ |q Racing Into Nowhere/Return to the Thieves Den
+|tip Manually skip to the next step.
+step
+goto daggerfall_base 68.80,36.96 |q Racing Into Nowhere/Return to the Thieves Den
+step
+goto 70.62,28.71
+'Open _Daggerfall Outlaws Refuge_ |q Racing Into Nowhere/Return to the Thieves Den
+|tip Manually skip to the next step.
+step
+goto glenumbraoutlawrefuge_base 45.46,44.22
+'Open _Daggerfall Thieves Den_ |q Racing Into Nowhere/Return to the Thieves Den
+step
+goto 52.77,29.64
+talk Quen |q Racing Into Nowhere/Talk to Quen
+step
+goto 50.73,30.04
+|tip Choose the Leader of the Thieves Guild.
+talk Abrasia |q Racing Into Nowhere/Choose the Leader of the Thieves Guild
+talk Seline Menant |q Racing Into Nowhere/Choose the Leader of the Thieves Guild
+talk Edwane the Hawk |q Racing Into Nowhere/Choose the Leader of the Thieves Guild
+step
+goto 52.90,29.29
+talk Quen
+turnin Racing Into Nowhere
+step
+goto 45.59,43.02
+'Open _Daggerfall Outlaws Refuge_ |q Quenneth Lumena's Warrant |future
+|tip Manually skip to the next step.
+step
+goto 43.60,52.99
+talk Captain Sansonne
+accept Quenneth Lumena's Warrant
+step
+goto 44.71,52.06
+talk Quen |q Quenneth Lumena's Warrant/Talk to Quen |future
+step
+'Open _Hew's Bane_ Map
+'Travel to _Abah's Landing_ |q Quenneth Lumena's Warrant/Meet Quen in Abah's Landing |future
+|tip Manually skip to the next step.
+step
+goto abahslanding_base 45.03,39.40 |q Quenneth Lumena's Warrant/Meet Quen in Abah's Landing |future
+step
+goto 57.70,41.76
+'Open _This One Sells Glyphs_ |q Quenneth Lumena's Warrant/Meet Quen in Abah's Landing |future
+|tip Manually skip to the next step.
+step
+goto 57.84,40.74
+talk Iron Wheel Solider |q Quenneth Lumena's Warrant/Talk to the Iron Wheel Soldier |future
+step
+goto 57.92,42.29
+|tip Go upstairs.
+'Open _Abah's Landing_ |q Quenneth Lumena's Warrant/Talk to Quen at the Palace Overlook
+|tip Manually skip to the next step.
+step
+goto 59.62,43.96
+talk Quen |q Quenneth Lumena's Warrant/Talk to Quen at the Palace Overlook
+step
+goto 40.04,43.97 |q Quenneth Lumena's Warrant/Search the Warehouse District for Clues |tip Drop down.
+step
+goto 31.47,56.92 |q Quenneth Lumena's Warrant/Search the Warehouse District for Clues
+step
+goto 26.58,65.18
+'Trespass _Warehouse District_ |q Quenneth Lumena's Warrant/Search the Warehouse District for Clues
+|tip Manually skip to the next step.
+step
+goto 29.23,81.44 |q Quenneth Lumena's Warrant/Search the Warehouse District for Clues |tip Stay Stealthed.
+step
+goto 34.38,80.53
+|tip Stay Stealthed.
+'Examine _Lord Damar's Orders_ |lorebook Lord Damar's Orders/3/59/18
+step
+goto 32.93,84.54
+|tip Stay Stealthed.
+'Open _Silver-Claw's Warehouse_ |q Quenneth Lumena's Warrant/Search Silver-Claw's Warehouse
+|tip Manually skip to the next step.
+step
+goto 34.97,86.94
+|tip Go to the back on the righthand side then upstairs. Follow planks to your right then around to Thavil.
+talk Thavil |q Quenneth Lumena's Warrant/Confront Thavil |future |tip Stay Stealthed.
+step
+goto 34.97,86.94
+talk Quen |q Quenneth Lumena's Warrant/Talk to Quen
+step
+'Open _Hew's Bane_ Map
+'Travel to _No Shira Citadel_ |q Quenneth Lumena's Warrant/Meet Quen in No Shira Citadel |future
+|tip Manually skip to the next step.
+step
+goto hewsbane_base 57.31,68.94
+talk Quen |q Quenneth Lumena's Warrant |future
+|tip Manually skip to the next step.
+step
+goto 65.05,68.34 |q Quenneth Lumena's Warrant/Find Damar in No Shira Citadel |tip Stay Stealthed.
+step
+goto 69.57,69.39
+|tip Stay Stealthed.
+'Open _Iron Wheel Headquarters_ |q Quenneth Lumena's Warrant/Find Damar in No Shira Citadel
+|tip Manually skip to the next step.
+step
+goto hiradirgecitadeltg6_base 24.33,64.88 |q Quenneth Lumena's Warrant/Find Damar in No Shira Citadel
+step
+goto 72.33,69.66 |q Quenneth Lumena's Warrant/Find Damar in No Shira Citadel
+step
+goto 75.37,53.43
+'Open _Iron Wheel Headquarters_ |q Quenneth Lumena's Warrant/Find Damar in No Shira Citadel
+|tip Manually skip to the next step.
+step
+goto 40.04,48.33 |q Quenneth Lumena's Warrant/Find Damar in No Shira Citadel
+step
+goto 45.02,29.69
+'Open _Iron Wheel Officer's Chambers_|q Quenneth Lumena's Warrant/Find Damar in No Shira Citadel
+|tip Manually skip to the next step.
+step
+goto 39.64,16.03
+|tip Watch the dialogue.
+talk Lord Damar |q Quenneth Lumena's Warrant/Confront Lord Damar |future
+step
+goto 39.32,18.70
+talk Abrasia |q Quenneth Lumena's Warrant/Talk to Abrasia
+step
+'Open _Glenumbra_ Map
+'Travel to _Baelborne Rock_ |q Quenneth Lumena's Warrant/Return to the Daggerfall Thieves Den
+|tip Manually skip to the next step.
+step
+goto daggerfall_base 68.80,36.96 |q Quenneth Lumena's Warrant/Return to the Daggerfall Thieves Den
+step
+goto 70.62,28.71
+'Open _Daggerfall Outlaws Refuge_ |q Quenneth Lumena's Warrant/Return to the Daggerfall Thieves Den
+|tip Manually skip to the next step.
+step
+goto glenumbraoutlawrefuge_base 45.46,44.22
+'Open _Daggerfall Thieves Den_ |q Quenneth Lumena's Warrant/Return to the Daggerfall Thieves Den |future
+|tip Manually skip to the next step.
+step
+goto 51.17,29.91
+talk Saroldo |q Quenneth Lumena's Warrant/Talk to Saroldo |future
+step
+goto 45.59,43.02
+'Open _Daggerfall Outlaws Refuge_ |q Quenneth Lumena's Warrant/Talk to Your Allies
+|tip Manually skip to the next step.
+step
+goto 43.60,52.99
+talk Seline Menant |q Quenneth Lumena's Warrant/.*Talk to Your Allies.* |count 1
+step
+goto 43.07,54.85
+talk Edwane the Hawk |q Quenneth Lumena's Warrant/.*Talk to Your Allies.* |count 2
+step
+goto 16.39,20.47
+'Climb _Daggerfall_ |q Quenneth Lumena's Warrant/Talk to Quen at the Daggerfall Docks
+|tip Manually skip to the next step.
+step
+goto daggerfall_base 23.19,25.28
+talk Quen |q Quenneth Lumena's Warrant/Talk to Quen at the Daggerfall Docks
+step
+goto 30.46,20.75
+'Open _Daggerfall Outlaws Refuge_ |q Quenneth Lumena's Warrant/Return to the Thieves Den
+|tip Manually skip to the next step.
+step
+goto glenumbraoutlawrefuge_base 45.46,44.22
+'Open _Daggerfall Thieves Den_ |q Quenneth Lumena's Warrant/Return to the Thieves Den
+|tip Manually skip to the next step.
+step
+goto 53.70,24.01
+talk Quen
+turnin Quenneth Lumena's Warrant |next Extras\\Extras\\Main Quests Only\\DLC\\Dark Brotherhood
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Dark Brotherhood",[[
@@ -42051,7 +43310,10 @@ goto 14.17,55.80
 'Travel _Ship to All Flags Islet_ |q The Ascendant Storm/Travel to All Flags Islet |future
 |tip Manually skip to the next step.
 step
-goto U34_AllFlags_ext_base 55.45,56.86
+goto 30.42,66.11
+wayshrine All Flags
+step
+goto 31.14,65.13
 'Open _All Flags Castle_ |q The Ascendant Storm/Enter All Flags Castle |future
 step
 goto U34_AllFlags_int1_base 36.43,79.49
@@ -47282,7 +48544,7 @@ step
 goto 62.03,44.00 |q The Regent of Sunport/Go to Vinutilmo Palace
 step
 goto 58.04,50.16
-'Discover _Sunport_ Waysrhine |q The Regent of Sunport/Go to Vinutilmo Palace
+'Discover _Sunport_ Wayshrine |q The Regent of Sunport/Go to Vinutilmo Palace
 |tip Manually skip to the next step.
 step
 goto 61.34,49.61

@@ -20535,7 +20535,7 @@ kill Wisps
 'Collect _Glow Dust_ |q Azura's Aid/.*Collect Glow Dust from Wisps.*
 step
 goto 81.48,48.40
-wayshrine Weeping Giant
+wayshrine Weeping Giant 
 step
 goto 81.08,47.33
 talk Sister Tabakah
@@ -20874,6 +20874,9 @@ step
 goto rivenspire_base 45.90,73.89
 talk Darien Gautier
 accept Shornhelm Divided
+step
+goto 46.62,72.45
+wayshrine Oldgate
 step
 goto 46.00,69.16
 talk Daribert Hurier
@@ -21696,7 +21699,7 @@ step
 goto 21.58,61.25
 |tip At the top of the tower.
 talk Jonah Marose |q The Blood-Splattered Shield/Talk to Jonah Marose
-
+step
 goto 25.96,64.58
 talk Countess Eselde Tamrith |q The Blood-Splattered Shield/Talk to Countess Tamrith |future
 step
@@ -32978,6 +32981,10 @@ kill Grell Flan |q Bad Medicine/Talk to Serk Townsfolk
 step
 goto 13.24,44.41
 talk Aerona Berendas |q Bad Medicine/Talk to Aerona
+step
+goto 13.57,41.39
+|tip Go outside.
+wayshrine Quarantine Serk
 step
 goto 14.02,45.59
 |tip Go outside.
