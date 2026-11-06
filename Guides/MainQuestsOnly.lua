@@ -14412,7 +14412,6 @@ goto 87.70,39.03
 'Use _Light of Meridia_ |q Cadwell's Gold/Use the Light of Meridia |future |next Extras\\Extras\\Main Quests Only\\Aldmeri Dominion\\Khenarthi's Roost
 |only Ebonheart Pact
 step
-goto bangkorai_base 67.90,19.30
 'Open _Auridon_ Map
 'Travel to _The Harborage_ |q Cadwell's Gold/Talk to Cadwell at the Harborage
 |tip Manually skip to the next step.
@@ -23264,7 +23263,6 @@ goto northmorrowgate_base 56.88,45.03
 'Travel to _Davon's Watch_ in Stonefalls |q The Harborage |future
 |tip Manually skip to the next step.|next Extras\\Extras\\Main Quests Only\\Ebonheart Pact\\Stonefalls
 |only Ebonheart Pact
-step
 ]])
 
 CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\DLC\\Imperial City",[[
@@ -50335,8 +50333,664 @@ goto 5.10,63.27 |q The Golden Knight/Talk to Darien
 step
 goto u48_overland_base 46.61,50.55
 talk Darien
-turnin The Golden Knight
+turnin The Golden Knight |next Extras\\Extras\\Main Quests Only\\Sheogorath
+]])
+
+CGV:RegisterGuide("Extras\\Extras\\Main Quests Only\\Sheogorath",[[
+loadingimage loadscreen_sheo_01.dds
+description Daedric Prince of Madness, as he tours Tamriel as a mortal to sample exotic cheeses and experience everyday life.
 step
-'Congraulations _All Main Quest Only Guides Complete._
+'Open _Malabal Tor_
+'Travel to _Baandari Market_ |q Sheogorath Takes a Holiday |future
+|tip Manually skip to the next step.
+|only Aldmeri Dominion
 step
+goto baandaritradingpost_base 66.43,56.58
+talk Noth the Unhinged
+accept Sheogorath Takes a Holiday
+|only Aldmeri Dominion
+step
+goto 64.03,49.67
+'Use _Baandari Market_
+'Travel to _Firebrand Keep_ in Stormhaven |q Sheogorath Takes a Holiday/Meet Noth at the Shivering Shack |future
+|tip Manually skip to the next step.
+step
+goto stormhaven_base 39.40,38.17
+'Open _Shivering Shack_ |q Sheogorath Takes a Holiday/Enter the Shivering Shack |future
+step
+goto U50_base_Sheo1Manor 54.97,80.36
+talk Noth the Unhinged |q Sheogorath Takes a Holiday/Talk to Noth the Unhinged
+step
+goto 55.91,72.87
+'Examine _Ritual Tome_ |q Sheogorath Takes a Holiday/.*Perform the Summoning Ritual.* |count 1
+step
+goto 56.76,76.09
+'Pet _Ritual Chicken_ |q Sheogorath Takes a Holiday/.*Perform the Summoning Ritual.* |count 2
+step
+goto 20.47,70.76 |q Sheogorath Takes a Holiday/Find the Tomeshell |future
+step
+goto 55.70,18.05
+'Search _Bookshelf_ |q Sheogorath Takes a Holiday/Find the Tomeshell
+step
+goto 55.70,18.05
+'Take _Tomeshell_ |q Sheogorath Takes a Holiday/Retrieve the Tomeshell
+step
+goto 21.83,32.44 |q Sheogorath Takes a Holiday/Return to the Ritual Site
+step
+goto 35.51,81.17
+'Open _Shrine_ |q Sheogorath Takes a Holiday/Place Tomeshell
+|tip Manually skip to the next step.
+step
+goto 56.50,76.95
+|tip Watch the dialogue.
+'Place _Tomeshell_ |q Sheogorath Takes a Holiday/.*Perform the Ritual.* |count 1 |future
+step
+goto 54.58,77.11
+'Pet _Ritual Chicken_ |q Sheogorath Takes a Holiday/.*Perform the Ritual.* |count 2
+step
+goto 54.58,77.11
+'Take _Ritual Cheese_ |q Sheogorath Takes a Holiday/.*Perform the Ritual.* |count 3
+|tip Manually skip to the next step.
+step
+goto 56.63,74.25
+'Place _Ritual Cheese Offering_ |q Sheogorath Takes a Holiday/.*Perform the Ritual.*
+step
+goto 55.70,74.48
+|tip Watch the dialogue.
+talk Sheogorath |q Sheogorath Takes a Holiday/Talk to Sheogorath Again |future
+step
+goto 56.17,79.53
+|tip Watch the dialogue.
+talk Sheogorath |q Sheogorath Takes a Holiday/Talk to Sheogorath
+step
+'Open _Eastmarch_ Map
+'Travel to _Windhelm_ |q Sheogorath Takes a Holiday/Meet Sheogorath in Windhelm
+|tip Manually skip to the next step.
+step
+goto windhelm_base 56.04,35.11
+talk Sheogorath |q Sheogorath Takes a Holiday/Talk to Sheogorath |future
+step
+goto 33.40,45.34
+'Open _Hall of the Dead_ |q Sheogorath Takes a Holiday/Meet Sheogorath in the Hall of the Dead
+|tip Manually skip to the next step.
+step
+goto hallofthedead_base 20.65,19.51
+talk Sheogorath |q Sheogorath Takes a Holiday |future
+|tip Manually skip to the next step.
+step
+goto 39.29,12.71 |q Sheogorath Takes a Holiday/Find the Valorhorn Crypt
+step
+goto 39.26,20.23 |q Sheogorath Takes a Holiday/Find the Valorhorn Crypt
+step
+goto 48.11,20.22
+'Open _Valorhorn Crypt_ |q Sheogorath Takes a Holiday/Find the Valorhorn Crypt
+step
+goto U50__Sheo1Crypt_base 81.14,34.99 |q Sheogorath Takes a Holiday/Find the Fest Eidar
+step
+goto 70.23,67.44
+'Open _Fest Eidar Vault_ |q Sheogorath Takes a Holiday/Find the Fest Eidar
+step
+goto 52.01,68.08
+kill Giant Daedrat |q Sheogorath Takes a Holiday/Kill the Giant Daedrat
+step
+goto 44.58,68.08
+'Take _Fest Eidar_ |q Sheogorath Takes a Holiday/Take the Fest Eidar
+step
+'Open _Eastmarch_ Map
+'Travel to _Windhelm_ |q Sheogorath Takes a Holiday/Talk to Sheogorath Outside the Hall of the Dead
+|tip Manually skip to the next step.
+step
+goto windhelm_base 44.77,46.45 |q Sheogorath Takes a Holiday/Talk to Sheogorath Outside the Hall of the Dead
+step
+goto 35.16,49.12
+talk Sheogorath
+turnin Sheogorath Takes a Holiday
+accept Madness Comes to Wayrest
+step
+'Open _Stormhaven_
+'Travel to _Wayrest_ |q Madness Comes to Wayrest/Meet Sheogorath Near the Wayrest Merchant District
+|tip Manually skip to the next step.
+step
+goto wayrest_base 49.85,35.87
+talk Othuk |q Madness Comes to Wayrest/Talk to Othuk the Merchant |future
+step
+goto 38.48,23.10 |q Madness Comes to Wayrest/Follow the Tomato Trail
+step
+goto 38.46,14.49
+'Examine _Plunderer Instructions_ |lorebook Plunderer Instructions/3/59/19
+step
+goto 38.72,14.53
+talk Sheogorath |q Madness Comes to Wayrest/Talk to Sheogorath
+step
+goto 38.71,15.06
+talk Courier Danasid |q Madness Comes to Wayrest |future
+|tip Manually skip to the next step.
+step
+goto 63.54,12.00 |q Madness Comes to Wayrest/Search for the Plunderers
+step
+goto 81.45,23.82 |q Madness Comes to Wayrest/Search for the Plunderers
+step
+goto stormhaven_base 64.46,58.66 |q Madness Comes to Wayrest/Search for the Plunderers
+step
+goto 68.94,58.74
+talk Sheogorath |q Madness Comes to Wayrest |future
+|tip Manually skip to the next step.
+step
+goto 69.05,58.46
+'Open _Plunderer's Hideout_ |q Madness Comes to Wayrest/Enter the Plunderer's Hideout |future
+|tip Manually skip to the next step.
+step
+goto U50_base_Sheo2Hideout 43.85,69.35
+|tip Watch the dialogue.
+'Open _Plunderer's Warehouse_ |q Madness Comes to Wayrest/Find Sheogorath |future
+|tip Manually skip to the next step.
+step
+goto 90.29,62.23 |q Madness Comes to Wayrest/Find Sheogorath
+step
+goto 92.19,30.34 |q Madness Comes to Wayrest/Find Sheogorath
+step
+goto 62.51,36.70
+'Open _Plunder King's Trove_ |q Madness Comes to Wayrest/Find Sheogorath
+step
+goto 43.43,36.11
+kill Scamps |q Madness Comes to Wayrest/Kill the Traitorous Scamps |future
+|tip Manually skip to the next step.
+step
+goto 41.19,31.82
+'Destroy _Binding Device_ |q Madness Comes to Wayrest/Free Sheogorath
+step
+goto 40.57,43.12
+talk Plunder King Endelrin |q Madness Comes to Wayrest/Interrogate the Plunder King
+step
+goto 22.98,53.01
+'Open _Plunderer's Inner Den_ |q Madness Comes to Wayrest/Meet Sheogorath Outside the Cellar |future
+|tip Manually skip to the next step.
+step
+goto 3.59,77.78
+'Open _Stormhaven_ |q Madness Comes to Wayrest/Meet Sheogorath Outside the Cellar
+|tip Manually skip to the next step.
+step
+goto stormhaven_base 69.08,58.64
+talk Sheogorath
+turnin Madness Comes to Wayrest
+step
+goto 68.96,58.52
+talk Noth the Unhinged
+accept A Taste of the Finer Things
+step
+goto 67.34,53.45
+'Use _Dro-Dara Plantation_
+'Travel to _Firebrand Keep_ |q A Taste of the Finer Things/Go to the Shivering Shack
+|tip Manually skip to the next step.
+step
+goto stormhaven_base 39.40,38.17
+'Open _Shivering Shack_ |q A Taste of the Finer Things/Go to the Shivering Shack
+step
+goto U50_base_Sheo1Manor 54.24,73.34
+talk Noth the Unhinged
+talk Sheogorath |q A Taste of the Finer Things/Talk to Sheogorath
+step
+goto 55.78,94.51
+'Open _Stormhaven_ |q A Taste of the Finer Things/Go to the Cheese Festival
+|tip Manually skip to the next step.
+step
+goto stormhaven_base 33.62,39.08
+'Use _Firebrand Keep_
+'Travel to _Tel Mora_ in Vvardenfell |q A Taste of the Finer Things/Go to the Cheese Festival
+|tip Manually skip to the next step.
+step
+goto vvardenfell_base 71.21,35.68
+talk Sheogorath |q A Taste of the Finer Things/Talk to Sheogorath |future
+step
+goto 71.07,35.64
+'Eat _Elsweyr Edam_ |q A Taste of the Finer Things/.*Sample the Cheese.* |count 1
+step
+goto 71.40,35.61
+'Eat _Telvanni Fungi Crumble_ |q A Taste of the Finer Things/.*Sample the Cheese.* |count 2
+step
+goto 71.11,34.87
+'Eat _Redoran Rennet_ |q A Taste of the Finer Things/.*Sample the Cheese.* |count 3
+step
+goto 71.09,34.96
+talk Sheogorath |q A Taste of the Finer Things/Talk to Sheogorath
+step
+goto 70.34,33.03 |q A Taste of the Finer Things/Go to Curd Cave Cheesery
+step
+goto 69.89,33.58
+'Enter _Curd Cave Cheesery_ |q A Taste of the Finer Things/Go to Curd Cave Cheesery
+step
+goto U50_base_Sheo3CF 34.83,12.93
+talk Sheogorath |q A Taste of the Finer Things/Talk to Sheogorath
+step
+goto 41.37,22.73
+'Enter _Cheese Storage_ |q A Taste of the Finer Things/.*Find Ingredients.*
+|tip Manually skip to the next step.
+step
+goto 52.39,40.41
+'Take _Kwama Curds_ |q A Taste of the Finer Things/.*Find Ingredients.* |count 1
+step
+goto 60.15,56.55
+'Take _West Weald Whey_ |q A Taste of the Finer Things/.*Find Ingredients.* |count 2
+step
+goto 65.61,53.86
+'Enter _Cheesery Production_ |q A Taste of the Finer Things/.*Find Ingredients.*
+|tip Manually skip to the next step.
+step
+goto 68.55,68.97
+'Take _Aged Cheese Wheel_ |q A Taste of the Finer Things/.*Find Ingredients.* |count 3
+step
+goto 60.54,87.71
+'Use _Cauldron_ |q A Taste of the Finer Things/Make the Antidote
+step
+goto 61.67,84.91
+talk Sheogorath |q A Taste of the Finer Things/Give Sheogorath the Antidote
+step
+goto 22.51,37.13
+'Examine _Violet Vvardvark Tavern Receipt_ |lorebook Violet Vvardvark Tavern Receipt/3/59/20
+step
+goto 23.05,38.16
+talk Sheogorath|q A Taste of the Finer Things/Talk to Sheogorath
+step
+goto 35.83,05.00
+'Enter _Vvardenfell_ |q A Taste of the Finer Things/Meet Sheogorath at the Violet Vvardvark
+|tip Manually skip to the next step.
+step
+goto vvardenfell_base 71.25,31.45
+'Open _Violet Vvardark_ |q A Taste of the Finer Things/Meet Sheogorath at the Violet Vvardvark
+step
+goto 71.42,31.08
+talk Sheogorath
+turnin A Taste of the Finer Things
+accept A Madcap Mystery
+step
+goto 71.42,30.92
+talk Barkeep Ubeq |q A Madcap Mystery/Talk to the Barkeep
+step
+goto 71.23,31.03
+talk Server Canodia Furotis |q A Madcap Mystery/Talk to the Server
+step
+goto 71.43,31.33
+'Open _Vvardenfell_ |q A Madcap Mystery/Find Eduard
+|tip Manually skip to the next step.
+step
+goto 75.08,34.21 |q A Madcap Mystery/Find Eduard
+step
+goto 76.45,36.98
+talk Dragon Frog |q A Madcap Mystery/Talk to the Dragon Frog |future
+step
+goto 76.39,36.93
+talk Sheogorath |q A Madcap Mystery/Talk to Sheogorath
+step
+goto 74.49,37.69
+'Search _Festering Morsel Mound_ |q A Madcap Mystery/Search for a Piece of Eduard |future
+step
+goto 75.30,36.26 |q A Madcap Mystery/Talk to the Dragon Frog
+step
+goto 76.44,36.98
+talk Dragon Frog |q A Madcap Mystery/Talk to the Dragon Frog
+step
+goto 75.40,34.67 |q A Madcap Mystery/Return to the Violet Vvardvark
+step
+goto 71.24,31.45
+'Open _The Violet Vvardvark_ |q A Madcap Mystery/Return to the Violet Vvardvark
+step
+goto 71.42,30.92
+talk Barkeep Ubeq |q A Madcap Mystery/Talk to the Barkeep
+step
+goto 70.89,30.82
+talk Sheogorath |q A Madcap Mystery/Talk to Sheogorath
+step
+goto 71.44,31.33
+'Open _Vvardenfell_ |q A Madcap Mystery/Find Othuk's Camp
+|tip Manually skip the next step.
+step
+goto 70.96,37.71 |q A Madcap Mystery/Find Othuk's Camp
+step
+goto 71.59,37.57
+'Examine _Othuk's Note_ |lorebook Othuk's Note/3/59/21
+step
+goto 71.93,37.75
+talk Sheogorath |q A Madcap Mystery/Talk to Sheogorath
+step
+goto 67.29,40.93 |q A Madcap Mystery/Follow the Tomeshell's Trail
+step
+goto 67.20,42.01
+'Open _Pulk_ |q A Madcap Mystery/Follow the Tomeshell's Trail
+|tip Manually skip to the next step.
+step
+goto pulkupper_base 39.49,28.31 |q A Madcap Mystery/Follow the Tomeshell's Trail
+step
+goto pulklower_base 17.90,40.76 |q A Madcap Mystery/Follow the Tomeshell's Trail
+step
+goto 19.65,49.42 |q A Madcap Mystery/Follow the Tomeshell's Trail
+step
+goto 29.67,44.75 |q A Madcap Mystery/Follow the Tomeshell's Trail
+step
+goto 42.41,56.71 |q A Madcap Mystery/Follow the Tomeshell's Trail
+step
+goto 57.00,46.79 |q A Madcap Mystery/Follow the Tomeshell's Trail
+step
+goto 59.34,38.81 |q A Madcap Mystery/Follow the Tomeshell's Trail
+step
+goto 82.88,50.19 |q A Madcap Mystery/Follow the Tomeshell's Trail
+step
+goto 87.55,45.72
+'Open _Othuk's Hideout_ |q A Madcap Mystery/Follow the Tomeshell's Trail
+step
+goto U50_base_Sheo4Hideout 41.09,62.02 |q A Madcap Mystery/Find Othuk
+step
+goto 69.77,54.46
+'Enter _Othuk's Hideout_ |q A Madcap Mystery/Find Othuk
+step
+goto 66.28,27.33
+kill Lazaki |q A Madcap Mystery/Defeat Lazaki
+step
+goto 64.92,21.51
+talk Othuk |q A Madcap Mystery/Talk to Othuk
+step
+goto 54.84,30.81
+'Enter _Pulk_ |q A Madcap Mystery/Talk to Sheogorath |future
+|tip Manually skip to the next step.
+step
+goto pulkupper_base 39.98,20.14 |q A Madcap Mystery/Talk to Sheogorath
+step
+goto 24.12,14.11
+'Open _Vvardenfell_ |q A Madcap Mystery/Talk to Sheogorath
+|tip Manually skip to the next step.
+step
+goto vvardenfell_base 66.55,42.19
+talk Sheogorath
+turnin A Madcap Mystery
+accept Chasing Madness
+step
+goto 66.46,42.12
+'Open _Stormhaven_ |q Chasing Madness/Go to the Shivering Shack
+|tip Manuallhy skip to the next step.
+step
+goto stormhaven_base 39.40,38.17
+'Open _Shivering Shack_ |q Chasing Madness/Go to the Shivering Shack
+|tip Manually skip to the next step.
+step
+goto U50_base_Sheo1Manor 56.11,80.98
+|tip Watch the dialogue.
+talk Maddy |q Chasing Madness/Talk to Maddy |future
+step
+goto 54.66,82.15
+talk Sheogorath |q Chasing Madness/Talk to Sheogorath
+step
+goto 56.11,80.67
+'Use _Portal to Enduum_ |q Chasing Madness/Follow Maddy through the Portal
+|tip Manually skip to the next step.
+step
+goto enduum_base 24.90,74.32
+'Take _Mote of Power_ |q Chasing Madness/Gather Power Motes in Enduum |future
+step
+goto 24.79,74.12
+talk Sheogorath |q Chasing Madness/Talk to Sheogorath
+step
+goto 40.18,74.63
+'Take _Mote of Power_ |q Chasing Madness/Track Sheogorath's Motes of Power
+|tip Manually skip to the next step.
+step
+goto 42.60,57.84
+'Take _Mote of Power_ |q Chasing Madness/Track Sheogorath's Motes of Power
+|tip Manually skip to the next step.
+step
+goto 33.83,56.31
+'Take _Mote of Power_ |q Chasing Madness/Track Sheogorath's Motes of Power
+|tip Manually skip to the next step.
+step
+goto 35.25,33.78 |q Chasing Madness/Track Sheogorath's Motes of Power
+step
+goto 40.03,33.94
+'Take _Mote of Power_ |q Chasing Madness/Track Sheogorath's Motes of Power
+|tip Manually skip to the next step.
+step
+goto 50.47,33.70
+'Take _Mote of Power_ |q Chasing Madness/Track Sheogorath's Motes of Power
+|tip Manually skip to the next step.
+step
+goto 64.70,38.47
+|tip Stay to the right.
+'Take _Mote of Power_ |q Chasing Madness/Track Sheogorath's Motes of Power
+|tip Manually skip to the next step.
+step
+goto 65.93,54.18
+'Take _Mote of Power_ |q Chasing Madness/Track Sheogorath's Motes of Power
+|tip Manually skip to the next step.
+step
+goto 56.62,47.76
+|tip Watch the dialogue.
+|tip Choose to go back to the festival.
+talk Sheogorath |q Chasing Madness |future
+|tip Manually skip to the next step.
+step
+goto 57.22,48.31
+.'Use _Sheogorath's Staff_
+.'Use _Portal to Maddy_ |q Chasing Madness/Return to the Cheese Festival in Vvardenfell
+|tip Manually skip to the next step.
+step
+goto vvardenfell_base 71.04,35.35
+talk Adaznabi |q Chasing Madness/Extract Motes of Power from Festival-Goers |future
+|tip Manually skip to the next step.
+step
+goto 71.34,35.57
+talk Tilarian |q Chasing Madness/Extract Motes of Power from Festival-Goers |future
+|tip Manually skip to the next step.
+step
+goto 70.86,34.96
+talk Soliish |q Chasing Madness/Extract Motes of Power from Festival-Goers |future
+|tip Manually skip to the next step.
+step
+goto 70.97,34.43
+'Take _Mote of Power_ |q Chasing Madness/Extract Motes of Power from Festival-Goers |future
+|tip Manually skip to the next step.
+step
+goto 70.14,33.10
+'Take _Mote of Power_ |q Chasing Madness/Extract Motes of Power from Festival-Goers |future
+|tip Manually skip to the next step.
+step
+goto 69.91,33.57
+'Enter _Curd Cave Cheesery_ |q Chasing Madness/Track Maddy
+|tip Manually skip to the next step.
+step
+goto U50_base_Sheo3CF 41.02,23.05
+'Enter _Cheese Storage_ |q Chasing Madness/Track Maddy
+|tip Manually skip to the next step.
+step
+goto 65.56,54.00
+'Enter _Cheesery Production_ |q Chasing Madness/Track Maddy
+|tip Manually skip to the next step.
+step
+goto 29.15,83.30
+talk Sheogorath |q Chasing Madness/Talk to Sheogorath |future
+step
+goto 29.12,81.04
+.'Use _Sheogorath's Staff_
+.'Use _Portal to Maddy_ |q Chasing Madness/Return to the Plunderers' Camp |future
+|tip Manually skip to the next step.
+step
+goto stormhaven_base 64.53,58.58
+talk Plunderer Finildel |q Chasing Madness/Talk to Plunderer Finildel |future
+step
+goto 65.27,58.90
+talk Chicken |q Chasing Madness/.*Extract Motes of Power from Plunderers.* |count 1
+step
+goto 66.63,60.08
+talk Chicken |q Chasing Madness/.*Extract Motes of Power from Plunderers.* |count 2
+step
+goto 68.26,58.32
+talk Chicken |q Chasing Madness/.*Extract Motes of Power from Plunderers.* |count 3
+step
+goto 67.37,57.91
+talk Nimiri |q Chasing Madness/.*Extract Motes of Power from Plunderers.* |count 4
+step
+goto 69.06,58.46
+'Open _Plunderer's Hideout_ |q Chasing Madness/Search the Plunderer's Hideout
+|tip Manually skip to the next step.
+step
+goto U50_base_Sheo2Hideout 43.85,69.38
+'Open _Plunderer's Warehouse_ |q Chasing Madness/Search the Plunderer's Hideout
+|tip Manually skip to the next step.
+step
+goto 93.30,36.73
+'Open _Secret Stash_ |q Chasing Madness/Search the Plunderer's Hideout |future
+|tip Manually skip to the next step.
+step
+goto U50_base_Sheo5HideoutBossRoom 46.57,53.92
+kill Lamia Queen |q Chasing Madness/Confront Maddy |future
+|tip Manually skip to the next step.
+step
+goto 46.57,53.92
+talk Sheogorath |q Chasing Madness/Talk to Sheogorath
+step
+goto 59.23,61.16
+.'Use _Sheogorath's Staff_
+.'Use _Portal to the Shivering Shack_ |q Chasing Madness/Return to the Shivering Shack
+|tip Manually skip to the next step.
+step
+|tip Portal is glitchy if you got teleported to a random location use this step.
+'Open _Stormhaven_ Map
+'Travel to _Firebrand Keep_ |q Chasing Madness/Return to the Shivering Shack
+|tip Manually skip to the next step.
+step
+goto stormhaven_base 39.39,38.17
+'Open _Shivering Shack_ |q Chasing Madness/Return to the Shivering Shack
+|tip Manually skip to the next step.
+step
+goto U50_base_Sheo1Manor 37.62,80.88
+'Open _Lounge_ |q Chasing Madness/Find Sheogorath |future
+|tip Manually skip to the next step.
+step
+goto 16.73,47.37
+talk Sheogorath
+turnin Chasing Madness
+accept The Last Laugh
+step
+'Open _Stormhaven_ Map
+'Travel to _Wayrest_ |q The Last Laugh/Go to the Wayrest Mages Guildhall
+|tip Manually skip to the next step.
+step
+goto wayrest_base 43.61,56.56 |q The Last Laugh/Go to the Wayrest Mages Guildhall
+step
+goto 54.16,47.26
+'Open _Mages Guild Hall_ |q The Last Laugh/Go to the Wayrest Mages Guildhall |future
+|tip Manually skip to the next step.
+step
+goto 54.85,51.80
+'Open _The Arcane Collection_ |q The Last Laugh/Enter the Arcane Collection
+step
+goto 57.84,48.83
+'Examine _The Garbled Grimoire_ |lorebook The Garbled Grimoire/3/59/27
+step
+goto 56.56,50.02
+talk Sheogorath |q The Last Laugh/Talk to Sheogorath
+step
+goto 58.73,48.19
+'Take _Uninspired Potables_ |q The Last Laugh/Find Roofwater Wine
+step
+goto 58.18,52.01
+'Take _Commonly Used Plant Bits_ |q The Last Laugh/Find Cornflower Dust
+step
+goto 56.42,49.60
+.'Pour _Butterfly Bile_
+.'Toss _Cornflower Dust_
+.'Pour _Roofwater Wine_ |q The Last Laugh/Cast the Spell
+step
+goto 56.26,49.05
+'Use _Portal to the Shivering Isles_ |q The Last Laugh/Enter the Shivering Isles |future
+|tip Manually skip to the next step.
+step
+goto U50_sheo6_shiveringIsles_base 43.88,82.80
+talk Sheogorath |q The Last Laugh/Talk to Sheogorath
+step
+goto 52.76,71.35
+'Find and _Confront Maddy_
+kill Gatekeeper Colossus |q The Last Laugh/Defeat Gatekeeper Colossus |future
+step
+goto 52.22,70.88
+talk Noth the Unhinged |q The Last Laugh/Talk to Noth the Unhinged
+step
+goto 40.74,56.32
+|tip Run the goats around until one of them stops and is able to be targeted.
+'Use _Sheogorath's Staff_ |q The Last Laugh/Gather Power from the Ghostly Goats |future
+|tip Manually skip to the next step.
+step
+goto 47.00,49.86
+'Use _Sheogorath's Staff_ |q The Last Laugh/Gather Power from the Ghostly Goats |future
+|tip Manually skip to the next step.
+step
+goto 40.38,42.30
+'Use _Sheogorath's Staff_ |q The Last Laugh/Gather Power from the Ghostly Goats
+step
+goto 42.80,42.82
+talk Sheogorath |q The Last Laugh/Talk to Sheogorath
+step
+goto 44.10,37.08
+'Enter _Bog of Disappointment_ |q The Last Laugh/Follow Noth into the Bog of Disappoinment |future
+|tip Manually skip to the next step.
+step
+goto 41.08,29.78
+talk Noth the Unhinged |q The Last Laugh/Talk to Noth the Unhinged |future
+step
+goto 45.12,20.88
+'Examine _Blob of Dementia_ |q The Last Laugh/Find Objects Hidden in the Blobs
+|tip Manually skip to the next step.
+step
+goto 49.30,25.96
+'Examine _Blob of Dementia_ |q The Last Laugh/Find Objects Hidden in the Blobs
+|tip Manually skip to the next step.
+step
+goto 57.95,27.84
+'Examine _Blob of Dementia_ |q The Last Laugh/Find Objects Hidden in the Blobs
+step
+goto 57.77,27.84
+talk Noth the Unhinged |q The Last Laugh/Talk to Noth the Unhinged
+step
+goto 60.90,35.13
+'Open _Cathedral of Madness_ |q The Last Laugh/Reach the Cathedral of Madness
+|tip Manually skip to the next step.
+step
+goto 63.73,45.26
+talk Sheogorath |q The Last Laugh/Talk to Sheogorath |future
+|tip Manually skip to the next step.
+step
+goto 68.18,45.22
+'Place _Shrine_ |q The Last Laugh/Remove the Shrine Barrier
+|tip Manually skip to the next step.
+step
+goto 63.68,42.15
+'Use _Shrine_ |q The Last Laugh/Remove the Shrine Barrier
+|tip Manually skip to the next step.
+step
+goto 57.58,43.62
+'Place _Shrine_ |q The Last Laugh/Remove the Shrine Barrier
+|tip Manually skip to the next step.
+step
+goto 63.92,46.87
+'Activate _Maddy's Pedestal_ |q The Last Laugh/Remove the Shrine Barrier
+|tip Manually skip to the next step.
+step
+goto 63.96,48.51
+'Use _Barrier Switch_ |q The Last Laugh/Remove the Shrine Barrier
+step
+goto 63.83,57.42
+'Defeat _Maddy_
+talk Maddy |q The Last Laugh/Talk to Maddy |future
+step
+goto 64.61,56.00
+talk Sheogorath |q The Last Laugh/Talk to Sheogorath
+step
+goto 63.97,58.62
+|tip Watch the dialogue.
+'Open _Portal to Shivering Shack_ |q The Last Laugh/Leave the Shivering Isles |future
+|tip Manually skip to the next step.
+step
+goto U50_base_Sheo1Manor 55.83,94.51
+'Open _Stormhaven_ |q The Last Laugh/Talk to Noth |future
+|tip Manually skip to the next step.
+step
+goto stormhaven_base 39.03,38.44
+talk Noth the Unhinged
+turnin The Last Laugh
 ]])
