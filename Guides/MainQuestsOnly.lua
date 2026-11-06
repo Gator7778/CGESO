@@ -50993,4 +50993,7 @@ step
 goto stormhaven_base 39.03,38.44
 talk Noth the Unhinged
 turnin The Last Laugh
+step
+'Congraulations _All Full Guides Complete._
+step
 ]])
