@@ -1,11 +1,10 @@
 ﻿## Title: |cfd5b02Community Leveling Guides|r
 ## Description: A Zygor addon updated by snichols7778, Hydra9268, Krandor1, and Sharlikran for the Gold Road DLC.
 ## Author: snichols7778, Hydra9268
-## Version: 1179
-## AddOnVersion: 1179
+## Version: 1180
+## AddOnVersion: 1180
 ## APIVersion: 101051
-## DependsOn: LibGPS>=73
-## OptionalDependsOn: LibAddonMenu-2.0
+## DependsOn: LibGPS>=73 LibAddonMenu-2.0
 ## SavedVariables: CGESOSettings
 ## Disclaimer: This Add-on is not created by, affiliated with or sponsored by ZeniMax Media Inc. or its affiliates. The Elder Scrolls and related logos are registered trademarks or trademarks of ZeniMax Media Inc. in the United States and/or other countries. All rights reserved. This Add-on is not sponsored by Zygor Guides.
 
