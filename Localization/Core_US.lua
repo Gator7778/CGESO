@@ -217,7 +217,7 @@ end)
 GuideViewer("Option", "enUS", function() local f = {
 
 			------ ESO ADDON SETTINGS (LAM) -------
-			["opt_lam_intro"] = "Quick settings for Community Leveling Guide. Use Open Full Settings for the complete options UI (Guide Viewer, Waypoint Arrow, Profiles, and more).",
+			["opt_lam_intro"] = "All settings match the in-addon Home panel and share the same SavedVariables. Use Open Full Settings for the guide list and chapter browser.",
 			["opt_lam_open_full"] = "Open Full Settings",
 			["opt_lam_open_full_desc"] = "Open the Community Leveling Guide settings window.",
 			["opt_lam_modes"] = "Modes",

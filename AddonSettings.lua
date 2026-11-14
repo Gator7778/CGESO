@@ -1,13 +1,13 @@
 -----------------------------------------
 -- ESO ADDON SETTINGS (LibAddonMenu-2.0)
--- Lists "Community Leveling Guide" under Esc → Settings → Addons
--- and mirrors key options; full UI remains GuideMenu Settings.
+-- Esc → Settings → Addons → Community Leveling Guide
+-- Mirrors Home settings (Guide Viewer / Waypoint Arrow / Extras / Profiles / Modes)
+-- on the same SavedVariables. Guide list / banners / Start Guide stay Home-only.
 -----------------------------------------
 
 local CGV = _G.CGV
 local tinsert = table.insert
 
--- Options localization (GuideViewer "Option" table → CGV.O)
 local function Opt(key, fallback)
   local O = CGV.O
   if O and O[key] then return O[key] end
@@ -16,31 +16,59 @@ end
 
 local PANEL_ID = "CGESO_AddonSettings"
 
-local function GetProfile()
-  return CGV.db and CGV.db.profile
+local ARROW_ORANGE = { r = 245 / 255, g = 93 / 255, b = 7 / 255, a = 1 }
+
+-----------------------------------------
+-- Shared get/set via Option objects (same SV as Home)
+-----------------------------------------
+
+local function GetOptionObject(optname)
+  return CGV.db and CGV.db.GetOptionObject and CGV.db:GetOptionObject(optname)
 end
 
--- Prefer updating through the Option object so GuideMenu controls stay in sync when open.
-local function SetProfileOption(optname, value)
-  local opt = CGV.db and CGV.db.GetOptionObject and CGV.db:GetOptionObject(optname)
-  if opt and opt.frame and opt.frame.SetValue then
-    opt.frame:SetValue(value)
-  elseif opt and opt.SetValue then
-    opt:SetValue(value)
-  else
-    local profile = GetProfile()
-    if profile then
-      profile[optname] = value
+-- Character-scoped option names (match Options.lua `char = true`).
+local CHAR_OPTIONS = {
+  guide_style = true,
+  creator = true,
+  developer = true,
+}
+
+-- Prefer Option:SetValue so Home widgets stay in sync when open; runs option.set hooks.
+local function SetNamedOption(optname, value)
+  local opt = GetOptionObject(optname)
+  if opt then
+    if opt.frame and opt.frame.SetValue then
+      opt.frame:SetValue(value)
+    else
+      opt:SetValue(value)
     end
+    return
+  end
+  -- Early / fallback before options init
+  if CHAR_OPTIONS[optname] then
+    local char = CGV.sv and CGV.sv.char
+    if char then char[optname] = value end
+  elseif CGV.db and CGV.db.profile then
+    CGV.db.profile[optname] = value
   end
 end
 
-local function GetProfileOption(optname, default)
-  local profile = GetProfile()
-  if not profile then return default end
-  local v = profile[optname]
-  if v == nil then return default end
-  return v
+local function GetNamedOption(optname, default)
+  local opt = GetOptionObject(optname)
+  if opt and opt.GetValue then
+    local v = opt:GetValue()
+    if v ~= nil then return v end
+  end
+  if CHAR_OPTIONS[optname] then
+    local char = CGV.sv and CGV.sv.char
+    if char and char[optname] ~= nil then return char[optname] end
+    return default
+  end
+  local profile = CGV.db and CGV.db.profile
+  if profile and profile[optname] ~= nil then
+    return profile[optname]
+  end
+  return default
 end
 
 local function GetChar()
@@ -55,7 +83,6 @@ local function GetCharFlag(name, default)
   return v and true or false
 end
 
--- Same saved vars / live flags as /cgv creator and /cgv developer
 local function SetCreatorMode(enabled)
   local char = GetChar()
   if not char then return end
@@ -78,13 +105,19 @@ local function SetDeveloperMode(enabled)
   end
 end
 
+local function SetViewerOpacity(v)
+  SetNamedOption("opacitymain", v)
+  if CGV.Viewer and CGV.Viewer.SetAlpha then
+    CGV.Viewer:SetAlpha(v)
+  end
+end
+
 -----------------------------------------
 -- PROFILES (create / switch / copy / delete)
 -----------------------------------------
 
 local newProfileNameDraft = ""
 
--- LAM2 dropdowns require non-empty choices AND getFunc() ∈ choices.
 local function SortedProfileNames()
   local names = {}
   local db = CGV.db
@@ -128,7 +161,6 @@ local function GetCurrentProfileName()
   return names[1]
 end
 
--- Action dropdowns (copy / delete): choices always include the selected getFunc value.
 local function CopyProfileChoices()
   local placeholder = Opt("opt_copy_profile_settings_default", "Choose a profile...")
   local names = OtherProfileNames()
@@ -143,8 +175,7 @@ local function CopyProfileChoices()
 end
 
 local function CopyProfileGet()
-  local choices = CopyProfileChoices()
-  return choices[1]
+  return CopyProfileChoices()[1]
 end
 
 local function DeleteProfileChoices()
@@ -161,11 +192,9 @@ local function DeleteProfileChoices()
 end
 
 local function DeleteProfileGet()
-  local choices = DeleteProfileChoices()
-  return choices[1]
+  return DeleteProfileChoices()[1]
 end
 
--- LAM2 requires choices to be a table (not a function). Refresh via control references.
 local REF_CURRENT = "CGESO_LAM_CurrentProfile"
 local REF_COPY = "CGESO_LAM_CopyProfile"
 local REF_DELETE = "CGESO_LAM_DeleteProfile"
@@ -246,6 +275,22 @@ local function DeleteProfileByName(name)
   end
 end
 
+-----------------------------------------
+-- Build LAM controls
+-----------------------------------------
+
+local function GuideStyleChoices()
+  return {
+    Opt("opt_guide_style_ask", "Ask each time"),
+    Opt("opt_guide_style_full", "Full Guide"),
+    Opt("opt_guide_style_mqo", "Main Quests Only"),
+  }
+end
+
+local function GuideStyleValues()
+  return { "ask", "full", "mqo" }
+end
+
 local function RegisterWithLAM()
   local LAM = _G.LibAddonMenu2
   if not LAM and _G.LibStub then
@@ -272,163 +317,462 @@ local function RegisterWithLAM()
   local optionsTable = {
     {
       type = "description",
-      text = Opt("opt_lam_intro", "Quick settings for Community Leveling Guide. Use Open Full Settings for the complete options UI."),
+      text = Opt("opt_lam_intro", "All settings match the in-addon Home panel and share the same SavedVariables. Use Open Full Settings for the guide list and chapter browser."),
       width = "full",
     },
     {
       type = "button",
       name = Opt("opt_lam_open_full", "Open Full Settings"),
-      tooltip = Opt("opt_lam_open_full_desc", "Open the Community Leveling Guide settings window (Guide Viewer, Waypoint Arrow, and more)."),
+      tooltip = Opt("opt_lam_open_full_desc", "Open the Community Leveling Guide Home window (guide list, chapter banners, Start Guide, and settings)."),
       func = function()
         if CGV.Settings and CGV.Settings.OpenSettings then
           CGV.Settings:OpenSettings()
+        elseif CGV.Menu and CGV.Menu.Show then
+          CGV.Menu:Show()
         end
       end,
       width = "full",
     },
+
+    -----------------------------------------
+    -- GUIDE VIEWER
+    -----------------------------------------
     {
-      type = "header",
+      type = "submenu",
       name = Opt("opt_viewer", "Guide Viewer"),
-      width = "full",
+      controls = {
+        {
+          type = "checkbox",
+          name = Opt("opt_showviewer", "Enable Guide Viewer"),
+          tooltip = Opt("opt_showviewer_desc", "Show the Guide Viewer window."),
+          getFunc = function() return GetNamedOption("showviewer", true) end,
+          setFunc = function(v) SetNamedOption("showviewer", v) end,
+          default = true,
+          width = "full",
+        },
+        {
+          type = "slider",
+          name = Opt("opt_opacitymain", "Opacity"),
+          tooltip = Opt("opt_opacitymain_desc", "Opacity of the Guide Viewer backdrop."),
+          min = 0, max = 100, step = 1,
+          getFunc = function()
+            return zo_round((GetNamedOption("opacitymain", 0.20) or 0.20) * 100)
+          end,
+          setFunc = function(pct) SetViewerOpacity((pct or 0) / 100) end,
+          default = 20,
+          width = "half",
+        },
+        {
+          type = "slider",
+          name = Opt("opt_framescale", "Scale"),
+          tooltip = Opt("opt_framescale_desc", "You can resize the window to match your preferences."),
+          min = 50, max = 200, step = 10,
+          getFunc = function()
+            return zo_round((GetNamedOption("framescale", 1) or 1) * 100)
+          end,
+          setFunc = function(pct) SetNamedOption("framescale", (pct or 100) / 100) end,
+          default = 100,
+          width = "half",
+        },
+        {
+          type = "header",
+          name = Opt("opt_opacity_presets", "Opacity presets"),
+          width = "full",
+        },
+        {
+          type = "button",
+          name = Opt("opt_opacity_preset_0", "0%"),
+          tooltip = Opt("opt_opacity_preset_0_desc", "Fully transparent backdrop."),
+          func = function() SetViewerOpacity(0) end,
+          width = "half",
+        },
+        {
+          type = "button",
+          name = Opt("opt_opacity_preset_25", "25%"),
+          tooltip = Opt("opt_opacity_preset_25_desc", "Light backdrop (25% opaque)."),
+          func = function() SetViewerOpacity(0.25) end,
+          width = "half",
+        },
+        {
+          type = "button",
+          name = Opt("opt_opacity_preset_50", "50%"),
+          tooltip = Opt("opt_opacity_preset_50_desc", "Halfway opaque backdrop (50%)."),
+          func = function() SetViewerOpacity(0.50) end,
+          width = "half",
+        },
+        {
+          type = "button",
+          name = Opt("opt_opacity_preset_75", "75%"),
+          tooltip = Opt("opt_opacity_preset_75_desc", "Mostly opaque backdrop (75%)."),
+          func = function() SetViewerOpacity(0.75) end,
+          width = "half",
+        },
+        {
+          type = "button",
+          name = Opt("opt_opacity_preset_100", "100%"),
+          tooltip = Opt("opt_opacity_preset_100_desc", "Fully opaque backdrop."),
+          func = function() SetViewerOpacity(1) end,
+          width = "full",
+        },
+        {
+          type = "slider",
+          name = Opt("opt_fontsize", "Primary text size"),
+          tooltip = Opt("opt_fontsize_desc", "Set your preferred text size."),
+          min = 7, max = 16, step = 1,
+          getFunc = function() return GetNamedOption("fontsize", 13) end,
+          setFunc = function(v) SetNamedOption("fontsize", v) end,
+          default = 13,
+          width = "half",
+        },
+        {
+          type = "slider",
+          name = Opt("opt_fontsecsize", "Secondary text size"),
+          tooltip = Opt("opt_fontsecsize_desc", "Secondary text size for notes and descriptions."),
+          min = 5, max = 14, step = 1,
+          getFunc = function() return GetNamedOption("fontsecsize", 11) end,
+          setFunc = function(v) SetNamedOption("fontsecsize", v) end,
+          default = 11,
+          width = "half",
+        },
+        {
+          type = "slider",
+          name = Opt("opt_numStepShow", "Steps shown"),
+          tooltip = Opt("opt_numStepShow_desc", "How many guide steps to show at once."),
+          min = 1, max = 5, step = 1,
+          getFunc = function() return GetNamedOption("numStepShow", 1) end,
+          setFunc = function(v) SetNamedOption("numStepShow", v) end,
+          default = 1,
+          width = "full",
+        },
+        {
+          type = "header",
+          name = Opt("opt_guide_style", "Guide Style"),
+          width = "full",
+        },
+        {
+          type = "dropdown",
+          name = Opt("opt_guide_style", "Guide Style"),
+          tooltip = Opt("opt_guide_style_desc", "When a zone has both a Full guide and Main Quests Only, choose which to load — or ask each time."),
+          choices = GuideStyleChoices(),
+          choicesValues = GuideStyleValues(),
+          getFunc = function() return GetNamedOption("guide_style", "ask") end,
+          setFunc = function(v) SetNamedOption("guide_style", v) end,
+          default = "ask",
+          width = "full",
+        },
+        {
+          type = "header",
+          name = Opt("opt_smart_skip", "Smart Skip"),
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_skipimpossible", "Skip impossible steps"),
+          tooltip = Opt("opt_skipimpossible_desc", "Automatically advance past steps that cannot be completed."),
+          getFunc = function() return GetNamedOption("skipimpossible", true) end,
+          setFunc = function(v) SetNamedOption("skipimpossible", v) end,
+          default = true,
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_skipauxsteps", "Skip auxiliary travel steps"),
+          tooltip = Opt("opt_skipauxsteps_desc", "Automatically skip travel/goto-only steps when the next real objective is already done."),
+          getFunc = function() return GetNamedOption("skipauxsteps", true) end,
+          setFunc = function(v) SetNamedOption("skipauxsteps", v) end,
+          default = true,
+          width = "full",
+        },
+        {
+          type = "header",
+          name = Opt("opt_auto_hiding", "Auto Hiding"),
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_hideincombat", "Hide viewer while in combat"),
+          tooltip = Opt("opt_hideincombat_desc", "Hide all guide windows during combat."),
+          getFunc = function() return GetNamedOption("hideincombat", false) end,
+          setFunc = function(v) SetNamedOption("hideincombat", v) end,
+          default = false,
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_hideoninventory", "Hide viewer while inventory is open"),
+          tooltip = Opt("opt_hideoninventory_desc", "Hide the Guide Viewer when inventory/map/options etc are opened."),
+          getFunc = function() return GetNamedOption("hideoninventory", false) end,
+          setFunc = function(v) SetNamedOption("hideoninventory", v) end,
+          default = false,
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_hideonguideconv", "Hide viewer during conversations"),
+          tooltip = Opt("opt_hideonguideconv_desc", "Hide the Guide Viewer when entering conversation with npc for the current step."),
+          getFunc = function() return GetNamedOption("hideonguideconv", false) end,
+          setFunc = function(v) SetNamedOption("hideonguideconv", v) end,
+          default = false,
+          width = "full",
+        },
+        {
+          type = "button",
+          name = Opt("opt_reset", "Reset viewer"),
+          tooltip = Opt("opt_reset_desc", "Reset Guide Viewer to original position and size."),
+          func = function()
+            if CGV.Viewer and CGV.Viewer.ResetAllViewerSettings then
+              CGV.Viewer:ResetAllViewerSettings()
+            end
+          end,
+          width = "full",
+        },
+        {
+          type = "description",
+          text = Opt("opt_general_tip_desc", "Did you know you can bind keys to control the Level Guides Viewer? Esc → Controls → Keybindings → Community Leveling Guides."),
+          width = "full",
+        },
+      },
     },
+
+    -----------------------------------------
+    -- WAYPOINT ARROW
+    -----------------------------------------
     {
-      type = "checkbox",
-      name = Opt("opt_showviewer", "Enable Guide Viewer"),
-      tooltip = Opt("opt_showviewer_desc", "Show the Guide Viewer window."),
-      getFunc = function() return GetProfileOption("showviewer", true) end,
-      setFunc = function(v)
-        SetProfileOption("showviewer", v)
-        if CGV.Viewer and CGV.Viewer.ShowIf_GuideViewer then
-          CGV.Viewer:ShowIf_GuideViewer(v)
-        end
-      end,
-      default = true,
-      width = "full",
-    },
-    {
-      type = "slider",
-      name = Opt("opt_opacitymain", "Opacity"),
-      tooltip = Opt("opt_opacitymain_desc", "Opacity of the Guide Viewer backdrop."),
-      min = 0,
-      max = 100,
-      step = 1,
-      getFunc = function()
-        return zo_round((GetProfileOption("opacitymain", 0.20) or 0.20) * 100)
-      end,
-      setFunc = function(pct)
-        SetProfileOption("opacitymain", (pct or 0) / 100)
-        if CGV.Viewer and CGV.Viewer.SetAlpha then
-          CGV.Viewer:SetAlpha((pct or 0) / 100)
-        end
-      end,
-      default = 20,
-      width = "full",
-    },
-    {
-      type = "header",
+      type = "submenu",
       name = Opt("opt_arrow", "Waypoint Arrow"),
-      width = "full",
+      controls = {
+        {
+          type = "checkbox",
+          name = Opt("opt_arrowshow", "Enable waypoint arrow"),
+          tooltip = Opt("opt_arrowshow_desc", "Display a rotating arrow toward the current waypoint."),
+          getFunc = function() return GetNamedOption("arrowshow", true) end,
+          setFunc = function(v) SetNamedOption("arrowshow", v) end,
+          default = true,
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_arrowfreeze", "Lock arrow in place"),
+          tooltip = Opt("opt_arrowfreeze_desc", "Make the pointer arrow transparent to mouse clicks."),
+          getFunc = function() return GetNamedOption("arrowfreeze", false) end,
+          setFunc = function(v) SetNamedOption("arrowfreeze", v) end,
+          default = false,
+          width = "full",
+        },
+        {
+          type = "header",
+          name = Opt("opt_arrow_display", "Arrow look and feel:"),
+          width = "full",
+        },
+        {
+          type = "colorpicker",
+          name = Opt("opt_arrowcolor", "Arrow color"),
+          tooltip = Opt("opt_arrowcolor_desc", "Color of the in-world waypoint arrow."),
+          getFunc = function()
+            local c = GetNamedOption("arrowcolor", ARROW_ORANGE)
+            return c.r or 1, c.g or 1, c.b or 1, c.a or 1
+          end,
+          setFunc = function(r, g, b, a)
+            SetNamedOption("arrowcolor", { r = r, g = g, b = b, a = a or 1 })
+          end,
+          default = ARROW_ORANGE,
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_arrowcolordist", "Color by distance"),
+          tooltip = Opt("opt_arrowcolordist_desc", "Color the arrow by distance, instead of by direction."),
+          getFunc = function() return GetNamedOption("arrowcolordist", false) end,
+          setFunc = function(v) SetNamedOption("arrowcolordist", v) end,
+          default = false,
+          width = "full",
+        },
+        {
+          type = "slider",
+          name = Opt("opt_arrowalpha", "Opacity"),
+          tooltip = Opt("opt_arrowalpha_desc", "Set the opacity of the waypoint arrow graphic."),
+          min = 30, max = 100, step = 10,
+          getFunc = function()
+            return zo_round((GetNamedOption("arrowalpha", 1) or 1) * 100)
+          end,
+          setFunc = function(pct) SetNamedOption("arrowalpha", (pct or 100) / 100) end,
+          default = 100,
+          width = "half",
+        },
+        {
+          type = "slider",
+          name = Opt("opt_arrowscale", "Scale"),
+          tooltip = Opt("opt_arrowscale_desc", "Set the size of the waypointing arrow."),
+          min = 50, max = 200, step = 10,
+          getFunc = function()
+            return zo_round((GetNamedOption("arrowscale", 1) or 1) * 100)
+          end,
+          setFunc = function(pct) SetNamedOption("arrowscale", (pct or 100) / 100) end,
+          default = 100,
+          width = "half",
+        },
+        {
+          type = "slider",
+          name = Opt("opt_arrowfontsize", "Arrow font size"),
+          tooltip = Opt("opt_arrowfontsize_desc", "Set the size of the labels under the arrow."),
+          min = 7, max = 16, step = 1,
+          getFunc = function() return GetNamedOption("arrowfontsize", 12) end,
+          setFunc = function(v) SetNamedOption("arrowfontsize", v) end,
+          default = 12,
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_arrowmeters", "Use metric system"),
+          tooltip = Opt("opt_arrowmeters_desc", "Use meters and kilometers instead of yards and miles."),
+          getFunc = function() return GetNamedOption("arrowmeters", false) end,
+          setFunc = function(v) SetNamedOption("arrowmeters", v) end,
+          default = false,
+          width = "full",
+        },
+        {
+          type = "button",
+          name = Opt("opt_arrow_reset", "Reset Waypointer"),
+          tooltip = Opt("opt_arrow_reset_desc", "Reset the Waypointer to its original position and size."),
+          func = function()
+            if CGV.Pointer and CGV.Pointer.ResetWaypointerSettings then
+              CGV.Pointer:ResetWaypointerSettings()
+            end
+          end,
+          width = "full",
+        },
+        {
+          type = "header",
+          name = Opt("opt_additional_arrow_functions", "Additional arrow functions:"),
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_hidearrowwithguide", "Hide waypoint arrow when viewer is closed"),
+          tooltip = Opt("opt_hidearrowwithguide_desc", "Make the arrow follow the guide window's visibility."),
+          getFunc = function() return GetNamedOption("hidearrowwithguide", true) end,
+          setFunc = function(v) SetNamedOption("hidearrowwithguide", v) end,
+          default = true,
+          width = "full",
+        },
+      },
     },
+
+    -----------------------------------------
+    -- EXTRAS
+    -----------------------------------------
     {
-      type = "checkbox",
-      name = Opt("opt_arrowshow", "Enable waypoint arrow"),
-      tooltip = Opt("opt_arrowshow_desc", "Display a rotating arrow toward the current waypoint."),
-      getFunc = function() return GetProfileOption("arrowshow", true) end,
-      setFunc = function(v)
-        SetProfileOption("arrowshow", v)
-        if CGV.Pointer and CGV.Pointer.UpdateArrowVisibility then
-          CGV.Pointer:UpdateArrowVisibility()
-        end
-      end,
-      default = true,
-      width = "full",
+      type = "submenu",
+      name = Opt("opt_extras", "Extras"),
+      controls = {
+        {
+          type = "checkbox",
+          name = Opt("opt_showmapbutton", "Enable Community toggle button"),
+          tooltip = Opt("opt_showmapbutton_desc", "Show the Community button that toggles the viewer."),
+          getFunc = function() return GetNamedOption("showmapbutton", true) end,
+          setFunc = function(v) SetNamedOption("showmapbutton", v) end,
+          default = true,
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_bugreports", "Show bug report button"),
+          tooltip = Opt("opt_bugreports_desc", "Show the bug icon on the Guide Viewer."),
+          getFunc = function() return GetNamedOption("bugreports", true) end,
+          setFunc = function(v) SetNamedOption("bugreports", v) end,
+          default = true,
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_unloadunusedguides", "Unload unused guides"),
+          tooltip = Opt("opt_unloadunusedguides_desc", "Free memory by dropping step data for unused guides."),
+          getFunc = function() return GetNamedOption("unloadunusedguides", true) end,
+          setFunc = function(v) SetNamedOption("unloadunusedguides", v) end,
+          default = true,
+          width = "full",
+        },
+      },
     },
+
+    -----------------------------------------
+    -- PROFILES
+    -----------------------------------------
     {
-      type = "colorpicker",
-      name = Opt("opt_arrowcolor", "Arrow color"),
-      tooltip = Opt("opt_arrowcolor_desc", "Color of the in-world waypoint arrow."),
-      getFunc = function()
-        local c = GetProfileOption("arrowcolor", { r = 245 / 255, g = 93 / 255, b = 7 / 255, a = 1 })
-        return c.r or 1, c.g or 1, c.b or 1, c.a or 1
-      end,
-      setFunc = function(r, g, b, a)
-        SetProfileOption("arrowcolor", { r = r, g = g, b = b, a = a or 1 })
-        -- Tint updates live on the next arrow SetAngle; no position refresh needed.
-      end,
-      default = { r = 245 / 255, g = 93 / 255, b = 7 / 255, a = 1 },
-      width = "full",
-    },
-    {
-      type = "header",
+      type = "submenu",
       name = Opt("opt_profile", "Profiles"),
-      width = "full",
+      controls = {
+        {
+          type = "description",
+          text = Opt("opt_lam_profile_intro", "Create, switch, copy, or delete settings profiles. Same SavedVariables as Home → Profiles."),
+          width = "full",
+        },
+        {
+          type = "dropdown",
+          name = Opt("opt_existing_profiles", "Current Profile"),
+          tooltip = Opt("opt_existing_profiles_desc", "Select a profile to switch to it."),
+          choices = SortedProfileNames(),
+          getFunc = GetCurrentProfileName,
+          setFunc = SwitchProfile,
+          width = "full",
+          scrollable = true,
+          reference = REF_CURRENT,
+        },
+        {
+          type = "editbox",
+          name = Opt("opt_lam_profile_new_name", "New profile name"),
+          tooltip = Opt("opt_lam_profile_new_name_desc", "Letters, numbers, and spaces only. Click New Profile after typing a name."),
+          getFunc = function() return newProfileNameDraft end,
+          setFunc = function(text) newProfileNameDraft = text or "" end,
+          isMultiline = false,
+          width = "full",
+        },
+        {
+          type = "button",
+          name = Opt("opt_newprof", "New Profile"),
+          tooltip = Opt("opt_newprof_desc", "Create a new profile from the name above and switch to it."),
+          func = CreateProfileFromDraft,
+          width = "full",
+        },
+        {
+          type = "dropdown",
+          name = Opt("opt_copy_profile_settings", "Copy settings from"),
+          tooltip = Opt("opt_copy_profile_settings_desc", "Copy options from another profile into the current profile."),
+          choices = CopyProfileChoices(),
+          getFunc = CopyProfileGet,
+          setFunc = function(name)
+            local none = Opt("opt_lam_profile_none", "(no other profiles)")
+            local placeholder = Opt("opt_copy_profile_settings_default", "Choose a profile...")
+            if not name or name == none or name == placeholder then return end
+            CopyFromProfile(name)
+          end,
+          width = "full",
+          scrollable = true,
+          reference = REF_COPY,
+        },
+        {
+          type = "dropdown",
+          name = Opt("opt_delete_profiles", "Delete Profiles"),
+          tooltip = Opt("opt_delete_profiles_desc", "Select a profile to delete. Cannot delete your current profile."),
+          choices = DeleteProfileChoices(),
+          getFunc = DeleteProfileGet,
+          setFunc = function(name)
+            local none = Opt("opt_lam_profile_none", "(no other profiles)")
+            local placeholder = Opt("opt_delete_profiles_default", "Profiles")
+            if not name or name == none or name == placeholder then return end
+            DeleteProfileByName(name)
+          end,
+          width = "full",
+          scrollable = true,
+          reference = REF_DELETE,
+          warning = Opt("opt_lam_profile_delete_warn", "Deletion is permanent. Switch away from a profile before deleting it."),
+        },
+      },
     },
-    {
-      type = "description",
-      text = Opt("opt_lam_profile_intro", "Create, switch, copy, or delete settings profiles. The same controls are under Profiles in Full Settings."),
-      width = "full",
-    },
-    {
-      type = "dropdown",
-      name = Opt("opt_existing_profiles", "Current Profile"),
-      tooltip = Opt("opt_existing_profiles_desc", "Select a profile to switch to it. Some settings may require a reload to display correctly."),
-      -- LAM2 needs a real table here (functions break widget creation).
-      choices = SortedProfileNames(),
-      getFunc = GetCurrentProfileName,
-      setFunc = SwitchProfile,
-      width = "full",
-      scrollable = true,
-      reference = REF_CURRENT,
-    },
-    {
-      type = "editbox",
-      name = Opt("opt_lam_profile_new_name", "New profile name"),
-      tooltip = Opt("opt_lam_profile_new_name_desc", "Letters, numbers, and spaces only. Click New Profile after typing a name."),
-      getFunc = function() return newProfileNameDraft end,
-      setFunc = function(text) newProfileNameDraft = text or "" end,
-      isMultiline = false,
-      width = "full",
-    },
-    {
-      type = "button",
-      name = Opt("opt_newprof", "New Profile"),
-      tooltip = Opt("opt_newprof_desc", "Create a new profile from the name above and switch to it."),
-      func = CreateProfileFromDraft,
-      width = "full",
-    },
-    {
-      type = "dropdown",
-      name = Opt("opt_copy_profile_settings", "Copy settings from"),
-      tooltip = Opt("opt_copy_profile_settings_desc", "Copy options from another profile (including backups after an update) into the current profile. Does not delete the source."),
-      choices = CopyProfileChoices(),
-      getFunc = CopyProfileGet,
-      setFunc = function(name)
-        local none = Opt("opt_lam_profile_none", "(no other profiles)")
-        local placeholder = Opt("opt_copy_profile_settings_default", "Choose a profile...")
-        if not name or name == none or name == placeholder then return end
-        CopyFromProfile(name)
-      end,
-      width = "full",
-      scrollable = true,
-      reference = REF_COPY,
-    },
-    {
-      type = "dropdown",
-      name = Opt("opt_delete_profiles", "Delete Profiles"),
-      tooltip = Opt("opt_delete_profiles_desc", "Select a profile to delete. Cannot delete your current profile."),
-      choices = DeleteProfileChoices(),
-      getFunc = DeleteProfileGet,
-      setFunc = function(name)
-        local none = Opt("opt_lam_profile_none", "(no other profiles)")
-        local placeholder = Opt("opt_delete_profiles_default", "Profiles")
-        if not name or name == none or name == placeholder then return end
-        DeleteProfileByName(name)
-      end,
-      width = "full",
-      scrollable = true,
-      reference = REF_DELETE,
-      warning = Opt("opt_lam_profile_delete_warn", "Deletion is permanent. Switch away from a profile before deleting it."),
-    },
+
+    -----------------------------------------
+    -- MODES (+ optional DEV tools)
+    -----------------------------------------
     {
       type = "header",
       name = Opt("opt_lam_modes", "Modes"),
@@ -437,7 +781,7 @@ local function RegisterWithLAM()
     {
       type = "checkbox",
       name = Opt("opt_creator_mode", "Creation Mode"),
-      tooltip = Opt("opt_creator_mode_desc", "Enable guide-author tools: print achieve/lorebook lines for guide writing. Same as /cgv creator. Character-specific."),
+      tooltip = Opt("opt_creator_mode_desc", "Enable guide-author tools. Same as /cgv creator. Character-specific."),
       getFunc = function() return GetCharFlag("creator", false) end,
       setFunc = SetCreatorMode,
       default = false,
@@ -446,12 +790,46 @@ local function RegisterWithLAM()
     {
       type = "checkbox",
       name = Opt("opt_developer_mode", "Developer Mode"),
-      tooltip = Opt("opt_developer_mode_desc", "Enable developer tools: extra debug output, map surveying helpers, and Developer options in Full Settings after reload. Same as /cgv developer. Character-specific."),
+      tooltip = Opt("opt_developer_mode_desc", "Enable developer tools. Same as /cgv developer. Character-specific."),
       getFunc = function() return GetCharFlag("developer", false) end,
       setFunc = SetDeveloperMode,
       default = false,
       warning = Opt("opt_developer_mode_warning", "Reload UI (/reloadui) for Developer options to appear in Full Settings."),
       width = "full",
+    },
+    {
+      type = "checkbox",
+      name = "Debug Mode",
+      tooltip = Opt("opt_debug_desc", "Extra debug output (Developer)."),
+      getFunc = function() return GetNamedOption("debug", false) end,
+      setFunc = function(v) SetNamedOption("debug", v) end,
+      default = false,
+      disabled = function() return not CGV.DEV end,
+      width = "full",
+    },
+    {
+      type = "button",
+      name = "Survey maps",
+      tooltip = "Survey maps (Developer).",
+      func = function()
+        if CGV.Pointer and CGV.Pointer.SurveyAllMaps then
+          CGV.Pointer:SurveyAllMaps()
+        end
+      end,
+      disabled = function() return not CGV.DEV end,
+      width = "half",
+    },
+    {
+      type = "button",
+      name = "Survey maps (deep)",
+      tooltip = "Deep survey maps (Developer).",
+      func = function()
+        if CGV.Pointer and CGV.Pointer.SurveyAllMaps then
+          CGV.Pointer:SurveyAllMaps(true)
+        end
+      end,
+      disabled = function() return not CGV.DEV end,
+      width = "half",
     },
   }
 
@@ -459,7 +837,7 @@ local function RegisterWithLAM()
   LAM:RegisterOptionControls(PANEL_ID, optionsTable)
 
   CGV.AddonSettingsPanelId = PANEL_ID
-  CGV:Debug("&startup Registered LibAddonMenu panel: Community Leveling Guide")
+  CGV:Debug("&startup Registered LibAddonMenu panel: Community Leveling Guide (full mirror)")
 end
 
 tinsert(CGV.startups, function()
