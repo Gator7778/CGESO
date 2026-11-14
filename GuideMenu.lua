@@ -44,8 +44,9 @@ local DEFAULT_ANCHOR= {	CENTER, }
 --   header≈30 + search 22+4 + pads ≈ 60 → list grows with frame; RefreshUI measures fit.
 -- Pool is larger; RefreshUI hides any row past the measured fit.
 local GUIDE_LIST_ROW_HEIGHT = 22
-local GUIDE_MENU_BUTTON_POOL = 18
-local GUIDE_MENU_FALLBACK_LINES = 12 -- if host height not ready yet
+-- Tall enough for DEFAULT_HEIGHT 720 (list host ≈ 550px → ~25 rows).
+local GUIDE_MENU_BUTTON_POOL = 28
+local GUIDE_MENU_FALLBACK_LINES = 16 -- if host height not ready yet
 -- Settings left category list (same row height; scrolls when groups > visible lines)
 local SETTINGS_LIST_ROW_HEIGHT = GUIDE_LIST_ROW_HEIGHT
 local SETTINGS_BUTTON_POOL = 20
@@ -465,17 +466,24 @@ function GuideMenu:Create()
 	------------------------------
 	-- Setup Right information panel
 	-----------------------------
-	-- Full-size chapter/guide banner (GUIDE_IMAGE_*); description scrolls under the image.
+	-- Centered column (GUIDE_IMAGE_*); welcome stacks mid-panel, selected guides top+scroll.
 	local DETAIL_IMAGE_HEIGHT = GUIDE_IMAGE_HEIGHT
 	local getControl = _G.GetControl
 
-	frame.GuideTitle = CHAIN(ui:Create("Label",frame.guideInfoBox,guideMenuName.."_GuideTitle",17,"bold"))
-		:SetPoint(TOPLEFT,frame.guideInfoBox,20,12)
+	frame.rightStack = CHAIN(ui:Create("InvisFrame",frame.guideInfoBox,guideMenuName.."_RightStack"))
+		:SetWidth(GUIDE_IMAGE_WIDTH)
+		:SetResizeToFitDescendents(true)
+		:SetMouseEnabled(false)
+		:SetPoint(CENTER,frame.guideInfoBox,CENTER)
+		.__END
+
+	frame.GuideTitle = CHAIN(ui:Create("Label",frame.rightStack,guideMenuName.."_GuideTitle",17,"bold"))
+		:SetPoint(TOPLEFT,frame.rightStack,TOPLEFT,0,0)
 		:SetWidth(GUIDE_IMAGE_WIDTH-20)
 		.__END
 
-	-- Action buttons under the title (parented to info panel so they don't cover sibling text)
-	frame.SuggestButton = CHAIN(ui:Create("Button",frame.guideInfoBox,guideMenuName.."_SuggestButton"))
+	-- Action buttons under the title
+	frame.SuggestButton = CHAIN(ui:Create("Button",frame.rightStack,guideMenuName.."_SuggestButton"))
 		:SetPoint(TOPLEFT,frame.GuideTitle,BOTTOMLEFT,0,8)
 		:SetSize(100,20)
 		:SetText("Load Suggested")
@@ -494,7 +502,7 @@ function GuideMenu:Create()
 			end)
 		.__END
 
-	frame.FavButton = CHAIN(ui:Create("Button",frame.guideInfoBox,guideMenuName.."_FavButton"))
+	frame.FavButton = CHAIN(ui:Create("Button",frame.rightStack,guideMenuName.."_FavButton"))
 		:SetPoint(LEFT,frame.SuggestButton,RIGHT,8,0)
 		:SetSize(70,20)
 		:SetText("Favorite")
@@ -509,7 +517,7 @@ function GuideMenu:Create()
 		:Hide()
 		.__END
 
-	frame.OkButton = CHAIN(ui:Create("Button",frame.guideInfoBox,guideMenuName.."_OkButton"))
+	frame.OkButton = CHAIN(ui:Create("Button",frame.rightStack,guideMenuName.."_OkButton"))
 		:SetPoint(LEFT,frame.FavButton,RIGHT,8,0)
 		:SetSize(80,20)
 		:SetText("Start Guide")
@@ -525,14 +533,14 @@ function GuideMenu:Create()
 	CGV.Viewer:add_tooltip(frame.OkButton,str)
 
 	-- Short meta line (levels / next) sits above the image
-	frame.GuideMeta = CHAIN(ui:Create("Label",frame.guideInfoBox,guideMenuName.."_GuideMeta",13))
+	frame.GuideMeta = CHAIN(ui:Create("Label",frame.rightStack,guideMenuName.."_GuideMeta",13))
 		:SetPoint(TOPLEFT,frame.SuggestButton,BOTTOMLEFT,0,8)
-		:SetPoint(TOPRIGHT,frame.guideInfoBox,TOPRIGHT,-20,0)
+		:SetWidth(GUIDE_IMAGE_WIDTH)
 		:SetVerticalAlignment(_G.TEXT_ALIGN_TOP)
 		:SetCanWrap(true)
 		.__END
 
-	frame.GuideImage = CHAIN(ui:Create("Texture",frame.guideInfoBox,guideMenuName.."_GuideTexture"))
+	frame.GuideImage = CHAIN(ui:Create("Texture",frame.rightStack,guideMenuName.."_GuideTexture"))
 		:SetPoint(TOPLEFT,frame.GuideMeta,BOTTOMLEFT,0,8)
 		:SetSize(GUIDE_IMAGE_WIDTH,DETAIL_IMAGE_HEIGHT)
 		:SetTexture(WELCOME_GUIDE_IMAGE)
@@ -540,10 +548,17 @@ function GuideMenu:Create()
 		:Hide()
 		.__END
 
-	-- Scrollable description under the image so long text is not cut off
+	-- Credits / description under the banner (inside centered stack for welcome)
+	frame.GuideData = CHAIN(ui:Create("Label",frame.rightStack,guideMenuName.."_GuideData",14))
+		:SetPoint(TOPLEFT,frame.GuideImage,BOTTOMLEFT,0,8)
+		:SetWidth(GUIDE_IMAGE_WIDTH)
+		:SetVerticalAlignment(_G.TEXT_ALIGN_TOP)
+		:SetCanWrap(true)
+		.__END
+
+	-- Scrollable description for selected guides (fills below the centered column)
 	frame.guideDataScroll = CHAIN(wm:CreateControlFromVirtual(guideMenuName.."_GuideDataScroll",frame.guideInfoBox,"ZO_ScrollContainer"))
-		:SetAnchor(TOPLEFT,frame.GuideImage,BOTTOMLEFT,0,8)
-		:SetAnchor(BOTTOMRIGHT,frame.guideInfoBox,BOTTOMRIGHT,-8,-8)
+		:SetHidden(true)
 		.__END
 
 	frame.guideDataScrollChild = CHAIN(getControl(frame.guideDataScroll:GetName().."ScrollChild"))
@@ -552,7 +567,7 @@ function GuideMenu:Create()
 		:SetAnchor(TOPRIGHT,frame.guideDataScroll)
 		.__END
 
-	frame.GuideData = CHAIN(ui:Create("Label",frame.guideDataScrollChild,guideMenuName.."_GuideData",14))
+	frame.GuideDataScrollLabel = CHAIN(ui:Create("Label",frame.guideDataScrollChild,guideMenuName.."_GuideDataScrollLabel",14))
 		:SetPoint(TOPLEFT,frame.guideDataScrollChild,TOPLEFT,0,0)
 		:SetPoint(TOPRIGHT,frame.guideDataScrollChild,TOPRIGHT,0,0)
 		:SetVerticalAlignment(_G.TEXT_ALIGN_TOP)
@@ -564,8 +579,26 @@ function GuideMenu:Create()
 	Menu:SetBackdropOpacity()
 end
 
+-- Center the right column in guideInfoBox (welcome = mid panel; selected = top, H-centered).
+function GuideMenu:LayoutRightColumn(mode)
+	local frame = self.Frame
+	if not (frame and frame.rightStack and frame.guideInfoBox) then return end
+
+	local stack = frame.rightStack
+	local box = frame.guideInfoBox
+	CHAIN(stack)
+		:SetWidth(GUIDE_IMAGE_WIDTH)
+		:ClearAnchors()
+
+	if mode == "welcome" then
+		stack:SetPoint(CENTER, box, CENTER)
+	else
+		stack:SetPoint(TOP, box, TOP, 0, 12)
+	end
+end
+
 -- How many list rows fit inside guideListHost without drawing past the Home frame.
--- mainBackdrop ≈ 415px; after header+search ≈ 355px list → ≤16 rows at 22px.
+-- Uses measured host height so the list fills the taller Home window.
 function GuideMenu:GetVisibleListLines()
 	local frame = self.Frame
 	if not frame or not frame.guideListHost or not frame.buttons then
@@ -575,15 +608,12 @@ function GuideMenu:GetVisibleListLines()
 	local hostH = frame.guideListHost:GetHeight() or 0
 	if hostH < GUIDE_LIST_ROW_HEIGHT then
 		-- Frame may not be laid out yet; use chrome-subtracted fallback.
-		hostH = DEFAULT_HEIGHT - HEADER_HEIGHT - FOOTER_HEIGHT - 80 -- ≈335
+		hostH = DEFAULT_HEIGHT - HEADER_HEIGHT - FOOTER_HEIGHT - 80
 	end
 
 	local n = math.floor(hostH / GUIDE_LIST_ROW_HEIGHT)
 	if n < 1 then n = 1 end
 	if n > #frame.buttons then n = #frame.buttons end
-	-- Hard cap from known window chrome so a bad GetHeight cannot flood the world.
-	local hardCap = math.floor((DEFAULT_HEIGHT - HEADER_HEIGHT - FOOTER_HEIGHT - 70) / GUIDE_LIST_ROW_HEIGHT) -- 15
-	if n > hardCap then n = hardCap end
 	if (n * GUIDE_LIST_ROW_HEIGHT) > hostH then
 		n = n - 1
 		if n < 1 then n = 1 end
@@ -811,14 +841,19 @@ function GuideMenu:RefreshUI()
 			if meta == "" then
 				CHAIN(frame.GuideMeta):SetHeight(0):SetHidden(true)
 			else
-				CHAIN(frame.GuideMeta):SetCanWrap(true):SetHidden(false)
+				CHAIN(frame.GuideMeta):SetWidth(GUIDE_IMAGE_WIDTH):SetCanWrap(true):SetHidden(false)
 			end
 		end
 
-		-- Full description wraps/scrolls under the image
+		-- Description scrolls under the centered column
 		local desc = g.description or g.desc or ""
-		frame.GuideData:SetText(desc)
-		frame.GuideData:SetCanWrap(true)
+		if frame.GuideData then
+			CHAIN(frame.GuideData):SetText(""):SetHeight(0):SetHidden(true)
+		end
+		if frame.GuideDataScrollLabel then
+			frame.GuideDataScrollLabel:SetText(desc)
+			frame.GuideDataScrollLabel:SetCanWrap(true)
+		end
 
 		frame.OkButton:Show()
 		if frame.FavButton then
@@ -845,17 +880,17 @@ function GuideMenu:RefreshUI()
 			:Hide()
 		end
 
+		self:LayoutRightColumn("selected")
+
 		if frame.guideDataScroll then
+			local scrollTop = (g.image and frame.GuideImage) or aboveImage
 			CHAIN(frame.guideDataScroll)
 				:ClearAnchors()
-				:SetAnchor(TOPLEFT,frame.GuideImage,BOTTOMLEFT,0,8)
-				:SetAnchor(BOTTOMRIGHT,frame.guideInfoBox,BOTTOMRIGHT,-8,-8)
+				:SetAnchor(TOPLEFT,scrollTop,BOTTOMLEFT,0,8)
+				:SetAnchor(TOPRIGHT,scrollTop,BOTTOMRIGHT,0,8)
+				:SetAnchor(BOTTOM,frame.guideInfoBox,BOTTOM,0,-8)
+				:SetHidden(false)
 		end
-		CHAIN(frame.GuideData)
-			:ClearAnchors()
-			:SetPoint(TOPLEFT,frame.guideDataScrollChild or frame.guideInfoBox,TOPLEFT,0,0)
-			:SetPoint(TOPRIGHT,frame.guideDataScrollChild or frame.guideInfoBox,TOPRIGHT,0,0)
-			:SetCanWrap(true)
 
 		if g.parse_error then
 			CGV:Print(g.parse_error)
@@ -865,9 +900,7 @@ function GuideMenu:RefreshUI()
 		if frame.GuideMeta then
 			CHAIN(frame.GuideMeta):SetText(""):SetHeight(0):SetHidden(true)
 		end
-		frame.GuideData:SetText("Imperial City, Craglorn, Southern Elsweyr, Dark Heart of Skyrim, Blackwood, The Deadlands, Legacy of the Breton, Shadow Over Morrowind, Gold Coast, Season of the Worm Cult guides authored by |cffaa00snichols7778|r\nSummerset, Murkmire and Elsweyr guides authored by |cffaa00Hydra9268|r\nAdditional support by |cffaa00Sharlikran|r, |cffaa00Krandor1|r\n|c999999Original guide and Addon created by Zygor Guides|r")
-		frame.GuideData:SetCanWrap(true)
-		-- Same full-size banner + scrollable blurb as selected guides, so credits aren't cut off.
+		local credits = "Imperial City, Craglorn, Southern Elsweyr, Dark Heart of Skyrim, Blackwood, The Deadlands, Legacy of the Breton, Shadow Over Morrowind, Gold Coast, Season of the Worm Cult guides authored by |cffaa00snichols7778|r\nSummerset, Murkmire and Elsweyr guides authored by |cffaa00Hydra9268|r\nAdditional support by |cffaa00Sharlikran|r, |cffaa00Krandor1|r\n|c999999Original guide and Addon created by Zygor Guides|r"
 		local welcomeImgH = frame._detailImageHeight or GUIDE_IMAGE_HEIGHT
 		CHAIN(frame.GuideImage)
 			:ClearAnchors()
@@ -879,20 +912,24 @@ function GuideMenu:RefreshUI()
 			:SetColor(1,1,1,1)
 			:SetHidden(false)
 			:Show()
-		if frame.guideDataScroll then
-			CHAIN(frame.guideDataScroll)
+		-- Credits live in the centered stack (not a full-height scroll), so H+V center works.
+		if frame.GuideData then
+			CHAIN(frame.GuideData)
 				:ClearAnchors()
-				:SetAnchor(TOPLEFT,frame.GuideImage,BOTTOMLEFT,0,8)
-				:SetAnchor(BOTTOMRIGHT,frame.guideInfoBox,BOTTOMRIGHT,-8,-8)
+				:SetPoint(TOPLEFT,frame.GuideImage,BOTTOMLEFT,0,8)
+				:SetWidth(GUIDE_IMAGE_WIDTH)
+				:SetText(credits)
+				:SetCanWrap(true)
+				:SetHidden(false)
 		end
-		CHAIN(frame.GuideData)
-			:ClearAnchors()
-			:SetPoint(TOPLEFT,frame.guideDataScrollChild or frame.guideInfoBox,TOPLEFT,0,0)
-			:SetPoint(TOPRIGHT,frame.guideDataScrollChild or frame.guideInfoBox,TOPRIGHT,0,0)
-			:SetCanWrap(true)
+		if frame.guideDataScroll then
+			frame.guideDataScroll:SetHidden(true)
+		end
 		frame.OkButton:Hide()
 		if frame.FavButton then frame.FavButton:Hide() end
 		if frame.SuggestButton then frame.SuggestButton:Show() end
+
+		self:LayoutRightColumn("welcome")
 	end
 
 	frame:Show()
