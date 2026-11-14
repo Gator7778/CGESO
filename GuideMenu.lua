@@ -883,12 +883,13 @@ function GuideMenu:RefreshUI()
 		self:LayoutRightColumn("selected")
 
 		if frame.guideDataScroll then
+			-- ESO allows only two anchors; pin under the banner column and to panel bottom.
 			local scrollTop = (g.image and frame.GuideImage) or aboveImage
+			local halfW = GUIDE_IMAGE_WIDTH / 2
 			CHAIN(frame.guideDataScroll)
 				:ClearAnchors()
 				:SetAnchor(TOPLEFT,scrollTop,BOTTOMLEFT,0,8)
-				:SetAnchor(TOPRIGHT,scrollTop,BOTTOMRIGHT,0,8)
-				:SetAnchor(BOTTOM,frame.guideInfoBox,BOTTOM,0,-8)
+				:SetAnchor(BOTTOMRIGHT,frame.guideInfoBox,BOTTOM,halfW,-8)
 				:SetHidden(false)
 		end
 
@@ -900,7 +901,7 @@ function GuideMenu:RefreshUI()
 		if frame.GuideMeta then
 			CHAIN(frame.GuideMeta):SetText(""):SetHeight(0):SetHidden(true)
 		end
-		local credits = "Imperial City, Craglorn, Southern Elsweyr, Dark Heart of Skyrim, Blackwood, The Deadlands, Legacy of the Breton, Shadow Over Morrowind, Gold Coast, Season of the Worm Cult guides authored by |cffaa00snichols7778|r\nSummerset, Murkmire and Elsweyr guides authored by |cffaa00Hydra9268|r\nAdditional support by |cffaa00Sharlikran|r, |cffaa00Krandor1|r\n|c999999Original guide and Addon created by Zygor Guides|r"
+		local credits = "Imperial City, Craglorn, Southern Elsweyr,  guides authored by |cffaa00snichols7778|r\nSummerset, Murkmire and Elsweyr guides authored by |cffaa00Hydra9268|r\nAdditional support by |cffaa00Sharlikran|r, |cffaa00Krandor1|r\n|c999999Original guide and Addon created by Zygor Guides|r"
 		local welcomeImgH = frame._detailImageHeight or GUIDE_IMAGE_HEIGHT
 		CHAIN(frame.GuideImage)
 			:ClearAnchors()
