@@ -27,7 +27,7 @@ local GUIDEMENU_TAB_ID = "guides"
 local SETTINGS_TAB_ID = "settings"
 
 local DEFAULT_WIDTH = 980
-local DEFAULT_HEIGHT = 680
+local DEFAULT_HEIGHT = 720
 local HEADER_HEIGHT = 60
 local FOOTER_HEIGHT = 25
 local LEFT_COLUMN_WIDTH = 250
@@ -37,8 +37,10 @@ local GUIDE_IMAGE_HEIGHT = 256
 local WELCOME_GUIDE_IMAGE = (CGV.DIR or "CGESO").."/Viewer/Skins/Stealth/cgeso-SOTWC.dds"
 local OPTIONS_LEFT_OFFSET = 15
 local OPTIONS_VERT_OFFSET = 8
+-- Gap between last option (e.g. tip text) and Default/Accept buttons.
+local OPTIONS_BOTTOM_PAD = 12
 local DEFAULT_ANCHOR= {	CENTER, }
--- Guide Home list math (DEFAULT_HEIGHT 680, HEADER 60, FOOTER 25 → mainBackdrop ~595):
+-- Guide Home list math (DEFAULT_HEIGHT 720, HEADER 60, FOOTER 25 → mainBackdrop ~635):
 --   header≈30 + search 22+4 + pads ≈ 60 → list grows with frame; RefreshUI measures fit.
 -- Pool is larger; RefreshUI hides any row past the measured fit.
 local GUIDE_LIST_ROW_HEIGHT = 22
@@ -463,8 +465,8 @@ function GuideMenu:Create()
 	------------------------------
 	-- Setup Right information panel
 	-----------------------------
-	-- Compact image when a guide is selected; full description scrolls under the image.
-	local DETAIL_IMAGE_HEIGHT = 120
+	-- Full-size chapter/guide banner (GUIDE_IMAGE_*); description scrolls under the image.
+	local DETAIL_IMAGE_HEIGHT = GUIDE_IMAGE_HEIGHT
 	local getControl = _G.GetControl
 
 	frame.GuideTitle = CHAIN(ui:Create("Label",frame.guideInfoBox,guideMenuName.."_GuideTitle",17,"bold"))
@@ -825,7 +827,7 @@ function GuideMenu:RefreshUI()
 		end
 		if frame.SuggestButton then frame.SuggestButton:Show() end
 
-		local imgH = frame._detailImageHeight or 120
+		local imgH = frame._detailImageHeight or GUIDE_IMAGE_HEIGHT
 		local aboveImage = (meta ~= "" and frame.GuideMeta) or frame.SuggestButton
 		if g.image then
 			CHAIN(frame.GuideImage)
@@ -865,8 +867,8 @@ function GuideMenu:RefreshUI()
 		end
 		frame.GuideData:SetText("Imperial City, Craglorn, Southern Elsweyr, Dark Heart of Skyrim, Blackwood, The Deadlands, Legacy of the Breton, Shadow Over Morrowind, Gold Coast, Season of the Worm Cult guides authored by |cffaa00snichols7778|r\nSummerset, Murkmire and Elsweyr guides authored by |cffaa00Hydra9268|r\nAdditional support by |cffaa00Sharlikran|r, |cffaa00Krandor1|r\n|c999999Original guide and Addon created by Zygor Guides|r")
 		frame.GuideData:SetCanWrap(true)
-		-- Same compact banner + scrollable blurb as selected guides, so credits aren't cut off.
-		local welcomeImgH = frame._detailImageHeight or 120
+		-- Same full-size banner + scrollable blurb as selected guides, so credits aren't cut off.
+		local welcomeImgH = frame._detailImageHeight or GUIDE_IMAGE_HEIGHT
 		CHAIN(frame.GuideImage)
 			:ClearAnchors()
 			:SetPoint(TOPLEFT,frame.SuggestButton,BOTTOMLEFT,0,10)
@@ -1052,7 +1054,7 @@ function Settings:Create()
 	-- Button isn't in the scrollframe either
 	local ButtonHortPad = 10
 	frame.OkButton = CHAIN(ui:Create("Button",frame.optionsBox,setname.."_OkButton"))
-		:SetPoint(BOTTOMRIGHT,frame.guideInfoBox,BOTTOMRIGHT,-ButtonHortPad,-5)
+		:SetPoint(BOTTOMRIGHT,frame.guideInfoBox,BOTTOMRIGHT,-ButtonHortPad,-10)
 		:SetText("Accept")
 		:SetFontSize(14)
 		:SetAccentStyle(true)
@@ -1062,7 +1064,7 @@ function Settings:Create()
 		.__END
 
 	frame.DefaultButton = CHAIN(ui:Create("Button",frame.optionsBox,setname.."_DefaultButton"))
-		:SetPoint(BOTTOMLEFT,frame.guideInfoBox,BOTTOMLEFT,ButtonHortPad,-5)
+		:SetPoint(BOTTOMLEFT,frame.guideInfoBox,BOTTOMLEFT,ButtonHortPad,-10)
 		:SetText("Default")
 		:SetFontSize(14)
 		:SetHandler("OnClicked",function()
@@ -1072,7 +1074,8 @@ function Settings:Create()
 
 	frame.OptionsScrollBase = CHAIN(ui:Create("InvisFrame", frame.optionsBox, setname.. "_OptionsScrollChild"))	-- Base for the option UI for each individual group
 		:SetPoint(TOPLEFT,frame.OptionDesc,BOTTOMLEFT,-HEADER_PADDING,0)
-		:SetPoint(BOTTOMRIGHT,frame.OkButton,TOPRIGHT,_G.OkButtonHortPad,0)
+		-- Leave OPTIONS_BOTTOM_PAD so tip/desc isn't tight against Default/Accept.
+		:SetPoint(BOTTOMRIGHT,frame.OkButton,TOPRIGHT,_G.OkButtonHortPad,-OPTIONS_BOTTOM_PAD)
 		.__END
 
 	Menu:SetBackdropOpacity()
