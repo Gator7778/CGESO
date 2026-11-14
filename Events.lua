@@ -25,10 +25,42 @@ CGV.Events = Events
 -- LOCAL FUNCTIONS
 -----------------------------------------
 
+-- Resolve EVENT_* name for a numeric code. The load-time _G scan can miss
+-- entries on modern clients (huge _G), so we fill gaps on demand.
+local function ResolveEventName(event)
+	local name = rawget(Events.eventList, event)
+	if name then return name end
+	if type(event) ~= "number" then return nil end
+	local safety = 0
+	local index, val
+	while true do
+		local ok, k, v = pcall(next, _G, index)
+		if not ok or k == nil then break end
+		index = k
+		if type(k) == "string" and type(v) == "number" and v == event and k:find("^EVENT_") then
+			Events.eventList[event] = k
+			Events.eventListR[k] = event
+			return k
+		end
+		safety = safety + 1
+		if safety > 100000 then break end
+	end
+	return nil
+end
+
 local function EventHandler(event,...)
 	local self = Events
-	local eventString = self.eventList[event]
-	assert(eventString,"Event "..event.." is not in our eventlist!")
+	if not self[event] then return end
+	local eventString = ResolveEventName(event)
+	if not eventString then
+		-- Still dispatch bare function handlers; named/true handlers need a name.
+		for _, hand in ipairs(self[event]) do
+			if type(hand) == "function" then
+				hand(self,event,...)
+			end
+		end
+		return
+	end
 
 	for _, hand in ipairs(self[event]) do
 		local func
@@ -60,6 +92,11 @@ end
 function Events:AddEvent(event,func)
 	if not self[event] then
 		self[event] = {}
+	end
+
+	-- Guarantee a name before we register — EventHandler needs it for `true` handlers.
+	if not rawget(self.eventList, event) then
+		ResolveEventName(event)
 	end
 
 	tinsert(self[event],func or true)
@@ -242,7 +279,9 @@ local globalprefixes = function(prefix)
 				return index,val
 			end
 			safety = safety + 1
-			if safety > 20000 then
+			-- ESO's _G has grown well past the old 20k cap; missing names
+			-- caused EventHandler asserts (e.g. EVENT_PLAYER_ACTIVATED).
+			if safety > 100000 then
 				return "ERR","ERR"
 			end
 		until not index
@@ -258,7 +297,31 @@ for k,v in globalprefixes("EVENT_") do
 	end
 end
 
-setmetatable(Events.eventList,{__index = "NO EVENT IN LIST!?!?"})
+-- Seed any critical codes the scan still missed (AddEvent also backfills).
+do
+	local critical = {
+		"EVENT_PLAYER_ACTIVATED",
+		"EVENT_ADD_ON_LOADED",
+		"EVENT_PLAYER_COMBAT_STATE",
+		"EVENT_ACHIEVEMENT_AWARDED",
+		"EVENT_ACHIEVEMENT_UPDATED",
+		"EVENT_LORE_BOOK_LEARNED",
+		"EVENT_QUEST_ADDED",
+		"EVENT_QUEST_REMOVED",
+		"EVENT_QUEST_ADVANCED",
+		"EVENT_QUEST_CONDITION_COUNTER_CHANGED",
+		"EVENT_QUEST_POSITION_REQUEST_COMPLETE",
+		"EVENT_QUEST_LIST_UPDATED",
+		"EVENT_ACTION_LAYER_POPPED",
+		"EVENT_ACTION_LAYER_PUSHED",
+	}
+	for _, name in ipairs(critical) do
+		local code = _G[name]
+		if type(code) == "number" and not rawget(Events.eventList, code) then
+			Events.eventList[code] = name
+		end
+	end
+end
 
 Events.eventListR = {}
 

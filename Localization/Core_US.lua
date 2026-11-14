@@ -184,6 +184,10 @@ GuideViewer("Main", "enUS", function() local f = {
 
 			['static_nextguide'] = "\nYou're now ready to proceed to:\n",
 			['static_nextguide_anyzone'] = "\nThis is the recommended next zone. However, since ESO has no zone level restrictions anymore, you're free to visit any other zone and load a guide for it manually.",
+			['static_guide_style'] = "\nRecommended guide:\n",
+			['static_guide_style_detail'] = "\nLoad the Full leveling guide, or Main Quests Only?\nYour choice is remembered for this character (change it under Settings).\n",
+			['static_guide_style_full'] = "Full Guide",
+			['static_guide_style_mqo'] = "Main Quests Only",
 			['static_badguide'] = "\nThe selected guide:\n|cffee00%s|r\n is |cffbbaaimproper|r for your character.\n|cff6644%s|r\n\nDo you really want to load it?",
 			["static_endguide"] = "\nYou've reached the end of the current guide.",
 			["static_help"] = "\nYou can set keybindings in Esc-Controls-Keybindings.\n\nPlease visit |cfe6100tinyurl.com/ESOUI-CLG|r if you need additional assistance.",
@@ -193,6 +197,10 @@ GuideViewer("Main", "enUS", function() local f = {
 			['static_reset_profile'] = "Reset profile %s?",
 			['static_newprofile'] = "Select a name for a new profile.",
 			['static_newprofile_error'] = "|cff0000Name can only contain letters, numbers, and spaces.",
+			['static_profile_migrate'] = "\nYour settings profile was updated.\n",
+			['static_char_migrate'] = "\nYour character settings were updated.\n",
+			['static_profile_migrate_detail'] = "Copy your previous options from the backup into the new profile? Decline keeps defaults; the backup stays listed under Profiles → Copy settings from.",
+			['static_copy_profile_settings'] = "Copy settings from \"%s\" into the current profile?",
 
 			-- MINIMAP BUTTON
 			["minimap_tooltip"] = COLOR_TIP_MOUSE.."Click|r to toggle guide window\n"..COLOR_TIP_MOUSE.."Right-click|r to configure\n",
@@ -208,6 +216,29 @@ end)
 
 GuideViewer("Option", "enUS", function() local f = {
 
+			------ ESO ADDON SETTINGS (LAM) -------
+			["opt_lam_intro"] = "Quick settings for Community Leveling Guide. Use Open Full Settings for the complete options UI (Guide Viewer, Waypoint Arrow, Profiles, and more).",
+			["opt_lam_open_full"] = "Open Full Settings",
+			["opt_lam_open_full_desc"] = "Open the Community Leveling Guide settings window.",
+			["opt_lam_modes"] = "Modes",
+			["opt_creator_mode"] = "Creation Mode",
+			["opt_creator_mode_desc"] = "Enable guide-author tools: print achieve/lorebook lines for guide writing. Same as /cgv creator. Character-specific.",
+			["opt_developer_mode"] = "Developer Mode",
+			["opt_developer_mode_desc"] = "Enable developer tools: extra debug output, map surveying helpers, and Developer options in Full Settings after reload. Same as /cgv developer. Character-specific.",
+			["opt_developer_mode_warning"] = "Reload UI (/reloadui) for Developer options to appear in Full Settings.",
+			["opt_lam_profile_intro"] = "Create, switch, copy, or delete settings profiles. The same controls are under Profiles in Full Settings.",
+			["opt_lam_profile_new_name"] = "New profile name",
+			["opt_lam_profile_new_name_desc"] = "Letters, numbers, and spaces only. Click New Profile after typing a name.",
+			["opt_lam_profile_none"] = "(no other profiles)",
+			["opt_lam_profile_switched"] = "Switched to profile %s.",
+			["opt_lam_profile_created"] = "Created and switched to profile %s.",
+			["opt_lam_profile_deleted"] = "Deleted profile %s.",
+			["opt_lam_profile_need_name"] = "Enter a name for the new profile.",
+			["opt_lam_profile_bad_name"] = "Profile name can only contain letters, numbers, and spaces.",
+			["opt_lam_profile_exists"] = "Profile \"%s\" already exists.",
+			["opt_lam_profile_cant_delete_current"] = "Cannot delete the current profile. Switch first.",
+			["opt_lam_profile_delete_warn"] = "Deletion is permanent. Switch away from a profile before deleting it.",
+
 			------ VIEWER -------
 			["opt_viewer"] = "Guide Viewer",
 			["opt_viewer_desc"] = "",
@@ -216,7 +247,19 @@ GuideViewer("Option", "enUS", function() local f = {
 			["opt_showviewer_desc"] = "Show the Guide Viewer window.",
 
 			["opt_opacitymain"] = "Opacity",
-			["opt_opacitymain_desc"] = "Opacity of the main Viewer window.",
+			["opt_opacitymain_desc"] = "Opacity of the Guide Viewer backdrop (0%–100%). Lower values let the world show through; text stays readable.",
+
+			["opt_opacity_presets"] = "Opacity presets",
+			["opt_opacity_preset_0"] = "0%",
+			["opt_opacity_preset_0_desc"] = "Fully transparent backdrop. Guide text stays readable.",
+			["opt_opacity_preset_25"] = "25%",
+			["opt_opacity_preset_25_desc"] = "Light backdrop (25% opaque).",
+			["opt_opacity_preset_50"] = "50%",
+			["opt_opacity_preset_50_desc"] = "Halfway opaque backdrop (50%).",
+			["opt_opacity_preset_75"] = "75%",
+			["opt_opacity_preset_75_desc"] = "Mostly opaque backdrop (75%).",
+			["opt_opacity_preset_100"] = "100%",
+			["opt_opacity_preset_100_desc"] = "Fully opaque backdrop.",
 
 			["opt_framescale"] = "Scale",
 			["opt_framescale_desc"] = "You can resize the window to match your preferences.",
@@ -225,7 +268,33 @@ GuideViewer("Option", "enUS", function() local f = {
 			["opt_fontsize_desc"] = "Set your preferred text size. Note that the window scale affects this, too.",
 			["opt_fontsecsize"] = "Secondary text size",
 			["opt_fontsecsize_desc"] = "Set your preferred secondary text size, used to display additional descriptions and notes.",
+			["opt_numStepShow"] = "Steps shown",
+			["opt_numStepShow_desc"] = "How many guide steps to show at once. Slot 1 is the current step; extra slots preview upcoming steps. Unused slots hide automatically.",
 
+			["opt_guide_style"] = "Guide Style",
+			["opt_guide_style_desc"] = "When a zone has both a Full guide and Main Quests Only, choose which to load — or ask each time.",
+			["opt_guide_style_ask"] = "Ask each time",
+			["opt_guide_style_full"] = "Full Guide",
+			["opt_guide_style_mqo"] = "Main Quests Only",
+
+			["opt_smart_skip"] = "Smart Skip",
+			["opt_skipimpossible"] = "Skip impossible steps",
+			["opt_skipimpossible_desc"] = "Automatically advance past steps that cannot be completed (for example wrong faction or hidden goals).",
+			["opt_skipauxsteps"] = "Skip auxiliary travel steps",
+			["opt_skipauxsteps_desc"] = "Automatically skip travel/goto-only steps when the next real objective is already done or impossible. Does not use character level (quests scale).",
+
+			["opt_guide_search_placeholder"] = "Search zone, guide, or quest...",
+			["opt_guide_search_results"] = "Search results",
+			["opt_guide_kind_mqo"] = "Main Quests Only",
+			["opt_guide_kind_mqo_tag"] = "MQO",
+			["opt_guide_kind_leveling"] = "Leveling",
+			["opt_guide_kind_leveling_tag"] = "Full",
+			["opt_guide_kind_skyshards"] = "Skyshards & Delves",
+			["opt_guide_kind_skyshards_tag"] = "Shards",
+
+			["opt_guide_favorites"] = "★ Favorites",
+			["opt_guide_suggested"] = "Suggested",
+			["opt_guide_no_suggested"] = "No suggested guide for your zone right now.",
 			["opt_auto_hiding"] = "Auto Hiding",
 
 			["opt_hideincombat"] = "Hide viewer while in combat",
@@ -251,12 +320,14 @@ GuideViewer("Option", "enUS", function() local f = {
 			['opt_arrow_display'] = "Arrow look and feel:",
 			['opt_arrowfreeze'] = "Lock arrow in place",
 			['opt_arrowfreeze_desc'] = "Make the pointer arrow transparent to mouse clicks.",
+			['opt_arrowcolor'] = "Arrow color",
+			['opt_arrowcolor_desc'] = "Color of the in-world waypoint arrow.",
 			['opt_arrowcolordist'] = "Color by distance",
 			['opt_arrowcolordist_desc'] = "Color the arrow by distance, instead of by direction.",
 			['opt_arrowscale'] = "Scale",
 			['opt_arrowscale_desc'] = "Set the size of the waypointing arrow.",
 			['opt_arrowalpha'] = "Opacity",
-			['opt_arrowalpha_desc'] = "Set the opacity of the waypointing arrow.",
+			['opt_arrowalpha_desc'] = "Set the opacity of the waypoint arrow graphic. Title and distance text under the arrow stay fully opaque.",
 			['opt_arrowfontsize'] = "Arrow font size",
 			['opt_arrowfontsize_desc'] = "Set the size of the labels under the arrow.",
 			['opt_arrowmeters'] = "Use metric system",
@@ -277,8 +348,11 @@ GuideViewer("Option", "enUS", function() local f = {
 			["opt_revealmappoi"] = "Reveal map locations",
 			["opt_revealmappoi_desc"] = "Show all unknown locations on the world map.",
 
-			["opt_bugreports"] = "Enable bug reporting",
-			["opt_bugreports_desc"] = "Allow generating of Bug Reports to help us improve the addon and guides.\nBug Reports are generated by clicking the 'bug' icon on the addon.",
+			["opt_bugreports"] = "Show bug report button",
+			["opt_bugreports_desc"] = "Show the bug icon on the Guide Viewer. Click it to build a text report (guide, step, location, debug log). Nothing is sent automatically — copy with Ctrl+C and paste into Discord, GitHub, or a message to the authors.",
+
+			["opt_unloadunusedguides"] = "Unload unused guides",
+			["opt_unloadunusedguides_desc"] = "Free memory by dropping step data for guides you are not using. Recommended on slower PCs. Opening a guide again re-parses it (short delay). Does not require /reloadui.",
 
 			------ PROFILE --------
 			['opt_profile'] = "Profiles",
@@ -289,6 +363,11 @@ GuideViewer("Option", "enUS", function() local f = {
 
 			['opt_newprof'] = "New Profile",
 			['opt_newprof_desc'] = "Create a new Profile",
+
+			['opt_copy_profile_settings'] = "Copy settings from",
+			['opt_copy_profile_settings_default'] = "Choose a profile...",
+			['opt_copy_profile_settings_desc'] = "Copy options from another profile (including backups after an update) into the current profile. Does not delete the source.",
+			['opt_profile_migrate_done'] = "Copied settings from %s.",
 
 			['opt_delete_profiles_default'] = "Profiles",
 			['opt_delete_profiles'] = "Delete Profiles",

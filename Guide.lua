@@ -52,7 +52,8 @@ function GuideProto:New(title,data,extra)
 		subtype = 0 or CGV.GuideMenuTier
 	}
 
-	guide.completionmode = guide.completionmode or (guide.type == "LEVELING" and "level") or "steps"
+	-- Always step-based progress. ESO quests scale with character (One Tamriel) — no level gating.
+	guide.completionmode = guide.completionmode or "steps"
 
 	if CGV:NeedsAnimatedPopup(guide) then
 		CGV.AnimatePopup = true
@@ -148,20 +149,20 @@ end
 
 
 function Guide:DoCond(which,...)
+	-- No startlevel/endlevel gates — ESO quests scale with character.
+	-- Custom condition_* scripts still apply when present.
 	if which == "valid" and not self.condition_valid then
-
-	if self.startlevel then
-		return Utils.GetPlayerPreciseLevel()>=self.startlevel,L['guide_level_req']:format(Utils.FormatLevel(self.startlevel))
-	end
-		return true -- If above is ok
+		return true
 	end
 
-	if which == "suggested" and not self.condition_suggested and self.startlevel then
-		return Utils.GetPlayerPreciseLevel()>=self.startlevel
+	if which == "suggested" and not self.condition_suggested then
+		-- Without an explicit suggested script, treat leveling/extras as suggested when valid.
+		return self.type == "LEVELING" or self.type == "Extras"
 	end
 
-	if which == "end" and not self.condition_end and self.endlevel then
-		return Utils.GetPlayerPreciseLevel()>=self.endlevel,L['guide_level_reached']:format(Utils.FormatLevel(self.startlevel))
+	if which == "end" and not self.condition_end then
+		-- Complete only via steps / explicit end condition — never by character level.
+		return false
 	end
 
 	if which and self['condition_'..which] then
@@ -189,7 +190,7 @@ function Guide:GetStatus()
 		if ret then
 			return "COMPLETE",msg
 		end
-		msg = "" -- TODO it's a bug, we ask the end condition and we're reusing its value even if the guide isnt complete
+		msg = "" -- end condition message is not valid when the guide is still in progress
 
 		if self.condition_suggested_raw or self.type=="LEVELING" then
 			ret,msg = self:DoCond("suggested")
@@ -208,11 +209,64 @@ function Guide:Load(step)
   CGV:SetGuide(self,step)
 end
 
--- TODO allow unloading of guides. It so few guides atm don't need to save on memory
+-- Cached lowercase quest names from rawdata (|q / accept / turnin). Avoids :lower() on full guides.
+function Guide:GetQuestSearchText()
+  if self._questSearchText ~= nil then return self._questSearchText end
+
+  local raw = self.rawdata
+  if not raw or raw == "" then
+    self._questSearchText = ""
+    return self._questSearchText
+  end
+
+  local names, seen = {}, {}
+  local function add(name)
+    name = name and name:match("^%s*(.-)%s*$")
+    if not name or name == "" or seen[name] then return end
+    seen[name] = true
+    names[#names + 1] = name
+  end
+
+  for name in raw:gmatch("|q ([^/|\r\n]+)") do add(name) end
+  for name in raw:gmatch("accept ([^\r\n|]+)") do add(name) end
+  for name in raw:gmatch("turnin ([^\r\n|]+)") do add(name) end
+
+  self._questSearchText = table.concat(names, "\n"):lower()
+  return self._questSearchText
+end
+
+-- needle should already be trimmed + lowercased (see GuideMenu:GetSearchNeedle).
+function Guide:MatchesSearch(needle)
+  if not needle or needle == "" then return true end
+
+  if (self.title or ""):lower():find(needle, 1, true) then return true end
+  if (self.title_short or ""):lower():find(needle, 1, true) then return true end
+
+  local desc = self.description
+  if desc and desc:lower():find(needle, 1, true) then return true end
+
+  local quests = self:GetQuestSearchText()
+  return quests ~= "" and quests:find(needle, 1, true) ~= nil
+end
+
+-- Drop parsed step/goal tables to free memory. Metadata (title, next, rawdata) stays.
+-- Next time this guide is selected, SetGuide → Parse(true) rebuilds steps (brief hitch).
 function Guide:Unload()
-  --self.steps = nil
-  --self.fully_parsed = nil
-  --collectgarbage("step",100)
+  if not self.fully_parsed and not self.steps then
+    return
+  end
+
+  GuideProto:Debug("Unloading guide steps: "..tostring(self.title))
+
+  self.steps = nil
+  self.steplabels = nil
+  self.fully_parsed = nil
+  -- Keep self.parsed / header fields so the guide still appears in menus.
+  -- Parse(true) will rebuild steps because fully_parsed is clear.
+
+  if collectgarbage then
+    collectgarbage("step", 200)
+  end
 end
 
 function Guide:SetAsCurrent()
@@ -235,14 +289,12 @@ function Guide:GetStep(num)
 end
 
 function Guide:AddStep(step)
-  -- TODO type(step) ~= Step
   step.parentGuide = self
   step.num = #self.steps+1
 
   tinsert(self.steps,step)
 end
 
---TODO make sure this isn't redundant a bit inside
 function Guide:GetFirstValidStep(start)
 	if not self.fully_parsed then return end
 	start = start or 1
@@ -290,10 +342,8 @@ function Guide:GetCompletion(mode)
 		return "none"
 
 	elseif mode == "level" then
-		if not self.startlevel or not self.endlevel then
-			return "error","no starting/ending level set"
-		end
-		return min( 1, max( 0, ( Utils.GetPlayerPreciseLevel() - self.startlevel ) / ( self.endlevel - self.startlevel ) ) )
+		-- Legacy mode: fall through to steps (quests scale; level progress is meaningless).
+		return self:GetCompletion("steps")
 
 	elseif mode == "steps" then
 		local count,comp = 0,0
@@ -350,9 +400,7 @@ function Guide:GetCompletionText(mode)
 
 	if mode == "none" then
 		return "-", "This guide does not complete.", comp
-	elseif mode == "level" then
-		return comp.."%", ("Level %2d reached: %d%%"):format(self.endlevel,comp), comp
-	elseif  mode == "steps" then
+	elseif mode == "level" or mode == "steps" then
 		return comp.."%", ("Steps completed: %d/%d"):format(a,b), comp
 	else
 		return comp.."%", "", comp
@@ -374,13 +422,23 @@ function Guide:AdvertiseWithPopup(nodelay)
 		return
 	end
 
+	-- If Full and MQO both exist and style is unset/ask, choose style first.
+	local fullGuide, mqoGuide = CGV:GetGuideStylePair(self)
+	local style = CGV:GetGuideStylePreference()
+	if fullGuide and mqoGuide and style == "ask" then
+		CGV:PromptGuideStyleOrLoad(self)
+		return
+	end
+
+	local target = CGV:GetPreferredGuideVariant(self) or self
+
 	local popup = CGV.AdvertisePopup
 	if not popup then
 		-- This text hides unless needed
 		popup = CGV.Popup:New("Community_AdvertiseGuide_Popup","sis")
 
 		popup.OnAccept = function(me)
-			CGV:SetGuide(me.guide,me.guide.CurrentStepNum)
+			CGV:SetGuide(me.guide, me.guide.CurrentStepNum or 1)
 		end
 
 		popup.OnDecline = function(me)
@@ -390,9 +448,15 @@ function Guide:AdvertiseWithPopup(nodelay)
 		CGV.AdvertisePopup = popup
 	end
 
-	popup:SetText(L['static_nextguide'],self.title_short,L['static_nextguide_anyzone'])
+	-- Restore default labels (style popup may have renamed them).
+	popup.acceptbutton:SetText(L['static_accept'])
+	popup.declinebutton:SetText(L['static_decline'])
+	if popup.acceptbutton.ResizeToPerfect then popup.acceptbutton:ResizeToPerfect() end
+	if popup.declinebutton.ResizeToPerfect then popup.declinebutton:ResizeToPerfect() end
+
+	popup:SetText(L['static_nextguide'],target.title_short,L['static_nextguide_anyzone'])
 	popup:SetDimensionConstraints(225,nil,625,nil)
-	popup.guide = self
+	popup.guide = target
 
 	CGV.pause = true -- to avoid a loop of "step complete" clicks.
 

@@ -26,7 +26,8 @@ local ui = CGV.UI
 local Tabs =  CGV.Class:New("Tabs")	-- Multiple tabs and their handlers
 local Tab =  CGV.Class:New("Tab")	-- A single tab
 local TabDefaultColor = {HTMLColor("#666666ff")}
-local TabSelectedColor = {HTMLColor("#ffffffff")}
+-- Selected tab uses brand accent (body text stays white elsewhere)
+local TabSelectedColor = (CGV.Theme and CGV.Theme.AccentTable()) or {HTMLColor("#F55D07ff")}
 
 -----------------------------------------
 -- LOAD TIME SETUP
@@ -95,7 +96,7 @@ end
 -- TAB CLASS FUNCTIONS
 -----------------------------------------
 
---TODO Making a Tab by itself doesn't really work. Must include them when the TabHandler is made
+-- Tabs must be created through TabHandler; Tab:New alone does not wire the group.
 function Tab:New(parent,name,group,func)
   local tab = CHAIN(ui:Create("InvisButton",parent,name))
   :SetAllFontColor(unpack(TabDefaultColor))

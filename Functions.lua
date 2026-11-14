@@ -3,7 +3,9 @@
 -----------------------------------------
 
 local CGV = _G.CGV
-local GPS = LibGPS3
+-- LibGPS 3.x exposes the global LibGPS3 (folder/DependsOn name remains "LibGPS").
+local GPS = _G.LibGPS3
+assert(GPS, "CGESO requires LibGPS 3.x (LibGPS3). Install/update LibGPS.")
 
 local GetAbilityProgressionXPInfoFromAbilityId = _G.GetAbilityProgressionXPInfoFromAbilityId
 local GetAddOnManager = _G.GetAddOnManager
@@ -113,7 +115,6 @@ end
 Utils.faction_names_full = { AD = "Aldmeri Dominion", DC = "Daggerfall Covenant", EP = "Ebonheart Pact" }
 Utils.faction_names_short = { AD = "Aldmeri", DC = "Daggerfall", EP = "Ebonheart" }
 
---TODO better than strings pls
 function Utils.IsFaction()
 	local faction = Utils.GetFaction()
 	return (faction == faction)
@@ -164,11 +165,12 @@ end
 
 function Utils.MapIndex()
 	local gps = GPS:GetCurrentMapMeasurement()
-	if gps ~= nil then
-		return gps.mapIndex
-	else
-		return 0
+	if not gps then return 0 end
+	-- LibGPS3 Measurement: prefer getter; fields still exist for compatibility.
+	if gps.GetMapIndex then
+		return gps:GetMapIndex() or 0
 	end
+	return gps.mapIndex or 0
 end
 
 function Utils.GetPlayerPreciseLevel()

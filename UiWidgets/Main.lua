@@ -18,7 +18,7 @@ local extras = "soft-shadow-thin"
 local REG_FONTS = {}
 local BOLD_FONTS = {}
 
--- TODO don't actually do anything with the font.. Just create it because all SetFont functions just want the global name. So use that.
+-- Register font by global name only; CreateFont exists so SetFont can reference that name.
 local makeFont = function(size,font)
   size = floor(size)	-- Only integers work.
   local fontName = FontGName..tostring(size)..(font==FONT and "Reg" or "Bold")

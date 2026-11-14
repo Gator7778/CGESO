@@ -132,6 +132,33 @@ local rad2deg = 180 / math.pi
 local mfloor = math.floor
 local mround = zo_round
 
+-- Brand orange #F55D07 — default for new installs and profile reset.
+local DEFAULT_ARROW_R, DEFAULT_ARROW_G, DEFAULT_ARROW_B, DEFAULT_ARROW_A =
+	245 / 255, 93 / 255, 7 / 255, 1
+
+local function GetArrowTint()
+	local c = CGV.db and CGV.db.profile and CGV.db.profile.arrowcolor
+	if type(c) == "table" and c.r then
+		return c.r, c.g, c.b, c.a or 1
+	end
+	return DEFAULT_ARROW_R, DEFAULT_ARROW_G, DEFAULT_ARROW_B, DEFAULT_ARROW_A
+end
+
+-- Arrow art is tinted via vertex color (same path that used to hardcode green).
+-- Do not fully desaturate — that crushed the sprite to black on this DDS.
+local function ApplyArrowTint(tex, r, g, b, a)
+	if not tex then return end
+	if tex.SetDesaturation then
+		tex:SetDesaturation(0)
+	end
+	if tex.SetVertexColors then
+		tex:SetVertexColors(15, r, g, b, a)
+	end
+	if tex.SetColor then
+		tex:SetColor(r, g, b, a)
+	end
+end
+
 function arrowframeproto:OnLoad()
 	local skinFolder = CGV.DIR.."/Arrows/".. arrowSkinFolder
 	self.arrow:SetTexture(skinFolder.."/arrow.dds")
@@ -171,19 +198,26 @@ function arrowframeproto:OnLoad()
 		self.arrow:SetTextureCoords( col * w, ( col + 1 ) * w, row * h, ( row + 1 ) * h )
 		self.spec:SetTextureCoords( col * w, ( col + 1 ) * w, row * h, ( row + 1 ) * h )
 
-		-- precision!
+		local r, g, b, a = GetArrowTint()
+		-- Facing straight ahead: slightly brighter tint.
 		if number == 0 or number == 1 or number == total - 1 then
-			if CGV.db.profile.arrowcolordist then
-				local r,g,b,a = 1,1,1,1 --self.arr:GetVertexColor()
-				r = r + (1-r) * 0.5
-				g = g + (1-g) * 0.5
-				b = b + (1-b) * 0.5
-				self.arrow:SetVertexColors(15,r,g,b,a)
+			if CGV.db and CGV.db.profile and CGV.db.profile.arrowcolordist then
+				r = r + (1 - r) * 0.5
+				g = g + (1 - g) * 0.5
+				b = b + (1 - b) * 0.5
 			else
-				self.arrow:SetVertexColors(15,0.6,1.0,0.4,1.0)
+				r = r + (1 - r) * 0.25
+				g = g + (1 - g) * 0.25
+				b = b + (1 - b) * 0.25
 			end
 		end
-		self.arrow:SetVertexColors(15,0.3,0.8,0.0,1.0)
+		ApplyArrowTint(self.arrow, r, g, b, a)
+		-- Specular is additive — keep it light so it doesn't muddy the tint.
+		if self.spec then
+			if self.spec.SetDesaturation then self.spec:SetDesaturation(0) end
+			if self.spec.SetVertexColors then self.spec:SetVertexColors(15, 1, 1, 1, a) end
+			if self.spec.SetColor then self.spec:SetColor(1, 1, 1, a) end
+		end
 
 	end
 	self:Hide()

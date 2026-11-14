@@ -217,7 +217,7 @@ GuideCommands['endlevel'] = function(guide,params)
 	guide.endlevel = level
 end
 
-GuideCommands['condition'] = function(guide,params)		--TODO
+GuideCommands['condition'] = function(guide,params)
 	local case,cond = params:match("(.-) (.+)$")
 
 	if case=="suggested"
@@ -689,10 +689,9 @@ function Parser:ParseEntry(guide,fully_parse,lastparsed)
 				end
 
 				step = CGV.StepProto:New()
-				-- TODO add map and data stuff
 				guide:AddStep(step)
 
-				break -- We are done with this line. No reason to continue-- TODO this okay?
+				break
 			end
 
 			-- Inside a step. Handle the step and the goals

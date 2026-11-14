@@ -50,9 +50,9 @@ local ITEM_HEIGHT = 15
 local ITEM_BOX_SIZE = 10
 local ITEM_BOX_PADDING = 3
 
-local SECBACKDROP_CENTER_COLOR = {.2,.2,.2,1}	-- TODO copied from backdrop.lua
+local SECBACKDROP_CENTER_COLOR = {.2,.2,.2,1}
 
-local ACCENT_COLOR = {HTMLColor("#fe6100ff")}
+local ACCENT_COLOR = (CGV.Theme and CGV.Theme.AccentTable()) or {HTMLColor("#F55D07ff")}
 local ITEM_BG_COLOR = {.3,.3,.3,1}
 
 -----------------------------------------
@@ -100,12 +100,12 @@ function Dropdown:New(parent,name)
     end)
   .__END
 
-  dropdown.pullout = CHAIN(ui:Create("Frame",parent,name.."_Pullout",true))		-- TODO parent this to dropdown.
+  dropdown.pullout = CHAIN(ui:Create("Frame",parent,name.."_Pullout",true))
   --Run into issues of tier/layer/level issues because  if you try to click items in CgWriter it will click the other dropdowns.
   -- I think it is because since both objects are parented to different dropdowns, it can not accurate compare the level of them.
   :SetAnchor(TOPLEFT,dropdown,BOTTOMLEFT)
   :SetSize(DEFAULT_WIDTH,DEFAULT_HEIGHT)
-  :SetDrawTier(2)		-- TODO why is this needed to make it show above other dropdowns?
+  :SetDrawTier(2)		-- Stack above sibling dropdowns (pullout parented to shared parent).
   :SetDrawLevel(5)
   :SetBackdropAlpha(.8)
   :SetResizeToFitDescendents(true)

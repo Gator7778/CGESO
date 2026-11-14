@@ -1,6 +1,8 @@
 if not CGV then return end
 
-local GPS = LibGPS3
+-- LibGPS 3.x exposes the global LibGPS3 (folder/DependsOn name remains "LibGPS").
+local GPS = _G.LibGPS3
+assert(GPS, "CGESO requires LibGPS 3.x (LibGPS3). Install/update LibGPS.")
 
 MEMORYSPAM = false
 
@@ -82,6 +84,9 @@ function Pointer:Startup()
 end
 
 function Pointer:UpdateArrowPosition()
+	-- Arrow frame is created after Pointer startup; skip until it exists.
+	if not self.ArrowFrame then return end
+
 	local DEFAULT_ANCHOR = { -- Set point using Top so that goals grow downward properly
 		BOTTOM,
 		CGV.Viewer.name,
@@ -93,6 +98,9 @@ function Pointer:UpdateArrowPosition()
 	CGV.db.profile.arrowanchor = CGV.db.profile.arrowanchor and #CGV.db.profile.arrowanchor==5 and CGV.db.profile.arrowanchor or DEFAULT_ANCHOR
 	local point, relativeTo, relativePoint, offsetX, offsetY = unpack(CGV.db.profile.arrowanchor)
 	relativeTo = (relativeTo=="GuiRoot" and GuiRoot) or (relativeTo==CGV.Viewer.name and CGV.Frame)
+	if not relativeTo then
+		relativeTo = GuiRoot
+	end
 
 	self.ArrowFrame:ClearAllPoints()
 	self.ArrowFrame:SetPoint(point, relativeTo, relativePoint, offsetX, offsetY)
@@ -146,6 +154,25 @@ local function add_default_data(data)
 	return tmp_data
 end
 
+-- Hardcoded pin type 88 used to mean player waypoint; on modern clients (esp. Cyrodiil)
+-- 88 is an AvA objective pin. LibMapPing then CreatePin()'s with an empty tag and
+-- ZO_WorldMapPins_Manager:MapPinLookupToPinKey errors ("table index is nil").
+local PLAYER_WAYPOINT_PIN = _G.MAP_PIN_TYPE_PLAYER_WAYPOINT
+local MAP_TYPE_LOCATION_CENTERED = _G.MAP_TYPE_LOCATION_CENTERED
+
+local function SafeSetPlayerMapPing(tx, ty)
+	if not tx or not ty then return false end
+	if tx < 0 or tx > 1 or ty < 0 or ty > 1 then return false end
+	if not PLAYER_WAYPOINT_PIN or not MAP_TYPE_LOCATION_CENTERED then return false end
+	local ping = _G.PingMap
+	if type(ping) ~= "function" then return false end
+	local ok, err = pcall(ping, PLAYER_WAYPOINT_PIN, MAP_TYPE_LOCATION_CENTERED, tx, ty)
+	if not ok then
+		Pointer:Debug("SafeSetPlayerMapPing failed: %s", tostring(err))
+	end
+	return ok
+end
+
 function Pointer:SetWaypoint (m,f,x,y,data,arrow)
 	local data = add_default_data(data or {})  -- Clone! so this is tmp_data from above, basically.
 
@@ -153,7 +180,7 @@ function Pointer:SetWaypoint (m,f,x,y,data,arrow)
 
 	local tx,ty=Pointer:TranslateCoords(m,x,y,self:GetMapTex())
 	if tx and ty then
-		PingMap(88,MAP_TYPE_LOCATION_CENTERED,tx,ty)
+		SafeSetPlayerMapPing(tx, ty)
 	else
 		RemovePlayerWaypoint()
 	end
@@ -290,7 +317,7 @@ function Pointer:ShowArrow(waypoint)
 
 	local tx,ty=Pointer:TranslateCoords(waypoint.m,waypoint.x,waypoint.y,self:GetMapTex())
 	if tx and ty then
-		PingMap(88,MAP_TYPE_LOCATION_CENTERED,tx,ty)
+		SafeSetPlayerMapPing(tx, ty)
 	end
 end
 
@@ -391,11 +418,41 @@ function Pointer:SetupArrow()
 
 	self.ArrowFrame:SetScale(scale)
 
-	-- opacity
-	self.ArrowFrame:SetAlpha(CGV.db.profile.arrowalpha or 1.0)
+	-- opacity: arrow art only — title/distance text under the arrow stays fully opaque
+	self:SetArrowAlpha(CGV.db.profile.arrowalpha or 1.0)
 
 	-- font
 	self:SetFontSize(CGV.db.profile.arrowfontsize or 12)
+end
+
+-- Apply opacity to arrow textures only so the label under the arrow stays readable.
+function Pointer:SetArrowAlpha(a)
+	local frame = self.ArrowFrame
+	if not frame then return end
+
+	a = a or 1
+	if a < 0 then a = 0 elseif a > 1 then a = 1 end
+
+	-- Keep the frame (and its text children) fully opaque; fade textures instead.
+	if frame.SetAlpha then
+		frame:SetAlpha(1)
+	end
+	if frame.title and frame.title.SetAlpha then
+		frame.title:SetAlpha(1)
+	end
+	if frame.here and frame.here.SetAlpha then
+		frame.here:SetAlpha(1)
+	end
+
+	if frame.arrow and frame.arrow.SetAlpha then
+		frame.arrow:SetAlpha(a)
+	end
+	if frame.spec and frame.spec.SetAlpha then
+		frame.spec:SetAlpha(a)
+	end
+	if frame.precise and frame.precise.SetAlpha then
+		frame.precise:SetAlpha(a)
+	end
 end
 
 function Pointer:UpdateWaypoints()
@@ -1223,13 +1280,19 @@ end
 
 SLASH_COMMANDS["/cgpos"] = function(checker)
 	local gps = GPS:GetCurrentMapMeasurement()
-    local tex = gps.id
+	if not gps then
+		d("|cffff0000LibGPS3: no map measurement yet. Open the map or wait for LibGPS to finish measuring.|r")
+		return
+	end
+	local offsetX = gps.GetOffset and select(1, gps:GetOffset()) or gps.offsetX
+	local offsetY = gps.GetOffset and select(2, gps:GetOffset()) or gps.offsetY
+	local scaleX = gps.GetScale and select(1, gps:GetScale()) or gps.scaleX
 	if checker == "gps" then
 		local tex = Pointer:GetMapTex()
-		d(("|cffffff%s|r"):format(tex))
-		d(("xoffset = |c88ff88%.19f|r"):format(gps.offsetX))
-		d(("yoffset = |c88ff88%.19f|r"):format(gps.offsetY))
-		d(("scale = |c88ff88%.19f|r"):format(gps.scaleX))
+		d(("|cffffff%s|r"):format(tex or tostring(gps.id or "?")))
+		d(("xoffset = |c88ff88%.19f|r"):format(offsetX or 0))
+		d(("yoffset = |c88ff88%.19f|r"):format(offsetY or 0))
+		d(("scale = |c88ff88%.19f|r"):format(scaleX or 0))
 		if _G.GetCurrentMapIndex() ~= nil then
 			d(("GetCurrentMapIndex: |c88ff88%d|r - ESO Global function"):format(_G.GetCurrentMapIndex()))
 		end
@@ -1238,9 +1301,9 @@ SLASH_COMMANDS["/cgpos"] = function(checker)
 		local Z = Pointer.Zones[tex]
 		CGV.sv.profile.Zones[tex]=Z
 		d(("|cffffff%s|r"):format(tex))
-		d(("xoffset = |c88ff88%.19f|r"):format(Z.xoffset))
-		d(("yoffset = |c88ff88%.19f|r"):format(Z.yoffset))
-		d(("scale = |c88ff88%.19f|r"):format(gps.scaleX))
+		d(("xoffset = |c88ff88%.19f|r"):format(Z and Z.xoffset or 0))
+		d(("yoffset = |c88ff88%.19f|r"):format(Z and Z.yoffset or 0))
+		d(("scale = |c88ff88%.19f|r"):format(scaleX or 0))
 	end
 end
 

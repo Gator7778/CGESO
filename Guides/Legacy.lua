@@ -1057,7 +1057,8 @@ step
 goto 60.13,36.29
 'Wait for _Prophet_ |q The Harborage/Wait for the Prophet
 |only Aldmeri Dominion
-stepgoto visionofthecompanions_base 39.21,55.56
+step
+goto visionofthecompanions_base 39.21,55.56
 'Follow _The Prophet_ |q The Harborage/Follow the Prophet |future
 |only Aldmeri Dominion
 step

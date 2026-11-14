@@ -19,6 +19,26 @@ ESOLL automatically installs the required libraries. If you prefer to install th
 # Changelog
 
 <details>
+<summary>11/14/2026 - UI &amp; Guide System Update</summary>
+<ul>
+  <li>Esc → Settings → Addons panel with profile create, switch, copy, and delete.</li>
+  <li>Profile migration on version bump (keeps backups; optional copy into the new profile).</li>
+  <li>Guide Home search for zones, guides, and quests; [Full] / [MQO] / [Shards] tags in mixed lists.</li>
+  <li>Favorites and Suggested folders in the guide browser.</li>
+  <li>Viewer transparency applies to Home menu and popups (backdrop only; text stays readable).</li>
+  <li>Brand accent theme, perfect-sizing buttons, Escape closes popups, live opacity/font sync.</li>
+  <li>Multi-step viewer with Steps shown setting (1–5).</li>
+  <li>Smart skip for impossible and auxiliary travel steps.</li>
+  <li>Removed character-level gating (ESO quests scale with the player).</li>
+  <li>Suggested next guide: The Wailing Prison first for new characters, then alliance order, then chapters/DLC by release date.</li>
+  <li>Full Guide vs Main Quests Only choice (prompt + Settings preference); confirm links switch guides without a full reload.</li>
+  <li>Bug report button with a copyable dump (nothing auto-sent).</li>
+  <li>Unload unused guide data to reduce memory on slower PCs.</li>
+  <li>LibGPS 3.x (LibGPS3) hardening; nested goal conditionals; settings scrollbar; code cleanup and bug fixes.</li>
+</ul>
+</details>
+
+<details>
 <summary>Date TBD - Main Quest Rework</summary>
 <ul>
   <li>Aldmeri Dominion (Base Game)</li>

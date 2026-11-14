@@ -14,6 +14,20 @@ local DEFAULT_HEIGHT = 20
 local butColor = {HTMLColor("#333333ff")}
 local butHLColor = {HTMLColor("#444444ff")}
 
+local function AccentFill()
+  if CGV.Theme and CGV.Theme.AccentTable then
+    return CGV.Theme.AccentTable()
+  end
+  return {HTMLColor("#F55D07ff")}
+end
+
+local function AccentHover()
+  if CGV.Theme and CGV.Theme.AccentHoverTable then
+    return CGV.Theme.AccentHoverTable()
+  end
+  return AccentFill()
+end
+
 -----------------------------------------
 -- LOAD TIME SETUP
 -----------------------------------------
@@ -47,33 +61,113 @@ function Button:New(parent,name)
   return button
 end
 
--- This can be used to make the button just big enough to hold the text. Updates the button size on text change.
+-- Extra width so label text is not flush against the button edges.
+local PERFECT_PAD_X = 20
+local PERFECT_MIN_W = 60
+-- Temporary width used so GetTextWidth is not clipped by the current button size.
+local PERFECT_MEASURE_W = 2000
+
+-- Grow/shrink the button to fit its label. Safe when text is longer than the current width
+-- (the old path only measured the clipped width and never grew).
+function Button:ResizeToPerfect()
+  if not self._perfectSizing then return end
+  if not self.GetLabelControl then return end
+  local label = self:GetLabelControl()
+  if not label then return end
+
+  local text = (label.GetText and label:GetText()) or ""
+  if text == "" or text == " " then return end
+
+  -- Unclamp: widen past any prior clip so GetTextWidth returns the full string width.
+  self:SetWidth(PERFECT_MEASURE_W)
+  local w = (label.GetTextWidth and label:GetTextWidth()) or 0
+
+  -- Fallback if the label still reports a clamped/bogus width.
+  -- GetFont() returns a global font *name* (e.g. "CommunityFont13Bold"), not a font object —
+  -- GetStringWidthScaled requires the userdata from _G[name].
+  if w <= 0 or w >= PERFECT_MEASURE_W - 1 then
+    local plain = text:gsub("|c%x%x%x%x%x%x", ""):gsub("|r", ""):gsub("|t.-|t", "")
+    local fontObj
+    if label.GetFont then
+      local font = label:GetFont()
+      if type(font) == "string" then
+        fontObj = _G[font]
+      else
+        fontObj = font
+      end
+    end
+    if fontObj and _G.GetStringWidthScaled then
+      local ok, measured = pcall(_G.GetStringWidthScaled, fontObj, plain, 1)
+      if ok and measured and measured > 0 then
+        w = measured
+      end
+    end
+    -- Last resort: rough width from character count so the button still grows.
+    if w <= 0 then
+      local size = (self.GetFontSize and self:GetFontSize()) or 13
+      w = (#plain) * (size * 0.55)
+    end
+  end
+
+  self:SetWidth(max(w + PERFECT_PAD_X, PERFECT_MIN_W))
+end
+
+-- Make the button just big enough to hold the text. Updates on text and font changes.
 -- Should be called before :SetText()
 function Button:SetPerfectSizing(bool)
   local butLabel = self:GetLabelControl()
+  self._perfectSizing = not not bool
   if bool then
-    butLabel:SetHandler("OnTextChanged",function(me)
+    butLabel:SetHandler("OnTextChanged", function(me)
         local but = me:GetParent()
-
-        --TODO this doesn't work if the length of the text is > the size of the button.
-
-        but:SetWidth(me:GetTextWidth())
+        if but and but.ResizeToPerfect then
+          but:ResizeToPerfect()
+        end
       end)
+
+    -- Font size changes (e.g. live popup sync) do not fire OnTextChanged.
+    if not self._perfectFontWrapped then
+      self._perfectFontWrapped = true
+      local prevSetFontSize = self.SetFontSize
+      self.SetFontSize = function(me, size, bold)
+        if prevSetFontSize then
+          prevSetFontSize(me, size, bold)
+        end
+        me:ResizeToPerfect()
+      end
+    end
+
+    self:ResizeToPerfect()
   else
-    butLabel:SetHandler("OnTextChanged",nil)
+    butLabel:SetHandler("OnTextChanged", nil)
   end
 end
 
 function Button:OnEnter()
   if not self.bd then return end
 
-  self:SetBackdropColor(unpack(butHLColor))
+  self:SetBackdropColor(unpack(self._hlColor or butHLColor))
 end
 
 function Button:OnExit()
   if not self.bd then return end
 
-  self:SetBackdropColor(unpack(butColor))
+  self:SetBackdropColor(unpack(self._baseColor or butColor))
+end
+
+-- Primary CTA style — brand accent fill. Easy off via Theme.USE_BRAND_ACCENT.
+function Button:SetAccentStyle(enabled)
+  if enabled then
+    self._baseColor = AccentFill()
+    self._hlColor = AccentHover()
+  else
+    self._baseColor = butColor
+    self._hlColor = butHLColor
+  end
+  if self.bd then
+    self:SetBackdropColor(unpack(self._baseColor))
+  end
+  return self
 end
 
 function Button:SetAllFontColor(r,g,b,a)

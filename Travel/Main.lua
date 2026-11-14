@@ -24,7 +24,7 @@ function Travel:GetMapNameById(zone)
 	if not zone then
 		return "nomap"
 	end
-	local z1,_ = _G.GetZoneInfo(zone)		-- TODO what is the difference in z1/z2. Likely one is localized.
+	local z1,_ = _G.GetZoneInfo(zone)
 
 	return z1
 end

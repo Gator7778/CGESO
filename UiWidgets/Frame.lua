@@ -42,8 +42,6 @@ function Frame:SetCanDrag(drag)
   if drag then
     self:SetMovable(true)
     self:SetMouseEnabled(true)
-
-    -- TODO drag parent?
   else
     self:SetMovable(false)
     self:SetMouseEnabled(false)

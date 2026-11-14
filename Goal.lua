@@ -62,6 +62,40 @@ local function COLOR_QUEST(s)		return "|ceebbff"..tostring(s).."|r" end
 local function COLOR_NPC(s)			return "|caaffaa"..tostring(s).."|r" end
 local function COLOR_TIP(s)			return "|ceeeecc"..tostring(s).."|r" end
 
+-- Brace helpers for nested {cond??a::b} / {expr} in goal text.
+local function MatchBrace(s, open)
+	local depth = 0
+	for i = open, #s do
+		local ch = s:byte(i)
+		if ch == 123 then -- {
+			depth = depth + 1
+		elseif ch == 125 then -- }
+			depth = depth - 1
+			if depth == 0 then return i end
+		end
+	end
+end
+
+local function FindTopLevel(s, token, start)
+	local depth = 0
+	local tlen = #token
+	local i = start or 1
+	while i <= #s do
+		local ch = s:byte(i)
+		if ch == 123 then
+			depth = depth + 1
+			i = i + 1
+		elseif ch == 125 then
+			depth = depth - 1
+			i = i + 1
+		elseif depth == 0 and s:sub(i, i + tlen - 1) == token then
+			return i
+		else
+			i = i + 1
+		end
+	end
+end
+
 -----------------------------------------
 -- GOALHANDLERS
 -----------------------------------------
@@ -234,7 +268,7 @@ GOALTYPES['_item'] = {
 				-- Name##Id are split, parse each individually and then put it in the targets table.
 				local tar,tarid = parse(info)
 				tinsert(targets,{tar,tarid})
-				objid = objid or tarid	-- TODO only the first targetid is returned. This isn't an issue 3/1/14 but if we strip out english names then will have to use multiple ids to create the obj.
+				objid = objid or tarid	-- Multi-target goals only keep the first target id in objid.
 				if tar then
 					obj = obj .. tar .. (i<#mult and ", " or "")	-- Append the target name to the obj, if not the last one then include a ,
 				end
@@ -305,7 +339,6 @@ GOALTYPES['goto'] = {
 	end,
 	iscomplete = function(self) -- Called repeatedly
 
-		-- if the player isn't in the zone map then adjust the distance -- GetGameTimeMilliseconds
 		self.dist = CGV.Utils.DistanceOffsetForIsComplete()
 
 		local dist = CGV.Pointer:GetDistToCoords(self.map,self.x,self.y)
@@ -446,13 +479,24 @@ GOALTYPES['confirm'] = {
 		return complete,true
 	end,
 	onclick = function(self)
-		-- damn, special functionality HERE of all places...
+		-- Confirm hyperlink: mark clicked, then switch guides live (no ReloadUI).
 		self.clicked = true
 		if self.nextreload then
-			CGV.sv.char.guidename = self.nextreload
-			CGV.sv.char.step = 1
-			_G.ReloadUI()
-			return true -- oh wait...
+			local raw = self.nextreload
+			local title = CGV:SanitizeGuideTitle(raw)
+			-- Remember Full vs MQO when the player picks from a fork (e.g. end of Wailing Prison).
+			if CGV.SetGuideStylePreference then
+				if title:find("Main Quests Only", 1, true) then
+					CGV:SetGuideStylePreference("mqo")
+				elseif tostring(raw):find("Leveling Guides", 1, true)
+					or (title:match("^LEVELING/")
+						and not title:find("Cyrodiil", 1, true)
+						and not title:find("Wailing Prison", 1, true)) then
+					CGV:SetGuideStylePreference("full")
+				end
+			end
+			CGV:SetGuide(title, 1)
+			return true -- halt auto next-step; SetGuide already loaded the guide
 		end
 	end,
 }
@@ -600,63 +644,96 @@ function Goal:GetText()
 
 	_done = complete and "_done" or ""
 
-	if self.text then		--TODO expand on this if straight self.text doesn't cut it. And what is it doing?
-		--~~ This handles {scriptable text entries} in goal texts.
-		local nsub = 1
-		-- Generates a parser proc with said behaviour, to evade calling loadstring too much
-		local function make_parser(parser) -- function to generate code
-			return function(s)
-				if not self.textsubs then
-					self.textsubs = {}
-				end
-				local f = self.textsubs[nsub]
-				if not f then
-					f = parser(s)
-					self.textsubs[nsub] = f
-				end
-				nsub = nsub + 1
-				if type(f)=="function" then
-					CGV.Parser.ConditionEnv._SetLocal(self.parentStep.parentGuide,self.parentStep,self)
-					return tostring(f())
-				else
-					return tostring(f)
-				end
+	if self.text then
+		-- Scriptable goal text: {expr} and nested {cond??true::false}.
+		-- Brace matching (not [^}]- gsub) so inner ternaries work.
+		if not self.textsubs then
+			self.textsubs = {}
+		end
+		local textsubs = self.textsubs
+		local guide = self.parentStep and self.parentStep.parentGuide
+		local step = self.parentStep
+
+		local function cache_get(key, builder)
+			local f = textsubs[key]
+			if f == nil then
+				f = builder()
+				textsubs[key] = f
 			end
+			return f
 		end
 
-		local function parser_simple(s)
-			local fun,err = zo_loadstring(s:find("return") and s or "return "..s)
-			if fun then
-				setfenv(fun,CGV.Parser.ConditionEnv)
-				return fun
-			else
-				return "("..err..")"
+		local function run_cached(f)
+			if type(f) == "function" then
+				CGV.Parser.ConditionEnv._SetLocal(guide, step, self)
+				return tostring(f())
 			end
+			return tostring(f)
 		end
 
-		local function parser_ternary(s)
-			local condcode,a,b = s:match("(.*)%?%?(.*)::(.*)")
-			if condcode and a and b then
-				local condfun,err = zo_loadstring(condcode:find("return") and condcode or "return "..condcode)
-				if condfun then
-					local fun = function() -- Generating a real worker function
-						return condfun() and a or b
+		local expand
+
+		local function eval_brace(content)
+			local qpos = FindTopLevel(content, "??", 1)
+			local cpos = qpos and FindTopLevel(content, "::", qpos + 2)
+			if qpos and cpos then
+				local condcode = content:sub(1, qpos - 1)
+				local a = content:sub(qpos + 2, cpos - 1)
+				local b = content:sub(cpos + 2)
+				local f = cache_get("T:" .. content, function()
+					local condfun, err = zo_loadstring(condcode:find("return") and condcode or "return " .. condcode)
+					if not condfun then
+						return "(" .. tostring(err) .. ")"
 					end
-					setfenv(fun,CGV.Parser.ConditionEnv)
-					return fun
-				else
-					return "("..err..")"
-				end
-			else
-				return "(Wrong conditional syntax)"
+					setfenv(condfun, CGV.Parser.ConditionEnv)
+					return function()
+						CGV.Parser.ConditionEnv._SetLocal(guide, step, self)
+						if condfun() then
+							return expand(a)
+						else
+							return expand(b)
+						end
+					end
+				end)
+				return run_cached(f)
 			end
+
+			local f = cache_get("S:" .. content, function()
+				local fun, err = zo_loadstring(content:find("return") and content or "return " .. content)
+				if fun then
+					setfenv(fun, CGV.Parser.ConditionEnv)
+					return fun
+				end
+				return "(" .. tostring(err) .. ")"
+			end)
+			return run_cached(f)
 		end
 
-		-- TODO support nesting of conditionals
-		text = self.text
-		:gsub("{([^}]-%?%?[^}]-::[^}]-)}",make_parser(parser_ternary))
-		:gsub("{(.-)}",make_parser(parser_simple))
-		:gsub("#(%d+)#",COLOR_COUNT(remaining))
+		expand = function(s)
+			local out = {}
+			local i = 1
+			local len = #s
+			while i <= len do
+				local open = s:find("{", i, true)
+				if not open then
+					out[#out + 1] = s:sub(i)
+					break
+				end
+				if open > i then
+					out[#out + 1] = s:sub(i, open - 1)
+				end
+				local close = MatchBrace(s, open)
+				if not close then
+					out[#out + 1] = s:sub(open)
+					break
+				end
+				out[#out + 1] = eval_brace(s:sub(open + 1, close - 1))
+				i = close + 1
+			end
+			return table.concat(out)
+		end
+
+		text = expand(self.text):gsub("#(%d+)#", COLOR_COUNT(remaining))
 
 	elseif self.action == "tip" then
 		text = self.tooltip
@@ -808,7 +885,7 @@ function Goal:IsComplete()
 
 	if self.map then
 		self:CheckVisited()
-	end -- TODO: this is a bad place to call other checks.
+	end
 
 	return iscomplete,ispossible,v1,v2,v3
 end
@@ -964,7 +1041,8 @@ function Goal:IsCompletable(by_type)
 	if self.condition_complete then return true end -- we have a script, so obey
 
 	if not by_type and self.action ~= "goto" then
-		if self.quest or self.lorebook or self.achieve_id then
+		-- lorebook goals store lorebook_book (not lorebook) — match that so Examine|lorebook steps complete
+		if self.quest or self.lorebook_book or self.achieve_id then
 			return true
 		end	-- there is a quest/lore/achieve associated with this goal so can be completed. Unless it's a goto. These are only completed by |c.
 	end
@@ -982,6 +1060,11 @@ end
 function Goal:UpdateStatus()
 	self.status = self:GetStatus()
 	return self.status
+end
+
+-- Travel-ish goals that only lead toward real quest work (used by aux-step skip).
+function Goal:IsAuxiliary()
+	return self.action == "goto" or self.action == "text" or self.action == "tip"
 end
 
 function Goal:GetQuest()

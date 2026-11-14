@@ -23,7 +23,7 @@ local CHAIN = CGV.Utils.ChainCall
 local print = CGV.print
 local ui = CGV.UI
 local Label = CGV.Class:New("Label")
-local LINE_HEIGHT = 20	-- TODO is a line height really needed?
+local LINE_HEIGHT = 20
 local	DEFAULT_SIZE = 13
 
 -----------------------------------------

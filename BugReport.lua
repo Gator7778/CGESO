@@ -4,7 +4,7 @@
 
 local CGV = _G.CGV
 local BugReport = {}
-local guiRoot, uiCenter, uiTopLeft, uiBottomRight, uiTopRight, ctEditBox = _G.GuiRoot, _G.CENTER, _G.TOPLEFT, _G.BOTTOMRIGHT, _G.TOPRIGHT, _G.CT_EDITBOX
+local guiRoot, uiCenter, uiTopLeft, uiBottomLeft, uiBottomRight, uiTopRight, ctEditBox = _G.GuiRoot, _G.CENTER, _G.TOPLEFT, _G.BOTTOMLEFT, _G.BOTTOMRIGHT, _G.TOPRIGHT, _G.CT_EDITBOX
 local tinsert,type,pairs,ipairs = table.insert,type,pairs,ipairs
 local CHAIN = CGV.Utils.ChainCall
 local UI, WM = CGV.UI, _G.WINDOW_MANAGER
@@ -68,7 +68,6 @@ function BugReport:CreateDumpFrameBasic()
 		.__END
 
 	--[[
-	-- TODO real edit box only handles 1000 char???
 	frame.edit = CHAIN(WM:CreateControlFromVirtual(name.."_edit",frame ,"ZO_DefaultEditMultiLineForBackdrop"))
 		:ClearAnchors()
 		:SetAnchor(TOPLEFT,frame,TOPLEFT,8,50)
@@ -117,8 +116,15 @@ function BugReport:CreateDumpFrameBasic()
 		.__END
 
 	frame.title = CHAIN(UI:Create("Label",frame,name.."_MainText",14,"bold"))
-		:SetPoint(uiTopLeft,frame.logo,10,10)
+		:SetPoint(uiTopLeft,frame,10,10)
 		:SetText("No text")
+		.__END
+
+	frame.hint = CHAIN(UI:Create("Label",frame,name.."_Hint",12))
+		:SetPoint(uiTopLeft,frame.title,uiBottomLeft,0,4)
+		:SetWidth(980)
+		:SetCanWrap(true)
+		:SetText("Click the text, press Ctrl+C to copy, then paste into Discord / GitHub / a message to the guide authors. Nothing is sent automatically.")
 		.__END
 
 	frame.CloseButton = CHAIN(UI:Create("Button",frame,name.."_Close2"))
@@ -133,7 +139,8 @@ function BugReport:CreateDumpFrameBasic()
 end
 
 
--- Circle back to this. Update to support any type of output
+-- Show dump in a selectable edit box so the player can Ctrl+C it.
+-- Nothing is uploaded — ESO addons cannot send mail/HTTP from here.
 function BugReport:ShowDump(text,title)
 	local frame
 
@@ -145,10 +152,13 @@ function BugReport:ShowDump(text,title)
 
 	assert(frame,"Could not create a BasicFrame for BugReport")
 
+	frame.title:SetText(title or "Bug Report")
 	frame.display:SetText(text)
-	frame.display:SetHidden(false)
-	frame.copybox:SetHidden(true)
-	frame.title:SetText(title or "Generic dump:")
+	frame.display:SetHidden(true)
+	frame.copybox:SetText(text)
+	frame.copybox:SetHidden(false)
+	frame.copybox:TakeFocus()
+	frame.copybox:SelectAll()
 
 	frame:Show()
 end

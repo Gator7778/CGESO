@@ -45,6 +45,11 @@ local DEFAULT_HEIGHT = 175
 local MIN_WIDTH = 200
 local MAX_WIDTH = 600
 
+-- Backdrop-only opacity so the world shows through; text/icons stay fully opaque.
+local DEFAULT_VIEWER_OPACITY = 0.20
+-- Prior shipped defaults; migrate these once to the current default (custom slider values stay).
+local PRIOR_DEFAULT_OPACITIES = { 0.65, 0.42 }
+
 local TITLE_BAR_HEIGHT = 90
 local GUIDE_BAR_HEIGHT = 20
 local PROGRESS_BAR_HEIGHT = 7
@@ -110,8 +115,6 @@ end
 -- CREATION FUNCTIONS
 -----------------------------------------
 
--- TODO make goals always grow down.
-
 function Viewer:add_tooltip(control,text)
 	control:AddTooltip(nil,text,control,TOP,0,0,BOTTOM)
 end
@@ -150,7 +153,7 @@ function Viewer:CreateCGVF()
 		:SetDimensionConstraints(MIN_WIDTH,nil,MAX_WIDTH,nil)
 		:SetResizeHandleSize(4)
 		:SetMouseEnabled(true) -- Just enable mouse so it can drag master
-		:SetHandler("OnMouseDown",function() -- TODO while draggin all of the OnResizedToFit handlers fire, not a big deal likely, but strange and not needed.
+		:SetHandler("OnMouseDown",function()
 				Viewer.moving = master:StartMoving() -- Blocking in stepbox:OnResizedToFit so that viewer isn't resized without need
 			end)
 		:SetHandler("OnMouseUp",function()
@@ -200,12 +203,13 @@ function Viewer:CreateCGVF()
 			end)
 		.__END
 
-	local s = "Click to generate a bug report."
+	local s = "Click to generate a bug report.\nOpens a copyable dump — nothing is sent automatically."
 	if Zgoo and CGV.DEV then
 		s = s .. "\nDEV:\nRight click to Zgoo the current step.\nShift-Right click to Zgoo current guide."
 	end
 	Viewer:add_tooltip(titlebar.bug,s)
-	titlebar.bug:SetHidden(not CGV.db.profile.bugreports)
+	-- Default on; Extras → “Show bug report button” toggles visibility.
+	titlebar.bug:SetHidden(not (CGV.db.profile.bugreports ~= false))
 
 	titlebar.title = CHAIN(ui:Create("Logo",titlebar,tname.."_Title"))
 		:SetPoint(CENTER,titlebar,0,-8)
@@ -216,11 +220,11 @@ function Viewer:CreateCGVF()
 		:SetHandler("OnClicked",function() self:CloseButton_OnClick() end)
 		.__END
 
-	-- TODO what button?
+	-- Spacer / reserved slot next to the guide picker (kept for layout anchors).
 	titlebar.something = CHAIN(ui:Create("GuideButton",titlebar,tname.."_something","Close"))
 		:SetPoint(BOTTOMRIGHT, titlebar, - BIG_PADDING, 0 )
 		:SetHandler("OnClicked",function() self:CloseButton_OnClick() end)
-		:Hide()	-- TODO unhide and make a real button?
+		:Hide()
 		.__END
 
 	titlebar.prevStep = CHAIN(ui:Create("GuideButton",titlebar,tname.."_PrevStep","Left"))
@@ -445,7 +449,7 @@ function Viewer:CreateGoalUI(parent,goalnum)
 	end
 
 	goalui.icon = CHAIN(ui:Create("Texture",goalui,goalName.."_Icon"))
-		:SetPoint(LEFT,GOAL_ICON_PADDING,0)	-- TODO If you put it in TOPRIGHT then it makes the goal's Sizing to Descendents to be much bigger than needed (Height is ~5 px bigger than needed). Why?
+		:SetPoint(LEFT,GOAL_ICON_PADDING,0)	-- LEFT anchor avoids ~5px extra row height vs TOPRIGHT on descendents sizing
 		:SetSize(GOAL_ICON_SIZE,GOAL_ICON_SIZE)
 		:SetTexture(CGV.DIR .. "/Viewer/Skins/Stealth/stepicons.dds")
 		.__END
@@ -509,17 +513,49 @@ function FrameUI:GetStepSkipCount(time)
 	end 
 end
 
+-- Hide step slots beyond the number the user wants visible.
+function FrameUI:HideExtraSteps(keep)
+	keep = keep or 0
+	for i, stepframe in ipairs(self.stepuis) do
+		if i > keep then
+			stepframe:ClearAndHide()
+		end
+	end
+end
+
+-- Soft alpha pulse for attention (bug report pending / no guide loaded).
+local function PulseAlpha(control, active)
+	if not control or control:IsHidden() then return end
+	if active then
+		local phase = (_G.GetFrameTimeMilliseconds() % 700) / 700
+		-- 0.4 ↔ 1.0 triangle wave
+		local a = phase < 0.5 and (0.4 + phase * 1.2) or (1.0 - (phase - 0.5) * 1.2)
+		control:SetAlpha(a)
+	else
+		control:SetAlpha(1)
+	end
+end
+
 function FrameUI:OnUpdate(time)
 
-	local bug = Viewer.Frame.TitleBar.bug
-	if CGV.BugReport.report and #CGV.BugReport.report>0 then
-		local time = _G.GetFrameTimeMilliseconds() % 500
-		bug:SetAlpha(time<250 and 1 or 0.5)
-		-- TODO: BLINK THE BUG
-	else
-		bug:SetAlpha(1)
-	end
+	local titlebar = Viewer.Frame and Viewer.Frame.TitleBar
+	local bug = titlebar and titlebar.bug
+	local hasBug = CGV.BugReport and CGV.BugReport.report and #CGV.BugReport.report > 0
+	PulseAlpha(bug, hasBug)
 
+	local guideSelect = titlebar and titlebar.guideSelect
+	local needGuide = (not CGV.CurrentGuide) and (not CGV.loading)
+	PulseAlpha(guideSelect, needGuide)
+	if titlebar and titlebar.guideBox and titlebar.guideBox.SetBackdropAlpha then
+		-- Subtle box pulse with the picker when no guide is loaded
+		if needGuide then
+			local phase = (_G.GetFrameTimeMilliseconds() % 700) / 700
+			local a = phase < 0.5 and (0.55 + phase * 0.7) or (0.9 - (phase - 0.5) * 0.7)
+			titlebar.guideBox:SetBackdropAlpha(a)
+		else
+			titlebar.guideBox:SetBackdropAlpha(1)
+		end
+	end
 
 	if (Viewer.prevDownTime or Viewer.nextDownTime) and (time - (self.lastArrowSurfUpdate or 0) > ARROW_DOWN_REPETITION) then  -- time for next repetition click!
 		-- and now the FAST step surfing
@@ -535,21 +571,6 @@ function FrameUI:OnUpdate(time)
 
 	if time - (self.lastUpdate or 0) < UPDATETIME then return end	-- throttle it based on time.
 	self.lastUpdate = time
-
-	-- TODO flashing stuff?
-
-	-- TODO flash guide button
-	--[[
-	if (not CGV.CurrentGuide and not CGV.loading) or CGV.suggesting then
-		GuideButton.flashing = true
-		if not GuideButton.blink:IsPlaying() then GuideButton.blink:Play() end
-		GuideButton:LockHighlight()
-	else
-		GuideButton.flashing = nil
-		GuideButton.blink:Stop()
-		GuideButton:UnlockHighlight()
-	end
-	--]]
 
 	CGV:TryToCompleteStep(CGV.fastforward)
 
@@ -593,6 +614,16 @@ function StepUI:HideExtraGoals()
 	end
 end
 
+-- Clear all goals and hide this step slot (past end of guide, or unused slot).
+function StepUI:ClearAndHide()
+	for _,goalframe in ipairs(self.goaluis) do
+		goalframe.updated = nil
+		goalframe.goal = nil
+		goalframe:Hide()
+	end
+	self:Hide()
+end
+
 -----------------------------------------
 -- GOAL CLASS FUNCTIONS
 -----------------------------------------
@@ -613,7 +644,7 @@ end
 
 function GoalUI:OnMouseUp(but)
 	if self.goal and self.goal.action == "confirm" then -- Has a |confirm
-		-- EXTRA! If it's a "nextreload", set it up.
+		-- |confirm |nextreload … switches guides live on click (still a hyperlink).
 		local halt = self.goal:OnClick()
 		if not halt then Viewer:NextStepButton_OnClick() end
 	end
@@ -684,7 +715,7 @@ function Viewer:Show_GuideViewer(notoggle)
 
 	self.Frame:Show()
 
-	self:Update(1)	-- TODO do we update it here?
+	self:Update(1)
 end
 
 function Viewer:Hide_GuideViewer(notoggle)
@@ -758,18 +789,21 @@ function Viewer:Update(full)
 				Fr.TitleBar.guideLabel:SetText(curGuide.title_short)
 			end
 
-			for stepnum = 1, (CGV.sv.profile.numStepShow or 1) do while(1) do		-- TODO handle multiple steps Hiding/Showing and that jazz
-				local stepframe = Fr:GetStepUI(stepnum)	-- TODO maybe don't get/create it if we arn't going to display it?
+			-- Slot 1 = current step; slots 2..N = upcoming steps. Hide empty / unused slots.
+			local numShow = CGV.sv.profile.numStepShow or 1
+			if numShow < 1 then numShow = 1 end
+			local curStepNum = CGV.CurrentStepNum or 1
 
-				local isproperStepnum = true
-				if isproperStepnum then	--if ((stepnum>=firststep and stepnum<=laststep) or frame.is_sticky) and stepnum<=#self.CurrentGuide.steps then
-					local curStep = curGuide:GetCurStep()
+			for slot = 1, numShow do
+				local stepframe = Fr:GetStepUI(slot)
+				local guideStepNum = curStepNum + slot - 1
+				local step = curGuide:GetStep(guideStepNum)
 
-					--TODO checking stuff?
+				if step and step.goals then
+					stepframe:Show()
 
 					local goalnum = 1	-- goalnum incremented manually so tip lines can be added
-					-- Lets handle goals!
-					for _,goal in ipairs(curStep.goals) do while(1) do
+					for _,goal in ipairs(step.goals) do while(1) do
 						local goalframe = stepframe:GetGoalUI(goalnum)
 						local text = goal:GetText()
 						local status = goal:GetStatus()
@@ -791,8 +825,7 @@ function Viewer:Update(full)
 
 							if goal.action~="tip" then
 								tipframe = CHAIN(stepframe:GetGoalUI(goalnum))
-								-- This is a tip that is part of another goal.. We create another goalframe for it but that goal frame doesn't get to get it's icon and backdrop set properly... Just do it since we know it is a tip.
-								-- TODO better way to setup the icon/backdrop?
+								-- Tip line attached to another goal — set icon/backdrop here.
 								:SetBackdropColor(0,0,0,0)
 								:SetIcon(1)
 								.__END
@@ -812,62 +845,55 @@ function Viewer:Update(full)
 							goalframe.label:SetFontSize(CGV.sv.profile.fontsize)
 						end
 
-						-- ICONS
+						-- ICONS (always shown; from stepicons.dds)
+						goalframe.icon:Show()
 
-						if true or CGV.db.profile.goalicons then  -- TODO make optionable?
-							--label:SetPoint("TOPLEFT",line,"TOPLEFT",icon_indent+2,0)
+						if goal.next then
+							goalframe:SetIcon(actionicon.next)
 
-							--icon:SetPoint("CENTER",line,"TOPLEFT",self.db.profile.fontsize*0.5+1,-self.db.profile.fontsize*0.5-1)
-							--icon:SetSize(self.CurrentSkinStyle.StepLineIconSize * self.db.profile.fontsize,self.CurrentSkinStyle.StepLineIconSize * self.db.profile.fontsize) -- TODO SkinData friendly?
-							goalframe.icon:Show()
+						elseif status == "passive" then
 
-							if goal.next then
-								goalframe:SetIcon(actionicon.next)
-
-							elseif status == "passive" then
-
-								if 	goal.action == "talk" or 
-									goal.action == "from" or 
-									goal.action == "goto" or
-									goal.action == "goldcollect" or 
-									goal.action == "goldtracker" then
-										goalframe:SetIcon(actionicon[goal.action])
-								else
-									goalframe:SetIcon(1)
-								end
-								--icon:SetDesaturated(false)
-
-							elseif status == "incomplete" then
-
-								goalframe:SetIcon(actionicon[goal.action])
-								--icon:SetDesaturated(false)
-
-							elseif status == "complete" then
-
-								goalframe:SetIcon(3)
-								--icon:SetDesaturated(false)
-
-							elseif status == "impossible" then
-
-								goalframe:SetIcon(actionicon[goal.action])
-								--icon:SetDesaturated(true)
-
-							elseif status == "obsolete" then
-
-								goalframe:SetIcon(actionicon[goal.action])
-								--icon:SetDesaturated(true)
-
-							else -- maybe hidden, maybe WTF
+							if 	goal.action == "talk" or
+								goal.action == "from" or
+								goal.action == "goto" or
+								goal.action == "goldcollect" or
+								goal.action == "goldtracker" then
+									goalframe:SetIcon(actionicon[goal.action])
+							else
 								goalframe:SetIcon(1)
 							end
-						else
-							--label:SetPoint("TOPLEFT",line,"TOPLEFT",0,0)
-							goal.icon:Hide()
+
+						elseif status == "incomplete" then
+
+							goalframe:SetIcon(actionicon[goal.action])
+
+						elseif status == "complete" then
+
+							goalframe:SetIcon(3)
+
+						elseif status == "impossible" then
+
+							goalframe:SetIcon(actionicon[goal.action])
+
+						elseif status == "obsolete" then
+
+							goalframe:SetIcon(actionicon[goal.action])
+
+						else -- maybe hidden, maybe WTF
+							goalframe:SetIcon(1)
 						end
 
-						-- Backdrops
+						-- Backdrops — incomplete/current steps use translucent brand accent.
+						-- Alpha lives in Theme.ACCENT_ROW_ALPHA (set to 1 for solid).
 
 						local arr = (CGV.Pointer.ArrowFrame and CGV.Pointer.ArrowFrame.waypoint and CGV.Pointer.ArrowFrame.waypoint.goalnum==goal.num and 0.3) or 0
+						local ar, ag, ab, aa = 245/255, 93/255, 7/255, 0.40
+						if CGV.Theme and CGV.Theme.AccentRowTable then
+							ar, ag, ab, aa = unpack(CGV.Theme.AccentRowTable(arr > 0))
+						elseif CGV.Theme and CGV.Theme.Accent then
+							ar, ag, ab = CGV.Theme.Accent()
+							aa = (CGV.Theme.ACCENT_ROW_ALPHA or 0.40)
+						end
 
 						if goal:IsCompletable() then
 							local complete,possible = goal:IsComplete()
@@ -876,12 +902,16 @@ function Viewer:Update(full)
 							elseif complete then
 								goalframe:SetBackdropColor(arr,1,arr,.5)
 							elseif possible then
-								goalframe:SetBackdropColor(1,arr,arr,.5)
+								goalframe:SetBackdropColor(ar, ag, ab, aa)
 							else
 								goalframe:SetBackdropColor(0.6+arr,0.6+arr,0.6+arr,.5)
 							end
 						else
-							goalframe:SetBackdropColor(1,1,1,arr/2)
+							if arr > 0 then
+								goalframe:SetBackdropColor(ar, ag, ab, aa)
+							else
+								goalframe:SetBackdropColor(0, 0, 0, 0)
+							end
 						end
 
 
@@ -892,12 +922,13 @@ function Viewer:Update(full)
 					stepframe:HideExtraGoals()
 
 				else
-					-- Probably hide it or sumthin
-					stepframe:Hide()
+					-- Past end of guide (or missing step) — clear and hide this slot.
+					stepframe:ClearAndHide()
 				end
+			end
 
-				break 
-			end end
+			-- Drop any previously created slots beyond the current setting.
+			Fr:HideExtraSteps(numShow)
 
 		else
 			-- No current guide.
@@ -907,10 +938,7 @@ function Viewer:Update(full)
 				Fr.TitleBar.guideLabel:SetText(L["guide_notloaded"])
 			end
 
-			for stepnum = 1, (CGV.sv.profile.numStepShow or 1) do
-				local stepframe = Fr:GetStepUI(stepnum)
-				stepframe:HideExtraGoals()
-			end
+			Fr:HideExtraSteps(0)
 		end
 	end
 
@@ -918,8 +946,37 @@ function Viewer:Update(full)
 end
 
 -- Updates the visuals on the viewer itself.
-function Viewer:UpdateViewer()		-- TODO this probably needs to update more things
-	self:SetAlpha(CGV.sv.profile.opacitymain)
+function Viewer:UpdateViewer()
+	-- Defaults: backdrop opacity 20% (DEFAULT_VIEWER_OPACITY = 0.20).
+	-- v3: migrated opaque / prior 0.65 / 0.42 → 0.20 once.
+	-- v4: force 0.20 once more so existing chars pick up the translucent default.
+	local opacity = CGV.sv.profile.opacitymain
+	if not CGV.sv.profile.opacity_default_v3 then
+		local nearPrior = false
+		if opacity then
+			for _, prior in ipairs(PRIOR_DEFAULT_OPACITIES) do
+				if zo_floatsAreEqual(opacity, prior, 0.02) then
+					nearPrior = true
+					break
+				end
+			end
+		end
+		if opacity == nil or opacity >= 0.99 or nearPrior then
+			opacity = DEFAULT_VIEWER_OPACITY
+			CGV.sv.profile.opacitymain = opacity
+		end
+		CGV.sv.profile.opacity_default_v3 = true
+		CGV.sv.profile.opacity_backdrop_only = true
+		CGV.sv.profile.opacity_default_v2 = true
+	end
+	if not CGV.sv.profile.opacity_default_v4 then
+		opacity = DEFAULT_VIEWER_OPACITY
+		CGV.sv.profile.opacitymain = opacity
+		CGV.sv.profile.opacity_default_v4 = true
+		CGV.sv.profile.opacity_backdrop_only = true
+	end
+
+	self:SetAlpha(opacity or DEFAULT_VIEWER_OPACITY)
 	self:SetScale(CGV.sv.profile.framescale)
 
 	CGV.sv.profile.vieweranchor = CGV.sv.profile.vieweranchor and #CGV.sv.profile.vieweranchor==5 and CGV.sv.profile.vieweranchor or DEFAULT_ANCHOR
@@ -932,18 +989,9 @@ function Viewer:UpdateViewer()		-- TODO this probably needs to update more thing
 	self:Update()
 end
 
--- If a mode is passed us that, otherwise just toggle to the next type.	TODO
+-- Progress is always step-based (level mode retired — quests scale with character).
 function Viewer:ChangeProgressType(mode)
-
-	if mode then
-		CGV.sv.profile.viewerProgBar = mode
-	elseif CGV.sv.profile.viewerProgBar == PROG_BAR_TYPE_STEP then
-		CGV.sv.profile.viewerProgBar = PROG_BAR_TYPE_LEVEL
-	elseif CGV.sv.profile.viewerProgBar == PROG_BAR_TYPE_LEVEL then
-		CGV.sv.profile.viewerProgBar = PROG_BAR_TYPE_STEP
-	end
-
-	-- Update the bar now.
+	CGV.sv.profile.viewerProgBar = PROG_BAR_TYPE_STEP
 	self:UpdateProgressBar()
 end
 
@@ -951,44 +999,27 @@ function Viewer:UpdateProgressBar()
 	if not self.Frame or not self.Frame:IsShown() then return end
 	local progressbar = self.Frame.progress
 	local curGuide = CGV.CurrentGuide
-	local progBarType = CGV.sv.profile.viewerProgBar or PROG_BAR_TYPE_STEP
 
 	local progressText, tooltip, progress, label
 
 	progress = 0
+	CGV.sv.profile.viewerProgBar = PROG_BAR_TYPE_STEP
 
 	self:Debug("Updating Progress Bar")
 
 	if not curGuide then
 		-- No guide, no progress
 		label = L['frame_guide_none']
-	elseif progBarType == PROG_BAR_TYPE_STEP or progBarType == PROG_BAR_TYPE_LEVEL then
-		progressText, tooltip, progress = curGuide:GetCompletionText(progBarType)
+	else
+		progressText, tooltip, progress = curGuide:GetCompletionText(PROG_BAR_TYPE_STEP)
 		if not progress then return end
 
-		if progBarType == PROG_BAR_TYPE_STEP then
-			if progress == 100 then
-				label = L['frame_guide_complete']
-			else
-				label = (L['frame_guide_progress']:format(progress))
-			end
-
-			-- GetCompletionText doesn't return useful information. Just use step info from GetCompletion.
-			-- tooltip = tooltip.."\n"..L['frame_guide_switch_level']
-
-			progressbar:SetColor(PROG_BAR_COLOR_STEP)
-		elseif progBarType == PROG_BAR_TYPE_LEVEL then
-			if progress == 100 then
-				label = L['frame_guide_maxlevel']
-			else
-				label = (L['frame_guide_progress']:format(progress))
-			end
-
-			-- Add the message to click to change modes.
-			tooltip = tooltip.."\n"..L['frame_guide_switch_step']
-
-			progressbar:SetColor(PROG_BAR_COLOR_LEVEL)
+		if progress == 100 then
+			label = L['frame_guide_complete']
+		else
+			label = (L['frame_guide_progress']:format(progress))
 		end
+		progressbar:SetColor(PROG_BAR_COLOR_STEP)
 	end
 
 	progressbar.tooltip = tooltip or "none"
@@ -1026,10 +1057,32 @@ function Viewer:ResizeToFitSteps()
 		:SetPoint(TOP,frame.master)
 end
 
+-- Apply opacity to viewer backdrops only so the world shows through while text/icons stay readable.
 function Viewer:SetAlpha(a)
 	if not self.Frame then return end
 
-	self.Frame:SetAlpha(a)
+	a = a or DEFAULT_VIEWER_OPACITY
+	if a < 0 then a = 0 elseif a > 1 then a = 1 end
+
+	local frame = self.Frame
+	frame:SetBackdropAlpha(a)
+
+	if frame.stepbox and frame.stepbox.SetBackdropAlpha then
+		frame.stepbox:SetBackdropAlpha(a)
+	end
+
+	local guideBox = frame.TitleBar and frame.TitleBar.guideBox
+	if guideBox and guideBox.SetBackdropAlpha then
+		guideBox:SetBackdropAlpha(a)
+	end
+
+	-- Keep Home menu + popups in sync with the opacity slider.
+	if CGV.Menu and CGV.Menu.SetBackdropOpacity then
+		CGV.Menu:SetBackdropOpacity(a)
+	end
+	if CGV.PopupHandler and CGV.PopupHandler.SyncLiveSettings then
+		CGV.PopupHandler:SyncLiveSettings()
+	end
 end
 
 function Viewer:SetScale(scale)
@@ -1072,9 +1125,9 @@ function Viewer:HandleActionLayer()
 
 	if (( isActive("GameMenu")							-- GameMenu
 			or isActive("User Interface Shortcuts")			-- User Interface Shortcuts
-			or isActive("Notifications")					-- Notifications		TODO wtf is this layer? Sounds like we should hide here
-			or isActive("Siege")							-- Siege				TODO wtf is this layer? Sounds like we should hide here
-			or isActive("Dialogs") )						-- Dialogs				TODO wtf is this layer? Sounds like we should hide here
+			or isActive("Notifications")					-- Notifications
+			or isActive("Siege")							-- Siege
+			or isActive("Dialogs") )						-- Dialogs
 		and CGV.sv.profile.hideoninventory
 	)
 	or (isActive("Conversation")						-- Conversation
@@ -1096,7 +1149,7 @@ function Viewer:HandleActionLayer()
 		end
 	end
 
-	_G.ZO_WorldMap_UpdateMap()								-- TODO temp fix for world map sometimes not updating properly
+	_G.ZO_WorldMap_UpdateMap()								-- workaround: map sometimes stale after layer changes
 end
 
 

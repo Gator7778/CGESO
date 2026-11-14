@@ -45,7 +45,6 @@ local function getCorrectVarsByType(targetID)
 	elseif targetID == OBJECT_STR then
 		comdata, data, saveddata, lastIds = objectDataCom, objectData, svdata.objectIds, allLastUsedIds.object
 	elseif targetID == ITEM_STR then
-		-- TODO
 		data, saveddata, lastIds = itemData, svdata.itemIds, allLastUsedIds.item
 	end
 

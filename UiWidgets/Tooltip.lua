@@ -47,9 +47,7 @@ function Tooltip:AddHeader(text)
   if not text then return end
   local line = 1
   local r,g,b = unpack(HEADER_COLOR)
-  --self:AddHeaderLine(text,headerFont,line,TOOLTIP_HEADER_SIDE_LEFT,r,g,b)
-  -- TODO can't use HeaderLine because it sets the tooltip to full width which is not desired.
-  -- TODO can't left align the header because it doesn't work without the last argument, which sets it to full width : /
+  -- AddHeaderLine forces full tooltip width; savedAddLine keeps auto width.
   self:savedAddLine(text,headerFont,r,g,b)--,TEXT_ALIGN_LEFT,MODIFY_TEXT_TYPE_NONE,TEXT_ALIGN_LEFT,true)
 end
 

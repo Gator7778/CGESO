@@ -170,7 +170,6 @@ function Quests:UpdateQuest(journalIndex)
 	if quest then
 		quest:FillFromJournal()
 	end
-	-- TODO... or will this suffice?
 end
 
 --PUBLIC

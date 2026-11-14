@@ -10,7 +10,7 @@ local print = CGV.print
 local ui = CGV.UI
 local ToggleButton =  CGV.Class:New("ToggleButton")
 local DEFAULT_SIZE = 12
-local ACCENT_COLOR = {HTMLColor("#fe6100ff")}
+local ACCENT_COLOR = (CGV.Theme and CGV.Theme.AccentTable()) or {HTMLColor("#F55D07ff")}
 local BG_COLOR = {.2,.2,.2,1}	-- Copied from SecBackdrop
 local BG_EDGE_COLOR = {0,0,0,1}
 local DEFAULT_FONT_SIZE = 11
@@ -43,7 +43,7 @@ function ToggleButton:New(parent,name)
 
   but.hilitex = CHAIN(ui:Create("Texture",but,name.."_Hili"))
   :SetAllPoints()
-  :SetColor(unpack({HTMLColor("#44444455")}))	-- TODO Crappy highlighting.. :SetMouseOverTexture is strange.
+  :SetColor(unpack({HTMLColor("#44444455")}))
   .__END
 
   -- Button that contains the text so that if you click the text it toggles the box too.
@@ -120,17 +120,17 @@ end
 	Put the text of a toggle button on the LEFT or RIGHT
 	Defaults to RIGHT so should really only need to be moved to the left
 --]]
-function ToggleButton:SetTextPos(pos)		-- TODO does this work?
+function ToggleButton:SetTextPos(pos)
   self.textbutton:ClearAnchors()
   if pos == "LEFT" then
     CHAIN(self.textbutton)
-    :SetPoint(TOPRIGHT,but,TOPLEFT,-5,0)
-    :SetPoint(BOTTOMRIGHT,but,BOTTOMLEFT,-5,0)
+    :SetPoint(TOPRIGHT,self,TOPLEFT,-5,0)
+    :SetPoint(BOTTOMRIGHT,self,BOTTOMLEFT,-5,0)
 
   elseif pos == "RIGHT" then
     CHAIN(self.textbutton)
-    :SetPoint(TOPLEFT,but,TOPRIGHT,5,0)
-    :SetPoint(BOTTOMLEFT,but,BOTTOMRIGHT,5,0)
+    :SetPoint(TOPLEFT,self,TOPRIGHT,5,0)
+    :SetPoint(BOTTOMLEFT,self,BOTTOMRIGHT,5,0)
   else
     error("Can only move text to left or right")
   end

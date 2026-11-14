@@ -36,7 +36,7 @@ ui:RegisterWidget("GuideButton",GuideButton)
 -- LOCAL HELPER FUNCTIONS
 -----------------------------------------
 
-local function CreateTextureWithCoords(parent,texture,l,r,u,d,blend)		-- TODO make this texture part of the UI class?
+local function CreateTextureWithCoords(parent,texture,l,r,u,d,blend)
   local tex = WM:CreateControl(nil,parent,CT_TEXTURE)
   tex:SetTexture(texture)
   tex:SetTexCoords(l,r,u,d)
@@ -107,7 +107,7 @@ local function Setup_DownButton(button)
     end)
   :SetNormalTexture(TEXTURE)
   :SetTextureCoords(TexCoordsForSprite(19,NUM_ICONS,1,1))
-  :SetBackdropColor(HTMLColor("#fe6100ff"))		-- TODO ACCENT_COLOR
+  :SetBackdropColor(unpack((CGV.Theme and CGV.Theme.AccentTable()) or {HTMLColor("#F55D07ff")}))
 end
 
 -- Help. No default OnClicked
@@ -157,7 +157,6 @@ end
 function GuideButton:New(parent,name,butType)
   assert(butType,"Guide Button must have a type")
   local button = CHAIN(ui:CreateControl(name,parent,CT_BUTTON,GuideButton))
-  -- TODO most of this changes once we have textures
   :SetDimensions(DEFAULT_BUTTON_SIZE,DEFAULT_BUTTON_SIZE)
   :SetExcludeFromResizeToFitExtents(true)			-- These are put in corners. Don't resize around them
   :EnableMouseButton(RIGHT_MOUSE_BUTTON,true)	-- These are CGV Globals. Not sure what the ZOS one is. Left Button enabled by default

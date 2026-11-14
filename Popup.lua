@@ -38,6 +38,8 @@ local Queue = {}
 local TOP, TOPLEFT, TOPRIGHT, BOTTOM, BOTTOMRIGHT = _G.TOP, _G.TOPLEFT, _G.TOPRIGHT, _G.BOTTOM, _G.BOTTOMRIGHT
 local TEXT_ALIGN_CENTER = _G.TEXT_ALIGN_CENTER
 local GuiRoot = _G.GuiRoot
+local KEY_ESCAPE = _G.KEY_ESCAPE
+local ZO_PreHookHandler = _G.ZO_PreHookHandler
 
 local DEFAULT_ANCHOR = { TOP, 0, 75 }
 
@@ -65,6 +67,7 @@ CGV.Popup = Popup
 CGV.PopupHandler.Popup = Popup
 PopupHandler.Queue = Queue
 PopupHandler.IsPopupVisible = false
+PopupHandler.registry = {} -- all created popups (for live opacity/font sync)
 
 -----------------------------------------
 -- POPUP CLASS FUNCTIONS
@@ -79,21 +82,21 @@ function Popup:New(name,ptype)
   :SetResizeToFitPadding(RESIZE_X_PADDING,RESIZE_Y_PADDING)
   :SetDimensionConstraints(MIN_WIDTH,MIN_HEIGHT,MAX_WIDTH,MAX_HEIGHT)
   --:SetCanDrag(1)
-  :SetAlpha(CGV.db.profile.opacitymain) --This only gets set once per popup. --TODO it should be able to change dynamically.
+  -- Frame stays fully opaque so text/buttons stay readable; backdrop uses opacitymain.
+  :SetAlpha(1)
   :SetPoint(unpack(DEFAULT_ANCHOR))
-  --[[
-		-- TODO close on escape. Can't do this because once popup get's focus, it doesn't lose it
-		:SetKeyboardEnabled(true)
-		:SetHandler("OnChar",function(me,...)
-			print(...)
-			--me:SetKeyboardEnabled(false)
-			--me:SetKeyboardEnabled(true)
-		end)
-		--]]
+  :SetKeyboardEnabled(true)
+  :SetHandler("OnKeyUp", function(me, key)
+      if key == KEY_ESCAPE then
+        me.private:Escape(me)
+      end
+    end)
   :Hide() -- Done before script is set. After self.private is not intialized yet.
   :SetHandler("OnShow", function(me)
       me.handler.IsPopupVisible = true
       me.handler.CurrentPopup = me
+      me:SetKeyboardEnabled(true)
+      me:ApplyLiveSettings()
     end)
   :SetHandler("OnHide", function(self)
       for i=1,#CGV.PopupHandler.Queue do
@@ -108,7 +111,7 @@ function Popup:New(name,ptype)
   :SetPoint(TOP,0,LOGO_Y_OFFSET)
   .__END
 
-  popup.text = CHAIN(ui:Create("Label",popup,name.."_MainText",CGV.db.profile.fontsize))	-- TODO make font size dynamically
+  popup.text = CHAIN(ui:Create("Label",popup,name.."_MainText",CGV.db.profile.fontsize))
   :SetPoint(TOP,popup.logo,BOTTOM,0,TEXT_Y_OFFSET)
   :SetHorizontalAlignment(TEXT_ALIGN_CENTER)
   :SetWidth(TEXT_MAX_WIDTH)
@@ -117,7 +120,7 @@ function Popup:New(name,ptype)
   .__END
 
   -- This text hides unless needed
-  popup.text2 = CHAIN(ui:Create("Label",popup,name.."_SecText",CGV.db.profile.fontsize,"bold"))	-- TODO make font size dynamically
+  popup.text2 = CHAIN(ui:Create("Label",popup,name.."_SecText",CGV.db.profile.fontsize,"bold"))
   :SetPoint(TOP,popup.text,BOTTOM,0,0)
   :SetHorizontalAlignment(TEXT_ALIGN_CENTER)
   :SetWidth(TEXT_MAX_WIDTH)
@@ -127,7 +130,7 @@ function Popup:New(name,ptype)
   .__END
 
   -- This text hides unless needed, too
-  popup.text3 = CHAIN(ui:Create("Label",popup,name.."_SecText2",CGV.db.profile.fontsize))	-- TODO make font size dynamically
+  popup.text3 = CHAIN(ui:Create("Label",popup,name.."_SecText2",CGV.db.profile.fontsize))
   :SetPoint(TOP,popup.text2,BOTTOM,0,0)
   :SetHorizontalAlignment(TEXT_ALIGN_CENTER)
   :SetWidth(TEXT_MAX_WIDTH)
@@ -138,8 +141,9 @@ function Popup:New(name,ptype)
 
   popup.declinebutton = CHAIN(ui:Create("Button",popup,name.."_Decline"))
   :SetPoint(TOPLEFT,popup.text3,BOTTOM,5,BUT_Y_OFFSET)
+  :SetPerfectSizing(true)
+  :SetFontSize(CGV.db.profile.fontsize,true)
   :SetText(L['static_decline'])
-  :SetFontSize(CGV.db.profile.fontsize,true)		-- TODO change size dynamically?
   :SetHandler("OnClicked",function(me)
       local pop = me:GetParent()
       pop.private:Decline(pop)
@@ -148,8 +152,9 @@ function Popup:New(name,ptype)
 
   popup.acceptbutton = CHAIN(ui:Create("Button",popup,name.."_Accept"))
   :SetPoint(TOPRIGHT,popup.text3,BOTTOM,-5,BUT_Y_OFFSET)
+  :SetPerfectSizing(true)
+  :SetFontSize(CGV.db.profile.fontsize,true)
   :SetText(L['static_accept'])
-  :SetFontSize(CGV.db.profile.fontsize,true)	-- TODO change size dynamically?
   :SetHandler("OnClicked",function(me)
       local pop = me:GetParent()
       pop.private:Accept(pop)
@@ -187,7 +192,70 @@ function Popup:New(name,ptype)
 
   --popup.type = ptype
 
+  tinsert(PopupHandler.registry, popup)
+
+  -- Match Guide Viewer backdrop opacity immediately (text stays opaque).
+  if popup.SetBackdropOpacity then
+    popup:SetBackdropOpacity()
+  end
+
   return popup
+end
+
+-- Same as the Guide Viewer: fade the backdrop only so the world shows through;
+-- logo, text, and buttons stay fully opaque/readable.
+function Popup:SetBackdropOpacity(a)
+  if a == nil and CGV.db and CGV.db.profile then
+    a = CGV.db.profile.opacitymain
+  end
+  if a == nil then a = 0.20 end
+  if a < 0 then a = 0 elseif a > 1 then a = 1 end
+
+  -- Never fade the whole frame (that washed out text at low opacity).
+  if self.SetAlpha then
+    self:SetAlpha(1)
+  end
+
+  if self.SetBackdropAlpha then
+    self:SetBackdropAlpha(a)
+  elseif self.bd and self.bd.SetCenterColor then
+    local r, g, b = 0, 0, 0
+    if self.GetBackdropColor then
+      r, g, b = self:GetBackdropColor()
+    end
+    self.bd:SetCenterColor(r or 0, g or 0, b or 0, a)
+  end
+end
+
+-- Apply current opacity + font settings to this popup (even while open).
+function Popup:ApplyLiveSettings()
+  local profile = CGV.db and CGV.db.profile
+  if not profile then return end
+
+  self:SetBackdropOpacity(profile.opacitymain)
+
+  local size = profile.fontsize or 13
+  if self.text and self.text.SetFontSize then
+    self.text:SetFontSize(size)
+  end
+  if self.text2 and self.text2.SetFontSize then
+    self.text2:SetFontSize(size, true)
+  end
+  if self.text3 and self.text3.SetFontSize then
+    self.text3:SetFontSize(size)
+  end
+  if self.acceptbutton and self.acceptbutton.SetFontSize then
+    self.acceptbutton:SetFontSize(size, true)
+    if self.acceptbutton.ResizeToPerfect then
+      self.acceptbutton:ResizeToPerfect()
+    end
+  end
+  if self.declinebutton and self.declinebutton.SetFontSize then
+    self.declinebutton:SetFontSize(size, true)
+    if self.declinebutton.ResizeToPerfect then
+      self.declinebutton:ResizeToPerfect()
+    end
+  end
 end
 
 function Popup:Show() --Overwrite show... !!!! Real show is saved in SavedShow
@@ -386,7 +454,17 @@ function PopupHandler:ShowPopup(popup)
   --self:TestForPositionAdjustment(popup)
 
   popup:savedShow()														--Show was overwrote and saved here.
-  popup:SetAlpha(CGV.db.profile.opacitymain)	-- alpha may have been changed.
+  popup:ApplyLiveSettings()
+end
+
+-- Update every registered popup when opacity/font settings change (open or not,
+-- so the next show already matches the viewer slider).
+function PopupHandler:SyncLiveSettings()
+  for _, popup in ipairs(self.registry) do
+    if popup and popup.ApplyLiveSettings then
+      popup:ApplyLiveSettings()
+    end
+  end
 end
 
 function PopupHandler:QueuePop() --popups are shown here.
@@ -432,3 +510,16 @@ end
 -----------------------------------------
 -- STARTUP
 -----------------------------------------
+
+-- Global Escape fallback when the popup itself does not receive the key.
+if ZO_PreHookHandler and GuiRoot then
+  ZO_PreHookHandler(GuiRoot, "OnKeyDown", function(_, key)
+    if key ~= KEY_ESCAPE then return false end
+    local cur = PopupHandler.CurrentPopup
+    if cur and cur:IsShown() then
+      cur.private:Escape(cur)
+      return true
+    end
+    return false
+  end)
+end

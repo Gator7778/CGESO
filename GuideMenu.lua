@@ -19,7 +19,8 @@ local Settings = {
 }
 local GuideMenu = {}
 
-local BUTTON_HIGHLIGHT_TEXTURE = {1,1,1,.2}
+-- Soft accent hover for list rows (Theme.lua — flip USE_BRAND_ACCENT to revert)
+local BUTTON_HIGHLIGHT_TEXTURE = (CGV.Theme and CGV.Theme.AccentSoftTable(0.55)) or {245/255,93/255,7/255,.55}
 
 local name = "CommunityMenu"
 local GUIDEMENU_TAB_ID = "guides"
@@ -33,10 +34,20 @@ local LEFT_COLUMN_WIDTH = 250
 local SCROLL_WIDTH = 15
 local GUIDE_IMAGE_WIDTH = 512
 local GUIDE_IMAGE_HEIGHT = 256
+local WELCOME_GUIDE_IMAGE = (CGV.DIR or "CGESO").."/Viewer/Skins/Stealth/cgeso-SOTWC.dds"
 local OPTIONS_LEFT_OFFSET = 15
 local OPTIONS_VERT_OFFSET = 5
 local DEFAULT_ANCHOR= {	CENTER, }
-local MAX_LINES = 18
+-- Guide Home list math (DEFAULT_HEIGHT 500, HEADER 60, FOOTER 25 → mainBackdrop 415):
+--   header≈30 + search 22+4 + pads ≈ 60 → list ≈ 355px → floor(355/22) = 16 max.
+-- Pool is larger; RefreshUI hides any row past the measured fit.
+local GUIDE_LIST_ROW_HEIGHT = 22
+local GUIDE_MENU_BUTTON_POOL = 18
+local GUIDE_MENU_FALLBACK_LINES = 12 -- if host height not ready yet
+-- Settings left category list (same row height; scrolls when groups > visible lines)
+local SETTINGS_LIST_ROW_HEIGHT = GUIDE_LIST_ROW_HEIGHT
+local SETTINGS_BUTTON_POOL = 20
+local SETTINGS_FALLBACK_LINES = 12
 
 local GuideStatusColor = {
 	["SUGGESTED"]	= "FFCC40",
@@ -46,6 +57,10 @@ local GuideStatusColor = {
 	["HEADER"] 		= "FFFFFF",
 	["FOLDER"] 		= "FFFFFF",
 }
+
+local FOLDER_FAVORITES = "__favorites__"
+local FOLDER_SUGGESTED = "__suggested__"
+local RIGHT_MOUSE_BUTTON = _G.RIGHT_MOUSE_BUTTON or 2
 
 local tinsert,type,pairs,ipairs,class = table.insert,type,pairs,ipairs,_G.class
 local CHAIN = CGV.Utils.ChainCall
@@ -139,13 +154,20 @@ function Menu:CreateBaseMenu()
 		.__END
 	self.Frame = frame
 
-	-- Guide version, lower left
-	frame.version = CHAIN(ui:Create("Label",frame,name.."_VerTitle",12,"bold"))
-		:SetPoint(BOTTOMLEFT,frame,BOTTOMLEFT,10,-8) -- TODO y vert distance does not keep centered in footer if footer size changes.
+	-- Footer band (height = FOOTER_HEIGHT). Version + settings stay vertically centered if FOOTER_HEIGHT changes.
+	frame.footer = CHAIN(ui:Create("InvisFrame",frame,name.."_Footer"))
+		:SetPoint(BOTTOMLEFT,frame,BOTTOMLEFT,0,0)
+		:SetPoint(BOTTOMRIGHT,frame,BOTTOMRIGHT,0,0)
+		:SetHeight(FOOTER_HEIGHT)
+		.__END
+
+	-- Guide version, lower left (LEFT↔LEFT keeps label mid-line centered in the footer)
+	frame.version = CHAIN(ui:Create("Label",frame.footer,name.."_VerTitle",12,"bold"))
+		:SetPoint(LEFT,frame.footer,LEFT,10,0)
 		:SetText("VER:")
 		.__END
 
-	frame.versionNum = CHAIN(ui:Create("Label",frame,name.."_VerNum",12))
+	frame.versionNum = CHAIN(ui:Create("Label",frame.footer,name.."_VerNum",12))
 		:SetPoint(LEFT,frame.version,RIGHT,3,0)
 		:SetText("|cffaa00"..CGV.version.."|r")
 		.__END
@@ -195,18 +217,68 @@ function Menu:CreateBaseMenu()
 		))
 	.__END
 
-	-- Settings Gear button, bottom right
-	frame.settings = CHAIN(ui:Create("GuideButton",frame,name.."_Settings","Settings"))
-		:SetPoint(BOTTOMRIGHT,frame,BOTTOMRIGHT,-5,-5)
+	-- Settings Gear button, bottom right (centered in footer band)
+	frame.settings = CHAIN(ui:Create("GuideButton",frame.footer,name.."_Settings","Settings"))
+		:SetPoint(RIGHT,frame.footer,RIGHT,-5,0)
 		.__END
 	-- Secondary Frame (contains the menu, scroll bar, and guide information)
 	frame.mainBackdrop = CHAIN(ui:Create("SecFrame", frame, name.. "_mainBackdrop"))
 		:SetPoint( TOPLEFT,frame, TOPLEFT,1,HEADER_HEIGHT)
 		:SetPoint(BOTTOMRIGHT,frame,BOTTOMRIGHT,-1,-FOOTER_HEIGHT)
-		:SetBackdropColor(.15,.15,.15,1) -- #252526
+		:SetBackdropColor(.15,.15,.15,1) -- #252526; alpha set via SetBackdropOpacity
 		.__END
 
+	-- Soft 2px accent under header (SecFrame so color tints correctly — plain Texture looked red)
+	frame.headerAccent = CHAIN(ui:Create("SecFrame",frame,name.."_HeaderAccent"))
+		:SetHeight(2)
+		:SetPoint(TOPLEFT,frame.mainBackdrop,TOPLEFT,0,0)
+		:SetPoint(TOPRIGHT,frame.mainBackdrop,TOPRIGHT,0,0)
+		:SetBackdropColor(unpack((CGV.Theme and CGV.Theme.AccentTable()) or {HTMLColor("#F55D07ff")}))
+		:SetBackdropEdgeColor(0,0,0,0)
+		.__END
+
+	self:SetBackdropOpacity()
 	self:SetTab(GUIDEMENU_TAB_ID)	-- Set the default tab
+end
+
+-- Same as Guide Viewer / popups: fade chrome backdrops only; text and buttons stay readable.
+function Menu:SetBackdropOpacity(a)
+	if a == nil and CGV.db and CGV.db.profile then
+		a = CGV.db.profile.opacitymain
+	end
+	if a == nil then a = 0.20 end
+	if a < 0 then a = 0 elseif a > 1 then a = 1 end
+
+	local frame = self.Frame
+	if not frame then return end
+
+	if frame.SetAlpha then
+		frame:SetAlpha(1)
+	end
+	if frame.SetBackdropAlpha then
+		frame:SetBackdropAlpha(a)
+	end
+	if frame.mainBackdrop and frame.mainBackdrop.SetBackdropAlpha then
+		frame.mainBackdrop:SetBackdropAlpha(a)
+	end
+	if frame.headerAccent and frame.headerAccent.SetBackdropAlpha then
+		frame.headerAccent:SetBackdropAlpha(a)
+	end
+
+	-- Nested Home / Settings scroll tracks
+	local gm = GuideMenu.Frame
+	if gm then
+		if gm.guideBoxScrollBack and gm.guideBoxScrollBack.SetBackdropAlpha then
+			gm.guideBoxScrollBack:SetBackdropAlpha(a)
+		end
+		if gm.searchBox and gm.searchBox.SetBackdropAlpha then
+			gm.searchBox:SetBackdropAlpha(a)
+		end
+	end
+	local sm = Settings.Frame
+	if sm and sm.optionTypesScrollBack and sm.optionTypesScrollBack.SetBackdropAlpha then
+		sm.optionTypesScrollBack:SetBackdropAlpha(a)
+	end
 end
 
 -----------------------------------------
@@ -262,24 +334,77 @@ function GuideMenu:Create()
 		:SetWidth(LEFT_COLUMN_WIDTH)
 		.__END
 
-	frame.header = CHAIN(ui:Create("Label",frame,guideMenuName.."_Header",15,"bold"))
-		:SetPoint(TOPLEFT,frame,TOPLEFT,HEADER_PADDING,6)
+	-- Keep header + search + list entirely inside guideBox so height math is self-contained.
+	frame.header = CHAIN(ui:Create("Label",frame.guideBox,guideMenuName.."_Header",15,"bold"))
+		:SetPoint(TOPLEFT,frame.guideBox,TOPLEFT,HEADER_PADDING,6)
+		:SetPoint(TOPRIGHT,frame.guideBox,TOPRIGHT,-2,6)
 		:SetText (CGV.Utils.faction_names_short[CGV.Utils.GetFaction()]:upper() .. (CGV.VETERAN_FACTION and " VETERAN" or "") .. " LEVELING")
 		.__END
 
+	-- Zone / guide / quest search (session-only filter)
+	local searchPlaceholder = (CGV.O and CGV.O["opt_guide_search_placeholder"]) or "Search zone, guide, or quest..."
+	frame.searchLabel = CHAIN(ui:Create("Label",frame.guideBox,guideMenuName.."_SearchHint",11))
+		:SetText(searchPlaceholder)
+		.__END
+
+	frame.searchBox = CHAIN(ui:Create("EditBox",frame.guideBox,guideMenuName.."_Search"))
+		:ClearAnchors()
+		:SetPoint(TOPLEFT,frame.header,BOTTOMLEFT,-HEADER_PADDING,4)
+		:SetPoint(TOPRIGHT,frame.header,BOTTOMRIGHT,HEADER_PADDING,4)
+		:SetHeight(22)
+		:SetMaxInputChars(64)
+		:SetText("")
+		:SetHandler("OnTextChanged",function(me)
+				GuideMenu.searchtext = me:GetText() or ""
+				GuideMenu.offset = 0
+				if frame.guideBoxScroll then
+					frame.guideBoxScroll:SetValue(0)
+				end
+				frame.searchLabel:SetHidden(GuideMenu.searchtext ~= "")
+				GuideMenu:RefreshUI()
+			end)
+		:SetHandler("OnFocusGained",function()
+				frame.searchLabel:SetHidden(true)
+			end)
+		:SetHandler("OnFocusLost",function(me)
+				frame.searchLabel:SetHidden((me:GetText() or "") ~= "")
+			end)
+		.__END
+
+	CHAIN(frame.searchLabel)
+		:SetPoint(LEFT,frame.searchBox,LEFT,4,0)
+		:SetMouseEnabled(false)
+
+	-- Opaque-zero SecFrame + clipsChildren: leftover rows are also Hide()'d from measured height.
+	frame.guideListHost = CHAIN(ui:Create("SecFrame",frame.guideBox,guideMenuName.."_ListHost"))
+		:ClearAnchors()
+		:SetPoint(TOPLEFT,frame.searchBox,BOTTOMLEFT,0,4)
+		:SetPoint(BOTTOMRIGHT,frame.guideBox,BOTTOMRIGHT,0,0)
+		:SetBackdropColor(0,0,0,0)
+		:SetBackdropEdgeColor(0,0,0,0)
+		.__END
+	if frame.guideListHost.SetClipsChildren then
+		frame.guideListHost:SetClipsChildren(true)
+	end
+
+	-- Scroll bar tracks the list host only (not header/search).
+	CHAIN(frame.guideBoxScroll)
+		:ClearAnchors()
+		:SetAnchor(TOPLEFT,frame.guideListHost,TOPRIGHT,0,0)
+		:SetAnchor(BOTTOMLEFT,frame.guideListHost,BOTTOMRIGHT,0,0)
 
 	------------------------------
-	-- Setup Left column buttons
+	-- Setup Left column buttons (pool; visible count from host height)
 	-----------------------------
 	frame.buttons = {}
-	local rows = MAX_LINES
-	local ROWHEIGHT = 22	-- TODO calculate these based on height of Guide Menu?
-	for i = 1,rows do
+	self.maxLines = GUIDE_MENU_FALLBACK_LINES
+	local ROWHEIGHT = GUIDE_LIST_ROW_HEIGHT
+	for i = 1, GUIDE_MENU_BUTTON_POOL do
 		local buttonName = guideMenuName.."_But"..i
 
-		-- Copy CGESO_DumpFrameBasic layout. Has working scrollbar.
-		local button = CHAIN(ui:Create("SecButton",frame.guideBox,buttonName))
+		local button = CHAIN(ui:Create("SecButton",frame.guideListHost,buttonName))
 			:SetHeight(ROWHEIGHT)
+			:EnableMouseButton(RIGHT_MOUSE_BUTTON, true)
 			:SetHandler("OnMouseEnter",function(me)
 					me.highlight:Show()
 				end)
@@ -293,9 +418,9 @@ function GuideMenu:Create()
 						GuideMenu:SetCurrentGuide(me.target)
 					end
 				end)
+			:Hide()
 			.__END
 
-		-- Texture for when the button is hovered over.
 		button.highlight = CHAIN(ui:Create("Texture",button,buttonName.."_Highlight"))
 			:SetColor(unpack(BUTTON_HIGHLIGHT_TEXTURE))
 			:SetPoint(button)
@@ -304,23 +429,23 @@ function GuideMenu:Create()
 
 		if i == 1 then
 			CHAIN(button)
-			:SetPoint(RIGHT) -- Set the right point first so it gets the width
-			:SetPoint(TOPLEFT,frame.header,BOTTOMLEFT,-HEADER_PADDING,0)
+			:ClearAnchors()
+			:SetPoint(TOPLEFT,frame.guideListHost,TOPLEFT,0,0)
+			:SetPoint(TOPRIGHT,frame.guideListHost,TOPRIGHT,0,0)
 		else
 			local previousButton = frame.buttons[i-1]
 			CHAIN(button)
+			:ClearAnchors()
 			:SetPoint(TOPLEFT,previousButton,BOTTOMLEFT)
 			:SetPoint(TOPRIGHT,previousButton,BOTTOMRIGHT)
 		end
 
-		-- icons that appear to the left of the guide names
 		button.icon = CHAIN(ui:Create("Texture",button,buttonName.."_Icon"))
 			:SetPoint(LEFT,button,LEFT,10,0)
 			:SetSize(17,17)
 			:SetTexture(CGV.DIR.."/Viewer/Skins/Stealth/guideicons-small.dds")
 			.__END
 
-		-- TODO blinking star on guide animation?
 		button.label = CHAIN(ui:Create("Label",button,buttonName.."_Label",13))
 			:SetPoint(LEFT,button.icon,RIGHT,5,0)
 			:SetPoint(RIGHT)
@@ -331,42 +456,194 @@ function GuideMenu:Create()
 		frame.buttons[i] = button
 	end
 
+	frame.guideListHost:SetHandler("OnEffectivelyShown",function()
+			GuideMenu:RefreshUI()
+		end)
+
 	------------------------------
 	-- Setup Right information panel
 	-----------------------------
+	-- Compact image when a guide is selected; full description scrolls under the image.
+	local DETAIL_IMAGE_HEIGHT = 120
+	local getControl = _G.GetControl
+
 	frame.GuideTitle = CHAIN(ui:Create("Label",frame.guideInfoBox,guideMenuName.."_GuideTitle",17,"bold"))
-		:SetPoint(TOPLEFT,frame.guideInfoBox,20,20)
+		:SetPoint(TOPLEFT,frame.guideInfoBox,20,12)
 		:SetWidth(GUIDE_IMAGE_WIDTH-20)
 		.__END
 
-	frame.GuideImage = CHAIN(ui:Create("Texture",frame.guideInfoBox,guideMenuName.."_GuideTexture"))
-		:SetPoint(TOPLEFT,frame.GuideTitle,0,30)
-		:SetPoint(BOTTOMRIGHT,frame.GuideTitle,0,256)
-		:SetSize(GUIDE_IMAGE_WIDTH,GUIDE_IMAGE_HEIGHT)
+	-- Action buttons under the title (parented to info panel so they don't cover sibling text)
+	frame.SuggestButton = CHAIN(ui:Create("Button",frame.guideInfoBox,guideMenuName.."_SuggestButton"))
+		:SetPoint(TOPLEFT,frame.GuideTitle,BOTTOMLEFT,0,8)
+		:SetSize(100,20)
+		:SetText("Load Suggested")
+		:SetFontSize(13)
+		:SetAccentStyle(true)
+		:SetHandler("OnClicked",function()
+				local best = CGV:GetBestSuggestedGuide()
+				if best then
+					CGV:PromptGuideStyleOrLoad(best, function(guide)
+						GuideMenu:SelectGuide(guide)
+						GuideMenu:SetCurrentGuide(guide)
+					end)
+				else
+					CGV:Print((CGV.O and CGV.O["opt_guide_no_suggested"]) or "No suggested guide for your zone right now.")
+				end
+			end)
+		.__END
+
+	frame.FavButton = CHAIN(ui:Create("Button",frame.guideInfoBox,guideMenuName.."_FavButton"))
+		:SetPoint(LEFT,frame.SuggestButton,RIGHT,8,0)
+		:SetSize(70,20)
+		:SetText("Favorite")
+		:SetFontSize(13)
+		:SetAccentStyle(true)
+		:SetHandler("OnClicked",function()
+				if GuideMenu.selectedguide then
+					CGV:ToggleFavoriteGuide(GuideMenu.selectedguide)
+					GuideMenu:RefreshUI()
+				end
+			end)
 		:Hide()
 		.__END
 
-	-- TODO scrollbar for information panel on the right? Create a scrollbox for the rest of the information.
-	frame.GuideData = CHAIN(ui:Create("Label",frame.guideInfoBox,guideMenuName.."_GuideData",14))
-		:SetPoint(TOPLEFT,frame.GuideImage,0,200)
-		:SetPoint(BOTTOMRIGHT,-20,-10)
-		:SetVerticalAlignment(_G.TEXT_ALIGN_TOP)
-		.__END
-
-	-- Button isn't in the scrollframe either
-	frame.OkButton = CHAIN(ui:Create("Button",frame.guideBox,guideMenuName.."_OkButton"))
-		:SetPoint(BOTTOMRIGHT,frame.guideInfoBox,BOTTOMRIGHT,-20,-10)
+	frame.OkButton = CHAIN(ui:Create("Button",frame.guideInfoBox,guideMenuName.."_OkButton"))
+		:SetPoint(LEFT,frame.FavButton,RIGHT,8,0)
 		:SetSize(80,20)
 		:SetText("Start Guide")
 		:SetFontSize(14)
+		:SetAccentStyle(true)
 		:SetHandler("OnClicked",function()
 				GuideMenu:SetCurrentGuide(GuideMenu.selectedguide)
 			end)
 		.__END
 
-		local str = "|cfe6100Note:|r If you change to another guide before completing an active guide, you may lose your progress in the current guide. We |cfe6100do not recommend|r changing guides until you complete the current."
-		CGV.Viewer:add_tooltip(frame.OkButton,str)
+	local ac = (CGV.Theme and CGV.Theme.AccentCode()) or "F55D07"
+	local str = ("|c%sNote:|r If you change to another guide before completing an active guide, you may lose your progress in the current guide. We |c%sdo not recommend|r changing guides until you complete the current."):format(ac, ac)
+	CGV.Viewer:add_tooltip(frame.OkButton,str)
 
+	-- Short meta line (levels / next) sits above the image
+	frame.GuideMeta = CHAIN(ui:Create("Label",frame.guideInfoBox,guideMenuName.."_GuideMeta",13))
+		:SetPoint(TOPLEFT,frame.SuggestButton,BOTTOMLEFT,0,8)
+		:SetPoint(TOPRIGHT,frame.guideInfoBox,TOPRIGHT,-20,0)
+		:SetVerticalAlignment(_G.TEXT_ALIGN_TOP)
+		:SetCanWrap(true)
+		.__END
+
+	frame.GuideImage = CHAIN(ui:Create("Texture",frame.guideInfoBox,guideMenuName.."_GuideTexture"))
+		:SetPoint(TOPLEFT,frame.GuideMeta,BOTTOMLEFT,0,8)
+		:SetSize(GUIDE_IMAGE_WIDTH,DETAIL_IMAGE_HEIGHT)
+		:SetTexture(WELCOME_GUIDE_IMAGE)
+		:SetColor(1,1,1,1)
+		:Hide()
+		.__END
+
+	-- Scrollable description under the image so long text is not cut off
+	frame.guideDataScroll = CHAIN(wm:CreateControlFromVirtual(guideMenuName.."_GuideDataScroll",frame.guideInfoBox,"ZO_ScrollContainer"))
+		:SetAnchor(TOPLEFT,frame.GuideImage,BOTTOMLEFT,0,8)
+		:SetAnchor(BOTTOMRIGHT,frame.guideInfoBox,BOTTOMRIGHT,-8,-8)
+		.__END
+
+	frame.guideDataScrollChild = CHAIN(getControl(frame.guideDataScroll:GetName().."ScrollChild"))
+		:ClearAnchors()
+		:SetAnchor(TOPLEFT,frame.guideDataScroll)
+		:SetAnchor(TOPRIGHT,frame.guideDataScroll)
+		.__END
+
+	frame.GuideData = CHAIN(ui:Create("Label",frame.guideDataScrollChild,guideMenuName.."_GuideData",14))
+		:SetPoint(TOPLEFT,frame.guideDataScrollChild,TOPLEFT,0,0)
+		:SetPoint(TOPRIGHT,frame.guideDataScrollChild,TOPRIGHT,0,0)
+		:SetVerticalAlignment(_G.TEXT_ALIGN_TOP)
+		:SetCanWrap(true)
+		.__END
+
+	frame._detailImageHeight = DETAIL_IMAGE_HEIGHT
+
+	Menu:SetBackdropOpacity()
+end
+
+-- How many list rows fit inside guideListHost without drawing past the Home frame.
+-- mainBackdrop ≈ 415px; after header+search ≈ 355px list → ≤16 rows at 22px.
+function GuideMenu:GetVisibleListLines()
+	local frame = self.Frame
+	if not frame or not frame.guideListHost or not frame.buttons then
+		return GUIDE_MENU_FALLBACK_LINES
+	end
+
+	local hostH = frame.guideListHost:GetHeight() or 0
+	if hostH < GUIDE_LIST_ROW_HEIGHT then
+		-- Frame may not be laid out yet; use chrome-subtracted fallback.
+		hostH = DEFAULT_HEIGHT - HEADER_HEIGHT - FOOTER_HEIGHT - 80 -- ≈335
+	end
+
+	local n = math.floor(hostH / GUIDE_LIST_ROW_HEIGHT)
+	if n < 1 then n = 1 end
+	if n > #frame.buttons then n = #frame.buttons end
+	-- Hard cap from known window chrome so a bad GetHeight cannot flood the world.
+	local hardCap = math.floor((DEFAULT_HEIGHT - HEADER_HEIGHT - FOOTER_HEIGHT - 70) / GUIDE_LIST_ROW_HEIGHT) -- 15
+	if n > hardCap then n = hardCap end
+	if (n * GUIDE_LIST_ROW_HEIGHT) > hostH then
+		n = n - 1
+		if n < 1 then n = 1 end
+	end
+	return n
+end
+
+-- Trim + lowercase search box text (shared by RefreshUI and kind tags).
+function GuideMenu:GetSearchNeedle()
+	return (self.searchtext or ""):lower():gsub("^%s+", ""):gsub("%s+$", "")
+end
+
+-- Short list tag + full detail label. Disambiguates same zone names (Full / MQO / Shards).
+function GuideMenu:GetGuideKindInfo(guide)
+	if not guide or guide.type == "folder" then return nil end
+	local title = guide.title or ""
+	local O = CGV.O
+	if title:find("Main Quests Only", 1, true) then
+		return {
+			tag = (O and O["opt_guide_kind_mqo_tag"]) or "MQO",
+			full = (O and O["opt_guide_kind_mqo"]) or "Main Quests Only",
+		}
+	end
+	if title:find("Skyshards", 1, true) then
+		return {
+			tag = (O and O["opt_guide_kind_skyshards_tag"]) or "Shards",
+			full = (O and O["opt_guide_kind_skyshards"]) or "Skyshards & Delves",
+		}
+	end
+	-- Sanitized titles look like LEVELING/Auridon (faction prefix stripped).
+	if title:match("^LEVELING/") or title:find("Leveling Guides", 1, true) then
+		return {
+			tag = (O and O["opt_guide_kind_leveling_tag"]) or "Full",
+			full = (O and O["opt_guide_kind_leveling"]) or "Leveling",
+		}
+	end
+	return nil
+end
+
+-- Kind tags only in mixed flat lists (search / favorites / suggested).
+function GuideMenu:ShouldShowGuideKind()
+	return self:GetSearchNeedle() ~= ""
+		or self.folder == FOLDER_FAVORITES
+		or self.folder == FOLDER_SUGGESTED
+end
+
+function GuideMenu:GetGuideRowLabel(guide, statuscolor)
+	local name = guide.title_short or ""
+	if guide.type == "folder" then
+		return "|c"..(statuscolor or "ffffff")..name
+	end
+	if CGV:IsFavoriteGuide(guide) then
+		name = "★ "..name
+	end
+	-- Kind first so row ellipsis still shows [MQO]/[Full]/[Shards].
+	if self:ShouldShowGuideKind() then
+		local info = self:GetGuideKindInfo(guide)
+		if info then
+			name = "|cffaaaa["..info.tag.."]|r "..name
+		end
+	end
+	return "|c"..(statuscolor or "ffffff")..name
 end
 
 function GuideMenu:RefreshUI()
@@ -384,42 +661,68 @@ function GuideMenu:RefreshUI()
 		self.folder = ""
 	end
 
-	if self.folder then
-		if #self.folder > 0 then
-			local parentfolder = self.folder:match("(.+)/[^/]+")
-			table.insert(folders,{type="folder",title=parentfolder,title_short="( up )"})
-		end
-		local topfolders_seen = {}
-		local folderslash = self.folder == "" and "" or self.folder.."/"
-		for _,guide in pairs(CGV.registeredguides) do
-			local wholefolder,topfolder = guide.title:match("LEVELING/("..folderslash.."([^/]+))/.+")
-			if not topfolder then
-				wholefolder,topfolder = guide.title:match("Extras/("..folderslash.."([^/]+))/.+")
+	local needle = self:GetSearchNeedle()
+
+	if needle ~= "" then
+		-- Title / description / quest names (|q, accept, turnin)
+		for _, guide in ipairs(CGV.registeredguides) do
+			if guide and guide:MatchesSearch(needle) then
+				table.insert(guides, guide)
 			end
-			if topfolder then
-				if not topfolders_seen[topfolder] then
+		end
+		frame.header:SetText((CGV.O and CGV.O["opt_guide_search_results"]) or "Search results")
+	elseif self.folder == FOLDER_FAVORITES then
+		table.insert(folders,{type="folder",title="",title_short="( up )"})
+		for _,guide in ipairs(CGV:GetFavoriteGuides()) do
+			table.insert(guides, guide)
+		end
+		frame.header:SetText((CGV.O and CGV.O["opt_guide_favorites"]) or "Favorites")
+	elseif self.folder == FOLDER_SUGGESTED then
+		table.insert(folders,{type="folder",title="",title_short="( up )"})
+		for _,guide in ipairs(CGV:GetSuggestedGuideList()) do
+			table.insert(guides, guide)
+		end
+		frame.header:SetText((CGV.O and CGV.O["opt_guide_suggested"]) or "Suggested")
+	else
+		if self.folder then
+			if #self.folder > 0 then
+				local parentfolder = self.folder:match("(.+)/[^/]+")
+				table.insert(folders,{type="folder",title=parentfolder,title_short="( up )"})
+			end
+			-- Pin Favorites / Suggested at the root of the guide browser
+			if self.folder == "" then
+				table.insert(folders,{type="folder",title=FOLDER_FAVORITES,title_short=(CGV.O and CGV.O["opt_guide_favorites"]) or "★ Favorites"})
+				table.insert(folders,{type="folder",title=FOLDER_SUGGESTED,title_short=(CGV.O and CGV.O["opt_guide_suggested"]) or "Suggested"})
+			end
+			local topfolders_seen = {}
+			local folderslash = self.folder == "" and "" or self.folder.."/"
+			for _,guide in ipairs(CGV.registeredguides) do
+				local wholefolder,topfolder = guide.title:match("LEVELING/("..folderslash.."([^/]+))/.+")
+				if not topfolder then
+					wholefolder,topfolder = guide.title:match("Extras/("..folderslash.."([^/]+))/.+")
+				end
+				if topfolder and not topfolders_seen[topfolder] then
 					topfolders_seen[topfolder] = true
 					table.insert(folders,{type="folder",title=wholefolder,title_short=topfolder})
 				end
 			end
-		end
 
-		for _,guide in pairs(CGV.registeredguides) do
-			if (guide.title:match("^LEVELING/"..folderslash.."[^/]+$") or guide.title:match("^Extras/"..folderslash.."[^/]+$")) then
-				table.insert(guides,guide)
+			for _,guide in ipairs(CGV.registeredguides) do
+				if guide.title:match("^LEVELING/"..folderslash.."[^/]+$")
+					or guide.title:match("^Extras/"..folderslash.."[^/]+$") then
+					table.insert(guides,guide)
+				end
 			end
 		end
+
+		frame.header:SetText(self.folder == "" and "All Guides" or self.folder or "Leveling Guides")
 	end
 
-	frame.header:SetText ( self.folder == "" and "All Guides" or self.folder or "Leveling Guides" )
-
-	-- Sort guides by startlevel, place at end if there is no startlevel.
+	-- Zone name first, then full path (keeps Full / MQO / Shards for the same zone together).
 	table.sort(guides, function(a, b)
-			if (a.startlevel or math.huge) < (b.startlevel or math.huge) then return true end
-			if (a.startlevel or math.huge) > (b.startlevel or math.huge) then return false end
-			if (a.endlevel or math.huge) < (b.endlevel or math.huge) then return true end
-			if (a.endlevel or math.huge) > (b.endlevel or math.huge) then return false end
-			return (a.title < b.title)
+			local as, bs = a.title_short or "", b.title_short or ""
+			if as ~= bs then return as < bs end
+			return (a.title or "") < (b.title or "")
 		end)
 
 	for i,f in ipairs(folders) do
@@ -427,79 +730,58 @@ function GuideMenu:RefreshUI()
 	end
 
 	local zo_min, zo_max = _G.zo_min, _G.zo_max
+	local maxLines = self:GetVisibleListLines()
+	self.maxLines = maxLines
 	self.offset = self.offset and zo_min(#guides,zo_max(0,self.offset)) or 0
 
-	frame.guideBoxScroll:SetMinMax(0, #guides-MAX_LINES)		-- code works but there's no scrolling
+	frame.guideBoxScroll:SetMinMax(0, zo_max(0, #guides - maxLines))
 
-	local hei = zo_min(1,MAX_LINES / #guides)  if hei==1 then
+	local hei = zo_min(1, maxLines / math.max(#guides, 1))  if hei==1 then
 		hei = 0
 	end
 	local tex = _G.tex
 	frame.guideBoxScroll:SetThumbTexture(tex,tex,tex,SCROLL_WIDTH,frame.guideBoxScroll:GetHeight() * hei,0,0,1,1)
 
 	-------------------------------
-	-- UPDATE THE BUTTONS
+	-- UPDATE THE BUTTONS (hide any row past measured fit)
 	-------------------------------
 
 	for i,button in ipairs(buts) do
-		local guide = guides[i+self.offset]
-
-		if guide then
-
-			-- guide/folder, doesn't matter
-			button.target = guide
-
-			--button.isguide=true
-			local status = guide.GetStatus and guide:GetStatus() or ""
-
-			if guide.type=="folder" then
-				button:SetIcon(1,1,2,2)
-			else
-				button:SetIcon(2,1,2,2)
-			end
-			-- TODO icon stuffz
-			--[[
-			if g.icon and Menu.path == "RECENT" and Menu.simpleList then
-				if type(g.icon[3]) == "string" then -- icon in get_icon() format
-					local x,y = g.icon[1],g.icon[2] --get_icon(g.header)
-					if x then
-						button:SetIcon(x,y,4,4,false,true)
-						--button.label:SetPoint("TOPLEFT",button,"TOPLEFT",32,2)
-					end
-				end
-
-				button:SetIcon(0,0,2,2,true)
-			else
-
-				button:SetIcon(2,1,2,2)
-
-				if status=="SUGGESTED" then
-					button:SetIcon(1,2,2,2,true)
-					--button.iconover.anim:Play()
-				else
-					button:SetIcon(0,0,2,2,true)
-				end
-			end
-			--]]
-
-
-			button.icon:Show()
-
-			local statuscolor = GuideStatusColor[status] or "ffffff"
-			if self.selectedguide and self.selectedguide==guide then
-				local r,g,b = _G.HTMLColor("#"..statuscolor)
-				button:SetBackdropColor(r,g,b,1)
-				button.bd:Show()
-
-				statuscolor = "ffffff"	-- status text is always white when we hover over it to not conflict with the backdrop.
-			else
-				button.bd:Hide()
-			end
-
-			button.label:SetText("|c"..statuscolor..(guide.title_short or "")..(guide.parse_error and "-|cff0000ERROR|r" or "") )
-			button:Show()
-		else
+		if i > maxLines then
 			button:Hide()
+		else
+			local guide = guides[i+self.offset]
+
+			if guide then
+				button.target = guide
+
+				local status = guide.GetStatus and guide:GetStatus() or ""
+
+				if guide.type=="folder" then
+					button:SetIcon(1,1,2,2)
+				else
+					button:SetIcon(2,1,2,2)
+				end
+
+				button.icon:Show()
+
+				local statuscolor = GuideStatusColor[status] or "ffffff"
+				if self.selectedguide and self.selectedguide==guide then
+					local muted = (CGV.Theme and CGV.Theme.AccentMutedTable()) or {245/255,93/255,7/255,0.9}
+					button:SetBackdropColor(unpack(muted))
+					button.bd:Show()
+
+					statuscolor = "ffffff"
+				else
+					button.bd:Hide()
+				end
+
+				local label = self:GetGuideRowLabel(guide, statuscolor)
+				button.label:SetText(label..(guide.parse_error and "-|cff0000ERROR|r" or ""))
+				button:Show()
+			else
+				button:Hide()
+			end
 		end
 	end
 
@@ -510,64 +792,105 @@ function GuideMenu:RefreshUI()
 	if self.selectedguide then
 
 		local g = self.selectedguide
-		local formatLevel = _G.formatLevel
 
-		frame.GuideTitle:SetText(g.title_short)
-		frame.GuideImage:SetTexture(_G.image)
-		frame.GuideData:SetText(g.desc)
-		frame.GuideData:SetPoint(TOPLEFT,frame.GuideImage,0,200)
-
-		local s = "\n"
-
-		if g.startlevel and g.startlevel>0 then
-			local formatLevel = CGV.Utils.FormatLevel
-			if g.endlevel and g.endlevel>0 then
-				s = s .. "|cffeebbLevels:|r ".. formatLevel(g.startlevel) .." to ".. formatLevel(g.endlevel) .. "\n"
-			else
-				s = s .. "|cffeebbRequired level:|r ".. formatLevel(g.startlevel) .."\n"
-			end
-		else
-			if g.endlevel and g.endlevel>0 then
-				s = s .. "|cffffeebbEnding level:|r ".. formatLevel(g.endlevel) .."\n"
-			end
+		local detailTitle = (CGV:IsFavoriteGuide(g) and "★ " or "")..(g.title_short or "")
+		local kindInfo = self:GetGuideKindInfo(g)
+		if kindInfo then
+			detailTitle = detailTitle.." |cffaaaa("..kindInfo.full..")|r"
 		end
+		frame.GuideTitle:SetText(detailTitle)
+
+		local meta = ""
 		if g.next then
-			s = s .. "|cffeebbNext guide:|r ".. g.next:match(".+/(.-)$") .."\n"
+			meta = meta .. "|cffeebbNext guide:|r ".. g.next:match(".+/(.-)$") .."\n"
+		end
+		if frame.GuideMeta then
+			frame.GuideMeta:SetText(meta)
+			if meta == "" then
+				CHAIN(frame.GuideMeta):SetHeight(0):SetHidden(true)
+			else
+				CHAIN(frame.GuideMeta):SetCanWrap(true):SetHidden(false)
+			end
 		end
 
-		s = s .. "\n"
+		-- Full description wraps/scrolls under the image
+		local desc = g.description or g.desc or ""
+		frame.GuideData:SetText(desc)
+		frame.GuideData:SetCanWrap(true)
 
-		local status,_ = g:GetStatus()
-		if status == "COMPLETE" and g.type == "LEVELING" then
-			status = status.."_lev"
-		end
-
-		s = s .. "\n"
-		s = s .. (g.description or "")
-
-		frame.GuideData:SetText(s)
 		frame.OkButton:Show()
+		if frame.FavButton then
+			frame.FavButton:SetText(CGV:IsFavoriteGuide(g) and "Unfavorite" or "Favorite")
+			frame.FavButton:Show()
+		end
+		if frame.SuggestButton then frame.SuggestButton:Show() end
 
+		local imgH = frame._detailImageHeight or 120
+		local aboveImage = (meta ~= "" and frame.GuideMeta) or frame.SuggestButton
 		if g.image then
 			CHAIN(frame.GuideImage)
+			:ClearAnchors()
+			:SetPoint(TOPLEFT,aboveImage,BOTTOMLEFT,0,8)
+			:SetSize(GUIDE_IMAGE_WIDTH,imgH)
 			:SetTexture(g.image)
+			:SetHeight(imgH)
 			:Show()
 		else
 			CHAIN(frame.GuideImage)
-			:SetHeight(0)	-- Make it disappear! well kinda
+			:ClearAnchors()
+			:SetPoint(TOPLEFT,aboveImage,BOTTOMLEFT,0,0)
+			:SetHeight(0)
 			:Hide()
 		end
+
+		if frame.guideDataScroll then
+			CHAIN(frame.guideDataScroll)
+				:ClearAnchors()
+				:SetAnchor(TOPLEFT,frame.GuideImage,BOTTOMLEFT,0,8)
+				:SetAnchor(BOTTOMRIGHT,frame.guideInfoBox,BOTTOMRIGHT,-8,-8)
+		end
+		CHAIN(frame.GuideData)
+			:ClearAnchors()
+			:SetPoint(TOPLEFT,frame.guideDataScrollChild or frame.guideInfoBox,TOPLEFT,0,0)
+			:SetPoint(TOPRIGHT,frame.guideDataScrollChild or frame.guideInfoBox,TOPRIGHT,0,0)
+			:SetCanWrap(true)
 
 		if g.parse_error then
 			CGV:Print(g.parse_error)
 		end
 	else
 		frame.GuideTitle:SetText("Welcome to the Community Leveling Guides for ESO")
-		frame.GuideImage:SetTexture(CGV.DIR.."/Viewer/Skins/Stealth/cgeso-SOTWC.dds")
+		if frame.GuideMeta then
+			CHAIN(frame.GuideMeta):SetText(""):SetHeight(0):SetHidden(true)
+		end
 		frame.GuideData:SetText("Imperial City, Craglorn, Southern Elsweyr, Dark Heart of Skyrim, Blackwood, The Deadlands, Legacy of the Breton, Shadow Over Morrowind, Gold Coast, Season of the Worm Cult guides authored by |cffaa00snichols7778|r\nSummerset, Murkmire and Elsweyr guides authored by |cffaa00Hydra9268|r\nAdditional support by |cffaa00Sharlikran|r, |cffaa00Krandor1|r\n|c999999Original guide and Addon created by Zygor Guides|r")
-		frame.GuideData:SetPoint(TOPLEFT,frame.GuideImage,0,265)
-		frame.GuideImage:Show()
+		frame.GuideData:SetCanWrap(true)
+		-- Same compact banner + scrollable blurb as selected guides, so credits aren't cut off.
+		local welcomeImgH = frame._detailImageHeight or 120
+		CHAIN(frame.GuideImage)
+			:ClearAnchors()
+			:SetPoint(TOPLEFT,frame.SuggestButton,BOTTOMLEFT,0,10)
+			:SetSize(GUIDE_IMAGE_WIDTH,welcomeImgH)
+			:SetWidth(GUIDE_IMAGE_WIDTH)
+			:SetHeight(welcomeImgH)
+			:SetTexture(WELCOME_GUIDE_IMAGE)
+			:SetColor(1,1,1,1)
+			:SetHidden(false)
+			:Show()
+		if frame.guideDataScroll then
+			CHAIN(frame.guideDataScroll)
+				:ClearAnchors()
+				:SetAnchor(TOPLEFT,frame.GuideImage,BOTTOMLEFT,0,8)
+				:SetAnchor(BOTTOMRIGHT,frame.guideInfoBox,BOTTOMRIGHT,-8,-8)
+		end
+		CHAIN(frame.GuideData)
+			:ClearAnchors()
+			:SetPoint(TOPLEFT,frame.guideDataScrollChild or frame.guideInfoBox,TOPLEFT,0,0)
+			:SetPoint(TOPRIGHT,frame.guideDataScrollChild or frame.guideInfoBox,TOPRIGHT,0,0)
+			:SetCanWrap(true)
 		frame.OkButton:Hide()
+		if frame.FavButton then frame.FavButton:Hide() end
+		if frame.SuggestButton then frame.SuggestButton:Show() end
 	end
 
 	frame:Show()
@@ -599,10 +922,24 @@ function Settings:Create()
 		:SetWidth(LEFT_COLUMN_WIDTH)
 		.__END
 
-	frame.optionTypesScroll = CHAIN(ui:Create("SecFrame", frame, setname.. "_Scroll"))	-- TODO A real scroll bar for the left Panel
-		:SetPoint(TOPLEFT,frame.optionTypesBox,TOPRIGHT)
-		:SetPoint(BOTTOMLEFT,frame.optionTypesBox,BOTTOMRIGHT)
+	-- Real vertical scrollbar for the category list (same pattern as Guide Home).
+	frame.optionTypesScroll = CHAIN(wm:CreateControl(setname.."_Slider",frame,_G.CT_SLIDER))
+		:SetMouseEnabled(true)
+		:SetThumbTexture(_G.tex,_G.tex,_G.tex,SCROLL_WIDTH,50,0,0,1,1)
+		:SetThumbFlushWithExtents(true)
+		:SetValue(0)
+		:SetValueStep(1)
 		:SetWidth(SCROLL_WIDTH)
+		:SetOrientation(_G.ORIENTATION_VERTICAL)
+		:SetHandler("OnValueChanged",function(_,value)
+				Settings.offset = value
+				Settings:RefreshUI()
+			end)
+		.__END
+
+	frame.optionTypesScrollBack = CHAIN(ui:Create("SecFrame", frame, setname.. "_ScrollBack"))
+		:SetPoint(TOPLEFT,frame.optionTypesScroll,TOPLEFT)
+		:SetPoint(BOTTOMRIGHT,frame.optionTypesScroll,BOTTOMRIGHT)
 		:SetBackdropColor(.4,.4,.4,1)
 		.__END
 
@@ -612,23 +949,41 @@ function Settings:Create()
 		:SetWidth(LEFT_COLUMN_WIDTH)
 		.__END
 
-	-- Used to say "Options"
-	frame.header = CHAIN(ui:Create("Label",frame,setname.."_Header",0,"bold"))
-		:SetPoint(TOPLEFT,frame,TOPLEFT,HEADER_PADDING,2)
+	-- Header lives inside the left column so list height math stays self-contained.
+	frame.header = CHAIN(ui:Create("Label",frame.optionTypesBox,setname.."_Header",0,"bold"))
+		:SetPoint(TOPLEFT,frame.optionTypesBox,TOPLEFT,HEADER_PADDING,2)
+		:SetPoint(TOPRIGHT,frame.optionTypesBox,TOPRIGHT,-2,2)
 		:SetText("")
 		.__END
 
+	frame.optionListHost = CHAIN(ui:Create("SecFrame",frame.optionTypesBox,setname.."_ListHost"))
+		:ClearAnchors()
+		:SetPoint(TOPLEFT,frame.header,BOTTOMLEFT,-HEADER_PADDING,4)
+		:SetPoint(BOTTOMRIGHT,frame.optionTypesBox,BOTTOMRIGHT,0,0)
+		:SetBackdropColor(0,0,0,0)
+		:SetBackdropEdgeColor(0,0,0,0)
+		.__END
+	if frame.optionListHost.SetClipsChildren then
+		frame.optionListHost:SetClipsChildren(true)
+	end
+
+	CHAIN(frame.optionTypesScroll)
+		:ClearAnchors()
+		:SetAnchor(TOPLEFT,frame.optionListHost,TOPRIGHT,0,0)
+		:SetAnchor(BOTTOMLEFT,frame.optionListHost,BOTTOMRIGHT,0,0)
+
 	------------------------------
-	-- Setup Left column buttons
+	-- Setup Left column buttons (pool; visible count from host height)
 	-----------------------------
 
 	frame.buttons={}
-	local rows = MAX_LINES
-	local ROWHEIGHT = 22	-- TODO calculate these based on height of Guide Menu?
-	for i = 1,rows do
+	self.maxLines = SETTINGS_FALLBACK_LINES
+	self.offset = 0
+	local ROWHEIGHT = SETTINGS_LIST_ROW_HEIGHT
+	for i = 1, SETTINGS_BUTTON_POOL do
 		local buttonName = setname.."_But"..i
 
-		local button = CHAIN(ui:Create("SecButton",frame.optionTypesBox,buttonName))
+		local button = CHAIN(ui:Create("SecButton",frame.optionListHost,buttonName))
 			:SetHeight(ROWHEIGHT)
 			:SetHandler("OnMouseEnter",function(me)
 					me.highlight:Show()
@@ -638,6 +993,7 @@ function Settings:Create()
 				end)
 			:SetHandler("OnClicked",function(me,button) Settings:MenuButton_OnClick(me,button)
 				end)
+			:Hide()
 			.__END
 
 		-- Texture for when the button is hovered over.
@@ -649,11 +1005,13 @@ function Settings:Create()
 
 		if i == 1 then
 			CHAIN(button)
-			:SetPoint(RIGHT)		-- Set the right point first so it gets the width
-			:SetPoint(TOPLEFT,frame.header,BOTTOMLEFT,-HEADER_PADDING,0)
+			:ClearAnchors()
+			:SetPoint(TOPLEFT,frame.optionListHost,TOPLEFT,0,0)
+			:SetPoint(TOPRIGHT,frame.optionListHost,TOPRIGHT,0,0)
 		else
 			local previousButton = frame.buttons[i-1]
 			CHAIN(button)
+			:ClearAnchors()
 			:SetPoint(TOPLEFT,previousButton,BOTTOMLEFT)
 			:SetPoint(TOPRIGHT,previousButton,BOTTOMRIGHT)
 		end
@@ -664,7 +1022,6 @@ function Settings:Create()
 			:SetTexture(CGV.DIR.."/Viewer/Skins/Stealth/guideicons-small.dds")
 			.__END
 
-		-- TODO blinking star on guide animation?
 		button.label = CHAIN(ui:Create("Label",button,buttonName.."_Label",15))
 			:SetPoint(LEFT,button.icon,RIGHT,5,0)
 			:SetPoint(RIGHT)
@@ -698,6 +1055,7 @@ function Settings:Create()
 		:SetPoint(BOTTOMRIGHT,frame.guideInfoBox,BOTTOMRIGHT,-ButtonHortPad,-5)
 		:SetText("Accept")
 		:SetFontSize(14)
+		:SetAccentStyle(true)
 		:SetHandler("OnClicked",function()
 				Menu:Hide()
 			end)
@@ -716,6 +1074,8 @@ function Settings:Create()
 		:SetPoint(TOPLEFT,frame.OptionDesc,BOTTOMLEFT,-HEADER_PADDING,0)
 		:SetPoint(BOTTOMRIGHT,frame.OkButton,TOPRIGHT,_G.OkButtonHortPad,0)
 		.__END
+
+	Menu:SetBackdropOpacity()
 end
 
 function Settings:CreateDefaultPopup()
@@ -734,7 +1094,7 @@ function Settings:CreateDefaultPopup()
 		:SetPoint(TOP,popup.text,BOTTOM,0,10) -- 10 is BUT_Y_OFFSET from Popup.lua
 		:SetWidth(105)
 		:SetText(L['static_cancel'])
-		:SetFontSize(CGV.db.profile.fontsize,true) -- TODO change size dynamically?
+		:SetFontSize(CGV.db.profile.fontsize,true)
 		:SetHandler("OnClicked",function(me)
 				local pop = me:GetParent() -- Just hide the popup
 				pop.private:Hide(pop)
@@ -783,7 +1143,7 @@ function Settings:CreateOptionsUI(group)
 	local name = "CommunityOptionPanel_Group_"..group.title
 	local lastobj, lastfrontobj
 
-	local frame = CHAIN(ui:Create("InvisFrame", self.Frame.OptionsScrollBase, name)) -- Frame that contains all option UI components for this group --TODO make it scrollie
+	local frame = CHAIN(ui:Create("InvisFrame", self.Frame.OptionsScrollBase, name)) -- All option UI for this group (not scrollable; tall groups may clip)
 	:SetPoint(TOPLEFT) :SetPoint(BOTTOMRIGHT)
 	.__END
 
@@ -796,6 +1156,7 @@ function Settings:CreateOptionsUI(group)
 		if typ ~= "execute"	-- Execute buttons are unnecessary, they run a function on clicked
 		and typ ~= "header"	-- headers are dumber
 		and typ ~= "desc" -- desc ^^^^
+		and typ ~= "buttongroup" -- multi-button rows have no stored value
 		then
 			assert(obj.SetValue,"All option objects must have a :SetValue method")
 			obj:SetValue(option:GetValue())
@@ -838,11 +1199,29 @@ function Settings:CreateOptionsUI(group)
 			error("Column can only be nil/one/two/three")
 		end
 
+		-- Equal-width button rows need final option width before laying out.
+		if obj.LayoutContent then
+			obj:LayoutContent()
+		end
+
 		lastobj = obj
 
 	end
 
 	group.frame = frame
+end
+
+function Settings:GetVisibleListLines()
+	local frame = self.Frame
+	local host = frame and frame.optionListHost
+	local hostH = host and host:GetHeight() or 0
+	if not hostH or hostH < 1 then
+		hostH = DEFAULT_HEIGHT - HEADER_HEIGHT - FOOTER_HEIGHT - 40
+	end
+	local lines = math.floor(hostH / SETTINGS_LIST_ROW_HEIGHT)
+	if lines < 1 then lines = SETTINGS_FALLBACK_LINES end
+	if lines > SETTINGS_BUTTON_POOL then lines = SETTINGS_BUTTON_POOL end
+	return lines
 end
 
 function Settings:RefreshUI()
@@ -853,64 +1232,48 @@ function Settings:RefreshUI()
 	local buts = frame.buttons
 
 	local opt_groups = self.opt_groups
+	local zo_min, zo_max = _G.zo_min, _G.zo_max
+	local maxLines = self:GetVisibleListLines()
+	self.maxLines = maxLines
+	self.offset = self.offset and zo_min(#opt_groups, zo_max(0, self.offset)) or 0
 
-	if #opt_groups > #buts then
-		error("More option groups than buttons in Settings! Tell Dev Team")
+	if frame.optionTypesScroll then
+		frame.optionTypesScroll:SetMinMax(0, zo_max(0, #opt_groups - maxLines))
+		local hei = zo_min(1, maxLines / math.max(#opt_groups, 1))
+		if hei == 1 then hei = 0 end
+		local tex = _G.tex
+		frame.optionTypesScroll:SetThumbTexture(tex,tex,tex,SCROLL_WIDTH,frame.optionTypesScroll:GetHeight() * hei,0,0,1,1)
 	end
 
 	-------------------------------
-	-- UPDATE THE BUTTONS
+	-- UPDATE THE BUTTONS (scroll offset; hide rows past measured fit)
 	-------------------------------
 
 	for i,button in ipairs(buts) do
-		local group = opt_groups[i]
-
-		if group then
-			-- guide
-			button.group = group
-
-			button:SetIcon(1,1,2,2)
-			-- TODO icons
-			--[[
-			if g.icon and Menu.path == "RECENT" and Menu.simpleList then
-				if type(g.icon[3]) == "string" then -- icon in get_icon() format
-					local x,y = g.icon[1],g.icon[2] --get_icon(g.header)
-					if x then
-						button:SetIcon(x,y,4,4,false,true)
-			--button.label:SetPoint("TOPLEFT",button,"TOPLEFT",32,2)
-		end
-	end
-
-		button:SetIcon(0,0,2,2,true)
-	else
-		button:SetIcon(2,1,2,2)
-
-		if status=="SUGGESTED" then
-			button:SetIcon(1,2,2,2,true)
-			button.iconover.anim:Play()
-		else
-			button:SetIcon(0,0,2,2,true)
-		end
-	end
-	--]]
-
-			button.icon:Show()
-
-			if self.selectedgroup and self.selectedgroup == group then
-				local mult = 0.7
-				local r,g,b = .6,.6,.6 -- HTMLColor("#0000ff")-- TODO more interesting color.
-				button:SetBackdropColor(r*mult,g*mult,b*mult,1)
-				button.bd:Show()
-
-			else
-				button.bd:Hide()
-			end
-
-			button.label:SetText(group.title)
-
-			button:Show()
-		else
+		if i > maxLines then
 			button:Hide()
+		else
+			local group = opt_groups[i + self.offset]
+
+			if group then
+				button.group = group
+
+				button:SetIcon(1,1,2,2)
+				button.icon:Show()
+
+				if self.selectedgroup and self.selectedgroup == group then
+					local muted = (CGV.Theme and CGV.Theme.AccentMutedTable()) or {245/255,93/255,7/255,0.9}
+					button:SetBackdropColor(unpack(muted))
+					button.bd:Show()
+				else
+					button.bd:Hide()
+				end
+
+				button.label:SetText(group.title)
+				button:Show()
+			else
+				button:Hide()
+			end
 		end
 	end
 
@@ -1149,6 +1512,71 @@ end
 
 --[[
 Relavant data values:
+buttons - array of { name, desc, value }
+func - function(value) when a button is clicked
+Equal-width buttons in one row, fitted to the option panel width.
+--]]
+Settings.OptionUI["buttongroup"] = function(self,option,parent)
+	local name = parent:GetName().."_Option"..option.num
+	local GAP = 4
+	local BTN_HEIGHT = 22
+	local RIGHT_PAD = 5
+
+	local opt_frame = GetOpinionFrame(parent, name, option, "true")
+	opt_frame:SetResizeToFitDescendents(false)
+	opt_frame:SetHeight(BTN_HEIGHT)
+
+	local buttonDefs = option.data.buttons or {}
+	opt_frame.buttons = {}
+
+	for i, btnData in ipairs(buttonDefs) do
+		local btn = CHAIN(ui:Create("Button",opt_frame,name.."_Btn"..i))
+			:SetHeight(BTN_HEIGHT)
+			:SetText(btnData.name or "")
+			:AddTooltip(btnData.name or "", btnData.desc or "", opt_frame)
+			:SetHandler("OnClicked",function()
+					if option.data.func then
+						option.data.func(btnData.value)
+					end
+				end)
+			.__END
+		opt_frame.buttons[i] = btn
+	end
+
+	opt_frame.LayoutContent = function(me)
+		local count = #me.buttons
+		if count == 0 then return end
+
+		local width = me:GetWidth()
+		if not width or width < 80 then
+			width = parent:GetWidth() or 400
+		end
+
+		local usable = width - OPTIONS_LEFT_OFFSET - RIGHT_PAD
+		if usable < 80 then usable = 80 end
+
+		local btnW = (usable - GAP * (count - 1)) / count
+		if btnW < 36 then btnW = 36 end
+
+		for i, btn in ipairs(me.buttons) do
+			btn:ClearAllPoints()
+			btn:SetDimensions(btnW, BTN_HEIGHT)
+			if i == 1 then
+				btn:SetPoint(TOPLEFT, OPTIONS_LEFT_OFFSET, 0)
+			else
+				btn:SetPoint(TOPLEFT, me.buttons[i - 1], TOPRIGHT, GAP, 0)
+			end
+		end
+
+		me:SetHeight(BTN_HEIGHT)
+	end
+
+	opt_frame.option = option
+	return opt_frame
+end
+
+--[[
+Relavant data values:
 - Just a header...
 --]]
 Settings.OptionUI["header"] = function(self,option,parent)
@@ -1281,6 +1709,7 @@ function Menu:Show()
 		self:CreateBaseMenu()
 	end
 
+	self:SetBackdropOpacity()
 	self.Frame:Show()
 end
 
@@ -1336,17 +1765,24 @@ function GuideMenu:Hide()
 	self.Frame:Hide()
 end
 
-function GuideMenu:MenuButton_OnClick(button,_)
+function GuideMenu:MenuButton_OnClick(button,mouseButton)
 	if not button.target then return end
 	if button.target.type == "folder" then
 		self.folder = button.target.title
+		self.offset = 0
+		if self.Frame and self.Frame.guideBoxScroll then
+			self.Frame.guideBoxScroll:SetValue(0)
+		end
 		self:RefreshUI()
 		return
 	end
-	if false then
-	else
-		GuideMenu:SelectGuide(button.target)
+	-- Right-click toggles favorite without changing selection focus unnecessarily
+	if mouseButton == RIGHT_MOUSE_BUTTON then
+		CGV:ToggleFavoriteGuide(button.target)
+		self:RefreshUI()
+		return
 	end
+	GuideMenu:SelectGuide(button.target)
 end
 
 function GuideMenu:SelectGuide(guide)
@@ -1416,7 +1852,6 @@ function Settings:Refresh()
 	self:RefreshUI()
 end
 
--- TODO move this into SavedVars
 function Settings:GetOptionGroupByName(name)
 	local opt_group
 
@@ -1439,6 +1874,11 @@ function Settings:OpenSettings(group)
 	self:SelectGroup(opt_group)
 
 	self:Show()
+
+	-- After a profile version bump, offer to copy from the stashed backup.
+	if CGV.db and CGV.db.MaybeShowProfileMigrationPopup then
+		CGV.db:MaybeShowProfileMigrationPopup()
+	end
 end
 
 function Settings:MenuButton_OnClick(button,_)
@@ -1458,7 +1898,6 @@ end
 -- ADDING SETTINGS CONTROL FUNCTIONS
 -----------------------------------------
 
--- TODO does this even belong here?
 function Settings:AddOptionGroup(opt_group)
 	assert(class(opt_group) == "OptionGroup","AddOptionGroup trying to add a opt_group that isn't a OptionGroup")
 

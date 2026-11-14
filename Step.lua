@@ -316,6 +316,60 @@ function Step:IsTravel()
 	return true
 end
 
+-- Auxiliary steps only lead toward quest work (gotos/text/tips), no real objectives.
+function Step:IsAuxiliary()
+	local goals = self.goals
+	for i = 1, #goals do
+		local goal = goals[i]
+		if goal.action and not goal:IsAuxiliary() then
+			return false
+		end
+	end
+	return true
+end
+
+-- True when this aux/travel step can be skipped because a later useful step is already done/impossible.
+-- Level is ignored (ESO One Tamriel — quests scale with character).
+function Step:IsAuxiliarySkippable()
+	local guide = self.parentGuide
+	if not guide or not guide.steps then return false end
+
+	local travelfor = self.travelfor
+	local count = 0
+	local i = self.num
+	local step = self
+
+	while step do
+		if step:IsAuxiliary() or not step:AreRequirementsMet() then
+			-- keep looking past fellow aux / unmet-requirement steps
+		else
+			if step == self then
+				return false
+			end
+			local complete, possible = step:IsComplete()
+			local profile = CGV.db and CGV.db.profile
+			local wouldskip = complete
+				or (profile and profile.skipimpossible and not possible)
+			if wouldskip and travelfor then
+				-- still within travelfor window — keep looking
+			else
+				return wouldskip
+			end
+		end
+
+		i = i + 1
+		step = guide.steps[i]
+		count = count + 1
+
+		if travelfor and count > travelfor then
+			return true
+		end
+	end
+
+	-- Ran out of steps within travelfor — safe to skip.
+	return travelfor and count <= travelfor
+end
+
 function Step:IsIncomplete()
 	local goals = self.goals
 

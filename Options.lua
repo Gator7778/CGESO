@@ -13,8 +13,8 @@ local SvName = "CGESOSettings"
 if CGV.DEV_SV_SUFFIX then
   SvName = SvName..CGV.DEV_SV_SUFFIX
 end
-local PROFILE_VERSION = 1
-local CHAR_VERSION = 1
+local PROFILE_VERSION = 2
+local CHAR_VERSION = 2
 local SavedVars = {}
 local DEFAULT_PROFILE = "main"
 
@@ -82,6 +82,11 @@ local defaultChar = {
   stephistory = {},
   goodbadguides = {},
   ignoredguides = {},
+  favoriteguides = {
+    never_reset = true,
+  },
+  -- "ask" = prompt Full vs Main Quests Only when both exist; "full" / "mqo" remember the choice.
+  guide_style = "ask",
   creator = false,
   developer = false,
 }
@@ -105,13 +110,17 @@ local defaultAccount = {
   -- Real Options?
   viewerProgBar = "steps",
 
+  -- Waypoint arrow tint — brand orange #F55D07 (first install / profile reset).
+  arrowcolor = { r = 245 / 255, g = 93 / 255, b = 7 / 255, a = 1 },
+
   -- Debug options
   debug = false,
   debug_flags = {
 
   },
   ignoreErrors = false,
-  --loadguidesfully = true,	-- TODO
+  --loadguidesfully = false, -- headers only at startup; full parse on demand
+  unloadunusedguides = true, -- free step data for guides you're not using (helps slower PCs)
 }
 
 -----------------------------------------
@@ -185,9 +194,8 @@ end
       - String - one/two/three. Only creates columns as needed
     descStyle - How to display the description
       - String - INLINE
-    width - Make it bigger?   -- TODO only dropdown supports atm
+    width - Wider control (dropdown only at present)
       - Int...
-    --TODO hidden/disable
 
 	Option Types:
 		dropdown -
@@ -282,7 +290,7 @@ end
 
 function Option:GetValue()
   if not (self.optname or self.get) then return end
-  if self.get then	-- TODO wtf else goes with a :get
+  if self.get then
     return self:get()
   end
 
@@ -332,8 +340,11 @@ function SavedVars:InitializeOptions()
     AddOption("opacitymain",{
         type = "slider",
         min = 0, max = 1, step = .01, ispercent = true,
-        set = function(i,v) CGV.Viewer:SetAlpha(v) end,
-        _default = 1,
+        set = function(i,v)
+          CGV.Viewer:SetAlpha(v) -- also syncs Home menu + popups via Viewer:SetAlpha
+        end,
+        -- Backdrop-only opacity; keeps guide text readable while the world shows through.
+        _default = 0.20,
       })
     AddOption('framescale',{
         type = 'slider',
@@ -342,18 +353,95 @@ function SavedVars:InitializeOptions()
         set = function(i,v) CGV.Viewer:SetScale(v)  end,
         _default = 1,
       })
-    AddOption('fontsize',{			-- TODO make these font settings change more font sizes than just the viewer
+
+    -- Quick opacity presets (backdrop-only). Sync slider UI when present.
+    local function SetViewerOpacityPreset(v)
+      local opt = SavedVars:GetOptionObject("opacitymain")
+      if opt and opt.frame and opt.frame.SetValue then
+        opt.frame:SetValue(v)
+      elseif opt then
+        opt:SetValue(v)
+      else
+        SavedVars.profile.opacitymain = v
+        if CGV.Viewer then CGV.Viewer:SetAlpha(v) end
+        if CGV.PopupHandler and CGV.PopupHandler.SyncLiveSettings then
+          CGV.PopupHandler:SyncLiveSettings()
+        end
+      end
+    end
+
+    AddOption(nil,{
+        type = "header",
+        name = O["opt_opacity_presets"],
+      })
+    AddOption(nil,{
+        type = "buttongroup",
+        buttons = {
+          { name = O["opt_opacity_preset_0"], desc = O["opt_opacity_preset_0_desc"], value = 0 },
+          { name = O["opt_opacity_preset_25"], desc = O["opt_opacity_preset_25_desc"], value = 0.25 },
+          { name = O["opt_opacity_preset_50"], desc = O["opt_opacity_preset_50_desc"], value = 0.50 },
+          { name = O["opt_opacity_preset_75"], desc = O["opt_opacity_preset_75_desc"], value = 0.75 },
+          { name = O["opt_opacity_preset_100"], desc = O["opt_opacity_preset_100_desc"], value = 1 },
+        },
+        func = SetViewerOpacityPreset,
+      })
+
+    AddOption('fontsize',{
         type = 'slider',
         min = 7, max = 16, step = 1,
-        set = function(i,v) CGV.Viewer:Update()  end,
+        set = function(i,v)
+          CGV.Viewer:Update()
+          if CGV.PopupHandler and CGV.PopupHandler.SyncLiveSettings then
+            CGV.PopupHandler:SyncLiveSettings()
+          end
+        end,
         _default = 13,
       })
     AddOption('fontsecsize',{
         type = 'slider',
         min = 5, max = 14, step = 1,
         column = "two",
-        set = function(i,v) CGV.Viewer:Update()  end,
+        set = function(i,v)
+          CGV.Viewer:Update()
+          if CGV.PopupHandler and CGV.PopupHandler.SyncLiveSettings then
+            CGV.PopupHandler:SyncLiveSettings()
+          end
+        end,
         _default = 11,
+      })
+    AddOption('numStepShow',{
+        type = 'slider',
+        min = 1, max = 5, step = 1,
+        set = function(i,v) CGV.Viewer:Update(true) end,
+        _default = 1,
+      })
+
+    AddOption(nil,{
+      type="header",
+      name=O["opt_guide_style"]
+      })
+    AddOption("guide_style",{
+        type = "dropdown",
+        char = true,
+        values = {
+          ask = O["opt_guide_style_ask"] or "Ask each time",
+          full = O["opt_guide_style_full"] or "Full Guide",
+          mqo = O["opt_guide_style_mqo"] or "Main Quests Only",
+        },
+        _default = "ask",
+      })
+
+    AddOption(nil,{
+      type="header",
+      name=O["opt_smart_skip"]
+      })
+    AddOption("skipimpossible",{
+        type = "toggle",
+        _default = true,
+      })
+    AddOption("skipauxsteps",{
+        type = "toggle",
+        _default = true,
       })
 
     AddOption(nil,{
@@ -415,6 +503,12 @@ function SavedVars:InitializeOptions()
         type="header",
         name=O["opt_arrow_display"]
       })
+    AddOption('arrowcolor',{
+        type = 'color',
+        -- Default matches brand orange #F55D07 used by the Stealth arrow skin.
+        _default = { r = 245 / 255, g = 93 / 255, b = 7 / 255, a = 1 },
+        -- Tint is read each frame in Arrow.lua (desaturate + SetColor); no position refresh needed.
+      })
     AddOption('arrowcolordist',{
         type = 'toggle',
         _default = false,
@@ -423,7 +517,13 @@ function SavedVars:InitializeOptions()
     AddOption('arrowalpha',{
         type = 'slider',
         min = 0.3, max = 1.0, step = 0.1, ispercent = true,
-        set = function(i,v) CGV.Pointer:SetupArrow()  end,
+        set = function(i,v)
+          if CGV.Pointer and CGV.Pointer.SetArrowAlpha then
+            CGV.Pointer:SetArrowAlpha(v)
+          elseif CGV.Pointer and CGV.Pointer.SetupArrow then
+            CGV.Pointer:SetupArrow()
+          end
+        end,
         _default = 1.0,
       })
     AddOption('arrowscale',{
@@ -479,11 +579,23 @@ function SavedVars:InitializeOptions()
         name = O["opt_bugreports"],
         desc = O["opt_bugreports_desc"],
         _default = true,
-        set = function(i,v) if CGV.Viewer.Frame then CGV.Viewer.Frame.TitleBar.bug:SetHidden(not CGV.db.profile.bugreports) end end,
+        set = function(i,v)
+          if CGV.Viewer and CGV.Viewer.Frame and CGV.Viewer.Frame.TitleBar and CGV.Viewer.Frame.TitleBar.bug then
+            CGV.Viewer.Frame.TitleBar.bug:SetHidden(not v)
+          end
+        end,
     })
-
-
-    -- TODO: [ ] Enable Bug Reporting button on viewer
+    AddOption("unloadunusedguides",{
+        type = "toggle",
+        name = O["opt_unloadunusedguides"],
+        desc = O["opt_unloadunusedguides_desc"],
+        _default = true,
+        set = function(i,v)
+          if v and CGV.UnloadUnusedGuides then
+            CGV:UnloadUnusedGuides()
+          end
+        end,
+    })
   end
 
   -- PROFILES
@@ -562,8 +674,6 @@ function SavedVars:InitializeOptions()
           if not SavedVars.NewProfilePopup then
             local popup = _G.CGESO_New_Profile_Popup or CGV.Popup:New("CGESO_New_Profile_Popup")
 
-            _G.d(popup or "no popup")
-
             -- Only allow alphanumeric characters... Don't want to let users screw up their SV files by naming it with strange characters.
             popup.edit = CHAIN(_G.CGESO_New_Profile_Popup_Edit or ui:Create("EditBox",popup,"CGESO_New_Profile_Popup_Edit"))
             :SetPoint(TOP,popup.text,BOTTOM,0,5)
@@ -593,7 +703,11 @@ function SavedVars:InitializeOptions()
 
           SavedVars.NewProfilePopup.OnAccept = function(me)
             local name = me.edit:GetText()
-            if not CGV.Utils.IsAlphanumeric(name) then return end		-- TODO maybe error out? meh just return for now. Should probably disable the button
+            if not CGV.Utils.IsAlphanumeric(name) then
+              local err = L['static_newprofile_error'] or "Name can only contain letters, numbers, and spaces."
+              CGV:Print(err:gsub("|c%x%x%x%x%x%x",""):gsub("|r",""))
+              return
+            end
 
             local opt = SavedVars:GetOptionObject(nil,O['opt_existing_profiles'])
 
@@ -610,6 +724,56 @@ function SavedVars:InitializeOptions()
           :SetText(L['static_newprofile'])
           :Show()
         end,
+      })
+    AddOption(nil,{
+        type = "dropdown",
+        values = function(me)
+          me:RegisterOnOpenCallback(function(me)
+              local profiles = SavedVars:GetProfiles()
+              local value = me:GetValue()
+              me:ClearItems()
+
+              for _, name in ipairs(profiles) do
+                if name ~= SavedVars.raw.curprofile then
+                  me:AddItem(name, name, function(_, fromName)
+                      SavedVars.CopySettingsPopup = SavedVars.CopySettingsPopup or CGV.Popup:New("CGESO_Copy_Settings_Popup")
+                      local opt = SavedVars:GetOptionObject(nil, O["opt_copy_profile_settings"])
+                      local dropdown = opt and opt.frame and opt.frame.dropdown
+
+                      SavedVars.CopySettingsPopup.OnAccept = function()
+                        if SavedVars:CopyProfileSettings(fromName, SavedVars.raw.curprofile) then
+                          CGV:Print((O["opt_profile_migrate_done"] or "Copied settings from %s."):format(fromName))
+                        end
+                      end
+                      SavedVars.CopySettingsPopup.OnClose = function()
+                        if dropdown then dropdown:SetValue() end
+                      end
+                      SavedVars.CopySettingsPopup:SetText(
+                        (L["static_copy_profile_settings"] or "Copy settings from \"%s\" into the current profile?"):format(fromName)
+                      )
+                      SavedVars.CopySettingsPopup:Show()
+                    end)
+                end
+              end
+
+              local val = me:HasValue(value)
+              if val then me:SetValue(value) end
+            end)
+
+          local profiles = SavedVars:GetProfiles()
+          local returns = {}
+          for _, name in ipairs(profiles) do
+            if name ~= SavedVars.raw.curprofile then
+              returns[name] = name
+            end
+          end
+          return returns
+        end,
+        defaultext = O["opt_copy_profile_settings_default"],
+        name = O["opt_copy_profile_settings"],
+        desc = O["opt_copy_profile_settings_desc"],
+        descStyle = INLINE,
+        width = 150,
       })
     AddOption(nil,{
         type = "execute",
@@ -694,7 +858,7 @@ function SavedVars:InitializeOptions()
         width = 150,
       })
     if CGV.DEV then
-      -- TODO breaks for not same faction characters
+      -- DEV char-profile picker can list characters from other factions.
       AddOption(nil,{
           type = "dropdown",
           values = function(me)
@@ -857,7 +1021,7 @@ function SavedVars:Setup()
   self.raw = raw
 
   -- Setup raw tables if needed
-  raw.global = raw.global or {}		-- TODO what is this for...
+  raw.global = raw.global or {}
   raw.profiles = raw.profiles or {}
   raw.characters = raw.characters or {}
   raw.factions = raw.factions or {}
@@ -881,8 +1045,8 @@ function SavedVars:Setup()
   -- Store some character information at startup
   self.char.info.level = CGV.Utils.GetPlayerPreciseLevel()
   self.char.info.faction = fac
-  self.char.info.date = _G.GetDate()	-- TODO format this in a more helpful way?
-  self.char.info.time = _G.GetFormattedTime()	-- TODO format this in a more helpful way?
+  self.char.info.date = _G.GetDate()
+  self.char.info.time = _G.GetFormattedTime()
 
   --[[
 	if self.char.savedquests then
@@ -902,6 +1066,27 @@ function SavedVars:Setup()
   SavedVars:SetupAllOptionGroups()
 end
 
+-- Unique name for a stashed/backup profile (e.g. "main backup", "main backup 2").
+function SavedVars:MakeUniqueProfileName(base)
+  local profiles = self.raw.profiles
+  if not profiles[base] then return base end
+  local i = 2
+  while profiles[base.." "..i] do
+    i = i + 1
+  end
+  return base.." "..i
+end
+
+function SavedVars:MakeUniqueCharProfileName(base)
+  local chars = self.raw.characters
+  if not chars[base] then return base end
+  local i = 2
+  while chars[base.." "..i] do
+    i = i + 1
+  end
+  return base.." "..i
+end
+
 -- Creates a new profile in CGVS.profiles[pname]. Does not assign it to SV.profile. If data is passed uses that, otherwise uses default
 function SavedVars:CreateNewProfile(pname,data)
   if not pname then return end
@@ -915,6 +1100,64 @@ function SavedVars:CreateNewProfile(pname,data)
   return self.raw.profiles[pname]
 end
 
+-- Copy account-profile settings from one named profile into another (keeps version current).
+function SavedVars:CopyProfileSettings(fromName, toName)
+  local raw = self.raw
+  local from = raw.profiles[fromName]
+  toName = toName or raw.curprofile
+  local to = raw.profiles[toName]
+  if not from or not to then return false end
+
+  for k, v in pairs(from) do
+    if k ~= "version" then
+      if type(v) == "table" then
+        to[k] = table.cgclone(v)
+      else
+        to[k] = v
+      end
+    end
+  end
+  to.version = PROFILE_VERSION
+
+  if toName == raw.curprofile then
+    self.profile = to
+    if self.initialized then
+      self:SetupAllOptionGroups()
+      if CGV.Viewer and CGV.Viewer.UpdateViewer then CGV.Viewer:UpdateViewer() end
+      if CGV.Pointer and CGV.Pointer.UpdateArrowPosition then CGV.Pointer:UpdateArrowPosition() end
+      if CGV.PopupHandler and CGV.PopupHandler.SyncLiveSettings then CGV.PopupHandler:SyncLiveSettings() end
+    end
+  end
+  return true
+end
+
+function SavedVars:CopyCharProfileSettings(fromName, toName)
+  local raw = self.raw
+  local from = raw.characters[fromName]
+  toName = toName or CGV.Utils.GetPlayerName()
+  local to = raw.characters[toName]
+  if not from or not to then return false end
+
+  for k, v in pairs(from) do
+    if k ~= "version" then
+      if type(v) == "table" then
+        if type(to[k]) == "table" and to[k].never_reset then
+          -- keep never_reset destination tables intact (quest history etc.) unless cloning whole char
+        end
+        to[k] = table.cgclone(v)
+      else
+        to[k] = v
+      end
+    end
+  end
+  to.version = CHAR_VERSION
+
+  if toName == CGV.Utils.GetPlayerName() then
+    self.char = to
+  end
+  return true
+end
+
 -- Prefer the passed name, then try to just reset the current profile, worse cause just resort to using default
 function SavedVars:SetCurrentProfile(name)
   local raw = self.raw
@@ -924,11 +1167,19 @@ function SavedVars:SetCurrentProfile(name)
 
   prof = raw.profiles[name]
 
-  if not prof or				-- This does not exist, make it...
-  not prof.version or			-- Profile not properly versioned
-  (prof.version < PROFILE_VERSION)	-- Outdated profile TODO probably shouldn't just overwrite this... Let user copy settings out of the old profile into new? meh
-  then
+  if not prof then
+    -- Brand new — create defaults
     prof = self:CreateNewProfile(name)
+  elseif not prof.version or prof.version < PROFILE_VERSION then
+    -- Outdated: stash the old table, create fresh defaults, offer copy UI
+    local backupName = self:MakeUniqueProfileName(name.." backup")
+    raw.profiles[backupName] = prof
+    prof = self:CreateNewProfile(name)
+    self.pendingProfileMigration = {
+      kind = "profile",
+      from = backupName,
+      to = name,
+    }
   end
 
   raw.curprofile = name
@@ -939,6 +1190,9 @@ function SavedVars:SetCurrentProfile(name)
     SavedVars:SetupAllOptionGroups()
     CGV.Viewer:UpdateViewer()		-- Update Viewer options
     CGV.Pointer:UpdateArrowPosition()	-- Update Waypointer
+    if CGV.PopupHandler and CGV.PopupHandler.SyncLiveSettings then
+      CGV.PopupHandler:SyncLiveSettings()
+    end
   end
 end
 
@@ -1002,14 +1256,62 @@ function SavedVars:SetCurrentCharacterProfile()
 
   charProf = raw.characters[name]
 
-  if not charProf or			-- This does not exist, make it...
-  not charProf.version or			-- Profile not properly versioned
-  (charProf.version < CHAR_VERSION)	-- Outdated profile TODO probably shouldn't just overwrite this... Let user copy settings out of the old profile into new? meh
-  then
+  if not charProf then
     charProf = self:CreateNewCharProfile(name)
+  elseif not charProf.version or charProf.version < CHAR_VERSION then
+    local backupName = self:MakeUniqueCharProfileName(name.." backup")
+    raw.characters[backupName] = charProf
+    charProf = self:CreateNewCharProfile(name)
+    -- Prefer account-profile migration popup if both fire; otherwise queue char migrate.
+    if not self.pendingProfileMigration then
+      self.pendingProfileMigration = {
+        kind = "char",
+        from = backupName,
+        to = name,
+      }
+    end
   end
 
   self.char = charProf
+end
+
+-- Offer to copy settings from a stashed backup after a version bump (does not wipe the backup).
+function SavedVars:MaybeShowProfileMigrationPopup()
+  local pend = self.pendingProfileMigration
+  if not pend then return end
+  self.pendingProfileMigration = nil
+
+  if not (CGV.Popup and CGV.Frame) then
+    -- Viewer not ready yet — keep pending for Startup / OpenSettings
+    self.pendingProfileMigration = pend
+    return
+  end
+
+  local popup = self.MigrationPopup or CGV.Popup:New("CGESO_Profile_Migration_Popup")
+  self.MigrationPopup = popup
+
+  popup.OnAccept = function()
+    if pend.kind == "char" then
+      SavedVars:CopyCharProfileSettings(pend.from, pend.to)
+      CGV:Print((O and O["opt_profile_migrate_done"]) or ("Copied character settings from %s."):format(pend.from))
+    else
+      SavedVars:CopyProfileSettings(pend.from, pend.to)
+      CGV:Print((O and O["opt_profile_migrate_done"]) or ("Copied settings from %s."):format(pend.from))
+    end
+  end
+
+  popup.OnDecline = function()
+    -- Keep defaults; backup profile remains available under Profiles → Copy settings from
+  end
+
+  local title = (pend.kind == "char")
+    and (L["static_char_migrate"] or "Character settings were updated.")
+    or (L["static_profile_migrate"] or "Profile settings were updated.")
+  local detail = L["static_profile_migrate_detail"]
+    or ("Copy your previous options from \"%s\" into the new profile? Decline keeps defaults; the backup stays in the list."):format(pend.from)
+
+  popup:SetText(title, pend.from, detail)
+  popup:Show()
 end
 
 -- Iterates through all options and makes sure they are valid and sets their values
@@ -1033,7 +1335,6 @@ function SavedVars:GetOptionObject(optname,title)
   end
 end
 
--- TODO update these. There are options.
 function SavedVars:TableToDefault(tab,defaults)
   tab = getmetatable(tab) and getmetatable(tab).__index or tab
   if not tab then return end

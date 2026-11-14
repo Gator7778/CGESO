@@ -71,7 +71,7 @@ function ProgressBar:SetPercent(num)
   assert(num and num >= 0 and num <= 100, "Num 0-100 pls")
   local color
 
-  if self.colorByPercent then		-- TODO this is not widely implemented yet.
+  if self.colorByPercent then
     if num < 50 then
       color = COLOR_1	-- Green
     elseif num < 70 then
@@ -104,7 +104,7 @@ function ProgressBar:SetShowLabelOnHover(bool)
 
     -- Hide the label, we shouldn't be hovering over at setup
     self.label:Hide()
-  else	-- TODO Should probably not just nil out these handlers, might be other functions happening.
+  else
     CHAIN(self)
     :SetHandler("OnMouseEnter",nil)
     :SetHandler("OnMouseExit",nil)

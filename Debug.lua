@@ -94,7 +94,7 @@ function CGV:UnBlockDebugOutput()
 		print(msg)
 	end
 
-	blockedmsgs = {}		-- TODO could wipe it instead. Meh
+	blockedmsgs = {}
 end
 
 -----------------------------------------
@@ -103,7 +103,6 @@ end
 
 function CGV:Print(str,...)
 	str = string.format(tostring(str),...)
-	-- TODO
 	if (CGV.Creator) then
 		print(L['name'].." |ceeeecc[Creator]|r: "..str)
 	elseif (CGV.DEV) then

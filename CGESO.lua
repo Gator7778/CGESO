@@ -82,7 +82,6 @@ function CGV:StartupStep()
     self.startup_log['2_parsedguides_n'] = (self.startup_log['2_parsedguides_n'] or 0) + 1
 
     --[[
--- TODO use this to timeout guides for users?
 local newreg = {}
 for i=1,#self.registeredguides do
 local guide=self.registeredguides[i]
@@ -181,40 +180,66 @@ end
 -- INITIALIZATION
 -----------------------------------------
 
--- TODO Debug messages in here do not get printed. Nothing printed until EVENT_PLAYER_ACTIVATED
+-- Debug during ADD_ON_LOADED may not appear in chat until EVENT_PLAYER_ACTIVATED.
 
 local function CGV_Initialized(eventCode, addOnName)
-  if addOnName ~= CGV.DIR then CGV:Debug("&startup Initializing "..addOnName.." but we're "..CGV.DIR..", awaiting our turn") return end
+  if addOnName ~= CGV.DIR then CGV:Debug("&startup Initializing "..tostring(addOnName).." but we're "..CGV.DIR..", awaiting our turn") return end
   local self = CGV
+
+  -- Drop the abort handler first so a Setup error cannot cascade into CGV_NotInitialized.
+  self.EM:UnregisterForEvent("CGV", EVENT_PLAYER_ACTIVATED)
 
   self:Debug ("&startup Initializing...")
 
   self.starttime = GetGameTimeMilliseconds()
 
-  self.sv:Setup() -- Get our saved variables set up first thing
+  local ok, err = pcall(function()
+    self.sv:Setup() -- Get our saved variables set up first thing
 
-  if (self.sv.char.developer) then
-    CGV.DEV = true
-  end
+    if (self.sv.char.developer) then
+      CGV.DEV = true
+    end
 
-  self:RegisterKeyBindings() -- What appears in the ESO > CONTROLS > Keybindings window
+    self:RegisterKeyBindings() -- What appears in the ESO > CONTROLS > Keybindings window
 
-  if (self.sv.char.creator) then
-    CGV.Creator = true
-  end
+    if (self.sv.char.creator) then
+      CGV.Creator = true
+    end
 
-  -- pre-startup 'modules', if anyone wants to run stuff at addon init, before the troo startups.
-  for i, init in ipairs(self.inits) do
-    init(self)
+    -- pre-startup 'modules', if anyone wants to run stuff at addon init, before the troo startups.
+    for i, init in ipairs(self.inits) do
+      init(self)
+    end
+  end)
+
+  if not ok then
+    self:Debug("&startup ERROR during ADD_ON_LOADED Setup: "..tostring(err))
+    if self.Print then
+      self:Print("|cff0000Setup error:|r "..tostring(err))
+    else
+      d("|cff0000CGESO Setup error:|r "..tostring(err))
+    end
   end
 
   self.EM:UnregisterForEvent("CGV", EVENT_ADD_ON_LOADED)
-  self.EM:UnregisterForEvent("CGV", EVENT_PLAYER_ACTIVATED)
+  -- Real player-activated handler (startup phase 2).
   self.Events:AddEvent(EVENT_PLAYER_ACTIVATED)
-
+  self._addon_loaded = true
 end
-local function CGV_NotInitialized(eventCode, addOnName)
-  error("CGV failed to initialize, and player is already activated. ABORTING!")
+
+-- EVENT_PLAYER_ACTIVATED args are (eventCode, initial) — not addOnName.
+-- Only fires if ADD_ON_LOADED never claimed CGESO; soft-recover instead of hard abort.
+local function CGV_NotInitialized(eventCode, initial)
+  if CGV._addon_loaded or CGV.player_activated then
+    return
+  end
+  d("|cffaa00CGESO: ADD_ON_LOADED missed before PLAYER_ACTIVATED; recovering.|r")
+  CGV.EM:UnregisterForEvent("CGV", EVENT_PLAYER_ACTIVATED)
+  -- Run the same init path as a normal load, then continue into Startup.
+  CGV_Initialized(eventCode, CGV.DIR)
+  if not CGV.player_activated then
+    CGV:EVENT_PLAYER_ACTIVATED()
+  end
 end
 CGV.EM:RegisterForEvent("CGV", EVENT_ADD_ON_LOADED, CGV_Initialized)
 CGV.EM:RegisterForEvent("CGV", EVENT_PLAYER_ACTIVATED, CGV_NotInitialized)
@@ -254,6 +279,11 @@ function CGV:Startup()
   CGV:RegisterTipDialog()
 
   CGV:ShowTips()
+
+  -- After a SavedVars version bump, offer copy-from-backup once the viewer exists.
+  if self.db and self.db.MaybeShowProfileMigrationPopup then
+    self.db:MaybeShowProfileMigrationPopup()
+  end
 
 end
 
