@@ -26,8 +26,8 @@ local name = "CommunityMenu"
 local GUIDEMENU_TAB_ID = "guides"
 local SETTINGS_TAB_ID = "settings"
 
-local DEFAULT_WIDTH = 800
-local DEFAULT_HEIGHT = 500
+local DEFAULT_WIDTH = 980
+local DEFAULT_HEIGHT = 680
 local HEADER_HEIGHT = 60
 local FOOTER_HEIGHT = 25
 local LEFT_COLUMN_WIDTH = 250
@@ -36,10 +36,10 @@ local GUIDE_IMAGE_WIDTH = 512
 local GUIDE_IMAGE_HEIGHT = 256
 local WELCOME_GUIDE_IMAGE = (CGV.DIR or "CGESO").."/Viewer/Skins/Stealth/cgeso-SOTWC.dds"
 local OPTIONS_LEFT_OFFSET = 15
-local OPTIONS_VERT_OFFSET = 5
+local OPTIONS_VERT_OFFSET = 8
 local DEFAULT_ANCHOR= {	CENTER, }
--- Guide Home list math (DEFAULT_HEIGHT 500, HEADER 60, FOOTER 25 → mainBackdrop 415):
---   header≈30 + search 22+4 + pads ≈ 60 → list ≈ 355px → floor(355/22) = 16 max.
+-- Guide Home list math (DEFAULT_HEIGHT 680, HEADER 60, FOOTER 25 → mainBackdrop ~595):
+--   header≈30 + search 22+4 + pads ≈ 60 → list grows with frame; RefreshUI measures fit.
 -- Pool is larger; RefreshUI hides any row past the measured fit.
 local GUIDE_LIST_ROW_HEIGHT = 22
 local GUIDE_MENU_BUTTON_POOL = 18

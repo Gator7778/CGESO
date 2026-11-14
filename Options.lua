@@ -423,6 +423,7 @@ function SavedVars:InitializeOptions()
     AddOption("guide_style",{
         type = "dropdown",
         char = true,
+        width = 220, -- Fits "Ask each time" / "Main Quests Only" without truncation
         values = {
           ask = O["opt_guide_style_ask"] or "Ask each time",
           full = O["opt_guide_style_full"] or "Full Guide",
