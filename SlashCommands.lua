@@ -12,6 +12,10 @@ local help_string = [[	Options:
 	config - Show configuration.
 	creator - Activates Creator Mode.
 	dev - Activates Development Mode.
+	bookmark - Bookmark the current guide step.
+	resume - Resume the bookmarked step.
+	compact - Apply compact viewer preset.
+	quest - Open the step's quest in the journal.
 ]]
 
 if CGV.DEV then
@@ -65,6 +69,14 @@ function CGV.SlashCommandHandler(text)
 		self:Print(("Developer Mode is now %s"):format(
 			self.DEV and "on" or "off"
 		))
+	elseif text == "bookmark" then
+		if self.Features then self.Features:SetBookmark() end
+	elseif text == "resume" then
+		if self.Features then self.Features:ResumeBookmark() end
+	elseif text == "compact" then
+		if self.Features then self.Features:ApplyCompactPreset() end
+	elseif text == "quest" then
+		if self.Features then self.Features:OpenQuestInJournal() end
 	else
 		self:Print(help_string)
 	end

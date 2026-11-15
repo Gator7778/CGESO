@@ -574,6 +574,10 @@ function FrameUI:OnUpdate(time)
 
 	CGV:TryToCompleteStep(CGV.fastforward)
 
+	if CGV.Features and CGV.Features.OnViewerUpdate then
+		CGV.Features:OnViewerUpdate()
+	end
+
 	-- Try to update the Progress bar periodically incase they are not advancing steps
 	if time - (self.lastProgBarUpdate or 0) > PROG_UPDATETIME then
 		self.lastProgBarUpdate = time
@@ -647,6 +651,13 @@ function GoalUI:OnMouseUp(but)
 		-- |confirm |nextreload … switches guides live on click (still a hyperlink).
 		local halt = self.goal:OnClick()
 		if not halt then Viewer:NextStepButton_OnClick() end
+	end
+	-- Quest link: Ctrl+click a goal that names a quest → open journal.
+	if but ~= RIGHT_MOUSE_BUTTON and self.goal and self.goal.quest
+		and _G.IsControlKeyDown and _G.IsControlKeyDown()
+		and CGV.Features and CGV.Features.OpenQuestInJournal
+		and CGV.db and CGV.db.profile and CGV.db.profile.questlink ~= false then
+		CGV.Features:OpenQuestInJournal(self.goal.quest)
 	end
 	if but == RIGHT_MOUSE_BUTTON and Zgoo then
 		Zgoo("CGV.CurrentStep.goals["..(self.goal.num).."]")

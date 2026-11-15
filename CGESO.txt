@@ -58,6 +58,7 @@ Debug.lua
 Events.lua
 Callback.lua
 BugReport.lua
+Features.lua
 
 Options.lua
 

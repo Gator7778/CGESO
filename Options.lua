@@ -85,6 +85,11 @@ local defaultChar = {
   favoriteguides = {
     never_reset = true,
   },
+  -- guideTitle → step number for resume markers
+  bookmarks = {
+    never_reset = true,
+  },
+  bugnotes = "",
   -- "ask" = prompt Full vs Main Quests Only when both exist; "full" / "mqo" remember the choice.
   guide_style = "ask",
   creator = false,
@@ -448,6 +453,59 @@ function SavedVars:InitializeOptions()
 
     AddOption(nil,{
       type="header",
+      name=O["opt_qol"] or "Quality of Life",
+      })
+    AddOption("stuckstep",{
+        type = "toggle",
+        _default = true,
+      })
+    AddOption("stuckstep_minutes",{
+        type = "slider",
+        min = 1, max = 60, step = 1,
+        _default = 10,
+      })
+    AddOption("bookmarks",{
+        type = "toggle",
+        _default = true,
+      })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
+        name = O["opt_bookmark_set"] or "Bookmark this step",
+        desc = O["opt_bookmark_set_desc"] or "Save a resume marker for the current guide and step.",
+        func = function()
+          if CGV.Features then CGV.Features:SetBookmark() end
+        end,
+      })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
+        name = O["opt_bookmark_resume"] or "Resume bookmark",
+        desc = O["opt_bookmark_resume_desc"] or "Jump to the bookmarked step for the current guide.",
+        func = function()
+          if CGV.Features then CGV.Features:ResumeBookmark() end
+        end,
+      })
+    AddOption("questlink",{
+        type = "toggle",
+        _default = true,
+      })
+    AddOption("zone_nudge",{
+        type = "toggle",
+        _default = true,
+      })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
+        name = O["opt_compact_preset"] or "Apply compact viewer",
+        desc = O["opt_compact_preset_desc"] or "Steps shown = 1, smaller primary/secondary text.",
+        func = function()
+          if CGV.Features then CGV.Features:ApplyCompactPreset() end
+        end,
+      })
+
+    AddOption(nil,{
+      type="header",
       name=O["opt_auto_hiding"]
       })
     AddOption("hideincombat",{
@@ -596,6 +654,28 @@ function SavedVars:InitializeOptions()
           if v and CGV.UnloadUnusedGuides then
             CGV:UnloadUnusedGuides()
           end
+        end,
+    })
+    AddOption(nil,{
+        type="header",
+        name=O["opt_authoring"] or "Authoring",
+      })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
+        name = O["opt_cgpos_template"] or "Copy step template",
+        desc = O["opt_cgpos_template_desc"] or "Build a step/goto template at your position (also /cgpos template).",
+        func = function()
+          if CGV.Features then CGV.Features:CopyStepTemplate() end
+        end,
+    })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
+        name = O["opt_cgpos_history"] or "Show /cgpos history",
+        desc = O["opt_cgpos_history_desc"] or "Print recent /cgpos dumps (also /cgpos history).",
+        func = function()
+          if CGV.Features then CGV.Features:PrintCgposHistory() end
         end,
     })
   end

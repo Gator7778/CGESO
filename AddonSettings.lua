@@ -485,6 +485,84 @@ local function RegisterWithLAM()
         },
         {
           type = "header",
+          name = Opt("opt_qol", "Quality of Life"),
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_stuckstep", "Stuck-step detector"),
+          tooltip = Opt("opt_stuckstep_desc", "After staying on the same step for a while, offer to mark it done / skip."),
+          getFunc = function() return GetNamedOption("stuckstep", true) end,
+          setFunc = function(v) SetNamedOption("stuckstep", v) end,
+          default = true,
+          width = "full",
+        },
+        {
+          type = "slider",
+          name = Opt("opt_stuckstep_minutes", "Stuck-step wait (minutes)"),
+          tooltip = Opt("opt_stuckstep_minutes_desc", "How long on one step before the stuck-step popup appears."),
+          min = 1, max = 60, step = 1,
+          getFunc = function() return GetNamedOption("stuckstep_minutes", 10) end,
+          setFunc = function(v) SetNamedOption("stuckstep_minutes", v) end,
+          default = 10,
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_bookmarks", "Enable bookmarks"),
+          tooltip = Opt("opt_bookmarks_desc", "Allow bookmark / resume markers for the current guide."),
+          getFunc = function() return GetNamedOption("bookmarks", true) end,
+          setFunc = function(v) SetNamedOption("bookmarks", v) end,
+          default = true,
+          width = "full",
+        },
+        {
+          type = "button",
+          name = Opt("opt_bookmark_set", "Bookmark this step"),
+          tooltip = Opt("opt_bookmark_set_desc", "Save a resume marker for the current guide and step."),
+          func = function()
+            if CGV.Features then CGV.Features:SetBookmark() end
+          end,
+          width = "half",
+        },
+        {
+          type = "button",
+          name = Opt("opt_bookmark_resume", "Resume bookmark"),
+          tooltip = Opt("opt_bookmark_resume_desc", "Jump to the bookmarked step for the current guide."),
+          func = function()
+            if CGV.Features then CGV.Features:ResumeBookmark() end
+          end,
+          width = "half",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_questlink", "Quest link to journal"),
+          tooltip = Opt("opt_questlink_desc", "Ctrl+click a step goal that names a quest to open it in the journal."),
+          getFunc = function() return GetNamedOption("questlink", true) end,
+          setFunc = function(v) SetNamedOption("questlink", v) end,
+          default = true,
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_zone_nudge", "Zone-change soft nudge"),
+          tooltip = Opt("opt_zone_nudge_desc", "When you enter a zone with a different guide and you are not mid-chapter, softly suggest loading it."),
+          getFunc = function() return GetNamedOption("zone_nudge", true) end,
+          setFunc = function(v) SetNamedOption("zone_nudge", v) end,
+          default = true,
+          width = "full",
+        },
+        {
+          type = "button",
+          name = Opt("opt_compact_preset", "Apply compact viewer"),
+          tooltip = Opt("opt_compact_preset_desc", "Steps shown = 1, smaller primary/secondary text."),
+          func = function()
+            if CGV.Features then CGV.Features:ApplyCompactPreset() end
+          end,
+          width = "full",
+        },
+        {
+          type = "header",
           name = Opt("opt_auto_hiding", "Auto Hiding"),
           width = "full",
         },
@@ -691,6 +769,29 @@ local function RegisterWithLAM()
           setFunc = function(v) SetNamedOption("unloadunusedguides", v) end,
           default = true,
           width = "full",
+        },
+        {
+          type = "header",
+          name = Opt("opt_authoring", "Authoring"),
+          width = "full",
+        },
+        {
+          type = "button",
+          name = Opt("opt_cgpos_template", "Copy step template"),
+          tooltip = Opt("opt_cgpos_template_desc", "Build a step/goto template at your position (also /cgpos template)."),
+          func = function()
+            if CGV.Features then CGV.Features:CopyStepTemplate() end
+          end,
+          width = "half",
+        },
+        {
+          type = "button",
+          name = Opt("opt_cgpos_history", "Show /cgpos history"),
+          tooltip = Opt("opt_cgpos_history_desc", "Print recent /cgpos dumps (also /cgpos history)."),
+          func = function()
+            if CGV.Features then CGV.Features:PrintCgposHistory() end
+          end,
+          width = "half",
         },
       },
     },

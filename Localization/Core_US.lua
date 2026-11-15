@@ -283,6 +283,24 @@ GuideViewer("Option", "enUS", function() local f = {
 			["opt_skipauxsteps"] = "Skip auxiliary travel steps",
 			["opt_skipauxsteps_desc"] = "Skip tip/text fluff when the next real objective is already done or impossible. Never skips blue beacon / “reach next marker” (goto) travel. Off by default.",
 
+			["opt_qol"] = "Quality of Life",
+			["opt_stuckstep"] = "Stuck-step detector",
+			["opt_stuckstep_desc"] = "After staying on the same step for a while, offer to mark it done / skip with a short note.",
+			["opt_stuckstep_minutes"] = "Stuck-step wait (minutes)",
+			["opt_stuckstep_minutes_desc"] = "How long on one step before the stuck-step popup appears.",
+			["opt_bookmarks"] = "Enable bookmarks",
+			["opt_bookmarks_desc"] = "Allow bookmark / resume markers for the current guide.",
+			["opt_bookmark_set"] = "Bookmark this step",
+			["opt_bookmark_set_desc"] = "Save a resume marker for the current guide and step.",
+			["opt_bookmark_resume"] = "Resume bookmark",
+			["opt_bookmark_resume_desc"] = "Jump to the bookmarked step for the current guide.",
+			["opt_questlink"] = "Quest link to journal",
+			["opt_questlink_desc"] = "Ctrl+click a step goal that names a quest to open / focus it in the journal. Also /cgv quest.",
+			["opt_zone_nudge"] = "Zone-change soft nudge",
+			["opt_zone_nudge_desc"] = "When you enter a zone with a different guide and you are not mid-chapter, softly suggest loading it.",
+			["opt_compact_preset"] = "Apply compact viewer",
+			["opt_compact_preset_desc"] = "Sets Steps shown = 1 and smaller primary/secondary text.",
+
 			["opt_guide_search_placeholder"] = "Search zone, guide, or quest...",
 			["opt_guide_search_results"] = "Search results",
 			["opt_guide_kind_mqo"] = "Main Quests Only",
@@ -353,6 +371,12 @@ GuideViewer("Option", "enUS", function() local f = {
 
 			["opt_unloadunusedguides"] = "Unload unused guides",
 			["opt_unloadunusedguides_desc"] = "Free memory by dropping step data for guides you are not using. Recommended on slower PCs. Opening a guide again re-parses it (short delay). Does not require /reloadui.",
+
+			["opt_authoring"] = "Authoring",
+			["opt_cgpos_template"] = "Copy step template",
+			["opt_cgpos_template_desc"] = "Build a step/goto/talk template at your current map position. Also available as /cgpos template.",
+			["opt_cgpos_history"] = "Show /cgpos history",
+			["opt_cgpos_history_desc"] = "Print recent /cgpos and /cgpos gps dumps. Also available as /cgpos history.",
 
 			------ PROFILE --------
 			['opt_profile'] = "Profiles",

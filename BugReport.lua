@@ -177,20 +177,39 @@ function BugReport:GetReport()
 	local GetUnitLevel, GetMapPlayerPosition, GetMapTileTexture, GetCurrentMapZoneIndex = _G.GetUnitLevel, _G.GetMapPlayerPosition, _G.GetMapTileTexture, _G.GetCurrentMapZoneIndex
 	local playerX, playerY = GetMapPlayerPosition("player")
 	local step = CGV.CurrentStep
+	local guide = CGV.CurrentGuide
 	local t = "" -- text
+
+	t = t .. "NOTES: (type your notes on the next line)\n\n"
+	local notes = CGV.Features and CGV.Features:GetBugNotes() or ""
+	if notes ~= "" then
+		t = t .. notes .. "\n\n"
+	end
 
 	t = t .. ("VERSION: %s\n"):format(CGV.version)
 	t = t .. ("FACTION: %s\n"):format(CGV.Utils.GetFaction())
 	t = t .. ("LEVEL: %s\n"):format(GetUnitLevel("player"))
-	t = t .. ("GUIDE: %s\n"):format(CGV.CurrentGuide and CGV.CurrentGuide.title or "NONE")
+	t = t .. ("GUIDE: %s\n"):format(guide and guide.title or "NONE")
+	if guide and guide.title_short then
+		t = t .. ("GUIDE SHORT: %s\n"):format(guide.title_short)
+	end
 	t = t .. "\n"
 	t = t .. ("CURRENT LOCATION:\n")
 	t = t .. ("ARTMAP: %s\n MAP ZONE INDEX: #%d\n COORDINATES: %.3f,%.3f\n"):format( GetMapTileTexture(), GetCurrentMapZoneIndex(), playerX * 100, playerY * 100 )
 	t = t .. "\n"
-	if not step then
-		t = t .. ("STEP: NONE\n")
+
+	-- Always attach guide name, step number, and step text (feature 2).
+	if CGV.Features and CGV.Features.BuildStepTextBlock then
+		t = t .. CGV.Features:BuildStepTextBlock() .. "\n"
+	elseif not step then
+		t = t .. "STEP: NONE\n"
 	else
 		t = t .. ("STEP: %s\n"):format(step.num)
+	end
+
+	if not step then
+		-- already noted above
+	else
 		if not step.goals then
 			t = t .. "\nGOALS: NONE\n"
 		else
@@ -198,8 +217,7 @@ function BugReport:GetReport()
 			for goalIn, goalOut in ipairs(step.goals) do
 				t = t .. (" - %d. %s  <%s> [%s]"):format( goalIn, goalOut:GetText():gsub("|c......",""):gsub("|r",""), goalOut.action, goalOut:GetStatus() )
 				if goalOut.x then  t = t .. (" [%s %.2f,%.2f <%d]"):format( goalOut.map or "?", goalOut.x * 100, goalOut.y * 100, goalOut.dist )  end
-				-- Investigate why no workie
-				-- if goalOut.quest then  t = t .. (" [quest %s##%s/%s/%s/%s]"):format( goalOut.quest, goalOut.questid, goalOut.queststagenum or "-", goalOut.queststepnum or "-", goalOut.questcondnum or "-" )  end
+				if goalOut.quest then t = t .. (" [quest %s]"):format(tostring(goalOut.quest)) end
 				for k,v in pairs(goalOut) do
 					if type(v)~="function"
 					and type(v)~="table"
