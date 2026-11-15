@@ -237,6 +237,29 @@ function Viewer:CreateCGVF()
 		.__END
 	Viewer:add_tooltip(titlebar.find, "Find in this guide.\nAlso /cgv find <text> then /cgv step N.")
 
+	-- Note badge: visible when a note exists (or always dim); click opens note prompt.
+	titlebar.note = CHAIN(ui:Create("GuideButton",titlebar,tname.."_Note","Info"))
+		:SetPoint(LEFT, titlebar.find, RIGHT, BIG_PADDING, 0 )
+		:SetHandler("OnClicked",function()
+				if CGV.Features and CGV.Features.PromptGuideNote then
+					CGV.Features:PromptGuideNote()
+				end
+			end)
+		.__END
+	Viewer:add_tooltip(titlebar.note, "Guide note — click to edit.\nAlso /cgv note …")
+	titlebar.note:SetHidden(true)
+
+	-- Jump to this zone's preferred Full/MQO guide.
+	titlebar.zone = CHAIN(ui:Create("GuideButton",titlebar,tname.."_Zone","Settings"))
+		:SetPoint(LEFT, titlebar.note, RIGHT, BIG_PADDING, 0 )
+		:SetHandler("OnClicked",function()
+				if CGV.Features and CGV.Features.JumpToZoneGuide then
+					CGV.Features:JumpToZoneGuide()
+				end
+			end)
+		.__END
+	Viewer:add_tooltip(titlebar.zone, "Load this zone’s preferred guide.\nAlso /cgv zone.")
+
 	titlebar.title = CHAIN(ui:Create("Logo",titlebar,tname.."_Title"))
 		:SetPoint(CENTER,titlebar,0,-8)
 		.__END

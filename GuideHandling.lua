@@ -86,6 +86,8 @@ local function AdvanceToNextGuide(self, titleOrGuide, step)
 	local function toastNext(chosen)
 		local p = self.db and self.db.profile
 		if p and p.endguide_toast == false then return end
+		if p and p.quiet_mode then return end
+		if self.Features and self.Features.IsQuietMode and self.Features:IsQuietMode() then return end
 		local name = (chosen and (chosen.title_short or chosen.title)) or tostring(titleOrGuide)
 		if self.Print then
 			self:Print(("|cfd5b02Guide complete — next:|r %s"):format(name))

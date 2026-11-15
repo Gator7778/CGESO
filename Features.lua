@@ -68,6 +68,7 @@ function Features:NotifyStepFocused()
 	if not guide or not step then
 		self.stuckKey = nil
 		self.stuckSince = nil
+		self:UpdateNoteBadge()
 		return
 	end
 	local key = (guide.title or "?") .. "#" .. tostring(step.num)
@@ -75,6 +76,7 @@ function Features:NotifyStepFocused()
 		self.stuckKey = key
 		self.stuckSince = GetFrameTimeSeconds()
 	end
+	self:UpdateNoteBadge()
 end
 
 function Features:CheckStuckStep()
@@ -221,6 +223,7 @@ function Features:SetGuideNote(text, guideTitle, stepNum)
 		CGV:Print(text == "" and ("Cleared note for %s"):format(guideTitle)
 			or ("Saved note for %s (step %s)"):format(guideTitle, tostring(stepNum or "?")))
 	end
+	self:UpdateNoteBadge()
 	return true
 end
 
@@ -445,7 +448,12 @@ local function IsMidChapter()
 	return pct > 5 and pct < 95
 end
 
+function Features:IsQuietMode()
+	return OptBool("quiet_mode", false)
+end
+
 function Features:MaybeZoneNudge()
+	if self:IsQuietMode() then return end
 	if not OptBool("zone_nudge", true) then return end
 	if not (CGV.Frame and CGV.Frame:IsShown()) then return end
 	if GetFrameTimeSeconds() < (self._nudgeCooldownUntil or 0) then return end
@@ -534,6 +542,7 @@ function Features:OnZoneChanged()
 	_G.zo_callLater(function()
 		self._zoneNudgePending = false
 		self:MaybeZoneNudge()
+		self:MaybeExtrasNudge()
 	end, 1500)
 end
 
@@ -1082,6 +1091,11 @@ function Features:IsNearMatchingDoorPOI(needle)
 	if not OptBool("door_nearby", true) then return false end
 	needle = StripColors(needle or ""):lower()
 	if needle == "" then return false end
+	-- Never treat map/journal tips as doors ("Open Auridon Map", etc.).
+	if needle:find("map", 1, true) or needle:find("journal", 1, true)
+		or needle:find("inventory", 1, true) or needle:find("codex", 1, true) then
+		return false
+	end
 	-- Only for open/enter/portal style goals.
 	if not (needle:find("open", 1, true) or needle:find("enter", 1, true)
 		or needle:find("portal", 1, true) or needle:find("door", 1, true)
@@ -1213,9 +1227,147 @@ end
 -----------------------------------------
 
 function Features:PingSuggestionReady(guide)
+	if self:IsQuietMode() then return end
 	if not OptBool("suggest_ready_ping", true) then return end
 	local name = guide and (guide.title_short or guide.title) or "a guide"
 	d(("|cfd5b02CGESO:|r suggestion ready — open the Guide Viewer (%s)"):format(tostring(name)))
+end
+
+-----------------------------------------
+-- JUMP TO ZONE / CATCH-UP / NOTE BADGE / EXTRAS
+-----------------------------------------
+
+function Features:JumpToZoneGuide()
+	if not CGV.GetBestSuggestedGuide then
+		d("|cfd5b02CGESO:|r zone guide lookup unavailable.")
+		return
+	end
+	local best = CGV:GetBestSuggestedGuide()
+	if not best then
+		d("|cfd5b02CGESO:|r no guide matched this zone.")
+		return
+	end
+	local zone = GetZoneNameByIndex(GetCurrentMapZoneIndex()) or ""
+	local target = (CGV.GetPreferredGuideVariant and CGV:GetPreferredGuideVariant(best)) or best
+	self:RecordUndoPoint()
+	CGV:SetGuide(target)
+	d(("|cfd5b02CGESO:|r loaded zone guide — %s (%s)"):format(
+		target.title_short or target.title or "?", zone ~= "" and zone or "?"))
+end
+
+function Features:CatchUpSkip()
+	local guide = CGV.CurrentGuide
+	if not guide or not CGV.CurrentStep then
+		d("|cfd5b02CGESO:|r load a guide first.")
+		return
+	end
+	self:RecordUndoPoint()
+	local moved = 0
+	local safety = 0
+	while safety < 500 do
+		safety = safety + 1
+		local step = CGV.CurrentStep
+		if not step then break end
+		if step.finish then break end
+		local complete = step.IsComplete and select(1, step:IsComplete())
+		if not complete then break end
+		local before = CGV.CurrentStepNum
+		if CGV.SkipStep then
+			CGV:SkipStep(true, true)
+		else
+			break
+		end
+		moved = moved + 1
+		if CGV.CurrentStepNum == before then break end
+	end
+	if moved == 0 then
+		d("|cfd5b02CGESO:|r nothing to catch up — current step isn’t complete.")
+	else
+		d(("|cfd5b02CGESO:|r caught up %d completed step(s) → step %s"):format(
+			moved, tostring(CGV.CurrentStepNum or "?")))
+	end
+end
+
+function Features:UpdateNoteBadge()
+	local viewer = CGV.Viewer
+	local frame = viewer and viewer.Frame
+	local titlebar = frame and frame.titlebar
+	local btn = titlebar and titlebar.note
+	if not btn then return end
+	local text = self:GetGuideNote()
+	local has = text and text ~= ""
+	btn:SetHidden(not has and OptBool("note_badge_only_when_set", true))
+	if has then
+		btn:SetAlpha(1)
+		if btn.SetEnabled then btn:SetEnabled(true) end
+	else
+		btn:SetAlpha(0.35)
+	end
+end
+
+function Features:FindZoneExtrasGuides()
+	local zone = GetZoneNameByIndex(GetCurrentMapZoneIndex()) or ""
+	local zoneLower = zone:lower()
+	if zoneLower == "" then return {} end
+	local hits = {}
+	for _, guide in ipairs(CGV.registeredguides or {}) do
+		if guide and guide.title then
+			local title = guide.title
+			local isExtra = title:find("Skyshards", 1, true)
+				or title:find("Lorebook", 1, true)
+				or title:find("Lorebooks", 1, true)
+			if isExtra then
+				local short = (guide.title_short or ""):lower()
+				local tlow = title:lower()
+				if short:find(zoneLower, 1, true) or tlow:find(zoneLower, 1, true) then
+					local status = guide.GetStatus and guide:GetStatus() or ""
+					if status ~= "COMPLETE" and status ~= "INVALID" then
+						tinsert(hits, guide)
+					end
+				end
+			end
+		end
+	end
+	return hits
+end
+
+function Features:MaybeExtrasNudge()
+	if self:IsQuietMode() then return end
+	if not OptBool("extras_nudge", true) then return end
+	if GetFrameTimeSeconds() < (self._extrasNudgeCooldownUntil or 0) then return end
+	local zone = GetZoneNameByIndex(GetCurrentMapZoneIndex()) or ""
+	local zoneLower = zone:lower()
+	if zoneLower == "" then return end
+	if self._lastExtrasZone == zoneLower then return end
+
+	local hits = self:FindZoneExtrasGuides()
+	if #hits == 0 then
+		self._lastExtrasZone = zoneLower
+		return
+	end
+
+	-- Don't nag if already on one of those extras.
+	local cur = CGV.CurrentGuide
+	if cur and cur.title then
+		for _, g in ipairs(hits) do
+			if g.title == cur.title then
+				self._lastExtrasZone = zoneLower
+				return
+			end
+		end
+	end
+
+	self._lastExtrasZone = zoneLower
+	self._extrasNudgeCooldownUntil = GetFrameTimeSeconds() + 300
+	local names = {}
+	for i, g in ipairs(hits) do
+		if i > 3 then break end
+		tinsert(names, g.title_short or g.title)
+	end
+	d(("|cfd5b02CGESO:|r this zone has unfinished extras — %s%s"):format(
+		table.concat(names, ", "),
+		#hits > 3 and (" (+%d more)"):format(#hits - 3) or ""))
+	d("|cfd5b02CGESO:|r soft tip only — open Home → Extras when you want them.")
 end
 
 -----------------------------------------
@@ -1289,6 +1441,7 @@ end
 
 function Features:OnViewerUpdate()
 	self:CheckStuckStep()
+	self:UpdateNoteBadge()
 end
 
 local function registerSlash()

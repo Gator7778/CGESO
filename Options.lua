@@ -544,6 +544,22 @@ function SavedVars:InitializeOptions()
         type = "toggle",
         _default = true,
       })
+    AddOption("quiet_mode",{
+        type = "toggle",
+        _default = false,
+      })
+    AddOption("remember_home_folder",{
+        type = "toggle",
+        _default = true,
+      })
+    AddOption("extras_nudge",{
+        type = "toggle",
+        _default = true,
+      })
+    AddOption("note_badge_only_when_set",{
+        type = "toggle",
+        _default = true,
+      })
     AddOption(nil,{
         type = "execute",
         width = 150,
@@ -551,6 +567,24 @@ function SavedVars:InitializeOptions()
         desc = O["opt_undo_skip_desc"] or "Restore the step before the last skip. Also /cgv undo.",
         func = function()
           if CGV.Features then CGV.Features:UndoLastSkip() end
+        end,
+      })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
+        name = O["opt_jump_zone"] or "Load this zone’s guide",
+        desc = O["opt_jump_zone_desc"] or "Preferred Full/MQO for current zone. Also /cgv zone.",
+        func = function()
+          if CGV.Features then CGV.Features:JumpToZoneGuide() end
+        end,
+      })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
+        name = O["opt_catchup"] or "Catch up completed steps",
+        desc = O["opt_catchup_desc"] or "Advance past already-complete steps. Also /cgv catchup.",
+        func = function()
+          if CGV.Features then CGV.Features:CatchUpSkip() end
         end,
       })
     AddOption(nil,{

@@ -29,6 +29,8 @@ local help_string = [[	Options:
 	style / mqo / full - Switch Full ↔ MQO for this zone.
 	ignored / unignore [title] / clearignored - Manage forever-ignored suggestions.
 	findui - Toggle viewer find box.
+	zone - Load this zone’s preferred guide.
+	catchup - Advance past already-complete steps.
 ]]
 
 if CGV.DEV then
@@ -131,6 +133,10 @@ function CGV.SlashCommandHandler(text)
 		if self.Features then self.Features:UnignoreGuide(rest) end
 	elseif cmd == "findui" then
 		if self.Features then self.Features:ToggleViewerFind() end
+	elseif cmd == "zone" or cmd == "jumpzone" then
+		if self.Features then self.Features:JumpToZoneGuide() end
+	elseif cmd == "catchup" or cmd == "catch" then
+		if self.Features then self.Features:CatchUpSkip() end
 	else
 		self:Print(help_string)
 	end

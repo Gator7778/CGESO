@@ -2034,6 +2034,24 @@ end
 -- GUIDEMENU CONTROL FUNCTIONS
 -----------------------------------------
 
+function GuideMenu:RestoreRememberedFolder()
+	if CGV.db and CGV.db.profile and CGV.db.profile.remember_home_folder == false then
+		return
+	end
+	local char = CGV.db and CGV.db.char
+	if char and char.guidemenu_folder ~= nil then
+		self.folder = char.guidemenu_folder
+	end
+end
+
+function GuideMenu:RememberFolder()
+	if CGV.db and CGV.db.profile and CGV.db.profile.remember_home_folder == false then
+		return
+	end
+	if not (CGV.db and CGV.db.char) then return end
+	CGV.db.char.guidemenu_folder = self.folder or ""
+end
+
 function GuideMenu:Show()
 
 	Menu:Show()
@@ -2046,6 +2064,7 @@ function GuideMenu:Show()
 		self:Create()
 	end
 
+	self:RestoreRememberedFolder()
 	self.Frame:Show()
 	self:Refresh()
 end
@@ -2069,6 +2088,7 @@ function GuideMenu:MenuButton_OnClick(button,mouseButton)
 	if button.target.type == "folder" then
 		self.folder = button.target.title
 		self.offset = 0
+		self:RememberFolder()
 		if self.Frame and self.Frame.guideBoxScroll then
 			self.Frame.guideBoxScroll:SetValue(0)
 		end

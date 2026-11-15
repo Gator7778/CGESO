@@ -634,11 +634,68 @@ local function RegisterWithLAM()
           width = "full",
         },
         {
+          type = "checkbox",
+          name = Opt("opt_quiet_mode", "Quiet mode"),
+          tooltip = Opt("opt_quiet_mode_desc", "Suppress suggestion ping, zone nudge, extras tip, and end toast."),
+          getFunc = function() return GetNamedOption("quiet_mode", false) end,
+          setFunc = function(v) SetNamedOption("quiet_mode", v) end,
+          default = false,
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_remember_home_folder", "Remember Home folder"),
+          tooltip = Opt("opt_remember_home_folder_desc", "Reopen last Favorites/Suggested/folder on Home."),
+          getFunc = function() return GetNamedOption("remember_home_folder", true) end,
+          setFunc = function(v) SetNamedOption("remember_home_folder", v) end,
+          default = true,
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_extras_nudge", "In-zone extras tip"),
+          tooltip = Opt("opt_extras_nudge_desc", "Soft chat tip for unfinished Skyshards/Lorebooks in this zone."),
+          getFunc = function() return GetNamedOption("extras_nudge", true) end,
+          setFunc = function(v) SetNamedOption("extras_nudge", v) end,
+          default = true,
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_note_badge_only_when_set", "Note badge only when set"),
+          tooltip = Opt("opt_note_badge_only_when_set_desc", "Hide viewer note button unless a note exists."),
+          getFunc = function() return GetNamedOption("note_badge_only_when_set", true) end,
+          setFunc = function(v)
+            SetNamedOption("note_badge_only_when_set", v)
+            if CGV.Features and CGV.Features.UpdateNoteBadge then CGV.Features:UpdateNoteBadge() end
+          end,
+          default = true,
+          width = "full",
+        },
+        {
           type = "button",
           name = Opt("opt_undo_skip", "Undo last skip"),
           tooltip = Opt("opt_undo_skip_desc", "Restore the step before the last skip. Also /cgv undo."),
           func = function()
             if CGV.Features then CGV.Features:UndoLastSkip() end
+          end,
+          width = "half",
+        },
+        {
+          type = "button",
+          name = Opt("opt_jump_zone", "Load this zone’s guide"),
+          tooltip = Opt("opt_jump_zone_desc", "Preferred Full/MQO for current zone. Also /cgv zone."),
+          func = function()
+            if CGV.Features then CGV.Features:JumpToZoneGuide() end
+          end,
+          width = "half",
+        },
+        {
+          type = "button",
+          name = Opt("opt_catchup", "Catch up completed steps"),
+          tooltip = Opt("opt_catchup_desc", "Advance past already-complete steps. Also /cgv catchup."),
+          func = function()
+            if CGV.Features then CGV.Features:CatchUpSkip() end
           end,
           width = "half",
         },

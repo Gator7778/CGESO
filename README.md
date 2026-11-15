@@ -41,7 +41,14 @@ ESOLL automatically installs the required libraries. If you prefer to install th
   <li>ESOUI gallery checklist — Home/LAM and <code>/cgv gallery</code> (799×498 stretch-fill PNG).</li>
   <li>Clear / list ignored guides — <code>/cgv ignored</code>, <code>/cgv clearignored</code>, Home/LAM.</li>
   <li>Viewer find box — title-bar button / <code>/cgv findui</code> (overlay EditBox; Esc releases mouse).</li>
-  <li>Nearby door / portal assist — optional complete when standing at a matching POI (uses stored goal text only; fixed stack overflow from calling GetText inside IsComplete).</li>
+  <li>Nearby door / portal assist — optional complete when standing at a matching POI (uses stored goal text only; fixed stack overflow from calling GetText inside IsComplete; ignores “Open … Map” tips).</li>
+  <li>Jump to zone guide — title-bar / Home/LAM / <code>/cgv zone</code> loads preferred Full/MQO for the current zone.</li>
+  <li>Catch-up skip — <code>/cgv catchup</code> advances past already-complete steps (undoable).</li>
+  <li>Hide viewer in combat — existing Auto-hiding toggle (Home/LAM).</li>
+  <li>Note badge on viewer — title-bar button when a guide note exists; click to edit.</li>
+  <li>Remember Home folder — reopen last Favorites/Suggested/folder.</li>
+  <li>Quiet mode — suppresses suggestion ping, zone nudge, extras tip, and end-of-guide toast.</li>
+  <li>In-zone extras tip — soft chat when unfinished Skyshards/Lorebooks guides match this zone.</li>
   <li>Upload-day checklist — <code>/cgv upload</code>; MapData scaffold — <code>/cgv mapdata</code> (next id).</li>
   <li>Step history ring — <code>/cgv back</code> / <code>/cgv stephistory</code>.</li>
   <li>Home Favorites/Suggested/search rows can show progress %.</li>
