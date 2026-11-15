@@ -4450,4 +4450,6 @@ CGV.MapData.LocalizedMapNames	    ['en']={
   [1132] = "Curd Cave Cheesery",
   [1133] = "Othuk's Hideout",
   [1134] = "The Shivering Isles",
+  -- NEXT CHAPTER: new minimap names start at id 1135 (see /cgv mapdata).
+  -- Same name → reuse id; new name → last + 1. DDS from UESP update-N/maps.zip.
 }

@@ -226,6 +226,17 @@ function Viewer:CreateCGVF()
 	Viewer:add_tooltip(titlebar.bookmark, "Left click: bookmark this step.\nRight click: resume bookmark.")
 	titlebar.bookmark:SetHidden(CGV.db.profile.bookmarks == false)
 
+	-- Find in current guide (opens small overlay; Esc cancels — avoids EditBox mouse trap on the bar).
+	titlebar.find = CHAIN(ui:Create("GuideButton",titlebar,tname.."_Find","Down"))
+		:SetPoint(LEFT, titlebar.bookmark, RIGHT, BIG_PADDING, 0 )
+		:SetHandler("OnClicked",function()
+				if CGV.Features and CGV.Features.ToggleViewerFind then
+					CGV.Features:ToggleViewerFind()
+				end
+			end)
+		.__END
+	Viewer:add_tooltip(titlebar.find, "Find in this guide.\nAlso /cgv find <text> then /cgv step N.")
+
 	titlebar.title = CHAIN(ui:Create("Logo",titlebar,tname.."_Title"))
 		:SetPoint(CENTER,titlebar,0,-8)
 		.__END

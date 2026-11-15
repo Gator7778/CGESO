@@ -408,7 +408,14 @@ function Guide:GetCompletionText(mode)
 end
 
 function Guide:AdvertiseWithPopup(nodelay)
-	if not (CGV.Frame and CGV.Frame:IsShown()) then return end -- If CGV is hidden then we don't need to be suggesting guides.
+	-- Viewer hidden: optional chat ping so the player knows a suggestion is waiting.
+	if not (CGV.Frame and CGV.Frame:IsShown()) then
+		if CGV.Features and CGV.Features.PingSuggestionReady then
+			local target = (CGV.GetPreferredGuideVariant and CGV:GetPreferredGuideVariant(self)) or self
+			CGV.Features:PingSuggestionReady(target)
+		end
+		return
+	end
 
 	local delay = not nodelay
 
@@ -418,7 +425,9 @@ function Guide:AdvertiseWithPopup(nodelay)
 			self:AdvertiseWithPopup(true)
 		end
 		CGV:Print(L['guide_next_ready'])
-
+		if CGV.Features and CGV.Features.PingSuggestionReady then
+			CGV.Features:PingSuggestionReady(self)
+		end
 		return
 	end
 

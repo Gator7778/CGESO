@@ -607,11 +607,56 @@ local function RegisterWithLAM()
           width = "full",
         },
         {
+          type = "checkbox",
+          name = Opt("opt_door_nearby", "Nearby door / portal assist"),
+          tooltip = Opt("opt_door_nearby_desc", "Complete Open/Enter goals when standing at a matching door/portal POI."),
+          getFunc = function() return GetNamedOption("door_nearby", true) end,
+          setFunc = function(v) SetNamedOption("door_nearby", v) end,
+          default = true,
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_suggest_ready_ping", "Suggestion-ready chat ping"),
+          tooltip = Opt("opt_suggest_ready_ping_desc", "Chat ping when a suggestion is ready but viewer is hidden / in combat."),
+          getFunc = function() return GetNamedOption("suggest_ready_ping", true) end,
+          setFunc = function(v) SetNamedOption("suggest_ready_ping", v) end,
+          default = true,
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_home_progress", "Show progress % on Home rows"),
+          tooltip = Opt("opt_home_progress_desc", "Append completion % on Favorites/Suggested/search rows."),
+          getFunc = function() return GetNamedOption("home_progress", true) end,
+          setFunc = function(v) SetNamedOption("home_progress", v) end,
+          default = true,
+          width = "full",
+        },
+        {
           type = "button",
           name = Opt("opt_undo_skip", "Undo last skip"),
           tooltip = Opt("opt_undo_skip_desc", "Restore the step before the last skip. Also /cgv undo."),
           func = function()
             if CGV.Features then CGV.Features:UndoLastSkip() end
+          end,
+          width = "half",
+        },
+        {
+          type = "button",
+          name = Opt("opt_step_back", "Step history back"),
+          tooltip = Opt("opt_step_back_desc", "Previous step in history ring. Also /cgv back."),
+          func = function()
+            if CGV.Features then CGV.Features:StepHistoryBack() end
+          end,
+          width = "half",
+        },
+        {
+          type = "button",
+          name = Opt("opt_switch_style", "Switch Full ↔ MQO"),
+          tooltip = Opt("opt_switch_style_desc", "Jump to the other style for this zone. Also /cgv style."),
+          func = function()
+            if CGV.Features then CGV.Features:SwitchGuideStyle() end
           end,
           width = "half",
         },
@@ -626,10 +671,55 @@ local function RegisterWithLAM()
         },
         {
           type = "button",
+          name = Opt("opt_list_ignored", "List ignored guides"),
+          tooltip = Opt("opt_list_ignored_desc", "Show forever-ignored guides. Also /cgv ignored."),
+          func = function()
+            if CGV.Features then CGV.Features:ListIgnoredGuides() end
+          end,
+          width = "half",
+        },
+        {
+          type = "button",
+          name = Opt("opt_clear_ignored", "Clear ignored guides"),
+          tooltip = Opt("opt_clear_ignored_desc", "Clear forever-ignored suggestions. Also /cgv clearignored."),
+          func = function()
+            if CGV.Features then CGV.Features:ClearIgnoredGuides() end
+          end,
+          width = "half",
+        },
+        {
+          type = "button",
+          name = Opt("opt_viewer_find", "Find in guide (viewer)"),
+          tooltip = Opt("opt_viewer_find_desc", "Open the viewer find box. Also /cgv findui."),
+          func = function()
+            if CGV.Features then CGV.Features:ToggleViewerFind() end
+          end,
+          width = "full",
+        },
+        {
+          type = "button",
           name = Opt("opt_gallery_checklist", "ESOUI gallery checklist"),
           tooltip = Opt("opt_gallery_checklist_desc", "799×498 stretch-fill PNG rules. Also /cgv gallery."),
           func = function()
             if CGV.Features then CGV.Features:ShowGalleryChecklist() end
+          end,
+          width = "half",
+        },
+        {
+          type = "button",
+          name = Opt("opt_upload_checklist", "Upload-day checklist"),
+          tooltip = Opt("opt_upload_checklist_desc", "Version/gallery/README reminders. Also /cgv upload."),
+          func = function()
+            if CGV.Features then CGV.Features:ShowUploadChecklist() end
+          end,
+          width = "half",
+        },
+        {
+          type = "button",
+          name = Opt("opt_mapdata_scaffold", "MapData scaffold"),
+          tooltip = Opt("opt_mapdata_scaffold_desc", "Next MapData id + stubs. Also /cgv mapdata."),
+          func = function()
+            if CGV.Features then CGV.Features:ShowMapDataScaffold() end
           end,
           width = "full",
         },

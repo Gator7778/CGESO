@@ -532,6 +532,18 @@ function SavedVars:InitializeOptions()
         type = "toggle",
         _default = true,
       })
+    AddOption("door_nearby",{
+        type = "toggle",
+        _default = true,
+      })
+    AddOption("suggest_ready_ping",{
+        type = "toggle",
+        _default = true,
+      })
+    AddOption("home_progress",{
+        type = "toggle",
+        _default = true,
+      })
     AddOption(nil,{
         type = "execute",
         width = 150,
@@ -539,6 +551,24 @@ function SavedVars:InitializeOptions()
         desc = O["opt_undo_skip_desc"] or "Restore the step before the last skip. Also /cgv undo.",
         func = function()
           if CGV.Features then CGV.Features:UndoLastSkip() end
+        end,
+      })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
+        name = O["opt_step_back"] or "Step history back",
+        desc = O["opt_step_back_desc"] or "Previous step in history ring. Also /cgv back.",
+        func = function()
+          if CGV.Features then CGV.Features:StepHistoryBack() end
+        end,
+      })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
+        name = O["opt_switch_style"] or "Switch Full ↔ MQO",
+        desc = O["opt_switch_style_desc"] or "Jump to the other style for this zone. Also /cgv style.",
+        func = function()
+          if CGV.Features then CGV.Features:SwitchGuideStyle() end
         end,
       })
     AddOption(nil,{
@@ -553,10 +583,55 @@ function SavedVars:InitializeOptions()
     AddOption(nil,{
         type = "execute",
         width = 150,
+        name = O["opt_list_ignored"] or "List ignored guides",
+        desc = O["opt_list_ignored_desc"] or "Show forever-ignored guides. Also /cgv ignored.",
+        func = function()
+          if CGV.Features then CGV.Features:ListIgnoredGuides() end
+        end,
+      })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
+        name = O["opt_clear_ignored"] or "Clear ignored guides",
+        desc = O["opt_clear_ignored_desc"] or "Clear forever-ignored suggestions. Also /cgv clearignored.",
+        func = function()
+          if CGV.Features then CGV.Features:ClearIgnoredGuides() end
+        end,
+      })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
+        name = O["opt_viewer_find"] or "Find in guide (viewer)",
+        desc = O["opt_viewer_find_desc"] or "Open the viewer find box. Also /cgv findui.",
+        func = function()
+          if CGV.Features then CGV.Features:ToggleViewerFind() end
+        end,
+      })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
         name = O["opt_gallery_checklist"] or "ESOUI gallery checklist",
         desc = O["opt_gallery_checklist_desc"] or "799×498 stretch-fill PNG rules. Also /cgv gallery.",
         func = function()
           if CGV.Features then CGV.Features:ShowGalleryChecklist() end
+        end,
+      })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
+        name = O["opt_upload_checklist"] or "Upload-day checklist",
+        desc = O["opt_upload_checklist_desc"] or "Version/gallery/README reminders. Also /cgv upload.",
+        func = function()
+          if CGV.Features then CGV.Features:ShowUploadChecklist() end
+        end,
+      })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
+        name = O["opt_mapdata_scaffold"] or "MapData scaffold",
+        desc = O["opt_mapdata_scaffold_desc"] or "Next MapData id + stubs. Also /cgv mapdata.",
+        func = function()
+          if CGV.Features then CGV.Features:ShowMapDataScaffold() end
         end,
       })
     AddOption(nil,{

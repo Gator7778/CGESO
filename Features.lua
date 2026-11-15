@@ -941,6 +941,349 @@ function Features:ShowGalleryChecklist()
 end
 
 -----------------------------------------
+-- CLEAR IGNORED GUIDES
+-----------------------------------------
+
+function Features:ListIgnoredGuides()
+	local ignored = (CGV.db and CGV.db.char and CGV.db.char.ignoredguides) or {}
+	local lines = { "-- Ignored guides (Close-X forever on suggestions)" }
+	local n = 0
+	for title, v in pairs(ignored) do
+		if v then
+			n = n + 1
+			tinsert(lines, title)
+			d(("  |cffffff%s|r"):format(tostring(title)))
+		end
+	end
+	if n == 0 then
+		d("|cfd5b02CGESO:|r no ignored guides.")
+		tinsert(lines, "(none)")
+	else
+		d(("|cfd5b02CGESO:|r %d ignored — /cgv unignore or Clear ignored guides"):format(n))
+	end
+	if CGV.BugReport and CGV.BugReport.ShowDump then
+		CGV.BugReport:ShowDump(table.concat(lines, "\n"), "Ignored guides")
+	end
+end
+
+function Features:ClearIgnoredGuides()
+	if not (CGV.db and CGV.db.char) then return end
+	CGV.db.char.ignoredguides = {}
+	d("|cfd5b02CGESO:|r cleared ignored guides.")
+end
+
+function Features:UnignoreGuide(title)
+	title = tostring(title or ""):match("^%s*(.-)%s*$") or ""
+	if title == "" then
+		self:ListIgnoredGuides()
+		return
+	end
+	local ignored = CGV.db and CGV.db.char and CGV.db.char.ignoredguides
+	if ignored and ignored[title] then
+		ignored[title] = nil
+		d(("|cfd5b02CGESO:|r unignored %s"):format(title))
+	else
+		-- fuzzy: match short name
+		local hit
+		if ignored then
+			for t, v in pairs(ignored) do
+				if v and (t == title or (tostring(t):lower():find(title:lower(), 1, true))) then
+					ignored[t] = nil
+					hit = t
+					break
+				end
+			end
+		end
+		if hit then
+			d(("|cfd5b02CGESO:|r unignored %s"):format(hit))
+		else
+			d("|cfd5b02CGESO:|r not found in ignored list.")
+		end
+	end
+end
+
+-----------------------------------------
+-- STEP HISTORY RING
+-----------------------------------------
+
+local STEP_HISTORY_MAX = 20
+Features.stepHistory = Features.stepHistory or {}
+
+function Features:PushStepHistory(guideTitle, stepNum)
+	if not guideTitle or not stepNum then return end
+	self.stepHistory = self.stepHistory or {}
+	local last = self.stepHistory[1]
+	if last and last.title == guideTitle and last.step == stepNum then
+		return
+	end
+	tinsert(self.stepHistory, 1, { title = guideTitle, step = stepNum })
+	while #self.stepHistory > STEP_HISTORY_MAX do
+		tremove(self.stepHistory)
+	end
+end
+
+function Features:StepHistoryBack()
+	local h = self.stepHistory
+	if not h or #h < 2 then
+		d("|cfd5b02CGESO:|r no earlier step in history.")
+		return
+	end
+	-- [1] is current; jump to [2] and rotate
+	local prev = h[2]
+	tremove(h, 1)
+	if CGV.SetGuide then
+		CGV:SetGuide(prev.title, prev.step)
+		d(("|cfd5b02CGESO:|r history → step %s"):format(tostring(prev.step)))
+	end
+end
+
+function Features:PrintStepHistory()
+	local h = self.stepHistory or {}
+	d(("|cfd5b02CGESO step history|r (%d) — /cgv back"):format(#h))
+	for i, e in ipairs(h) do
+		d(("  %d. step %s — %s"):format(i, tostring(e.step), tostring(e.title)))
+		if i >= 12 then break end
+	end
+end
+
+-----------------------------------------
+-- MQO ↔ FULL JUMP
+-----------------------------------------
+
+function Features:SwitchGuideStyle()
+	local cur = CGV.CurrentGuide
+	if not cur or not CGV.GetGuideStylePair then
+		d("|cfd5b02CGESO:|r no current guide.")
+		return
+	end
+	local fullGuide, mqoGuide = CGV:GetGuideStylePair(cur)
+	if not fullGuide or not mqoGuide then
+		d("|cfd5b02CGESO:|r no Full/MQO pair for this guide.")
+		return
+	end
+	local target = (cur == mqoGuide or (cur.title and mqoGuide.title and cur.title == mqoGuide.title))
+		and fullGuide or mqoGuide
+	-- Prefer same step number when possible; else step 1.
+	local stepNum = (CGV.CurrentStep and CGV.CurrentStep.num) or 1
+	if target.steps and not target.steps[stepNum] then
+		stepNum = 1
+	end
+	self:RecordUndoPoint()
+	CGV:SetGuide(target, stepNum)
+	d(("|cfd5b02CGESO:|r switched to %s (step %s)"):format(
+		target.title_short or target.title or "?", tostring(stepNum)))
+end
+
+-----------------------------------------
+-- DOOR / PORTAL NEARBY ASSIST
+-----------------------------------------
+
+function Features:IsNearMatchingDoorPOI(needle)
+	if not OptBool("door_nearby", true) then return false end
+	needle = StripColors(needle or ""):lower()
+	if needle == "" then return false end
+	-- Only for open/enter/portal style goals.
+	if not (needle:find("open", 1, true) or needle:find("enter", 1, true)
+		or needle:find("portal", 1, true) or needle:find("door", 1, true)
+		or needle:find("climb", 1, true) or needle:find("travel", 1, true)) then
+		return false
+	end
+	local zid = GetCurrentMapZoneIndex and GetCurrentMapZoneIndex()
+	if not zid or zid <= 0 or not GetNumPOIs then return false end
+	local px, py = GetMapPlayerPosition("player")
+	if not px then return false end
+	local num = GetNumPOIs(zid) or 0
+	local near2 = 0.02 * 0.02
+	for i = 1, num do
+		local name = GetPOIInfo(zid, i)
+		if name and name ~= "" then
+			local lower = name:lower()
+			local isDoor = lower:find("door", 1, true) or lower:find("entrance", 1, true)
+				or lower:find("portal", 1, true) or lower:find("gate", 1, true)
+			if isDoor then
+				-- needle mentions this POI name (or stripped place)
+				local place = lower:gsub("%s+wayshrine%s*$", "")
+				local hit = false
+				if #place >= 4 and needle:find(place, 1, true) then hit = true end
+				if not hit then
+					for token in place:gmatch("%S+") do
+						if #token >= 4 and needle:find(token, 1, true) then hit = true break end
+					end
+				end
+				if hit then
+					local poiX, poiY = GetPOIMapInfo(zid, i, true)
+					if poiX and poiY then
+						local dx, dy = px - poiX, py - poiY
+						if (dx * dx + dy * dy) <= near2 then
+							return true
+						end
+					end
+				end
+			end
+		end
+	end
+	return false
+end
+
+-----------------------------------------
+-- UPLOAD-DAY CHECKLIST
+-----------------------------------------
+
+function Features:ShowUploadChecklist()
+	local ver = tostring(CGV.version or "?")
+	local toc = "?"
+	if CGV.AddonVersion then toc = tostring(CGV.AddonVersion) end
+	local text = table.concat({
+		"CGESO upload-day checklist",
+		"",
+		("Current version string: %s"):format(ver),
+		("AddOnVersion: %s"):format(toc),
+		"",
+		"1. Bump Version + AddOnVersion in CGESO.txt (Shawn owns the numbers).",
+		"2. Date the README TBD changelog block (and keep Summary accurate).",
+		"3. ESOUI gallery: stretch-fill 799×498 PNG — no side bars (see /cgv gallery).",
+		"4. Confirm no Art/ gallery folder left inside the addon zip.",
+		"5. Libraries: LibGPS3, LibMapPing, LibDebugLogger, LibChatMessage (ESOLL).",
+		"6. Smoke: viewer, suggestion overlay mouse, /cgpos poi, one wayshrine green.",
+		"7. Zip and upload to ESOUI / GitHub yourself (agents do not push).",
+		"",
+		"When ready: bump versions, then package.",
+	}, "\n")
+	if CGV.BugReport and CGV.BugReport.ShowDump then
+		CGV.BugReport:ShowDump(text, "Upload-day checklist")
+	end
+	d("|cfd5b02CGESO:|r upload checklist opened — bump version when YOU upload.")
+	return text
+end
+
+-----------------------------------------
+-- NEXT-XPAC MAPDATA SCAFFOLD
+-----------------------------------------
+
+function Features:ShowMapDataScaffold()
+	local lastId = 0
+	local MD = CGV.MapData
+	if MD then
+		for _, block in pairs(MD) do
+			if type(block) == "table" then
+				for k, row in pairs(block) do
+					if type(row) == "table" and type(row.id) == "number" and row.id > lastId then
+						lastId = row.id
+					elseif type(k) == "number" and type(row) == "string" and k > lastId then
+						lastId = k
+					end
+				end
+			end
+		end
+	end
+	local nextId = lastId + 1
+	local text = table.concat({
+		"Next-xpac MapData scaffold",
+		"",
+		("Highest MapData id found: %d"):format(lastId),
+		("Next new minimap name should use id: %d"):format(nextId),
+		"",
+		"Rules (preferences):",
+		"- Same minimap name → reuse same id.",
+		"- New name → last id + 1.",
+		"- DDS names from UESP esofiles update-N/maps.zip (full xpac folder, not QoL).",
+		"- Wire offsets from /cgpos gps; Shawn hand-tunes instance/door entrances only.",
+		"- Do not invent overland offsets.",
+		"",
+		"Stub example (paste into Travel/MapData.lua when chapter lands):",
+		"",
+		"-- CHAPTERNAME",
+		'["Zone Display Name"] = [[texname_base]],',
+		'["texname_base"] = { name = "Zone Display Name", id = '
+			.. tostring(nextId) .. ", xoffset = 0, yoffset = 0, scale = 0, },",
+		("  [%d] = \"Zone Display Name\","):format(nextId),
+		"",
+		"Latest content dump note: update-51 (as of 2026-11-14). Re-check before next chapter.",
+		"Run /cgpos pack in-zone after maps exist to fill real offsets.",
+	}, "\n")
+	if CGV.BugReport and CGV.BugReport.ShowDump then
+		CGV.BugReport:ShowDump(text, "MapData scaffold")
+	end
+	d(("|cfd5b02CGESO:|r MapData next id ≈ %d — see dump."):format(nextId))
+	return text
+end
+
+-----------------------------------------
+-- SUGGESTION-READY CHAT PING
+-----------------------------------------
+
+function Features:PingSuggestionReady(guide)
+	if not OptBool("suggest_ready_ping", true) then return end
+	local name = guide and (guide.title_short or guide.title) or "a guide"
+	d(("|cfd5b02CGESO:|r suggestion ready — open the Guide Viewer (%s)"):format(tostring(name)))
+end
+
+-----------------------------------------
+-- VIEWER FIND OVERLAY (non-modal)
+-----------------------------------------
+
+function Features:ToggleViewerFind()
+	local viewer = CGV.Frame or (CGV.Viewer and CGV.Viewer.Frame)
+	if not viewer then
+		d("|cfd5b02CGESO:|r open the Guide Viewer first.")
+		return
+	end
+	local ui, CHAIN = CGV.UI, CGV.Utils.ChainCall
+	local name = "CGESO_ViewerFindOverlay"
+	local frame = self.FindOverlay
+	if frame and not frame:IsHidden() then
+		frame:SetHidden(true)
+		if frame.edit and frame.edit.LoseFocus then pcall(function() frame.edit:LoseFocus() end) end
+		if _G.SetGameCameraUIMode then pcall(function() _G.SetGameCameraUIMode(false) end) end
+		return
+	end
+	if not frame then
+		frame = CHAIN(ui:Create("Frame", viewer:GetParent() or _G.GuiRoot, name, true))
+			:SetSize(280, 54)
+			:SetPoint(_G.TOP, viewer, _G.TOP, 0, -58)
+			:SetMouseEnabled(true)
+			.__END
+		frame.label = CHAIN(ui:Create("Label", frame, name.."_L", 12))
+			:SetPoint(_G.TOPLEFT, frame, 8, 4)
+			:SetText("Find in guide — Enter = search")
+			.__END
+		frame.edit = CHAIN(ui:Create("EditBox", frame, name.."_E"))
+			:SetPoint(_G.TOPLEFT, frame, 8, 22)
+			:SetDimensions(200, 22)
+			:SetMaxInputChars(80)
+			.__END
+		frame.go = CHAIN(ui:Create("Button", frame, name.."_Go"))
+			:SetSize(56, 22)
+			:SetText("Go")
+			:SetPoint(_G.LEFT, frame.edit, _G.RIGHT, 6, 0)
+			:SetHandler("OnClicked", function()
+				local q = frame.edit:GetText() or ""
+				if frame.edit.LoseFocus then frame.edit:LoseFocus() end
+				frame:SetHidden(true)
+				if _G.SetGameCameraUIMode then pcall(function() _G.SetGameCameraUIMode(false) end) end
+				Features:SearchCurrentGuide(q)
+			end)
+			.__END
+		frame.edit:SetHandler("OnEnter", function(me)
+			local q = me:GetText() or ""
+			me:LoseFocus()
+			frame:SetHidden(true)
+			if _G.SetGameCameraUIMode then pcall(function() _G.SetGameCameraUIMode(false) end) end
+			Features:SearchCurrentGuide(q)
+		end)
+		frame.edit:SetHandler("OnEscape", function(me)
+			me:LoseFocus()
+			frame:SetHidden(true)
+			if _G.SetGameCameraUIMode then pcall(function() _G.SetGameCameraUIMode(false) end) end
+			return true
+		end)
+		self.FindOverlay = frame
+	end
+	frame:SetHidden(false)
+	if frame.edit.TakeFocus then frame.edit:TakeFocus() end
+end
+
+-----------------------------------------
 -- TICK / EVENTS / SLASH
 -----------------------------------------
 
@@ -981,12 +1324,17 @@ end
 tinsert(CGV.startups, function()
 	registerSlash()
 
-	-- Hook FocusStep to reset stuck timer.
+	-- Hook FocusStep to reset stuck timer + step history ring.
 	if CGV.FocusStep then
 		local orig = CGV.FocusStep
 		CGV.FocusStep = function(self, num, quiet)
 			local r1, r2, r3 = orig(self, num, quiet)
 			Features:NotifyStepFocused()
+			local g = CGV.CurrentGuide
+			local s = CGV.CurrentStep
+			if g and s then
+				Features:PushStepHistory(g.title, s.num)
+			end
 			return r1, r2, r3
 		end
 	end

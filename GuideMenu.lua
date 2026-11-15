@@ -762,6 +762,14 @@ function GuideMenu:GetGuideRowLabel(guide, statuscolor)
 			name = "|cffaaaa["..info.tag.."]|r "..name
 		end
 	end
+	-- Progress % on Favorites / Suggested / search rows (cheap when already parsed).
+	if self:ShouldShowGuideKind() and guide.GetCompletionText
+		and (CGV.db and CGV.db.profile and CGV.db.profile.home_progress ~= false) then
+		local pct = guide:GetCompletionText("steps")
+		if pct and pct ~= "..." and pct ~= "?" and pct ~= "-" then
+			name = name.." |cffaaaa"..pct.."|r"
+		end
+	end
 	return "|c"..(statuscolor or "ffffff")..name
 end
 

@@ -22,6 +22,13 @@ local help_string = [[	Options:
 	step <n> - Jump to step number in the current guide.
 	copystep - Dump the current step for authoring (Print to Chat).
 	gallery - ESOUI gallery export checklist (799×498).
+	upload - Upload-day checklist.
+	mapdata / scaffold - Next-xpac MapData id scaffold.
+	back - Step history back.
+	stephistory - Show step history ring.
+	style / mqo / full - Switch Full ↔ MQO for this zone.
+	ignored / unignore [title] / clearignored - Manage forever-ignored suggestions.
+	findui - Toggle viewer find box.
 ]]
 
 if CGV.DEV then
@@ -106,6 +113,24 @@ function CGV.SlashCommandHandler(text)
 		if self.Features then self.Features:CopyCurrentStep() end
 	elseif cmd == "gallery" then
 		if self.Features then self.Features:ShowGalleryChecklist() end
+	elseif cmd == "upload" then
+		if self.Features then self.Features:ShowUploadChecklist() end
+	elseif cmd == "mapdata" or cmd == "scaffold" then
+		if self.Features then self.Features:ShowMapDataScaffold() end
+	elseif cmd == "back" then
+		if self.Features then self.Features:StepHistoryBack() end
+	elseif cmd == "stephistory" or cmd == "history" then
+		if self.Features then self.Features:PrintStepHistory() end
+	elseif cmd == "style" or cmd == "mqo" or cmd == "full" or cmd == "switch" then
+		if self.Features then self.Features:SwitchGuideStyle() end
+	elseif cmd == "ignored" then
+		if self.Features then self.Features:ListIgnoredGuides() end
+	elseif cmd == "clearignored" then
+		if self.Features then self.Features:ClearIgnoredGuides() end
+	elseif cmd == "unignore" then
+		if self.Features then self.Features:UnignoreGuide(rest) end
+	elseif cmd == "findui" then
+		if self.Features then self.Features:ToggleViewerFind() end
 	else
 		self:Print(help_string)
 	end

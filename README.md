@@ -20,7 +20,7 @@ ESOLL automatically installs the required libraries. If you prefer to install th
 
 <details>
 <summary>Date TBD - QoL Features &amp; Dual Settings</summary>
-<p><strong>Summary:</strong> Dual Home/LAM settings; stuck-step, bookmarks, notes, quest-link, compact viewer, zone nudge, authoring dumps; Print-to-Chat dumps (no mouse trap); suggestion overlays that keep mouselook; Solstice wayshrine greening; then a second pack — Full Solstice <code>wayshrine</code> lines, Not now snooze, undo skip, in-guide find, copy step, nearby shrine assist, end-guide toast, ESOUI gallery checklist.</p>
+<p><strong>Summary:</strong> Dual Home/LAM settings throughout. Core QoL (stuck-step, bookmarks, notes, quest-link, compact, zone nudge, authoring). Mouse-safe dumps (Print to Chat) and suggestion overlays. Solstice <code>wayshrine</code> greening (Full + MQO). Pack 2: Not now, undo, find/copystep, nearby shrine, end-guide toast, gallery. Pack 3: clear ignored guides, viewer find box, door/portal nearby, upload + MapData scaffold checklists, step history, Home progress %, suggestion-ready ping, Full↔MQO switch. Skyshard greening uses character <code>GetSkyshardDiscoveryStatus</code> when U52 skyshard-id helper exists — not account-wide achievement criteria.</p>
 <ul>
   <li><strong>Rule:</strong> every setting in Home also appears under Esc → Settings → Addons → Community Leveling Guide (LibAddonMenu), same SavedVariables.</li>
   <li>Stuck-step detector — long time on the same step offers mark done/skip with a note (viewer overlay; mouselook stays free).</li>
@@ -40,6 +40,15 @@ ESOLL automatically installs the required libraries. If you prefer to install th
   <li>Nearby wayshrine assist — standing on the matching shrine completes the step if pin APIs lag.</li>
   <li>End-of-guide toast — quiet chat line when <code>|next</code> auto-loads the next guide.</li>
   <li>ESOUI gallery checklist — Home/LAM and <code>/cgv gallery</code> (799×498 stretch-fill PNG).</li>
+  <li>Clear / list ignored guides — <code>/cgv ignored</code>, <code>/cgv clearignored</code>, Home/LAM.</li>
+  <li>Viewer find box — title-bar button / <code>/cgv findui</code> (overlay EditBox; Esc releases mouse).</li>
+  <li>Nearby door / portal assist — optional complete when standing at a matching POI.</li>
+  <li>Upload-day checklist — <code>/cgv upload</code>; MapData scaffold — <code>/cgv mapdata</code> (next id).</li>
+  <li>Step history ring — <code>/cgv back</code> / <code>/cgv stephistory</code>.</li>
+  <li>Home Favorites/Suggested/search rows can show progress %.</li>
+  <li>Suggestion-ready chat ping when the viewer is hidden or you’re in combat.</li>
+  <li>Full ↔ MQO switch — <code>/cgv style</code> (same step number when possible).</li>
+  <li>Skyshard <code>achieve</code> goals: use character <code>GetSkyshardDiscoveryStatus</code> when U52 <code>GetAchievementCriterionSkyshardId</code> exists (not account-wide criteria alone).</li>
 </ul>
 </details>
 

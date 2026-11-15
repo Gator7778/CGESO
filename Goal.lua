@@ -616,11 +616,29 @@ GOALTYPES['achieve'] = {
 		end
 	end,
 	iscomplete = function(self,override_achieve_id,override_achieve_crit)
-		local _,_,_,_,isCompleted,_,_ = GetAchievementInfo(override_achieve_id or self.achieve_id)
-		if isCompleted or not (override_achieve_crit or self.achieve_crit) then
+		local aid = override_achieve_id or self.achieve_id
+		local crit = override_achieve_crit or self.achieve_crit
+		-- Skyshards: achievement criteria are account-wide. Prefer character discovery API
+		-- (GetSkyshardDiscoveryStatus) when we can resolve a skyshard id (U52+ helper or skip).
+		local GetAchievementCriterionSkyshardId = _G.GetAchievementCriterionSkyshardId
+		local GetSkyshardDiscoveryStatus = _G.GetSkyshardDiscoveryStatus
+		if crit and GetSkyshardDiscoveryStatus and GetAchievementCriterionSkyshardId then
+			local ok, sid = pcall(GetAchievementCriterionSkyshardId, aid, crit)
+			if ok and sid and sid > 0 then
+				local ok2, status = pcall(GetSkyshardDiscoveryStatus, sid)
+				local und = _G.SKYSHARD_DISCOVERY_STATUS_UNDISCOVERED
+				if ok2 and status and status ~= 0 and (not und or status ~= und) then
+					return true, true
+				end
+				-- This character has not collected it — ignore account-wide criterion.
+				return false, true
+			end
+		end
+		local _,_,_,_,isCompleted,_,_ = GetAchievementInfo(aid)
+		if isCompleted or not crit then
 			return isCompleted , true
 		else
-			local _,numcom,numreq = GetAchievementCriterion(override_achieve_id or self.achieve_id,override_achieve_crit or self.achieve_crit)
+			local _,numcom,numreq = GetAchievementCriterion(aid, crit)
 			return numcom == numreq, true, (numcom/zo_max(1,(numreq or 1)))
 		end
 	end,
@@ -1104,6 +1122,14 @@ function Goal:IsCompleteCheck()
 	local GOALTYPE = GOALTYPES[self.action]
 	if GOALTYPE and GOALTYPE.iscomplete then
 		giscomplete,gispossible = GOALTYPE.iscomplete(self)
+	end
+
+	-- Door/portal nearby assist (optional): standing at matching POI.
+	if not (giscomplete or iscomplete) and CGV.Features and CGV.Features.IsNearMatchingDoorPOI then
+		local label = (self.GetText and self:GetText()) or self.text or ""
+		if CGV.Features:IsNearMatchingDoorPOI(label) then
+			return true, true
+		end
 	end
 
 	return giscomplete or iscomplete,gispossible or ispossible
