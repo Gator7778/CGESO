@@ -52,29 +52,59 @@ local function ScrollDumpToTop(frame)
 	end
 end
 
--- EditBox TakeFocus traps mouse/keyboard in ESO until LoseFocus.
--- Always release on close / Esc so Shawn doesn't need PrintScreen → Esc.
+-- EditBox / TopLevel dump frame leave ESO in camera UI (cursor) mode.
+-- LoseFocus alone is not enough — must also SetGameCameraUIMode(false).
 local function ReleaseDumpFocus(frame)
+	local wm = _G.WINDOW_MANAGER
+	if wm and wm.GetKeyboardFocusedControl then
+		local focused = wm:GetKeyboardFocusedControl()
+		if focused and focused.LoseFocus then
+			pcall(function() focused:LoseFocus() end)
+		end
+	end
+
 	local box = frame and frame.copybox
 	if box then
-		if box.LoseFocus then box:LoseFocus() end
-		if box.SetEditEnabled then box:SetEditEnabled(false) end
-		if box.SetEditEnabled then box:SetEditEnabled(true) end -- re-enable for next open click
+		if box.LoseFocus then pcall(function() box:LoseFocus() end) end
+		-- Toggle edit off briefly so the box cannot keep focus.
+		if box.SetEditEnabled then
+			box:SetEditEnabled(false)
+			box:SetEditEnabled(true)
+		end
 	end
 	if frame and frame.SetKeyboardEnabled then
 		frame:SetKeyboardEnabled(false)
 	end
-	-- Nudge game back to world mouse if still stuck.
 	if _G.ClearMenu then pcall(_G.ClearMenu) end
-	if _G.ZO_CommonErrorDialog and _G.ZO_CommonErrorDialog.ReleaseMouseOverKeybinds then
-		pcall(function() _G.ZO_CommonErrorDialog:ReleaseMouseOverKeybinds() end)
+
+	-- This is what actually returns mouselook after a focused EditBox.
+	if _G.SetGameCameraUIMode then
+		pcall(function() _G.SetGameCameraUIMode(false) end)
 	end
 end
 
 local function CloseDumpFrame(frame)
 	ReleaseDumpFocus(frame)
-	if frame then frame:Hide() end
+	if frame then
+		frame:Hide()
+		if frame.SetMouseEnabled then frame:SetMouseEnabled(false) end
+	end
 	BugReport.report = ""
+	-- One frame later — TopLevel hide sometimes re-asserts UI mode.
+	_G.zo_callLater(function()
+		ReleaseDumpFocus(frame)
+		if _G.SetGameCameraUIMode then
+			pcall(function() _G.SetGameCameraUIMode(false) end)
+		end
+	end, 0)
+	_G.zo_callLater(function()
+		if _G.SetGameCameraUIMode then
+			pcall(function() _G.SetGameCameraUIMode(false) end)
+		end
+		-- Restore mouse on the frame for the next open.
+		if frame and frame.SetMouseEnabled then frame:SetMouseEnabled(true) end
+		if frame and frame.SetKeyboardEnabled then frame:SetKeyboardEnabled(true) end
+	end, 50)
 end
 
 -- Explicit widths/heights only — never TOPLEFT+TOPRIGHT pairs between
@@ -197,8 +227,8 @@ function BugReport:CreateDumpFrameBasic()
 					-- Nothing special; CloseDumpFrame also LoseFocus.
 				end)
 			:SetHandler("OnEscape", function(self)
-					-- Esc while focused: release mouse, keep window open for browsing.
-					if self.LoseFocus then self:LoseFocus() end
+					-- Esc while focused: drop edit focus + leave camera UI mode.
+					ReleaseDumpFocus(frame)
 					return true
 				end)
 			:SetHandler("OnMouseWheel", function(_, delta)
@@ -234,7 +264,7 @@ function BugReport:CreateDumpFrameBasic()
 			.__END
 	end
 
-	local hintText = "Mouse-wheel to browse (no click needed). Click text only when copying: Ctrl+A, Ctrl+C. Esc releases the mouse; Close / Esc again dismisses. Paste into the CGESO comments on ESOUI."
+	local hintText = "Mouse-wheel to browse. Click text to copy (Ctrl+A, Ctrl+C). Esc = release mouse; Close = dismiss + release mouse. Paste into the CGESO comments on ESOUI."
 	if not frame.hint then
 		frame.hint = CHAIN(UI:Create("Label",frame,name.."_Hint",12))
 			:SetPoint(uiTopLeft,frame.title,uiBottomLeft,0,4)
