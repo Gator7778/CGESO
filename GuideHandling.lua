@@ -85,8 +85,8 @@ function CGV:SkipStep(fast,quiet)
 		end  -- always returns a step, unless we're at the end.
 
 		if guide then
-			guide = self:GetGuideByTitle(guide)
-			guide:AdvertiseWithPopup()
+			-- Step-level |next Title → load that guide (not a suggestion popup).
+			self:AdvanceToNextGuide(guide, stepnum or 1)
 			return
 		end
 		step = step2
@@ -110,8 +110,10 @@ function CGV:SkipStep(fast,quiet)
 	else
 		self.pause = true
 		self.fastforward = false
-		-- End of guide: offer next via popup (|next preferred, else zone suggestion).
-		if self:MaybeSuggestNextGuide() then
+		-- End of guide: explicit guide |next advances; zone suggestion is separate.
+		if self.CurrentGuide.next and self:AdvanceToNextGuide(self.CurrentGuide.next, 1) then
+			return
+		elseif self:MaybeSuggestNextGuide() then
 			return
 		elseif self.CurrentGuide.steps and #self.CurrentGuide.steps > 1 then
 			if not self.EndGuidePopup then
@@ -406,8 +408,38 @@ function CGV:UnloadUnusedGuides()
 	end
 end
 
--- Offer a next-guide popup at end of guide.
--- Prefers explicit |next; falls back to zone-based GetBestSuggestedGuide.
+-- Load the guide named by |next (header or step goal). Respects Full/MQO preference.
+-- Returns true if a load or style prompt was started.
+function CGV:AdvanceToNextGuide(titleOrGuide, step)
+	step = step or 1
+	local guide
+	if type(titleOrGuide) == "table" then
+		guide = titleOrGuide
+	elseif type(titleOrGuide) == "string" then
+		guide = self:GetGuideByTitle(titleOrGuide)
+		if not guide then
+			guide = self:GetGuideByTitle(self:SanitizeGuideTitle(titleOrGuide))
+		end
+	end
+	if not guide then
+		self:Print(("|cff4400ERROR!|r Cannot advance to guide '|cffff88%s|r'."):format(tostring(titleOrGuide)))
+		return false
+	end
+
+	local ignored = (self.db.char and self.db.char.ignoredguides) or {}
+	if ignored[guide.title] then
+		return false
+	end
+
+	-- Prefer remembered Full/MQO; if "ask" and both exist, PromptGuideStyleOrLoad asks once.
+	self:PromptGuideStyleOrLoad(guide, function(chosen)
+		self:SetGuide(chosen, step)
+	end)
+	return true
+end
+
+-- Zone-based suggestion popup only (Load Suggested / end-of-guide with no |next).
+-- Explicit |next advances via AdvanceToNextGuide — keep that path separate.
 -- Returns true if a popup was shown.
 function CGV:MaybeSuggestNextGuide()
 	local cur = self.CurrentGuide
@@ -420,38 +452,19 @@ function CGV:MaybeSuggestNextGuide()
 	end
 
 	local ignored = (self.db.char and self.db.char.ignoredguides) or {}
-	local nextguide
-
-	-- 1) Explicit |next on the current guide
-	local nextTitle = cur.next
-	if nextTitle and not ignored[nextTitle] then
-		nextguide = self:GetGuideByTitle(nextTitle)
-		if not nextguide then
-			-- Title in |next may be unsanitized
-			nextguide = self:GetGuideByTitle(self:SanitizeGuideTitle(nextTitle))
-		end
-	end
-
-	-- 2) Zone-based suggestion when no usable |next
-	if not nextguide then
-		local best = self:GetBestSuggestedGuide()
-		if best and best.title ~= cur.title and not ignored[best.title] then
-			nextguide = best
-		end
-	end
-
-	if not nextguide or nextguide.title == cur.title then
+	local best = self:GetBestSuggestedGuide()
+	if not best or best.title == cur.title or ignored[best.title] then
 		return false
 	end
 
 	-- One popup per finished guide → suggested title (avoid spam).
-	if self._suggestedNextFor == cur.title and self._suggestedNextTitle == nextguide.title then
+	if self._suggestedNextFor == cur.title and self._suggestedNextTitle == best.title then
 		return false
 	end
 	self._suggestedNextFor = cur.title
-	self._suggestedNextTitle = nextguide.title
+	self._suggestedNextTitle = best.title
 
-	nextguide:AdvertiseWithPopup()
+	best:AdvertiseWithPopup()
 	return true
 end
 
