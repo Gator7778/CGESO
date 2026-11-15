@@ -24,7 +24,7 @@ CGV.BugReport = BugReport
 -----------------------------------------
 -- FUNCTIONS
 -----------------------------------------
-local LINE_HEIGHT = 18 -- ZoFontGame ~line; used to size scroll content
+local LINE_HEIGHT = 22 -- ZoFontGame line + padding (under-size clips the bottom)
 
 local function CountLines(text)
 	if not text or text == "" then return 1 end
@@ -35,21 +35,53 @@ local function CountLines(text)
 	return n
 end
 
+local function ScrollDumpToTop(frame)
+	local scroll = frame and frame.scroll
+	if not scroll then return end
+	local bar = getControl(scroll:GetName() .. "ScrollBar")
+	if bar and bar.SetValue then
+		bar:SetValue(0)
+	end
+	if _G.ZO_Scroll_ResetToTop then
+		_G.ZO_Scroll_ResetToTop(scroll)
+	elseif scroll.SetVerticalScroll then
+		scroll:SetVerticalScroll(0)
+	end
+	if frame.copybox and frame.copybox.SetCursorPosition then
+		frame.copybox:SetCursorPosition(0)
+	end
+end
+
 -- Explicit widths/heights only — never TOPLEFT+TOPRIGHT pairs between
--- scrollchild <-> child (that caused "Too many anchors processed" cycles
--- with the old display label + copybox).
+-- scrollchild <-> child (that caused "Too many anchors processed" cycles).
 local function RefreshDumpScroll(frame, text)
 	local scroll = frame.scroll
 	local child = frame.scroll.scrollchild
 	local box = frame.copybox
 	if not (scroll and child and box) then return end
 
+	-- Keep scroll below the wrapping hint so the top lines aren't covered.
+	if frame.hint then
+		local hintBottom = frame.hint:GetBottom()
+		local frameTop = frame:GetTop()
+		local scale = frame:GetScale() or 1
+		if hintBottom and frameTop and scale > 0 then
+			local topPad = ((frameTop - hintBottom) / scale) + 8
+			if topPad < 56 then topPad = 56 end
+			if topPad > 120 then topPad = 120 end
+			scroll:ClearAnchors()
+			scroll:SetAnchor(uiTopLeft, frame, uiTopLeft, 8, topPad)
+			scroll:SetAnchor(uiBottomRight, frame, uiBottomRight, -1, -38)
+		end
+	end
+
 	local viewW = scroll:GetWidth()
 	local viewH = scroll:GetHeight()
 	if viewW < 100 then viewW = 1000 end
 	if viewH < 100 then viewH = 600 end
-	local contentH = math.max(viewH, CountLines(text) * LINE_HEIGHT + 24)
-	local contentW = math.max(100, viewW - 20)
+	-- Extra pad so the last lines aren't clipped when scrolling to the bottom.
+	local contentH = math.max(viewH, CountLines(text) * LINE_HEIGHT + 64)
+	local contentW = math.max(100, viewW - 24)
 
 	child:ClearAnchors()
 	child:SetAnchor(uiTopLeft, scroll, uiTopLeft, 0, 0)
@@ -64,6 +96,8 @@ local function RefreshDumpScroll(frame, text)
 	if _G.ZO_Scroll_OnExtentsChanged then
 		_G.ZO_Scroll_OnExtentsChanged(scroll)
 	end
+
+	ScrollDumpToTop(frame)
 end
 
 function BugReport:CreateDumpFrameBasic()
@@ -87,8 +121,9 @@ function BugReport:CreateDumpFrameBasic()
 	end
 
 	if not frame.scroll then
+		-- Start lower so a 2-line hint doesn't cover the first dump lines.
 		frame.scroll = CHAIN(WM:CreateControlFromVirtual(name.."_Scroll",frame,"ZO_ScrollContainer"))
-			:SetAnchor(uiTopLeft,frame,uiTopLeft,8,50)
+			:SetAnchor(uiTopLeft,frame,uiTopLeft,8,72)
 			:SetAnchor(uiBottomRight,frame,uiBottomRight,-1,-38)
 			.__END
 
@@ -160,8 +195,10 @@ function BugReport:CreateDumpFrameBasic()
 			:SetPoint(uiTopLeft,frame.title,uiBottomLeft,0,4)
 			:SetWidth(980)
 			:SetCanWrap(true)
-			:SetText("Scroll or mouse-wheel to browse. Click the text, Ctrl+C to copy, then paste into the CGESO comments on ESOUI. Nothing is sent automatically.")
+			:SetText("Mouse-wheel to browse. Starts at the top. Ctrl+A then Ctrl+C to copy — paste into the CGESO comments on ESOUI. Nothing is sent automatically.")
 			.__END
+	else
+		frame.hint:SetText("Mouse-wheel to browse. Starts at the top. Ctrl+A then Ctrl+C to copy — paste into the CGESO comments on ESOUI. Nothing is sent automatically.")
 	end
 
 	if not frame.CloseButton then
@@ -197,9 +234,16 @@ function BugReport:ShowDump(text,title)
 	frame.copybox:SetHidden(false)
 	frame:Show()
 
+	-- Size, then force the view to the TOP. Do NOT SelectAll on open —
+	-- that jumped the caret to the end and made the top unreachable.
 	RefreshDumpScroll(frame, text)
-	frame.copybox:TakeFocus()
-	frame.copybox:SelectAll()
+	ScrollDumpToTop(frame)
+	_G.zo_callLater(function()
+		if frame:IsHidden() then return end
+		ScrollDumpToTop(frame)
+		frame.copybox:TakeFocus()
+		frame.copybox:SetCursorPosition(0)
+	end, 10)
 end
 
 local lastreport

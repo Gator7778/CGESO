@@ -371,40 +371,101 @@ GOALTYPES['wayshrine'] = 	{ parse = function(self,params,_,_)
 								else
 									self.wayshrine = params
 								end
+								-- Guide lines are "wayshrine Rampart Camp" — strip a trailing
+								-- " Wayshrine" so we don't search/display "… Wayshrine Wayshrine".
+								if self.wayshrine then
+									self.wayshrine = tostring(self.wayshrine)
+										:gsub("%s+[Ww]ayshrine%s*$", "")
+										:match("^%s*(.-)%s*$")
+								end
 							end,
 
 							iscomplete = function(self)
 
-							if not self.wayshrine_POIIndex then
+							-- Retry lookup if we never found a POI (0) or timed out.
+							local needSearch = not self.wayshrine_POIIndex
+								or self.wayshrine_POIIndex == 0
+							if needSearch and self._wayshrine_next_try and GetFrameTimeSeconds
+								and _G.GetFrameTimeSeconds() < self._wayshrine_next_try then
+								needSearch = false
+							end
 
-								local zoneid = self.wayshrine_zoneid
+							if needSearch then
+								self.wayshrine_POIIndex = nil
 
-								-- screw it, search them all if there's none given.
-								for zid = (zoneid or 1),(zoneid or 999) do  -- oh whatever, less code is good.
-									for i = 1,GetNumPOIs(zid) do
-										if IsPOIWayshrine(zid,i) or (zid == 488 and i == 9) then   -- West Gash Wayshrine is not a wayshrine. Go figure.
-											local text,_,_,_ = GetPOIInfo(zid,i)
-											local fb,fi = zo_plainstrfind(text,self.wayshrine)
-											if fb and fi == 1 then
+								local function NormalizePOIName(s)
+									s = tostring(s or "")
+										:gsub("|c%x%x%x%x%x%x", "")
+										:gsub("|r", "")
+										:gsub("%s+[Ww]ayshrine%s*$", "")
+										:match("^%s*(.-)%s*$") or ""
+									return s:lower()
+								end
+
+								local want = NormalizePOIName(self.wayshrine)
+								local function NameMatches(poiText)
+									local got = NormalizePOIName(poiText)
+									if got == "" or want == "" then return false end
+									-- Exact, or either side is a prefix (Rampart Camp ↔ Rampart Camp Wayshrine).
+									if got == want then return true end
+									if got:sub(1, #want) == want then return true end
+									if want:sub(1, #got) == got then return true end
+									local fb, fi = zo_plainstrfind(poiText, self.wayshrine)
+									return fb and fi == 1
+								end
+
+								local function TryZone(zid)
+									if not zid or zid <= 0 then return end
+									local num = GetNumPOIs(zid)
+									if not num or num < 1 then return end
+									for i = 1, num do
+										-- Solstice (and some newer zones) may not flag IsPOIWayshrine —
+										-- still match by POI name containing the shrine / "Wayshrine".
+										local text = GetPOIInfo(zid, i)
+										if text and text ~= "" then
+											local isWS = IsPOIWayshrine(zid, i) or (zid == 488 and i == 9)
+											local looksLikeWS = isWS
+												or tostring(text):lower():find("wayshrine", 1, true)
+											if looksLikeWS and NameMatches(text) then
 												self.wayshrine_zoneid = zid
 												self.wayshrine_POIIndex = i
 												if CGV.db.profile.debug_wayshrines then
-													CGV:Debug("Found wayshrine '%s' on map id %d. POI %d.", self.wayshrine, self.wayshrine_zoneid, self.wayshrine_POIIndex)
+													CGV:Debug("Found wayshrine '%s' zone %d POI %d (%s).",
+														self.wayshrine, zid, i, text)
 												end
-												break -- out of 2 loops
+												return true
 											end
 										end
 									end
-									if self.wayshrine_POIIndex then break end
 								end
 
-								-- Index wasn't found... okay well we don't want to spam looking through POI's because it isn't efficient. Assign the index to 0 which returns an empty POI (no match) then reset it every 10s to try to match again.
-								if not self.wayshrine_POIIndex then
-									--CGV:Debug("Wayshrine '%s' not found, will retry in 10s.", self.wayshrine)
-									CGV:Debug("Wayshrine '%s' not found.", self.wayshrine)
-									self.wayshrine_POIIndex = 0
-									-- CGV:ScheduleTimer(function() self.wayshrine_POIIndex = nil end, 10)
+								-- Prefer the player's current zone index first (correct for Solstice).
+								local curZ = _G.GetCurrentMapZoneIndex and _G.GetCurrentMapZoneIndex()
+								if TryZone(curZ) then
+									-- found
+								elseif self.wayshrine_zoneid and TryZone(self.wayshrine_zoneid) then
+									-- found via explicit id
+								else
+									-- Fallback: scan a reasonable zone-index range (not 1..999 every tick).
+									for zid = 1, 2000 do
+										if zid ~= curZ and zid ~= self.wayshrine_zoneid then
+											if TryZone(zid) then break end
+										end
+									end
 								end
+
+								if not self.wayshrine_POIIndex then
+									CGV:Debug("Wayshrine '%s' not found (will retry).", tostring(self.wayshrine))
+									self.wayshrine_POIIndex = 0
+									-- Retry in a few seconds instead of locking forever.
+									if _G.GetFrameTimeSeconds then
+										self._wayshrine_next_try = _G.GetFrameTimeSeconds() + 5
+									end
+								end
+							end
+
+							if not self.wayshrine_zoneid or not self.wayshrine_POIIndex or self.wayshrine_POIIndex == 0 then
+								return false, false
 							end
 
 							local _,_,typ,_ = GetPOIMapInfo( self.wayshrine_zoneid, self.wayshrine_POIIndex, true ) --true=truthful call! don't be fooled by our own Pointer.lua and its foglight!
