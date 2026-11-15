@@ -1125,9 +1125,10 @@ function Goal:IsCompleteCheck()
 	end
 
 	-- Door/portal nearby assist (optional): standing at matching POI.
+	-- Use self.text only — never GetText() here (GetText calls IsComplete → stack overflow).
 	if not (giscomplete or iscomplete) and CGV.Features and CGV.Features.IsNearMatchingDoorPOI then
-		local label = (self.GetText and self:GetText()) or self.text or ""
-		if CGV.Features:IsNearMatchingDoorPOI(label) then
+		local label = self.text or self.wayshrine or ""
+		if label ~= "" and CGV.Features:IsNearMatchingDoorPOI(label) then
 			return true, true
 		end
 	end
