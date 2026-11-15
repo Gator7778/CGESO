@@ -52,6 +52,31 @@ local function ScrollDumpToTop(frame)
 	end
 end
 
+-- EditBox TakeFocus traps mouse/keyboard in ESO until LoseFocus.
+-- Always release on close / Esc so Shawn doesn't need PrintScreen → Esc.
+local function ReleaseDumpFocus(frame)
+	local box = frame and frame.copybox
+	if box then
+		if box.LoseFocus then box:LoseFocus() end
+		if box.SetEditEnabled then box:SetEditEnabled(false) end
+		if box.SetEditEnabled then box:SetEditEnabled(true) end -- re-enable for next open click
+	end
+	if frame and frame.SetKeyboardEnabled then
+		frame:SetKeyboardEnabled(false)
+	end
+	-- Nudge game back to world mouse if still stuck.
+	if _G.ClearMenu then pcall(_G.ClearMenu) end
+	if _G.ZO_CommonErrorDialog and _G.ZO_CommonErrorDialog.ReleaseMouseOverKeybinds then
+		pcall(function() _G.ZO_CommonErrorDialog:ReleaseMouseOverKeybinds() end)
+	end
+end
+
+local function CloseDumpFrame(frame)
+	ReleaseDumpFocus(frame)
+	if frame then frame:Hide() end
+	BugReport.report = ""
+end
+
 -- Explicit widths/heights only — never TOPLEFT+TOPRIGHT pairs between
 -- scrollchild <-> child (that caused "Too many anchors processed" cycles).
 local function RefreshDumpScroll(frame, text)
@@ -116,6 +141,17 @@ function BugReport:CreateDumpFrameBasic()
 			:SetPoint(uiCenter)
 			:Hide()
 			:SetCanDrag(true)
+			:SetMouseEnabled(true)
+			:SetKeyboardEnabled(true)
+			:SetHandler("OnHide", function(me)
+					ReleaseDumpFocus(me)
+				end)
+			:SetHandler("OnKeyUp", function(me, key)
+					if key == _G.KEY_ESCAPE then
+						CloseDumpFrame(me)
+						return true
+					end
+				end)
 			.__END
 		BugReport.BasicFrame = frame
 	end
@@ -155,7 +191,16 @@ function BugReport:CreateDumpFrameBasic()
 			:SetFont("ZoFontGame")
 			:SetMultiLine(true)
 			:SetMaxInputChars(999999)
+			-- Click to focus only when you want to copy — don't trap mouse on open.
 			:SetHandler("OnMouseDown", function(self) self:TakeFocus() end)
+			:SetHandler("OnFocusLost", function()
+					-- Nothing special; CloseDumpFrame also LoseFocus.
+				end)
+			:SetHandler("OnEscape", function(self)
+					-- Esc while focused: release mouse, keep window open for browsing.
+					if self.LoseFocus then self:LoseFocus() end
+					return true
+				end)
 			:SetHandler("OnMouseWheel", function(_, delta)
 					local scroll = frame.scroll
 					local bar = scroll and getControl(scroll:GetName() .. "ScrollBar")
@@ -177,8 +222,7 @@ function BugReport:CreateDumpFrameBasic()
 		frame.close = CHAIN(UI:Create("GuideButton",frame,name.."_Close","Close"))
 			:SetPoint(uiTopRight, frame, -5, 5)
 			:SetHandler("OnClicked",function()
-					frame:Hide()
-					BugReport.report = ""
+					CloseDumpFrame(frame)
 				end)
 			.__END
 	end
@@ -190,15 +234,16 @@ function BugReport:CreateDumpFrameBasic()
 			.__END
 	end
 
+	local hintText = "Mouse-wheel to browse (no click needed). Click text only when copying: Ctrl+A, Ctrl+C. Esc releases the mouse; Close / Esc again dismisses. Paste into the CGESO comments on ESOUI."
 	if not frame.hint then
 		frame.hint = CHAIN(UI:Create("Label",frame,name.."_Hint",12))
 			:SetPoint(uiTopLeft,frame.title,uiBottomLeft,0,4)
 			:SetWidth(980)
 			:SetCanWrap(true)
-			:SetText("Mouse-wheel to browse. Starts at the top. Ctrl+A then Ctrl+C to copy — paste into the CGESO comments on ESOUI. Nothing is sent automatically.")
+			:SetText(hintText)
 			.__END
 	else
-		frame.hint:SetText("Mouse-wheel to browse. Starts at the top. Ctrl+A then Ctrl+C to copy — paste into the CGESO comments on ESOUI. Nothing is sent automatically.")
+		frame.hint:SetText(hintText)
 	end
 
 	if not frame.CloseButton then
@@ -207,8 +252,7 @@ function BugReport:CreateDumpFrameBasic()
 			:SetText("Close")
 			:SetPoint(uiBottomRight, frame,-5,-5)
 			:SetHandler("OnClicked",function()
-					frame:Hide()
-					BugReport.report = ""
+					CloseDumpFrame(frame)
 				end)
 			.__END
 	end
@@ -230,19 +274,20 @@ function BugReport:ShowDump(text,title)
 
 	text = text or ""
 	frame.title:SetText(title or "Bug Report")
+	-- Make sure we're not still focused from a previous open.
+	ReleaseDumpFocus(frame)
 	frame.copybox:SetText(text)
 	frame.copybox:SetHidden(false)
+	if frame.SetKeyboardEnabled then frame:SetKeyboardEnabled(true) end
 	frame:Show()
 
-	-- Size, then force the view to the TOP. Do NOT SelectAll on open —
-	-- that jumped the caret to the end and made the top unreachable.
+	-- Size + top. Do NOT TakeFocus / SelectAll on open — that traps the mouse.
 	RefreshDumpScroll(frame, text)
 	ScrollDumpToTop(frame)
 	_G.zo_callLater(function()
 		if frame:IsHidden() then return end
 		ScrollDumpToTop(frame)
-		frame.copybox:TakeFocus()
-		frame.copybox:SetCursorPosition(0)
+		ReleaseDumpFocus(frame)
 	end, 10)
 end
 
