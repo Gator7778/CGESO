@@ -989,6 +989,8 @@ function Settings:Create()
 		:SetPoint(BOTTOMRIGHT)
 		:SetWidth(LEFT_COLUMN_WIDTH)
 		.__END
+	-- Alias: older copy-paste used guideInfoBox; never leave it nil (nil → GuiRoot anchors break on alt-tab).
+	frame.guideInfoBox = frame.optionsBox
 
 	-- Header lives inside the left column so list height math stays self-contained.
 	frame.header = CHAIN(ui:Create("Label",frame.optionTypesBox,setname.."_Header",0,"bold"))
@@ -1077,9 +1079,10 @@ function Settings:Create()
 	-- Setup Right information panel
 	-----------------------------
 
+	-- All right-panel chrome anchors to optionsBox (same Settings frame), never GuiRoot.
 	frame.OptionTitle = CHAIN(ui:Create("Label",frame.optionsBox,setname.."_GroupTitle",17))
-		:SetPoint(TOPLEFT,frame.guideInfoBox,TOPLEFT,HEADER_PADDING,2)
-		:SetPoint(TOPRIGHT,frame.guideInfoBox,TOPRIGHT,-HEADER_PADDING,0)
+		:SetPoint(TOPLEFT,frame.optionsBox,TOPLEFT,HEADER_PADDING,2)
+		:SetPoint(TOPRIGHT,frame.optionsBox,TOPRIGHT,-HEADER_PADDING,0)
 		:SetText("Options")
 		.__END
 
@@ -1093,7 +1096,7 @@ function Settings:Create()
 	-- Button isn't in the scrollframe either
 	local ButtonHortPad = 10
 	frame.OkButton = CHAIN(ui:Create("Button",frame.optionsBox,setname.."_OkButton"))
-		:SetPoint(BOTTOMRIGHT,frame.guideInfoBox,BOTTOMRIGHT,-ButtonHortPad,-10)
+		:SetPoint(BOTTOMRIGHT,frame.optionsBox,BOTTOMRIGHT,-ButtonHortPad,-10)
 		:SetText("Accept")
 		:SetFontSize(14)
 		:SetAccentStyle(true)
@@ -1103,7 +1106,7 @@ function Settings:Create()
 		.__END
 
 	frame.DefaultButton = CHAIN(ui:Create("Button",frame.optionsBox,setname.."_DefaultButton"))
-		:SetPoint(BOTTOMLEFT,frame.guideInfoBox,BOTTOMLEFT,ButtonHortPad,-10)
+		:SetPoint(BOTTOMLEFT,frame.optionsBox,BOTTOMLEFT,ButtonHortPad,-10)
 		:SetText("Default")
 		:SetFontSize(14)
 		:SetHandler("OnClicked",function()
@@ -1116,6 +1119,9 @@ function Settings:Create()
 		-- Leave OPTIONS_BOTTOM_PAD so tip/desc isn't tight against Default/Accept.
 		:SetPoint(BOTTOMRIGHT,frame.OkButton,TOPRIGHT,_G.OkButtonHortPad,-OPTIONS_BOTTOM_PAD)
 		.__END
+	if frame.OptionsScrollBase.SetClipsChildren then
+		frame.OptionsScrollBase:SetClipsChildren(true)
+	end
 
 	Menu:SetBackdropOpacity()
 end
@@ -1380,8 +1386,13 @@ Settings.OptionUI["dropdown"] = function(self,option,parent)
 		dropdown:SetWidth(option.data.width)
 	end
 
-	-- Change the parent of the pullout so that the opt_frame doesn't resize when it is opened. If the pullout is parented to the dropdown then opt_frame will resize when it is opened.
-	dropdown.pullout:SetParent(parent)
+	-- Pullout must not live under the ResizeToFit option row (inflates layout).
+	-- Parent to the TopLevel menu so alt-tab / hide doesn't leave it sizing the group frame.
+	local pulloutHost = Menu.Frame or parent
+	dropdown.pullout:SetParent(pulloutHost)
+	CHAIN(dropdown.pullout)
+		:ClearAnchors()
+		:SetAnchor(TOPLEFT,dropdown,BOTTOMLEFT)
 
 	if option:GetDescStyle() == "inline" then
 		local desc = CHAIN(GetInlineDesc(opt_frame,name.."_InlineDesc"))
