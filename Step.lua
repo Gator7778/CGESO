@@ -244,27 +244,49 @@ function Step:GetJumpDestination(jump)
 	end
 end
 
+-- True when |next points at another guide (path), not a step label / +1.
+local function IsGuideJumpNext(n)
+	if type(n) ~= "string" or n == "" or n == "+1" or n == "-1" then
+		return false
+	end
+	if tonumber(n) then
+		return false
+	end
+	-- Guide paths use \ or / (e.g. LEVELING\Auridon, Extras\...\Zone)
+	return n:find("/", 1, true) ~= nil or n:find("\\", 1, true) ~= nil
+end
+
 function Step:GetNext()
 	if self:AreRequirementsMet() then
 		local goals = self.goals
+		local guideNext, labelNext
 
 		for i = 1, #goals do
 			local goal = goals[i]
-
-			if goal.next
-				and goal:IsVisible()
-				and (not goal:IsCompletable() or goal:IsComplete())
-			then
-				StepProto:Debug(
-					"Step:GetNext: step %d goal %d \"%s\" says \"%s\"",
-					self.num,
-					i,
-					goal:GetText(),
-					tostring(goal.next)
-				)
-
-				return goal.next
+			if goal.next and goal:IsVisible() then
+				local n = goal.next
+				-- Guide jumps must win when leaving the step — even if that goal is still
+				-- |future / incomplete. Old logic required the |next goal itself complete,
+				-- so end-of-zone turnins fell through to zone "suggestion" instead of |next.
+				if IsGuideJumpNext(n) then
+					guideNext = guideNext or n
+					StepProto:Debug(
+						"Step:GetNext: step %d goal %d guide-jump \"%s\"",
+						self.num,
+						i,
+						tostring(n)
+					)
+				elseif not goal:IsCompletable() or goal:IsComplete() then
+					labelNext = labelNext or n
+				end
 			end
+		end
+
+		if guideNext then
+			return guideNext
+		end
+		if labelNext then
+			return labelNext
 		end
 	end
 
@@ -294,14 +316,9 @@ function Step:GetNextStep(nextlabel)
 		end
 		return stepobj
 	else
-		local gu = CGV:GetGuideByTitle(guide)
-		if not gu then
-			CGV:Print("|cff4400ERROR!|r Cannot jump from step |cffff88"..self.num.."|r to guide '|cffff88"..tostring(guide).."|r'. This is guide |cffff88"..self.parentGuide.title_short.."|r. Please report this.") --, providing a generated Bug Report.")
-			CGV:Print("Meanwhile, try to open another guide by clicking the dropdown arrow on the addon.")
-			return self
-		end
-
-		return nil,step,guide
+		-- Always hand guide jumps to SkipStep → AdvanceToNextGuide (SetGuide).
+		-- Do not return self on a missing title — that stuck the player and let suggestion win.
+		return nil, step, guide
 	end
 end
 
