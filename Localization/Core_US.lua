@@ -300,6 +300,10 @@ GuideViewer("Option", "enUS", function() local f = {
 			["opt_zone_nudge_desc"] = "When you enter a zone with a different guide and you are not mid-chapter, softly suggest loading it.",
 			["opt_compact_preset"] = "Apply compact viewer",
 			["opt_compact_preset_desc"] = "Sets Steps shown = 1 and smaller primary/secondary text.",
+			["opt_guidenote"] = "Edit guide note",
+			["opt_guidenote_desc"] = "Open a copyable note for the current guide. Included in bug dumps. Save with /cgv note <text>.",
+			["opt_hidecompletedgoals"] = "Hide completed goals",
+			["opt_hidecompletedgoals_desc"] = "Hide goals already marked complete in the Guide Viewer.",
 
 			["opt_guide_search_placeholder"] = "Search zone, guide, or quest...",
 			["opt_guide_search_results"] = "Search results",
@@ -367,7 +371,7 @@ GuideViewer("Option", "enUS", function() local f = {
 			["opt_revealmappoi_desc"] = "Show all unknown locations on the world map.",
 
 			["opt_bugreports"] = "Show bug report button",
-			["opt_bugreports_desc"] = "Show the bug icon on the Guide Viewer. Click it to build a text report (guide, step, location, debug log). Nothing is sent automatically — copy with Ctrl+C and paste into Discord, GitHub, or a message to the authors.",
+			["opt_bugreports_desc"] = "Show the bug icon on the Guide Viewer. Click it to build a text report (guide, step, location, debug log). Nothing is sent automatically — copy with Ctrl+C and paste into the Community Leveling Guide comments on ESOUI.",
 
 			["opt_unloadunusedguides"] = "Unload unused guides",
 			["opt_unloadunusedguides_desc"] = "Free memory by dropping step data for guides you are not using. Recommended on slower PCs. Opening a guide again re-parses it (short delay). Does not require /reloadui.",
@@ -375,8 +379,12 @@ GuideViewer("Option", "enUS", function() local f = {
 			["opt_authoring"] = "Authoring",
 			["opt_cgpos_template"] = "Copy step template",
 			["opt_cgpos_template_desc"] = "Build a step/goto/talk template at your current map position. Also available as /cgpos template.",
+			["opt_cgpos_pack"] = "Copy MapData pack",
+			["opt_cgpos_pack_desc"] = "One dump with goto, DDS/offsets, and step template for MapData paste. Also /cgpos pack.",
 			["opt_cgpos_history"] = "Show /cgpos history",
 			["opt_cgpos_history_desc"] = "Print recent /cgpos and /cgpos gps dumps. Also available as /cgpos history.",
+			["opt_poi_list"] = "List zone wayshrines / doors",
+			["opt_poi_list_desc"] = "Lists live POIs for the current zone index. Use when guide wayshrine Name fails (e.g. Solstice). Also /cgpos poi.",
 
 			------ PROFILE --------
 			['opt_profile'] = "Profiles",

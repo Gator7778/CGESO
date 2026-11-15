@@ -89,6 +89,10 @@ local defaultChar = {
   bookmarks = {
     never_reset = true,
   },
+  -- guideTitle → { text, step } player notes
+  guidenotes = {
+    never_reset = true,
+  },
   bugnotes = "",
   -- "ask" = prompt Full vs Main Quests Only when both exist; "full" / "mqo" remember the choice.
   guide_style = "ask",
@@ -467,6 +471,11 @@ function SavedVars:InitializeOptions()
     AddOption("bookmarks",{
         type = "toggle",
         _default = true,
+        set = function(_, v)
+          if CGV.Viewer and CGV.Viewer.Frame and CGV.Viewer.Frame.TitleBar and CGV.Viewer.Frame.TitleBar.bookmark then
+            CGV.Viewer.Frame.TitleBar.bookmark:SetHidden(not v)
+          end
+        end,
       })
     AddOption(nil,{
         type = "execute",
@@ -486,6 +495,15 @@ function SavedVars:InitializeOptions()
           if CGV.Features then CGV.Features:ResumeBookmark() end
         end,
       })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
+        name = O["opt_guidenote"] or "Edit guide note",
+        desc = O["opt_guidenote_desc"] or "Open a copyable note for the current guide (included in bug dumps).",
+        func = function()
+          if CGV.Features then CGV.Features:PromptGuideNote() end
+        end,
+      })
     AddOption("questlink",{
         type = "toggle",
         _default = true,
@@ -493,6 +511,13 @@ function SavedVars:InitializeOptions()
     AddOption("zone_nudge",{
         type = "toggle",
         _default = true,
+      })
+    AddOption("hidecompletedgoals",{
+        type = "toggle",
+        set = function()
+          if CGV.Viewer and CGV.Viewer.Update then CGV.Viewer:Update(true) end
+        end,
+        _default = false,
       })
     AddOption(nil,{
         type = "execute",
@@ -672,10 +697,28 @@ function SavedVars:InitializeOptions()
     AddOption(nil,{
         type = "execute",
         width = 150,
+        name = O["opt_cgpos_pack"] or "Copy MapData pack",
+        desc = O["opt_cgpos_pack_desc"] or "goto + offsets + step template in one dump (also /cgpos pack).",
+        func = function()
+          if CGV.Features then CGV.Features:CopyMapDataPack() end
+        end,
+    })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
         name = O["opt_cgpos_history"] or "Show /cgpos history",
         desc = O["opt_cgpos_history_desc"] or "Print recent /cgpos dumps (also /cgpos history).",
         func = function()
           if CGV.Features then CGV.Features:PrintCgposHistory() end
+        end,
+    })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
+        name = O["opt_poi_list"] or "List zone wayshrines / doors",
+        desc = O["opt_poi_list_desc"] or "Live POI list for this zone (works when wayshrine Name fails, e.g. Solstice). Also /cgpos poi.",
+        func = function()
+          if CGV.Features then CGV.Features:ListZoneWayshrinesAndDoors() end
         end,
     })
   end

@@ -1,18 +1,24 @@
 -----------------------------------------
--- QoL FEATURES (1–7)
+-- QoL FEATURES
 -- Stuck-step, bug context, bookmarks, quest-link,
--- compact preset, zone nudge, /cgpos history + template.
+-- compact preset, zone nudge, /cgpos helpers,
+-- guide notes, hide-completed, wayshrine/door list.
 -- Settings live in Options.lua + AddonSettings.lua (Home + LAM).
 -----------------------------------------
 
 local CGV = _G.CGV
-local tinsert, tremove, ipairs, pairs, type, tostring = table.insert, table.remove, ipairs, pairs, type, tostring
+local tinsert, tremove, ipairs, type, tostring = table.insert, table.remove, ipairs, type, tostring
 local GetFrameTimeSeconds = _G.GetFrameTimeSeconds
 local GetMapPlayerPosition = _G.GetMapPlayerPosition
 local GetZoneNameByIndex = _G.GetZoneNameByIndex
 local GetCurrentMapZoneIndex = _G.GetCurrentMapZoneIndex
 local GetMapName = _G.GetMapName
+local GetNumPOIs = _G.GetNumPOIs
+local GetPOIInfo = _G.GetPOIInfo
+local GetPOIMapInfo = _G.GetPOIMapInfo
+local IsPOIWayshrine = _G.IsPOIWayshrine
 local SCENE_MANAGER = _G.SCENE_MANAGER
+local MAP_PIN_TYPE_POI_COMPLETE = _G.MAP_PIN_TYPE_POI_COMPLETE
 
 local Features = {}
 CGV.Features = Features
@@ -163,6 +169,77 @@ function Features:SetBugNotes(text)
 	local char = Char()
 	if not char then return end
 	char.bugnotes = text or ""
+end
+
+-----------------------------------------
+-- PER-GUIDE NOTES
+-----------------------------------------
+
+function Features:GetGuideNotesTable()
+	local char = Char()
+	if not char then return {} end
+	if type(char.guidenotes) ~= "table" then
+		char.guidenotes = {}
+	end
+	return char.guidenotes
+end
+
+function Features:GetGuideNote(guideTitle)
+	guideTitle = guideTitle or (CGV.CurrentGuide and CGV.CurrentGuide.title)
+	if not guideTitle then return "" end
+	local notes = self:GetGuideNotesTable()
+	local entry = notes[guideTitle]
+	if type(entry) == "table" then
+		return entry.text or "", entry.step
+	end
+	return entry or "", nil
+end
+
+function Features:SetGuideNote(text, guideTitle, stepNum)
+	guideTitle = guideTitle or (CGV.CurrentGuide and CGV.CurrentGuide.title)
+	stepNum = stepNum or (CGV.CurrentStep and CGV.CurrentStep.num)
+	if not guideTitle then
+		if CGV.Print then CGV:Print("No guide for notes.") end
+		return false
+	end
+	local notes = self:GetGuideNotesTable()
+	text = text or ""
+	if text == "" then
+		notes[guideTitle] = nil
+	else
+		notes[guideTitle] = { text = text, step = stepNum }
+	end
+	if CGV.Print then
+		CGV:Print(text == "" and ("Cleared note for %s"):format(guideTitle)
+			or ("Saved note for %s (step %s)"):format(guideTitle, tostring(stepNum or "?")))
+	end
+	return true
+end
+
+-- Edit via dump box (avoids EditBox inside ResizeToFit popups).
+function Features:PromptGuideNote()
+	local guide = CGV.CurrentGuide
+	if not guide then
+		if CGV.Print then CGV:Print("Load a guide first.") end
+		return
+	end
+	local existing = self:GetGuideNote(guide.title)
+	local starter = existing ~= "" and existing or ""
+	local header = ("-- Guide note for: %s\n-- Edit the text below, Ctrl+C, then run:\n-- /cgv note <your text>\n-- Or paste here and use Accept in chat after copying.\n\n"):format(guide.title_short or guide.title)
+	if CGV.BugReport and CGV.BugReport.ShowDump then
+		CGV.BugReport:ShowDump(header .. starter, "Guide note — copy text, then /cgv note …")
+	end
+	if CGV.Print then
+		CGV:Print("Edit the note dump, copy your text, then: /cgv note your text here")
+	end
+end
+
+function Features:BuildGuideNoteBlock()
+	local guide = CGV.CurrentGuide
+	if not guide then return "" end
+	local text, step = self:GetGuideNote(guide.title)
+	if not text or text == "" then return "" end
+	return ("GUIDE NOTE (step %s):\n%s\n\n"):format(tostring(step or "?"), text)
 end
 
 -----------------------------------------
@@ -487,6 +564,125 @@ function Features:CopyStepTemplate()
 	return text
 end
 
+-- One pasteable pack: goto line + MapData-style offsets (for authoring / Solstice fixes).
+function Features:CopyMapDataPack()
+	local Pointer = CGV.Pointer
+	local GPS = _G.LibGPS3
+	local tex = Pointer and Pointer.GetMapTex and Pointer:GetMapTex() or "?"
+	local x, y = GetMapPlayerPosition("player")
+	x = (x or 0) * 100
+	y = (y or 0) * 100
+	local offsetX, offsetY, scaleX = 0, 0, 0
+	local gps = GPS and GPS.GetCurrentMapMeasurement and GPS:GetCurrentMapMeasurement()
+	if gps then
+		offsetX = gps.GetOffset and select(1, gps:GetOffset()) or gps.offsetX or 0
+		offsetY = gps.GetOffset and select(2, gps:GetOffset()) or gps.offsetY or 0
+		scaleX = gps.GetScale and select(1, gps:GetScale()) or gps.scaleX or 0
+	end
+	local zone = GetZoneNameByIndex(GetCurrentMapZoneIndex()) or GetMapName() or ""
+	local lines = {
+		("-- MapData / guide pack: %s"):format(zone),
+		("-- DDS / tex: %s"):format(tex),
+		("goto %s %.2f,%.2f"):format(tex, x, y),
+		("xoffset = %.19f"):format(offsetX),
+		("yoffset = %.19f"):format(offsetY),
+		("scale = %.19f"):format(scaleX),
+		(""),
+		self:BuildStepTemplate(),
+	}
+	local text = table.concat(lines, "\n")
+	self:RecordCgpos("pack:\n" .. text)
+	if CGV.BugReport and CGV.BugReport.ShowDump then
+		CGV.BugReport:ShowDump(text, "MapData pack (Ctrl+C to copy)")
+	else
+		d(text)
+	end
+	return text
+end
+
+-----------------------------------------
+-- WAYSHRINE / DOOR LIST (Creator; Solstice-safe)
+-- Lists POIs from the live zone API instead of the
+-- guide `wayshrine Name` matcher (which fails in some zones).
+-----------------------------------------
+
+function Features:ListZoneWayshrinesAndDoors()
+	local zid = GetCurrentMapZoneIndex()
+	if not zid or zid <= 0 then
+		d("|cfd5b02POI list:|r no zone index yet — open the map once.")
+		return
+	end
+	local zone = GetZoneNameByIndex(zid) or GetMapName() or "?"
+	local tex = (CGV.Pointer and CGV.Pointer.GetMapTex and CGV.Pointer:GetMapTex()) or "?"
+	local num = GetNumPOIs and GetNumPOIs(zid) or 0
+	local lines = {
+		("-- POIs for %s (zoneIndex %d) tex=%s"):format(zone, zid, tex),
+		("-- Use these names/indexes when `wayshrine Name` fails (e.g. Solstice)."),
+		("-- Click a line format below into your guide, or goto from /cgpos pack."),
+	}
+	local shrines, doors = {}, {}
+	for i = 1, num do
+		local name = GetPOIInfo(zid, i)
+		if name and name ~= "" then
+			local _, _, pinType = GetPOIMapInfo(zid, i, true)
+			local done = (pinType == MAP_PIN_TYPE_POI_COMPLETE)
+			local isShrine = IsPOIWayshrine and IsPOIWayshrine(zid, i)
+			local lower = name:lower()
+			local isDoor = lower:find("door", 1, true) or lower:find("entrance", 1, true) or lower:find("portal", 1, true)
+			local row = ("  [%d] %s%s%s"):format(
+				i,
+				name,
+				isShrine and "  |c88ff88(wayshrine)|r" or "",
+				done and "  |cffaa55[discovered]|r" or "  |caaaaaa[undiscovered]|r"
+			)
+			local plain = ("-- POI %d: %s%s"):format(i, name, isShrine and " (wayshrine)" or "")
+			if isShrine then
+				tinsert(shrines, row)
+				tinsert(lines, ("wayshrine %s"):format(name:gsub("%s+Wayshrine%s*$", ""):gsub("^%s+", ""):gsub("%s+$", "")))
+				tinsert(lines, plain)
+			elseif isDoor then
+				tinsert(doors, row)
+				tinsert(lines, plain)
+			end
+		end
+	end
+
+	d(("|cfd5b02POIs in %s|r (zoneIndex %d, %d pins)"):format(zone, zid, num))
+	d("|c88ff88Wayshrines:|r")
+	if #shrines == 0 then
+		d("  (none flagged IsPOIWayshrine — listing name matches / all pins below)")
+	else
+		for _, r in ipairs(shrines) do d(r) end
+	end
+	if #doors > 0 then
+		d("|cffaa55Doors / entrances / portals (by name):|r")
+		for _, r in ipairs(doors) do d(r) end
+	end
+	-- Always dump a full numbered list so Solstice (and similar) still works
+	-- when IsPOIWayshrine returns false for valid travel pins.
+	d("|cffffffAll POIs (index = GetPOIInfo):|r")
+	for i = 1, num do
+		local name = GetPOIInfo(zid, i)
+		if name and name ~= "" then
+			local isShrine = IsPOIWayshrine and IsPOIWayshrine(zid, i)
+			local _, _, pinType = GetPOIMapInfo(zid, i, true)
+			local done = (pinType == MAP_PIN_TYPE_POI_COMPLETE)
+			d(("  %3d  %s%s%s"):format(
+				i,
+				name,
+				isShrine and "  [WS]" or "",
+				done and "  done" or ""
+			))
+		end
+	end
+
+	local dump = table.concat(lines, "\n")
+	if CGV.BugReport and CGV.BugReport.ShowDump then
+		CGV.BugReport:ShowDump(dump .. "\n\n-- Full index list is also in chat.", "Zone POIs (Ctrl+C)")
+	end
+	return dump
+end
+
 function Features:FormatCgposDump(kind)
 	local Pointer = CGV.Pointer
 	local GPS = _G.LibGPS3
@@ -543,6 +739,14 @@ local function registerSlash()
 			Features:CopyStepTemplate()
 			return
 		end
+		if cmd == "pack" or cmd == "mapdata" then
+			Features:CopyMapDataPack()
+			return
+		end
+		if cmd == "poi" or cmd == "wayshrines" or cmd == "doors" then
+			Features:ListZoneWayshrinesAndDoors()
+			return
+		end
 		-- Run original, then record.
 		if prev then prev(args) end
 		local kind = (cmd == "gps") and "gps" or "pos"
@@ -577,5 +781,5 @@ tinsert(CGV.startups, function()
 	end
 
 	Features:NotifyStepFocused()
-	CGV:Debug("&startup Features 1–7 ready")
+	CGV:Debug("&startup Features QoL ready")
 end)

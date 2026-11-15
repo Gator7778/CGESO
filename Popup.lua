@@ -161,6 +161,15 @@ function Popup:New(name,ptype)
     end)
   .__END
 
+  -- Keep Accept/Decline out of ResizeToFit extents so live font/perfect-size
+  -- updates don't trip "Too many resize to fit updates processed."
+  if popup.declinebutton.SetExcludeFromResizeToFitExtents then
+    popup.declinebutton:SetExcludeFromResizeToFitExtents(true)
+  end
+  if popup.acceptbutton.SetExcludeFromResizeToFitExtents then
+    popup.acceptbutton:SetExcludeFromResizeToFitExtents(true)
+  end
+
   popup.close = CHAIN(ui:Create("GuideButton",popup,name.."_Close","Close"))
   :SetPoint(TOPRIGHT, popup, -5, 5)
   :SetHandler("OnClicked",function(me)

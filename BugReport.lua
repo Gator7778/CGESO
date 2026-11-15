@@ -124,7 +124,7 @@ function BugReport:CreateDumpFrameBasic()
 		:SetPoint(uiTopLeft,frame.title,uiBottomLeft,0,4)
 		:SetWidth(980)
 		:SetCanWrap(true)
-		:SetText("Click the text, press Ctrl+C to copy, then paste into Discord / GitHub / a message to the guide authors. Nothing is sent automatically.")
+		:SetText("Click the text, press Ctrl+C to copy, then paste it into the Community Leveling Guide comments on ESOUI. Nothing is sent automatically.")
 		.__END
 
 	frame.CloseButton = CHAIN(UI:Create("Button",frame,name.."_Close2"))
@@ -180,10 +180,13 @@ function BugReport:GetReport()
 	local guide = CGV.CurrentGuide
 	local t = "" -- text
 
-	t = t .. "NOTES: (type your notes on the next line)\n\n"
+	t = t .. "NOTES: (edit below, then paste into the CGESO comments on ESOUI)\n\n"
 	local notes = CGV.Features and CGV.Features:GetBugNotes() or ""
 	if notes ~= "" then
 		t = t .. notes .. "\n\n"
+	end
+	if CGV.Features and CGV.Features.BuildGuideNoteBlock then
+		t = t .. CGV.Features:BuildGuideNoteBlock()
 	end
 
 	t = t .. ("VERSION: %s\n"):format(CGV.version)

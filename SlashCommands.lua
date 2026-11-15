@@ -16,6 +16,7 @@ local help_string = [[	Options:
 	resume - Resume the bookmarked step.
 	compact - Apply compact viewer preset.
 	quest - Open the step's quest in the journal.
+	note <text> - Save a per-guide note (in bug dumps).
 ]]
 
 if CGV.DEV then
@@ -31,52 +32,65 @@ end
 
 function CGV.SlashCommandHandler(text)
 	local self = CGV
+	text = text or ""
+	local cmd, rest = text:match("^(%S+)%s*(.-)$")
+	cmd = ((cmd or text) or ""):lower()
+	rest = rest or ""
 
-	if text == "debug" then
+	if cmd == "debug" then
 		self.sv.profile.debug = not self.sv.profile.debug
 		self:Print(("Debug is %s"):format(
 			self.sv.profile.debug and "on" or "off"
 		))
-	elseif text == "error" then
+	elseif cmd == "error" then
 		self.sv.profile.ignoreErrors = not self.sv.profile.ignoreErrors
 		self:Print("Please reload for errors to be handled properly.")
-	elseif text == "report" or text == "bug" then
+	elseif cmd == "report" or cmd == "bug" then
 		if not self.BugReport then
 			self:Print("BugReport feature not loaded. Sorry!")
 			return
 		end
 
 		self.BugReport:ShowReport()
-	elseif text == "reset" then
+	elseif cmd == "reset" then
 		self.Viewer:ResetAllViewerSettings()
-	elseif text == "show" then
+	elseif cmd == "show" then
 		self.Viewer:Show_GuideViewer()
-	elseif text == "hide" then
+	elseif cmd == "hide" then
 		self.Viewer:Hide_GuideViewer()
-	elseif text == "config" then
+	elseif cmd == "config" then
 		self.Settings:OpenSettings()
-	elseif text == "creator" then
+	elseif cmd == "creator" then
 		self.sv.char.creator = not self.sv.char.creator
 		self.Creator = self.sv.char.creator
 
 		self:Print(("Creator Mode is now %s"):format(
 			self.Creator and "on" or "off"
 		))
-	elseif text == "dev" or text == "developer" then
+	elseif cmd == "dev" or cmd == "developer" then
 		self.sv.char.developer = not self.sv.char.developer
 		self.DEV = self.sv.char.developer
 
 		self:Print(("Developer Mode is now %s"):format(
 			self.DEV and "on" or "off"
 		))
-	elseif text == "bookmark" then
+	elseif cmd == "bookmark" then
 		if self.Features then self.Features:SetBookmark() end
-	elseif text == "resume" then
+	elseif cmd == "resume" then
 		if self.Features then self.Features:ResumeBookmark() end
-	elseif text == "compact" then
+	elseif cmd == "compact" then
 		if self.Features then self.Features:ApplyCompactPreset() end
-	elseif text == "quest" then
+	elseif cmd == "quest" then
 		if self.Features then self.Features:OpenQuestInJournal() end
+	elseif cmd == "note" then
+		if not self.Features then return end
+		if rest == "" or rest == "edit" then
+			self.Features:PromptGuideNote()
+		elseif rest == "clear" then
+			self.Features:SetGuideNote("")
+		else
+			self.Features:SetGuideNote(rest)
+		end
 	else
 		self:Print(help_string)
 	end

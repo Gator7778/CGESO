@@ -512,7 +512,12 @@ local function RegisterWithLAM()
           name = Opt("opt_bookmarks", "Enable bookmarks"),
           tooltip = Opt("opt_bookmarks_desc", "Allow bookmark / resume markers for the current guide."),
           getFunc = function() return GetNamedOption("bookmarks", true) end,
-          setFunc = function(v) SetNamedOption("bookmarks", v) end,
+          setFunc = function(v)
+            SetNamedOption("bookmarks", v)
+            if CGV.Viewer and CGV.Viewer.Frame and CGV.Viewer.Frame.TitleBar and CGV.Viewer.Frame.TitleBar.bookmark then
+              CGV.Viewer.Frame.TitleBar.bookmark:SetHidden(not v)
+            end
+          end,
           default = true,
           width = "full",
         },
@@ -535,6 +540,15 @@ local function RegisterWithLAM()
           width = "half",
         },
         {
+          type = "button",
+          name = Opt("opt_guidenote", "Edit guide note"),
+          tooltip = Opt("opt_guidenote_desc", "Open a copyable note for the current guide (included in bug dumps)."),
+          func = function()
+            if CGV.Features then CGV.Features:PromptGuideNote() end
+          end,
+          width = "full",
+        },
+        {
           type = "checkbox",
           name = Opt("opt_questlink", "Quest link to journal"),
           tooltip = Opt("opt_questlink_desc", "Ctrl+click a step goal that names a quest to open it in the journal."),
@@ -550,6 +564,18 @@ local function RegisterWithLAM()
           getFunc = function() return GetNamedOption("zone_nudge", true) end,
           setFunc = function(v) SetNamedOption("zone_nudge", v) end,
           default = true,
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_hidecompletedgoals", "Hide completed goals"),
+          tooltip = Opt("opt_hidecompletedgoals_desc", "Hide goals already marked complete in the Guide Viewer."),
+          getFunc = function() return GetNamedOption("hidecompletedgoals", false) end,
+          setFunc = function(v)
+            SetNamedOption("hidecompletedgoals", v)
+            if CGV.Viewer and CGV.Viewer.Update then CGV.Viewer:Update(true) end
+          end,
+          default = false,
           width = "full",
         },
         {
@@ -786,10 +812,28 @@ local function RegisterWithLAM()
         },
         {
           type = "button",
+          name = Opt("opt_cgpos_pack", "Copy MapData pack"),
+          tooltip = Opt("opt_cgpos_pack_desc", "goto + offsets + step template in one dump (also /cgpos pack)."),
+          func = function()
+            if CGV.Features then CGV.Features:CopyMapDataPack() end
+          end,
+          width = "half",
+        },
+        {
+          type = "button",
           name = Opt("opt_cgpos_history", "Show /cgpos history"),
           tooltip = Opt("opt_cgpos_history_desc", "Print recent /cgpos dumps (also /cgpos history)."),
           func = function()
             if CGV.Features then CGV.Features:PrintCgposHistory() end
+          end,
+          width = "half",
+        },
+        {
+          type = "button",
+          name = Opt("opt_poi_list", "List zone wayshrines / doors"),
+          tooltip = Opt("opt_poi_list_desc", "Live POI list for this zone (works when wayshrine Name fails, e.g. Solstice). Also /cgpos poi."),
+          func = function()
+            if CGV.Features then CGV.Features:ListZoneWayshrinesAndDoors() end
           end,
           width = "half",
         },
