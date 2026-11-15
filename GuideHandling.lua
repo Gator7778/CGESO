@@ -939,6 +939,29 @@ function CGV:PromptGuideStyleOrLoad(guide, onLoad)
 	local popup = self.GuideStylePopup
 	if not popup then
 		popup = CGV.Popup:New("Community_GuideStyle_Popup")
+		-- Re-pin to Guide Viewer whenever the queue actually shows this popup.
+		popup.AnchorToGuideViewer = function(me)
+			local viewer = CGV.Frame or (CGV.Viewer and CGV.Viewer.Frame)
+			if not (me and viewer) then return end
+			me:ClearAnchors()
+			me:SetPoint(LEFT, viewer, RIGHT, 8, 0)
+			if me.SetDrawTier and _G.DT_HIGH then
+				me:SetDrawTier(_G.DT_HIGH)
+			end
+			if me.SetDrawLayer and _G.DL_OVERLAY then
+				me:SetDrawLayer(_G.DL_OVERLAY)
+			end
+			if me.SetDrawLevel then
+				me:SetDrawLevel(200)
+			end
+		end
+		local prevOnShow = popup:GetHandler("OnShow")
+		popup:SetHandler("OnShow", function(me, ...)
+			if prevOnShow then prevOnShow(me, ...) end
+			if me.AnchorToGuideViewer then
+				me:AnchorToGuideViewer()
+			end
+		end)
 		self.GuideStylePopup = popup
 	end
 
@@ -984,25 +1007,9 @@ function CGV:PromptGuideStyleOrLoad(guide, onLoad)
 	popup:SetText(orange("Recommended guide:"), orange(zoneName), orange("Full Guide or Main Quests Only?"))
 	popup:SetDimensionConstraints(225, nil, 625, nil)
 
-	-- Sit above the guide selection window: popup bottom → menu top (no overlap).
-	local menu = CGV.Menu and CGV.Menu.Frame
-	if menu then
-		if CGV.GuideMenu and CGV.GuideMenu.Show then
-			CGV.GuideMenu:Show()
-		elseif CGV.Menu.Show then
-			CGV.Menu:Show()
-		end
-		popup:ClearAnchors()
-		popup:SetPoint(BOTTOM, menu, TOP, 0, -4)
-		if popup.SetDrawTier and _G.DT_HIGH then
-			popup:SetDrawTier(_G.DT_HIGH)
-		end
-		if popup.SetDrawLayer and _G.DL_OVERLAY then
-			popup:SetDrawLayer(_G.DL_OVERLAY)
-		end
-		if popup.SetDrawLevel then
-			popup:SetDrawLevel(200)
-		end
+	-- Anchor to Guide Viewer only (not Home menu / not screen center).
+	if popup.AnchorToGuideViewer then
+		popup:AnchorToGuideViewer()
 	end
 
 	CGV.pause = true
