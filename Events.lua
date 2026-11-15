@@ -314,6 +314,8 @@ do
 		"EVENT_QUEST_LIST_UPDATED",
 		"EVENT_ACTION_LAYER_POPPED",
 		"EVENT_ACTION_LAYER_PUSHED",
+		"EVENT_GAME_FOCUS_CHANGED",
+		"EVENT_SCREEN_RESIZED",
 	}
 	for _, name in ipairs(critical) do
 		local code = _G[name]

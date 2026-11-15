@@ -242,7 +242,20 @@ function Menu:CreateBaseMenu()
 		.__END
 
 	self:SetBackdropOpacity()
+	self:RegisterChromeRedraw()
 	self:SetTab(GUIDEMENU_TAB_ID)	-- Set the default tab
+end
+
+-- Known chrome RGB (alpha comes from opacitymain). Always re-apply full SetBackdropColor —
+-- SetBackdropAlpha re-reads GetCenterColor, which ESO can wipe to 0 after alt-tab.
+local MENU_FRAME_RGB = {0, 0, 0}
+local MENU_MAIN_RGB = {.15, .15, .15}
+local MENU_SCROLL_RGB = {.4, .4, .4}
+local MENU_SEARCH_RGB = {.2, .2, .2}
+
+local function SetChromeColor(ctrl, rgb, a)
+	if not (ctrl and ctrl.SetBackdropColor and rgb) then return end
+	ctrl:SetBackdropColor(rgb[1], rgb[2], rgb[3], a)
 end
 
 -- Same as Guide Viewer / popups: fade chrome backdrops only; text and buttons stay readable.
@@ -259,29 +272,75 @@ function Menu:SetBackdropOpacity(a)
 	if frame.SetAlpha then
 		frame:SetAlpha(1)
 	end
-	if frame.SetBackdropAlpha then
-		frame:SetBackdropAlpha(a)
-	end
-	if frame.mainBackdrop and frame.mainBackdrop.SetBackdropAlpha then
-		frame.mainBackdrop:SetBackdropAlpha(a)
-	end
-	if frame.headerAccent and frame.headerAccent.SetBackdropAlpha then
-		frame.headerAccent:SetBackdropAlpha(a)
+
+	-- Full redraw (not SetBackdropAlpha) so wiped CT_BACKDROP colors come back after focus/resize.
+	SetChromeColor(frame, MENU_FRAME_RGB, a)
+	SetChromeColor(frame.mainBackdrop, MENU_MAIN_RGB, a)
+
+	local accent = (CGV.Theme and CGV.Theme.AccentTable and CGV.Theme.AccentTable()) or {HTMLColor("#F55D07ff")}
+	if frame.headerAccent and frame.headerAccent.SetBackdropColor then
+		frame.headerAccent:SetBackdropColor(accent[1], accent[2], accent[3], a)
+		if frame.headerAccent.SetBackdropEdgeColor then
+			frame.headerAccent:SetBackdropEdgeColor(0, 0, 0, 0)
+		end
 	end
 
-	-- Nested Home / Settings scroll tracks
+	-- Nested Home / Settings scroll tracks + search
 	local gm = GuideMenu.Frame
 	if gm then
-		if gm.guideBoxScrollBack and gm.guideBoxScrollBack.SetBackdropAlpha then
-			gm.guideBoxScrollBack:SetBackdropAlpha(a)
-		end
-		if gm.searchBox and gm.searchBox.SetBackdropAlpha then
-			gm.searchBox:SetBackdropAlpha(a)
-		end
+		SetChromeColor(gm.guideBoxScrollBack, MENU_SCROLL_RGB, a)
+		SetChromeColor(gm.searchBox, MENU_SEARCH_RGB, a)
 	end
 	local sm = Settings.Frame
-	if sm and sm.optionTypesScrollBack and sm.optionTypesScrollBack.SetBackdropAlpha then
-		sm.optionTypesScrollBack:SetBackdropAlpha(a)
+	if sm then
+		SetChromeColor(sm.optionTypesScrollBack, MENU_SCROLL_RGB, a)
+	end
+end
+
+-- Re-paint whole Home/Settings chrome after alt-tab / resize (backdrops can go blank).
+function Menu:RefreshChrome()
+	if not self.Frame or self.Frame:IsHidden() then return end
+	self:SetBackdropOpacity()
+	if GuideMenu.Frame and not GuideMenu.Frame:IsHidden() and GuideMenu.RefreshUI then
+		GuideMenu:RefreshUI()
+	end
+	if Settings.Frame and not Settings.Frame:IsHidden() and Settings.RefreshUI then
+		Settings:RefreshUI()
+	end
+end
+
+function Menu:RegisterChromeRedraw()
+	if self._chromeRedrawRegistered then return end
+	self._chromeRedrawRegistered = true
+
+	local EM = _G.EVENT_MANAGER
+	if not EM then return end
+
+	local function redrawSoon()
+		if not Menu.Frame or Menu.Frame:IsHidden() then return end
+		Menu:RefreshChrome()
+		-- One deferred pass — textures sometimes aren't ready on the focus frame.
+		if _G.zo_callLater then
+			_G.zo_callLater(function()
+				Menu:RefreshChrome()
+			end, 50)
+		end
+	end
+
+	local focusEv = _G.EVENT_GAME_FOCUS_CHANGED
+	if type(focusEv) == "number" then
+		EM:RegisterForEvent("CGESO_MenuChromeFocus", focusEv, function(_, hasFocus)
+			if hasFocus then
+				redrawSoon()
+			end
+		end)
+	end
+
+	local resizeEv = _G.EVENT_SCREEN_RESIZED
+	if type(resizeEv) == "number" then
+		EM:RegisterForEvent("CGESO_MenuChromeResize", resizeEv, function()
+			redrawSoon()
+		end)
 	end
 end
 
@@ -1762,8 +1821,9 @@ function Menu:Show()
 		self:CreateBaseMenu()
 	end
 
-	self:SetBackdropOpacity()
+	self:RegisterChromeRedraw()
 	self.Frame:Show()
+	self:RefreshChrome()
 end
 
 function Menu:Hide()

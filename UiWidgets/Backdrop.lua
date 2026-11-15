@@ -55,9 +55,15 @@ end
 function Backdrop:SetBackdropAlpha(alpha)
   if not self.bd then return end
 
-  local r,g,b,a = self:GetBackdropColor()
+  local r,g,b = self:GetBackdropColor()
+  -- After alt-tab ESO can wipe center color to 0/nil; don't lock in a blank backdrop.
+  if type(r) ~= "number" or type(g) ~= "number" or type(b) ~= "number" then
+    r, g, b = 0, 0, 0
+  elseif r == 0 and g == 0 and b == 0 then
+    -- Keep black if that was intentional; callers that need a tint should SetBackdropColor.
+  end
 
-  self.bd:SetCenterColor(r,g,b,alpha)
+  self.bd:SetCenterColor(r, g, b, alpha)
 end
 
 function Backdrop:SetBackdropInsets(l,t,r,b)
