@@ -22,13 +22,15 @@ ESOLL automatically installs the required libraries. If you prefer to install th
 <summary>Date TBD - QoL Features &amp; Dual Settings</summary>
 <ul>
   <li><strong>Rule:</strong> every setting in Home also appears under Esc → Settings → Addons → Community Leveling Guide (LibAddonMenu), same SavedVariables.</li>
-  <li>Stuck-step detector — long time on the same step offers mark done/skip with a note.</li>
-  <li>Bug report dump: guide, step, step text; paste into the CGESO comments on ESOUI.</li>
+  <li>Stuck-step detector — long time on the same step offers mark done/skip with a note (viewer overlay; mouselook stays free).</li>
+  <li>Bug / author dumps: scrollable label window + <strong>Print to Chat</strong> (no EditBox mouse trap); paste into the CGESO comments on ESOUI via your chat-copy addon.</li>
   <li>Bookmark / resume markers (viewer pin + settings); per-guide notes.</li>
   <li>Quest link from a named step into the journal (Ctrl+click).</li>
   <li>Compact viewer preset (steps = 1, smaller text); optional hide completed goals.</li>
   <li>Zone-change soft nudge when not mid-chapter.</li>
+  <li>Suggestion / zone / style / stuck popups: Guide Viewer overlays (not TOPLEVEL dialogs) so mouselook works while they stay up; Alt to click; anchored beside the viewer.</li>
   <li>Authoring: <code>/cgpos history</code>, <code>/cgpos pack</code>, step template, and <code>/cgpos poi</code> wayshrine/door list (Solstice-safe).</li>
+  <li>Guide <code>wayshrine Name</code> matching hardened for zones that omit <code>IsPOIWayshrine</code> (e.g. Solstice Rampart Camp); use place name only — the UI already adds “Wayshrine”.</li>
 </ul>
 </details>
 
