@@ -35,133 +35,160 @@ local function CountLines(text)
 	return n
 end
 
+-- Explicit widths/heights only — never TOPLEFT+TOPRIGHT pairs between
+-- scrollchild <-> child (that caused "Too many anchors processed" cycles
+-- with the old display label + copybox).
 local function RefreshDumpScroll(frame, text)
 	local scroll = frame.scroll
 	local child = frame.scroll.scrollchild
 	local box = frame.copybox
 	if not (scroll and child and box) then return end
 
+	local viewW = scroll:GetWidth()
 	local viewH = scroll:GetHeight()
+	if viewW < 100 then viewW = 1000 end
 	if viewH < 100 then viewH = 600 end
 	local contentH = math.max(viewH, CountLines(text) * LINE_HEIGHT + 24)
+	local contentW = math.max(100, viewW - 20)
+
+	child:ClearAnchors()
+	child:SetAnchor(uiTopLeft, scroll, uiTopLeft, 0, 0)
+	child:SetWidth(contentW)
+	child:SetHeight(contentH)
 
 	box:ClearAnchors()
 	box:SetAnchor(uiTopLeft, child, uiTopLeft, 4, 0)
-	box:SetAnchor(uiTopRight, child, uiTopRight, -4, 0)
+	box:SetWidth(contentW - 8)
 	box:SetHeight(contentH)
 
-	child:SetHeight(contentH)
-
-	-- Tell ZO_ScrollContainer the extents changed so the scrollbar appears.
 	if _G.ZO_Scroll_OnExtentsChanged then
 		_G.ZO_Scroll_OnExtentsChanged(scroll)
-	elseif scroll.scroll and scroll.scroll.UpdateScrollBars then
-		scroll.scroll:UpdateScrollBars()
 	end
 end
 
 function BugReport:CreateDumpFrameBasic()
 	local name = "CGESO_DumpFrameBasic"
 
-	local frame = CHAIN(UI:Create("Frame",guiRoot,name))
-		:SetSize(1024,700)
-		:SetPoint(uiCenter)
-		:Hide()
-		:SetCanDrag(true)
-		.__END
+	-- Tear down a prior instance after /reload of just this file isn't possible,
+	-- but hide + reuse the same names; layout is rebuilt in RefreshDumpScroll.
+	if BugReport.BasicFrame then
+		BugReport.BasicFrame:SetHidden(true)
+	end
 
-	BugReport.BasicFrame = frame
+	local frame = BugReport.BasicFrame
+	if not frame then
+		frame = CHAIN(UI:Create("Frame",guiRoot,name))
+			:SetSize(1024,700)
+			:SetPoint(uiCenter)
+			:Hide()
+			:SetCanDrag(true)
+			.__END
+		BugReport.BasicFrame = frame
+	end
 
-	frame.scroll = CHAIN(WM:CreateControlFromVirtual(name.."_Scroll",frame,"ZO_ScrollContainer"))
-		:SetAnchor(uiTopLeft,frame,uiTopLeft,8,50)
-		:SetAnchor(uiBottomRight,frame,uiBottomRight,-1,-38)
-		.__END
+	if not frame.scroll then
+		frame.scroll = CHAIN(WM:CreateControlFromVirtual(name.."_Scroll",frame,"ZO_ScrollContainer"))
+			:SetAnchor(uiTopLeft,frame,uiTopLeft,8,50)
+			:SetAnchor(uiBottomRight,frame,uiBottomRight,-1,-38)
+			.__END
 
-	frame.scroll.scrollchild = CHAIN(getControl(frame.scroll:GetName().."ScrollChild"))
-		:ClearAnchors()
-		:SetAnchor(uiTopLeft,frame.scroll)
-		:SetAnchor(uiTopRight,frame.scroll)
-		:SetHeight(50)
-		.__END
+		frame.scroll.scrollchild = CHAIN(getControl(frame.scroll:GetName().."ScrollChild"))
+			:ClearAnchors()
+			:SetAnchor(uiTopLeft, frame.scroll, uiTopLeft, 0, 0)
+			:SetWidth(1000)
+			:SetHeight(50)
+			.__END
+	end
 
-	-- Selectable multi-line text lives IN the scroll child so long dumps (POI lists) scroll.
-	frame.copybox = CHAIN(WM:CreateControl(name.."copybox",frame.scroll.scrollchild,ctEditBox))
-		:SetAnchor(uiTopLeft, frame.scroll.scrollchild, uiTopLeft, 4, 0)
-		:SetAnchor(uiTopRight, frame.scroll.scrollchild, uiTopRight, -4, 0)
-		:SetHeight(50)
-		:SetMouseEnabled(true)
-		:SetFont("ZoFontGame")
-		:SetMultiLine(true)
-		:SetMaxInputChars(999999)
-		:SetHandler("OnMouseDown", function(self) self:TakeFocus() end)
-		:SetHandler("OnMouseUp", function(self)
-				-- First click focuses; second / drag can select. Don't force SelectAll every up
-				-- so wheel-scrolling + partial select still work.
-			end)
-		:SetHandler("OnMouseWheel", function(_, delta)
-				-- EditBox eats wheel events; forward them to the scroll bar.
-				local scroll = frame.scroll
-				local bar = scroll and getControl(scroll:GetName() .. "ScrollBar")
-				if bar and bar.GetValue and bar.SetValue then
-					local cur = bar:GetValue() or 0
-					bar:SetValue(math.max(0, cur - delta * LINE_HEIGHT * 3))
-				elseif scroll and _G.ZO_Scroll_ScrollRelative then
-					_G.ZO_Scroll_ScrollRelative(scroll, -delta * LINE_HEIGHT * 3)
-				end
-			end)
-		.__END
+	-- Hide/orphan any leftover display label from older builds (anchor-cycle source).
+	local oldDisplay = getControl(name.."display")
+	if oldDisplay then
+		oldDisplay:ClearAnchors()
+		oldDisplay:SetHidden(true)
+		if oldDisplay.SetParent then
+			oldDisplay:SetParent(frame) -- out of the scroll child
+		end
+	end
+	frame.display = nil
 
-	-- Kept for layout helpers / optional non-edit view (unused while copybox is shown).
-	frame.display = CHAIN(UI:Create("Label",frame.scroll.scrollchild,name.."display"))
-		:SetAnchor(uiTopLeft,frame.scroll.scrollchild)
-		:SetAnchor(uiTopRight,frame.scroll.scrollchild)
-		:SetCanWrap(true)
-		:SetHidden(true)
-		.__END
+	if not frame.copybox then
+		frame.copybox = CHAIN(WM:CreateControl(name.."copybox",frame.scroll.scrollchild,ctEditBox))
+			:SetAnchor(uiTopLeft, frame.scroll.scrollchild, uiTopLeft, 4, 0)
+			:SetWidth(990)
+			:SetHeight(50)
+			:SetMouseEnabled(true)
+			:SetFont("ZoFontGame")
+			:SetMultiLine(true)
+			:SetMaxInputChars(999999)
+			:SetHandler("OnMouseDown", function(self) self:TakeFocus() end)
+			:SetHandler("OnMouseWheel", function(_, delta)
+					local scroll = frame.scroll
+					local bar = scroll and getControl(scroll:GetName() .. "ScrollBar")
+					if bar and bar.GetValue and bar.SetValue then
+						local cur = bar:GetValue() or 0
+						bar:SetValue(math.max(0, cur - delta * LINE_HEIGHT * 3))
+					elseif scroll and _G.ZO_Scroll_ScrollRelative then
+						_G.ZO_Scroll_ScrollRelative(scroll, -delta * LINE_HEIGHT * 3)
+					end
+				end)
+			.__END
+	else
+		-- Ensure copybox is only top-left anchored (no TOPRIGHT cycle).
+		frame.copybox:ClearAnchors()
+		frame.copybox:SetAnchor(uiTopLeft, frame.scroll.scrollchild, uiTopLeft, 4, 0)
+	end
 
-	frame.close = CHAIN(UI:Create("GuideButton",frame,name.."_Close","Close"))
-		:SetPoint(uiTopRight, frame, -5, 5)
-		:SetHandler("OnClicked",function(self)
-				frame:Hide()
-				BugReport.report = ""
-			end)
-		.__END
+	if not frame.close then
+		frame.close = CHAIN(UI:Create("GuideButton",frame,name.."_Close","Close"))
+			:SetPoint(uiTopRight, frame, -5, 5)
+			:SetHandler("OnClicked",function()
+					frame:Hide()
+					BugReport.report = ""
+				end)
+			.__END
+	end
 
-	frame.title = CHAIN(UI:Create("Label",frame,name.."_MainText",14,"bold"))
-		:SetPoint(uiTopLeft,frame,10,10)
-		:SetText("No text")
-		.__END
+	if not frame.title then
+		frame.title = CHAIN(UI:Create("Label",frame,name.."_MainText",14,"bold"))
+			:SetPoint(uiTopLeft,frame,10,10)
+			:SetText("No text")
+			.__END
+	end
 
-	frame.hint = CHAIN(UI:Create("Label",frame,name.."_Hint",12))
-		:SetPoint(uiTopLeft,frame.title,uiBottomLeft,0,4)
-		:SetWidth(980)
-		:SetCanWrap(true)
-		:SetText("Scroll or mouse-wheel to browse. Click the text, Ctrl+C to copy, then paste into the CGESO comments on ESOUI. Nothing is sent automatically.")
-		.__END
+	if not frame.hint then
+		frame.hint = CHAIN(UI:Create("Label",frame,name.."_Hint",12))
+			:SetPoint(uiTopLeft,frame.title,uiBottomLeft,0,4)
+			:SetWidth(980)
+			:SetCanWrap(true)
+			:SetText("Scroll or mouse-wheel to browse. Click the text, Ctrl+C to copy, then paste into the CGESO comments on ESOUI. Nothing is sent automatically.")
+			.__END
+	end
 
-	frame.CloseButton = CHAIN(UI:Create("Button",frame,name.."_Close2"))
-		:SetSize(100,25)
-		:SetText("Close")
-		:SetPoint(uiBottomRight, frame,-5,-5)
-		:SetHandler("OnClicked",function(...)
-				frame:Hide()
-				BugReport.report = ""
-			end)
-		.__END
+	if not frame.CloseButton then
+		frame.CloseButton = CHAIN(UI:Create("Button",frame,name.."_Close2"))
+			:SetSize(100,25)
+			:SetText("Close")
+			:SetPoint(uiBottomRight, frame,-5,-5)
+			:SetHandler("OnClicked",function()
+					frame:Hide()
+					BugReport.report = ""
+				end)
+			.__END
+	end
 end
 
 
 -- Show dump in a selectable edit box so the player can Ctrl+C it.
 -- Nothing is uploaded — ESO addons cannot send mail/HTTP from here.
 function BugReport:ShowDump(text,title)
-	local frame
-
-	if not self.BasicFrame then
+	if not self.BasicFrame or not self.BasicFrame.copybox then
+		self:CreateDumpFrameBasic()
+	else
+		-- Re-assert safe anchors every show (clears any leftover dual-anchor state).
 		self:CreateDumpFrameBasic()
 	end
 
-	frame = self.BasicFrame
-
+	local frame = self.BasicFrame
 	assert(frame,"Could not create a BasicFrame for BugReport")
 
 	text = text or ""
@@ -170,7 +197,6 @@ function BugReport:ShowDump(text,title)
 	frame.copybox:SetHidden(false)
 	frame:Show()
 
-	-- Size after Show so scroll:GetHeight() is valid, then focus for Ctrl+C.
 	RefreshDumpScroll(frame, text)
 	frame.copybox:TakeFocus()
 	frame.copybox:SelectAll()
