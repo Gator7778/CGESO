@@ -944,7 +944,7 @@ function CGV:PromptGuideStyleOrLoad(guide, onLoad)
 			local viewer = CGV.Frame or (CGV.Viewer and CGV.Viewer.Frame)
 			if not (me and viewer) then return end
 			me:ClearAnchors()
-			me:SetPoint(LEFT, viewer, RIGHT, 8, 0)
+			me:SetPoint(_G.LEFT, viewer, _G.RIGHT, 8, 0)
 			if me.SetDrawTier and _G.DT_HIGH then
 				me:SetDrawTier(_G.DT_HIGH)
 			end
