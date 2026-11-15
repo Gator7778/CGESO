@@ -19,6 +19,20 @@ ESOLL automatically installs the required libraries. If you prefer to install th
 # Changelog
 
 <details>
+<summary>Date TBD - QoL Features &amp; Dual Settings</summary>
+<ul>
+  <li><strong>Rule:</strong> every setting in Home also appears under Esc → Settings → Addons → Community Leveling Guide (LibAddonMenu), same SavedVariables.</li>
+  <li>Stuck-step detector — long time on the same step offers mark done/skip with a note.</li>
+  <li>Bug report button attaches guide name, step number, and step text.</li>
+  <li>Bookmark / resume markers for the current guide.</li>
+  <li>Quest link from a named step into the journal.</li>
+  <li>Compact viewer preset (steps = 1, smaller text).</li>
+  <li>Zone-change soft nudge when not mid-chapter.</li>
+  <li>Authoring: <code>/cgpos history</code> and copy step template.</li>
+</ul>
+</details>
+
+<details>
 <summary>11/14/2026 - UI &amp; Guide System Update</summary>
 <ul>
   <li>Esc → Settings → Addons panel with profile create, switch, copy, and delete.</li>
