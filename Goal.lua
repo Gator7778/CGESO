@@ -385,8 +385,9 @@ GOALTYPES['wayshrine'] = 	{ parse = function(self,params,_,_)
 							-- Retry lookup if we never found a POI (0) or timed out.
 							local needSearch = not self.wayshrine_POIIndex
 								or self.wayshrine_POIIndex == 0
-							if needSearch and self._wayshrine_next_try and GetFrameTimeSeconds
-								and _G.GetFrameTimeSeconds() < self._wayshrine_next_try then
+							local now = _G.GetFrameTimeSeconds and _G.GetFrameTimeSeconds()
+							if needSearch and self._wayshrine_next_try and now
+								and now < self._wayshrine_next_try then
 								needSearch = false
 							end
 
