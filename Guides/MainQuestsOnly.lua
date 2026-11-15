@@ -49545,7 +49545,7 @@ step
 goto 83.33,35.19 |q The Deep Tombs of Xul-Haj/Go to Xul-Haj
 step
 goto 82.14,34.12
-'Discover _Mor Naril Camp_ |q The Deep Tombs of Xul-Haj/Go to Xul-Haj
+wayshrine Mor Naril Camp |q The Deep Tombs of Xul-Haj/Go to Xul-Haj
 |tip Manually skip to the next step.
 step
 goto 81.29,31.04 |q The Deep Tombs of Xul-Haj/Go to Xul-Haj
