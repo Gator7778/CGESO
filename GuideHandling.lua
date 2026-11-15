@@ -28,6 +28,83 @@ CGV.CurrentStep	= nil
 CGV.CurrentStepNum = nil
 
 -----------------------------------------
+-- NEXT-GUIDE HELPERS (locals first so SkipStep never calls a nil method)
+-----------------------------------------
+
+-- Header |next, or a guide-path |next on the given/current step's goals.
+local function GetExplicitNextGuideTitle(self, step)
+	step = step or self.CurrentStep
+	if step and step.goals then
+		for i = 1, #step.goals do
+			local goal = step.goals[i]
+			local n = goal and goal.next
+			if type(n) == "string" and n ~= "" then
+				if n:find("/", 1, true) or n:find("\\", 1, true) then
+					return n
+				end
+			end
+		end
+	end
+	local cur = self.CurrentGuide
+	if cur and cur.next ~= nil and tostring(cur.next) ~= "" then
+		return cur.next
+	end
+	return nil
+end
+
+-- Load |next via SetGuide. Never AdvertiseWithPopup. Style "ask" may still prompt Full/MQO.
+local function AdvanceToNextGuide(self, titleOrGuide, step)
+	step = step or 1
+	local guide
+	if type(titleOrGuide) == "table" then
+		guide = titleOrGuide
+	elseif type(titleOrGuide) == "string" then
+		guide = self:GetGuideByTitle(titleOrGuide)
+		if not guide and self.SanitizeGuideTitle then
+			guide = self:GetGuideByTitle(self:SanitizeGuideTitle(titleOrGuide))
+		end
+	end
+	if not guide then
+		if self.Print then
+			self:Print(("|cff4400ERROR!|r Cannot advance to guide '|cffff88%s|r'."):format(tostring(titleOrGuide)))
+		end
+		return false
+	end
+
+	local ignored = (self.db and self.db.char and self.db.char.ignoredguides) or {}
+	if guide.title and ignored[guide.title] then
+		return false
+	end
+
+	self.pause = true
+	local style = (self.GetGuideStylePreference and self:GetGuideStylePreference()) or "ask"
+	local fullGuide, mqoGuide
+	if self.GetGuideStylePair then
+		fullGuide, mqoGuide = self:GetGuideStylePair(guide)
+	end
+	if fullGuide and mqoGuide and style == "ask" and self.PromptGuideStyleOrLoad then
+		self:PromptGuideStyleOrLoad(guide, function(chosen)
+			self:SetGuide(chosen, step)
+		end)
+	else
+		local preferred = guide
+		if self.GetPreferredGuideVariant then
+			preferred = self:GetPreferredGuideVariant(guide) or guide
+		end
+		self:SetGuide(preferred, step)
+	end
+	return true
+end
+
+function CGV:GetExplicitNextGuideTitle(step)
+	return GetExplicitNextGuideTitle(self, step)
+end
+
+function CGV:AdvanceToNextGuide(titleOrGuide, step)
+	return AdvanceToNextGuide(self, titleOrGuide, step)
+end
+
+-----------------------------------------
 -- CURRENT GUIDE MANAGEMENT FUNCTIONS
 -----------------------------------------
 
@@ -86,8 +163,11 @@ function CGV:SkipStep(fast,quiet)
 
 		if guide then
 			-- Step-level |next Title → SetGuide (never suggestion popup).
-			if not self:AdvanceToNextGuide(guide, stepnum or 1) then
-				self:Debug("SkipStep: step |next failed to load %s", tostring(guide))
+			-- Call local AdvanceToNextGuide — never a nil CGV method.
+			if not AdvanceToNextGuide(self, guide, stepnum or 1) then
+				if self.Debug then
+					self:Debug("SkipStep: step |next failed to load %s", tostring(guide))
+				end
 			end
 			return
 		end
@@ -114,14 +194,16 @@ function CGV:SkipStep(fast,quiet)
 		self.fastforward = false
 		-- End of guide: explicit |next (header or last-step goal) → SetGuide.
 		-- Zone suggestion only when there is no |next at all.
-		local nextTitle = self:GetExplicitNextGuideTitle(self.CurrentStep)
+		local nextTitle = GetExplicitNextGuideTitle(self, self.CurrentStep)
 		if nextTitle then
-			if self:AdvanceToNextGuide(nextTitle, 1) then
+			if AdvanceToNextGuide(self, nextTitle, 1) then
 				return
 			end
-			self:Debug("SkipStep: explicit |next '%s' failed; not falling back to suggestion", tostring(nextTitle))
+			if self.Debug then
+				self:Debug("SkipStep: explicit |next '%s' failed; not falling back to suggestion", tostring(nextTitle))
+			end
 			return
-		elseif self:MaybeSuggestNextGuide() then
+		elseif self.MaybeSuggestNextGuide and self:MaybeSuggestNextGuide() then
 			return
 		elseif self.CurrentGuide.steps and #self.CurrentGuide.steps > 1 then
 			if not self.EndGuidePopup then
@@ -416,65 +498,6 @@ function CGV:UnloadUnusedGuides()
 	end
 end
 
--- Header |next, or a guide-path |next on the given/current step's goals.
-function CGV:GetExplicitNextGuideTitle(step)
-	step = step or self.CurrentStep
-	if step and step.goals then
-		for i = 1, #step.goals do
-			local n = step.goals[i] and step.goals[i].next
-			if type(n) == "string" and n ~= "" and (n:find("/", 1, true) or n:find("\\", 1, true)) then
-				return n
-			end
-		end
-	end
-	local cur = self.CurrentGuide
-	if cur and cur.next and tostring(cur.next) ~= "" then
-		return cur.next
-	end
-	return nil
-end
-
--- Load the guide named by |next (header or step goal). Always SetGuide — never AdvertiseWithPopup.
--- Respects Full/MQO preference ("ask" still prompts style once).
--- Returns true if a load or style prompt was started.
-function CGV:AdvanceToNextGuide(titleOrGuide, step)
-	step = step or 1
-	local guide
-	if type(titleOrGuide) == "table" then
-		guide = titleOrGuide
-	elseif type(titleOrGuide) == "string" then
-		guide = self:GetGuideByTitle(titleOrGuide)
-		if not guide then
-			guide = self:GetGuideByTitle(self:SanitizeGuideTitle(titleOrGuide))
-		end
-	end
-	if not guide then
-		self:Print(("|cff4400ERROR!|r Cannot advance to guide '|cffff88%s|r'."):format(tostring(titleOrGuide)))
-		return false
-	end
-
-	local ignored = (self.db.char and self.db.char.ignoredguides) or {}
-	if ignored[guide.title] then
-		self:Debug("AdvanceToNextGuide: '%s' is ignored", tostring(guide.title))
-		return false
-	end
-
-	self.pause = true -- stop auto-skip while we change guides
-	local style = self:GetGuideStylePreference()
-	local fullGuide, mqoGuide = self:GetGuideStylePair(guide)
-	if fullGuide and mqoGuide and style == "ask" then
-		-- Style choice only — still not a zone "suggestion" popup.
-		self:PromptGuideStyleOrLoad(guide, function(chosen)
-			self:SetGuide(chosen, step)
-		end)
-	else
-		local preferred = self:GetPreferredGuideVariant(guide) or guide
-		self:Debug("AdvanceToNextGuide: SetGuide %s step %s", tostring(preferred.title), tostring(step))
-		self:SetGuide(preferred, step)
-	end
-	return true
-end
-
 -- Zone-based suggestion popup only when there is NO explicit |next.
 -- Returns true if a popup was shown.
 function CGV:MaybeSuggestNextGuide()
@@ -483,7 +506,7 @@ function CGV:MaybeSuggestNextGuide()
 	if not (self.Frame and self.Frame:IsShown()) then return false end
 
 	-- Never suggest when this guide/step already declares |next.
-	if self:GetExplicitNextGuideTitle(self.CurrentStep) then
+	if GetExplicitNextGuideTitle(self, self.CurrentStep) then
 		return false
 	end
 
@@ -505,8 +528,11 @@ function CGV:MaybeSuggestNextGuide()
 	self._suggestedNextFor = cur.title
 	self._suggestedNextTitle = best.title
 
-	best:AdvertiseWithPopup()
-	return true
+	if best.AdvertiseWithPopup then
+		best:AdvertiseWithPopup()
+		return true
+	end
+	return false
 end
 
 -- Brand-new characters: tutorial first, then alliance zone order, then chapters/DLC by release date.
