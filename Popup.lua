@@ -416,10 +416,26 @@ function Popup.private:Escape(popup)
   popup.private:Hide(popup)
 end
 
+-- Suggestion / zone popups are TOPLEVEL + keyboard. Closing them can leave free
+-- cursor (mouselook stuck) without trapping movement — restore camera UI mode.
+local function ReleasePopupMouse(popup)
+  if popup and popup.SetKeyboardEnabled then
+    popup:SetKeyboardEnabled(false)
+  end
+  if _G.SetGameCameraUIMode then
+    pcall(function() _G.SetGameCameraUIMode(false) end)
+  end
+end
+
 function Popup.private:Hide(popup)
   popup:Debug("Hiding")
   --Popup:OnHide is still hooked so that we don't have to prehook it like we do Show
   popup:Hide() --simple just hide it. Functioned incase we want to do anything else later.
+  ReleasePopupMouse(popup)
+  -- Hide can re-assert UI mode for one frame on TOPLEVEL.
+  _G.zo_callLater(function()
+    ReleasePopupMouse(popup)
+  end, 0)
 end
 
 --[[
@@ -470,6 +486,7 @@ function Popup.private:Close(popup)
   -- popup.shownFromNC = nil
   CGV.PopupHandler.IsPopupVisible = false --Update this here because  Popup:Hide gets covered by
   CGV.PopupHandler.CurrentPopup = nil
+  ReleasePopupMouse(popup)
   -- CGV:ScheduleTimer(function() CGV.PopupHandler:QueuePop() end,2) --pop the next popup in the queue.
 end
 
