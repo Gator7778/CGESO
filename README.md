@@ -1,6 +1,6 @@
 # CGESO
 
-![](https://imgur.com/817R4SR.png)
+![](https://i.imgur.com/dGaw1uD.jpeg)
 
 A public domain leveling guide originally created by Zygor Guides, later discontinued and open-sourced. Now maintained by snichols7778 with contributions from Hydra9268, the project adds leveling, Lorebook, Skyshard, and Delve guides for new content while keeping it alive for as long as ESO exists.
 
@@ -12,7 +12,7 @@ Install through the excellent add-on manager <a href="https://www.esoll.es/" tar
 
 ### Libraries Required
 
-ESOLL automatically installs the required libraries. If you prefer to install this addon manually, you will need: **LibGPS**, **LibMapPing**, **LibDebugLogger**, and **LibChatMessage**.
+ESOLL automatically installs the required libraries. If you prefer to install this addon manually, you will need: **LibGPS**, **LibMapPing**, **LibDebugLogger**, LibAddonMenu-2.0, and **LibChatMessage**.
 
 ----
 
