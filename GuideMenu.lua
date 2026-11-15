@@ -33,7 +33,8 @@ local FOOTER_HEIGHT = 25
 local LEFT_COLUMN_WIDTH = 250
 local SCROLL_WIDTH = 15
 local GUIDE_IMAGE_WIDTH = 512
-local GUIDE_IMAGE_HEIGHT = 256
+-- Display height for Home banners (DDS is 512×256; stretch slightly taller to fill panel).
+local GUIDE_IMAGE_HEIGHT = 312
 local WELCOME_GUIDE_IMAGE = (CGV.DIR or "CGESO").."/Viewer/Skins/Stealth/cgeso-SOTWC.dds"
 local OPTIONS_LEFT_OFFSET = 15
 local OPTIONS_VERT_OFFSET = 8
@@ -901,7 +902,7 @@ function GuideMenu:RefreshUI()
 		if frame.GuideMeta then
 			CHAIN(frame.GuideMeta):SetText(""):SetHeight(0):SetHidden(true)
 		end
-		local credits = "Imperial City, Craglorn, Southern Elsweyr,  guides authored by |cffaa00snichols7778|r\nSummerset, Murkmire and Elsweyr guides authored by |cffaa00Hydra9268|r\nAdditional support by |cffaa00Sharlikran|r, |cffaa00Krandor1|r\n|c999999Original guide and Addon created by Zygor Guides|r"
+		local credits = "Imperial City, Craglorn, Southern Elsweyr, Western Skyrim, The Reach, Blackwood, Fargrave, The Deadlands, High Isle and Amenos, Galan and Y'ffelon, Apocrypha, Telvanni Peninsula, West Weald, Solstice, Sheogorath guides authored by |cffaa00snichols7778|r\nSummerset, Murkmire and Elsweyr guides authored by |cffaa00Hydra9268|r\nAdditional support by |cffaa00Sharlikran|r, |cffaa00Krandor1|r\n|c999999Original guide and Addon created by Zygor Guides|r"
 		local welcomeImgH = frame._detailImageHeight or GUIDE_IMAGE_HEIGHT
 		CHAIN(frame.GuideImage)
 			:ClearAnchors()
