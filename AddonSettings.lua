@@ -579,6 +579,61 @@ local function RegisterWithLAM()
           width = "full",
         },
         {
+          type = "slider",
+          name = Opt("opt_suggest_snooze_minutes", "Suggestion snooze (minutes)"),
+          tooltip = Opt("opt_suggest_snooze_minutes_desc", "How long Not now hides a guide suggestion."),
+          min = 5, max = 120, step = 5,
+          getFunc = function() return GetNamedOption("suggest_snooze_minutes", 30) end,
+          setFunc = function(v) SetNamedOption("suggest_snooze_minutes", v) end,
+          default = 30,
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_wayshrine_nearby", "Nearby wayshrine assist"),
+          tooltip = Opt("opt_wayshrine_nearby_desc", "Complete wayshrine steps when standing on the matching shrine."),
+          getFunc = function() return GetNamedOption("wayshrine_nearby", true) end,
+          setFunc = function(v) SetNamedOption("wayshrine_nearby", v) end,
+          default = true,
+          width = "full",
+        },
+        {
+          type = "checkbox",
+          name = Opt("opt_endguide_toast", "End-of-guide toast"),
+          tooltip = Opt("opt_endguide_toast_desc", "Chat line when |next auto-loads the next guide."),
+          getFunc = function() return GetNamedOption("endguide_toast", true) end,
+          setFunc = function(v) SetNamedOption("endguide_toast", v) end,
+          default = true,
+          width = "full",
+        },
+        {
+          type = "button",
+          name = Opt("opt_undo_skip", "Undo last skip"),
+          tooltip = Opt("opt_undo_skip_desc", "Restore the step before the last skip. Also /cgv undo."),
+          func = function()
+            if CGV.Features then CGV.Features:UndoLastSkip() end
+          end,
+          width = "half",
+        },
+        {
+          type = "button",
+          name = Opt("opt_copy_step", "Copy current step"),
+          tooltip = Opt("opt_copy_step_desc", "Dump the current step for authoring (Print to Chat)."),
+          func = function()
+            if CGV.Features then CGV.Features:CopyCurrentStep() end
+          end,
+          width = "half",
+        },
+        {
+          type = "button",
+          name = Opt("opt_gallery_checklist", "ESOUI gallery checklist"),
+          tooltip = Opt("opt_gallery_checklist_desc", "799×498 stretch-fill PNG rules. Also /cgv gallery."),
+          func = function()
+            if CGV.Features then CGV.Features:ShowGalleryChecklist() end
+          end,
+          width = "full",
+        },
+        {
           type = "button",
           name = Opt("opt_compact_preset", "Apply compact viewer"),
           tooltip = Opt("opt_compact_preset_desc", "Steps shown = 1, smaller primary/secondary text."),
@@ -799,6 +854,15 @@ local function RegisterWithLAM()
         {
           type = "header",
           name = Opt("opt_authoring", "Authoring"),
+          width = "full",
+        },
+        {
+          type = "button",
+          name = Opt("opt_find_step", "Find in current guide"),
+          tooltip = Opt("opt_find_step_desc", "Use /cgv find <text>, then /cgv step N."),
+          func = function()
+            d("|cfd5b02CGESO:|r type |cffffff/cgv find <text>|r then |cffffff/cgv step N|r to jump.")
+          end,
           width = "full",
         },
         {

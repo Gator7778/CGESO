@@ -15,6 +15,7 @@ local IsPOIWayshrine = _G.IsPOIWayshrine
 local GetPOIInfo = _G.GetPOIInfo
 local zo_plainstrfind = _G.zo_plainstrfind
 local GetPOIMapInfo = _G.GetPOIMapInfo
+local GetMapPlayerPosition = _G.GetMapPlayerPosition
 local MAP_PIN_TYPE_POI_COMPLETE = _G.MAP_PIN_TYPE_POI_COMPLETE
 local GetLoreBookInfo = _G.GetLoreBookInfo
 local GetAchievementInfo = _G.GetAchievementInfo
@@ -469,13 +470,25 @@ GOALTYPES['wayshrine'] = 	{ parse = function(self,params,_,_)
 								return false, false
 							end
 
-							local _,_,typ,_ = GetPOIMapInfo( self.wayshrine_zoneid, self.wayshrine_POIIndex, true ) --true=truthful call! don't be fooled by our own Pointer.lua and its foglight!
+							local poiX,poiY,typ,_ = GetPOIMapInfo( self.wayshrine_zoneid, self.wayshrine_POIIndex, true ) --true=truthful call! don't be fooled by our own Pointer.lua and its foglight!
 
 							if typ == MAP_PIN_TYPE_POI_COMPLETE then
 								return true,true
-							else
-								return false,self.wayshrine_POIIndex > 0
 							end
+
+							-- Nearby assist: standing on the matching shrine completes even if pin lag.
+							local nearOn = not (CGV.db and CGV.db.profile and CGV.db.profile.wayshrine_nearby == false)
+							if nearOn and poiX and poiY and GetMapPlayerPosition then
+								local px, py = GetMapPlayerPosition("player")
+								if px and py then
+									local dx, dy = px - poiX, py - poiY
+									if (dx * dx + dy * dy) <= (0.018 * 0.018) then
+										return true, true
+									end
+								end
+							end
+
+							return false,self.wayshrine_POIIndex > 0
 						end,
 						}
 

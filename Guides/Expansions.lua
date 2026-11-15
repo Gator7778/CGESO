@@ -54826,7 +54826,7 @@ talk Prince Azah |q The Stirk Fellowship |future
 |tip Manually skip to the next step.
 step
 goto u48_overland_base 53.59,55.01
-'Discover _Rampart Camp_ Wayshrine |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+wayshrine Rampart Camp |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 |tip Manually skip to the next step.
 step
 goto u48_overland_base 50.38,55.50 |q Ghosthunters |future
@@ -54847,7 +54847,7 @@ step
 goto 49.77,60.32 |q Ghosthunters |future
 step
 goto 43.25,63.87
-'Discover _Corelanya Manor_ |q Ghosthunters |future
+wayshrine Corelanya Manor |q Ghosthunters |future
 |tip Manually skip to the next step.
 step
 goto 48.99,60.91
@@ -55077,7 +55077,7 @@ step
 goto 44.25,66.92 |q Party Pains |future
 step
 goto 41.91,72.95
-'Discover _Vale of Revelry_ |q Party Pains |future
+wayshrine Vale of Revelry |q Party Pains |future
 |tip Manually skip to the next step.
 step
 goto 45.58,72.62 |q Party Pains |future
@@ -55139,7 +55139,7 @@ talk High Priest Caroril
 turnin Party Pains
 step
 goto 52.45,69.22
-'Discover _Shell-Tide Village_ |q Tides of the Heart |future
+wayshrine Shell-Tide Village |q Tides of the Heart |future
 |tip Manually skip to the next step.
 step
 goto 52.79,69.13
@@ -55606,7 +55606,7 @@ step
 goto 36.59,62.11 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 step
 goto 38.16,55.27
-'Discover _Western Bay_ Wayshrine |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
+wayshrine Western Bay |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 |tip Manually skip to the next step.
 step
 goto 43.59,54.09 |q Honor Bound |future
@@ -55787,7 +55787,7 @@ talk Ysmaair
 accept The Stubbornness of Nords
 step
 goto 67.78,33.53
-'Discover _Shor's Stand_ |q The Stubbornness of Nords/Talk to Britt the Bold |future
+wayshrine Shor's Stand |q The Stubbornness of Nords/Talk to Britt the Bold |future
 |tip Manually skip to the next step.
 step
 goto 71.84,41.45 |q The Stubbornness of Nords/Talk to Britt the Bold |future
@@ -56322,7 +56322,7 @@ step
 goto 62.03,44.00 |q The Regent of Sunport/Go to Vinutilmo Palace
 step
 goto 58.04,50.16
-'Discover _Sunport_ Wayshrine |q The Regent of Sunport/Go to Vinutilmo Palace
+wayshrine Sunport |q The Regent of Sunport/Go to Vinutilmo Palace
 |tip Manually skip to the next step.
 step
 goto 64.50,57.43
@@ -57102,7 +57102,7 @@ goto 58.87,55.91
 talk Skordo the Knife |q The Worm Turns/Talk to Skordo the Knife |future
 step
 goto 61.89,55.28
-'Discover _Grand Juncture Pass_ Wayshrine |q The Worm Turns/Talk to Razum-dar |future
+wayshrine Grand Juncture Pass |q The Worm Turns/Talk to Razum-dar |future
 |tip Manually skip to the next step.
 step
 goto 61.59,55.70
@@ -57240,7 +57240,7 @@ goto 87.05,33.14
 step
 goto u48_overland_base 71.58,54.40
 |tip Drop down carefully.
-'Discover _Gristmung Hold Camp_ Wayshrine |q The Worm Turns/Rejoin Your Allies
+wayshrine Gristmung Hold Camp |q The Worm Turns/Rejoin Your Allies
 |tip Manually skip to the next step.
 step
 goto 71.23,53.47
@@ -57293,7 +57293,7 @@ goto 80.91,50.41
 |tip Manually skip to the next step.
 step
 goto 78.79,54.11
-'Discover _Xor-Hist_ Wayshrine |q Hunt for the Great Mage/Go to the Kaz-Neesak Mine
+wayshrine Xor-Hist |q Hunt for the Great Mage/Go to the Kaz-Neesak Mine
 |tip Manually skip to the next step.
 step
 goto 79.61,55.07
@@ -57636,7 +57636,7 @@ step
 goto 72.74,65.02 |q Hunt for the Great Mage/Find the Other Soul Flayer Harvest Site
 step
 goto 67.32,65.42
-'Discover _Stone Cove_ Wayshrine|q Hunt for the Great Mage/Find the Other Soul Flayer Harvest Site
+wayshrine Stone Cove |q Hunt for the Great Mage/Find the Other Soul Flayer Harvest Site
 |tip Manually skip to the next step.
 step
 goto 66.65,63.96 |q Hunt for the Great Mage/Find the Other Soul Flayer Harvest Site
@@ -57742,7 +57742,7 @@ goto 65.38,41.93
 |tip Manually skip to the next step.
 step
 goto 60.91,40.53
-'Discover _Caterwaul Cove_ Wayshrine |q The Deep Tombs of Xul-Haj/Go to Jeetra's Village
+wayshrine Caterwaul Cove |q The Deep Tombs of Xul-Haj/Go to Jeetra's Village
 |tip Manually skip to the next step.
 step
 goto 60.91,40.53

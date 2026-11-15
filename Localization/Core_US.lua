@@ -176,6 +176,7 @@ GuideViewer("Main", "enUS", function() local f = {
 			-- STATIC POPUPS
 			['static_accept'] = "Accept",
 			['static_decline'] = "Decline",
+			['static_notnow'] = "Not now",
 			['static_cancel'] = "Cancel",
 
 			['static_options'] = "Do you want to reset all settings to their defaults,or only settings on this page?",
@@ -304,6 +305,20 @@ GuideViewer("Option", "enUS", function() local f = {
 			["opt_guidenote_desc"] = "Open a copyable note for the current guide. Included in bug dumps. Save with /cgv note <text>.",
 			["opt_hidecompletedgoals"] = "Hide completed goals",
 			["opt_hidecompletedgoals_desc"] = "Hide goals already marked complete in the Guide Viewer.",
+			["opt_suggest_snooze_minutes"] = "Suggestion snooze (minutes)",
+			["opt_suggest_snooze_minutes_desc"] = "How long “Not now” hides a guide suggestion before it can appear again.",
+			["opt_wayshrine_nearby"] = "Nearby wayshrine assist",
+			["opt_wayshrine_nearby_desc"] = "Mark a wayshrine step complete when you stand on the matching shrine (helps when pin APIs lag).",
+			["opt_endguide_toast"] = "End-of-guide toast",
+			["opt_endguide_toast_desc"] = "Print a quiet “Guide complete — next: …” chat line when |next auto-loads the next guide.",
+			["opt_undo_skip"] = "Undo last skip",
+			["opt_undo_skip_desc"] = "Restore the step from before the last skip / stuck-step Accept. Also /cgv undo.",
+			["opt_find_step"] = "Find in current guide",
+			["opt_find_step_desc"] = "Search step/quest text in the loaded guide. Use /cgv find <text>, then /cgv step N.",
+			["opt_copy_step"] = "Copy current step",
+			["opt_copy_step_desc"] = "Dump the current step for authoring (Print to Chat). Also /cgv copystep.",
+			["opt_gallery_checklist"] = "ESOUI gallery checklist",
+			["opt_gallery_checklist_desc"] = "Show 799×498 stretch-fill PNG export rules. Also /cgv gallery.",
 
 			["opt_guide_search_placeholder"] = "Search zone, guide, or quest...",
 			["opt_guide_search_results"] = "Search results",

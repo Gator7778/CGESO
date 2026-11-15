@@ -519,6 +519,46 @@ function SavedVars:InitializeOptions()
         end,
         _default = false,
       })
+    AddOption("suggest_snooze_minutes",{
+        type = "slider",
+        min = 5, max = 120, step = 5,
+        _default = 30,
+      })
+    AddOption("wayshrine_nearby",{
+        type = "toggle",
+        _default = true,
+      })
+    AddOption("endguide_toast",{
+        type = "toggle",
+        _default = true,
+      })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
+        name = O["opt_undo_skip"] or "Undo last skip",
+        desc = O["opt_undo_skip_desc"] or "Restore the step before the last skip. Also /cgv undo.",
+        func = function()
+          if CGV.Features then CGV.Features:UndoLastSkip() end
+        end,
+      })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
+        name = O["opt_copy_step"] or "Copy current step",
+        desc = O["opt_copy_step_desc"] or "Dump the current step for authoring (Print to Chat).",
+        func = function()
+          if CGV.Features then CGV.Features:CopyCurrentStep() end
+        end,
+      })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
+        name = O["opt_gallery_checklist"] or "ESOUI gallery checklist",
+        desc = O["opt_gallery_checklist_desc"] or "799×498 stretch-fill PNG rules. Also /cgv gallery.",
+        func = function()
+          if CGV.Features then CGV.Features:ShowGalleryChecklist() end
+        end,
+      })
     AddOption(nil,{
         type = "execute",
         width = 150,
@@ -684,6 +724,15 @@ function SavedVars:InitializeOptions()
     AddOption(nil,{
         type="header",
         name=O["opt_authoring"] or "Authoring",
+      })
+    AddOption(nil,{
+        type = "execute",
+        width = 150,
+        name = O["opt_find_step"] or "Find in current guide",
+        desc = O["opt_find_step_desc"] or "Use /cgv find <text>, then /cgv step N. Prints matches to chat/dump.",
+        func = function()
+          d("|cfd5b02CGESO:|r type |cffffff/cgv find <text>|r then |cffffff/cgv step N|r to jump.")
+        end,
       })
     AddOption(nil,{
         type = "execute",

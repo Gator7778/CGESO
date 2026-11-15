@@ -17,6 +17,11 @@ local help_string = [[	Options:
 	compact - Apply compact viewer preset.
 	quest - Open the step's quest in the journal.
 	note <text> - Save a per-guide note (in bug dumps).
+	undo - Undo last skip / mark done.
+	find <text> - Search steps in the current guide.
+	step <n> - Jump to step number in the current guide.
+	copystep - Dump the current step for authoring (Print to Chat).
+	gallery - ESOUI gallery export checklist (799×498).
 ]]
 
 if CGV.DEV then
@@ -91,6 +96,16 @@ function CGV.SlashCommandHandler(text)
 		else
 			self.Features:SetGuideNote(rest)
 		end
+	elseif cmd == "undo" then
+		if self.Features then self.Features:UndoLastSkip() end
+	elseif cmd == "find" or cmd == "search" then
+		if self.Features then self.Features:SearchCurrentGuide(rest) end
+	elseif cmd == "step" then
+		if self.Features then self.Features:JumpToStepNum(rest) end
+	elseif cmd == "copystep" or cmd == "copy" then
+		if self.Features then self.Features:CopyCurrentStep() end
+	elseif cmd == "gallery" then
+		if self.Features then self.Features:ShowGalleryChecklist() end
 	else
 		self:Print(help_string)
 	end

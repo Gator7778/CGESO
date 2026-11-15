@@ -82,8 +82,21 @@ local function AdvanceToNextGuide(self, titleOrGuide, step)
 	if self.GetGuideStylePair then
 		fullGuide, mqoGuide = self:GetGuideStylePair(guide)
 	end
+
+	local function toastNext(chosen)
+		local p = self.db and self.db.profile
+		if p and p.endguide_toast == false then return end
+		local name = (chosen and (chosen.title_short or chosen.title)) or tostring(titleOrGuide)
+		if self.Print then
+			self:Print(("|cfd5b02Guide complete — next:|r %s"):format(name))
+		else
+			d(("|cfd5b02Guide complete — next:|r %s"):format(name))
+		end
+	end
+
 	if fullGuide and mqoGuide and style == "ask" and self.PromptGuideStyleOrLoad then
 		self:PromptGuideStyleOrLoad(guide, function(chosen)
+			toastNext(chosen)
 			self:SetGuide(chosen, step)
 		end)
 	else
@@ -91,6 +104,7 @@ local function AdvanceToNextGuide(self, titleOrGuide, step)
 		if self.GetPreferredGuideVariant then
 			preferred = self:GetPreferredGuideVariant(guide) or guide
 		end
+		toastNext(preferred)
 		self:SetGuide(preferred, step)
 	end
 	return true
@@ -518,6 +532,10 @@ function CGV:MaybeSuggestNextGuide()
 	local ignored = (self.db.char and self.db.char.ignoredguides) or {}
 	local best = self:GetBestSuggestedGuide()
 	if not best or best.title == cur.title or ignored[best.title] then
+		return false
+	end
+	if self.Features and self.Features.IsSuggestionSnoozed
+		and self.Features:IsSuggestionSnoozed(best.title) then
 		return false
 	end
 

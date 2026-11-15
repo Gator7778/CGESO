@@ -20,6 +20,7 @@ ESOLL automatically installs the required libraries. If you prefer to install th
 
 <details>
 <summary>Date TBD - QoL Features &amp; Dual Settings</summary>
+<p><strong>Summary:</strong> Dual Home/LAM settings; stuck-step, bookmarks, notes, quest-link, compact viewer, zone nudge, authoring dumps; Print-to-Chat dumps (no mouse trap); suggestion overlays that keep mouselook; Solstice wayshrine greening; then a second pack — Full Solstice <code>wayshrine</code> lines, Not now snooze, undo skip, in-guide find, copy step, nearby shrine assist, end-guide toast, ESOUI gallery checklist.</p>
 <ul>
   <li><strong>Rule:</strong> every setting in Home also appears under Esc → Settings → Addons → Community Leveling Guide (LibAddonMenu), same SavedVariables.</li>
   <li>Stuck-step detector — long time on the same step offers mark done/skip with a note (viewer overlay; mouselook stays free).</li>
@@ -31,6 +32,14 @@ ESOLL automatically installs the required libraries. If you prefer to install th
   <li>Suggestion / zone / style / stuck popups: Guide Viewer overlays (not TOPLEVEL dialogs) so mouselook works while they stay up; Alt to click; anchored beside the viewer.</li>
   <li>Authoring: <code>/cgpos history</code>, <code>/cgpos pack</code>, step template, and <code>/cgpos poi</code> wayshrine/door list (Solstice-safe).</li>
   <li>Guide <code>wayshrine Name</code> matching hardened for zones that omit <code>IsPOIWayshrine</code> (e.g. Solstice Rampart Camp); use place name only — the UI already adds “Wayshrine”.</li>
+  <li>Full Solstice leveling guide: Discover tip lines converted to <code>wayshrine Place</code> (same greening as MQO).</li>
+  <li>Suggestion <strong>Not now</strong> — snoozes for N minutes (default 30); Close (X) still ignores forever.</li>
+  <li>Undo last skip / stuck Accept — Home/LAM button and <code>/cgv undo</code>.</li>
+  <li>In-guide search — <code>/cgv find &lt;text&gt;</code> then <code>/cgv step N</code>.</li>
+  <li>Copy current step for authoring — Home/LAM and <code>/cgv copystep</code> (Print to Chat).</li>
+  <li>Nearby wayshrine assist — standing on the matching shrine completes the step if pin APIs lag.</li>
+  <li>End-of-guide toast — quiet chat line when <code>|next</code> auto-loads the next guide.</li>
+  <li>ESOUI gallery checklist — Home/LAM and <code>/cgv gallery</code> (799×498 stretch-fill PNG).</li>
 </ul>
 </details>
 

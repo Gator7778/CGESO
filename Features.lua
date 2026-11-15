@@ -480,6 +480,7 @@ function Features:MaybeZoneNudge()
 
 	local ignored = (CGV.db and CGV.db.char and CGV.db.char.ignoredguides) or {}
 	if ignored[best.title] then return end
+	if self.IsSuggestionSnoozed and self:IsSuggestionSnoozed(best.title) then return end
 
 	self._lastNudgeZone = zoneLower
 	self._nudgeCooldownUntil = GetFrameTimeSeconds() + 120
@@ -497,8 +498,15 @@ function Features:ShowZoneNudgePopup(guide, zone)
 		popup = CGV.Popup:New("CGESO_ZoneNudge_Overlay",nil,true)
 		popup:EnableGuideViewerAnchor()
 		popup.OnAccept = function(me)
+			me._suggestHandled = true
 			if me.guide then
 				CGV:SetGuide(CGV.GetPreferredGuideVariant and CGV:GetPreferredGuideVariant(me.guide) or me.guide)
+			end
+		end
+		popup.OnDecline = function(me)
+			me._suggestHandled = true
+			if me.guide and me.guide.title then
+				Features:SnoozeSuggestion(me.guide.title)
 			end
 		end
 		self.ZoneNudgePopup = popup
@@ -506,10 +514,15 @@ function Features:ShowZoneNudgePopup(guide, zone)
 		popup:EnableGuideViewerAnchor()
 	end
 	popup.guide = guide
+	popup._suggestHandled = nil
+	if popup.declinebutton then
+		popup.declinebutton:SetText(CGV.L and CGV.L['static_notnow'] or "Not now")
+		if popup.declinebutton.ResizeToPerfect then popup.declinebutton:ResizeToPerfect() end
+	end
 	popup:SetText(
 		"You're in a different zone.",
 		guide.title_short or guide.title or "?",
-		("Load the %s guide?\n(Decline keeps your current guide.)"):format(zone or "this zone")
+		("Load the %s guide?\nNot now = snooze. Close keeps your current guide."):format(zone or "this zone")
 	)
 	popup:Show()
 end
@@ -733,6 +746,201 @@ function Features:FormatCgposDump(kind)
 end
 
 -----------------------------------------
+-- SUGGESTION SNOOZE ("Not now")
+-----------------------------------------
+
+Features.suggestionSnooze = Features.suggestionSnooze or {}
+
+function Features:SnoozeSuggestion(title, seconds)
+	if not title then return end
+	seconds = seconds or (OptNum("suggest_snooze_minutes", 30) * 60)
+	if seconds < 60 then seconds = 60 end
+	self.suggestionSnooze = self.suggestionSnooze or {}
+	self.suggestionSnooze[title] = GetFrameTimeSeconds() + seconds
+	d(("|cfd5b02CGESO:|r snoozed suggestion for %d min — %s"):format(
+		math.floor(seconds / 60 + 0.5), tostring(title)))
+end
+
+function Features:IsSuggestionSnoozed(title)
+	if not title then return false end
+	local untilT = self.suggestionSnooze and self.suggestionSnooze[title]
+	if not untilT then return false end
+	if GetFrameTimeSeconds() >= untilT then
+		self.suggestionSnooze[title] = nil
+		return false
+	end
+	return true
+end
+
+-----------------------------------------
+-- UNDO LAST SKIP / MARK DONE
+-----------------------------------------
+
+function Features:RecordUndoPoint()
+	local guide = CGV.CurrentGuide
+	local step = CGV.CurrentStep
+	if not guide or not step then return end
+	self.undoPoint = {
+		title = guide.title,
+		step = step.num,
+	}
+end
+
+function Features:UndoLastSkip()
+	local u = self.undoPoint
+	if not u or not u.title or not u.step then
+		d("|cfd5b02CGESO:|r nothing to undo.")
+		return
+	end
+	self.undoPoint = nil
+	if CGV.SetGuide then
+		CGV:SetGuide(u.title, u.step)
+		d(("|cfd5b02CGESO:|r restored step %s"):format(tostring(u.step)))
+	end
+end
+
+-----------------------------------------
+-- IN-GUIDE STEP SEARCH
+-----------------------------------------
+
+function Features:SearchCurrentGuide(query)
+	query = tostring(query or ""):match("^%s*(.-)%s*$") or ""
+	if query == "" then
+		d("|cfd5b02/cgv find <text>|r — search the current guide.")
+		return
+	end
+	local guide = CGV.CurrentGuide
+	if not guide or not guide.steps then
+		d("|cfd5b02CGESO:|r no current guide.")
+		return
+	end
+	local q = query:lower()
+	local hits = {}
+	for i, step in ipairs(guide.steps) do
+		local blob = ""
+		if step.goals then
+			for _, goal in ipairs(step.goals) do
+				if goal then
+					if goal.GetText then blob = blob .. " " .. StripColors(goal:GetText()) end
+					if goal.quest then blob = blob .. " " .. tostring(goal.quest) end
+					if goal.wayshrine then blob = blob .. " " .. tostring(goal.wayshrine) end
+					if goal.action then blob = blob .. " " .. tostring(goal.action) end
+				end
+			end
+		end
+		if blob:lower():find(q, 1, true) then
+			local preview = StripColors(blob):gsub("%s+", " "):match("^%s*(.-)%s*$") or ""
+			if #preview > 90 then preview = preview:sub(1, 87) .. "…" end
+			tinsert(hits, { num = i, preview = preview })
+		end
+	end
+	if #hits == 0 then
+		d(("|cfd5b02CGESO find:|r no steps matching \"%s\""):format(query))
+		return
+	end
+	local lines = { ("-- Find \"%s\" in %s (%d hits)"):format(
+		query, guide.title_short or guide.title or "?", #hits) }
+	d(("|cfd5b02CGESO find:|r %d hit(s) — /cgv step N to jump"):format(#hits))
+	for _, h in ipairs(hits) do
+		d(("  |cffffff%d|r  %s"):format(h.num, h.preview))
+		tinsert(lines, ("%d  %s"):format(h.num, h.preview))
+		if #lines > 60 then
+			tinsert(lines, "…truncated")
+			break
+		end
+	end
+	if CGV.BugReport and CGV.BugReport.ShowDump then
+		CGV.BugReport:ShowDump(table.concat(lines, "\n"), "Guide find (Print to Chat)")
+	end
+end
+
+function Features:JumpToStepNum(num)
+	num = tonumber(num)
+	if not num then
+		d("|cfd5b02/cgv step <number>|r")
+		return
+	end
+	local guide = CGV.CurrentGuide
+	if not guide or not guide.steps or not guide.steps[num] then
+		d("|cfd5b02CGESO:|r invalid step.")
+		return
+	end
+	self:RecordUndoPoint()
+	if CGV.FocusStep then
+		CGV:FocusStep(guide.steps[num])
+	elseif CGV.SetGuide then
+		CGV:SetGuide(guide, num)
+	end
+end
+
+-----------------------------------------
+-- COPY CURRENT STEP (AUTHORING)
+-----------------------------------------
+
+function Features:CopyCurrentStep()
+	local guide = CGV.CurrentGuide
+	local step = CGV.CurrentStep
+	if not step then
+		d("|cfd5b02CGESO:|r no current step.")
+		return
+	end
+	local lines = {
+		("-- Current step %s — %s"):format(
+			tostring(step.num),
+			guide and (guide.title_short or guide.title) or "?"),
+		"step",
+	}
+	if step.goals then
+		for _, goal in ipairs(step.goals) do
+			if goal then
+				local action = goal.action or ""
+				local text = goal.GetText and StripColors(goal:GetText()) or ""
+				if action == "goto" and goal.map and goal.x and goal.y then
+					tinsert(lines, ("goto %s %.2f,%.2f"):format(
+						goal.map, goal.x * 100, goal.y * 100))
+				elseif action == "wayshrine" and goal.wayshrine then
+					tinsert(lines, ("wayshrine %s"):format(goal.wayshrine))
+				elseif action ~= "" and text ~= "" then
+					tinsert(lines, ("-- %s: %s"):format(action, text))
+				elseif text ~= "" then
+					tinsert(lines, ("-- %s"):format(text))
+				end
+			end
+		end
+	end
+	local text = table.concat(lines, "\n")
+	if CGV.BugReport and CGV.BugReport.ShowDump then
+		CGV.BugReport:ShowDump(text, "Current step (Print to Chat)")
+	else
+		d(text)
+	end
+	return text
+end
+
+-----------------------------------------
+-- ESOUI GALLERY CHECKLIST
+-----------------------------------------
+
+function Features:ShowGalleryChecklist()
+	local text = table.concat({
+		"ESOUI gallery export checklist",
+		"",
+		"1. Capture full in-game screenshots (not cropped UI-only).",
+		"2. Export as PNG, stretch-fill to exactly 799×498.",
+		"3. No side bars, letterboxing, or black pillars.",
+		"4. Prefer Guide Viewer, Home, Settings, waypoint, and zone shots.",
+		"5. Upload on ESOUI when bumping the addon version.",
+		"",
+		"Preference: stretch-fill 799×498 PNG — no side bars.",
+	}, "\n")
+	if CGV.BugReport and CGV.BugReport.ShowDump then
+		CGV.BugReport:ShowDump(text, "ESOUI gallery checklist")
+	end
+	d("|cfd5b02CGESO:|r ESOUI gallery — 799×498 stretch-fill PNG, no side bars.")
+	return text
+end
+
+-----------------------------------------
 -- TICK / EVENTS / SLASH
 -----------------------------------------
 
@@ -780,6 +988,15 @@ tinsert(CGV.startups, function()
 			local r1, r2, r3 = orig(self, num, quiet)
 			Features:NotifyStepFocused()
 			return r1, r2, r3
+		end
+	end
+
+	-- Undo point before skip / mark done.
+	if CGV.SkipStep then
+		local origSkip = CGV.SkipStep
+		CGV.SkipStep = function(self, ...)
+			Features:RecordUndoPoint()
+			return origSkip(self, ...)
 		end
 	end
 
