@@ -937,8 +937,13 @@ function CGV:PromptGuideStyleOrLoad(guide, onLoad)
 
 	-- Preference is "ask": show Full vs Main Quests Only (plain text; brand orange).
 	local popup = self.GuideStylePopup
+	if popup and popup.IsModalTopLevel and popup:IsModalTopLevel() then
+		popup:Hide()
+		self.GuideStylePopup = nil
+		popup = nil
+	end
 	if not popup then
-		popup = CGV.Popup:New("Community_GuideStyle_Popup")
+		popup = CGV.Popup:New("Community_GuideStyle_Overlay",nil,true)
 		popup:EnableGuideViewerAnchor()
 		self.GuideStylePopup = popup
 	elseif popup.EnableGuideViewerAnchor then

@@ -480,8 +480,13 @@ end
 
 function Features:ShowZoneNudgePopup(guide, zone)
 	local popup = self.ZoneNudgePopup
+	if popup and popup.IsModalTopLevel and popup:IsModalTopLevel() then
+		popup:Hide()
+		self.ZoneNudgePopup = nil
+		popup = nil
+	end
 	if not popup then
-		popup = CGV.Popup:New("CGESO_ZoneNudge_Popup")
+		popup = CGV.Popup:New("CGESO_ZoneNudge_Overlay",nil,true)
 		popup:EnableGuideViewerAnchor()
 		popup.OnAccept = function(me)
 			if me.guide then

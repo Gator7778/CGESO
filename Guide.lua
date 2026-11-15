@@ -433,9 +433,14 @@ function Guide:AdvertiseWithPopup(nodelay)
 	local target = CGV:GetPreferredGuideVariant(self) or self
 
 	local popup = CGV.AdvertisePopup
+	-- Old TOPLEVEL suggestions trapped free cursor until Esc — rebuild as overlay.
+	if popup and popup.IsModalTopLevel and popup:IsModalTopLevel() then
+		popup:Hide()
+		CGV.AdvertisePopup = nil
+		popup = nil
+	end
 	if not popup then
-		-- This text hides unless needed
-		popup = CGV.Popup:New("Community_AdvertiseGuide_Popup","sis")
+		popup = CGV.Popup:New("Community_AdvertiseGuide_Overlay","sis",true)
 		popup:EnableGuideViewerAnchor()
 
 		popup.OnAccept = function(me)
