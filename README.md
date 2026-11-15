@@ -21,7 +21,6 @@ ESOLL automatically installs the required libraries. If you prefer to install th
 <details>
 <summary>Date TBD - QoL Features &amp; Dual Settings</summary>
 <ul>
-  <li><strong>Rule:</strong> every setting in Home also appears under Esc → Settings → Addons → Community Leveling Guide (LibAddonMenu), same SavedVariables.</li>
   <li>Stuck-step detector — long time on the same step offers mark done/skip with a note (viewer overlay; mouselook stays free).</li>
   <li>Bug / author dumps: scrollable label window + <strong>Print to Chat</strong> (no EditBox mouse trap); paste into the CGESO comments on ESOUI via your chat-copy addon.</li>
   <li>Bookmark / resume markers (viewer pin + settings); per-guide notes.</li>
