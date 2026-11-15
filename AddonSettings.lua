@@ -477,10 +477,10 @@ local function RegisterWithLAM()
         {
           type = "checkbox",
           name = Opt("opt_skipauxsteps", "Skip auxiliary travel steps"),
-          tooltip = Opt("opt_skipauxsteps_desc", "Automatically skip travel/goto-only steps when the next real objective is already done."),
-          getFunc = function() return GetNamedOption("skipauxsteps", true) end,
+          tooltip = Opt("opt_skipauxsteps_desc", "Skip tip/text fluff when the next real objective is already done. Never skips blue beacon / marker (goto) travel."),
+          getFunc = function() return GetNamedOption("skipauxsteps", false) end,
           setFunc = function(v) SetNamedOption("skipauxsteps", v) end,
-          default = true,
+          default = false,
           width = "full",
         },
         {

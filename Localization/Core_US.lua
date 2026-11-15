@@ -281,7 +281,7 @@ GuideViewer("Option", "enUS", function() local f = {
 			["opt_skipimpossible"] = "Skip impossible steps",
 			["opt_skipimpossible_desc"] = "Automatically advance past steps that cannot be completed (for example wrong faction or hidden goals).",
 			["opt_skipauxsteps"] = "Skip auxiliary travel steps",
-			["opt_skipauxsteps_desc"] = "Automatically skip travel/goto-only steps when the next real objective is already done or impossible. Does not use character level (quests scale).",
+			["opt_skipauxsteps_desc"] = "Skip tip/text fluff when the next real objective is already done or impossible. Never skips blue beacon / “reach next marker” (goto) travel. Off by default.",
 
 			["opt_guide_search_placeholder"] = "Search zone, guide, or quest...",
 			["opt_guide_search_results"] = "Search results",

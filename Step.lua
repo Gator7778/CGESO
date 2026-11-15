@@ -333,11 +333,15 @@ function Step:IsTravel()
 	return true
 end
 
--- Auxiliary steps only lead toward quest work (gotos/text/tips), no real objectives.
+-- Auxiliary = tip/text fluff only. Steps with any goto (blue beacon / marker) are NOT aux.
 function Step:IsAuxiliary()
 	local goals = self.goals
+	if not goals or #goals == 0 then return false end
 	for i = 1, #goals do
 		local goal = goals[i]
+		if goal.action == "goto" then
+			return false -- marker/beacon travel must never be treated as aux
+		end
 		if goal.action and not goal:IsAuxiliary() then
 			return false
 		end
@@ -345,9 +349,14 @@ function Step:IsAuxiliary()
 	return true
 end
 
--- True when this aux/travel step can be skipped because a later useful step is already done/impossible.
--- Level is ignored (ESO One Tamriel — quests scale with character).
+-- Skip only tip/text fluff when a later real objective is already done/impossible.
+-- Never skips goto beacon ("reach next marker") steps.
 function Step:IsAuxiliarySkippable()
+	-- Current step must be true aux (no gotos). Beacon travel is never skippable here.
+	if not self:IsAuxiliary() then
+		return false
+	end
+
 	local guide = self.parentGuide
 	if not guide or not guide.steps then return false end
 
@@ -358,7 +367,7 @@ function Step:IsAuxiliarySkippable()
 
 	while step do
 		if step:IsAuxiliary() or not step:AreRequirementsMet() then
-			-- keep looking past fellow aux / unmet-requirement steps
+			-- keep looking past fellow tip/text fluff / unmet-requirement steps
 		else
 			if step == self then
 				return false
@@ -379,11 +388,12 @@ function Step:IsAuxiliarySkippable()
 		count = count + 1
 
 		if travelfor and count > travelfor then
+			-- Only auto-expire travelfor windows for tip/text chains (current step is aux).
 			return true
 		end
 	end
 
-	-- Ran out of steps within travelfor — safe to skip.
+	-- Ran out of steps within travelfor — safe to skip tip/text fluff only.
 	return travelfor and count <= travelfor
 end
 

@@ -1062,9 +1062,10 @@ function Goal:UpdateStatus()
 	return self.status
 end
 
--- Travel-ish goals that only lead toward real quest work (used by aux-step skip).
+-- True fluff only (used by aux-step skip). Never treat goto / beacon "reach next
+-- marker" travel as auxiliary — those are required waypoint steps.
 function Goal:IsAuxiliary()
-	return self.action == "goto" or self.action == "text" or self.action == "tip"
+	return self.action == "text" or self.action == "tip"
 end
 
 function Goal:GetQuest()

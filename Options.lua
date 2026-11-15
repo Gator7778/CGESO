@@ -442,7 +442,8 @@ function SavedVars:InitializeOptions()
       })
     AddOption("skipauxsteps",{
         type = "toggle",
-        _default = true,
+        -- Safer off: only tip/text fluff is skipped when enabled; gotos/beacons always stay.
+        _default = false,
       })
 
     AddOption(nil,{
