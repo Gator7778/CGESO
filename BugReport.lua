@@ -24,6 +24,42 @@ CGV.BugReport = BugReport
 -----------------------------------------
 -- FUNCTIONS
 -----------------------------------------
+local LINE_HEIGHT = 18 -- ZoFontGame ~line; used to size scroll content
+
+local function CountLines(text)
+	if not text or text == "" then return 1 end
+	local n = 1
+	for _ in tostring(text):gmatch("\n") do
+		n = n + 1
+	end
+	return n
+end
+
+local function RefreshDumpScroll(frame, text)
+	local scroll = frame.scroll
+	local child = frame.scroll.scrollchild
+	local box = frame.copybox
+	if not (scroll and child and box) then return end
+
+	local viewH = scroll:GetHeight()
+	if viewH < 100 then viewH = 600 end
+	local contentH = math.max(viewH, CountLines(text) * LINE_HEIGHT + 24)
+
+	box:ClearAnchors()
+	box:SetAnchor(uiTopLeft, child, uiTopLeft, 4, 0)
+	box:SetAnchor(uiTopRight, child, uiTopRight, -4, 0)
+	box:SetHeight(contentH)
+
+	child:SetHeight(contentH)
+
+	-- Tell ZO_ScrollContainer the extents changed so the scrollbar appears.
+	if _G.ZO_Scroll_OnExtentsChanged then
+		_G.ZO_Scroll_OnExtentsChanged(scroll)
+	elseif scroll.scroll and scroll.scroll.UpdateScrollBars then
+		scroll.scroll:UpdateScrollBars()
+	end
+end
+
 function BugReport:CreateDumpFrameBasic()
 	local name = "CGESO_DumpFrameBasic"
 
@@ -48,64 +84,40 @@ function BugReport:CreateDumpFrameBasic()
 		:SetHeight(50)
 		.__END
 
+	-- Selectable multi-line text lives IN the scroll child so long dumps (POI lists) scroll.
+	frame.copybox = CHAIN(WM:CreateControl(name.."copybox",frame.scroll.scrollchild,ctEditBox))
+		:SetAnchor(uiTopLeft, frame.scroll.scrollchild, uiTopLeft, 4, 0)
+		:SetAnchor(uiTopRight, frame.scroll.scrollchild, uiTopRight, -4, 0)
+		:SetHeight(50)
+		:SetMouseEnabled(true)
+		:SetFont("ZoFontGame")
+		:SetMultiLine(true)
+		:SetMaxInputChars(999999)
+		:SetHandler("OnMouseDown", function(self) self:TakeFocus() end)
+		:SetHandler("OnMouseUp", function(self)
+				-- First click focuses; second / drag can select. Don't force SelectAll every up
+				-- so wheel-scrolling + partial select still work.
+			end)
+		:SetHandler("OnMouseWheel", function(_, delta)
+				-- EditBox eats wheel events; forward them to the scroll bar.
+				local scroll = frame.scroll
+				local bar = scroll and getControl(scroll:GetName() .. "ScrollBar")
+				if bar and bar.GetValue and bar.SetValue then
+					local cur = bar:GetValue() or 0
+					bar:SetValue(math.max(0, cur - delta * LINE_HEIGHT * 3))
+				elseif scroll and _G.ZO_Scroll_ScrollRelative then
+					_G.ZO_Scroll_ScrollRelative(scroll, -delta * LINE_HEIGHT * 3)
+				end
+			end)
+		.__END
+
+	-- Kept for layout helpers / optional non-edit view (unused while copybox is shown).
 	frame.display = CHAIN(UI:Create("Label",frame.scroll.scrollchild,name.."display"))
 		:SetAnchor(uiTopLeft,frame.scroll.scrollchild)
 		:SetAnchor(uiTopRight,frame.scroll.scrollchild)
 		:SetCanWrap(true)
-		.__END
-
-	-- hidden edit box
-	frame.copybox = CHAIN(WM:CreateControl(name.."copybox",frame,ctEditBox))
-		:SetAnchor(uiTopLeft,frame.scroll)
-		:SetAnchor(uiBottomRight,frame.scroll)
-		:SetMouseEnabled(true)
-		:SetFont("ZoFontGame")
-		:SetMultiLine(true)
-		:SetHandler("OnMouseDown",function(self) self:TakeFocus() end)
-		:SetHandler("OnMouseUp",function(self) self:SelectAll() end)
-		:SetMaxInputChars(999999)
 		:SetHidden(true)
 		.__END
-
-	--[[
-	frame.edit = CHAIN(WM:CreateControlFromVirtual(name.."_edit",frame ,"ZO_DefaultEditMultiLineForBackdrop"))
-		:ClearAnchors()
-		:SetAnchor(TOPLEFT,frame,TOPLEFT,8,50)
-		:SetAnchor(BOTTOMRIGHT,frame,BOTTOMRIGHT,-1,-38)
-		--:SetHeight(500)
-		--:SetAnchorFill(frame.scroll)
-		--:SetHeight(50)
-		:SetMouseEnabled(true)
-		:SetFont("ZoFontGame")
-		:SetMaxInputChars(999999)
-		:SetMultiLine(true)
-		:SetNewLineEnabled(true)
-		:SetEditEnabled(true)
-		:SetHandler("OnMouseWheel", function(me,delta,ctrl,alt,shift,cmd)
-			local curpos = me:GetCursorPosition()
-			local text = me:GetText()
-			local absD = math.abs(delta)
-			local direction = delta/absD	* -1	-- 1 if negative number, -1 if positive
-			local newposition = curpos
-			local char
-
-			-- For each delta move to the next line in the correct direction.
-			while absD > 0 do
-				repeat
-					newposition = newposition + direction		-- move in the right direction
-					char = text:sub(newposition,newposition)	-- Get character at our position
-				until not (char and char~="" and char~="\n")
-
-				absD = absD - 1
-			end
-
-			me:SetCursorPosition(newposition)
-		end)
-	.__END
-	--]]
-
-
-	frame.display.back = UI:Create("SecBackdrop",frame.display,name.."bd")
 
 	frame.close = CHAIN(UI:Create("GuideButton",frame,name.."_Close","Close"))
 		:SetPoint(uiTopRight, frame, -5, 5)
@@ -124,7 +136,7 @@ function BugReport:CreateDumpFrameBasic()
 		:SetPoint(uiTopLeft,frame.title,uiBottomLeft,0,4)
 		:SetWidth(980)
 		:SetCanWrap(true)
-		:SetText("Click the text, press Ctrl+C to copy, then paste it into the Community Leveling Guide comments on ESOUI. Nothing is sent automatically.")
+		:SetText("Scroll or mouse-wheel to browse. Click the text, Ctrl+C to copy, then paste into the CGESO comments on ESOUI. Nothing is sent automatically.")
 		.__END
 
 	frame.CloseButton = CHAIN(UI:Create("Button",frame,name.."_Close2"))
@@ -152,15 +164,16 @@ function BugReport:ShowDump(text,title)
 
 	assert(frame,"Could not create a BasicFrame for BugReport")
 
+	text = text or ""
 	frame.title:SetText(title or "Bug Report")
-	frame.display:SetText(text)
-	frame.display:SetHidden(true)
 	frame.copybox:SetText(text)
 	frame.copybox:SetHidden(false)
+	frame:Show()
+
+	-- Size after Show so scroll:GetHeight() is valid, then focus for Ctrl+C.
+	RefreshDumpScroll(frame, text)
 	frame.copybox:TakeFocus()
 	frame.copybox:SelectAll()
-
-	frame:Show()
 end
 
 local lastreport

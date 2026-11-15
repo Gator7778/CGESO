@@ -650,27 +650,23 @@ function Features:ListZoneWayshrinesAndDoors()
 		end
 	end
 
-	d(("|cfd5b02POIs in %s|r (zoneIndex %d, %d pins)"):format(zone, zid, num))
-	d("|c88ff88Wayshrines:|r")
+	d(("|cfd5b02POIs in %s|r (zoneIndex %d, %d pins) — scrollable dump window"):format(zone, zid, num))
 	if #shrines == 0 then
-		d("  (none flagged IsPOIWayshrine — listing name matches / all pins below)")
+		d("|c88ff88Wayshrines:|r (none flagged IsPOIWayshrine — see full index in dump)")
 	else
-		for _, r in ipairs(shrines) do d(r) end
+		d(("|c88ff88Wayshrines:|r %d (see dump window)"):format(#shrines))
 	end
-	if #doors > 0 then
-		d("|cffaa55Doors / entrances / portals (by name):|r")
-		for _, r in ipairs(doors) do d(r) end
-	end
-	-- Always dump a full numbered list so Solstice (and similar) still works
-	-- when IsPOIWayshrine returns false for valid travel pins.
-	d("|cffffffAll POIs (index = GetPOIInfo):|r")
+
+	-- Full index lives in the scrollable dump (not chat-only).
+	tinsert(lines, "")
+	tinsert(lines, "-- All POIs (index = GetPOIInfo):")
 	for i = 1, num do
 		local name = GetPOIInfo(zid, i)
 		if name and name ~= "" then
 			local isShrine = IsPOIWayshrine and IsPOIWayshrine(zid, i)
 			local _, _, pinType = GetPOIMapInfo(zid, i, true)
 			local done = (pinType == MAP_PIN_TYPE_POI_COMPLETE)
-			d(("  %3d  %s%s%s"):format(
+			tinsert(lines, ("  %3d  %s%s%s"):format(
 				i,
 				name,
 				isShrine and "  [WS]" or "",
@@ -681,7 +677,7 @@ function Features:ListZoneWayshrinesAndDoors()
 
 	local dump = table.concat(lines, "\n")
 	if CGV.BugReport and CGV.BugReport.ShowDump then
-		CGV.BugReport:ShowDump(dump .. "\n\n-- Full index list is also in chat.", "Zone POIs (Ctrl+C)")
+		CGV.BugReport:ShowDump(dump, "Zone POIs (scroll + Ctrl+C)")
 	end
 	return dump
 end
