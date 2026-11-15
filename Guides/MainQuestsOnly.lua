@@ -1235,7 +1235,7 @@ goto 62.54,55.45
 talk Aelif |q Anchors from the Harbour/Speak with Aelif |future
 |only Aldmeri Dominion
 step
-goto 54.14,37.79
+goto 66.95,61.14
 talk Jofnir Iceblade |q Anchors from the Harbour/Speak with the Ghost |future
 |only Aldmeri Dominion
 step
@@ -48401,24 +48401,21 @@ talk Prince Azah |q The Stirk Fellowship |future
 |tip Manually skip to the next step.
 step
 goto u48_overland_base 53.59,55.01
-'Discover _Rampart Camp_ Wayshrine |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
-|tip Manually skip to the next step.
+wayshrine Rampart Camp
 step
 goto 50.55,57.44 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 step
 goto 49.34,60.43 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 step
 goto 43.25,63.87
-'Discover _Corelanya Manor_ Wayshrine |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
-|tip Manually skip to the next step.
+wayshrine Corelanya Manor
 step
 goto 44.55,69.08 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 step
 goto 43.53,71.82 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 step
 goto 41.87,72.94
-'Discover _Vale of Revelry_ Wayshrine |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
-|tip Manually skip to the next step.
+wayshrine Vale of Revelry
 step
 goto 41.87,72.94
 'Use _Vale of Revelry_
@@ -48432,8 +48429,7 @@ step
 goto 50.24,70.14 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 step
 goto 52.46,69.23
-'Discover _Shell-Tide Village_ Wayshrine |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
-|tip Manually skip to the next step.
+wayshrine Shell-Tide Village
 step
 goto 52.73,66.11 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 step
@@ -48474,8 +48470,7 @@ step
 goto 36.59,62.11 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 step
 goto 38.16,55.27
-'Discover _Western Bay_ Wayshrine |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
-|tip Manually skip to the next step.
+wayshrine Western Bay
 step
 goto 32.83,54.91 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 step
@@ -48491,8 +48486,7 @@ step
 |tip Manually skip to the next step.
 step
 goto u46_base_shoresstand 67.78,33.53
-'Discover _Shor's Stand_ Wayshrine |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
-|tip Manually skip to the next step.
+wayshrine Shor's Stand
 step
 goto u48_overland_base 40.14,44.16 |q The Stirk Fellowship/.*Find the Alliance Representatives and Gabrielle.*
 step
@@ -48542,8 +48536,7 @@ step
 goto 62.03,44.00 |q The Regent of Sunport/Go to Vinutilmo Palace
 step
 goto 58.04,50.16
-'Discover _Sunport_ Wayshrine |q The Regent of Sunport/Go to Vinutilmo Palace
-|tip Manually skip to the next step.
+wayshrine Sunport
 step
 goto 61.34,49.61
 'Open _Palace District_ |q The Regent of Sunport/Go to Vinutilmo Palace
@@ -49210,7 +49203,7 @@ goto 55.37,59.20
 |tip Manually skip to the next step.
 step
 goto u47_base_3.5FissureCave 48.63,73.45
-|tip Watch the dialogue.
+|tip Watch the dialogue.part
 'Explore _Ruins_ |q Crossing the Wall/Explore the Ruins |future
 step
 goto 31.31,19.10 |q Crossing the Wall/Stop the Ritual
@@ -49260,8 +49253,7 @@ goto 58.87,55.91
 talk Skordo the Knife |q The Worm Turns/Talk to Skordo the Knife |future
 step
 goto 61.89,55.28
-'Discover _Grand Juncture Pass_ Wayshrine |q The Worm Turns/Talk to Razum-dar |future
-|tip Manually skip to the next step.
+wayshrine Grand Juncture Pass
 step
 goto 61.59,55.70
 talk Razum-dar |q The Worm Turns/Talk to Razum-dar
@@ -49398,8 +49390,7 @@ goto 87.05,33.14
 step
 goto u48_overland_base 71.58,54.40
 |tip Drop down carefully.
-'Discover _Gristmung Hold Camp_ Wayshrine |q The Worm Turns/Rejoin Your Allies
-|tip Manually skip to the next step.
+wayshrine Gristmung Hold Camp
 step
 goto 71.23,53.47
 talk Prince Azah
@@ -49441,8 +49432,7 @@ goto 75.16,50.11
 |tip Manually skip to the next step.
 step
 goto 78.79,54.11
-'Discover _Xor-Hist_ Wayshrine |q Hunt for the Great Mage/Go to the Kaz-Neesak Mine
-|tip Manually skip to the next step.
+wayshrine Xor-Hist
 step
 goto 80.84,52.98 |q Hunt for the Great Mage/Go to the Kaz-Neesak Mine
 step
@@ -49489,8 +49479,7 @@ step
 goto 76.93,62.67 |q Hunt for the Great Mage/Find the Other Soul Flayer Harvest Site
 step
 goto 67.32,65.42
-'Discover _Stone Cove_ Wayshrine|q Hunt for the Great Mage/Find the Other Soul Flayer Harvest Site
-|tip Manually skip to the next step.
+wayshrine Stone Cove
 step
 goto 66.65,63.96 |q Hunt for the Great Mage/Find the Other Soul Flayer Harvest Site
 step
@@ -49527,8 +49516,7 @@ step
 goto 65.24,43.13 |q The Deep Tombs of Xul-Haj/Go to Jeetra's Village
 step
 goto 60.91,40.53
-'Discover _Caterwaul Cove_ Wayshrine |q The Deep Tombs of Xul-Haj/Go to Jeetra's Village
-|tip Manually skip to the next step.
+wayshrine Caterwaul Cove
 step
 goto 63.63,41.66 |q The Deep Tombs of Xul-Haj/Go to Jeetra's Village
 step

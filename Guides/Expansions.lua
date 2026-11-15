@@ -58243,7 +58243,7 @@ step
 goto 83.33,35.19 |q Choice and Consequence |future
 step
 goto 82.14,34.12
-'Discover _Mor Naril Camp_ |q Choice and Consequence |future
+wayshrine Mor Naril Camp |q Choice and Consequence |future
 |tip Manually skip to the next step.
 step
 goto 81.46,30.47
