@@ -20,7 +20,6 @@ ESOLL automatically installs the required libraries. If you prefer to install th
 
 <details>
 <summary>Date TBD - QoL Features &amp; Dual Settings</summary>
-<p><strong>Summary:</strong> Dual Home/LAM settings throughout. Core QoL (stuck-step, bookmarks, notes, quest-link, compact, zone nudge, authoring). Mouse-safe dumps (Print to Chat) and suggestion overlays. Solstice <code>wayshrine</code> greening (Full + MQO). Pack 2: Not now, undo, find/copystep, nearby shrine, end-guide toast, gallery. Pack 3: clear ignored guides, viewer find box, door/portal nearby, upload + MapData scaffold checklists, step history, Home progress %, suggestion-ready ping, Full↔MQO switch. Skyshard greening uses character <code>GetSkyshardDiscoveryStatus</code> when U52 skyshard-id helper exists — not account-wide achievement criteria.</p>
 <ul>
   <li><strong>Rule:</strong> every setting in Home also appears under Esc → Settings → Addons → Community Leveling Guide (LibAddonMenu), same SavedVariables.</li>
   <li>Stuck-step detector — long time on the same step offers mark done/skip with a note (viewer overlay; mouselook stays free).</li>
