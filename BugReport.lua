@@ -24,7 +24,7 @@ CGV.BugReport = BugReport
 -----------------------------------------
 -- FUNCTIONS
 -----------------------------------------
-local LINE_HEIGHT = 22 -- ZoFontGame line + padding (under-size clips the bottom)
+local LINE_HEIGHT = 22
 
 local function CountLines(text)
 	if not text or text == "" then return 1 end
@@ -44,78 +44,49 @@ local function ScrollDumpToTop(frame)
 	end
 	if _G.ZO_Scroll_ResetToTop then
 		_G.ZO_Scroll_ResetToTop(scroll)
-	elseif scroll.SetVerticalScroll then
-		scroll:SetVerticalScroll(0)
-	end
-	if frame.copybox and frame.copybox.SetCursorPosition then
-		frame.copybox:SetCursorPosition(0)
 	end
 end
 
--- EditBox / TopLevel dump frame leave ESO in camera UI (cursor) mode.
--- LoseFocus alone is not enough — must also SetGameCameraUIMode(false).
-local function ReleaseDumpFocus(frame)
-	local wm = _G.WINDOW_MANAGER
-	if wm and wm.GetKeyboardFocusedControl then
-		local focused = wm:GetKeyboardFocusedControl()
-		if focused and focused.LoseFocus then
-			pcall(function() focused:LoseFocus() end)
-		end
-	end
-
-	local box = frame and frame.copybox
-	if box then
-		if box.LoseFocus then pcall(function() box:LoseFocus() end) end
-		-- Toggle edit off briefly so the box cannot keep focus.
-		if box.SetEditEnabled then
-			box:SetEditEnabled(false)
-			box:SetEditEnabled(true)
-		end
-	end
-	if frame and frame.SetKeyboardEnabled then
-		frame:SetKeyboardEnabled(false)
-	end
-	if _G.ClearMenu then pcall(_G.ClearMenu) end
-
-	-- This is what actually returns mouselook after a focused EditBox.
-	if _G.SetGameCameraUIMode then
-		pcall(function() _G.SetGameCameraUIMode(false) end)
-	end
-end
-
+-- NO EditBox — it traps ESO mouselook until PrintScreen. Label + chat copy only.
 local function CloseDumpFrame(frame)
-	ReleaseDumpFocus(frame)
-	if frame then
-		frame:Hide()
-		if frame.SetMouseEnabled then frame:SetMouseEnabled(false) end
-	end
+	if frame then frame:Hide() end
 	BugReport.report = ""
-	-- One frame later — TopLevel hide sometimes re-asserts UI mode.
-	_G.zo_callLater(function()
-		ReleaseDumpFocus(frame)
-		if _G.SetGameCameraUIMode then
-			pcall(function() _G.SetGameCameraUIMode(false) end)
-		end
-	end, 0)
-	_G.zo_callLater(function()
-		if _G.SetGameCameraUIMode then
-			pcall(function() _G.SetGameCameraUIMode(false) end)
-		end
-		-- Restore mouse on the frame for the next open.
-		if frame and frame.SetMouseEnabled then frame:SetMouseEnabled(true) end
-		if frame and frame.SetKeyboardEnabled then frame:SetKeyboardEnabled(true) end
-	end, 50)
+	BugReport._dumpText = nil
 end
 
--- Explicit widths/heights only — never TOPLEFT+TOPRIGHT pairs between
--- scrollchild <-> child (that caused "Too many anchors processed" cycles).
+local function PrintDumpToChat(text)
+	text = text or ""
+	d("|cfd5b02CGESO dump — use your chat-copy addon on the lines below:|r")
+	local maxChunk = 350
+	local start = 1
+	local n = #text
+	local part = 1
+	while start <= n do
+		local stop = math.min(start + maxChunk - 1, n)
+		-- Prefer breaking on a newline.
+		if stop < n then
+			local nl = text:sub(start, stop):match(".*\n()")
+			if nl and nl > 1 then
+				stop = start + nl - 2
+			end
+		end
+		d(text:sub(start, stop))
+		start = stop + 1
+		part = part + 1
+		if part > 80 then
+			d("|cfd5b02…truncated — dump too long for chat; browse the window instead.|r")
+			break
+		end
+	end
+	d("|cfd5b02— end of dump —|r")
+end
+
 local function RefreshDumpScroll(frame, text)
 	local scroll = frame.scroll
 	local child = frame.scroll.scrollchild
-	local box = frame.copybox
-	if not (scroll and child and box) then return end
+	local body = frame.body
+	if not (scroll and child and body) then return end
 
-	-- Keep scroll below the wrapping hint so the top lines aren't covered.
 	if frame.hint then
 		local hintBottom = frame.hint:GetBottom()
 		local frameTop = frame:GetTop()
@@ -126,7 +97,7 @@ local function RefreshDumpScroll(frame, text)
 			if topPad > 120 then topPad = 120 end
 			scroll:ClearAnchors()
 			scroll:SetAnchor(uiTopLeft, frame, uiTopLeft, 8, topPad)
-			scroll:SetAnchor(uiBottomRight, frame, uiBottomRight, -1, -38)
+			scroll:SetAnchor(uiBottomRight, frame, uiBottomRight, -1, -42)
 		end
 	end
 
@@ -134,34 +105,37 @@ local function RefreshDumpScroll(frame, text)
 	local viewH = scroll:GetHeight()
 	if viewW < 100 then viewW = 1000 end
 	if viewH < 100 then viewH = 600 end
-	-- Extra pad so the last lines aren't clipped when scrolling to the bottom.
-	local contentH = math.max(viewH, CountLines(text) * LINE_HEIGHT + 64)
 	local contentW = math.max(100, viewW - 24)
+	local contentH = math.max(viewH, CountLines(text) * LINE_HEIGHT + 64)
 
 	child:ClearAnchors()
 	child:SetAnchor(uiTopLeft, scroll, uiTopLeft, 0, 0)
 	child:SetWidth(contentW)
 	child:SetHeight(contentH)
 
-	box:ClearAnchors()
-	box:SetAnchor(uiTopLeft, child, uiTopLeft, 4, 0)
-	box:SetWidth(contentW - 8)
-	box:SetHeight(contentH)
+	body:ClearAnchors()
+	body:SetAnchor(uiTopLeft, child, uiTopLeft, 4, 0)
+	body:SetWidth(contentW - 8)
+	body:SetText(text)
+
+	-- Label height from text; keep scroll child at least that tall.
+	local labelH = body.GetTextHeight and body:GetTextHeight() or contentH
+	if labelH < contentH then labelH = contentH end
+	child:SetHeight(labelH + 16)
 
 	if _G.ZO_Scroll_OnExtentsChanged then
 		_G.ZO_Scroll_OnExtentsChanged(scroll)
 	end
-
 	ScrollDumpToTop(frame)
 end
 
 function BugReport:CreateDumpFrameBasic()
-	local name = "CGESO_DumpFrameBasic"
+	-- New name so leftover EditBox controls from older builds are not reused.
+	local name = "CGESO_DumpFrameLabel"
 
-	-- Tear down a prior instance after /reload of just this file isn't possible,
-	-- but hide + reuse the same names; layout is rebuilt in RefreshDumpScroll.
-	if BugReport.BasicFrame then
+	if BugReport.BasicFrame and BugReport.BasicFrame:GetName() ~= name then
 		BugReport.BasicFrame:SetHidden(true)
+		BugReport.BasicFrame = nil
 	end
 
 	local frame = BugReport.BasicFrame
@@ -172,10 +146,6 @@ function BugReport:CreateDumpFrameBasic()
 			:Hide()
 			:SetCanDrag(true)
 			:SetMouseEnabled(true)
-			:SetKeyboardEnabled(true)
-			:SetHandler("OnHide", function(me)
-					ReleaseDumpFocus(me)
-				end)
 			:SetHandler("OnKeyUp", function(me, key)
 					if key == _G.KEY_ESCAPE then
 						CloseDumpFrame(me)
@@ -187,10 +157,9 @@ function BugReport:CreateDumpFrameBasic()
 	end
 
 	if not frame.scroll then
-		-- Start lower so a 2-line hint doesn't cover the first dump lines.
 		frame.scroll = CHAIN(WM:CreateControlFromVirtual(name.."_Scroll",frame,"ZO_ScrollContainer"))
 			:SetAnchor(uiTopLeft,frame,uiTopLeft,8,72)
-			:SetAnchor(uiBottomRight,frame,uiBottomRight,-1,-38)
+			:SetAnchor(uiBottomRight,frame,uiBottomRight,-1,-42)
 			.__END
 
 		frame.scroll.scrollchild = CHAIN(getControl(frame.scroll:GetName().."ScrollChild"))
@@ -201,51 +170,24 @@ function BugReport:CreateDumpFrameBasic()
 			.__END
 	end
 
-	-- Hide/orphan any leftover display label from older builds (anchor-cycle source).
-	local oldDisplay = getControl(name.."display")
-	if oldDisplay then
-		oldDisplay:ClearAnchors()
-		oldDisplay:SetHidden(true)
-		if oldDisplay.SetParent then
-			oldDisplay:SetParent(frame) -- out of the scroll child
-		end
+	-- Kill any old editbox if present from a prior BasicFrame layout.
+	local legacyBox = getControl("CGESO_DumpFrameBasiccopybox")
+	if legacyBox then
+		legacyBox:SetHidden(true)
+		if legacyBox.LoseFocus then pcall(function() legacyBox:LoseFocus() end) end
+		if legacyBox.SetMouseEnabled then legacyBox:SetMouseEnabled(false) end
+		if legacyBox.SetEditEnabled then legacyBox:SetEditEnabled(false) end
 	end
-	frame.display = nil
+	frame.copybox = nil
 
-	if not frame.copybox then
-		frame.copybox = CHAIN(WM:CreateControl(name.."copybox",frame.scroll.scrollchild,ctEditBox))
+	if not frame.body then
+		frame.body = CHAIN(UI:Create("Label",frame.scroll.scrollchild,name.."body",13))
 			:SetAnchor(uiTopLeft, frame.scroll.scrollchild, uiTopLeft, 4, 0)
 			:SetWidth(990)
-			:SetHeight(50)
-			:SetMouseEnabled(true)
-			:SetFont("ZoFontGame")
-			:SetMultiLine(true)
-			:SetMaxInputChars(999999)
-			-- Click to focus only when you want to copy — don't trap mouse on open.
-			:SetHandler("OnMouseDown", function(self) self:TakeFocus() end)
-			:SetHandler("OnFocusLost", function()
-					-- Nothing special; CloseDumpFrame also LoseFocus.
-				end)
-			:SetHandler("OnEscape", function(self)
-					-- Esc while focused: drop edit focus + leave camera UI mode.
-					ReleaseDumpFocus(frame)
-					return true
-				end)
-			:SetHandler("OnMouseWheel", function(_, delta)
-					local scroll = frame.scroll
-					local bar = scroll and getControl(scroll:GetName() .. "ScrollBar")
-					if bar and bar.GetValue and bar.SetValue then
-						local cur = bar:GetValue() or 0
-						bar:SetValue(math.max(0, cur - delta * LINE_HEIGHT * 3))
-					elseif scroll and _G.ZO_Scroll_ScrollRelative then
-						_G.ZO_Scroll_ScrollRelative(scroll, -delta * LINE_HEIGHT * 3)
-					end
-				end)
+			:SetCanWrap(true)
+			:SetMouseEnabled(false) -- never steal focus
+			:SetText("")
 			.__END
-	else
-		-- Ensure copybox is only top-left anchored (no TOPRIGHT cycle).
-		frame.copybox:ClearAnchors()
-		frame.copybox:SetAnchor(uiTopLeft, frame.scroll.scrollchild, uiTopLeft, 4, 0)
 	end
 
 	if not frame.close then
@@ -264,7 +206,7 @@ function BugReport:CreateDumpFrameBasic()
 			.__END
 	end
 
-	local hintText = "Mouse-wheel to browse. Click text to copy (Ctrl+A, Ctrl+C). Esc = release mouse; Close = dismiss + release mouse. Paste into the CGESO comments on ESOUI."
+	local hintText = "Mouse-wheel to browse (no click). Use Print to Chat, then your chat-copy addon. Close or Esc dismisses — no mouse trap."
 	if not frame.hint then
 		frame.hint = CHAIN(UI:Create("Label",frame,name.."_Hint",12))
 			:SetPoint(uiTopLeft,frame.title,uiBottomLeft,0,4)
@@ -274,6 +216,17 @@ function BugReport:CreateDumpFrameBasic()
 			.__END
 	else
 		frame.hint:SetText(hintText)
+	end
+
+	if not frame.PrintButton then
+		frame.PrintButton = CHAIN(UI:Create("Button",frame,name.."_Print"))
+			:SetSize(140,25)
+			:SetText("Print to Chat")
+			:SetPoint(uiBottomLeft, frame, 8, -5)
+			:SetHandler("OnClicked",function()
+					PrintDumpToChat(BugReport._dumpText or "")
+				end)
+			.__END
 	end
 
 	if not frame.CloseButton then
@@ -289,35 +242,23 @@ function BugReport:CreateDumpFrameBasic()
 end
 
 
--- Show dump in a selectable edit box so the player can Ctrl+C it.
--- Nothing is uploaded — ESO addons cannot send mail/HTTP from here.
+-- Scrollable label dump — no EditBox (EditBox traps mouselook in ESO).
+-- Copy via Print to Chat + Shawn's chat-copy addon.
 function BugReport:ShowDump(text,title)
-	if not self.BasicFrame or not self.BasicFrame.copybox then
-		self:CreateDumpFrameBasic()
-	else
-		-- Re-assert safe anchors every show (clears any leftover dual-anchor state).
-		self:CreateDumpFrameBasic()
-	end
+	self:CreateDumpFrameBasic()
 
 	local frame = self.BasicFrame
-	assert(frame,"Could not create a BasicFrame for BugReport")
+	assert(frame,"Could not create a dump frame")
 
 	text = text or ""
+	BugReport._dumpText = text
 	frame.title:SetText(title or "Bug Report")
-	-- Make sure we're not still focused from a previous open.
-	ReleaseDumpFocus(frame)
-	frame.copybox:SetText(text)
-	frame.copybox:SetHidden(false)
-	if frame.SetKeyboardEnabled then frame:SetKeyboardEnabled(true) end
 	frame:Show()
-
-	-- Size + top. Do NOT TakeFocus / SelectAll on open — that traps the mouse.
 	RefreshDumpScroll(frame, text)
-	ScrollDumpToTop(frame)
 	_G.zo_callLater(function()
-		if frame:IsHidden() then return end
-		ScrollDumpToTop(frame)
-		ReleaseDumpFocus(frame)
+		if not frame:IsHidden() then
+			RefreshDumpScroll(frame, text)
+		end
 	end, 10)
 end
 
