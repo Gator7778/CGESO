@@ -22,7 +22,8 @@ ui:RegisterWidget("ColorPicker",ColorPicker)
 -----------------------------------------
 
 function ColorPicker:New(parent,name)
-  local colorpicker = CHAIN(ui:Create("Frame",parent,name))
+  -- Nested CT_CONTROL (4th arg true) — TopLevel cannot be parented under option frames.
+  local colorpicker = CHAIN(ui:Create("Frame",parent,name,true))
   :SetSize(unpack(SIZE))
   :SetMouseEnabled(true)
   .__END
