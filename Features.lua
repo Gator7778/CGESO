@@ -105,8 +105,14 @@ function Features:ShowStuckPopup()
 	if not step or not guide then return end
 
 	local popup = self.StuckPopup
+	if popup and popup.IsModalTopLevel and popup:IsModalTopLevel() then
+		popup:Hide()
+		self.StuckPopup = nil
+		popup = nil
+	end
 	if not popup then
-		popup = CGV.Popup:New("CGESO_StuckStep_Popup")
+		popup = CGV.Popup:New("CGESO_StuckStep_Overlay",nil,true)
+		popup:EnableGuideViewerAnchor()
 		popup.OnAccept = function()
 			-- Mark done / skip this step.
 			if CGV.SkipStep then
@@ -117,6 +123,8 @@ function Features:ShowStuckPopup()
 			-- Stay; do not re-offer until the step changes.
 		end
 		self.StuckPopup = popup
+	elseif popup.EnableGuideViewerAnchor then
+		popup:EnableGuideViewerAnchor()
 	end
 
 	local stepText = ""
@@ -225,7 +233,7 @@ function Features:PromptGuideNote()
 	end
 	local existing = self:GetGuideNote(guide.title)
 	local starter = existing ~= "" and existing or ""
-	local header = ("-- Guide note for: %s\n-- Edit the text below, Ctrl+C, then run:\n-- /cgv note <your text>\n-- Or paste here and use Accept in chat after copying.\n\n"):format(guide.title_short or guide.title)
+	local header = ("-- Guide note for: %s\n-- Print to Chat → copy, then run:\n-- /cgv note <your text>\n\n"):format(guide.title_short or guide.title)
 	if CGV.BugReport and CGV.BugReport.ShowDump then
 		CGV.BugReport:ShowDump(header .. starter, "Guide note — copy text, then /cgv note …")
 	end
@@ -564,7 +572,7 @@ function Features:CopyStepTemplate()
 	local text = self:BuildStepTemplate()
 	self:RecordCgpos("template:\n" .. text)
 	if CGV.BugReport and CGV.BugReport.ShowDump then
-		CGV.BugReport:ShowDump(text, "Step template (Ctrl+C to copy)")
+		CGV.BugReport:ShowDump(text, "Step template (Print to Chat)")
 	else
 		d("|cfd5b02Step template:|r")
 		d(text)
@@ -601,7 +609,7 @@ function Features:CopyMapDataPack()
 	local text = table.concat(lines, "\n")
 	self:RecordCgpos("pack:\n" .. text)
 	if CGV.BugReport and CGV.BugReport.ShowDump then
-		CGV.BugReport:ShowDump(text, "MapData pack (Ctrl+C to copy)")
+		CGV.BugReport:ShowDump(text, "MapData pack (Print to Chat)")
 	else
 		d(text)
 	end
@@ -634,8 +642,9 @@ function Features:ListZoneWayshrinesAndDoors()
 		if name and name ~= "" then
 			local _, _, pinType = GetPOIMapInfo(zid, i, true)
 			local done = (pinType == MAP_PIN_TYPE_POI_COMPLETE)
-			local isShrine = IsPOIWayshrine and IsPOIWayshrine(zid, i)
 			local lower = name:lower()
+			local isShrine = (IsPOIWayshrine and IsPOIWayshrine(zid, i))
+				or lower:find("wayshrine", 1, true)
 			local isDoor = lower:find("door", 1, true) or lower:find("entrance", 1, true) or lower:find("portal", 1, true)
 			local row = ("  [%d] %s%s%s"):format(
 				i,
@@ -668,7 +677,9 @@ function Features:ListZoneWayshrinesAndDoors()
 	for i = 1, num do
 		local name = GetPOIInfo(zid, i)
 		if name and name ~= "" then
-			local isShrine = IsPOIWayshrine and IsPOIWayshrine(zid, i)
+			local lower = name:lower()
+			local isShrine = (IsPOIWayshrine and IsPOIWayshrine(zid, i))
+				or lower:find("wayshrine", 1, true)
 			local _, _, pinType = GetPOIMapInfo(zid, i, true)
 			local done = (pinType == MAP_PIN_TYPE_POI_COMPLETE)
 			tinsert(lines, ("  %3d  %s%s%s"):format(
@@ -682,7 +693,7 @@ function Features:ListZoneWayshrinesAndDoors()
 
 	local dump = table.concat(lines, "\n")
 	if CGV.BugReport and CGV.BugReport.ShowDump then
-		CGV.BugReport:ShowDump(dump, "Zone POIs (scroll + Ctrl+C)")
+		CGV.BugReport:ShowDump(dump, "Zone POIs (scroll + Print to Chat)")
 	end
 	return dump
 end

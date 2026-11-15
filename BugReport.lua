@@ -4,7 +4,7 @@
 
 local CGV = _G.CGV
 local BugReport = {}
-local guiRoot, uiCenter, uiTopLeft, uiBottomLeft, uiBottomRight, uiTopRight, ctEditBox = _G.GuiRoot, _G.CENTER, _G.TOPLEFT, _G.BOTTOMLEFT, _G.BOTTOMRIGHT, _G.TOPRIGHT, _G.CT_EDITBOX
+local guiRoot, uiCenter, uiTopLeft, uiBottomLeft, uiBottomRight, uiTopRight = _G.GuiRoot, _G.CENTER, _G.TOPLEFT, _G.BOTTOMLEFT, _G.BOTTOMRIGHT, _G.TOPRIGHT
 local tinsert,type,pairs,ipairs = table.insert,type,pairs,ipairs
 local CHAIN = CGV.Utils.ChainCall
 local UI, WM = CGV.UI, _G.WINDOW_MANAGER
@@ -129,8 +129,7 @@ local function RefreshDumpScroll(frame, text)
 	ScrollDumpToTop(frame)
 end
 
-function BugReport:CreateDumpFrameBasic()
-	-- New name so leftover EditBox controls from older builds are not reused.
+function BugReport:CreateDumpFrame()
 	local name = "CGESO_DumpFrameLabel"
 
 	if BugReport.BasicFrame and BugReport.BasicFrame:GetName() ~= name then
@@ -170,22 +169,12 @@ function BugReport:CreateDumpFrameBasic()
 			.__END
 	end
 
-	-- Kill any old editbox if present from a prior BasicFrame layout.
-	local legacyBox = getControl("CGESO_DumpFrameBasiccopybox")
-	if legacyBox then
-		legacyBox:SetHidden(true)
-		if legacyBox.LoseFocus then pcall(function() legacyBox:LoseFocus() end) end
-		if legacyBox.SetMouseEnabled then legacyBox:SetMouseEnabled(false) end
-		if legacyBox.SetEditEnabled then legacyBox:SetEditEnabled(false) end
-	end
-	frame.copybox = nil
-
 	if not frame.body then
 		frame.body = CHAIN(UI:Create("Label",frame.scroll.scrollchild,name.."body",13))
 			:SetAnchor(uiTopLeft, frame.scroll.scrollchild, uiTopLeft, 4, 0)
 			:SetWidth(990)
 			:SetCanWrap(true)
-			:SetMouseEnabled(false) -- never steal focus
+			:SetMouseEnabled(false)
 			:SetText("")
 			.__END
 	end
@@ -206,7 +195,7 @@ function BugReport:CreateDumpFrameBasic()
 			.__END
 	end
 
-	local hintText = "Mouse-wheel to browse (no click). Use Print to Chat, then your chat-copy addon. Close or Esc dismisses — no mouse trap."
+	local hintText = "Mouse-wheel to browse. Print to Chat, then your chat-copy addon. Close dismisses."
 	if not frame.hint then
 		frame.hint = CHAIN(UI:Create("Label",frame,name.."_Hint",12))
 			:SetPoint(uiTopLeft,frame.title,uiBottomLeft,0,4)
@@ -241,11 +230,13 @@ function BugReport:CreateDumpFrameBasic()
 	end
 end
 
+-- Back-compat alias
+BugReport.CreateDumpFrameBasic = BugReport.CreateDumpFrame
 
--- Scrollable label dump — no EditBox (EditBox traps mouselook in ESO).
--- Copy via Print to Chat + Shawn's chat-copy addon.
+
+-- Scrollable label dump — no EditBox. Copy via Print to Chat + chat-copy addon.
 function BugReport:ShowDump(text,title)
-	self:CreateDumpFrameBasic()
+	self:CreateDumpFrame()
 
 	local frame = self.BasicFrame
 	assert(frame,"Could not create a dump frame")
@@ -279,7 +270,7 @@ function BugReport:GetReport()
 	local guide = CGV.CurrentGuide
 	local t = "" -- text
 
-	t = t .. "NOTES: (edit below, then paste into the CGESO comments on ESOUI)\n\n"
+	t = t .. "NOTES: (Print to Chat → copy → paste into the CGESO comments on ESOUI)\n\n"
 	local notes = CGV.Features and CGV.Features:GetBugNotes() or ""
 	if notes ~= "" then
 		t = t .. notes .. "\n\n"

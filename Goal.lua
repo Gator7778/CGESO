@@ -420,14 +420,14 @@ GOALTYPES['wayshrine'] = 	{ parse = function(self,params,_,_)
 									local num = GetNumPOIs(zid)
 									if not num or num < 1 then return end
 									for i = 1, num do
-										-- Solstice (and some newer zones) may not flag IsPOIWayshrine —
-										-- still match by POI name containing the shrine / "Wayshrine".
+										-- Some zones (e.g. Solstice) omit IsPOIWayshrine — accept exact
+										-- name match, or flag/name containing "wayshrine".
 										local text = GetPOIInfo(zid, i)
-										if text and text ~= "" then
-											local isWS = IsPOIWayshrine(zid, i) or (zid == 488 and i == 9)
-											local looksLikeWS = isWS
+										if text and text ~= "" and NameMatches(text) then
+											local flagged = IsPOIWayshrine(zid, i)
 												or tostring(text):lower():find("wayshrine", 1, true)
-											if looksLikeWS and NameMatches(text) then
+											local exact = NormalizePOIName(text) == want
+											if flagged or exact then
 												self.wayshrine_zoneid = zid
 												self.wayshrine_POIIndex = i
 												if CGV.db.profile.debug_wayshrines then

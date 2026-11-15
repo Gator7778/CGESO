@@ -371,7 +371,7 @@ GuideViewer("Option", "enUS", function() local f = {
 			["opt_revealmappoi_desc"] = "Show all unknown locations on the world map.",
 
 			["opt_bugreports"] = "Show bug report button",
-			["opt_bugreports_desc"] = "Show the bug icon on the Guide Viewer. Click it to build a text report (guide, step, location, debug log). Nothing is sent automatically — copy with Ctrl+C and paste into the Community Leveling Guide comments on ESOUI.",
+			["opt_bugreports_desc"] = "Show the bug icon on the Guide Viewer. Click it to build a text report (guide, step, location, debug log). Nothing is sent automatically — use Print to Chat, copy with your chat-copy addon, and paste into the Community Leveling Guide comments on ESOUI.",
 
 			["opt_unloadunusedguides"] = "Unload unused guides",
 			["opt_unloadunusedguides_desc"] = "Free memory by dropping step data for guides you are not using. Recommended on slower PCs. Opening a guide again re-parses it (short delay). Does not require /reloadui.",
