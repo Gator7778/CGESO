@@ -939,30 +939,10 @@ function CGV:PromptGuideStyleOrLoad(guide, onLoad)
 	local popup = self.GuideStylePopup
 	if not popup then
 		popup = CGV.Popup:New("Community_GuideStyle_Popup")
-		-- Re-pin to Guide Viewer whenever the queue actually shows this popup.
-		popup.AnchorToGuideViewer = function(me)
-			local viewer = CGV.Frame or (CGV.Viewer and CGV.Viewer.Frame)
-			if not (me and viewer) then return end
-			me:ClearAnchors()
-			me:SetPoint(_G.LEFT, viewer, _G.RIGHT, 8, 0)
-			if me.SetDrawTier and _G.DT_HIGH then
-				me:SetDrawTier(_G.DT_HIGH)
-			end
-			if me.SetDrawLayer and _G.DL_OVERLAY then
-				me:SetDrawLayer(_G.DL_OVERLAY)
-			end
-			if me.SetDrawLevel then
-				me:SetDrawLevel(200)
-			end
-		end
-		local prevOnShow = popup:GetHandler("OnShow")
-		popup:SetHandler("OnShow", function(me, ...)
-			if prevOnShow then prevOnShow(me, ...) end
-			if me.AnchorToGuideViewer then
-				me:AnchorToGuideViewer()
-			end
-		end)
+		popup:EnableGuideViewerAnchor()
 		self.GuideStylePopup = popup
+	elseif popup.EnableGuideViewerAnchor then
+		popup:EnableGuideViewerAnchor()
 	end
 
 	local ac = (CGV.Theme and CGV.Theme.AccentCode and CGV.Theme.AccentCode()) or "F55D07"

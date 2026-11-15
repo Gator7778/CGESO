@@ -482,12 +482,15 @@ function Features:ShowZoneNudgePopup(guide, zone)
 	local popup = self.ZoneNudgePopup
 	if not popup then
 		popup = CGV.Popup:New("CGESO_ZoneNudge_Popup")
+		popup:EnableGuideViewerAnchor()
 		popup.OnAccept = function(me)
 			if me.guide then
 				CGV:SetGuide(CGV.GetPreferredGuideVariant and CGV:GetPreferredGuideVariant(me.guide) or me.guide)
 			end
 		end
 		self.ZoneNudgePopup = popup
+	elseif popup.EnableGuideViewerAnchor then
+		popup:EnableGuideViewerAnchor()
 	end
 	popup.guide = guide
 	popup:SetText(

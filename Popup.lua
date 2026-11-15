@@ -211,6 +211,37 @@ function Popup:New(name,ptype)
   return popup
 end
 
+-- Pin recommend / zone / style popups to the Guide Viewer (LEFT of viewer).
+-- Preference: never float disconnected at screen-top when the viewer is up.
+function Popup:AnchorToGuideViewer()
+  local viewer = CGV.Frame or (CGV.Viewer and CGV.Viewer.Frame)
+  if not viewer then return false end
+  self:ClearAnchors()
+  self:SetPoint(_G.LEFT, viewer, _G.RIGHT, 8, 0)
+  if self.SetDrawTier and _G.DT_HIGH then
+    self:SetDrawTier(_G.DT_HIGH)
+  end
+  if self.SetDrawLayer and _G.DL_OVERLAY then
+    self:SetDrawLayer(_G.DL_OVERLAY)
+  end
+  if self.SetDrawLevel then
+    self:SetDrawLevel(200)
+  end
+  return true
+end
+
+-- Call once after New() for suggestion / zone / style popups.
+function Popup:EnableGuideViewerAnchor()
+  if self._guideViewerAnchorEnabled then return self end
+  self._guideViewerAnchorEnabled = true
+  local prevOnShow = self:GetHandler("OnShow")
+  self:SetHandler("OnShow", function(me, ...)
+    if prevOnShow then prevOnShow(me, ...) end
+    me:AnchorToGuideViewer()
+  end)
+  return self
+end
+
 -- Same as the Guide Viewer: fade the backdrop only so the world shows through;
 -- logo, text, and buttons stay fully opaque/readable.
 function Popup:SetBackdropOpacity(a)
@@ -464,6 +495,9 @@ function PopupHandler:ShowPopup(popup)
 
   popup:savedShow()														--Show was overwrote and saved here.
   popup:ApplyLiveSettings()
+  if popup._guideViewerAnchorEnabled and popup.AnchorToGuideViewer then
+    popup:AnchorToGuideViewer()
+  end
 end
 
 -- Update every registered popup when opacity/font settings change (open or not,

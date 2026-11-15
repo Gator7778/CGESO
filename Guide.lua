@@ -436,6 +436,7 @@ function Guide:AdvertiseWithPopup(nodelay)
 	if not popup then
 		-- This text hides unless needed
 		popup = CGV.Popup:New("Community_AdvertiseGuide_Popup","sis")
+		popup:EnableGuideViewerAnchor()
 
 		popup.OnAccept = function(me)
 			CGV:SetGuide(me.guide, me.guide.CurrentStepNum or 1)
@@ -446,6 +447,8 @@ function Guide:AdvertiseWithPopup(nodelay)
 		end
 
 		CGV.AdvertisePopup = popup
+	elseif popup.EnableGuideViewerAnchor then
+		popup:EnableGuideViewerAnchor()
 	end
 
 	-- Restore default labels (style popup may have renamed them).
