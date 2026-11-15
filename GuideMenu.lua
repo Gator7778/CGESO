@@ -27,7 +27,7 @@ local GUIDEMENU_TAB_ID = "guides"
 local SETTINGS_TAB_ID = "settings"
 
 local DEFAULT_WIDTH = 980
-local DEFAULT_HEIGHT = 720
+local DEFAULT_HEIGHT = 760
 local HEADER_HEIGHT = 60
 local FOOTER_HEIGHT = 25
 local LEFT_COLUMN_WIDTH = 250
@@ -39,13 +39,13 @@ local WELCOME_GUIDE_IMAGE = (CGV.DIR or "CGESO").."/Viewer/Skins/Stealth/cgeso-S
 local OPTIONS_LEFT_OFFSET = 15
 local OPTIONS_VERT_OFFSET = 8
 -- Gap between last option (e.g. tip text) and Default/Accept buttons.
-local OPTIONS_BOTTOM_PAD = 12
+local OPTIONS_BOTTOM_PAD = 36
 local DEFAULT_ANCHOR= {	CENTER, }
--- Guide Home list math (DEFAULT_HEIGHT 720, HEADER 60, FOOTER 25 → mainBackdrop ~635):
+-- Guide Home list math (DEFAULT_HEIGHT 760, HEADER 60, FOOTER 25 → mainBackdrop ~675):
 --   header≈30 + search 22+4 + pads ≈ 60 → list grows with frame; RefreshUI measures fit.
 -- Pool is larger; RefreshUI hides any row past the measured fit.
 local GUIDE_LIST_ROW_HEIGHT = 22
--- Tall enough for DEFAULT_HEIGHT 720 (list host ≈ 550px → ~25 rows).
+-- Tall enough for DEFAULT_HEIGHT 760 (list host ≈ 590px → ~26 rows).
 local GUIDE_MENU_BUTTON_POOL = 28
 local GUIDE_MENU_FALLBACK_LINES = 16 -- if host height not ready yet
 -- Settings left category list (same row height; scrolls when groups > visible lines)
@@ -108,9 +108,12 @@ local function GetOpinionFrame(parent,name,opt,notooltip)
 		opt_frame:AddTooltip(opt.title,opt.desc)
 	end
 
-	-- Just need an invisble backdrop so that ResizeToFitDescendents works to maintain desired width with adjusting height dynamically.
+	-- Invisible sizing backdrop for ResizeToFitDescendents. SecBackdrop IS the CT_BACKDROP
+	-- (no .bd child), so SetBackdropColor is a no-op — must SetCenterColor or rows stay
+	-- opaque gray and paint under the HUD when options overflow the Home frame.
 	opt_frame.bd = CHAIN(ui:Create("SecBackdrop",opt_frame,name and name.."_BD"))
-		:SetBackdropColor(1,0,0,0)
+		:SetCenterColor(0,0,0,0)
+		:SetEdgeColor(0,0,0,0)
 		:SetExcludeFromResizeToFitExtents(false)
 		.__END
 
@@ -231,6 +234,12 @@ function Menu:CreateBaseMenu()
 		:SetPoint(BOTTOMRIGHT,frame,BOTTOMRIGHT,-1,-FOOTER_HEIGHT)
 		:SetBackdropColor(.15,.15,.15,1) -- #252526; alpha set via SetBackdropOpacity
 		.__END
+	if frame.mainBackdrop.SetClipsChildren then
+		frame.mainBackdrop:SetClipsChildren(true)
+	end
+	if frame.SetClipsChildren then
+		frame:SetClipsChildren(true)
+	end
 
 	-- Soft 2px accent under header (SecFrame so color tints correctly — plain Texture looked red)
 	frame.headerAccent = CHAIN(ui:Create("SecFrame",frame,name.."_HeaderAccent"))
@@ -1013,6 +1022,9 @@ function Settings:Create()
 		:SetAllPoints()
 		:Hide()
 		.__END
+	if frame.SetClipsChildren then
+		frame:SetClipsChildren(true)
+	end
 
 	self.Frame = frame
 
@@ -1043,11 +1055,15 @@ function Settings:Create()
 		:SetBackdropColor(.4,.4,.4,1)
 		.__END
 
+	-- Right pane: pin to Settings frame edges only (no SetWidth fight; clip so content can't paint under HUD).
 	frame.optionsBox = CHAIN(ui:Create("InvisFrame", frame, setname.. "_GuideInfoBox"))
-		:SetPoint(TOPLEFT,frame.optionTypesScroll,TOPRIGHT)
-		:SetPoint(BOTTOMRIGHT)
-		:SetWidth(LEFT_COLUMN_WIDTH)
+		:ClearAnchors()
+		:SetPoint(TOPLEFT,frame.optionTypesScroll,TOPRIGHT,0,0)
+		:SetPoint(BOTTOMRIGHT,frame,BOTTOMRIGHT,0,0)
 		.__END
+	if frame.optionsBox.SetClipsChildren then
+		frame.optionsBox:SetClipsChildren(true)
+	end
 	-- Alias: older copy-paste used guideInfoBox; never leave it nil (nil → GuiRoot anchors break on alt-tab).
 	frame.guideInfoBox = frame.optionsBox
 
@@ -1173,13 +1189,19 @@ function Settings:Create()
 			end)
 		.__END
 
-	frame.OptionsScrollBase = CHAIN(ui:Create("InvisFrame", frame.optionsBox, setname.. "_OptionsScrollChild"))	-- Base for the option UI for each individual group
+	-- Options area stops above Default/Accept with pad so tip text never covers them.
+	frame.OptionsScrollBase = CHAIN(ui:Create("InvisFrame", frame.optionsBox, setname.. "_OptionsScrollChild"))
+		:ClearAnchors()
 		:SetPoint(TOPLEFT,frame.OptionDesc,BOTTOMLEFT,-HEADER_PADDING,0)
-		-- Leave OPTIONS_BOTTOM_PAD so tip/desc isn't tight against Default/Accept.
-		:SetPoint(BOTTOMRIGHT,frame.OkButton,TOPRIGHT,_G.OkButtonHortPad,-OPTIONS_BOTTOM_PAD)
+		:SetPoint(BOTTOMRIGHT,frame.OkButton,TOPRIGHT,ButtonHortPad,-OPTIONS_BOTTOM_PAD)
 		.__END
 	if frame.OptionsScrollBase.SetClipsChildren then
 		frame.OptionsScrollBase:SetClipsChildren(true)
+	end
+	-- Keep footer buttons above any clipped option overflow.
+	if frame.OkButton.SetDrawTier then
+		frame.OkButton:SetDrawTier(_G.DT_HIGH or 2)
+		frame.DefaultButton:SetDrawTier(_G.DT_HIGH or 2)
 	end
 
 	Menu:SetBackdropOpacity()
@@ -1250,9 +1272,14 @@ function Settings:CreateOptionsUI(group)
 	local name = "CommunityOptionPanel_Group_"..group.title
 	local lastobj, lastfrontobj
 
-	local frame = CHAIN(ui:Create("InvisFrame", self.Frame.OptionsScrollBase, name)) -- All option UI for this group (not scrollable; tall groups may clip)
-	:SetPoint(TOPLEFT) :SetPoint(BOTTOMRIGHT)
-	.__END
+	local frame = CHAIN(ui:Create("InvisFrame", self.Frame.OptionsScrollBase, name)) -- Tall groups clip inside OptionsScrollBase
+		:ClearAnchors()
+		:SetPoint(TOPLEFT,self.Frame.OptionsScrollBase,TOPLEFT,0,0)
+		:SetPoint(BOTTOMRIGHT,self.Frame.OptionsScrollBase,BOTTOMRIGHT,0,0)
+		.__END
+	if frame.SetClipsChildren then
+		frame:SetClipsChildren(true)
+	end
 
 	for _,option in ipairs(group.options) do
 		local data = option.data
